@@ -1,0 +1,19 @@
+<apex:component id="E2EComponentOutput" controller="E2EComponentsCtrl">
+
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map" />
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="value of outputPanel" />
+
+    <apex:attribute name="className"
+                    type="String"
+                    description="class outputpanel" />
+
+    <apex:outputPanel layout="block" styleClass="{!IF(className == null, '', className)}" >
+        {!pageMap[field].elementItemsMap['LABEL'].value}
+    </apex:outputPanel>
+
+</apex:component>

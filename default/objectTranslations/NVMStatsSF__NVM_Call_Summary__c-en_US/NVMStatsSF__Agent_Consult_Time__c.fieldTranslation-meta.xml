@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Time in seconds where additional agents were consulted but not subsequently transferred to (typically when an inbound caller is placed on hold).  See Warm Transfer Time for the duration of consultations which lead to transfers.  Counts towards Handle Time --></help>
+    <label><!-- Agent Consult Time --></label>
+    <name>NVMStatsSF__Agent_Consult_Time__c</name>
+</CustomFieldTranslation>

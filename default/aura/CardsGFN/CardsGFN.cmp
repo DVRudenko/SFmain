@@ -1,0 +1,125 @@
+<aura:component extends="c:BaseComponent" controller="GFNI_DashboardCtrl">
+    <aura:attribute name="allCards" type="List"/>
+    <aura:attribute name="isAllList" type="Boolean"/>
+    <aura:attribute name="isFilteredList" type="Boolean"/>
+    <aura:attribute name="orderNewCard" type="String"/>
+    <aura:attribute name="isSelectAll" type="Boolean" default="false"/>
+    <aura:attribute name="isIndeterminate" type="Boolean" default="false"/>
+    <aura:attribute name="componentId" type="String"/>
+    <aura:attribute name="hasSelected" type="Boolean"/>
+    <aura:attribute name="searchWord" type="String"/>
+
+    <aura:registerEvent name="ResendInvoiceButtonEvent" type="c:ResendInvoiceButtonEvent"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.gfnParams}" action="{!c.getCards}" />  
+    <aura:html tag="style">
+        .toastMessage.forceActionsText{
+            white-space : pre-line !important;
+        }
+    </aura:html>
+    <lightning:card class="slds-card_boundary slds-m-around_large" iconName="standard:scan_card">
+
+
+        <aura:set attribute="title">
+            <a href="{!v.landingPageLink}" target="_blank">Cards (GFN)</a>
+        </aura:set>
+        <aura:set attribute="actions">
+            <lightning:input class="search-input" type="text" label="Search" value="{!v.searchWord}"></lightning:input>
+            <lightning:button onclick="{!c.searchCards}">Search</lightning:button>
+            <aura:if isTrue="{!v.lineOfBusiness=='CCS'}">
+                    <a class="slds-button slds-button_neutral" href="{!v.orderNewCard}" target="_blank">Order New Card</a>
+                    <lightning:button onclick="{!c.handleAwaitingBlock}" disabled="{!!v.hasSelected}">Block Card</lightning:button>
+                <aura:set attribute="else">
+                    <a class="slds-button slds-button_neutral" href="{!v.orderNewCard}" target="_blank">Order New Card</a>
+                    <lightning:button onclick="{!c.handleAwaitingBlock}" disabled="{!!v.hasSelected}">Block Card</lightning:button>
+                    <lightning:button onclick="{!c.handleResendPinButton}" disabled="{!!v.hasSelected}">Resend PIN</lightning:button>
+                </aura:set>
+            </aura:if> 
+        </aura:set>
+
+        <aura:if isTrue="{!and(empty(v.itemList), v.loaded)}">
+            <span class="slds-text-title_caps slds-align_absolute-center">{!v.errorMessage}</span>
+            <aura:set attribute="else">
+                <div class="slds-scrollable slds-card__body_inner">
+                    <table class="slds-table slds-table_striped slds-card_boundary slds-table_bordered">
+                        <thead>
+                            <tr>
+                                <th class="slds-text-body_small slds-p-right_none">
+                                    <div class="slds-form-element">
+                                        <div class="slds-form-element__control">
+                                          <span class="slds-checkbox" >
+                                                <input id="{!globalId + '_select-all-checkbox'}" type="checkbox" name="options" aura:id="checkbox-indeterminate-01" checked="{!v.isSelectAll}" indeterminate="{!v.isIndeterminate}" onchange="{!c.handleClickCheckbox}"/>
+                                                <label class="slds-checkbox__label" for="{!globalId + '_select-all-checkbox'}">
+                                                    <span class="slds-checkbox_faux"></span>
+                                                    <span class="slds-form-element__label"></span>
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <aura:iteration items="{!v.tableHead}" var="columnName">
+                                    <th class="slds-text-title_caps">
+                                        <div class="slds-truncate">{!columnName}</div>
+                                    </th>
+                                </aura:iteration>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.itemList}" var="card">
+                                <tr class="slds-hint-parent">
+                                    <td>
+                                        <lightning:input aura:id="checkbox" value="{!card.Checked}" type="checkbox" label="" onchange="{!c.handleSimpleCheckboxClick}" checked="{!card.Checked}"></lightning:input>
+                                    </td>
+                                    <td>
+                                        <div class="slds-text-align_left slds-text-title slds-text-color_default" style="font-size: 11px;">{!card.PAN}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-text-title slds-text-color_default" style="font-size: 11px">{!card.Status}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-text-title slds-text-color_default" style="font-size: 11px">{!card.CardType}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-text-title slds-text-color_default" style="font-size: 11px">{!card.RegNumber}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-text-title slds-text-color_default" style="font-size: 11px">{!card.DriverName}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-text-title slds-text-color_default" style="font-size: 11px">{!card.PurchaseCategory}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-text-title slds-text-color_default" style="font-size: 11px">{!card.EffectiveDate}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-text-title slds-text-color_default" style="font-size: 11px">{!card.ExpiryDate}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-text-title slds-text-color_default" style="font-size: 11px">{!card.CardGroup}</div>
+                                    </td>
+                                    <td>
+                                        <div class="slds-text-title slds-text-color_default" style="font-size: 11px">{!card.IsOdometerPromptRequired}</div>
+                                    </td>
+                                    <aura:if isTrue="{!v.lineOfBusiness=='SME'}">
+                                        <td>
+                                            <div class="slds-text-title slds-text-color_default" style="font-size: 11px">{!card.PinSelectionMethod}</div>
+                                        </td>
+                                    </aura:if>
+                                </tr>
+                            </aura:iteration>
+                        </tbody>
+                    </table>
+                </div>
+            </aura:set>
+        </aura:if>
+        <aura:set attribute="footer">
+            <aura:if isTrue="{!and(v.allCards.length > 10, not(v.isAllList))}">
+                <lightning:button onclick="{!c.showAllCards}">View All ({!v.allCards.length})</lightning:button>
+            </aura:if>
+            <aura:if isTrue="{!and(v.isAllList, !v.isFilteredList)}">
+                <lightning:button onclick="{!c.hideCards}">Hide</lightning:button>
+            </aura:if>
+        </aura:set>
+    </lightning:card>
+</aura:component>

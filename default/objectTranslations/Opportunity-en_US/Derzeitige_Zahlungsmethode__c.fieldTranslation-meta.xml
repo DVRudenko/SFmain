@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Current Payment Method *</label>
+    <name>Derzeitige_Zahlungsmethode__c</name>
+    <picklistValues>
+        <masterLabel>Bankkarte</masterLabel>
+        <translation>Bank card</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Barzahlung</masterLabel>
+        <translation>Cash</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kreditkarte</masterLabel>
+        <translation>Credit card</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stationskarte</masterLabel>
+        <translation><!-- Stationskarte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tankkarte</masterLabel>
+        <translation>Fuel card</translation>
+    </picklistValues>
+</CustomFieldTranslation>

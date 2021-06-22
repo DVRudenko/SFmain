@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Product</label>
+    <name>Produkt_L__c</name>
+    <picklistValues>
+        <masterLabel>Bonus</masterLabel>
+        <translation><!-- Bonus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bonus Fleet</masterLabel>
+        <translation><!-- Bonus Fleet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carnet</masterLabel>
+        <translation><!-- Carnet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Limit</masterLabel>
+        <translation><!-- Limit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Limit+</masterLabel>
+        <translation><!-- Limit+ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UTA</masterLabel>
+        <translation><!-- UTA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>bundle</masterLabel>
+        <translation><!-- bundle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>dotazy zákazníka</masterLabel>
+        <translation><!-- dotazy zákazníka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>euroShell Card International</masterLabel>
+        <translation><!-- euroShell Card International --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>euroShell Card Kompakt</masterLabel>
+        <translation><!-- euroShell Card Kompakt --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AML_Documents_Required</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>AML Documents Required</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <url>/apex/ChangeOppStageByCredit?id={!Opportunity.Id}&amp;pendingSales=amldoc</url>
+</WebLink>

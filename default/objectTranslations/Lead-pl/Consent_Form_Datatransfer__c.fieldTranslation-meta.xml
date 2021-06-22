@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Field for Consent Form Datatransfer if Customer agree with our Conditions --></help>
+    <label><!-- Consent Form Datatransfer --></label>
+    <name>Consent_Form_Datatransfer__c</name>
+</CustomFieldTranslation>

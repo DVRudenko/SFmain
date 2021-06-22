@@ -1,0 +1,76 @@
+<apex:page controller="ApprovePprRequestFromEmailCtrl" action="{! init }" showHeader="true"
+           sidebar="true" standardStylesheets="true" setup="true" showChat="true">
+    <apex:form >
+
+        <apex:pageMessages />
+
+        <apex:pageBlock rendered="{! isGoToRecord }">
+            <apex:commandButton value="{!$Label.RU_0009_GoToRecord}" action="{! goToRecord }" style="width:150px"/>
+        </apex:pageBlock>
+
+        <apex:pageBlock rendered="{! OR(isCommentForRejectComboBox,isCommentForRejectTextArea) }">
+            <table>
+                <tr>
+                    <td>
+                        <apex:outputLabel value="Выберите причину отказа:"/>
+                    </td>
+                    <apex:outputPanel rendered="{!isCommentForRejectTextArea}">
+                        <td>
+                            <apex:outputLabel value="Комментарий:"/>
+                        </td>
+                    </apex:outputPanel>
+                </tr>
+                <tr>
+                    <td>
+                        <apex:selectList value="{!reasonReject}" rendered="{!isCommentForRejectComboBox}" multiselect="false" style="width:920px" >
+                            <apex:selectOptions value="{! reasonsForReject }"/>
+                        </apex:selectList>
+                    </td>
+                    <apex:outputPanel rendered="{!isCommentForRejectTextArea}">
+                        <td>
+                            <apex:inputTextarea value="{!commentReject}" cols="50" rows="5"/>
+                        </td>
+                    </apex:outputPanel>
+                </tr>
+                <tr>
+                    <td>
+                        <apex:commandButton value="Отклонить"  action="{! rejectRequest }" style="width:150px; height:30px;"/>
+                    </td>
+                </tr>
+            </table>
+        </apex:pageBlock>
+        <!-- SF-393 -->
+        <apex:pageBlock rendered="{! OR(isCommentForConfirmComboBox,isCommentForConfirmTextArea) }">
+            <table>
+                <tr>
+                    <td>
+                        <apex:outputLabel value="Выберите причину перевода:"/>
+                    </td>
+                    <apex:outputPanel rendered="{!isCommentForConfirmTextArea}">
+                        <td>
+                            <apex:outputLabel value="Комментарий:"/>
+                        </td>
+                    </apex:outputPanel>
+                </tr>
+                <tr>
+                    <td>
+                        <apex:selectList value="{!reasonConfirm}" rendered="{!isCommentForConfirmComboBox}" multiselect="false" style="width:920px" >
+                            <apex:selectOptions value="{! reasonsForConfirm }"/>
+                        </apex:selectList>
+                    </td>
+                    <apex:outputPanel rendered="{!isCommentForConfirmTextArea}">
+                        <td>
+                            <apex:inputTextarea value="{!commentConfirm}" cols="50" rows="5"/>
+                        </td>
+                    </apex:outputPanel>
+                </tr>
+                <tr>
+                    <td>
+                        <apex:commandButton value="Подтвердить"  action="{! confirmRequest }" style="width:150px; height:30px;"/>
+                    </td>
+                </tr>
+            </table>
+        </apex:pageBlock>
+        <!-- SF-393 end -->
+    </apex:form>
+</apex:page>

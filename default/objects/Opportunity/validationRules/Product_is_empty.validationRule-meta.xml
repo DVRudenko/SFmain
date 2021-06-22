@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_is_empty</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(AND($Profile.Name != "E2E Profile",
+        $Profile.Name != "E2E PL Profile",
+        $Profile.Name != "E2E RU Profile",
+        $Profile.Name != "FleetcorEmea Profile",
+        $Profile.Name != "System Administrator",
+        $Profile.Name != 'API Only',
+        $Profile.Name != 'In-house Developer') &amp;&amp;
+        AND(Account.BillingCountry != "Germany",
+        Account.BillingCountry != "Netherlands",
+        Account.BillingCountry != "Poland",
+        Account.BillingCountry != "Belgium-NL",
+        Account.BillingCountry != "Belgium-FR") &amp;&amp;
+        E2E_2__c = FALSE &amp;&amp;
+        RecordType.Name = "Euroshell" &amp;&amp;
+        ISPICKVAL(Product__c, "") &amp;&amp;
+        NOT(ISCHANGED(OwnerId)) &amp;&amp;
+        NOT(ISCHANGED(Primary_Contact_Phone__c)) &amp;&amp;
+        NOT(ISCHANGED(StageName)) &amp;&amp;
+        NOT(ISCHANGED(Gruende_verloren__c)) &amp;&amp;
+        NOT(ISCHANGED(E2E_Customer_Feedback__c)) &amp;&amp;
+        NOT(ISCHANGED(E2E_Chat__c)) &amp;&amp;
+        NOT(ISCHANGED(E2E_Sales_Type__c)) &amp;&amp;
+        NOT(ISCHANGED(E2E_Visitor_Message_Count__c)) &amp;&amp;
+        NOT(ISCHANGED(E2E_Agent_Message_Count__c)) &amp;&amp;
+        NOT(ISCHANGED(E2E_Chat_LastStep__c)) &amp;&amp;
+        NOT(ISCHANGED(E2E_Chat_Step__c)) &amp;&amp;
+        NOT(ISCHANGED(Number_of_open_tasks__c)) &amp;&amp;
+        NOT(ISCHANGED(Open_Task__c)) &amp;&amp;
+        NOT(ISCHANGED(NextContactTime__c)) &amp;&amp;
+        NOT(ISCHANGED(Reopen__c)),
+        true, false)</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Please fill the Product.</errorMessage>
+</ValidationRule>

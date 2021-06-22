@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Combination field showing today&apos;s date and agent ID. You can use this value in Salesforce Search to find Agent State Summaries --></help>
+    <label><!-- dateAgentId --></label>
+    <name>NVMStatsSF__dateAgentId__c</name>
+</CustomFieldTranslation>

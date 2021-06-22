@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>A_large_fleet_of_vehicles__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>когда менеджер меняет кол-во авто в большую или меньшую сторону (20авт)</description>
+    <externalId>false</externalId>
+    <label>A large fleet of vehicles</label>
+    <precision>1</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

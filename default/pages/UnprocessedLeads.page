@@ -1,0 +1,17 @@
+<apex:page controller="UnprocessedLeads" action="{! init }" lightningStylesheets="true">
+    <apex:pageBlock title="Open Leads">
+        <apex:pageBlockTable value="{! currentLeads }" var="lead">
+            <apex:column headerValue="Name">
+                <a href="/{! lead.Id }" target="_blank">{! lead.FirstName } {! lead.LastName }</a>
+            </apex:column>
+            <apex:column headerValue="Channel" value="{! lead.Channel__c }"/>
+            <apex:column headerValue="Sec Channel" value="{! lead.Sec_Channel__c }"/>
+            <apex:column headerValue="Lead Source" value="{! lead.LeadSource }"/>
+            <apex:column headerValue="Status" value="{! lead.Status }"/>
+            <apex:column headerValue="Created Date" value="{! lead.CreatedDate }"/>
+            <apex:column headerValue="Number of Days" value="{! lead.Number_of_days__c }"/>
+            <apex:column headerValue="Company" value="{! lead.Company }"/>
+            <apex:column headerValue="Email" value="{! lead.Email }"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

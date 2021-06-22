@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Укажите тип организации</help>
+    <label>ОПФ</label>
+    <name>Organization_Type__c</name>
+    <picklistValues>
+        <masterLabel>Consulate</masterLabel>
+        <translation><!-- Consulate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corporation</masterLabel>
+        <translation>ОАО</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education</masterLabel>
+        <translation>Образовательное учреждение</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Government</masterLabel>
+        <translation>Государственное учреждение</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LLC</masterLabel>
+        <translation>ООО</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LLP</masterLabel>
+        <translation>ЗАО</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non-Profit</masterLabel>
+        <translation>Некоммерческая организация</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Другой</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partnership</masterLabel>
+        <translation>Партнерство</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proprietorship</masterLabel>
+        <translation>ИП</translation>
+    </picklistValues>
+</CustomFieldTranslation>

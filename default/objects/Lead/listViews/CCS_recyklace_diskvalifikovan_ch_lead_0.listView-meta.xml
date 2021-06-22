@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_recyklace_diskvalifikovan_ch_lead_0</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Quali_Status__c</columns>
+    <columns>Note__c</columns>
+    <columns>CCS_Description__c</columns>
+    <columns>CCS_Note__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Disqualified,Diskvalifikován</value>
+    </filters>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>CCS recyklace diskvalifikovaných leadů 0617</value>
+    </filters>
+    <label>CCS recyklace diskvalifikovaných leadů 0</label>
+    <language>cs</language>
+    <sharedTo>
+        <roleAndSubordinates>CCS_Administrator</roleAndSubordinates>
+        <roleAndSubordinates>CCS_CZ_Contact_Center</roleAndSubordinates>
+        <roleAndSubordinates>CCS_Contact_Center_Team_Lead</roleAndSubordinates>
+    </sharedTo>
+</ListView>

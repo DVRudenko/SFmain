@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVM_Call_Outcome__c</fullName>
+    <description>NVM Call Outcome/Disposition</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Setting one of these on the &quot;Log a Call&quot; quick action will lead to follow up actions/tasks to be created in Salesforce automatically</inlineHelpText>
+    <label>Call Outcome</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Additional info requested</fullName>
+                <default>false</default>
+                <label>Additional info requested</label>
+            </value>
+            <value>
+                <fullName>Black list</fullName>
+                <default>false</default>
+                <label>Black list</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Customer N/A</fullName>
+                <default>false</default>
+                <label>Customer N/A</label>
+            </value>
+            <value>
+                <fullName>Customer thinking</fullName>
+                <default>false</default>
+                <label>Customer thinking</label>
+            </value>
+            <value>
+                <fullName>Deposit Paid</fullName>
+                <default>false</default>
+                <label>Deposit Paid</label>
+            </value>
+            <value>
+                <fullName>Deposit requested</fullName>
+                <default>false</default>
+                <label>Deposit requested</label>
+            </value>
+            <value>
+                <fullName>Didn’t talk to DM</fullName>
+                <default>false</default>
+                <label>Didn’t talk to DM</label>
+            </value>
+            <value>
+                <fullName>Disqualified</fullName>
+                <default>false</default>
+                <label>Disqualified</label>
+            </value>
+            <value>
+                <fullName>Left voicemail</fullName>
+                <default>false</default>
+                <label>Left voicemail</label>
+            </value>
+            <value>
+                <fullName>No answer</fullName>
+                <default>false</default>
+                <label>No answer</label>
+            </value>
+            <value>
+                <fullName>Offer sent</fullName>
+                <default>false</default>
+                <label>Offer sent</label>
+            </value>
+            <value>
+                <fullName>Starts process</fullName>
+                <default>false</default>
+                <label>Starts process</label>
+            </value>
+            <value>
+                <fullName>Submitted to Credit</fullName>
+                <default>false</default>
+                <label>Submitted to Credit</label>
+            </value>
+            <value>
+                <fullName>Technical problem</fullName>
+                <default>false</default>
+                <label>Technical problem</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

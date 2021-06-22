@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tablet_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Tablet Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Samsung Tab A 10.1</fullName>
+                <default>false</default>
+                <label>Samsung Tab A 10.1</label>
+            </value>
+            <value>
+                <fullName>Shell 14</fullName>
+                <default>false</default>
+                <label>Shell 14</label>
+            </value>
+            <value>
+                <fullName>NEONTEK 14</fullName>
+                <default>false</default>
+                <label>NEONTEK 14</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

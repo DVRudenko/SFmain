@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Produktbezugskategorie --></label>
+    <name>Produktbezugskategorie__c</name>
+    <picklistValues>
+        <masterLabel>0 Diesel, Tunnel-, Maut- und Fährgebühren</masterLabel>
+        <translation>0 Diesel, tunnel-, highway- and ferry toll fees</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1 Alle Kraftstoffe, Tunnel-, Maut- und Fährgebühren</masterLabel>
+        <translation>1 All fuels, tunnel-, highway- and ferry toll fees</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 Kategorie 1 plus fahrzeugbezogene Waren und Dienstleistungen (Öle, Autowäsche)</masterLabel>
+        <translation>2 Category 1 plus vehicle-related goods and services (oils, car wash)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3 Kategorie 2 plus alle Shopartikel</masterLabel>
+        <translation>3 Category 2 plus all shop items</translation>
+    </picklistValues>
+</CustomFieldTranslation>

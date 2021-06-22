@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Austria</masterLabel>
+        <translation>Rakousko</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Belgium-FR</masterLabel>
+        <translation>Belgie-FR</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Belgium-NL</masterLabel>
+        <translation>Belgie-NL</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Czech Republic</masterLabel>
+        <translation>Česká republika</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>France</masterLabel>
+        <translation>Francie</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Germany</masterLabel>
+        <translation>Německo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hungary</masterLabel>
+        <translation>Maďarsko</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Luxembourg</masterLabel>
+        <translation>Lucembursko</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Netherlands</masterLabel>
+        <translation>Nizozemí</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Poland</masterLabel>
+        <translation>Polsko</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Slovakia</masterLabel>
+        <translation>Slovensko</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Switzerland-DE</masterLabel>
+        <translation>Švýcarsko-DE</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Switzerland-FR</masterLabel>
+        <translation>Švýcarsko-FR</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

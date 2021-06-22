@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Какой дополнительный метод оплаты за топливо используют водители? --></help>
+    <label><!-- Primary Fueling Method (specific) --></label>
+    <name>Primary_Fueling_Method_specific__c</name>
+    <picklistValues>
+        <masterLabel>EKA-Processing</masterLabel>
+        <translation><!-- EKA-Processing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expense reimbursement</masterLabel>
+        <translation><!-- Expense reimbursement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gazpromneft&#39;</masterLabel>
+        <translation><!-- Gazpromneft&apos; --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inforkom</masterLabel>
+        <translation><!-- Inforkom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Licard</masterLabel>
+        <translation><!-- Licard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mastercard</masterLabel>
+        <translation><!-- Mastercard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Petty cash</masterLabel>
+        <translation><!-- Petty cash --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rosneft</masterLabel>
+        <translation><!-- Rosneft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell</masterLabel>
+        <translation><!-- Shell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Surgutneftegas</masterLabel>
+        <translation><!-- Surgutneftegas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tatneft</masterLabel>
+        <translation><!-- Tatneft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visa</masterLabel>
+        <translation><!-- Visa --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Salesforce_API_Name__c</columns>
+    <columns>BizMachine_API_Name__c</columns>
+    <columns>BizMachine_Tag_Name__c</columns>
+    <columns>BizMachine_Tag_UID__c</columns>
+    <columns>BizMachine_Mapping_Field__c</columns>
+    <columns>BizMachine_Mapping_Tag__c</columns>
+    <columns>BizMachine_Monitoring_Tag__c</columns>
+    <columns>BizMachine_Updated_Tag__c</columns>
+    <columns>BizMachine_Consumption_Category_Tag__c</columns>
+    <columns>Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

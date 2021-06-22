@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- &apos;Restricted&apos; Rewards will only be recognised within the Competitions that use them --></help>
+    <label><!-- Restricted - DEPRECATED --></label>
+    <name>success__Competition_Only__c</name>
+</CustomFieldTranslation>

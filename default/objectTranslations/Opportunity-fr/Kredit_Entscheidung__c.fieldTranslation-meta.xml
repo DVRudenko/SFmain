@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Kredit Entscheidung --></label>
+    <name>Kredit_Entscheidung__c</name>
+    <picklistValues>
+        <masterLabel>Abgelehnt</masterLabel>
+        <translation><!-- Abgelehnt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Genehmigt</masterLabel>
+        <translation><!-- Genehmigt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Genehmigt, Sicherheit geliefert</masterLabel>
+        <translation><!-- Genehmigt, Sicherheit geliefert --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending</masterLabel>
+        <translation><!-- Pending --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending mit Kredit</masterLabel>
+        <translation><!-- Pending mit Kredit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sicherheit verlangt</masterLabel>
+        <translation><!-- Sicherheit verlangt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>falscher Empfang</masterLabel>
+        <translation><!-- falscher Empfang --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

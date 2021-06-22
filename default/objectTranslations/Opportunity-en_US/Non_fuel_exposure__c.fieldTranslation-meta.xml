@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Non-fuel expenses of the customer --></help>
+    <label><!-- Non-fuel exposure --></label>
+    <name>Non_fuel_exposure__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Probability_50</fullName>
+    <active>true</active>
+    <description>Fill Account.Industry</description>
+    <errorConditionFormula>AND(
+OR(
+$Profile.Name = "Russian Sales Manager",
+$Profile.Name = "Russian Team Leader"),
+NOT(ISCHANGED(Number_of_open_tasks__c)),
+NOT(ISCHANGED(Open_Task__c)),
+Probability &gt; 0.5,
+ISBLANK( TEXT(Account.Industry ) )
+)</errorConditionFormula>
+    <errorMessage>Fill in the field of industry in the Account.</errorMessage>
+</ValidationRule>

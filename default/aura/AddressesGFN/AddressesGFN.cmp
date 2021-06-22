@@ -1,0 +1,58 @@
+<aura:component controller="GFNI_DashboardCtrl" extends="c:BaseComponent">
+    <aura:attribute name="addressList" type="List"/>
+    <aura:attribute name="loaded" type="Boolean" default="false" />
+    <aura:attribute name="gfnParams" type="String" />
+    <aura:attribute name="addressRedirectLink" type="String"/>
+    <aura:attribute name="errorMessage" type="String" default="No Data"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.gfnParams}" action="{!c.getAddressParameters}"/>
+
+    <aura:registerEvent name="GetPinDeliveryAddressEvent" type="c:GetPinDeliveryAddressEvent"/>
+
+    <lightning:card iconName="standard:address" class="slds-card_boundary slds-m-around_large slds-scrollable">
+        <aura:set attribute="title">
+            <a href="{!v.addressRedirectLink}" target="_blank"> Addresses (GFN)</a>
+        </aura:set>
+        <aura:if isTrue="{!v.loaded}">
+            <aura:if isTrue="{!empty(v.addressList)}">
+                <span class="slds-text-title_caps slds-align_absolute-center">{!v.errorMessage}</span>
+                <aura:set attribute="else">
+                    <aura:iteration items="{!v.addressList}" var="address">
+                        <div class="slds-tile slds-card slds-card_boundary slds-m-around_x-small slds-scrollable">
+                            <div class="slds-m-around_xx-small slds-p-left_small slds-align_absolute-center">
+                                <div class="slds-media__body">
+                                    <div class="slds-grid slds-wrap">
+                                        <div class="slds-col slds-size_1-of-2">
+                                            <div class="slds-grid slds-wrap">
+                                                <div class="slds-col slds-size_1-of-4 slds-item_label slds-text-color_weak slds-truncate">Street</div>
+                                                <div class="slds-col slds-size_3-of-4 slds-item_detail slds-truncate">{!address.AddressLines}</div>
+                                                <div class="slds-col slds-size_1-of-4 slds-item_label slds-text-color_weak slds-truncate">Postal Code</div>
+                                                <div class="slds-col slds-size_3-of-4 slds-item_detail slds-truncate">{!address.ZipCode}</div>
+                                                <div class="slds-col slds-size_1-of-4 slds-item_label slds-text-color_weak slds-truncate">City</div>
+                                                <div class="slds-col slds-size_3-of-4 slds-item_detail slds-truncate">{!address.City}</div>
+                                                <div class="slds-col slds-size_1-of-4 slds-item_label slds-text-color_weak slds-truncate">Country</div>
+                                                <div class="slds-col slds-size_3-of-4 slds-item_detail slds-truncate">{!address.Country}</div>
+                                            </div>
+                                        </div>
+                                        <div class="slds-p-top_x-small label-container slds-col slds-size_1-of-2">
+                                            <aura:iteration items="{!address.AddressTypes}" var="type">
+                                                <div class="slds-m-around_xx-small">
+                                                    <lightning:badge label="{!type.AddressType}"/>
+                                                </div>
+                                            </aura:iteration>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aura:iteration>
+                </aura:set>
+            </aura:if>
+        <aura:set attribute="else">
+            <lightning:spinner alternativeText="Loading" size="small" />
+        </aura:set>
+        </aura:if>    
+    </lightning:card>
+
+</aura:component>

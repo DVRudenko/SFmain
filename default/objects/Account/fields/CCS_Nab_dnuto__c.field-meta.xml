@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Nab_dnuto__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Nabídnuto</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TankNavigator</fullName>
+                <default>false</default>
+                <label>TankNavigator</label>
+            </value>
+            <value>
+                <fullName>Parkování</fullName>
+                <default>false</default>
+                <label>Parkování</label>
+            </value>
+            <value>
+                <fullName>E-shop</fullName>
+                <default>false</default>
+                <label>E-shop</label>
+            </value>
+            <value>
+                <fullName>Cestovní pojištění AIG</fullName>
+                <default>false</default>
+                <label>Cestovní pojištění AIG</label>
+            </value>
+            <value>
+                <fullName>Síť CNG</fullName>
+                <default>false</default>
+                <label>Síť CNG</label>
+            </value>
+            <value>
+                <fullName>Automatické pojištění</fullName>
+                <default>false</default>
+                <label>Automatické pojištění</label>
+            </value>
+            <value>
+                <fullName>Bonus</fullName>
+                <default>false</default>
+                <label>Bonus</label>
+            </value>
+            <value>
+                <fullName>Cestovní pojištění ERV</fullName>
+                <default>false</default>
+                <label>Cestovní pojištění ERV</label>
+            </value>
+            <value>
+                <fullName>Zrušení skupiny zboží 5 a 6</fullName>
+                <default>false</default>
+                <label>Zrušení skupiny zboží 5 a 6</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

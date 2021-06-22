@@ -1,0 +1,85 @@
+<style>
+    body{
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 400;
+        line-height:1.4;
+    }
+
+    .bold{
+        font-weight: 600;
+    }
+
+    .underline {
+        border-bottom: 1px solid black;
+    }
+</style>
+
+<div class="documents-agreement">
+    <div>
+        <div>FleetCor Belgium srl c/o TMF,</div>
+        <div>Avenue du Port, 86c boîte 204 </div>
+        <div>1000 Bruxelles</div>
+    </div>
+
+    <h2 class="bold" style="text-align: center; margin: 24px 0 36px;">Accord de dépôt de Garantie</h2>
+
+    <div style="position: relative;">
+        <div style="position: absolute; top: 0; left: 0;">
+            <div style="text-align: center;">Par la présente</div>
+        </div>
+        <div style="display: inline-block; width: 75%; margin-left: 14%; margin-right: 14%;">
+            <div class="underline" style="min-height: 12px; text-align: center;">{!dataObject.Selected_Company_Name__c}</div>
+            <div style="text-align: center;">(La société fournissant le dépôt de Garantie)</div>
+        </div>
+        <div style="position: absolute; top: 0; right: 0;">
+            <div style="text-align: center;">confirme</div>
+        </div>
+    </div>
+
+    <div style="margin-top: 12px;">L’accord suivant:</div>
+    <div style="margin-left: 24px;">
+        <p>
+            1. Nous vous proposons un montant de Garantie de 
+        </p>
+        <div style="position: relative; width: 50%; margin-left: 25%;">
+            <span>EURO</span>
+            <div class="underline" style="min-height: 12px; text-align: center; margin: 0 8px; width: 50%; display: inline-block;">{!securityAmountToPay}</div>
+        </div>
+        <div style="margin-left: 12px; margin-top: 20px;">
+            <div>Cette Garantie va permettre de sécuriser l’accord commercial conclu entre FleetCor et l’Entreprise fournissant le dépôt.</div>
+            <div>Vous trouverez ci-dessous, les coordonnées bancaires de FleetCor Belgium SRL</div>
+            <p>
+                <div class="bold">
+                    <div>IBAN: DE72503104000737527604;</div>
+                    <div>BIC: BARCDEFF;</div>
+                </div>
+            </p>
+        </div>
+        <p>
+            2. Le compte de garantie en dépôt est maintenu pendant toute la durée de notre relation.
+            Le fournisseur de la garantie en dépôt peut remplacer la garantie par un autre titre de la même
+            valeur, si cela est explicitement et préalablement validé par FleetCor.
+        </p>
+        <p>
+            3. FleetCor est autorisée, en cas de défaut de paiement, à se régler directement sur le compte de
+            de Garantie en dépôt, du montant des créances impayées.
+        </p>
+        <p>
+            4. La Garantie en dépôt sera restituée en fin de Contrat, sous réserve des frais générés par des
+            relances ou des mises en demeure et plus généralement tous les coûts légaux et juridiques
+            engendrés.
+        </p>
+    </div>
+
+
+    <div style="position: relative; margin-top: 36px;">
+        <div style="position: absolute; top: 0; left: 0; width: 40%;">
+            <div class="underline" style="min-height: 12px; text-align: center;">{!today} {!dataObject.Registered_City__c}</div>
+            <div style="text-align: center;">Lieu et Date</div>
+        </div>
+        <div style="position: absolute; top: 0; right: 0; width: 40%;">
+            <div class="underline" style="min-height: 12px; text-align: center;">{!fullName}</div>
+            <div style="text-align: center;">Cachet et Signature de l’Entreprise</div>
+        </div>
+    </div>
+</div>

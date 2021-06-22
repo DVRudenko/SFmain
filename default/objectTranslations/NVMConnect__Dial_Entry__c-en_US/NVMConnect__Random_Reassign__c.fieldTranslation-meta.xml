@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When this field is updated, reassignment to another agent who has recently used the list is triggered --></help>
+    <label><!-- Random Reassign --></label>
+    <name>NVMConnect__Random_Reassign__c</name>
+</CustomFieldTranslation>

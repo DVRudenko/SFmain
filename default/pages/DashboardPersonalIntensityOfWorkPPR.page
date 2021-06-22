@@ -1,0 +1,136 @@
+<!--
+ - Created by Nikita.Dayanov on 26.07.2018. -
+ -->
+
+<apex:page id="DashboardPersonalIntensityOfWorkPPR" controller="DashboardPersonalIntensityOfWorkPPRCtrl"
+           action="{!init}" sideBar="false" showHeader="false">
+
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+
+    <apex:pageBlock >
+        <apex:pageMessages />
+        <apex:outputPanel >
+            <apex:outputPanel >
+                <h1>{!$Label.RU_0087_PersonalIntensHeader}</h1>
+            </apex:outputPanel>
+
+            <apex:outputPanel layout="block" style="text-align: right;">
+                <apex:outputLink value="/apex/DashboardIntensityOfSalesWorkReportPPR?userid={!userId}&period={!selectedPeriod}&year={!selectedYear}" target="_blank"
+                                id="theLink" style="font-size:12pt">{!$Label.RU_0073_PersonalLeadsReport}</apex:outputLink>
+            <!--{!$Label.myLabel}-->
+            </apex:outputPanel>
+        </apex:outputPanel>
+
+        <apex:outputPanel >
+            <apex:outputPanel layout="block">
+                <div id="salesintensitypersonal" style="width: 100%; float: left; height: 550px"></div>
+            </apex:outputPanel>
+            <div style="clear: both;"></div>
+        </apex:outputPanel>
+
+    </apex:pageBlock>
+
+    <script>
+        //
+        j$ = jQuery.noConflict();
+        var intensitiesList = JSON.parse('{!intensities}');
+        var categoriesList = JSON.parse('{!weekNumbersLabels}');
+        var tasksForToday = {!numberOfTaskstoday};
+
+        function getIntensitiesData() {
+            var data = [];
+            for (var i = 0; i < intensitiesList.length; i++) {
+                data.push(intensitiesList[i]);
+            }
+            return data;
+        };
+
+        function getCategories() {
+            var data = [];
+            for (var i = 0; i < categoriesList.length; i++) {
+                data.push(categoriesList[i]);
+            }
+            return data;
+        };
+
+        j$(function() {
+
+            j$('#salesintensitypersonal').highcharts({
+
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: '{!$Label.RU_0090_PersonalIntensTasksCounter}: ' + tasksForToday,
+                    style: {
+                            fontSize: '20px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                },
+                exporting:{
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                xAxis: {
+                    type: 'category',
+                    labels: {
+
+                        style: {
+                            fontSize: '13px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    },
+                    title: {
+                        text: '{!$Label.RU_0082_PersonalNetsWeek}'
+                    },
+                    categories: getCategories()
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: '{!$Label.RU_0088_PersonalIntens}',
+                        style: {
+                            fontSize: '18px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                tooltip: {
+
+                    formatter: function () {
+                        var s = '<b>' + this.x + '</b>';
+                        s += '<br/>' + '{!$Label.RU_0089_PersonalIntensTooltip} ' + this.y;
+                        return s;
+                    },
+
+                },
+                series: [
+                    {
+                        name: 'Intensities',
+                        data: getIntensitiesData(),
+                        color: 'rgba(197,16,88,1)',
+                        dataLabels: {
+                            enabled: true,
+                            color: '#000000',
+
+                            format: '{point.y:.2f}',
+                            style: {
+                                fontSize: '13px',
+                                fontFamily: 'Verdana, sans-serif'
+                            }
+                        }
+                    }
+
+
+                ]
+            })
+        });
+    </script>
+</apex:page>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Customer_Feedback_Rating__c</fullName>
+    <externalId>false</externalId>
+    <label>E2E Customer Feedback Rating</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>bad</fullName>
+                <default>false</default>
+                <label>bad</label>
+            </value>
+            <value>
+                <fullName>normal</fullName>
+                <default>false</default>
+                <label>normal</label>
+            </value>
+            <value>
+                <fullName>good</fullName>
+                <default>false</default>
+                <label>good</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

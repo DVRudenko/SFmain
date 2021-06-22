@@ -1,0 +1,126 @@
+<!--
+ - Created by Nikita.Dayanov on 02.07.2018. -
+ -->
+
+<apex:page id="DashboardPersonalOpptysPPR" controller="DashboardPersonalOpptysPPRCtrl" action="{!init}" sideBar="false"
+           showHeader="false">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+
+    <apex:pageBlock >
+        <apex:outputPanel >
+            <apex:outputPanel >
+                <h1>{!$Label.RU_0078_PersonalOpptysHeader}</h1>
+            </apex:outputPanel>
+            <apex:outputPanel layout="block" style="text-align: right;">
+                <apex:outputLink value="/apex/DashboardOpenOpptysReportPPR?userid={! userId }" target="_blank"
+                                 id="theLink" style="font-size:12pt">{!$Label.RU_0073_PersonalLeadsReport}</apex:outputLink>
+            </apex:outputPanel>
+        </apex:outputPanel>
+
+        <div>
+            <apex:outputPanel >
+                <div id="salesopptyspersonal" style="width: 100%; float: left; height: 550px"></div>
+            </apex:outputPanel>
+            <div style="clear: both;"></div>
+        </div>
+    </apex:pageBlock>
+
+    <script>
+        j$ = jQuery.noConflict();
+
+        j$(function() {
+            if({!NumberOfOpptysNoTask} == 0 && {!NumberOfOpptysOverdueTask} == 0){
+                generateZeros()
+                return;
+            }//
+            j$("#salesopptyspersonal").highcharts({
+                chart:{
+                    type: 'pie'
+                },
+                exporting:{
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                title:{
+                    text: ''
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.y}</b>'
+                },
+                plotOptions:{
+                    pie: {
+                        showInLegend: true,
+                        dataLabels: {
+                            enabled: true,
+                            format: '{point.y}',
+                            style: {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        }
+                    }
+                },
+                series:[{
+                    name: '{!$Label.RU_0074_PersonalLeadsTotal}',
+                    colorByPoint: true,
+                    data: [{
+                        //name: 'Возможности с просроченными задачами',
+                        name: '{!$Label.RU_0080_PersonalOpptysOverdueTasks}',
+                        color: 'rgba(197,16,88,1)',
+                        y: {!NumberOfOpptysOverdueTask},
+                        selected: true
+                    }, {
+                        // name: 'Возможности без открытых задач',
+                        name: '{!$Label.RU_0079_PersonalOpptysNoOpenTasks}',
+                        color: 'rgba(105,0,108,.9)',
+                        y: {!NumberOfOpptysNoTask} ,
+                        selected: true
+                    }]
+                }]
+            });
+        });
+
+        function generateZeros(){
+            j$('#salesopptyspersonal').append('<div id="zero-upper-half"></div>')
+
+                j$( "#zero-upper-half" ).css({
+                    "width": "40px",
+                    "height": "45px",
+                    "border-top-left-radius": "50px",
+                    "border-top-right-radius": "50px",
+                    "border": "7px solid gray",
+                    "border-color": "#69006C",
+                    "border-bottom": "0",
+                    "position": "absolute",
+                    "top": "36%",
+                    "left": "30%"
+                });
+
+                j$('#salesopptyspersonal').append('<div id="zero-bottom-half"></div>')
+                j$( "#zero-bottom-half" ).css({
+                    "width": "40px",
+                    "height": "45px",
+                    "border-bottom-left-radius": "50px",
+                    "border-bottom-right-radius": "50px",
+                    "border": "7px solid gray",
+                    "border-color": "#C51058",
+                    "border-top": "0",
+                    "position": "absolute",
+                    "top": "45%",
+                    "left": "30%"
+                });
+                //
+                j$('#salesopptyspersonal').append('<p id="zero-text">{!$Label.RU_0081_PersonalOpptysR}</p>')
+                j$( "#zero-text" ).css({
+                    "font-size": "40px",
+                    "position": "absolute",
+                    "top": "40%",
+                    "left": "40%"
+                });
+        }
+    </script>
+
+</apex:page>

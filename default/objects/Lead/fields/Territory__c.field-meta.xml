@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Territory__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+OR (
+CONTAINS(City,'ЕКАТЕРИНБУРГ'),
+CONTAINS(City,'Екатеринбург'),
+CONTAINS(Street,'ЕКАТЕРИНБУРГ'),
+CONTAINS(Street,'Екатеринбург')
+), 'Екатеринбург',
+IF(
+OR (
+CONTAINS(Street,'г. Оренбург'),
+CONTAINS(Street,'Г. ОРЕНБУРГ'),
+CONTAINS(Street,'г Оренбург'),
+CONTAINS(Street,'Г ОРЕНБУРГ'),
+AND ( LEFT(Street, 4)='4600',
+OR( CONTAINS(Street,'Оренбург'),
+CONTAINS(Street,'ОРЕНБУРГ')))
+), 'Оренбургская область',
+IF(
+OR (
+CONTAINS(Street,'г. Владимир.'),
+CONTAINS(Street,'Г. ВЛАДИМИР.'),
+CONTAINS(Street,'г Владимир.'),
+CONTAINS(Street,'Г ВЛАДИМИР.'),
+AND ( LEFT(Street, 4)='6000',
+OR( CONTAINS(Street,'Владимир'),
+CONTAINS(Street,'ВЛАДИМИР')))
+), 'Владимирская область',
+IF(
+OR (
+CONTAINS(City,'САНКТ-ПЕТЕРБУРГ'),
+CONTAINS(City,'Санкт-Петербург'),
+CONTAINS(Street,'САНКТ-ПЕТЕРБУРГ'),
+CONTAINS(Street,'Санкт-Петербург') ,
+AND ( LEFT(Street, 4)='1910',
+OR( CONTAINS(Street,'Петербург'),
+CONTAINS(Street,'ПЕТЕРБУРГ')))
+) ,'Ленинградская область',
+IF(
+OR (
+CONTAINS(TEXT(Region__c),'Свердловская'),
+CONTAINS(TEXT(Region__c),'СВЕРДЛОВСКАЯ'),
+CONTAINS(Street,'СВЕРДЛОВСКАЯ ОБ'),
+CONTAINS(Street,'Свердловская об'),
+AND ( LEFT(Street, 2)='62',
+OR( CONTAINS(Street,'СВЕРДЛОВСКАЯ'),
+CONTAINS(Street,'Свердловская')
+)
+)), 'Свердловская область','')
+))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Territory</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

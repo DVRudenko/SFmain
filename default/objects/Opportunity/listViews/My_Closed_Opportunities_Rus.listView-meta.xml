@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Closed_Opportunities_Rus</fullName>
+    <booleanFilter>(1 or 2) and 3</booleanFilter>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Number_of_Vehicles__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>OPPORTUNITY.PROBABILITY</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.PROBABILITY</field>
+        <operation>equals</operation>
+        <value>100</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Russian_Sales</value>
+    </filters>
+    <label>Мои Закрытые Возможности</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>AllRussianRoles</group>
+        <roleAndSubordinatesInternal>PPR_Fleetcor</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

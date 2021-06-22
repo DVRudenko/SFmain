@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_History_Requested__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check for KRD request</description>
+    <externalId>false</externalId>
+    <label>Payment History Requested</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

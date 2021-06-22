@@ -1,0 +1,31 @@
+<apex:page 
+    renderAs="pdf"
+    showHeader="false"
+    sidebar="false"
+    applyBodyTag="false"
+    applyHtmlTag="false"
+    controller="ETEPDFViewCtrl"
+    action="{!main}">
+    <html>
+        <head>
+            <meta charset="utf-8"/>
+            <style type="text/css">
+                @page {size: A4;{!margin}}
+                body{font-family: 'Arial Unicode MS';line-height: 1.4}
+                ol{padding-left: 4px;}
+                .header-image{width:200px;object-fit:contain;display:block;margin-bottom:32px}
+                .header-image_carnet{width:140px;}
+                .ta-center{text-align: center}
+                .underline-text{display: inline-block;min-width:160px;font-weight:700;font-style: italic;border-bottom: 1px solid #000;}
+                .underline-text:after{content:'&#160;';}
+                .underline-text_small{min-width:80px;}
+                .underline-text_large{min-width:240px;}
+                .underline-text_full{min-width:100%;}
+                .mb-05{margin-bottom: 8px;}
+            </style>
+        </head>
+        <body>
+            <apex:outputText value="{!content}" escape="false"></apex:outputText>
+        </body>
+    </html>
+</apex:page>

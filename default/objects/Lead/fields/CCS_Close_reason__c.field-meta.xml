@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Close_reason__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Close reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Info k BONUS</fullName>
+                <default>false</default>
+                <label>Info k BONUS</label>
+            </value>
+            <value>
+                <fullName>Zájemce o Carnet</fullName>
+                <default>false</default>
+                <label>Zájemce o Carnet</label>
+            </value>
+            <value>
+                <fullName>Předáno na Market</fullName>
+                <default>false</default>
+                <label>Předáno na Market</label>
+            </value>
+            <value>
+                <fullName>Smlouva uzavřena</fullName>
+                <default>false</default>
+                <label>Smlouva uzavřena</label>
+            </value>
+            <value>
+                <fullName>Smlouva uzavřena LIMIT+MINI</fullName>
+                <default>false</default>
+                <label>Smlouva uzavřena LIMIT+MINI</label>
+            </value>
+            <value>
+                <fullName>Telefonická objednávka</fullName>
+                <default>false</default>
+                <label>Telefonická objednávka</label>
+            </value>
+            <value>
+                <fullName>Telefonická objednávka CCS LIMIT FIX 97</fullName>
+                <default>false</default>
+                <label>Telefonická objednávka CCS LIMIT FIX 97</label>
+            </value>
+            <value>
+                <fullName>Telefonická objednávka CCS LIMIT ESO 2015</fullName>
+                <default>false</default>
+                <label>Telefonická objednávka CCS LIMIT ESO 2015</label>
+            </value>
+            <value>
+                <fullName>Nabídka CCS LIMIT+</fullName>
+                <default>false</default>
+                <label>Nabídka CCS LIMIT+</label>
+            </value>
+            <value>
+                <fullName>Nabídka CCS LIMIT Moje síť</fullName>
+                <default>false</default>
+                <label>Nabídka CCS LIMIT Moje síť</label>
+            </value>
+            <value>
+                <fullName>Nabídka CCS LIMIT FIX 97</fullName>
+                <default>false</default>
+                <label>Nabídka CCS LIMIT FIX 97</label>
+            </value>
+            <value>
+                <fullName>Nabídka CCS LIMIT ESO 2015</fullName>
+                <default>false</default>
+                <label>Nabídka CCS LIMIT ESO 2015</label>
+            </value>
+            <value>
+                <fullName>Nezájem - klient se pouze dívá</fullName>
+                <default>false</default>
+                <label>Nezájem - klient se pouze dívá</label>
+            </value>
+            <value>
+                <fullName>Nezájem - nabídka odmítnuta (viz poznámka)</fullName>
+                <default>false</default>
+                <label>Nezájem - nabídka odmítnuta (viz poznámka)</label>
+            </value>
+            <value>
+                <fullName>Objednávku klient odešle později</fullName>
+                <default>false</default>
+                <label>Objednávku klient odešle později</label>
+            </value>
+            <value>
+                <fullName>Schůzka na OZ</fullName>
+                <default>false</default>
+                <label>Schůzka na OZ</label>
+            </value>
+            <value>
+                <fullName>Zájemce UTA</fullName>
+                <default>false</default>
+                <label>Zájemce UTA</label>
+            </value>
+            <value>
+                <fullName>Kontakty neexistují</fullName>
+                <default>false</default>
+                <label>Kontakty neexistují</label>
+            </value>
+            <value>
+                <fullName>Nezadáno – nesouhlasí se změněnými podmínkami</fullName>
+                <default>false</default>
+                <label>Nezadáno – nesouhlasí se změněnými podmínkami</label>
+            </value>
+            <value>
+                <fullName>Nezadáno – Cribis H</fullName>
+                <default>false</default>
+                <label>Nezadáno – Cribis H</label>
+            </value>
+            <value>
+                <fullName>Přiobjednávka</fullName>
+                <default>false</default>
+                <label>Přiobjednávka</label>
+            </value>
+            <value>
+                <fullName>Předáno zodpovědné osobě</fullName>
+                <default>false</default>
+                <label>Předáno zodpovědné osobě</label>
+            </value>
+            <value>
+                <fullName>Jiný v poznámce</fullName>
+                <default>false</default>
+                <label>Jiný v poznámce</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Uzavřeno</controllingFieldValue>
+            <valueName>Info k BONUS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Uzavřeno</controllingFieldValue>
+            <valueName>Předáno na Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Uzavřeno</controllingFieldValue>
+            <valueName>Smlouva uzavřena</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Uzavřeno</controllingFieldValue>
+            <valueName>Nezájem - nabídka odmítnuta (viz poznámka)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Uzavřeno</controllingFieldValue>
+            <valueName>Kontakty neexistují</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Uzavřeno</controllingFieldValue>
+            <valueName>Přiobjednávka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Uzavřeno</controllingFieldValue>
+            <valueName>Předáno zodpovědné osobě</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Uzavřeno</controllingFieldValue>
+            <valueName>Jiný v poznámce</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

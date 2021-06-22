@@ -1,0 +1,118 @@
+{
+    "typeOfVehicle": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Car",
+                    "sk": "Automobil",
+                    "cs": "Automobil",
+                    "hu": "Autó",
+                    "fr": "Véhicule léger",
+                    "nl": "(Personen)auto",
+                    "pl": "Samochód osobowy",
+                    "de": "PKW"
+                },
+                "value": "PKW"
+            },
+            {
+                "label": {
+                    "en": "Truck",
+                    "sk": "Nákladné vozidlo",
+                    "cs": "Nákladní vozidlo",
+                    "hu": "Kamion",
+                    "fr": "Poids lourd",
+                    "nl": "Vrachtwagen",
+                    "pl": "Ciężarówka",
+                    "de": "LKW"
+                },
+                "value": "LKW"
+            }
+        ]
+    },
+    "typeOfCard": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Yes",
+                    "sk": "Áno",
+                    "cs": "Ano",
+                    "hu": "Igen",
+                    "fr": "Oui",
+                    "nl": "Ja",
+                    "pl": "Tak",
+                    "de": "Ja"
+                },
+                "value": "Multi Network Card -- International"
+            },
+            {
+                "label": {
+                    "en": "No",
+                    "sk": "Nie",
+                    "cs": "Ne",
+                    "hu": "Nem",
+                    "nl": "Nee",
+                    "fr": "Non",
+                    "pl": "Nie",
+                    "de": "Nein"
+                },
+                "value": "Multi Network Card -- National"
+            }
+        ],
+        "Switzerland-DE": [
+            {
+                "label": {
+                    "en": "Yes",
+                    "sk": "Áno",
+                    "cs": "Ano",
+                    "hu": "Igen",
+                    "fr": "Oui",
+                    "nl": "Ja",
+                    "pl": "Tak",
+                    "de": "Ja"
+                },
+                "value": "Single Network Card -- International"
+            },
+            {
+                "label": {
+                    "en": "No",
+                    "sk": "Nie",
+                    "cs": "Ne",
+                    "hu": "Nem",
+                    "nl": "Nee",
+                    "fr": "Non",
+                    "pl": "Nie",
+                    "de": "Nein"
+                },
+                "value": "Single Network Card -- National"
+            }
+        ],
+        "Switzerland-FR": [
+            {
+                "label": {
+                    "en": "Yes",
+                    "sk": "Áno",
+                    "cs": "Ano",
+                    "hu": "Igen",
+                    "fr": "Oui",
+                    "nl": "Ja",
+                    "pl": "Tak",
+                    "de": "Ja"
+                },
+                "value": "Single Network Card -- International"
+            },
+            {
+                "label": {
+                    "en": "No",
+                    "sk": "Nie",
+                    "cs": "Ne",
+                    "hu": "Nem",
+                    "nl": "Nee",
+                    "fr": "Non",
+                    "pl": "Nie",
+                    "de": "Nein"
+                },
+                "value": "Single Network Card -- National"
+            }
+        ]
+    }
+}

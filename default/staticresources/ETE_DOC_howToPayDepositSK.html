@@ -1,0 +1,46 @@
+<style>
+    .how-to-pay {
+        font-size: 11px;
+    }
+
+    .how-to-pay__table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .how-to-pay__table tr {
+        margin-top: 5px;
+    }
+
+    .how-to-pay__table tr td {
+        width: 50%;
+        padding: 4px 0 0;
+        border-bottom: 1px solid rgb(196, 196, 196);
+    }
+</style>
+
+<div class="how-to-pay">
+    <p class="doc-header">Kauciu je možné previesť na nasledujúce číslo účtu spoločnosti FLEETCOR Slovakia s.r.o.:</p>
+    <table class="how-to-pay__table">
+        <tr>
+            <td>Čiastka k úhrade:</td>
+            <td>{!securityAmountToPay} €</td>
+        </tr>
+        <tr>
+            <td>Majiteľ účtu:</td>
+            <td>FLEETCOR Slovakia s.r.o.</td>
+        </tr>
+        <tr>
+            <td>IBAN:</td>
+            <td>SK7581300000002014450204</td>
+        </tr>
+        <tr>
+            <td>BIC:</td>
+            <td>CITISKBA</td>
+        </tr>
+        <tr>
+            <td>Účel platby:</td>
+            <td>IČO spoločnosti</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,494 @@
+<apex:page controller="CreditFactoryReportController" action="{! init }">
+    <style>
+        .btn {
+            color: black; 
+            text-decoration: none; 
+            padding: 3px 4px;
+        }
+
+        .homeTab .tertiaryPalette, 
+        .individualPalette .homeBlock .tertiaryPalette,
+        .layoutEdit .individualPalette .homeBlock .tertiaryPalette {
+            background: black;
+        }
+
+        .newValues {
+            border-collapse: collapse;
+            margin: 20px 0 0 0;
+        }
+
+        .newValues th {
+            background: black;
+            color: white;
+        }
+
+        .newValues th,
+        .newValues td {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        #lightbox-cf {
+            display: none;
+            background: #000000;
+            opacity: 0.7;
+            filter: alpha(opacity=70);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 1000;
+        }
+    </style>
+    <apex:stylesheet value="{!URLFOR($Resource.Spinner, 'spinner.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Spinner, 'spinner.js')}"/>
+    <script>
+        var timesRun = 0;
+        var isWaiting = {! isWaitingReport};
+        self.setTimeout(function() {
+            if (isWaiting) {
+                timesRun += 1;
+                callActionFunction();
+            }
+        }, 2000);
+        
+        function callActionFunction() {
+            checkReportStatus();
+        }
+        
+        function callActionFunctionAgain(isWaiting) {
+            if (isWaiting && timesRun < 10) {
+                self.setTimeout(function() {
+                    timesRun += 1;
+                    callActionFunction();
+                }, 2000);
+            }
+            else {
+                endSplash();
+            }
+        }
+    </script>
+    <script>
+        //Function is used to get splash status bar when server side call is going on
+        function startSplash() {
+            document.getElementById('splashDiv').style.display='table-cell';
+            document.getElementById('lightbox-cf').style.display = 'block';
+        }
+        //Function will make the splash status to be stopped.
+        function endSplash() {
+            document.getElementById('splashDiv').style.display='none';
+            document.getElementById('lightbox-cf').style.display = 'none';
+        }
+    </script>
+    <script>
+        var newWin = null;
+        function openLookupPopup(call, id, opportunityId) {
+            var url = "/apex/CallChoise?callfield=" + call + "&idfield=" + id + "&opportunityId=" + opportunityId;
+            newWin = window.open(url, 'Popup','height=500,width=600,left=200,top=200,resizable=no,scrollbars=yes,toolbar=no,status=no');
+            if (window.focus) {
+                newWin.focus();
+            }
+            
+            return false;
+        }
+   
+        function closeLookupPopup() {
+            if (newWin != null) {
+                newWin.close();
+            }  
+        }
+    </script>
+    <div class="splashStatus" id="splashDiv">
+        <div class="circle"><img src="{!URLFOR($Resource.Spinner, 'spinner.gif')}"/></div>
+        <div class="txt">Please Wait. Loading...</div>
+    </div>
+    <div id="lightbox-cf"></div>
+    <script>
+        if (isWaiting) {
+            startSplash();
+        }
+    </script>
+    <apex:actionStatus id="splashStatus" onstart="startSplash();" onstop="endSplash();"/>
+
+    <apex:form id="formId">
+        <apex:pageBlock >
+            <apex:pageMessages escape="false"/>
+            <apex:actionFunction name="checkReportStatus" action="{! checkReportStatus}" onComplete="callActionFunctionAgain({! isWaitingReport})" reRender="formId"></apex:actionFunction>
+            <apex:actionFunction name="continueValidation" action="{! continueValidation}" oncomplete="endSplash()" reRender="formId"></apex:actionFunction>
+            <apex:outputPanel rendered="{! isInvalidAddress }" layout="block">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="newValues">
+                    <tr>
+                        <th></th>
+                        <apex:outputPanel rendered="{! OR(company.street != null, company.housenumber != null, company.postcode != null, company.city != null)}"
+                                layout="none">
+                            <th>Address (Credit Agency)</th>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{! OR(additionalCompany.street != null, additionalCompany.housenumber != null, additionalCompany.postcode != null, additionalCompany.city != null)}"
+                                layout="none">
+                            <th>Additional Address (Credit Agency)</th>
+                        </apex:outputPanel>
+                        <th>Registered Address (Salesforce)</th>
+                        <th>Shipping Address (Salesforce)</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Street (Strasse + Hausnummer for Classification)</strong></td>
+                        <apex:outputPanel rendered="{! OR(company.street != null, company.housenumber != null, company.postcode != null, company.city != null)}"
+                                layout="none">
+                            <td>
+                                {! company.street } {! company.housenumber }
+                            </td>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{! OR(additionalCompany.street != null, additionalCompany.housenumber != null, additionalCompany.postcode != null, additionalCompany.city != null)}"
+                                layout="none">
+                            <td>
+                                {! additionalCompany.street} {! additionalCompany.housenumber}
+                            </td>
+                        </apex:outputPanel>
+                        <td>
+                            {! currentOpportunity.Account.BillingStreet }
+                        </td>
+                        <td>
+                            {! currentOpportunity.Account.ShippingStreet }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Postal Code</strong></td>
+                        <apex:outputPanel rendered="{! OR(company.street != null, company.housenumber != null, company.postcode != null, company.city != null)}"
+                                layout="none">
+                            <td>
+                                {! company.postcode }
+                            </td>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{! OR(additionalCompany.street != null, additionalCompany.housenumber != null, additionalCompany.postcode != null, additionalCompany.city != null)}"
+                                layout="none">
+                            <td>
+                                {! additionalCompany.postcode}
+                            </td>
+                        </apex:outputPanel>
+                        <td>
+                            {! currentOpportunity.Account.BillingPostalCode }
+                        </td>
+                        <td>
+                            {! currentOpportunity.Account.ShippingPostalCode }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>City</strong></td>
+                        <apex:outputPanel rendered="{! OR(company.street != null, company.housenumber != null, company.postcode != null, company.city != null)}"
+                                layout="none">
+                            <td>
+                                {! company.city }
+                            </td>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{! OR(additionalCompany.street != null, additionalCompany.housenumber != null, additionalCompany.postcode != null, additionalCompany.city != null)}"
+                                layout="none">
+                            <td>
+                                {! additionalCompany.city }
+                            </td>
+                        </apex:outputPanel>
+                        <td>
+                            {! currentOpportunity.Account.BillingCity }
+                        </td>
+                        <td>
+                            {! currentOpportunity.Account.ShippingCity }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <apex:outputPanel rendered="{! OR(company.street != null, company.housenumber != null, company.postcode != null, company.city != null)}"
+                                layout="none">
+                            <td>
+                                <apex:commandButton value="Update Address" action="{! doUpdateAddress }" oncomplete="continueValidation()" onclick="startSplash()"
+                                    rendered="{! OR(company.street != null, company.housenumber != null, company.postcode != null, company.city != null)}" reRender="formId"/>
+                            </td>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{! OR(additionalCompany.street != null, additionalCompany.housenumber != null, additionalCompany.postcode != null, additionalCompany.city != null)}"
+                                layout="none">
+                            <td>
+                                <apex:commandButton value="Update With Additional Address" action="{! doUpdateWithAdditionalAddress }" oncomplete="continueValidation()"
+                                    onclick="startSplash()" rendered="{! OR(additionalCompany.street != null, additionalCompany.housenumber != null,
+                                    additionalCompany.postcode != null, additionalCompany.city != null)}" reRender="formId"/>
+                            </td>
+                        </apex:outputPanel>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{! isInvalidCompanyName }" layout="block">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="newValues">
+                    <tr>
+                        <apex:outputPanel rendered="{! company.name != null}" layout="none">
+                            <th>Credit System Company Registered Name</th>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{! AND(company.tradename != null, OR(creditSystemName = 'Creditreform', creditSystemName = 'CreditreformAT', creditSystemName = 'Creditsafe'))}" layout="none">
+                            <th>Credit System Company Trade Name</th>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{! additionalCompany.name != null}" layout="none">
+                            <th>Credit System Additional Company Name</th>
+                        </apex:outputPanel>
+                        <th>Account Name</th>
+                    </tr>
+                    <tr>
+                        <apex:outputPanel rendered="{! company.name != null}" layout="none">
+                            <td>
+                                {! company.name }
+                            </td>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{! AND(company.tradename != null, OR(creditSystemName = 'Creditreform', creditSystemName = 'CreditreformAT', creditSystemName = 'Creditsafe'))}" layout="none">
+                            <td>
+                                {! company.tradename }
+                            </td>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{! additionalCompany.name != null}" layout="none">
+                            <td>
+                                {! additionalCompany.name }
+                            </td>
+                        </apex:outputPanel>
+                        <td>
+                            {! currentOpportunity.Account.Name }
+                        </td>
+                    </tr>
+                    <tr>
+                        <apex:outputPanel rendered="{! company.name != null}" layout="none">
+                            <td>
+                                <apex:commandButton value="Update Account Name" action="{! doUpdateCompanyName }" oncomplete="continueValidation()"
+                                        onclick="startSplash()" reRender="formId">
+                                    <apex:param value="Registered Name" assignTo="{! companyNameType}"/>
+                                </apex:commandButton>
+                            </td>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{! AND(company.tradename != null, OR(creditSystemName = 'Creditreform', creditSystemName = 'CreditreformAT', creditSystemName = 'Creditsafe'))}" layout="none">
+                            <td>
+                                <apex:commandButton value="Update Account Name" action="{! doUpdateCompanyName }" oncomplete="continueValidation()"
+                                        onclick="startSplash()" reRender="formId">
+                                    <apex:param value="Trade Name" assignTo="{! companyNameType}"/>
+                                </apex:commandButton>
+                            </td>
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{! additionalCompany.name != null}" layout="none">
+                            <td>
+                                <apex:commandButton value="Update With Additional Account Name" action="{! doUpdateWithAdditionalCompanyName }"
+                                        oncomplete="continueValidation()" onclick="startSplash()" reRender="formId"/>
+                            </td>
+                        </apex:outputPanel>
+                        <td></td>
+                    </tr>
+                </table>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{! isInvalidTaxId }" layout="block">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="newValues">
+                    <tr>
+                        <th>Credit System Tax Id</th>
+                        <th>Account Tax Id</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            {! company.taxnumber }
+                        </td>
+                        <td>
+                            {! currentOpportunity.Account.Steuernummer__c }
+                        </td>
+                    </tr>
+                </table>
+                <apex:commandButton value="Update Tax Id" action="{! doUpdateTaxId }" oncomplete="continueValidation()" onclick="startSplash()" reRender="formId"/>
+            </apex:outputPanel> 
+
+            <apex:outputPanel rendered="{! isInvalidVatNumber }" layout="block">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="newValues">
+                    <tr>
+                        <th>Credit System Vat Number</th>
+                        <th>Account Vat Number</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            {! company.vatid }
+                        </td>
+                        <td>
+                            {! currentOpportunity.Account.Umsatzsteuer_ID__c }
+                        </td>
+                    </tr>
+                </table>
+                <apex:commandButton value="Update Vat Number" action="{! doUpdateVatNumber }" oncomplete="continueValidation()" onclick="startSplash()" reRender="formId"/>
+            </apex:outputPanel> 
+
+            <apex:outputPanel rendered="{! isInvalidTradeRegisterNumber }" layout="block">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="newValues">
+                    <tr>
+                        <th>Credit System Trade Register Number</th>
+                        <th>Account Trade Register Number</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            {! company.tradeRegisterNumber }
+                        </td>
+                        <td>
+                            {! currentOpportunity.Account.HR_Abteilung_HRA_HRB_und_HR_Nummer__c }
+                        </td>
+                    </tr>
+                </table>
+                <apex:commandButton value="Update Trade Register Number" action="{! doUpdateTradeRegisterNumber }" oncomplete="continueValidation()" onclick="startSplash()" reRender="formId"/>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{! isInvalidSwiftBic }" layout="block">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="newValues">
+                    <tr>
+                        <th>Requested SWIFT BIC</th>
+                        <th>Opportunity SWIFT BIC</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            {! currentOpportunity.Requested_SWIFT_BIC__c }
+                        </td>
+                        <td>
+                            {! currentOpportunity.SWIFT_BIC__c }
+                        </td>
+                    </tr>
+                </table>
+                <apex:commandButton value="Update SWIFT BIC" action="{! doUpdateSwiftBic }" oncomplete="continueValidation()" onclick="startSplash()" reRender="formId"/>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{! isInvalidContactRole}" layout="block">
+                <apex:pageBlockSection title="Contact Role Confirmation" columns="1">
+                    <apex:pageBlockSectionitem >
+                        <apex:outputPanel >
+                            <apex:inputHidden value="{! callId}" id="targetId" />
+                            <apex:inputText size="40" value="{! contactRoleConfirmation}" id="targetCall" onFocus="this.blur()" disabled="false"/> 
+                            <a href="#" onclick="openLookupPopup('{! $Component.targetCall}', '{! $Component.targetId}', '{! opportunityId}'); return false">Choose call</a>
+                        </apex:outputPanel>
+                    </apex:pageBlockSectionitem>
+                </apex:pageBlockSection>
+                <apex:commandButton value="Confirm call" action="{! confirmContactRole}" oncomplete="continueValidation()" onclick="startSplash()" reRender="formId"/>
+            </apex:outputPanel>
+
+            <apex:outputPanel>
+                <apex:pageBlockSection rendered="{! company.Name != null }">
+                    <apex:outputText label="Credit System Number" value="{! company.creditSystemCompanyNumber }"/>
+                    <apex:outputText label="Name" value="{! company.Name }"/>
+                    <apex:outputText rendered="{! AND(creditSystemName != 'Creditsafe', creditSystemName != 'CrediconnectCH', creditSystemName != 'Schufa')}" label="Reference Number"
+                        value="{! company.referencenumber }"/>
+                    <apex:outputText label="Fax" value="{! company.fax }"/>
+                    <apex:outputText label="Mobile" value="{! company.mobile }" rendered="{! creditSystemName != 'Schufa'}"/>
+                    <apex:outputText label="Website" value="{! company.website }"/>
+                    <apex:outputText label="Class Rating" value="{! company.classRating }"/>
+                    <apex:outputText label="Credit Limit" value="{! company.creditLimit } {! company.creditLimitCurrency }"/>
+                    <apex:outputText label="Trade Name" value="{! company.tradename }" rendered="{! creditSystemName != 'CrediconnectCH'}"/>
+                    <apex:outputText label="Company Status" value="{! company.status }"/>
+                    <apex:outputText label="County Court" value="{! company.countyCourt }" rendered="{! creditSystemName != 'CrediconnectCH'}"/>
+                    <apex:outputText label="Legal Form" value="{! company.legalform }"/>
+                    <apex:outputText label="Staff Range" value="{! company.staffcompanyrange }"/>
+                    <apex:outputText label="Fiscal Number" value="{! company.taxnumber }"/>
+                    <apex:outputText label="VAT Number" value="{! company.vatid }"/>
+                    <apex:outputText label="Trade Register Number" value="{! company.tradeRegisterNumber}" rendered="{! OR(creditSystemName = 'Creditsafe',
+                        creditSystemName = 'Coface', creditSystemName = 'Schufa')}"/>
+                    <apex:outputText label="Register Number" value="{! company.registerNumber }" rendered="{! creditSystemName != 'CrediconnectCH'}"/>
+                    <apex:outputText label="Credit Decision" value="{! company.creditDecision }" rendered="{! creditSystemName != 'Schufa'}"/>
+                    <apex:outputText label="Payment Behaviour" value="{! company.paymentBehaviour }" rendered="{! creditSystemName != 'Schufa'}"/>
+                    <apex:outputText label="Turn Over" value="{! company.turnOver }"/>
+                    <apex:outputText label="Share capital" value="{! company.paidUpShareCapital } {! company.paidUpShareCapitalCurrency }" rendered="{! creditSystemName = 'CrediconnectCH'}"/>
+                    <apex:outputText label="Solvency Index" value="{! company.solvencyIndex }" rendered="{! OR(creditSystemName = 'Creditreform',
+                        creditSystemName = 'CreditreformAT', creditSystemName = 'CreditreformLU', creditSystemName = 'CrediconnectCH', creditSystemName = 'Creditsafe')}"/>
+                    <apex:outputText label="Date of last change of director" value="{! company.dateOfLastChangeOfDirector }" rendered="{! OR(creditSystemName = 'Creditsafe', creditSystemName = 'CrediconnectCH')}"/>
+                    <apex:outputText label="Date of last change of address" value="{! company.dateOfLastChangeOfAddress }" rendered="{! OR(creditSystemName = 'Creditsafe', creditSystemName = 'CrediconnectCH')}"/>
+                    <apex:outputText label="Date of last change of name" value="{! company.dateOfLastChangeOfName }" rendered="{! OR(creditSystemName = 'Creditsafe', creditSystemName = 'CrediconnectCH')}"/>
+                    <apex:outputText label="Address change decision" value="{! company.addressChangeDecision }" rendered="{! creditSystemName = 'Creditsafe'}"/>
+                    <apex:outputText label="Principal Activity Code" value="{! company.principalActivityCode }" rendered="{! OR(creditSystemName = 'Creditsafe', creditSystemName = 'Schufa')}"/>
+                    <apex:outputText label="Principal Activity Description" value="{! company.principalActivityDescription }" rendered="{! OR(creditSystemName = 'Creditsafe', creditSystemName = 'Schufa')}"/>
+                    <apex:outputText label="Requested BIC" value="{! currentOpportunity.Requested_SWIFT_BIC__c }" rendered="{! AND(creditSystemName != 'Crif', creditSystemName != 'Coface')}"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Trade Register" collapsible="false" rendered="{! AND(creditSystemName != 'CrediconnectCH', creditSystemName != 'Schufa', company.Name != null)}">
+                    <apex:outputText label="Date Legal Form" value="{! company.datelegalform }"/>
+                    <apex:outputText label="Date Last Register Entry" value="{! company.datelastregisterentry }"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Foundation" collapsible="false" rendered="{! company.Name != null }">
+                    <apex:outputText label="Date of Foundation" value="{! company.dateoffoundation }"/>
+                    <apex:outputText label="Age of Company" value="{! company.ageofcompany }"/>
+                    <apex:outputText label="First Legal Form" value="{! company.firstlegalform }" rendered="{! AND(creditSystemName != 'CrediconnectCH', creditSystemName != 'Schufa')}"/>
+                    <apex:outputText label="Date of Last Major Update" value="{! company.dateOfLastMajorUpdate}" rendered="{! creditSystemName = 'Coface'}"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Address Information" collapsible="false" rendered="{! company.Name != null }">
+                    <apex:outputText label="Country" value="{! company.country }"/>
+                    <apex:outputText label="City" value="{! company.city }"/>
+                    <apex:outputText label="Street" value="{! company.street }"/>
+                    <apex:outputText label="Housenumber" value="{! company.housenumber }" rendered="{! creditSystemName != 'Schufa'}"/>
+                    <apex:outputText label="Postcode" value="{! company.postcode }"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="PIT" collapsible="false" rendered="{! AND(company.Name != null, creditSystemName = 'Coface')}">
+                    <apex:outputText label="Profit Loss Last Year" value="{! company.profitLossLastYear } {! IF(company.profitLossLastYear != null, company.pitCurrency, '') }" 
+                        rendered="{! creditSystemName = 'Coface'}"/>
+                    <apex:outputText label="Profit Loss Year Before Last" value="{! company.profitLossYearBeforeLast } {! IF (company.profitLossYearBeforeLast != null, company.pitCurrency, '') }" 
+                        rendered="{! creditSystemName = 'Coface'}"/>
+                    <apex:outputText label="Turn Over Last Year" value="{! company.turnOverLastYear } {! IF(company.turnOverLastYear != null, company.pitCurrency, '') }" 
+                        rendered="{! creditSystemName = 'Coface'}"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="LexisNexis" collapsible="false" rendered="{! company.Name != null }">
+                    <apex:outputText label="Email Exists" value="{! company.emailExists} {! company.emailDate}"/>
+                    <apex:outputText label="Domain Exists" value="{! company.domainExists} {! company.domainDate}"/>
+                    <apex:outputText label="Email Status" value="{! company.emailStatus}"/>
+                    <apex:outputText label="Email Risk" value="{! company.emailRisk}"/>
+                    <apex:outputText label="Risk Description" value="{! company.riskDescription}"/>
+                    <apex:outputText label="Risk Advice" value="{! company.riskAdvice}"/>
+                    <apex:outputText label="Fraud Within Industry" value="{! company.fraudWithinIndustry}"/>
+                    <apex:outputText label="Fraud Type" value="{! company.fraudType}"/>
+                    <apex:outputText label="Hits" value="{! company.totalHits} ({! company.uniqueHits})"/>
+                    <apex:outputText label="Name Match" value="{! company.nameMatch}"/>
+                    <apex:outputText label="Checked Email" value="{! company.checkedEmail}"/>
+                </apex:pageBlockSection>
+
+                <apex:outputPanel >
+                    <apex:pageBlockSection title="Additional data" rendered="{! additionalCompany.name != null}">
+                        <apex:outputText label="Name" value="{! additionalCompany.name }"/>
+                        <apex:outputText label="Main Establishment" value="{! additionalCompany.indicationMainEstablishment }"/>
+                        <apex:outputText label="Rsin Number" value="{! additionalCompany.rsinNumber }"/>
+                        <apex:outputText label="Legal form" value="{! additionalCompany.legalform }"/>
+                        <apex:outputText label="Indication Organisation" value="{! additionalCompany.indicationOrganisation }"/>
+                        <apex:outputText label="Trade Name" value="{! additionalCompany.tradename }"/>
+                        <apex:outputText label="Postcode" value="{! additionalCompany.postcode }"/>
+                        <apex:outputText label="City" value="{! additionalCompany.city }"/>
+                        <apex:outputText label="Street" value="{! additionalCompany.street }"/>
+                        <apex:outputText label="Housenumber" value="{! additionalCompany.housenumber }"/>
+                        <apex:outputText label="Country" value="{! additionalCompany.country }"/>
+                        <apex:outputText label="Website" value="{! additionalCompany.website }"/>
+                        <apex:outputText label="Primary Sbi Code" value="{! additionalCompany.primarySbiCode }"/>
+                        <apex:outputText label="Primary Sbi Code Text" value="{! additionalCompany.primarySbiCodeText }"/>
+                        <apex:outputText label="Staff Range" value="{! additionalCompany.staffcompanyrange }"/>
+                        <apex:outputText label="Economically Active" value="{! additionalCompany.indicationEconomicallyActive }"/>
+                        <apex:outputText label="Non Mailing" value="{! additionalCompany.indicationNonMailing }"/>
+                        <apex:outputText label="Bankruptcy" value="{! additionalCompany.indicationBankruptcy }"/>
+                        <apex:outputText label="Dip" value="{! additionalCompany.indicationDip }"/>
+                        <apex:outputText label="Authorized Share Capital" value="{! additionalCompany.authorizedShareCapital } 
+                            {! additionalCompany.authorizedShareCapitalCurrency }"/>
+                        <apex:outputText label="Paid Up Share Capital" value="{! additionalCompany.paidUpShareCapital } 
+                            {! additionalCompany.paidUpShareCapitalCurrency }"/>
+                        <apex:outputText label="Issued Share Capital" value="{! additionalCompany.issuedShareCapital } 
+                            {! additionalCompany.issuedShareCapitalCurrency }"/>
+                        <apex:outputText label="Continuation Date" value="{! additionalCompany.continuationDate }"/>
+                        <apex:outputText label="Establishment Date" value="{! additionalCompany.establishmentDate }"/>
+                        <apex:outputText label="Date of Foundation" value="{! additionalCompany.dateoffoundation}"/>
+                        <apex:outputText label="id" value="{! additionalCompany.identificationNumber }"/>
+                    </apex:pageBlockSection>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            
+            <apex:pageBlockButtons id="buttons">
+                <apex:commandButton value="Back to Opportunity" action="{! backToOpportunity }" status="splashStatus" reRender="formId"/>
+                <apex:commandButton value="Update Opportunity" action="{! changeBillingPeriodBySales }" 
+                    rendered="{! AND(isValid, billingPeriod != null, isError = false, isWaitingReport == false) }" status="splashStatus" reRender="formId"/>
+                <apex:commandButton value="Get Parent Company Employees" action="{! doParentCompanyRequest}" rendered="{! AND(parentCompanyId != null, isWaitingReport == false)}" oncomplete="continueValidation()" 
+                    onclick="startSplash()" reRender="formId"/>
+                <apex:commandButton value="Pending SEPA" action="{! changeToPendingSEPAConfirmation}" style="background: green; color: white"
+                    rendered="{! AND(isValid, billingPeriod != null, OR(deposit = null, deposit = 0), isPendingSEPAPossible = true, isError = false, isWaitingReport == false)}" status="splashStatus" reRender="formId"/>
+                <apex:commandButton value="Closed Won" action="{! changeToClosedWon}" style="background: green; color: white"
+                    rendered="{! AND(isValid, billingPeriod != null, OR(deposit = null, deposit = 0), isAutoCWPossible = true, isError = false, isWaitingReport == false)}" status="splashStatus" reRender="formId"/>   
+                <apex:commandButton value="Contract Check" action="{! changeToContractCheck}" style="background: green; color: white"
+                    rendered="{! AND(isValid, billingPeriod != null, OR(deposit = null, deposit = 0), isAutoCWPossible = false, creditSystemName = 'Coface', isError = false, isWaitingReport == false)}"
+                    status="splashStatus" reRender="formId,buttons"/>
+                <apex:commandButton value="Pending Deposit" action="{! changeToPendingDeposit}" style="background: green; color: white" status="splashStatus" reRender="formId"
+                    rendered="{! AND(OR(AND(isValid, parentCompanyId = null, billingPeriod != null, deposit != null, deposit != 0), company.Name == null), isError = false, isWaitingReport == false)}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

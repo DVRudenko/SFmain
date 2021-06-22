@@ -1,0 +1,9 @@
+<apex:page id="KioskPL1920x1080" sidebar="false" showHeader="false" standardStylesheets="false">
+    <script>
+        function redirect(){
+            var params = window.location.search.substr(1);
+            window.location.href="{!URLFOR($Resource.TabletBannerPLlarge,'index.html')}?"+params;
+        }
+        window.onload = redirect();
+    </script>
+</apex:page>

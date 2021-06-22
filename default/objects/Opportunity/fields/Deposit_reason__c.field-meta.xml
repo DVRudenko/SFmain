@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deposit_reason__c</fullName>
+    <description>The reason of the deposit</description>
+    <externalId>false</externalId>
+    <label>Deposit reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Low Recommended CL</fullName>
+                <default>false</default>
+                <label>Low Recommended CL</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 4 &amp; 30+7)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 4 &amp; 30+7)</label>
+            </value>
+            <value>
+                <fullName>New business</fullName>
+                <default>false</default>
+                <label>New business</label>
+            </value>
+            <value>
+                <fullName>Invalid contact</fullName>
+                <default>false</default>
+                <label>Invalid contact</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 5)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 5)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 6)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 6)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 0)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 0)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 1)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 1)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 2)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 2)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 3)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 3)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 4)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 4)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 99)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 99)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (no rating)</fullName>
+                <default>false</default>
+                <label>Low credit rating (no rating)</label>
+            </value>
+            <value>
+                <fullName>Obligation overdue</fullName>
+                <default>false</default>
+                <label>Obligation overdue</label>
+            </value>
+            <value>
+                <fullName>Low/no profitability</fullName>
+                <default>false</default>
+                <label>Low/no profitability</label>
+            </value>
+            <value>
+                <fullName>Payment details are 15+7</fullName>
+                <default>false</default>
+                <label>Payment details are 15+7</label>
+            </value>
+            <value>
+                <fullName>Payment details are 30+7</fullName>
+                <default>false</default>
+                <label>Payment details are 30+7</label>
+            </value>
+            <value>
+                <fullName>Sole trader</fullName>
+                <default>false</default>
+                <label>Sole trader</label>
+            </value>
+            <value>
+                <fullName>Address/Director/Name change 6M</fullName>
+                <default>false</default>
+                <label>Address/Director/Name change 6M</label>
+            </value>
+            <value>
+                <fullName>Cribis negative information</fullName>
+                <default>false</default>
+                <label>Cribis negative information</label>
+            </value>
+            <value>
+                <fullName>Missing financials</fullName>
+                <default>false</default>
+                <label>Missing financials</label>
+            </value>
+            <value>
+                <fullName>Executions</fullName>
+                <default>false</default>
+                <label>Executions</label>
+            </value>
+            <value>
+                <fullName>Negative policy rule</fullName>
+                <default>false</default>
+                <label>Negative policy rule</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Payment delays</fullName>
+                <default>false</default>
+                <label>Payment delays</label>
+            </value>
+            <value>
+                <fullName>Poor Financials</fullName>
+                <default>false</default>
+                <label>Poor Financials</label>
+            </value>
+            <value>
+                <fullName>No financials</fullName>
+                <default>false</default>
+                <label>No financials</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

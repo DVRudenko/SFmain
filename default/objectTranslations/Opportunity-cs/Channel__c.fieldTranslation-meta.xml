@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Druh příchozího kontaktu</label>
+    <name>Channel__c</name>
+    <picklistValues>
+        <masterLabel>Anruf</masterLabel>
+        <translation>Volání</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>E-mail</masterLabel>
+        <translation><!-- E-mail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fax</masterLabel>
+        <translation><!-- Fax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internet</masterLabel>
+        <translation><!-- Internet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POS</masterLabel>
+        <translation><!-- POS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post</masterLabel>
+        <translation>Pošta</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>web</masterLabel>
+        <translation><!-- web --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

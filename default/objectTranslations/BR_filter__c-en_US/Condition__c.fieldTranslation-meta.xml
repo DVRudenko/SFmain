@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Condition --></label>
+    <name>Condition__c</name>
+    <picklistValues>
+        <masterLabel>( ; )</masterLabel>
+        <translation><!-- ( ; ) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>( ; ]</masterLabel>
+        <translation><!-- ( ; ] --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>&lt;</masterLabel>
+        <translation><!-- &lt; --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>=</masterLabel>
+        <translation><!-- = --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>&gt;</masterLabel>
+        <translation><!-- &gt; --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>[ ; )</masterLabel>
+        <translation><!-- [ ; ) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>[ ; ]</masterLabel>
+        <translation><!-- [ ; ] --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ends with</masterLabel>
+        <translation><!-- ends with --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>excludes</masterLabel>
+        <translation><!-- excludes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>includes</masterLabel>
+        <translation><!-- includes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>starts with</masterLabel>
+        <translation><!-- starts with --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>≠</masterLabel>
+        <translation><!-- ≠ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>⩽</masterLabel>
+        <translation><!-- ⩽ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>⩾</masterLabel>
+        <translation><!-- ⩾ --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

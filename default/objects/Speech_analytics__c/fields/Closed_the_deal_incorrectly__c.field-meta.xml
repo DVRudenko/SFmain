@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_the_deal_incorrectly__c</fullName>
+    <externalId>false</externalId>
+    <label>Closed the deal incorrectly</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Quick start</fullName>
+                <default>false</default>
+                <label>Quick start</label>
+            </value>
+            <value>
+                <fullName>Financial conditions</fullName>
+                <default>false</default>
+                <label>Financial conditions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,12 @@
+<apex:page controller="LeadHistoryRecycleCtrl" action="{! init }">
+	<apex:pageMessages escape="false"/>
+	<apex:pageBlock title="Lead History">
+		<apex:pageBlockTable value="{! leadHistoryLinesList }" var="history" >
+			<apex:column headerValue="Date" value="{!history.thedate}"/>
+			<apex:column headerValue="User">
+				<apex:outputLink value="/{!history.userId}"> {!history.who} </apex:outputLink>
+			</apex:column>
+			<apex:column headerValue="Action"><apex:outputText escape="false" value="{!history.action}"/></apex:column>
+	</apex:pageBlockTable>
+	</apex:pageBlock>
+</apex:page>

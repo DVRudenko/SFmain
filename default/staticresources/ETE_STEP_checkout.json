@@ -1,0 +1,451 @@
+{
+    "translations": {
+        "step_title_ct": {
+            "default_impl": {
+                "en": "EN Make a deposit deposit",
+                "cs": "CZ Make a deposit deposit",
+                "sk": "SK Make a deposit deposit"
+            },
+            "Czech Republic CCS": {
+                "en": "Pay deposit online",
+                "cs": "Zaplatit kauci online"
+            },
+            "Slovakia CCS": {
+                "en": "Pay deposit online",
+                "sk": "Zaplatiť kauciu online"
+            }
+        },
+        "depositAgreement_label_ct": {
+            "default_impl": {
+                "en": "EN I agree to pay a <a href='/etepdfview?target=ete_step_checkout_deposit_agreement$1$' target='_blank'>one-time security deposit</a> in the amount of $2$ EUR.",
+                "cs": "CS Ich bin damit einverstanden, eine <a href='/etepdfview?target=ete_step_checkout_deposit_agreement$1$' target='_blank'>einmalige Kaution</a> in Höhe von $2$ EUR zu zahlen.",
+                "sk": "SK Ich bin damit einverstanden, eine <a href='/etepdfview?target=ete_step_checkout_deposit_agreement$1$' target='_blank'>einmalige Kaution</a> in Höhe von $2$ EUR zu zahlen."
+            }
+        },
+        "description_ct": {
+            "default_impl": {
+                "en": "EN All payments are processed through PayU, a leading financial services provider in growing global markets. PayU is PCI DSS certified and complies with GDPR regulations.",
+                "cs": "CZ All payments are processed through PayU, a leading financial services provider in growing global markets. PayU is PCI DSS certified and complies with GDPR regulations.",
+                "sk": "SK All payments are processed through PayU, a leading financial services provider in growing global markets. PayU is PCI DSS certified and complies with GDPR regulations."
+            },
+            "Czech Republic CCS": {
+                "en": "All payments are processed through PayU, a leading financial services provider in growing global markets. PayU is PCI DSS certified and complies with GDPR regulations.",
+                "cs": "Všechny platby jsou zpracovávány prostřednictvím PayU, předního poskytovatele finančních služeb na rostoucích globálních trzích. PayU má certifikaci PCI DSS a je v souladu s předpisy GDPR."
+            },
+            "Slovakia CCS": {
+                "en": "All payments are processed through PayU, a leading financial services provider in growing global markets. PayU is PCI DSS certified and complies with GDPR regulations.",
+                "sk": "Všetky platby sú spracované prostredníctvom PayU, predného poskytovateľa finančných služieb na rastúcich globýálnych trhoch. PayU má certifikáciu PCI DSS a je v súlade s predpismy GDPR."
+            }
+        },
+        "pay_ct": {
+            "default_impl": {
+                "en": "Pay",
+                "de": "Pay",
+                "nl": "Pay",
+                "cs": "Pay",
+                "sk": "Pay",
+                "fr": "Pay",
+                "pl": "Zapłać",
+                "hu": "Pay"
+            }
+        },
+        "cards_ct": {
+            "default_impl": {
+                "en": "EN Bank cards",
+                "cs": "CZ Bank cards",
+                "sk": "SK Bank cards"
+            },
+            "Czech Republic CCS": {
+                "en": "Bank cards",
+                "cs": "Bankovní karty"
+            },
+            "Slovakia CCS": {
+                "en": "Bank cards",
+                "sk": "Bankové karty"
+            }
+        },
+        "banks_ct": {
+            "default_impl": {
+                "en": "EN Alternative payment methods",
+                "cs": "CZ Alternative payment methods",
+                "sk": "SK Alternative payment methods"
+            },
+            "Czech Republic CCS": {
+                "en": "Alternative payment methods",
+                "cs": "Jiný způsob platby"
+            },
+            "Slovakia CCS": {
+                "en": "Alternative payment methods",
+                "sk": "Iný spôsob platby"
+            }
+        },
+        "title_ct": {
+            "default_impl": {
+                "en": "CHECKOUT",
+                "de": "Checkout",
+                "nl": "Checkout",
+                "cs": "ZAPLATIT KAUCI",
+                "sk": "ZAPLATIŤ KAUCIU",
+                "fr": "Checkout",
+                "pl": "ZAPŁATA",
+                "hu": "Checkout"
+            }
+        },
+        "total_products_ct":{
+            "default_impl":{
+                "en":"Selected products",
+                "de":"Total products",
+                "nl":"Total products",
+                "cs":"Total products",
+                "sk":"Total products",
+                "fr":"Total products",
+                "hu":"Total products",
+                "pl":"Wybrane produkty"
+            }
+        },
+        "total_additional_services_ct":{
+            "default_impl":{
+                "en":"Selected additional services",
+                "de":"Total additional services",
+                "nl":"Total additional services",
+                "cs":"Total additional services",
+                "sk":"Total additional services",
+                "fr":"Total additional services",
+                "hu":"Total additional services",
+                "pl":"Wybrane dodatkowe usługi"
+            }
+        },
+        "credit_limit_ct":{
+            "default_impl":{
+                "en":"Credit limit:",
+                "de":"Credit limit:",
+                "nl":"Credit limit:",
+                "cs":"Credit limit:",
+                "sk":"Credit limit:",
+                "fr":"Credit limit:",
+                "hu":"Credit limit:",
+                "pl":"Limit kredytowy:"
+            }
+        },
+        "total_amount_ct":{
+            "default_impl":{
+                "en":"Total amount for one-time payment",
+                "de":"Total amount for one-time payment",
+                "nl":"Total amount for one-time payment",
+                "cs":"Total amount for one-time payment",
+                "sk":"Total amount for one-time payment",
+                "fr":"Total amount for one-time payment",
+                "hu":"Total amount for one-time payment",
+                "pl":"Kwota jednorazowej opłaty"
+            }
+        },
+        "credit_limit_card_title_ct":{
+            "default_impl":{
+                "en":"Credit limit for all cards",
+                "de":"Availbale limit for all products",
+                "nl":"Availbale limit for all products",
+                "cs":"Availbale limit for all products",
+                "sk":"Availbale limit for all products",
+                "fr":"Availbale limit for all products",
+                "hu":"Availbale limit for all products",
+                "pl":"Limit kredytowy wszystkich kart"
+            }
+        },
+        "total_amount_card_title_ct":{
+            "default_impl":{
+                "en":"Total amount to be paid:",
+                "de":"Total amount to be paid:",
+                "nl":"Total amount to be paid:",
+                "cs":"Total amount to be paid:",
+                "sk":"Total amount to be paid:",
+                "fr":"Total amount to be paid:",
+                "hu":"Total amount to be paid:",
+                "pl":"Kwota do zapłaty:"
+            }
+        },
+        "deposit_amount_ct": {
+            "default_impl": {
+                "en": "EN Deposit amount to be paid:",
+                "cs": "CS Částka k úhradě:",
+                "sk": "SK Čiastka k úhrade"
+            },
+            "Czech Republic CCS": {
+                "en": "Deposit amount to be paid:",
+                "cs": "Částka k úhradě:"
+            },
+            "Slovakia CCS": {
+                "en": "Deposit amount to be paid:",
+                "sk": "Čiastka k úhrade:"
+            }
+        },
+        "deposit_ct":{
+            "default_impl":{
+                "en":"Security deposit amount",
+                "de":"Deposit",
+                "nl":"Deposit",
+                "cs":"Deposit",
+                "sk":"Deposit",
+                "fr":"Deposit",
+                "hu":"Deposit",
+                "pl":"Kaucja do zapłaty"
+            }
+        },
+        "product_ct":{
+            "default_impl":{
+                "en":"Product name",
+                "de":"Product",
+                "nl":"Product",
+                "cs":"Product",
+                "sk":"Product",
+                "fr":"Product",
+                "hu":"Product",
+                "pl":"Nazwa produktu"
+            }
+        },
+        "quantity_ct":{
+            "default_impl":{
+                "en":"Quantity",
+                "de":"Quantity",
+                "nl":"Quantity",
+                "cs":"Quantity",
+                "sk":"Quantity",
+                "fr":"Quantity",
+                "hu":"Quantity",
+                "pl":"Liczba"
+            }
+        },
+        "for_payment_ct":{
+            "default_impl":{
+                "en":"Price",
+                "de":"For payment",
+                "nl":"For payment",
+                "cs":"For payment",
+                "sk":"For payment",
+                "fr":"For payment",
+                "hu":"For payment",
+                "pl":"Cena"
+            }
+        },
+        "for_payment_with_tax_ct":{
+            "default_impl":{
+                "en":"Price (incl. VAT)",
+                "pl":"Cena (z VAT)"
+            }
+        },
+        "service_ct":{
+            "default_impl":{
+                "en":"Service name",
+                "de":"Service",
+                "nl":"Service",
+                "cs":"Service",
+                "sk":"Service",
+                "fr":"Service",
+                "hu":"Service",
+                "pl":"Nazwa usługi"
+            }
+        },
+        "cost_ct":{
+            "default_impl":{
+                "en":"Cost",
+                "de":"Cost",
+                "nl":"Cost",
+                "cs":"Cost",
+                "sk":"Cost",
+                "fr":"Cost",
+                "hu":"Cost",
+                "pl":"PL Cost"
+            }
+        },
+        "amount_of_refund_ct":{
+            "default_impl":{
+                "en":"Amount of refund",
+                "de":"Amount of refund",
+                "nl":"Amount of refund",
+                "cs":"Amount of refund",
+                "sk":"Amount of refund",
+                "fr":"Amount of refund",
+                "hu":"Amount of refund",
+                "pl":"PL Amount of refund"
+            }
+        },
+        "payment_method_ct":{
+            "default_impl":{
+                "en":"Payment method",
+                "de":"Method payment",
+                "nl":"Method payment",
+                "cs":"Method payment",
+                "sk":"Method payment",
+                "fr":"Method payment",
+                "hu":"Method payment",
+                "pl":"Metoda płatności"
+            }
+        },
+        "payment_method_text_ct":{
+            "default_impl":{
+                "en":"Ingenico Group has led the payment industry for more than 30 years to become the global leader in seamless payment. We provide smart, trusted and secure solutions to empower commerce across all channels: in-store, online and on mobile.",
+                "de":"Ingenico Group has led the payment industry for more than 30 years to become the global leader in seamless payment. We provide smart, trusted and secure solutions to empower commerce across all channels: in-store, online and on mobile.",
+                "nl":"Ingenico Group has led the payment industry for more than 30 years to become the global leader in seamless payment. We provide smart, trusted and secure solutions to empower commerce across all channels: in-store, online and on mobile.",
+                "cs":"Ingenico Group has led the payment industry for more than 30 years to become the global leader in seamless payment. We provide smart, trusted and secure solutions to empower commerce across all channels: in-store, online and on mobile.",
+                "sk":"Ingenico Group has led the payment industry for more than 30 years to become the global leader in seamless payment. We provide smart, trusted and secure solutions to empower commerce across all channels: in-store, online and on mobile.",
+                "fr":"Ingenico Group has led the payment industry for more than 30 years to become the global leader in seamless payment. We provide smart, trusted and secure solutions to empower commerce across all channels: in-store, online and on mobile.",
+                "hu":"Ingenico Group has led the payment industry for more than 30 years to become the global leader in seamless payment. We provide smart, trusted and secure solutions to empower commerce across all channels: in-store, online and on mobile.",
+                "pl":"Wszystkie płatności są przetwarzane za pośrednictwem PayU, wiodącego dostawcy usług finansowych na rosnących rynkach światowych. PayU posiada certyfikat PCI DSS i spełnia wymagania RODO."
+            },
+            "Poland":{
+                "en":"All payments are processed through PayU, a leading financial services provider in growing global markets. PayU is PCI DSS certified and complies with GDPR regulations.",
+                "pl":"Wszystkie płatności są przetwarzane za pośrednictwem PayU, wiodącego dostawcy usług finansowych na rosnących rynkach światowych. PayU posiada certyfikat PCI DSS i spełnia wymagania RODO."
+            },
+            "Poland Lotos":{
+                "en":"All payments are processed through PayU, a leading financial services provider in growing global markets. PayU is PCI DSS certified and complies with GDPR regulations.",
+                "pl":"Wszystkie płatności są przetwarzane za pośrednictwem PayU, wiodącego dostawcy usług finansowych na rosnących rynkach światowych. PayU posiada certyfikat PCI DSS i spełnia wymagania RODO."
+            }
+        }
+    },
+    "settings": {
+        "data_object": {
+            "Current_Language__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                }
+            },
+            "PM__c": {
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "pm",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "pm",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "pm",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "pm",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "pm",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "pm",
+                    "required": true
+                }
+            },
+            "Brand__c": {
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "brand",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "brand",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "brand",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "brand",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "brand",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "brand",
+                    "required": true
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Тип кредита</label>
+    <name>RU_credit_type__c</name>
+    <picklistValues>
+        <masterLabel>Free</masterLabel>
+        <translation>Бесплатный</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paid</masterLabel>
+        <translation>Платный</translation>
+    </picklistValues>
+</CustomFieldTranslation>

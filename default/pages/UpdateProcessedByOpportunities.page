@@ -1,0 +1,20 @@
+<apex:page standardController="Opportunity" extensions="UpdateProcessedByOpportunitiesCtrl" action="{! init }" recordSetVar="Opportunities">
+	<apex:form >
+		<apex:pageBlock >
+			<apex:pageMessages />
+			<apex:pageBlockTable title="Opportunity section" value="{! selectedRecords }" var="opp">
+				<apex:column value="{! opp.name }"/>
+				<apex:column value="{! opp.bearbeitet_von__c }"/>
+			</apex:pageBlockTable>
+			<apex:pageBlockSection >
+                <apex:selectList size="1" value="{! selectedProcessedBy }">
+                    <apex:selectOptions value="{! processedByOpportunityOptions }"/><p>Processed by</p>
+                </apex:selectList>
+            </apex:pageBlockSection>
+			<apex:pageBlockButtons >
+                <apex:commandButton action="{! updateProcessedByData }" value="Update"/>
+                <apex:commandButton action="{! cancel }" value="Cancel"/>
+            </apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

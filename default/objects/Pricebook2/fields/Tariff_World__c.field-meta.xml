@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tariff_World__c</fullName>
+    <description>Monthly fee on-line transmission and background maps from abroad within the EU and selected European countries from one unit. It&#39;s about European countries that do not belong to the EU - Ukraine, Russia, Turkey, Belorussia, Switzerland, Montenegro, Serbia, Albania. Does not contain an SMS with a location request. This service is an additional service to tariffs EU 24 and EU 36.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>vehicle/month</inlineHelpText>
+    <label>Tariff Europe</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

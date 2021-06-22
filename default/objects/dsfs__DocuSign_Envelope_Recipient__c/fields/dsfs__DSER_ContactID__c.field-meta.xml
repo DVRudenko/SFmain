@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__DSER_ContactID__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>DocuSign Envelope Recipient Contact ID</description>
+    <externalId>false</externalId>
+    <inlineHelpText>DOCUSIGN ENVELOPE RECIPIENT CONTACT ID</inlineHelpText>
+    <label>Contact</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>DocuSign Envelope Recipient</relationshipLabel>
+    <relationshipName>DocuSign_Envelope_Recipient</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

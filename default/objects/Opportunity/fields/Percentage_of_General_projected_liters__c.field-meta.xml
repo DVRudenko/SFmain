@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Percentage_of_General_projected_liters__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(General_Projected_Liters_w__c == 0, Projected_Liters_weekly__c == 0), 0,
+Projected_Liters_weekly__c /  General_Projected_Liters_w__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Процент от общей прокачки</inlineHelpText>
+    <label>Percentage of General projected liters</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

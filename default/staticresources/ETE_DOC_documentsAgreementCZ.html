@@ -1,0 +1,185 @@
+<style></style>
+
+<div style="font-size: 12px;">
+    <p style="font-size:20px;text-align:center;">Váš partner výhodného tankování</p>
+    <p style="font-size:16px;background-color:rgb(201, 4, 4);color:#fff;text-align:center;padding:4px 0;">Objednávka karet Shell</p>
+    <div style="background-color:#eaeaea; padding:16px 24px 32px;">
+        <p style="font-size:14px;font-weight:700;">Základní údaje o společnosti</p>
+        <p>Název společnosti: <span style="font-weight:600;">{!currentOpportunity.Account.Name}</span></p>
+        <p>Zastoupená: <span style="font-weight:600;">{!fullName}</span></p>
+        <p>Adresa společnosti – Ulice a čp.: <span style="font-weight:600;">{!currentOpportunity.Account.BillingStreet}</span></p>
+        <p>
+            <span style="width:200px; display:inline-block;">PSČ: <span style="font-weight:600;">{!currentOpportunity.Account.BillingPostalCode}</span></span>
+            <span>Město: <span style="font-weight:600;">{!currentOpportunity.Account.BillingCity}</span></span>
+        </p>
+        <p>
+            <span style="width:200px; display:inline-block;">IČO: <span style="font-weight:600;">{!currentOpportunity.Account.Steuernummer__c}</span></span>
+            <span>DIČ: <span style="font-weight:600;"></span>{!currentOpportunity.Account.Umsatzsteuer_ID__c}</span>
+        </p>
+        <p>Jste plátci DPH: <span style="display:inline-block;width:14px;height:14px;border:1px solid #000;margin:0 8px -4px 16px;"></span>ano<span style="display:inline-block;width:14px;height:14px;border:1px solid #000;margin:0 8px -4px 16px;"></span>ne</p>
+        <hr>
+        <p>
+            Zákazník odesláním této objednávky objednává u obchodní společnosti FLEETCOR Czech Republic s.r.o., se sídlem Voctářova 2500/20a, 180 00 Praha 8, IČO: 03806847, DIČ CZ03806847, sp. zn. C 237992 vedená u Městského soudu v Praze, čipové karty FLEETCOR a služby podle speciﬁkace uvedené v teto objednávce, a to za podmínek stanovených platným ceníkem pro daný druh karty a Obchodními podmínkami (dále jen „OP“), které tvoří nedílnou součást této objednávky.
+        </p>
+        <p>
+            Okamžikem vyplnění objednávky na webových stránkách FLEETCOR je ze strany FLEETCOR zahájeno zpracování osobních údajů, které se řídí Zásadami ochrany osobních údajů zveřejněnými na internetových stránkách FLEETCOR, na adrese: https://fleetcor.cz/pravidla-ochrany-soukromi
+        </p>
+        <p>
+            Tato objednávka je v souladu s OP závazným návrhem zákazníka na uzavření smlouvy o užívání karet a poskytování služeb s FLEETCOR (dále jen „smlouva“). FLEETCOR nemá povinnost se zákazníkem smlouvu uzavřít a je oprávněna objednávku zcela či částečně odmítnout, a to i bez udání důvodu.
+        </p>
+        <p>
+            Podepsáním této objednávky zákazník potvrzuje pravdivost, správnost a úplnost údajů uvedených v objednávce a  dále  skutečnost, že se důkladně seznámil s OP a platným ceníkem FLEETCOR a že s nimi bez výhrad souhlasí a zavazuje se je dodržovat.
+        </p>
+        <p>
+            Osoba podepisující objednávku potvrzuje, že je osobou oprávněnou jednat za zákazníka.
+        </p>
+        <p style="margin-top:32px">
+            <span style="padding-right:40px; display:inline-block;">Místo: <span style="font-weight:600;">{!currentOpportunity.Account.BillingCity}</span></span>
+            <span style="padding-right:40px; display:inline-block;">Datum: <span style="font-weight:600;">{!today}</span></span>
+            <span style="display:inline-block;">Podpis: <span style="font-weight:600;"></span></span>
+        </p>
+    </div>
+    <div style="margin-top:32px; padding-top:32px; border-top:1px solid;">
+        <div style="float:left;width: 340px;">
+            <div>420 296 181 204 (Po–Čt 0800–1700 h, Pá 0800–1430 h)</div>
+            <div>kontakt@fleetcor.cz</div>
+            <div>www.fleetcor.cz</div>
+        </div>
+        <div style="float:right;width: 240px; text-align:right;">
+            <div>FLEETCOR Czech Republic s.r.o.</div>
+            <div>Voctářova 2500/20a</div>
+            <div>180 00 Praha 8</div>
+        </div>
+    </div>
+</div>
+<!-- depositAgreement -->
+<div style="font-size: 12px;">
+    <div style="page-break-before: always;"></div>
+    <p style="font-size:20px;text-align:right;">Dohoda o složení finanční jistoty</p>
+    <p>TATO DOHODA O SLIŽENÍ FINANČNÍ JISTOTY (dále jen „Dohoda“) podle § 1746 odst. 2 zák. 89/2012 Sb.,
+        občanský zákoník (dále jen „Občanský zákoník“), činí níže uvedeného dne, měsíce a roku:</p>
+    <p><span style="width:100px;display:inline-block">Společnost:</span><span>{!currentOpportunity.Account.Name}</span></p>
+    <p><span style="width:100px;display:inline-block">Sídlo:</span><span>{!currentOpportunity.Account.BillingStreet}</span></p>
+    <p><span style="width:100px;display:inline-block">IČO:</span><span>{!currentOpportunity.Account.Steuernummer__c}</span></p>
+    <p>
+        Zapsaná v obchodním rejstříku vedeném {!currentOpportunity.Account.Ort_der_Registrierung_Handelsregisterort__c} soudem v _______________________, oddíl _____________________, vložka ___________________________
+    </p>
+    <p><span style="width:100px;display:inline-block">Zastoupená:</span><span>{!fullName}</span></p>
+    <p><span style="width:100px;display:inline-block">Funkce:</span><span>_________________________________</span></p>
+    <p>dále jen „Složitel”</p>
+    <p>vůči</p>
+    <p>
+        Společnost: FLEETCOR Czech Republic s.r.o. <br>
+        Sídlo: Voctářova 2500/20a, 180 00 Praha 8 <br>
+        IČO: 03806847<br>
+        zapsaná v obchodním rejstříku vedeném Městským soudem v Praze, oddíl C, vložka 237992
+    </p>
+    <p>dále jen „FLEETCOR“</p>
+    <p style="text-decoration: underline; margin-top:24px;">VZHLEDEM K TOMU, ŽE:</p>
+    <table width="100%" style="margin-top: 20px;">
+        <tr valign="top">
+            <td width="30px">A.</td>
+            <td>
+                Složitel a FLEETCOR uzavřely dne {!today} smlouvu o používání palivové vystavené za účelem nákupu zboží a služeb na čerpacích stanicích i jiných prodejních místech, kde je karta akceptována (dále jen „Smlouva“); a
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="30px">B.</td>
+            <td>
+                V průběhu účinnosti Smlouvy budou vznikat závazky Složitele vůči FLEETCOR
+            </td>
+        </tr>
+    </table>
+
+    <p style="text-decoration: underline; margin-top:24px;">DOHODLY SE STRANY DOHODY, ŽE:</p>
+    <table width="100%" style="margin-top: 20px;">
+        <tr valign="top">
+            <td width="30px">1.</td>
+            <td>
+                Složitel se zavazuje složit vůči FLEETCOR na účet č. 2553010400/2600 částku ve výši {!securityAmountToPay} Kč (dále jen „Finanční jistota“);
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="30px">2.</td>
+            <td>
+                Strany Dohody se dohodly na tom, že FLEETCOR je oprávněna započítat na Finanční jistotu veškeré pohledávky, které jí vzniknou vůči Složiteli a budou vyplývat z právního vztahu založeného Smlouvou, a to včetně případné náhrady škody, smluvních pokut a dlužného plnění ze Smlouvy.
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="30px">3.</td>
+            <td>
+                Strany Dohody se dohodly, že po ukončení účinnosti Smlouvy vrátí FLEETCOR vůči Složiteli Finanční jistotu případně sníženou o započtené pohledávky dle odst. (2) této dohody, a to nejpozději do 3 měsíců od ukončení účinnosti Smlouvy.
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="30px">4.</td>
+            <td>
+                Strany Dohody se dohodly, že úrok, který případně přiroste k Finanční jistotě z důvodu úročení Finanční jistoty na bankovním účtu náleží Složiteli, a to ve výši v jaké ho skutečně příslušná banka na výše uv dený účet připíše;
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="30px">5.</td>
+            <td>
+                Strany Dohody se dohodly, že tato Dohoda se řídí českým právním řádem, zejména pak Občanským zákoníkem;
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="30px">6.</td>
+            <td>
+                V případě, že kterékoli ustanovení této Dohody je nebo se stane neplatným, neúčinným nebo nevyko- natelným, potom neplatnost, neúčinnost či nevykonatelnost takového ustanovení nemá a nebude mít vliv na platnost, účinnost a vykonatelnost ostatních ustanovení této Dohody, nestanoví-li zákon jinak. Bez zbytečného odkladu poté, co o kterémkoli ustanovení této Dohody bude smluvními stranami uzná- no nebo pravomocně rozhodnuto, že je neplatné, neúčinné nebo nevykonatelné, smluvní strany se zavazují nahradit takové neplatné, neúčinné nebo nevykonatelné ustanovení novým ustanovením, které bude platné, účinné nebo vykonatelné a bude nejlépe vyhovovat účelu této Dohody, případně uzavřít Dohody novou, která bude ve všech podstatných ohledech odpovídat Dohody této, nicméně nebude stižena vadou, která způsobila její neplatnost, a to nejpozději do 30 dnů ode dne, ve kterém bude (částečná nebo úplná) neplatnost, neúčinnost nebo nevykonatelnost smluvními stranami uznána nebo o ní bude pravomocně rozhodnuto.
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="30px">7.</td>
+            <td>
+                Všechny majetkové spory mezi smluvními stranami vzniklé v souvislosti s touto Dohodou budou s konečnou platností obecnými soudy České republiky.
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="30px">8.</td>
+            <td>
+                Tato Dohoda nabývá účinnosti okamžikem jejího podpisu poslední smluvní stranou.
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="30px">9.</td>
+            <td>
+                Tato Dohody je sepsána ve dvou vyhotoveních, přičemž každá smluvní strana obdrží po jednom vyho- tovení.         
+            </td>
+        </tr>
+        <tr valign="top">
+            <td width="30px">10.</td>
+            <td>
+                Smluvní strany prohlašují, že si tuto Dohodu pozorně přečetly a že jí v celém obsahu dobře porozuměly, svým podpisem potvrzují, že tato Dohody odpovídá jejich pravé a svobodné vůli a že nebyla uzavřena v tísni nebo za nápadně nevýhodných podmínek          
+            </td>
+        </tr>
+    </table>
+    <h3>NA DŮKAZ toho smluvní strany připojují své podpisy.</h3>
+    <table width="100%" style="margin-top: 20px; ">
+        <tr>
+            <td width="50%">FLEETCOR Czech Republic s.r.o. <br>Jan Polívka</td>
+            <td width="50%">{!currentOpportunity.Account.Name}<br>{!fullName}</td>
+        </tr>
+        <tr style="height:80px">
+            <td width="50%"><img src="/resource/ete_images/docusignHU.png" height="80"/></td>
+            <td width="50%"></td>
+        </tr>
+        <tr>
+            <td width="50%">
+                <div style="border-bottom: 1px solid #ccc;width:260px;">Praha,{!today}</div>
+            </td>
+            <td width="50%">
+                <div style="border-bottom: 1px solid #ccc;width:260px;">{!currentOpportunity.Account.BillingCity}, {!today}</div>
+            </td>
+        </tr>
+        <tr>
+            <td width="50%">Miesto, dátum, podpis</td>
+            <td width="50%">Miesto, dátum, podpis</td>
+        </tr>
+    </table>
+    <div style="color:#999;font-size:12px; text-align:center; margin-top:32px;">
+        FLEETCOR Czech Republic s.r.o. | Voctářova 2500/20a | 180 00 | Praha 8 | Česká Republika
+        <br>Obchodní rejstřík: Městský soud v Praze | Daňové identifikační číslo (DIČ): CZ03806847
+    </div>
+</div>
+

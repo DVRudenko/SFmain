@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Extended Away Time rounded to nearest minute --></help>
+    <label><!-- Extended Away Time (hh:mm) --></label>
+    <name>NVMStatsSF__Extended_Away_Time_hh_mm_ss__c</name>
+</CustomFieldTranslation>

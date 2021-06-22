@@ -1,0 +1,28 @@
+.THIS .creation-container {
+    width: 60%;
+    min-width: 512px;
+    margin: auto;
+}
+
+.THIS .output-lookup-field a {
+    pointer-events: none;
+    cursor: default;
+    color: black;
+}
+
+.THIS .record-type-id-lookup input {
+    border: 0px;
+    padding-left: 0px !important;;
+}
+
+.THIS .record-type-id-lookup .slds-icon-standard-default.slds-icon_container.slds-combobox__input-entity-icon {
+    display: none;
+}
+
+.THIS .record-type-id-lookup .slds-input__icon-group.slds-input__icon-group_right {
+    display: none;
+}
+
+.THIS .record-type-id-lookup {
+    pointer-events: none;
+}

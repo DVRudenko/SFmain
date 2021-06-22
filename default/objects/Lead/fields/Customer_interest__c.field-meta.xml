@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_interest__c</fullName>
+    <externalId>false</externalId>
+    <label>Customer interest</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Оранжевый</fullName>
+                <color>#FF6600</color>
+                <default>false</default>
+                <label>Оранжевый</label>
+            </value>
+            <value>
+                <fullName>Зеленый</fullName>
+                <color>#009900</color>
+                <default>false</default>
+                <label>Зеленый</label>
+            </value>
+            <value>
+                <fullName>Синий</fullName>
+                <color>#0B24BE</color>
+                <default>false</default>
+                <label>Синий</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Owner_can_edit_task_only</fullName>
+    <active>false</active>
+    <description>Only task owner can edit this task.</description>
+    <errorConditionFormula>AND( $Profile.Name != &quot;System Administrator&quot;,
+        $Profile.Name != &quot;Systemadministrator&quot;,
+        $Profile.Name != 'API Only',
+        $User.Id &lt;&gt; OwnerId )</errorConditionFormula>
+    <errorMessage>Only task owner can edit this task.</errorMessage>
+</ValidationRule>

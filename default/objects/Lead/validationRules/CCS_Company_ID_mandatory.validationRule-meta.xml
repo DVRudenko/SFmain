@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Company_ID_mandatory</fullName>
+    <active>true</active>
+    <description>CCS_Company_ID__c is mandatory.</description>
+    <errorConditionFormula>AND(
+   $Profile.Name = "CCS Sales Inbound",
+   $Profile.Name = "CCS Sales Manager",
+   $Profile.Name = "CCS SME Team Leader",
+   $Profile.Name = "CCS Salesteamleiter Inbound",
+   ISBLANK(CCS_Company_ID__c)
+)</errorConditionFormula>
+    <errorDisplayField>CCS_Company_ID__c</errorDisplayField>
+    <errorMessage>Pole IČO je povinné!</errorMessage>
+</ValidationRule>

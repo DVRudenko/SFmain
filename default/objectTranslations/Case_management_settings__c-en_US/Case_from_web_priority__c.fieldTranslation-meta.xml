@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Initial value of priority field in Cases from website --></help>
+    <label><!-- Case from web priority --></label>
+    <name>Case_from_web_priority__c</name>
+</CustomFieldTranslation>

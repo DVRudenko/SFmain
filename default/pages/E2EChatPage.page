@@ -1,0 +1,254 @@
+<apex:page showHeader="false"  controller="E2EChatPageCtrl" language="{!lang}" >
+
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/jquery-ui.js') }"/>
+    <apex:stylesheet value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/jquery-ui.css') }"/>
+    <apex:includeScript value="{!$Resource.jquery_mask}"/>
+    <apex:includeScript value="{!$Resource.E2EChatPageJS}"/>
+    <apex:includeScript value="{!URLFOR($Resource.bootstrap_3_3_7,'bootstrap-3.3.7/js/bootstrap.min.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.bootstrap_3_3_7,'bootstrap-3.3.7/css/bootstrap.min.css')}"/>
+
+    <style>
+    @font-face {
+        font-family: Montserrat;
+        src: url({!URLFOR($Resource.e2eFonts, '/Montserrat-Regular.ttf')});
+    }
+    @font-face {
+        font-family: Montserrat bold;
+        src: url({!URLFOR($Resource.e2eFonts, '/Montserrat-Bold.ttf')});
+    }
+    @font-face {
+        font-family: Montserrat light;
+        src: url({!URLFOR($Resource.e2eFonts, '/Montserrat-Light.ttf')});
+    }
+    @font-face {
+        font-family: Montserrat semibold;
+        src: url({!URLFOR($Resource.e2eFonts, '/Montserrat-SemiBold.ttf')});
+    }
+    @font-face {
+        font-family: Montserrat medium;
+        src: url({!URLFOR($Resource.e2eFonts, '/Montserrat-Medium.ttf')});
+    }
+
+
+    #liveAgentClientChat.liveAgentStateWaiting {
+        // The CSS class that is applied when the chat request is waiting to be accepted
+        // See "Waiting State" screenshot below
+    }
+
+    #liveAgentClientChat {
+        // The CSS class that is applied when the chat is currently engaged
+        // See "Engaged State" screenshot below
+    }
+
+    #liveAgentClientChat.liveAgentStateEnded {
+        // The CSS class that is applied when the chat has ended
+        // See "Ended State" screenshot below
+    }
+
+    body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: #ffffff;
+    }
+
+    #waitingMessage {
+        height: 100%;
+        width: 100%;
+        vertical-align: middle;
+        text-align: center;
+        display: none;
+    }
+
+    #liveAgentClientChat.liveAgentStateWaiting #waitingMessage {
+        display: table;
+    }
+
+    .liveAgentEndButton {
+        display: block !important;
+        border: 0px;
+        background: #ffffff;
+        float:right;
+        margin: 0px 10px 0px 0px;
+        font-size:15px;
+        padding:0px;
+    }
+
+    #liveAgentChatLogText .messageText {
+        display: block;
+        word-break: break-all;
+    }
+
+    .liveAgentChatInput {
+        width: 100%;
+        border-width: 0px;;
+        padding: 2px 0 2px 4px;
+        background: #ffffff;
+        margin: 5px;
+        height:60px;
+        position:absolute;
+    }
+
+    .liveAgentSendButton {
+        width: 90%;
+        padding: 0 0 3px;
+        margin: 5px;
+        color: #0093EE;
+        background: #ffffff;
+        border-color: #ffffff;
+        font-family: Montserrat;
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: normal;
+        height:60px;
+    }
+
+    .liveAgentSendButton:hover {
+        border-color: #ffffff;
+    }
+
+    #liveAgentChatLog {
+        width: auto;
+        overflow-y: auto;
+        border-color:#cecece;
+        background-color: #F7F7F7;
+        border-top: 1px solid #00A553;
+        height: 245px;
+    }
+
+    .liveAgentAlert{
+        margin: 10px;
+    }
+
+    .chat-header {
+        font-family: Montserrat medium;
+        font-style: normal;
+        line-height: 26px;
+        font-weight: 500;
+        font-size: 18px;
+        margin: 8px 8px 0px 8px;
+    }
+
+    .chat-status {
+        font-family: Montserrat medium;
+        font-style: normal;
+        line-height: 20px;
+        font-weight: 500;
+        font-size: 15px;
+        margin: 0px 8px 8px 8px;
+        color:#00A553;
+    }
+
+    #liveAgentClientChat textarea#liveAgentChatTextArea {
+        font-family: Montserrat;
+        font-size: 15px;
+        line-height: 20px;
+        max-height:60px;
+        min-height:60px;
+    }
+
+    .liveAgentAlert button{
+        display:none;
+    }
+
+    .operator{
+        left: 0px;
+        background-color: #ffffff;
+        border: 1px solid #E5E5E5;
+        border-radius: 4px 4px 0 4px;
+        margin: 10px 20% 10px 10px;
+        padding: 4px;
+    }
+
+    .client{
+        right: 0px;
+        background-color: #ffffff;
+        margin: 5px 10px 10px 20%;
+        border: 1px solid #E5E5E5;
+        border-radius: 4px 4px 0 4px;
+        padding: 4px;
+    }
+
+    .system{
+        padding: 10px;
+    }
+
+    .name{
+        color: rgba(0,0,0,0.9);
+        font-family: Montserrat medium;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 16px;
+        letter-spacing: 1px;
+    }
+
+    .messageText {
+        color: #1A1A1A;
+        font-family: Montserrat;
+        font-size: 15px;
+        line-height: 18px;
+        margin-top: 4px;
+        margin-bottom: 2px;
+    }
+
+    .customDateTime{
+        color: #1A1A1A;
+        font-family: Montserrat;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: normal;
+    }
+
+    .custom-input-label{
+        width:175px;
+        height:30px;
+        border: 2px solid #cecece;
+        text-align: center;
+    }
+
+    .custom-input-label:hover{
+        cursor: pointer;
+    }
+
+
+</style>
+        <liveAgent:clientChat >
+            <div class="chat-header">
+                {! pageMapChat['CHAT'].elements['CHAT HEADING']['TEXT'].value }
+                <liveAgent:clientChatFileTransfer id="clientChatFileTransfer"  />
+            </div>
+            <div class="chat-status" style="{!IF(lang == 'ru','color:#4fcfcc','')}">
+                    {! pageMapChat['CHAT'].elements['CHAT ONLINE']['VALUE'].value }
+            </div>
+            <liveAgent:clientChatStatusMessage />
+            <liveAgent:clientChatSaveButton />
+            <liveAgent:clientChatAlertMessage />
+            <table id="waitingMessage" style="{!IF(lang == 'ru', 'border-top:1px solid #4fcfcc', 'border-top:1px solid #00A553;')}"  cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>{! pageMapChat['CHAT'].elements['WAITING MESSAGE']['VALUE'].value }</td>
+                </tr>
+            </table>
+            <div>
+            <liveAgent:clientChatLog visitorNameLabel="{!clientNameLabel}"
+                                     agentTypingLabel="{! pageMapChat['CHAT'].elements['CHAT LOG']['AGENT TYPING'].value} "
+                                     chatEndedByAgentLabel="{! pageMapChat['CHAT'].elements['CHAT LOG']['AGENT LEFT CHAT'].value} "/>
+            </div>
+            <div class="{!IF(lang == 'de', 'col-xs-9 col-lg-9 col-md-9 col-sm-9','col-xs-8 col-lg-8 col-md-8 col-sm-8')}"  style="padding: 0px;">
+                <liveAgent:clientChatInput useMultiLine="TRUE" />
+            </div>
+            <div class="{!IF(lang == 'de', 'col-xs-3 col-lg-3 col-md-3 col-sm-3','col-xs-4 col-lg-4 col-md-4 col-sm-4')}" style="padding: 0px;">
+                <liveAgent:clientChatSendButton label="{! pageMapChat['CHAT'].elements['SEND BUTTON']['TEXT'].value}" />
+            </div>
+        </liveAgent:clientChat>
+<script>
+   var chatTextArea = document.getElementById("liveAgentChatTextArea");
+   if(chatTextArea != null){
+       chatTextArea.placeholder = "{! pageMapChat['CHAT'].elements['TEXTAREA']['PLACEHOLDER'].value }";
+       chatTextArea.height = null;
+   }
+   setDomainEvent('{!domainURLs}');
+</script>
+</apex:page>

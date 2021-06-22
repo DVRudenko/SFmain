@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVM_CLID2__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND( NVM_Country__c = "Luxembourg",  RecordType.Name = "Euroshell", ISPICKVAL(Sec_Channel__c,"Inbound")),12,
+IF(AND( NVM_Country__c = "Czech Republic",  RecordType.Name = "Euroshell", ISPICKVAL(Sec_Channel__c,"Inbound")),13,
+IF(AND( NVM_Country__c = "Czech Republic",  RecordType.Name = "Euroshell", ISPICKVAL(Sec_Channel__c,"Inbound")),15,
+IF(AND( NVM_Country__c = "Slovakia",  RecordType.Name = "Euroshell", ISPICKVAL(Sec_Channel__c,"Inbound")),16,
+IF(AND( NVM_Country__c = "Slovakia",  RecordType.Name = "CCS Opportunity Layout", ISPICKVAL(Sec_Channel__c,"Inbound")),18,
+IF(AND( NVM_Country__c = "Austria",  RecordType.Name = "Euroshell", ISPICKVAL(Sec_Channel__c,"Inbound")),19,
+IF(AND( NVM_Country__c = "Germany",  RecordType.Name = "Euroshell", ISPICKVAL(Sec_Channel__c,"Inbound")),21,
+IF(AND( NVM_Country__c = "France",  RecordType.Name = "Euroshell Starts", ISPICKVAL(Sec_Channel__c,"Inbound")),5,
+IF(AND( NVM_Country__c = "Germany",  RecordType.Name = "Euroshell Starts", ISPICKVAL(Sec_Channel__c,"Inbound")),23
+,0)))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NVM CLID2</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

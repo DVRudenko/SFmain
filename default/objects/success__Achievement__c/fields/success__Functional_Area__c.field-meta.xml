@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Functional_Area__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK(success__Business_Area_Override__c), CASE( success__Object__c , &quot;FeedItem&quot;, &quot;Chatter&quot;, &quot;FeedComment&quot;, &quot;Chatter&quot;, &quot;Task&quot;, &quot;Event / Task&quot;,  &quot;Event&quot;, &quot;Event / Task&quot;, &quot;CampaignMember&quot;, &quot;Campaign&quot;, &quot;OpportunityLineItem&quot;, &quot;Opportunity&quot;, &quot;OpportunityCompetitor&quot;, &quot;Opportunity&quot;, &quot;OpportunityContactRole&quot;, &quot;Opportunity&quot;, &quot;OpportunityTeamMember&quot;, &quot;Opportunity&quot;, &quot;OrderItem&quot;, &quot;Order Product&quot;, &quot;CaseComment&quot;, &quot;Case&quot;, &quot;ContentDocument&quot;, &quot;Content&quot;, &quot;Product2&quot;, &quot;Product&quot;, &quot;success__Team_Member__c&quot;, &quot;Competition&quot;, &quot;success__Metric__c&quot;, &quot;Scheduled&quot;, &quot;success__Event__c&quot;, &quot;External Event&quot;, success__Object__c),success__Business_Area_Override__c)</formula>
+    <label>Business Area</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

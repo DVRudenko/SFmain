@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fuel_Type_Filter__c</fullName>
+    <externalId>false</externalId>
+    <label>Fuel Type Filter</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>All fuel types</fullName>
+                <default>false</default>
+                <label>All fuel types</label>
+            </value>
+            <value>
+                <fullName>Petrol</fullName>
+                <default>false</default>
+                <label>Petrol</label>
+            </value>
+            <value>
+                <fullName>Diesel (all types)</fullName>
+                <default>false</default>
+                <label>Diesel (all types)</label>
+            </value>
+            <value>
+                <fullName>Diesel</fullName>
+                <default>false</default>
+                <label>Diesel</label>
+            </value>
+            <value>
+                <fullName>Diesel (AGO)</fullName>
+                <default>false</default>
+                <label>Diesel (AGO)</label>
+            </value>
+            <value>
+                <fullName>Diesel (AGO Low Sulphur)</fullName>
+                <default>false</default>
+                <label>Diesel (AGO Low Sulphur)</label>
+            </value>
+            <value>
+                <fullName>Diesel (V-Power)</fullName>
+                <default>false</default>
+                <label>Diesel (V-Power)</label>
+            </value>
+            <value>
+                <fullName>Diesel (Bio)</fullName>
+                <default>false</default>
+                <label>Diesel (Bio)</label>
+            </value>
+            <value>
+                <fullName>Diesel (Plus)</fullName>
+                <default>false</default>
+                <label>Diesel (Plus)</label>
+            </value>
+            <value>
+                <fullName>Diesel (for trucks)</fullName>
+                <default>false</default>
+                <label>Diesel (for trucks)</label>
+            </value>
+            <value>
+                <fullName>MOGAS (all types)</fullName>
+                <default>false</default>
+                <label>MOGAS (all types)</label>
+            </value>
+            <value>
+                <fullName>MOGAS (leaded &amp; unleaded)</fullName>
+                <default>false</default>
+                <label>MOGAS (leaded &amp; unleaded)</label>
+            </value>
+            <value>
+                <fullName>MOGAS (leaded)</fullName>
+                <default>false</default>
+                <label>MOGAS (leaded)</label>
+            </value>
+            <value>
+                <fullName>MOGAS (unleaded)</fullName>
+                <default>false</default>
+                <label>MOGAS (unleaded)</label>
+            </value>
+            <value>
+                <fullName>Gas Fuel (all types)</fullName>
+                <default>false</default>
+                <label>Gas Fuel (all types)</label>
+            </value>
+            <value>
+                <fullName>Gas Fuel (LPG)</fullName>
+                <default>false</default>
+                <label>Gas Fuel (LPG)</label>
+            </value>
+            <value>
+                <fullName>Gas Fuel (CNG)</fullName>
+                <default>false</default>
+                <label>Gas Fuel (CNG)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Package used for monitoring of the temperature in the cargo space, for example during the transportation of goods. Includes all HW &amp; Installation. Temperature course is available in the vehicle&apos;s mileages. --></help>
+    <label><!-- Temperature measurement cargo space --></label>
+    <name>Temperature_measurementCargoSpace_Amount__c</name>
+</CustomFieldTranslation>

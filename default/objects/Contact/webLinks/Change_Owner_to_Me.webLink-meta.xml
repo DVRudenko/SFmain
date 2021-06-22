@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Owner_to_Me</fullName>
+    <availability>online</availability>
+    <description>Change Owner of Contact to me without respecting OWD.</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Change Owner to Me</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT("/soap/ajax/42.0/connection.js")}
+            {!REQUIRESCRIPT("/soap/ajax/42.0/apex.js")}
+
+            sforce.apex.execute("ChangeOwnerCCS","changeOwner",{cid:"{!Contact.Id}",us:"{!User.Id}"});
+            location.reload(true)</url>
+</WebLink>

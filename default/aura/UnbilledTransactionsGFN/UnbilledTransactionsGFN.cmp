@@ -1,0 +1,98 @@
+<aura:component extends="c:BaseComponent" controller="GFNI_DashboardCtrl">
+    <aura:attribute name="allTransactions" type="List"/>
+    <aura:attribute name="isAllList" type="Boolean"/>
+    <aura:attribute name="searchResults" type="List"/>
+    <aura:attribute name="productList" type="List"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.gfnParams}" action="{!c.getTransactions}" />
+
+    <div aura:id="cardContainer" class="component-min-size">
+        <lightning:card iconName="standard:product_transfer" variant="base" class="slds-card_boundary slds-m-around_large">
+            <aura:set attribute="actions">
+                <lightning:button class="slds-theme_neutral slds-size_1-of-1" variant="neutral" label="Search" onclick="{!c.search}"></lightning:button>
+            </aura:set>
+            <aura:set attribute="title">
+                <a href="{!v.landingPageLink}" target="_blank">Unbilled Transactions (GFN)</a>
+            </aura:set>
+            <div class="slds-grid slds-wrap slds-card__body_inner">
+                <lightning:input aura:id="dateFrom" label="Date From" class="input-min_size slds-col slds-size_1-of-4 slds-p-horizontal_x-small" type="date"/>
+                <lightning:input aura:id="dateTo" label="Date To" class="input-min_size slds-col slds-size_1-of-4 slds-p-horizontal_x-small" type="date"/>
+                <lightning:input aura:id="cardNumber" label="Card Number" class="input-min_size slds-col slds-size_1-of-4 slds-p-horizontal_x-small" type="text" maxlength="19"/>
+                <lightning:select aura:id="product" name="products" label="Product" class="input-min_size slds-col slds-size_1-of-4 slds-p-horizontal_x-small">
+                    <option value=""></option>
+                    <aura:iteration items="{!v.productList}" var="product">
+                        <option value="{!product.Product}">{!product.Product}</option>
+                    </aura:iteration>
+                </lightning:select>
+            </div>
+            <aura:set attribute="footer">
+                <aura:if isTrue="{!empty(v.searchResults)}">
+                    <span class="slds-text-title_caps slds-align_absolute-center">{!v.errorMessage}</span>
+                    <aura:set attribute="else">
+                        <div class="slds-scrollable slds-card_boundary slds-table_bordered">
+                            <table class="slds-table slds-table_striped">
+                                <thead>
+                                    <tr class="slds-text-title_caps">
+                                        <aura:iteration items="{!v.tableHead}" var="columnName">
+                                            <th>
+                                                <div class="slds-truncate">{!columnName}</div>
+                                            </th>                      
+                                        </aura:iteration>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.itemList}" var="trans">
+                                        <tr>
+                                            <td>
+                                                <div class="slds-text-title slds-text-color_default">{!trans.SalesDateTime}</div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-text-title slds-text-color_default">{!trans.Card}</div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-text-title slds-text-color_default">{!trans.SiteLocation}</div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-text-title slds-text-color_default">{!trans.SiteNumber}</div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-text-title slds-text-color_default">{!trans.SiteCountry}</div>
+                                            </td>
+                                            <td>
+                                                <aura:if isTrue="{!trans.DriverName}">
+                                                    <div class="slds-text-title slds-text-color_default">{!trans.DriverName}</div>
+                                                    <aura:set attribute="else">
+                                                        <div class="slds-text-title slds-text-color_default">{!trans.VRN}</div>
+                                                    </aura:set>
+                                                </aura:if>
+                                            </td>
+                                            <td>
+                                                <div class="slds-text-title slds-text-color_default">{!trans.Product}</div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-text-title slds-text-color_default">{!trans.Quantity}</div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-text-title slds-text-color_default">{!trans.AmountNet}</div>
+                                            </td>
+                                            <td>
+                                                <div class="slds-text-title slds-text-color_default">{!trans.AmountGross}</div>
+                                            </td>
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                            </table>
+                        </div>
+                    </aura:set>
+                </aura:if>
+                <aura:if isTrue="{!and(v.searchResults.length > 10, not(v.isAllList))}">
+                    <lightning:button class="slds-m-top_small" onclick="{!c.showAllTransactions}">View all ({!v.searchResults.length})</lightning:button>
+                </aura:if>
+                <aura:if isTrue="{!v.isAllList}">
+                    <lightning:button class="slds-m-top_small" onclick="{!c.hideTransactions}">Hide</lightning:button>
+                </aura:if>
+            </aura:set>
+        </lightning:card>
+    </div>
+</aura:component>

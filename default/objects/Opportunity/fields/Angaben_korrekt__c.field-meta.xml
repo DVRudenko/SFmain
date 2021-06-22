@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Angaben_korrekt__c</fullName>
+    <externalId>false</externalId>
+    <label>Angaben korrekt?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ja</fullName>
+                <default>false</default>
+                <label>Ja</label>
+            </value>
+            <value>
+                <fullName>IBAN stimmt nicht</fullName>
+                <default>false</default>
+                <label>IBAN stimmt nicht</label>
+            </value>
+            <value>
+                <fullName>BIC stimmt nicht</fullName>
+                <default>false</default>
+                <label>BIC stimmt nicht</label>
+            </value>
+            <value>
+                <fullName>Registrierte Adresse stimmt nicht</fullName>
+                <default>false</default>
+                <label>Registrierte Adresse stimmt nicht</label>
+            </value>
+            <value>
+                <fullName>Ust – IdNr. stimmt nicht</fullName>
+                <default>false</default>
+                <label>Ust – IdNr. stimmt nicht</label>
+            </value>
+            <value>
+                <fullName>Name der Firma stimmt nicht</fullName>
+                <default>false</default>
+                <label>Name der Firma stimmt nicht</label>
+            </value>
+            <value>
+                <fullName>Nein, sieh Notes</fullName>
+                <default>false</default>
+                <label>Nein, sieh Notes</label>
+            </value>
+            <value>
+                <fullName>Steuernummer falsch</fullName>
+                <default>false</default>
+                <label>Steuernummer falsch</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

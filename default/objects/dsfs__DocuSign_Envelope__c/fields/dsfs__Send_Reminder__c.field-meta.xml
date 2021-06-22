@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__Send_Reminder__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Should a reminder be sent periodically to recipients
+who have not yet completed the envelope?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check this box to have an email reminder sent to recipients of the envelope who have not yet completed their task.</inlineHelpText>
+    <label>Remind signers via email</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

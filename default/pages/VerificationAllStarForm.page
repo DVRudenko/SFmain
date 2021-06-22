@@ -1,0 +1,173 @@
+<apex:page controller="AllStarMondoFormController" action="{! initCheckPassword }" sidebar="false" showHeader="false" standardStylesheets="false">
+	<apex:form >
+		<apex:stylesheet value="{!URLFOR($Resource.AllstarFiles,'css/webtype.css')}"/>
+			<apex:stylesheet value="{!URLFOR($Resource.AllstarFiles,'css/DependencyHandler.css')}"/>
+			<apex:stylesheet value="{!URLFOR($Resource.AllstarFiles,'css/developers.css')}"/>
+			<apex:stylesheet value="{!URLFOR($Resource.AllstarFiles,'css/style.css')}"/>
+		<head>
+			<title>Identity verification | All Star Mondo</title>
+		</head>
+		<body class="node-type-subpage node-template-subpage html not-front not-logged-in no-sidebars page-node page-node- page-node-6 node-type-apply-now">
+			<style>
+				#logo .showLogo {
+				    height: 83px;
+				    width: 202px;
+				    background: url("{!URLFOR($Resource.AllstarFiles,'img/alstar_mondo_pl.png')}") 0 0 no-repeat;
+				}
+
+				#footer {
+				    background: url("{!URLFOR($Resource.AllstarFiles,'img/allstar_carbon_extended.png')}") #000;
+				    width: 100%;
+				    left: 0; bottom: 0;
+				    background-repeat: repeat-y;
+				    color: #fff;
+				    min-height: 80px;
+				    overflow: hidden;
+				    padding: 0 50px 50px 10%;
+				    position: fixed;
+				    font-size: 11px;
+				    background-size: cover;
+				}
+
+				#footer .list {
+				    float: none;
+				    text-align: left;
+				    margin: 15px 20px 15px 0;
+				    display: inline-table !important;
+				}
+
+				#footer .list h3 a {
+					font-size: 15px;
+				    color: #FFF;
+				    font-family: 'Antenna RE Bd';
+				}
+
+
+				.securQuestionForm {
+					display: block;
+					text-align: center;
+					margin: 20px auto;
+				}
+
+				.fieldToanswer {
+					height: 30px;
+					width: 450px;
+					border-radius: 5px;
+					margin-right: 10px;
+					font-family: Antenna RE Reg;
+					font-size: 15px;
+					color: black;
+					position: relative;
+				}
+				.error {
+				    width: 27%;
+				    padding: 20px;
+				    color: red;
+				    text-align: center;
+				    margin: 5px auto;
+				}
+
+				.button {
+					background: #ffc725;
+					height: 30px;
+					width: 120px;
+					text-align: center;
+					font-size: 15px;
+					font-family: Antenna RE Reg;
+					border-radius: 5px;
+					vertical-align: middle;
+				}
+
+				.button:hover {
+					background: #c6a709;
+				}
+				
+		  		.node-type-apply-now .headerimage {background: rgba(0, 0, 0, 0) url("{!URLFOR($Resource.AllstarFiles,'img/header-box-without.png')}") no-repeat scroll 0 0 / cover ;  height: 170px; z-index: 1;overflow:hidden;}
+				@media screen and (max-width:1500px) {
+			  	.node-type-apply-now .headerimage {background: rgba(0, 0, 0, 0) url("{!URLFOR($Resource.AllstarFiles,'img/header-box-without.png')}") no-repeat scroll 0 0 / cover ;  height: 140px; z-index: 1;overflow:hidden;}
+				}
+				@media screen and (max-width:1200px) {
+		  		.node-type-apply-now .headerimage {background: rgba(0, 0, 0, 0) url("{!URLFOR($Resource.AllstarFiles,'img/header-box-without.png')}") no-repeat scroll 0 0 / cover ;  height: 100px; z-index: 1;overflow:hidden;}
+			</style>
+			<div id="page" class="container">
+				 <div id="header">
+				   	<div id="logo-container">
+						<a id="logo" href="#" >
+			                <div class="showLogo" alt="Allstar fuel card services"></div>
+			            </a>
+					</div>
+			        <div class="header-top-account scrollhide">
+			            <div class="account-box">
+			                Infolinia dla nowych klientów
+			                <a href="tel:+48 12 334 97 69" class="header-phone">+48 12 334 97 69</a>
+			                <a href="mailto:nowyklient@allstarmondo.pl" class="header-mail">nowyklient@allstarmondo.pl</a>
+			            </div>
+			            <!-- left -->
+						<div class="account-box left-header-side">
+			                Dział Obsługi Klienta
+			                <a href="mailto:obslugaklienta@allstarmondo.pl" class="header-mail">obslugaklienta@allstarmondo.pl</a>
+			                <a href="https://selfserve.fleetcor.pl/GFNSMEPLWWW/Pages/Public/Login.aspx?ReturnUrl=%2fGFNSMEPLWWW%2fPages%2fcommon%2fhome.aspx" class="account-btn">Zaloguj się do Self-Serve</a>
+			            </div> 
+					</div>
+					<div class="clear"></div>
+			        <ul id="main-menu"> 
+						<li class="scrollhide">
+							<a href="http://www.allstarmondo.pl/wybierz-karte">Wybierz kartę</a>
+						</li>
+						<li class="scrollhide">
+			                <a href="http://www.allstarmondo.pl/o-nas">O nas</a>
+			            </li>
+				        <li class="scrollhide">
+			                <a href="http://www.allstarmondo.pl/najczesciej-zadawane-pytania">FAQ</a>
+			            </li>
+				        <li class="scrollhide">
+			                <a href="http://www.allstarmondo.pl/kontakt-z-nami">Kontakt z nami</a>
+			            </li>
+			        </ul><!-- /main-menu -->
+			        <div class="clear"></div>		
+				</div>
+				<div class="headerimage">
+				</div>
+			</div>
+			<div class="error">
+            	<apex:pageMessages />
+            </div>
+			<div>
+				<div class="securQuestionForm">   
+					<label style="padding: 0 5px 0 0;">
+						Wpisz hasło                
+					</label>
+					<apex:inputSecret styleClass="fieldToanswer" html-placeholder="Wpisz" value="{! password }"/>  
+        			<apex:commandbutton id="answerButton" value="Wejdź" action="{! login }" styleClass="button"/>
+				</div> 
+			</div>
+			<div id="footer" class="container">
+			    <div id="footer">
+			        <div class="list">
+			            <h3>
+			                <a href="http://www.allstarmondo.pl/wybierz-karte">Wybierz kartę</a>
+			            </h3>
+			        </div>
+			        <div class="list">
+			            <h3><a href="http://www.allstarmondo.pl/najczesciej-zadawane-pytania">FAQ</a></h3>
+			        </div>
+			        <div class="list">
+			            <h3><a href="http://www.allstarmondo.pl/regulamin-kart">Regulamin Kart</a></h3>
+			        </div>
+			        <div id="mini-footer">
+			            <ul id="footer-menu">
+			                <li><a href="http://www.fleetcor.com" target="_blank">&copy; Copyright FLEETCOR 2017</a></li>
+			                <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/zasady-dotyczace-plikow-cookies">Zasady dotyczące plików cookies</a></li>
+			                <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/zasady-korzystania-z-witryny-internetowej">Zasady korzystania z witryny internetowej</a></li>
+			                <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/polityka-prywatnosci">Polityka prywatności</a></li>
+			                <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/prawa-autorskie-i-nota-prawna">Prawa autorskie i Nota prawna</a></li>
+			                <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/zasady-dopuszczalnego-uzytkowania">Zasady dopuszczalnego użytkowania</a></li>
+			            </ul>
+			            <p>&nbsp;</p>
+			            <div class="clear"></div>
+			        </div>
+			    </div>
+			</div>
+		</body>
+	</apex:form>
+</apex:page>

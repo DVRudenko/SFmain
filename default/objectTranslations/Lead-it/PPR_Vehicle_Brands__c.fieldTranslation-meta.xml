@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- PPR Vehicle Brands --></label>
+    <name>PPR_Vehicle_Brands__c</name>
+    <picklistValues>
+        <masterLabel>AUDI</masterLabel>
+        <translation><!-- AUDI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BAW</masterLabel>
+        <translation><!-- BAW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BMW</masterLabel>
+        <translation><!-- BMW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bogdan</masterLabel>
+        <translation><!-- Bogdan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CADILLAC</masterLabel>
+        <translation><!-- CADILLAC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHANCE</masterLabel>
+        <translation><!-- CHANCE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHERY</masterLabel>
+        <translation><!-- CHERY --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHEVROLET</masterLabel>
+        <translation><!-- CHEVROLET --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CHRYSLER</masterLabel>
+        <translation><!-- CHRYSLER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CITROEN</masterLabel>
+        <translation><!-- CITROEN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DAEWOO</masterLabel>
+        <translation><!-- DAEWOO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DAF</masterLabel>
+        <translation><!-- DAF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DODGE</masterLabel>
+        <translation><!-- DODGE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FIAT</masterLabel>
+        <translation><!-- FIAT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FORD</masterLabel>
+        <translation><!-- FORD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FUSO</masterLabel>
+        <translation><!-- FUSO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Foton</masterLabel>
+        <translation><!-- Foton --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GAZ</masterLabel>
+        <translation><!-- GAZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HYUNDAI</masterLabel>
+        <translation><!-- HYUNDAI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Higer</masterLabel>
+        <translation><!-- Higer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hino</masterLabel>
+        <translation><!-- Hino --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Howo</masterLabel>
+        <translation><!-- Howo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>INFINITI</masterLabel>
+        <translation><!-- INFINITI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IZH</masterLabel>
+        <translation><!-- IZH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Isuzu</masterLabel>
+        <translation><!-- Isuzu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Iveco</masterLabel>
+        <translation><!-- Iveco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JAGUAR</masterLabel>
+        <translation><!-- JAGUAR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>JEEP</masterLabel>
+        <translation><!-- JEEP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KAMAZ</masterLabel>
+        <translation><!-- KAMAZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KAVZ</masterLabel>
+        <translation><!-- KAVZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KIA</masterLabel>
+        <translation><!-- KIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KRAZ</masterLabel>
+        <translation><!-- KRAZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LADA</masterLabel>
+        <translation><!-- LADA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LAND ROVER</masterLabel>
+        <translation><!-- LAND ROVER --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LIAZ</masterLabel>
+        <translation><!-- LIAZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MAN</masterLabel>
+        <translation><!-- MAN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MAZ</masterLabel>
+        <translation><!-- MAZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MAZDA</masterLabel>
+        <translation><!-- MAZDA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MERCEDES-BENZ</masterLabel>
+        <translation><!-- MERCEDES-BENZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MERCEDES-BENZ VANS</masterLabel>
+        <translation><!-- MERCEDES-BENZ VANS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MINI</masterLabel>
+        <translation><!-- MINI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MITSUBISHI</masterLabel>
+        <translation><!-- MITSUBISHI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NEFAZ</masterLabel>
+        <translation><!-- NEFAZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NISSAN</masterLabel>
+        <translation><!-- NISSAN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OPEL</masterLabel>
+        <translation><!-- OPEL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PAZ</masterLabel>
+        <translation><!-- PAZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PEUGEOT</masterLabel>
+        <translation><!-- PEUGEOT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PORSCHE</masterLabel>
+        <translation><!-- PORSCHE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RENAULT</masterLabel>
+        <translation><!-- RENAULT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SKODA</masterLabel>
+        <translation><!-- SKODA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SUBARU</masterLabel>
+        <translation><!-- SUBARU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SUZUKI</masterLabel>
+        <translation><!-- SUZUKI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scania</masterLabel>
+        <translation><!-- Scania --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shaanxi</masterLabel>
+        <translation><!-- Shaanxi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TOYOTA</masterLabel>
+        <translation><!-- TOYOTA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UAZ</masterLabel>
+        <translation><!-- UAZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>URAL</masterLabel>
+        <translation><!-- URAL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VIS</masterLabel>
+        <translation><!-- VIS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VOLVO</masterLabel>
+        <translation><!-- VOLVO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VW VANS</masterLabel>
+        <translation><!-- VW VANS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Volkswagen</masterLabel>
+        <translation><!-- Volkswagen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ZIL</masterLabel>
+        <translation><!-- ZIL --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

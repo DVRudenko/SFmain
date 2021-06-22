@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Starts_Final_Check</fullName>
+    <columns>Registered_Country__c</columns>
+    <columns>GFN_number_for_starts__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Starts_Number_of_Cards_Target__c</columns>
+    <columns>Starts_Fuel_Liters_Per_Mo_Target__c</columns>
+    <columns>Starts_Status__c</columns>
+    <columns>Reason_for_Termination__c</columns>
+    <columns>Starts_Schedule__c</columns>
+    <columns>Starts_SLA_Expired__c</columns>
+    <columns>Starts_Aufgabe_Beschreibung__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Starts_Close_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSE_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>8/1/2018</value>
+    </filters>
+    <filters>
+        <field>Starts_SLA_Expired__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Starts_Status__c</field>
+        <operation>equals</operation>
+        <value>2.1 First Check: Cards/PINs Received</value>
+    </filters>
+    <label>Starts: Final Check</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinates>START</roleAndSubordinates>
+        <roleAndSubordinates>Salesteam_Inbound_2</roleAndSubordinates>
+        <roleAndSubordinates>Starts_Team_Manager</roleAndSubordinates>
+        <roleAndSubordinates>Starts_Team_Rep</roleAndSubordinates>
+        <roleAndSubordinates>Teamleiter_Inbound</roleAndSubordinates>
+        <roleAndSubordinatesInternal>Altevida_Telesales_Team_Lead</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

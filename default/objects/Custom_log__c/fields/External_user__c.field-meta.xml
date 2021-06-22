@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>External_user__c</fullName>
+    <description>User that made API call from another system</description>
+    <externalId>false</externalId>
+    <inlineHelpText>User that made API call from another system</inlineHelpText>
+    <label>External user</label>
+    <length>100</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

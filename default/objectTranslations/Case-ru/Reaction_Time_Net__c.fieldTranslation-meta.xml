@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The number of hours between date/time opened and the date/time when the first interaction with a client has been made considering working hours only.
+Shell - Mo-Fri 8am-5pm PRG time
+CCS -  Mo-Fri 7am-7pm PRG  time --></help>
+    <label><!-- Reaction Time Net --></label>
+    <name>Reaction_Time_Net__c</name>
+</CustomFieldTranslation>

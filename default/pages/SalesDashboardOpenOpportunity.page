@@ -1,0 +1,183 @@
+<apex:page controller="SalesDashboardOpenOpportunityCtrl" action="{! init }" sidebar="false" showHeader="false">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+    <apex:form >
+        <apex:pageBlock >
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <h1 style="margin-bottom: 10px; font-size: 15px; display: block;">
+                            Overdue Open Opportunities
+                        </h1>
+                    </td> 
+                    <td style="text-align: right;">
+                        <apex:outputLink value="/articles/Knowledge/Help-page-for-Overdue-Open-Opportunities-dashboard?popup=false" target="_blank" id="theLink">Help</apex:outputLink>
+                    </td>
+                </tr>
+            </table>        
+            <div>
+                <apex:outputPanel rendered="{! OR(currentUser.UserRole.Name == 'Teamleiter Inbound', currentUser.UserRole.Name == 'Teamleiter Inbound 2', currentUser.UserRole.Name == 'Teamleiter Harte Hank', currentUser.UserRole.Name == 'Teamleiter Outbound 1',
+                currentUser.UserRole.Name == 'Teamleiter Outbound 2', currentUser.UserRole.Name == 'Teamleiter Outbound 3', currentUser.UserRole.Name == 'Teamleiter Outbound 4', currentUser.UserRole.Name == 'Teamleiter Outbound 5', currentUser.UserRole.Name == 'CCS Telesales Team Lead', currentUser.UserRole.Name == 'CCS SME Team Lead', currentUser.UserRole.Name == 'AllStar Teamleader') }">
+                    <div id="salesteamleader" style="width: 100%; float: left; height: 550px;"></div>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{! OR(currentUser.UserRole.Name == 'Salesteam Inbound', currentUser.UserRole.Name == 'Salesteam Inbound 2', currentUser.UserRole.Name == 'Salesteam Outbound 1', currentUser.UserRole.Name == 'Salesteam Outbound 2',
+                currentUser.UserRole.Name == 'Salesteam Outbound 3', currentUser.UserRole.Name == 'Salesteam Outbound 4', currentUser.UserRole.Name == 'Salesteam Outbound 5', currentUser.UserRole.Name == 'Salesteam Harte Hank', currentUser.UserRole.Name == 'Teamleiter', currentUser.UserRole.Name == 'Harte Hank Dutch INBOUND', currentUser.UserRole.Name == 'Harte Hank Dutch OUTBOUND', currentUser.UserRole.Name == 'Harte Hank Germany', currentUser.UserRole.Name == 'CCS CZ Telesales', currentUser.UserRole.Name == 'CCS CZ SME', currentUser.UserRole.Name == 'CCS SK SME', currentUser.UserRole.Name == 'AllStar Sales') }">
+                    <div id="sales" style="width: 100%; float: left; height: 150px;"></div>
+                </apex:outputPanel>
+                <div style="clear: both;"></div>
+            </div>
+        </apex:pageBlock>
+        <script>
+            $(function () { 
+                $('#salesteamleader').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                        <apex:repeat value="{! finalList }" var="key">
+                            '<a href="/apex/OpenOpportunityReport?userid={! salesTeamMap[key.Id].Id }" target="_blank">{! salesTeamMap[key.Id].Name }</a>',
+                        </apex:repeat>
+                        ],
+                        labels: {
+                            useHTML: true
+                        }
+                    },
+                    yAxis: [{
+                        min: 0,
+                        title: {
+                            text: ''
+                        },
+                        stackLabels: {
+                            enabled: true,
+                            style: {
+                                fontWeight: 'bold',
+                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        }
+                    }],
+                    legend: {
+                        shadow: false,
+                        labelFormatter: function() {
+                          var total = 0;
+                          for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+                          return this.name + ' - Total: ' + total;
+                        }
+                    },
+                    exporting: { enabled: false },
+                    credits: {
+                          enabled: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    },
+                    plotOptions: {
+                        series: {
+                            stacking: 'normal',
+                            dataLabels: {
+                                enabled: true,
+                                color: 'white',
+                                style: {
+                                    textShadow: false 
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'Opportunities without tasks',
+                        color: 'rgba(186,60,61,1)',
+                        data: [<apex:repeat value="{! finalList }" var="key">
+                        {! quantityOppWithoutTasksForTeamlead[key.Id] },
+                    </apex:repeat>],
+                        pointPadding: -0.1,
+                        pointPlacement: 0.0
+                    }, {
+                        name: 'Opportunities with overdue tasks',
+                        color: 'rgba(126,86,134,.9)',
+                        data: [<apex:repeat value="{! finalList }" var="key">
+                        {! quantityOppWithTasksForTeamlead[key.Id] },
+                    </apex:repeat>],
+                        pointPadding: -0.1,
+                        pointPlacement: 0.0
+                    }]
+                });
+                $('#sales').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                        '<a href="/apex/OpenOpportunityReport?userid={! $User.Id }" target="_blank">{! $User.FirstName } {! $User.LastName }</a>'
+                        ],
+                        labels: {
+                            useHTML: true
+                        }
+                    },
+                    yAxis: [{
+                        min: 0,
+                        title: {
+                            text: ''                                
+                        }, 
+                        stackLabels: {
+                            enabled: true,
+                            style: {
+                                fontWeight: 'bold',
+                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        }
+                    }],
+                    legend: {
+                        shadow: false,
+                        labelFormatter: function() {
+                          var total = 0;
+                          for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+                          return this.name + ' - Total: ' + total;
+                        }
+                    },
+                    exporting: { enabled: false },
+                    credits: {
+                          enabled: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    },
+                    plotOptions: {
+                        series: {
+                            stacking: 'normal',
+                            dataLabels: {
+                                enabled: true,
+                                color: 'white',
+                                style: {
+                                    textShadow: false 
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'Opportunities without tasks',
+                        color: 'rgba(186,60,61,1)',
+                        data: [{! oppWithoutTasksForSales }],
+                    }, {
+                        name: 'Opportunities with overdue tasks',
+                        color: 'rgba(126,86,134,9)',
+                        data: [{! oppWithTasksForSales }],
+                    }]
+                });
+            });
+        </script>
+        <br/>
+    </apex:form>        
+</apex:page>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Sales_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>E2E Sales Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fully E2E</fullName>
+                <default>false</default>
+                <label>Fully E2E</label>
+            </value>
+            <value>
+                <fullName>Fully manual</fullName>
+                <default>false</default>
+                <label>Fully manual</label>
+            </value>
+            <value>
+                <fullName>E2E downgraded to manual</fullName>
+                <default>false</default>
+                <label>E2E downgraded to manual</label>
+            </value>
+            <value>
+                <fullName>Manual upgraded to E2E</fullName>
+                <default>false</default>
+                <label>Manual upgraded to E2E</label>
+            </value>
+            <value>
+                <fullName>Чистый e2e</fullName>
+                <default>false</default>
+                <label>Чистый e2e</label>
+            </value>
+            <value>
+                <fullName>Чистый e2e + помощь КЦ</fullName>
+                <default>false</default>
+                <label>Чистый e2e + помощь КЦ</label>
+            </value>
+            <value>
+                <fullName>E2E с участием Inbound</fullName>
+                <default>false</default>
+                <label>E2E с участием Inbound</label>
+            </value>
+            <value>
+                <fullName>Стандартный ручной процесс</fullName>
+                <default>false</default>
+                <label>Стандартный ручной процесс</label>
+            </value>
+            <value>
+                <fullName>Отклонен</fullName>
+                <default>false</default>
+                <label>Отклонен</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

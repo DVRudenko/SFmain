@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shell_No_fee_2020_CE_Markets</fullName>
+    <active>true</active>
+    <description>Product__c = "Shell No fee 2020" is available only for Registered_Country__c = "Slovakia", "Hungary", "Poland" and "Czech Republic".</description>
+    <errorConditionFormula>AND(ISPICKVAL(Product__c, "Shell No fee 2020"),
+Registered_Country__c != "Czech Republic",
+Registered_Country__c != "Slovakia",
+Registered_Country__c != "Hungary",
+Registered_Country__c != "Poland")</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Offer "Shell No fee 2020" is available only for Czech Republic, Slovakia, Hungary and Poland.</errorMessage>
+</ValidationRule>

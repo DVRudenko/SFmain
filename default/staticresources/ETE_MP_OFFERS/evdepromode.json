@@ -1,0 +1,97 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "You will receive your Travelcard charging solution shortly by post.",
+                "de": "Sie erhalten Ihre Travelcard Ladelösung in Kürze per Post."
+            },
+            {
+                "en": "You can now start charging easily and conveniently. Because your charging chip is automatically activated.",
+                "de": "Sie können nun einfach und bequem laden. Denn Ihr Ladechip ist automatisch aktiviert."
+            },
+            {
+                "en": "Find all suitable charging stations in our Travelcard EV app.",
+                "de": "Finden Sie hierzu alle geeigneten Ladesäulen in unserer App Charge & Drive by FLEETCOR."
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Charging stations in Europe",
+                    "de": "Ladestationen europaweit"
+                },
+                "value": {
+                    "en": "150 000",
+                    "de": "150 000"
+                }
+            },
+            {
+                "label": {
+                    "en": "For all transactions",
+                    "de": "für alle Transaktionen"
+                },
+                "value": {
+                    "en": "Single invoice",
+                    "de": "NUR EINE RECHNUNG"
+                }
+            },
+            {
+                "label": {
+                    "en": "Card issuing and delivery",
+                    "de": "Kartenproduktion und Einrichtung"
+                },
+                "value": {
+                    "en": "FREE",
+                    "de": "KOSTENLOS"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "EV DE Promo"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "EV fob",
+            "de": "LADEKARTE"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/ev_fob.png"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "Charge your electric fleet quickly and easily with the charging key fob from Travelcard.",
+            "de": "Laden Sie Ihre Elektro-Flotte schnell, einfach und überall mit dem Lade-Schlüsselanhänger von Travelcard."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "CHARGING CARD",
+            "de": "LADEKARTE"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "CHARGING CARDS",
+            "de": "LADEKARTEN"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "LADEKARTE",
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "0",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "order": 5
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Germany": "/resource/ETE_DOCUMENTS_1/tariffSheets_evdepromode.jpg"
+    }
+}

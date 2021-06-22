@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country_Mandatory</fullName>
+    <active>true</active>
+    <description>Country field is mandatory for everyone except "Russian Sales" Records.</description>
+    <errorConditionFormula>AND(
+ISBLANK(Country),
+RecordType.DeveloperName &lt;&gt; "Russian_Sales")</errorConditionFormula>
+    <errorDisplayField>Country</errorDisplayField>
+    <errorMessage>Please, select Country.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_mode_email__c</fullName>
+    <description>Test email for Test mode (DEBUG EMAIL)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Test email for Test mode (DEBUG EMAIL)</inlineHelpText>
+    <label>Test mode email</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

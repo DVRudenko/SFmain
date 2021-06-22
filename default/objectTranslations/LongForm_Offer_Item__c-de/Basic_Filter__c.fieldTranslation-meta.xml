@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Basic Filter --></label>
+    <name>Basic_Filter__c</name>
+    <picklistValues>
+        <masterLabel>Fuel</masterLabel>
+        <translation><!-- Fuel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuel + Volume</masterLabel>
+        <translation><!-- Fuel + Volume --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Volume</masterLabel>
+        <translation><!-- Volume --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Date from the Agent&apos;s perspective, respecting local DST --></help>
+    <label><!-- Local Date --></label>
+    <name>NVMStatsSF__Local_Date__c</name>
+</CustomFieldTranslation>

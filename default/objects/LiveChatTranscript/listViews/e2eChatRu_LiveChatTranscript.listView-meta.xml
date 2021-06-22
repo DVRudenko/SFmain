@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>e2eChatRu_LiveChatTranscript</fullName>
+    <columns>Name</columns>
+    <columns>Owner</columns>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <columns>Status</columns>
+    <columns>VisitorMessageCount</columns>
+    <columns>OperatorMessageCount</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Country__c</field>
+        <operation>equals</operation>
+        <value>Russia</value>
+    </filters>
+    <label>E2E чаты online</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>PPRCommercialSales</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

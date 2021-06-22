@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completion</fullName>
+    <active>true</active>
+    <description>Completion. Measure your goals based on whether they have been achieved or not. Ideal for tracking milestones or when you do not have targets based on actual numbers. Example: Complete a training</description>
+    <label>Fertigstellung</label>
+</RecordType>

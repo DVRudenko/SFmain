@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Send_Email_to_QA_test</fullName>
+        <ccEmails>dmitry.putyrski@enway.com</ccEmails>
+        <description>Send Email to QA test</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>flt_flash.log@gmail.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Automated_Test_Error</template>
+    </alerts>
+    <rules>
+        <fullName>Send email notification for Automated Test Error</fullName>
+        <actions>
+            <name>Send_Email_to_QA_test</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Health_Check__c.Name</field>
+            <operation>equals</operation>
+            <value>Automated Test : Error</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

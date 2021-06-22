@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Special_conditions__c</fullName>
+    <externalId>false</externalId>
+    <label>PPR Special conditions</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>НЕТ</fullName>
+                <default>true</default>
+                <label>НЕТ</label>
+            </value>
+            <value>
+                <fullName>Субсеть по АГЗС</fullName>
+                <default>false</default>
+                <label>Субсеть по АГЗС</label>
+            </value>
+            <value>
+                <fullName>30-50</fullName>
+                <default>false</default>
+                <label>30-50</label>
+            </value>
+            <value>
+                <fullName>50-100</fullName>
+                <default>false</default>
+                <label>50-100</label>
+            </value>
+            <value>
+                <fullName>100-200</fullName>
+                <default>false</default>
+                <label>100-200</label>
+            </value>
+            <value>
+                <fullName>200</fullName>
+                <default>false</default>
+                <label>200</label>
+            </value>
+            <value>
+                <fullName>30-50A</fullName>
+                <default>false</default>
+                <label>30-50A</label>
+            </value>
+            <value>
+                <fullName>50-100A</fullName>
+                <default>false</default>
+                <label>50-100A</label>
+            </value>
+            <value>
+                <fullName>100-200A</fullName>
+                <default>false</default>
+                <label>100-200A</label>
+            </value>
+            <value>
+                <fullName>200A</fullName>
+                <default>false</default>
+                <label>200A</label>
+            </value>
+            <value>
+                <fullName>Индивидуальный 2019</fullName>
+                <default>false</default>
+                <label>Индивидуальный 2019</label>
+            </value>
+            <value>
+                <fullName>Индивидуальный 2019А</fullName>
+                <default>false</default>
+                <label>Индивидуальный 2019А</label>
+            </value>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>Инд.усл.</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Инд.усл.</label>
+            </value>
+            <value>
+                <fullName>КАМ 0-0-1р</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>КАМ 0-0-1р</label>
+            </value>
+            <value>
+                <fullName>КАМ 0-0-3%</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>КАМ 0-0-3%</label>
+            </value>
+            <value>
+                <fullName>Перевозчик</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Перевозчик</label>
+            </value>
+            <value>
+                <fullName>Своя сеть</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Своя сеть</label>
+            </value>
+            <value>
+                <fullName>Субсеть</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Субсеть</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

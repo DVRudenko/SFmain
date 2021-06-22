@@ -1,0 +1,133 @@
+<style>
+    .documents-agreement {
+        font-size: 11px;
+    }
+
+    .documents-agreement__underline {
+        border-bottom: 1px solid black;
+    }
+
+    .documents-agreement__line-value {
+        margin-top: 20px;
+        min-height: 12px;
+    }
+
+    .documents-agreement ol {
+        padding: 0;
+    }
+
+    .documents-agreement ol li {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+</style>
+
+<div class="documents-agreement">
+    <p class="doc-header">POTWIERDZENIE ZAWARCIA UMOWY</p>
+    <p>
+        Ja, niżej podpisany/podpisana, jako osoba upoważniona do reprezentowania przedsiębiorcy działającego pod nazwą 
+        <span class="documents-agreement__underline">{!currentOpportunity.Account.Name}</span> przy ulicy 
+        <span class="documents-agreement__underline">{!currentOpportunity.Account.BillingStreet} </span>
+        kod pocztowy <span class="documents-agreement__underline">{!currentOpportunity.Account.BillingPostalCode},
+        </span> miejscowość <span class="documents-agreement__underline">{!currentOpportunity.Account.BillingCity}</span> 
+        z siedzibą w Polsce o numerze NIP: <span class="documents-agreement__underline">{!currentOpportunity.Account.Steuernummer__c},</span> 
+        numerze REGON: <span class="documents-agreement__underline">{!currentOpportunity.Account.HR_Abteilung_HRA_HRB_und_HR_Nummer__c}</span> 
+        dalej "Klient",
+    </p>
+    <p>niniejszym oświadczam, iż Klient przeczytał oraz akceptuje warunki i postanowienia:</p>
+    <p>
+        1.  Dokumentu "Zasady I Warunki Ogólne dla kart paliwowych wydane przez FleetCor Poland sp. z
+            o.o. (dalej "Zasady i Warunki Ogólne" lub "Umowa"), udostępnionych przez spółkę FleetCor 
+            Poland sp. z o.o. z siedzibą w Warszawie: Generation Park Z, ul. Towarowa 28, 00-839 Warszawa (Polska), wpisaną do rejestru 
+            przedsiębiorców pod numerem KRS: 0000505365 (dalej "FleetCor"), oraz
+    </p>
+    <p>
+        2.  Tabeli opłat.
+    </p>
+    <p>
+        Jako Klient FleetCor niniejszym wyrażam zgodę na nadesłanie na wskazany wyżej adres karty paliwowej EuroShell, zgodnie ze złożonym 
+        wnioskiem o kartę paliwową, dopiero po uzyskaniu pozytywnego wyniku oceny ryzyka zgodnie z postanowieniami Umowy
+    </p>
+    <p>
+        W imieniu Klienta niniejszym potwierdzam, iż Klient w pełni akceptuje postanowienia i warunki zawarte w jakichkolwiek dokumentach 
+        udostępnionych Klientowi przez FleetCor a także potwierdzam zawarcie przez Klienta Umowy z FleetCor, na dowód czego składam poniżej swój podpis.
+    </p>
+    <div>
+        <div class="documents-agreement__underline documents-agreement__line-value">{!fullName}</div>
+        <div>Imię i nazwisko</div>
+
+        <div class="documents-agreement__underline documents-agreement__line-value"></div>
+        <div>Stanowisko</div>
+
+        <div class="documents-agreement__underline documents-agreement__line-value">{!today}, {!currentOpportunity.Account.BillingCity}, POLSKA</div>
+        <div>Data, miejscowość, kraj</div>
+
+        <div class="documents-agreement__underline documents-agreement__line-value"> </div>
+        <div>Podpis</div>
+    </div>
+
+    <!-- depositAgreement -->
+
+    <div style="font-size: 10px; page-break-before: always;">
+        <div>FLEETCOR Poland Sp. z o.o.</div>
+        <div>Dział Kredytowy</div>
+        <div>Generation Park Z</div>
+        <div>ul. Towarowa 28</div>
+        <div>00-839 Warszawa</div>
+    </div>
+    
+    <p class="doc-header">UMOWA O USTANOWIENIU KAUCJI PIENIĘŻNEJ</p>
+    <p>Niniejszym {!currentOpportunity.Account.Name} potwierdza zawarcie umowy:</p>
+
+    <p>
+        1. Składamy kaucję pieniężną w wysokości <span class="documents-agreement__underline">{!securityAmountToPay}</span> zł 
+        dla zabezpieczenia wszelkich roszczeń, które mogą wyniknąć z umowy handlowej zawartej pomiędzy FLEETCOR oraz Spółką składającą kaucję pieniężną.
+    </p>
+    <p>
+        2. Kaucja pieniężna będzie zachowana na czas trwania naszego stosunku prawnego. Składający
+        kaucję pieniężną może ją zastąpić zabezpieczeniem innego rodzaju o tej samej wartości, o ile
+        zostanie to jednoznacznie zaakceptowane przez FLEETCOR.
+    </p>
+    <p>
+        3. W wypadku opóźnienia w płatnościach, FLEETCOR jest upoważniony do potrącenia z przedmiotu
+        kaucji należności na poczet zabezpieczenia wierzytelności.
+    </p>
+    <p>
+        4. Wpłacona kaucja pieniężna będzie w pierwszej kolejności wykorzystana do pokrycia
+        wierzytelności, dalej odsetek, opłat wynikających z procesu monitoringu płatności, w ostatniej
+        kolejności kosztów obsługi prawnej i kosztów postępowania sądowego.
+    </p>
+    <p>
+        5. Kaucję należy wpłacić na wskazane konto bankowe: 07 1240 1040 1111 0010 6484 1442, Bank
+        Polska Kasa Opieki Spółka Akcyjna, Grzybowska 53/57, 00-950 Warszawa. 
+    </p>
+
+    <table width="100%" style="text-align: center; margin-top: 20px; ">
+        <tr>
+            <td width="48%" class="documents-agreement__underline">{!today}, {!currentOpportunity.Account.BillingCity}, POLSKA</td>
+            <td width="4%"></td>
+            <td width="48%" class="documents-agreement__underline"></td>
+        </tr>
+        <tr>
+            <td>Data i miejsce</td>
+            <td></td>
+            <td>Podpis i pieczęć Spółki składającej kaucję</td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td class="documents-agreement__underline">{!fullName}</td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td>Imię i nazwisko*</td>
+        </tr>
+    </table>
+
+    <div style="font-style: italic; margin-top: 20px;">
+        *należy wypełnić czytelnie, drukowanymi literami
+    </div>
+</div>

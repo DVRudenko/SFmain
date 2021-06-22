@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- 1 m cable to the temperature sensor - range of temperature measure -10 to 60°C. --></help>
+    <label><!-- 1 m cable to the temperature sensor --></label>
+    <name>X1_m_cable_to_the_temperature_Amount__c</name>
+</CustomFieldTranslation>

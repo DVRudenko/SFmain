@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>New</fullName>
+        <default>false</default>
+        <label>New</label>
+    </customValue>
+    <customValue>
+        <fullName>Dial out</fullName>
+        <default>false</default>
+        <label>Dial out</label>
+    </customValue>
+    <customValue>
+        <fullName>Successful dialing</fullName>
+        <default>false</default>
+        <label>Successful dialing</label>
+    </customValue>
+    <customValue>
+        <fullName>Successful dialing:1d</fullName>
+        <default>false</default>
+        <label>Successful dialing - Public sector entity</label>
+    </customValue>
+    <customValue>
+        <fullName>Successful dialing:2d</fullName>
+        <default>false</default>
+        <label>Successful dialing - Bankrupt</label>
+    </customValue>
+    <customValue>
+        <fullName>Successful dialing:3d</fullName>
+        <default>false</default>
+        <label>Successful dialing - Existing customer</label>
+    </customValue>
+    <customValue>
+        <fullName>Successful dialing:4d</fullName>
+        <default>false</default>
+        <label>Successful dialing - Own gas station</label>
+    </customValue>
+    <customValue>
+        <fullName>Successful dialing:5d</fullName>
+        <default>false</default>
+        <label>Successful dialing - No car</label>
+    </customValue>
+    <customValue>
+        <fullName>Successful dialing:6d</fullName>
+        <default>false</default>
+        <label>Successful dialing - Refused to speak</label>
+    </customValue>
+    <customValue>
+        <fullName>Successful dialing:7d</fullName>
+        <default>false</default>
+        <label>Successful dialing - Want a better offer</label>
+    </customValue>
+    <customValue>
+        <fullName>Successful dialing:8d</fullName>
+        <default>false</default>
+        <label>Successful dialing - Contact is unreachable</label>
+    </customValue>
+    <customValue>
+        <fullName>Wrong number:0</fullName>
+        <default>false</default>
+        <label>Wrong number - Doesn&#39;t exist</label>
+    </customValue>
+    <customValue>
+        <fullName>Wrong number:1</fullName>
+        <default>false</default>
+        <label>Wrong number - Irrelevant phone</label>
+    </customValue>
+    <customValue>
+        <fullName>Wrong number:2</fullName>
+        <default>false</default>
+        <label>Wrong number - Irrelevant phone for Account</label>
+    </customValue>
+    <customValue>
+        <fullName>Wrong number:3d</fullName>
+        <default>false</default>
+        <label>Wrong number - Not a company</label>
+    </customValue>    
+    <customValue>
+        <fullName>Wrong number:4d</fullName>
+        <default>false</default>
+        <label>Wrong number - Incorrect contact info</label>
+    </customValue>
+    <customValue>
+        <fullName>Needs validation</fullName>
+        <default>false</default>
+        <label>Needs validation</label>
+    </customValue>
+   <customValue>
+        <fullName>CTI Wrong number:0</fullName>
+        <default>false</default>
+        <label>CTI Wrong number - Doesn't exist</label>
+    </customValue>
+    <customValue>
+        <fullName>CTI System Error</fullName>
+        <default>false</default>
+        <label>CTI System Error</label>
+    </customValue>
+    <description>Phone statuses for Lead, Contact, Account objects</description>
+    <masterLabel>Phone Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of fuel stations that this retrial owns --></help>
+    <label>Anzahl der Tankstellen</label>
+    <name>Nr_of_fuel_stations__c</name>
+</CustomFieldTranslation>

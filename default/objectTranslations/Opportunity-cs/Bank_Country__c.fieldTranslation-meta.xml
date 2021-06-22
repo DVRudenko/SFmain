@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Země banky</label>
+    <name>Bank_Country__c</name>
+    <picklistValues>
+        <masterLabel>Czech Republic</masterLabel>
+        <translation><!-- Czech Republic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slovakia</masterLabel>
+        <translation><!-- Slovakia --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

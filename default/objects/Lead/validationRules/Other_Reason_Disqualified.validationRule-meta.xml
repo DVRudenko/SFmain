@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Reason_Disqualified</fullName>
+    <active>true</active>
+    <description>If Quali_Status__c = "Jiné" or CCS_Close_reason__c = "Jiný v poznámce", then CCS_Other_Reason_Disqualified__c is mandatory.</description>
+    <errorConditionFormula>AND(
+$Profile.Id = "00e0O000001VEUV" ||
+$Profile.Id = "00e0O000001VEK1" ||
+$Profile.Id = "00e0O000001VEXU" ||
+$Profile.Id = "00e20000001pihq" ||
+$Profile.Id = "00e0O000001VEK6" ||
+$Profile.Id = "00e0O000001VEUW",
+ISPICKVAL(  Quali_Status__c  , "Jiné" ) ||
+ISPICKVAL(  CCS_Close_reason__c  , "Jiný v poznámce" ),
+ISBLANK(CCS_Other_Reason_Disqualified__c))</errorConditionFormula>
+    <errorDisplayField>CCS_Other_Reason_Disqualified__c</errorDisplayField>
+    <errorMessage>Pole "Jiný důvod nezájmu" je povinné.</errorMessage>
+</ValidationRule>

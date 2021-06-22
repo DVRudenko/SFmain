@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Organization_requisites</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Organization requisites</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>if("{! User.Profile }" == "System Administrator" ||
+"{! User.Profile}" == "Системный администратор" ||
+"{! User.Profile }" == "RU_System_Administrator" ||
+"{! User.Profile }" == "API Only" ||
+"{! User.Id }" == "005200000041rKJ" ||
+"{! User.Id }" == "0050O000006srJj" ||
+"{! User.Id }" == "0050O000006srJ8" ||
+"{! User.Id }" == "0050O000006srED" ||
+"{! User.Id }" == "0050O000008TcRK" ||
+"{! User.Id }" == "0050O000006srGd" ||
+"{! User.Id }" == "0053Y000009OF36" ||
+"{! User.Profile}" == "Russian Sales Manager"
+){
+window.parent.location.href = "/apex/goToOrganizationRequisites?id="+'{! Opportunity.Id }';
+} else {
+alert("У Вас нет доступа к данной функциональности. Обратитесь к Вашему администратору.");
+}</url>
+</WebLink>

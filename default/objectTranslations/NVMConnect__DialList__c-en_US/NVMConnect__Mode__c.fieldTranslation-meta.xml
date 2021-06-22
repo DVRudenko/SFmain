@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Preview Mode lets agents initiate each call when they are ready; Automatic mode dials immediately --></help>
+    <label><!-- Mode --></label>
+    <name>NVMConnect__Mode__c</name>
+    <picklistValues>
+        <masterLabel>Automatic</masterLabel>
+        <translation><!-- Automatic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Preview</masterLabel>
+        <translation><!-- Preview --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

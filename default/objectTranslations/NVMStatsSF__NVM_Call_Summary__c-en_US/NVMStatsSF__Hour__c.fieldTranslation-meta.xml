@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- System hour of the day in which the Call started --></help>
+    <label><!-- UTC Hour --></label>
+    <name>NVMStatsSF__Hour__c</name>
+</CustomFieldTranslation>

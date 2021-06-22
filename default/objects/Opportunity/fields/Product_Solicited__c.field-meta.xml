@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Solicited__c</fullName>
+    <description>Name of the product the Customer Applied for</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the product the customer applied for.</inlineHelpText>
+    <label>Product Solicited</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CCS Aukce</fullName>
+                <default>false</default>
+                <label>CCS Aukce</label>
+            </value>
+            <value>
+                <fullName>CCS Bonus</fullName>
+                <default>false</default>
+                <label>CCS Bonus</label>
+            </value>
+            <value>
+                <fullName>CCS Bonus+</fullName>
+                <default>false</default>
+                <label>CCS Bonus+</label>
+            </value>
+            <value>
+                <fullName>CCS Bonus Fleet</fullName>
+                <default>false</default>
+                <label>CCS Bonus Fleet</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet</fullName>
+                <default>false</default>
+                <label>CCS Carnet</label>
+            </value>
+            <value>
+                <fullName>CCS Limit</fullName>
+                <default>false</default>
+                <label>CCS Limit</label>
+            </value>
+            <value>
+                <fullName>CCS Limit+</fullName>
+                <default>false</default>
+                <label>CCS Limit+</label>
+            </value>
+            <value>
+                <fullName>CCS Limit+ mini</fullName>
+                <default>false</default>
+                <label>CCS Limit+ mini</label>
+            </value>
+            <value>
+                <fullName>CCS Toll</fullName>
+                <default>false</default>
+                <label>CCS Toll</label>
+            </value>
+            <value>
+                <fullName>CCS Trucks</fullName>
+                <default>false</default>
+                <label>CCS Trucks</label>
+            </value>
+            <value>
+                <fullName>UTA/CCS</fullName>
+                <default>false</default>
+                <label>UTA/CCS</label>
+            </value>
+            <value>
+                <fullName>CCS Limit M4</fullName>
+                <default>false</default>
+                <label>CCS Limit M4</label>
+            </value>
+            <value>
+                <fullName>CCS Limit PRIM</fullName>
+                <default>false</default>
+                <label>CCS Limit PRIM</label>
+            </value>
+            <value>
+                <fullName>CCS Limit NP</fullName>
+                <default>false</default>
+                <label>CCS Limit NP</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet NP</fullName>
+                <default>false</default>
+                <label>CCS Carnet NP</label>
+            </value>
+            <value>
+                <fullName>CCS_Handy Card</fullName>
+                <default>false</default>
+                <label>CCS Handy Card</label>
+            </value>
+            <value>
+                <fullName>CCS LIMIT Exclusive</fullName>
+                <default>false</default>
+                <label>CCS LIMIT Exclusive</label>
+            </value>
+            <value>
+                <fullName>E-shop</fullName>
+                <default>false</default>
+                <label>E-shop</label>
+            </value>
+            <value>
+                <fullName>ERV insurance</fullName>
+                <default>false</default>
+                <label>ERV insurance</label>
+            </value>
+            <value>
+                <fullName>OMV</fullName>
+                <default>false</default>
+                <label>OMV</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

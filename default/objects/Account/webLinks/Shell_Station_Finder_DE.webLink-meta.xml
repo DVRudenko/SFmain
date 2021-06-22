@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shell_Station_Finder_DE</fullName>
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <hasMenubar>false</hasMenubar>
+    <hasScrollbars>true</hasScrollbars>
+    <hasToolbar>false</hasToolbar>
+    <height>600</height>
+    <isResizable>true</isResizable>
+    <linkType>url</linkType>
+    <masterLabel>Shell Station Finder (DE)</masterLabel>
+    <openType>newWindow</openType>
+    <position>none</position>
+    <protected>false</protected>
+    <showsLocation>false</showsLocation>
+    <showsStatus>false</showsStatus>
+    <url>http://www.shell.de/products-services/solutions-for-businesses/shell-fuel-card-for-businesses-tpkg/network-and-fuels/shell-station-locator.html#iframe-Lz9jb3VudHJ5PURFJmxhbmd1YWdlPWRlX0RFJnNpdGU9Y2YvP2NvdW50cnk9REUmbGFuZ3VhZ2U9ZGVfREUmc2l0ZT1jZiZtb2Rlc2VsZWN0ZWQ9dHJ1ZQ==</url>
+</WebLink>

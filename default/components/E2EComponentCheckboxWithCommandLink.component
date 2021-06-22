@@ -1,0 +1,121 @@
+<!--
+ - Created by Kirill.Abanin on 09.08.2018.
+ -->
+
+<apex:component id="E2EComponentCheckboxWithCommandLink">
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map" />
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="" />
+
+    <apex:attribute name="className"
+                    type="String"
+                    description="class name" />
+
+    <apex:attribute name="firstTextPart"
+                    type="String"
+                    description="value of label" />
+
+    <apex:attribute name="secondTextLinkPart"
+                    type="String"
+                    description="value of label" />
+
+    <apex:attribute name="thirdTextPart"
+                    type="String"
+                    description="value of label" />
+
+    <apex:attribute name="onclick"
+                    type="String"
+                    description="js event on button click" />
+
+    <apex:attribute name="reRenderList"
+                    type="String"
+                    description="list IDs for rerender divide by ','" />
+
+    <apex:attribute name="status"
+                    type="String"
+                    description="The controller for the page." />
+
+    <apex:attribute name="errorClass"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="jsTooltips"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="jsTooltipsText"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="blockClass"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="validationClass"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="bottomDivClass"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="actionFunctionClass"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="actionFunctionValue"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="actionFunctionValueSecond"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="onClick"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="onComplete"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="actionMethod"
+                    type="String"
+                    description="input class" />
+                    
+    <apex:attribute name="target"
+                    type="String"
+                    description="target" />
+    <apex:attribute name="targetSecond"
+                    type="String"
+                    description="target second" />
+
+    <div class="{! IF(blockClass == null, '', blockClass) }"> <!--block__inputs-->
+        <div class="{! IF(validationClass == null, '', validationClass) }"> <!--block_checkbox validations-->
+            <div class="{! IF(bottomDivClass == null, '', bottomDivClass) }"> <!--df-->
+                <apex:inputCheckbox styleClass="{!className}"
+                                    value="{! pageMap[field].elementItemsMap['DEFAULT VALUE'].value}" />
+                <apex:outputPanel layout="block" styleClass="fake__checkbox" />
+                <apex:outputPanel layout="block" styleClass="fake__checkbox-text" >
+                    <apex:outputPanel styleClass="fake__checkbox-text" rendered="{!IF(firstTextPart != null, TRUE, FALSE)}" >{!firstTextPart}</apex:outputPanel>
+                    <apex:outputPanel styleClass="fake__checkbox-text" rendered="{!IF(actionFunctionValue != null, TRUE, FALSE)}" >
+          
+                        <a class="modal-pointer" data-toggle="modal" data-target="#{! target }">{! IF(actionFunctionValue == null, '', actionFunctionValue)}</a>
+                        
+                    </apex:outputPanel>
+                    <apex:outputPanel styleClass="fake__checkbox-text" rendered="{!IF(actionFunctionValueSecond != null, TRUE, FALSE)}" >
+
+                        <a class="modal-pointer" data-toggle="modal" data-target="#{! targetSecond }">{! IF(actionFunctionValueSecond == null, '', actionFunctionValueSecond)}</a>
+
+                    </apex:outputPanel>
+                    <apex:outputPanel styleClass="fake__checkbox-text" rendered="{!IF(thirdTextPart != null, TRUE, FALSE)}" > {!thirdTextPart}</apex:outputPanel>
+                </apex:outputPanel>
+            </div>
+            <div class="{! IF(errorClass == null, 'notError', errorClass)}">{!IF(errorClass == null, '', pageMap[field].elementItemsMap['WARN MESSAGE'].value )}</div>
+        </div>
+    </div>
+</apex:component>

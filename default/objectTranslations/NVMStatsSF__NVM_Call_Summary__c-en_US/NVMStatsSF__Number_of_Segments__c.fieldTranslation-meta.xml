@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicates complexity of inbound interactions by counting discrete Key events for this summarised Call or Case (Key events include Queue, Talk, Hold, Retrieve, Transfer, Message, Recording, End). --></help>
+    <label><!-- Number of Segments --></label>
+    <name>NVMStatsSF__Number_of_Segments__c</name>
+</CustomFieldTranslation>

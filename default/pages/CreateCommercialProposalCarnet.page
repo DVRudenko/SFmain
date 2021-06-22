@@ -1,0 +1,53 @@
+<apex:page controller="CreateCommercialProposalCarnetController" action="{!init}">
+  
+<style type="text/css">
+body {
+font-family: Arial; 
+size: 12pt;
+width: 100%;
+}
+
+table {
+width: 100%;
+}
+</style>
+
+  <apex:pageBlock title="Angebot Carnet PL" id="block1">
+    <apex:form >
+    <apex:pageMessages escape="false"/>
+    <apex:commandButton value="Go Back" action="{!cancel}"/>
+    <apex:outputpanel rendered="{!isntValid}">
+          <apex:commandButton value="Save PDF" action="{!savePDF}"/>
+          <apex:commandButton value="Send Email with PDF" action="{!sendEmail}"/>
+      <apex:pageBlockSection title="Details">
+          <apex:outputText id="oppName" value="{!opportunity.Name}"/>
+          <apex:outputText id="contactName" value="{!contact.Name}"/>
+          <!--<apex:outputLabel value="Subject"/>
+          <apex:inputText id="emailSubject" value="{!emailSubject}"/>-->
+          <apex:outputText id="userEmail" value="{!user.Email}" label="Salesperson's Email"/>
+          <apex:outputText id="contactEmail" value="{!contact.Email}"/>
+          <!--<apex:commandButton value="Preview E-mail" action="{!controllerMethod}" rerender="jobPanel"/>-->
+      </apex:pageBlockSection>
+    </apex:outputpanel>
+    </apex:form>
+
+   <apex:outputpanel rendered="{!isntValid}">
+      <apex:pageBlockSection title="Preview PDF" id="section3">
+          <apex:form >
+              <apex:iframe width="1000px" src="/apex/OpportunityCreateCommercialCarnetPDF?id={!opportunity.Id}" />
+          </apex:form>
+      </apex:pageBlockSection>
+
+      <apex:pageBlockSection title="Preview E-mail" id="section4">
+          <apex:form >
+                <apex:pageBlockSection >
+                    <apex:pageblockSectionItem >
+                        <apex:outputText value="{!myText}" escape="false"/>
+                    </apex:pageblockSectionItem>
+                </apex:pageBlockSection>
+          </apex:form>
+      </apex:pageBlockSection>
+   </apex:outputpanel>
+
+  </apex:pageBlock>
+</apex:page>

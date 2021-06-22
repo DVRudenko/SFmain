@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total State Time for this Agent Day rounded to the nearest minute --></help>
+    <label><!-- Total State Time (hh:mm) --></label>
+    <name>NVMStatsSF__Logged_in_Time_hh_mm_ss__c</name>
+</CustomFieldTranslation>

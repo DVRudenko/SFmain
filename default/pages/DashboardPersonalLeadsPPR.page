@@ -1,0 +1,138 @@
+<!--
+ - Created by Nikita.Dayanov on 02.07.2018. -
+ -->
+
+<apex:page id="DashboardPersonalLeadsPPR" controller="DashboardPersonalLeadsPPRCtrl" action="{!init}" sideBar="false"
+           showHeader="false">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+
+
+    <apex:pageBlock >
+        <apex:outputPanel >
+            <apex:outputPanel >
+                <h1>{!$Label.RU_0072_PersonalLeadsHeader}</h1>
+            </apex:outputPanel>
+            <apex:outputPanel layout="block" style="text-align: right;">
+                <apex:outputLink value="/apex/DashboardContactedLeadReportPPR?userid={! userId }" target="_blank"
+                                 id="theLink" style="font-size:12pt">{!$Label.RU_0073_PersonalLeadsReport}</apex:outputLink>
+                <!--{!$Label.myLabel}-->
+            </apex:outputPanel>
+        </apex:outputPanel>
+
+        <apex:outputPanel >
+            <apex:outputPanel layout="block">
+                <div id="salesleadspersonal" style="width: 100%; float: left; height: 550px"></div>
+            </apex:outputPanel>
+            <div style="clear: both;"></div>
+        </apex:outputPanel>
+    </apex:pageBlock>
+
+    <script>
+        j$ = jQuery.noConflict();
+
+        //
+        j$(function() {
+            if({!NumberOfLeadsOverdueTask} == 0 && {!NumberOfLeadsNoTask} == 0){
+                generateZeros()
+                return;
+            }
+            j$("#salesleadspersonal").highcharts({
+                chart:{
+                    type: 'pie'
+                },
+                title:{
+                    text: ''
+                },
+                exporting:{
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.y}</b>'
+                },
+                plotOptions:{
+
+                    pie: {
+                        showInLegend: true,
+                        dataLabels: {
+                            enabled: true,
+                            format: '{point.y}',
+                            distance: -40,
+                            x: 15,
+                            style: {
+                                color: 'white',
+                                fontSize: '17px',
+                                textShadow: false,
+
+                                //color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+
+                            }
+                        }
+                    }
+                },
+                series:[{
+                    //name: 'Всего',
+                    name: '{!$Label.RU_0074_PersonalLeadsTotal}',
+                    colorByPoint: true,
+                    data: [{
+                        // name: 'Интересы без открытых задач',
+                        name: '{!$Label.RU_0075_PersonalLeadsNoOpenTasks}',
+                        color: 'rgba(105,0,108,.9)',
+                        y: {!NumberOfLeadsNoTask} ,
+                        selected: true
+                    }, {
+                        // name: 'Интересы с просроченными задачами',
+                        name: '{!$Label.RU_0076_PersonalLeadsOverdueTasks}',
+                        color: 'rgba(197,16,88,1)',
+                        y: {!NumberOfLeadsOverdueTask},
+                        selected: true
+                    }]
+                }]
+            });
+        });
+
+        function generateZeros(){
+            j$('#salesleadspersonal').append('<div id="zero-zero"></div>')
+
+                j$( "#zero-zero" ).css({
+                    "width": "40px",
+                    "height": "45px",
+                    "border-top-left-radius": "50px",
+                    "border-top-right-radius": "50px",
+                    "border": "7px solid gray",
+                    "border-color": "#69006C",
+                    "border-bottom": "0",
+                    "position": "absolute",
+                    "top": "36%",
+                    "left": "30%"
+                });
+
+                j$('#salesleadspersonal').append('<div id="zero-hero"></div>')
+                j$( "#zero-hero" ).css({
+                    "width": "40px",
+                    "height": "45px",
+                    "border-bottom-left-radius": "50px",
+                    "border-bottom-right-radius": "50px",
+                    "border": "7px solid gray",
+                    "border-color": "#C51058",
+                    "border-top": "0",
+                    "position": "absolute",
+                    "top": "45%",
+                    "left": "30%"
+                });
+                // j$('#salesleadspersonal').append('<p id="zero-intr">интересов</p>')
+                j$('#salesleadspersonal').append('<p id="zero-intr">{!$Label.RU_0077_PersonalLeadsR}</p>')
+                j$( "#zero-intr" ).css({
+                    "font-size": "40px",
+                    "position": "absolute",
+                    "top": "40%",
+                    "left": "40%"
+                });
+        }
+    </script>
+
+</apex:page>

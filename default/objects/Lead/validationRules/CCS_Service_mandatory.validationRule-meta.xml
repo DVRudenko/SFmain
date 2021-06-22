@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Service_mandatory</fullName>
+    <active>true</active>
+    <description>If Quali_Status__c = "Other", then Service_Sonstiges_specific__c is mandatory.</description>
+    <errorConditionFormula>AND(
+CONTAINS($Profile.Name, "CCS"),
+ISPICKVAL(Quali_Status__c,"Other"),
+ISBLANK(Service_Sonstiges_specific__c))</errorConditionFormula>
+    <errorDisplayField>Service_Sonstiges_specific__c</errorDisplayField>
+    <errorMessage>Please enter a reason.</errorMessage>
+</ValidationRule>

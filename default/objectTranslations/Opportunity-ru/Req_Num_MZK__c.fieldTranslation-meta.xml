@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Номер заявки в Модуле Заказа Карт --></help>
+    <label><!-- Request number MZK --></label>
+    <name>Req_Num_MZK__c</name>
+</CustomFieldTranslation>

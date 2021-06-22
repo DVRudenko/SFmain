@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMContactWorld__Customer_Number__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The customer number.  In the case of an inbound call this will be the calling line id.  For an outbound this will be the number that the agnet has called.</description>
+    <externalId>false</externalId>
+    <label>Customer Number</label>
+    <required>false</required>
+    <type>Phone</type>
+</CustomField>

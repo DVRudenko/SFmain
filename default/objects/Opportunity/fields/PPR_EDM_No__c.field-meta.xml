@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_EDM_No__c</fullName>
+    <externalId>false</externalId>
+    <label>PPR EDM No</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Не использует ЭДО</fullName>
+                <default>false</default>
+                <label>Не использует ЭДО</label>
+            </value>
+            <value>
+                <fullName>Не подходит наш оператор</fullName>
+                <default>false</default>
+                <label>Не подходит наш оператор</label>
+            </value>
+            <value>
+                <fullName>Не готов сейчас подключать</fullName>
+                <default>false</default>
+                <label>Не готов сейчас подключать</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

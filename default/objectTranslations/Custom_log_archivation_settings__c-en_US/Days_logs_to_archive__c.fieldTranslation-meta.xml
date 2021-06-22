@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of days to pass logs to be archived --></help>
+    <label><!-- Days logs to archive --></label>
+    <name>Days_logs_to_archive__c</name>
+</CustomFieldTranslation>

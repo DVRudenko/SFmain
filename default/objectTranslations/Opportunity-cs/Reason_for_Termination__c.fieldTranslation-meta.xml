@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Reason why Customer wants to terminate his contract with FLEETCOR --></help>
+    <label><!-- Reason for Termination --></label>
+    <name>Reason_for_Termination__c</name>
+    <picklistValues>
+        <masterLabel>Better offer from competitor</masterLabel>
+        <translation><!-- Better offer from competitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed by credit</masterLabel>
+        <translation><!-- Closed by credit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer does not accept T&amp;Cs</masterLabel>
+        <translation><!-- Customer does not accept T&amp;Cs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer never ordered Cards</masterLabel>
+        <translation><!-- Customer never ordered Cards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Discount</masterLabel>
+        <translation><!-- Discount --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fees</masterLabel>
+        <translation><!-- Fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect information on the Card</masterLabel>
+        <translation><!-- Incorrect information on the Card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect product category</masterLabel>
+        <translation><!-- Incorrect product category --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network</masterLabel>
+        <translation><!-- Network --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

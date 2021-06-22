@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELM_Training_Status__c</fullName>
+    <description>By the Billing Call, training has to have been offered by the ELM rep. This field allows tracking on whether new customer training has been completed.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>By the Billing Call, training has to have been offered by the ELM rep. This field allows tracking on whether new customer training has been completed</inlineHelpText>
+    <label>CCS ELM Training Status</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Trained on Welcome Call</fullName>
+                <default>false</default>
+                <label>Trained on Welcome Call</label>
+            </value>
+            <value>
+                <fullName>Trainined on Billing Call</fullName>
+                <default>false</default>
+                <label>Trainined on Billing Call</label>
+            </value>
+            <value>
+                <fullName>Training Declined</fullName>
+                <default>false</default>
+                <label>Training Declined</label>
+            </value>
+            <value>
+                <fullName>Training Rescheduled</fullName>
+                <default>false</default>
+                <label>Training Rescheduled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

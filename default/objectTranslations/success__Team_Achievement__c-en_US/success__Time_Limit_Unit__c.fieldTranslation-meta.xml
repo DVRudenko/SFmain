@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The unit of time applied to the value entered in &apos;Time Limit&apos; --></help>
+    <label><!-- DEPRECATE - Time Limit Unit --></label>
+    <name>success__Time_Limit_Unit__c</name>
+    <picklistValues>
+        <masterLabel>days</masterLabel>
+        <translation><!-- days --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>months</masterLabel>
+        <translation><!-- months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>quarters</masterLabel>
+        <translation><!-- quarters --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>weeks</masterLabel>
+        <translation><!-- weeks --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

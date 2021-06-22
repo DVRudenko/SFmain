@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Velikost společnosti dle počtu zaměstnanců. Nová hodnota, která by měla do budoucna nahradit pole Zaměstnanci*</help>
+    <label>Velikost společnosti</label>
+    <name>Company_Size__c</name>
+    <picklistValues>
+        <masterLabel>Corporate (50-249)</masterLabel>
+        <translation><!-- Corporate (50-249) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Information not available</masterLabel>
+        <translation><!-- Information not available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medium (20-49)</masterLabel>
+        <translation><!-- Medium (20-49) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Micro (1-9)</masterLabel>
+        <translation><!-- Micro (1-9) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Small (10-19)</masterLabel>
+        <translation><!-- Small (10-19) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Strategic (250+)</masterLabel>
+        <translation><!-- Strategic (250+) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

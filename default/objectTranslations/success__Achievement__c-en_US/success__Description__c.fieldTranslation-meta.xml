@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Visible to the player this field should be used to describe both the purpose of the base behaviour and the criteria required to earn the associated reward --></help>
+    <label><!-- Description --></label>
+    <name>success__Description__c</name>
+</CustomFieldTranslation>

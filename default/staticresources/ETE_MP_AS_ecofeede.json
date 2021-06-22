@@ -1,0 +1,18 @@
+{
+	"translations": {
+		"title": {
+			"en": "Clean Advantage programm",
+			"de": "Clean Advantage Programm"
+		},
+		"description": {
+			"en": "<p>Help us to reduce CO2 emissions by supporting environmental projects by investing just 1% of your transactions amount.</p><p>FLEETCOR reduces carbon dioxide emissions by investing in planting new trees, generating alternative energy sources and supporting other environmental projects.</p>",
+			"de": "<p>Nur gemeinsam können wir zur Reduzierung von Emissionen beitragen! Daher stellen wir Ihnen das Programm Clean Advantage zur Verfügung, dass sich mit klimaneutralem Fahren beschäftigt. Werden Sie Teil dieses Herzens-Projekts und schützen Sie mit jedem gefahrenen Meter aktiv unseren Planeten!</p><p>Dank dieses Umwelt-Programms spenden Sie automatisch 1% Ihrer Tankrechnung an Umweltschutz-Projekte. Dabei helfen Sie aktiv Klimakatastrophen vorzubeugen.</p>"
+		}
+	},
+	"settings": {
+		"bgImage": "/resource/ete_images/bgInfoCardFirst.png",
+		"show_more": "false",
+		"show_checkbox_1": "false",
+		"show_checkbox_2": "false"
+	}
+}

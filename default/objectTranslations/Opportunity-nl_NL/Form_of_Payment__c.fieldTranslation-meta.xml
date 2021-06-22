@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Order Payment Method --></label>
+    <name>Form_of_Payment__c</name>
+    <picklistValues>
+        <masterLabel>Bank Transfer - after delivery</masterLabel>
+        <translation><!-- Bank Transfer - after delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deposit</masterLabel>
+        <translation><!-- Deposit --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

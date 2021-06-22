@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Graphics images will be place on coloured tiles if a colour is defined using a six digit hexadecimal format (e.g. #FFCC00) --></help>
+    <label><!-- Background Colour --></label>
+    <name>success__Background_Colour__c</name>
+</CustomFieldTranslation>

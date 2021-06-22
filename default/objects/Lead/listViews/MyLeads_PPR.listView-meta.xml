@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyLeads_PPR</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>LEAD.LAST_UPDATE</columns>
+    <columns>Promo_Code1__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>Мои Интересы</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinates>PPR_Fleetcor</roleAndSubordinates>
+    </sharedTo>
+</ListView>

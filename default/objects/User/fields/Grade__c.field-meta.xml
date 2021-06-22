@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Grade__c</fullName>
+    <externalId>false</externalId>
+    <label>Grade</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not a sales</fullName>
+                <default>false</default>
+                <label>Not a sales</label>
+            </value>
+            <value>
+                <fullName>Sales consultant</fullName>
+                <default>false</default>
+                <label>Sales consultant</label>
+            </value>
+            <value>
+                <fullName>Senior consultant</fullName>
+                <default>false</default>
+                <label>Senior consultant</label>
+            </value>
+            <value>
+                <fullName>Top consultant</fullName>
+                <default>false</default>
+                <label>Top consultant</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Product *</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Sec_Channel__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>BE-FR 2,5 Cent</fullName>
+                <default>false</default>
+                <label>BE-FR 2,5 Cent</label>
+            </value>
+            <value>
+                <fullName>Carnet OBD</fullName>
+                <default>false</default>
+                <label>Carnet OBD</label>
+            </value>
+            <value>
+                <fullName>Carnet Standard 2019</fullName>
+                <default>false</default>
+                <label>Carnet Standard 2019</label>
+            </value>
+            <value>
+                <fullName>Fuel Vehicle</fullName>
+                <default>false</default>
+                <label>Fuel Vehicle</label>
+            </value>
+            <value>
+                <fullName>HOME 1</fullName>
+                <default>false</default>
+                <label>HOME 1</label>
+            </value>
+            <value>
+                <fullName>Home Station offer (v.1)</fullName>
+                <default>false</default>
+                <label>Home Station offer (v.1)</label>
+            </value>
+            <value>
+                <fullName>Inbound Typ B</fullName>
+                <default>false</default>
+                <label>Inbound Typ B</label>
+            </value>
+            <value>
+                <fullName>Inbound Typ C</fullName>
+                <default>false</default>
+                <label>Inbound Typ C</label>
+            </value>
+            <value>
+                <fullName>LOCAL - RED</fullName>
+                <default>false</default>
+                <label>LOCAL - RED</label>
+            </value>
+            <value>
+                <fullName>LOCAL - YELLOW</fullName>
+                <default>false</default>
+                <label>LOCAL - YELLOW</label>
+            </value>
+            <value>
+                <fullName>LOTOS Biznes No fee</fullName>
+                <default>false</default>
+                <label>LOTOS Biznes No fee</label>
+            </value>
+            <value>
+                <fullName>LOTOS Biznes Standard</fullName>
+                <default>false</default>
+                <label>LOTOS Biznes Standard</label>
+            </value>
+            <value>
+                <fullName>Platin</fullName>
+                <default>false</default>
+                <label>Platin</label>
+            </value>
+            <value>
+                <fullName>Sales no fee promo Feb 2016</fullName>
+                <default>false</default>
+                <label>Sales no fee promo Feb 2016</label>
+            </value>
+            <value>
+                <fullName>Shell Basic 2020</fullName>
+                <default>false</default>
+                <label>Shell Basic 2020</label>
+            </value>
+            <value>
+                <fullName>Shell No fee 2020</fullName>
+                <default>false</default>
+                <label>Shell No fee 2020</label>
+            </value>
+            <value>
+                <fullName>Shell Outbound 2020</fullName>
+                <default>false</default>
+                <label>Shell Outbound 2020</label>
+            </value>
+            <value>
+                <fullName>Shell Universal Card</fullName>
+                <default>false</default>
+                <label>Shell Universal Card</label>
+            </value>
+            <value>
+                <fullName>Smart</fullName>
+                <default>false</default>
+                <label>Smart</label>
+            </value>
+            <value>
+                <fullName>SME (BNF 0,025 € + % fee)</fullName>
+                <default>false</default>
+                <label>SME (BNF 0,025 € + % fee)</label>
+            </value>
+            <value>
+                <fullName>SME (BNF 0,025 € + fixed fee)</fullName>
+                <default>false</default>
+                <label>SME (BNF 0,025 € + fixed fee)</label>
+            </value>
+            <value>
+                <fullName>Sonderangebot (s. Notizen)</fullName>
+                <default>false</default>
+                <label>Sonderangebot (s. Notizen)</label>
+            </value>
+            <value>
+                <fullName>Swiss Pro</fullName>
+                <default>false</default>
+                <label>Swiss Pro</label>
+            </value>
+            <value>
+                <fullName>Swiss Pro 5</fullName>
+                <default>false</default>
+                <label>Swiss Pro 5</label>
+            </value>
+            <value>
+                <fullName>Swiss Star</fullName>
+                <default>false</default>
+                <label>Swiss Star</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Field</controllingFieldValue>
+            <valueName>Carnet OBD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Field</controllingFieldValue>
+            <valueName>Carnet Standard 2019</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <valueName>HOME 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Home Station offer (v.1)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Inbound Typ B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Inbound Typ C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Field</controllingFieldValue>
+            <valueName>LOTOS Biznes No fee</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Field</controllingFieldValue>
+            <valueName>LOTOS Biznes Standard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <valueName>Platin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Field</controllingFieldValue>
+            <valueName>Sales no fee promo Feb 2016</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Field</controllingFieldValue>
+            <valueName>Shell Basic 2020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Field</controllingFieldValue>
+            <valueName>Shell No fee 2020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Field</controllingFieldValue>
+            <valueName>Shell Outbound 2020</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Field</controllingFieldValue>
+            <valueName>Shell Universal Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <valueName>Smart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <valueName>SME (BNF 0,025 € + % fee)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <valueName>SME (BNF 0,025 € + fixed fee)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Field</controllingFieldValue>
+            <valueName>Sonderangebot (s. Notizen)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Field</controllingFieldValue>
+            <valueName>Swiss Pro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <valueName>Swiss Pro 5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JITB</controllingFieldValue>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Field</controllingFieldValue>
+            <valueName>Swiss Star</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inbound</controllingFieldValue>
+            <controllingFieldValue>Outbound</controllingFieldValue>
+            <valueName>Fuel Vehicle</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

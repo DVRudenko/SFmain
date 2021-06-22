@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__Recipient_Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The last status reported by the DocuSign System for this recipient</description>
+    <externalId>false</externalId>
+    <label>Recipient Status</label>
+    <length>50</length>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

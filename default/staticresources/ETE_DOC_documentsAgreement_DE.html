@@ -1,0 +1,141 @@
+<style>
+    .documents-agreement {
+        font-size: 11px;
+    }
+
+    .documents-agreement__underline {
+        border-bottom: 1px solid rgb(116, 116, 116);
+    }
+
+    .documents-agreement__title-item {
+        margin: 0 0 12px 0;
+        padding: 0 0 12px 0;
+    }
+
+
+    .documents-agreement__title-item div {
+        width: 35%;
+        display: inline-block;
+    }
+
+    .documents-agreement__item {
+        margin: 0 0 12px 0;
+    }
+
+    .documents-agreement__item div {
+        width: 48%;
+        display: inline-block;
+    }
+
+    .documents-agreement__item div p {
+        height: 20px;
+    }
+
+    .documents-agreement__item-last {
+        margin-left: 3%;
+    }
+
+    p {
+        margin: 0;
+    }
+</style>
+
+<div class="documents-agreement">
+    <div style="text-align: right;">
+        <p>SEPA-Firmenlastschrift Mandat</p>
+        <p>Wiederkehrende Zahlung</p>
+    </div>
+    <div class="documents-agreement__title-item documents-agreement__underline"
+         style="padding: 0 0 12px 0;">
+        <div>
+            <p>Name des Zahlungsempfängers:</p>
+            <p>Straße und Hausnummer:</p>
+            <p>Postleitzahl, Ort:</p>
+            <p>Land:</p>
+            <p>Gläubiger-Identifikationsnummer:</p>
+        </div>
+        <div>
+            <p>FLEETCOR Deutschland GmbH</p>
+            <p>Frankenstraße 150 c</p>
+            <p>90461 Nürnberg</p>
+            <p>Deutschland</p>
+            <p>DE 33 ZZZ00001436721</p>
+        </div>
+    </div>
+
+    <div style="margin: 0 0 12px 0;">
+        Ich ermächtige/ Wir ermächtigen (A) FLEETCOR Deutschland GmbH, Zahlungen von meinem/ unserem Konto mittels
+        Lastschrift einzuziehen.
+        Zugleich (B) weise ich mein/ weisen wir unser Kreditinstitut an, die von FLEETCOR Deutschland GmbH auf mein/
+        unser Konto gezogenen Lastschriften einzulösen.
+    </div>
+    <div style="margin: 0 0 12px 0;">
+        Hinweis: Dieses Lastschriftmandat dient nur dem Einzug von Lastschriften, die auf Konten von Unternehmern
+        gezogen sind.
+        Ich bin/ Wir sind nicht berechtigt, nach der erfolgten Einlösung eine Erstattung des belasteten Betrages zu
+        verlangen.
+        Ich bin/ Wir sind berechtigt, mein/ unser Kreditinstitut bis zum Fälligkeitstag anzuweisen, Lastschriften nicht
+        einzulösen.
+    </div>
+    <div style="margin: 0 0 12px 0; padding: 0 0 24px 0;"
+         class="documents-agreement__underline">
+        <p>Mandatsreferenz: vom Zahlungsempfänger auszufüllen</p>
+        <div class="documents-agreement__item">
+            <div>
+                <p class="documents-agreement__underline">{!umr}</p>
+            </div>
+        </div>
+    </div>
+
+    <p style="margin: 0 0 12px 0;">Identifikation des Zahlungspflichtigen:vom Zahlungspflichtigen auszufüllen</p>
+
+    <div class="documents-agreement__item">
+        <div>
+            <p class="documents-agreement__underline">{!dataObject.Selected_Company_Name__c}</p>
+            <p>Firmenname</p>
+        </div>
+        <div class="documents-agreement__item-last">
+            <p class="documents-agreement__underline">{!dataObject.Registered_Street__c} </p>
+            <p>Straße und Hausnummer</p>
+        </div>
+    </div>
+
+    <div class="documents-agreement__item">
+        <div>
+            <p class="documents-agreement__underline">{!dataObject.Registered_Postal_Code__c}
+                {!dataObject.Registered_City__c}</p>
+            <p>Postleitzahl und Ort</p>
+        </div>
+        <div class="documents-agreement__item-last">
+            <p class="documents-agreement__underline">{!dataObject.Account_Holder__c}</p>
+            <p>Kontoinhaber</p>
+        </div>
+    </div>
+
+    <div class="documents-agreement__item">
+        <div>
+            <p class="documents-agreement__underline">{!dataObject.IBAN__c}</p>
+            <p>IBAN</p>
+        </div>
+        <div class="documents-agreement__item-last">
+            <p class="documents-agreement__underline">{!dataObject.SWIFT__c}</p>
+            <p>BIC</p>
+        </div>
+    </div>
+
+    <div class="documents-agreement__item">
+        <div>
+            <p class="documents-agreement__underline">{!today} {!dataObject.Registered_City__c}</p>
+            <p>Datum, Ort und Unterschrift</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 48px;">
+        Bitte beachten Sie, dass dieses Formular bei Ihrer Bank vorgelegt werden muss.Sonst kann die Abbuchung von
+        Ihrem Konto nicht durchgeführt werde
+    </div>
+    <div style="text-align: center; color: rgb(116, 116, 116);">
+        FLEETCOR Deutschland GmbH | Frankenstraße 150c | 90461 Nürnberg | DeutschlandHRB: 98382 Amtsgericht Frankfurt /
+        Main | USt-IdNr. DE295190231 | Geschäftsführer: Anita Kravos-Medimorec, Michael de Groot
+    </div>
+</div>

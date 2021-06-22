@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Black_list_check_decision__c</fullName>
+    <description>Решение проверки по черному листу в кредитной фабрике</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Решение проверки по черному листу в кредитной фабрике</inlineHelpText>
+    <label>Black list decision</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OK</fullName>
+                <default>false</default>
+                <label>OK</label>
+            </value>
+            <value>
+                <fullName>RMD approval</fullName>
+                <default>false</default>
+                <label>RMD approval</label>
+            </value>
+            <value>
+                <fullName>Denied</fullName>
+                <default>false</default>
+                <label>Denied</label>
+            </value>
+            <value>
+                <fullName>Reseller approval</fullName>
+                <default>false</default>
+                <label>Reseller approval</label>
+            </value>
+            <value>
+                <fullName>No data</fullName>
+                <default>false</default>
+                <label>No data</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

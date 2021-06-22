@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Day__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>CASE( MOD(   DATEVALUE(success__Last_Updated_Date_Time__c)   - DATE(1900, 1, 7), 7), 0,  $Label.success__sunday , 1, $Label.success__monday , 2, $Label.success__tuesday, 3,
+$Label.success__wednesday, 4, $Label.success__thursday, 5, $Label.success__friday, 6, $Label.success__saturday, &#39;Error&#39;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The day of the week that the reward was awarded</inlineHelpText>
+    <label>Day</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

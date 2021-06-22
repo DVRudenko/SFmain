@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Valid_INN_IS_not_NUMBER</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+            AND(
+            RecordType.Name = "Russian" ,
+            CONTAINS( $Profile.Name , "Russian"),
+NOT(ISCHANGED( Rating_FS_Penalty__c)),
+NOT(ISCHANGED( PenaltyScoringRu__c )),
+NOT(ISCHANGED( Account_Status__c)),
+NOT(ISCHANGED( ColCo__c)),
+NOT(ISCHANGED( GFN_Nr__c)),
+NOT(ISCHANGED( Vouchers_Sent__c)),
+            NOT(ISBLANK(INN__c )),
+            OR(
+            CONTAINS(INN__c , "."),
+            CONTAINS(INN__c , "+"),
+            CONTAINS(INN__c , "-"),
+            NOT(ISNUMBER(INN__c)))),
+            true ,false)</errorConditionFormula>
+    <errorDisplayField>INN__c</errorDisplayField>
+    <errorMessage>ERROR: ACCT003.INN must contain only numbers!</errorMessage>
+</ValidationRule>

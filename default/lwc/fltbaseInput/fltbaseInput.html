@@ -1,0 +1,25 @@
+<template>
+    <div class={computedComponentClass} onclick={handleClick}>
+        <div class={computedBlockClass}>
+            <p class={computedLabelClass}>{label}</p>
+            <input
+                type={type}
+                class={computedInputClass}
+                onfocus={handleFocus}
+                onblur={handleBlur}
+                oninput={handleInput}
+                name={inputName}
+                maxlength={maxLength}
+                onclick={handleClick}
+                autocomplete={autocomplete}
+            />
+        </div>
+        <slot>
+            <span></span>
+        </slot>
+    </div>
+    <p class={computedErrorMessageClass} if:true={warning}>{warningMessage}</p>
+    <template if:false={warning}>
+        <p class={computedErrorMessageClass} if:true={errorMessage}>{errorMessage}</p>
+    </template>
+</template>

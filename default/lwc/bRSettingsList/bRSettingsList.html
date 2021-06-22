@@ -1,0 +1,81 @@
+<template>
+  <c-b-r-setting-modal-window
+    onclosemodal={handleCloseModal}
+    ondeleterecord={handleDelete}
+    is-modal-open={isModalOpen}
+  >
+  </c-b-r-setting-modal-window>
+  <lightning-card title={labels.BR_SETTINGS_LIST} variant="base" class="form" if:false={isHiddenBRSettingList}>
+    <lightning-button
+      variant="brand"
+      label={labels.BR_BUTTON_ADD_NEW_SETTING}
+      class="btn-add_new_setting"
+      onclick={handleAddNewBRSetting}
+      icon-position="right"
+      icon-name="utility:new"
+    >
+    </lightning-button>
+    <ul>
+      <template iterator:it={bRSettingsList.data}>
+        <li key={it.value.Id}>
+          <div class="row slds-box slds-text-heading_small">
+            <lightning-badge
+              label={it.index}
+              class="field small"
+            >
+            </lightning-badge>
+            <lightning-icon
+              if:true={it.value.Is_active__c}
+              icon-name="utility:success"
+              variant="success"
+              size="small"
+              alternative-text="enabled"
+              class="field"
+            >
+            </lightning-icon>
+            <lightning-icon
+              if:false={it.value.Is_active__c}
+              icon-name="utility:error"
+              variant="error"
+              size="small"
+              alternative-text="disabled"
+              class="field"
+            >
+            </lightning-icon>
+            <lightning-badge
+              label={it.value.Name}
+              class="field large"
+            >
+            </lightning-badge>
+            <lightning-button
+              variant="brand"
+              label={labels.BR_BUTTON_VIEW}
+              class="btn-view"
+              icon-name="utility:preview"
+              icon-position="right"
+              value={it.value.Id}
+              onclick={handleViewBRSetting}
+            >
+            </lightning-button>
+            <lightning-button
+              variant="destructive"
+              label={labels.DELETE_SETTING}
+              icon-name="utility:delete"
+              icon-position="right"
+              onclick={handleOpenModal}
+              value={it.value.Id}
+            >
+            </lightning-button>
+          </div>
+        </li>
+      </template>
+    </ul>
+  </lightning-card>
+  <template if:true= {showSettingPage}>
+    <c-b-r-settings-page
+      b-r-settings-data={bRSettingsData}
+      onback={handleBackBtn}
+    >
+    </c-b-r-settings-page>
+  </template>
+</template>

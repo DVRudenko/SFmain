@@ -1,0 +1,545 @@
+<aura:component controller="CTI_callInfoPanelController" implements="force:hasRecordId,flexipage:availableForAllPageTypes" access="global" description="CTI phone panel" >
+    <!--<ltng:require styles="{!$Resource.SLDS + '/assets/styles/salesforce-lightning-design-system.min.css'}"/>-->    
+    <ltng:require scripts="{!$Resource.SocketIO +'/SocketIO220.js'}" afterScriptsLoaded="{!c.afterSocketIOLoaded}" />
+    <ltng:require scripts="{!$Resource.OpenCTI +'/opencti.js'}" afterScriptsLoaded="{!c.afterOpenCTILoaded}"/>
+    <!--<lightning:empApi aura:id="empApi"/>-->
+
+    <aura:attribute name="userInfo" type="User"/> 
+    <aura:attribute name="agentId" type="String" description="Current Agent ID"/>
+    <aura:attribute name="agentInfo" type="String" description="Agent ID and extension string"/>
+    <aura:attribute name="agentName" type="String" description="Agent First and Last name string"/>
+    <aura:attribute name="state" type="String" description="Connection and operation state" default="Disconnected"/>
+    <aura:attribute name="phone" type="String" default="- - - - - - - - -" description="Inbound phone number"/>
+    <aura:attribute name="outboundPhone" type="String" description="Phone number in Calling tab dial pad input"/>
+
+    <aura:attribute name="callbackCallId" type="String" description="Callback ID"/>
+    <aura:attribute name="callbackExt" type="String" description="Callback extension"/>
+    <aura:attribute name="callbackReason" type="String" description="Callback retry reason"/>
+    <aura:attribute name="callbackInterval" type="String" description="Callback retry interval"/>
+    
+    <aura:attribute name="Log" type="String[]" description="Log events cache"/>
+    <aura:attribute name="ShowLog" type="String" description="Show log"/>
+    <aura:attribute name="SaveLog" type="String" description="Save log"/>
+    
+    <aura:attribute name="extension" type="String" description="Extension number in Team Status dial pad input"/>
+    <aura:attribute name="consultAgentName" type="String"/>
+    <aura:attribute name="departmentName" type="String" default="" description="Agent department name"/>
+    <aura:attribute name="selectedDepartmentName" type="String" default="" description="Selected department name"/>
+    <aura:attribute name="selectedAgentId" type="String" default="0" description="Selected agent id for Consult call"/>
+    <aura:attribute type="Object[]" name="agentsList"/>
+    <aura:attribute type="String[]" name="teamsList"/>
+    
+    <aura:attribute name="callType" type="String" description="Type or source of call"/>
+    <aura:attribute name="C2DObjectType" type="String" description="Object type name for ClickToDial"/>
+    <aura:attribute name="C2DRecordId" type="String" description="RecordId for ClickToDial"/>
+
+    <aura:attribute name="agentStatus" type="String" default="Not Set" description="Agent Status"/>
+
+    <aura:attribute name="statusAvatar" type="String" default="STATUS_ICON_OFFLINE"/>
+    <aura:attribute name="statusIcon" type="String" default="utility:question" />
+    <aura:attribute name="accountName" type="String"/>
+    <aura:attribute name="relatedAccountId" type="String"/>
+    <aura:attribute name="contactName" type="String"/>
+    <aura:attribute name="taskAccountName" type="String"/>
+    <aura:attribute name="currentTab" type="String" default="callingTabDataId"/>
+
+    <aura:attribute name="contactData" type="Map" default="{}"/>
+    <aura:attribute name="showContactData" type="Boolean"/>
+
+    <aura:attribute name="isHistoryOpened" type="Boolean"/>
+    <aura:attribute name="isC2DEnabled" type="Boolean"/>
+    <aura:attribute name="isOtherTeamOpened" type="Boolean"/>
+    <aura:attribute name="loginButtonName" type="String" default="Logoff"/>
+
+    <!-- button states -->
+    <aura:attribute name="callButtonLabel" type="String" default="Answer"/>
+    <aura:attribute name="callButtonDisabled" type="Boolean" default="true"/>    
+    
+    <aura:attribute name="holdButtonLabel" type="String" default="Hold"/>
+    <aura:attribute name="holdButtonDisabled" type="Boolean" default="true"/>
+
+    <aura:attribute name="hangupButtonDisabled" type="Boolean" default="true"/>
+
+    <aura:attribute name="dialPadDisabled" type="Boolean" default="false"/>
+
+    <aura:attribute name="consultExtButtonDisabled" type="Boolean" default="true"/>
+    <aura:attribute name="retrieveExtButtonDisabled" type="Boolean" default="true"/>
+    <aura:attribute name="transferExtButtonDisabled" type="Boolean" default="true"/>
+
+    <aura:attribute name="establishedCount" type="Integer" default="0"/>
+    <aura:attribute name="disconectedCount" type="Integer" default="0"/>
+
+
+    <!-- button states -->
+
+    <aura:registerEvent name="CTIinfoEvent" type="c:CTI_infoEvent"/>
+    <aura:handler name="CTIinfoEvent" event="c:CTI_infoEvent" action="{!c.handleCTIEvent}"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+
+     <div aura:id="measurement"></div>
+        <!-- FOR TEST -->
+        <!-- <lightning:button onclick="{!c.spam}">SPAM</lightning:button> -->
+        <!-- FOR TEST END -->
+        <article class="slds-card">
+        <!--STATUS BUTTONS START-->
+        <header class="slds-media slds-media_center slds-has-flexi-truncate">
+        
+            <div class="slds-card__header slds-grid ">
+                
+                <div class="slds-col slds-p-left_x-small slds-p-top_x-small">
+                    {!v.agentInfo +' Status: '}
+                    <span class="{!v.state == 'Logged Off' ? 'logged-off' : ''}">
+                        {!v.state}
+                    </span>
+                </div>
+
+                <div class="slds-col slds-size_1-of-8 slds-col_bump-left">
+
+                </div>
+
+                <div class="slds-col slds-align_absolute-center slds-p-left_none slds-p-right_x-small">
+                    <lightning:button aura:id="powerButton" label="{!v.loginButtonName}" onclick="{!c.handlePower}" disabled="true" class="{!v.loginButtonName == 'Login' ? 'login-button' : ''}"/>
+                </div>
+
+                <div class="slds-col slds-align_absolute-center slds-p-left_x-small slds-p-right_x-small">
+                    <ul class="slds-list_horizontal slds-clearfix slds-has-dividers_right slds-align_absolute-center">
+                        <li class="slds-item" dropzone="horizontalList item">
+                            <div class="canvas-element--inline">
+                                <div class="canvas-element" closertotopclass="canvas-element--closer-to-top">
+                                        
+                                    <div aura:id="statusDropdown" class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-close" onfocusout="{!c.closeStatusDropdown}">
+                                                <button aura:id="statusDropdownButton" class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="Show More" onclick="{!c.toggleSection}" data-auraId="statusDropdown" >
+                                                    <lightning:icon iconName="utility:down"
+                                                                                size="xx-small"
+                                                                                alternativeText="button icon" 
+                                                                                />
+                                                    <span class="slds-assistive-text" >Show More</span>
+                                                </button>
+                                                <div class="slds-dropdown slds-dropdown_left slds-dropdown_xx-small" >
+                                                    <ul class="slds-dropdown__list" role="menu">
+                                                        <li class="slds-dropdown__item" role="presentation" >
+                                                            <a id="statAvailableItem" href="javascript:void(0);" role="menuitem" tabindex="0" onclick="{!c.handleStatusMenuSelect}" >
+                                                                <span aura:id="statAvailableSpan" class="slds-truncate" title="Available" >
+                                                                    <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_AVAILABLE.png'}" initials="AC" alternativeText="status"/>  Available</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="slds-dropdown__item" role="presentation" >
+                                                                <a id="statBusyItem" href="javascript:void(0);" role="menuitem" tabindex="0" onclick="{!c.handleStatusMenuSelect}">
+                                                                    <span aura:id="statBusySpan" class="slds-truncate" title="Busy">
+                                                                        <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_BUSY.png'}" initials="AC" alternativeText="status"/>  Busy</span>
+                                                                </a>
+                                                        </li>
+                                                        <li class="slds-dropdown__item" role="presentation">
+                                                                <a id="statAwayItem" href="javascript:void(0);" role="menuitem" tabindex="0" onclick="{!c.handleStatusMenuSelect}">
+                                                                    <span aura:id="statAwaySpan" class="slds-truncate" title="Away" onclick="{!c.handleStatusMenuSelect}" data-value="3">
+                                                                        <lightning:avatar aura:id="statusAvatar" size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_AWAY.png'}" initials="AC" alternativeText="status"/>  Away</span>
+                                                                </a>
+                                                        </li>
+                                                        <li class="slds-dropdown__item" role="presentation">
+                                                                <a href="javascript:void(0);" role="menuitem" style="color: gainsboro;">
+                                                                    <span class="slds-truncate" title="On Call" >
+                                                                        <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_ONCALL.png'}" initials="AC" alternativeText="status"/>  On Call</span>
+                                                                </a>
+                                                        </li>
+                                                        <li class="slds-dropdown__item" role="presentation">
+                                                                <a href="javascript:void(0);" role="menuitem" style="color: gainsboro;">
+                                                                    <span class="slds-truncate" title="After Call" >
+                                                                        <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_AFTERCALL.png'}" initials="AC" alternativeText="status"/>  After Call</span>
+                                                                </a>
+                                                        </li>
+                                                        <li class="slds-dropdown__item" role="presentation">
+                                                                <a href="javascript:void(0);" role="menuitem" style="color: gainsboro;">
+                                                                    <span class="slds-truncate" title="LoggedOff" >
+                                                                        <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_OFFLINE.png'}" initials="AC" alternativeText="status"/>  LoggedOff</span>
+                                                                </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slds-item" dropzone="horizontalList item">
+                                <div class="canvas-element--inline">
+                                    <div class="canvas-element" closertotopclass="canvas-element--closer-to-top">
+                                            <lightning:avatar aura:id="statusAvatar" src="{!$Resource.CTI_Icons+'/'+v.statusAvatar+'.png'}" initials="AC" alternativeText="status"/>
+                                    </div>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--STATUS BUTTONS END-->
+
+    <div class="slds-card__body slds-card__body_inner">
+
+        <!--TABS SECTION START-->
+        <div class="slds-tabs_default">
+            <ul aura:id="TabPanelId" class="slds-tabs_default__nav" role="tablist">
+                <li aura:id="callingTabId" class="{! 'slds-tabs_default__item ' + (v.currentTab == 'callingTabDataId'? 'slds-is-active' : '')}" title="Calling" role="presentation">
+                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-1" id="tab-default-1__item" onclick="{!c.showCallingTab}">Calling</a>
+                </li>
+
+                <li aura:id="teamTabId" class="{! 'slds-tabs_default__item ' + (v.currentTab == 'teamTabDataId'? 'slds-is-active' : '')}" title="Team Status" role="presentation">
+                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item" onclick="{!c.showTeamTab}">Team Status</a>
+                </li>
+                
+                <li aura:id="historyTabId" class="{! 'slds-tabs_default__item ' + (v.currentTab == 'historyTabDataId'? 'slds-is-active' : '')}" title="History" role="presentation">
+                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item" onclick="{!c.showHistoryTab}">History</a>
+                </li>
+
+                <li aura:id="callbackTabId" class="{! 'slds-tabs_default__item ' + (v.currentTab == 'callbackDataTabId'? 'slds-is-active' : '') }" title="Callback" role="presentation">
+                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-default-2" id="tab-default-2__item" onclick="{!c.showCallbackTab}">Callback</a>
+                </li>
+            </ul>
+
+        <!--TABS SECTION END-->
+            <aura:if isTrue="{!v.currentTab=='callbackDataTabId'}">
+                <div aura:id="callbackTabDataId" id="tab-default-1" class="slds-tabs_default__content" role="tabpanel" aria-labelledby="tab-default-2__item">
+                    <div class="slds-grid slds-grid_vertical">
+                        <div class="slds-col slds-p-bottom_small">
+                            <div class="slds-grid">
+                                <div class="slds-col slds-size_1-of-3 slds-text-align_left">Retry the callback in:</div>
+                                <div class="slds-col slds-size_1-of-3 slds-text-align_left">
+                                    <lightning:input type="checkbox" aura:id="interval_30" name="checkbox_30" value="30" label="30 min" checked="false" onchange="{!c.handleIntervalSelect}"/>
+                                    <lightning:input type="checkbox" aura:id="interval_60" name="checkbox_60" value="60" label="60 min" checked="false" onchange="{!c.handleIntervalSelect}"/>
+                                <div class="slds-col slds-size_1-of-3"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-p-bottom_small">
+                            <div class="slds-grid">
+                                <div class="slds-col slds-size_1-of-3 slds-text-align_left">Complete callback</div>
+                                <div class="slds-col slds-size_1-of-3 slds-text-align_left">
+                                    <lightning:input type="checkbox" aura:id="interval_none" name="checkbox_none" value="none" checked="false" onchange="{!c.handleIntervalSelect}"/>
+                                </div>
+                                <div class="slds-col slds-size_1-of-3"></div>
+                            </div>
+                        </div>
+        
+                    </div>
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col slds-grid slds-size_1-of-2">
+        
+                            <div class="slds-col slds-p-top_xx-small">
+                                <lightning:button aura:id="submitCallbackButton" label="Submit" variant="brand" onclick="{!c.handleIntervalSubmit}" disabled="true"/>
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.currentTab=='callingTabDataId'}">
+                <div aura:id="callingTabDataId" id="tab-default-1" class="slds-tabs_default__content slds-show" role="tabpanel" aria-labelledby="tab-default-1__item">
+                    <!--DIAL PAD SECTION START-->
+                    <div >
+                        <div class="slds-grid">
+                            <div class="slds-col slds-p-bottom_small">
+                                <lightning:input aura:id="dialPad" type="tel" name="phone" placeholder="Enter phone number" value="{!v.outboundPhone}" onchange="{!c.handlePhoneUpdate}" disabled="{!v.dialPadDisabled}"/>
+                            </div>
+                            <div class="slds-col">
+                                
+                            </div>
+                            <div class="slds-col slds-grid slds-size_1-of-2">
+                                <div class="slds-col slds-p-top_xx-small">
+                                    <lightning:button aura:id="answerCallButton" label="{!v.callButtonLabel}" variant="success" onclick="{!c.handleCallAnswer}" disabled="{!v.callButtonDisabled}"/>
+                                </div>
+                                <div class="slds-col slds-p-top_xx-small">
+                                    <lightning:button aura:id="holdCallButton" label="{!v.holdButtonLabel}" variant="brand" onclick="{!c.handleHold}" disabled="{!v.holdButtonDisabled}"/>
+                                </div>
+                                <div class="slds-col slds-p-top_xx-small">
+                                    <lightning:button aura:id="hangupCallButton" label="HangUp" variant="destructive" onclick="{!c.handleHangup}" disabled="{!v.hangupButtonDisabled}"/>
+                                </div>
+                            </div>
+                            <div class="slds-col">
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-grid_vertical slds-grid_align-space">
+                        <div class="slds-col">
+                            <div class="slds-form-element">
+                                <div >
+                                    <span class="slds-form-element__label slds-align_absolute-center">Phone Number</span>
+                                    <div id="callingPhoneNo" class="slds-container_center slds-align_absolute-center slds-m-vertical_x-small slds-text-align_left slds-text-heading_medium slds-text-color_default">{!v.phone}</div>
+                                    <div>
+                                        <div class="slds-container_center slds-align_absolute-center slds-m-vertical_x-small slds-text-align_left slds-text-heading_small slds-text-color_default">Account: {!v.accountName}</div>
+                                        <div class="slds-container_center slds-align_absolute-center slds-m-vertical_x-small slds-text-align_left slds-text-heading_small slds-text-color_default">Contact: {!v.contactName}</div>
+                                        <aura:if isTrue="{!v.showContactData}">
+                                            <div aura:id = "ivrData" class="slds-border_top slds-border_bottom">
+                                                <div class="slds-container_center slds-align_absolute-center slds-m-vertical_x-small slds-text-align_left slds-text-heading_x_small slds-text-color_default">Country: {!v.contactData.Country}</div>
+                                                <div class="slds-container_center slds-align_absolute-center slds-m-vertical_x-small slds-text-align_left slds-text-heading_x_small slds-text-color_default">Language: {!v.contactData.Language}</div>
+                                                <div class="slds-container_center slds-align_absolute-center slds-m-vertical_x-small slds-text-align_left slds-text-heading_x_small slds-text-color_default">Redirected By: {!v.contactData.Redirected}</div>
+                                            </div>
+                                        </aura:if>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.currentTab=='teamTabDataId'}">
+                <div aura:id="teamTabDataId" id="tab-default-2" class="slds-tabs_default__content" role="tabpanel" aria-labelledby="tab-default-2__item">
+                    <!--DIAL PAD SECTION START-->
+                    <div >
+        
+                        <div class="slds-grid">
+                            <div class="slds-col slds-p-bottom_small">
+                                <lightning:input aura:id="dialPadEx" class="" type="tel" name="phone" disabled="false" placeholder="Extension number" value="{!v.extension}" onchange="{!c.handleExtUpdate}"/>
+                            </div>
+                            <div class="slds-col slds-grid slds-size_7-of-12">
+                                <div class="slds-col">
+                                    
+                                </div>
+                                <div class="slds-col slds-p-top_xx-small">
+                                    <lightning:button aura:id="consultExtButton" label="Consult" variant="brand" onclick="{!c.handleExtConsult}" disabled="{! or(v.consultExtButtonDisabled, empty(v.extension))}"/>
+                                </div>
+                                <div class="slds-col slds-p-top_xx-small">
+                                    <lightning:button aura:id="retrieveExtButton" label="Retrieve" variant="brand" onclick="{!c.handleExtRetrieve}" disabled="{! or(v.retrieveExtButtonDisabled, empty(v.extension))}"/>
+                                </div>
+                                <div class="slds-col slds-p-top_xx-small">
+                                    <lightning:button aura:id="transferExtButton" label="Transfer" variant="brand" onclick="{!c.handleExtTransfer}" disabled="{! or(v.transferExtButtonDisabled, empty(v.extension))}"/>
+                                </div>
+                                <div class="slds-col ">
+                                    
+                                </div>
+                            </div>
+        
+                        </div>
+        
+                        <!--CONSULTING AGENT DATA START-->
+                        <div class="slds-section slds-is-close" aura:id="consultingAgentSection">
+                            <!--section header-->
+                            <h3 class="slds-section__title">
+                                <button aria-controls="agentData" class="slds-button slds-section__title-action" label="base">
+                                    <span onclick="{!c.toggleSection}" data-auraId="consultingAgentSection">
+                                        <lightning:icon iconName="utility:switch"
+                                                        size="x-small"
+                                                        class="slds-section__title-action-icon slds-button__icon_left"
+                                                        alternativeText="button icon" 
+                                                        />
+                                    </span>
+                                    <span class="slds-truncate" title="Calling - Line 1">Consultation \ Transfer Call - Line 2</span>
+                                </button>
+                            </h3>
+        
+                            <!--section body-->
+                            <div class="slds-section__content" id="agentData">
+                                <div class="slds-text-title slds-text-color_default slds-text-align_center slds-has-flexi-truncate">
+                                    Name: &nbsp;{!v.consultAgentName} &nbsp;Extension: &nbsp;{!v.extension}
+                                </div>
+                            </div>
+        
+        
+                        </div>
+                        <!--CONSULTING AGENT DATA END-->
+        
+                        <!--MY TEAM TABLE START-->
+                        <div class="slds-card slds-card_boundary">
+                            <div class="slds-card__header slds-clearfix slds-grid">
+                                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                    <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                                        <div class="slds-media__figure">
+                                            <span class="slds-icon_container slds-icon-standard-groups">
+                                                <lightning:icon iconName="standard:groups" size="small"/>
+                                            </span>
+                                        </div>
+                                        <div class="slds-media__body">
+                                            <h2><span class="slds-text-heading_x-small">My Team: &nbsp; {!v.departmentName}</span></h2>
+                                        </div>
+                                    </div>
+                                </header>
+                                <div class="slds-no-flex" dropzone="card actions">
+                                    <div class="canvas-element" closertotopclass="canvas-element--closer-to-top">
+                                        <div class="slds-text-title slds-text-color_default">{!v.agentName}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slds-card__body slds-clearfix slds-card__body_inner" dropzone="card body">
+                                <div class="slds-scrollable_y" style="height:11rem">
+                                <div class="canvas-element" closertotopclass="canvas-element--closer-to-top">
+                                    <table class="slds-table slds-table_cell-buffer slds-table_header-hidden" role="grid">
+                                        <tbody>
+                                            <aura:iteration items="{!v.agentsList}" var="item">
+                                                <aura:if isTrue="{!and((item.departmentname == v.departmentName),(item.id != v.agentId))}">
+                                                <tr class="slds-hint-parent">
+                                                    <td class="slds-cell-shrink" data-label="Select Row">
+                                                        <label class="slds-checkbox">
+                                                            <lightning:input aura:id="rowSelectionId" type="checkbox" disabled="{!(item.status != 1)}" checked="{!(item.id == v.selectedAgentId)}" value="{!item.id}" onclick="{!c.handleAgentSelect}"/>
+                                                        <!--<input type="checkbox" aura:id="{!item.key}" value="{!item.extension}" name="options" tabindex="-1" onclick="{!c.handleAgentSelect}"/>-->
+                                                        </label>
+                                                    </td>
+                                                    <td class="slds-truncate">
+                                                        <div class="slds-text-title slds-text-color_default">{!item.firstname} &nbsp; {!item.lastname}</div>
+                                                    </td>
+                                                    <td class="slds-truncate">
+                                                        <!--<div class="slds-text-title slds-text-color_default slds-text-align_center">{!item.status}</div>-->
+                                                        <div>
+                                                            <aura:if isTrue="{!(item.status == 0)}">
+                                                                <div class="slds-text-title slds-text-color_default slds-text-align_center">??</div>
+                                                            </aura:if>
+                                                            <aura:if isTrue="{!(item.status == 1)}">
+                                                                <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_AVAILABLE.png'}" initials="AC" alternativeText="Available"/>
+                                                            </aura:if>
+                                                            <aura:if isTrue="{!(item.status == 2)}">
+                                                                <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_BUSY.png'}" initials="AC" alternativeText="Busy"/>
+                                                            </aura:if>
+                                                            <aura:if isTrue="{!(item.status == 3)}">
+                                                                <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_AWAY.png'}" initials="AC" alternativeText="Away"/>
+                                                            </aura:if>
+                                                            <aura:if isTrue="{!(item.status == 4)}">
+                                                                <aura:if isTrue="{!or((item.handlingstate == 9), (item.handlingstate == 10))}">
+                                                                    <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_AFTERCALL.png'}" initials="AC" alternativeText="Processing"/>
+                                                                    <aura:set attribute="else">
+                                                                        <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_ONCALL.png'}" initials="AC" alternativeText="OnCall"/>
+                                                                    </aura:set>
+                                                                </aura:if>
+                                                            </aura:if>
+                                                            <aura:if isTrue="{!(item.status == 5)}">
+                                                                <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_OFFLINE.png'}" initials="AC" alternativeText="LoggedOff"/>
+                                                            </aura:if>
+                                                            
+                                                        </div>
+                                                    </td>
+                                                    <td class="slds-truncate">
+                                                        <div class="slds-text-title slds-text-color_default">{!item.extension}</div>
+                                                    </td>
+                                                </tr>
+                                                </aura:if>
+                                            </aura:iteration>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                </div>
+                            </div>
+        
+        
+                        </div>
+                        <!--MY TEAM TABLE END-->
+        
+                        <!--OTHER TEAMS SECTION START-->
+                        <div class="{! 'slds-section ' + (v.isOtherTeamOpened ? 'slds-is-open' : 'slds-is-closed')}" aura:id="otherTeamsSection">
+                            <!--section header-->
+                            <h3 class="slds-section__title">
+                                <button aria-controls="otherTeamsData" class="slds-button slds-section__title-action" label="base">
+                                    <span onclick="{!c.toggleOtherTeamSection}" data-auraId="otherTeamsSection">
+                                    <!-- <span onclick="{!c.toggleSection}" data-auraId="otherTeamsSection"> -->
+                                        <lightning:icon iconName="utility:switch"
+                                                        size="x-small"
+                                                        class="slds-section__title-action-icon slds-button__icon_left"
+                                                        alternativeText="button icon" 
+                                                        />
+                                    </span>
+                                    <span class="slds-truncate" title="Other Teams">Other Teams</span>
+                                </button>
+                            </h3>
+                            <aura:if isTrue="{!v.isOtherTeamOpened}">
+                                <div class="slds-section__content" id="otherTeamsData">
+                                    <!--OTHER TEAMS TABLE START-->
+                                    <div class="slds-card slds-card_boundary">
+                                        <div class="slds-card__header slds-clearfix slds-grid">
+                                            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                                                <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                                                    <div class="slds-media__figure">
+                                                        <span class="slds-icon_container slds-icon-standard-groups">
+                                                            <lightning:icon iconName="standard:groups" size="small"/>
+                                                        </span>
+                                                    </div>
+                                                    <div class="slds-media__body">
+                                                        <h2><span class="slds-text-heading_x-small">Other Teams:</span></h2>
+                                                    </div>
+                                                </div>
+                                            </header>
+                                            <div class="slds-no-flex" dropzone="card actions">
+                                                <div class="canvas-element" closertotopclass="canvas-elementcloser-to-top">
+                                                    <lightning:select aura:id="teamSelect" name="select" value="{!v.selectedDepartmentName}" onchange="{!c.handleTeamSelect }">
+                                                        <aura:iteration items="{!v.teamsList}" var="item">
+                                                            <option value="{!item}">{!item}</option>
+                                                        </aura:iteration>
+                                                    </lightning:select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="slds-card__body slds-clearfix slds-card__body_inner" dropzone="card body">
+                                            <div class="slds-scrollable_y" style="height:11rem">
+                                                <div class="canvas-element" closertotopclass="canvas-elementcloser-to-top">
+                                                    <table class="slds-table slds-table_cell-buffer slds-table_header-hidden" role="grid">
+                                                        <tbody>
+                                                            <aura:iteration items="{!v.agentsList}" var="item">
+                                                                <aura:if isTrue="{!and((item.departmentname == v.selectedDepartmentName),(item.id != v.agentId))}">
+                                                                <tr class="slds-hint-parent">
+                                                                    <td class="slds-cell-shrink" data-label="Select Row">
+                                                                        <label class="slds-checkbox">
+                                                                            <lightning:input aura:id="rowSelectionId" type="checkbox" disabled="{!(item.status != 1)}" value="{!item.id}" onclick="{!c.handleAgentSelect}"/>
+                                                                        </label>
+                                                                    </td>
+                                                                    <td class="slds-truncate">
+                                                                        <div class="slds-text-title slds-text-color_default">{!item.firstname} &nbsp; {!item.lastname}</div>
+                                                                    </td>
+                                                                    <td class="slds-truncate">
+                                                                        <div>
+                                                                            <aura:if isTrue="{!(item.status == 0)}">
+                                                                                <div class="slds-text-title slds-text-color_default slds-text-align_center">??</div>
+                                                                            </aura:if>
+                                                                            <aura:if isTrue="{!(item.status == 1)}">
+                                                                                <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_AVAILABLE.png'}" initials="AC" alternativeText="Available"/>
+                                                                            </aura:if>
+                                                                            <aura:if isTrue="{!(item.status == 2)}">
+                                                                                <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_BUSY.png'}" initials="AC" alternativeText="Busy"/>
+                                                                            </aura:if>
+                                                                            <aura:if isTrue="{!(item.status == 3)}">
+                                                                                <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_AWAY.png'}" initials="AC" alternativeText="Away"/>
+                                                                            </aura:if>
+                                                                            <aura:if isTrue="{!(item.status == 4)}">
+                                                                                <aura:if isTrue="{!or((item.handlingstate == 9), (item.handlingstate == 10))}">
+                                                                                    <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_AFTERCALL.png'}" initials="AC" alternativeText="Processing"/>
+                                                                                    <aura:set attribute="else">
+                                                                                        <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_ONCALL.png'}" initials="AC" alternativeText="OnCall"/>
+                                                                                    </aura:set>
+                                                                                </aura:if>
+                                                                            </aura:if>
+                                                                            <aura:if isTrue="{!(item.status == 5)}">
+                                                                                <lightning:avatar size="small" src="{!$Resource.CTI_Icons+'/STATUS_ICON_OFFLINE.png'}" initials="AC" alternativeText="LoggedOff"/>
+                                                                            </aura:if>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="slds-truncate">
+                                                                        <div class="slds-text-title slds-text-color_default">{!item.extension}</div>
+                                                                    </td>
+                                                                </tr>
+                                                                </aura:if>
+                                                            </aura:iteration>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--TEAMS TABLE END-->
+                                </div>
+                            </aura:if>
+                        </div>
+                    </div>
+                    <!--DIAL PAD SECTION END-->
+                </div>
+            </aura:if>
+            
+            <aura:if isTrue="{!v.currentTab == 'historyTabDataId'}">
+                <div aura:id="historyTabDataId" id="tab-default-3" class="slds-tabs_default__content" role="tabpanel" aria-labelledby="tab-default-3__item">
+                    <c:CTI_callHistoryPanel isC2DEnabled="{!v.isC2DEnabled}"/>
+                </div>
+            </aura:if>
+        </div>
+    </div>
+
+    <!--<footer class="slds-card__footer">
+        <div class="slds-card__footer-action">{!v.agentInfo +' Status: '+ v.state}</div>
+    </footer>-->
+</article>
+
+</aura:component>

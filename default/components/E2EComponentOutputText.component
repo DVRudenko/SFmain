@@ -1,0 +1,34 @@
+<!--
+ - Created by Kirill.Abanin on 25.07.2018.
+ -->
+
+<apex:component id="E2EComponentOutputText" controller="E2EComponentsCtrl">
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map" />
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="value of outputPanel" />
+
+    <apex:attribute name="textClass"
+                    type="String"
+                    description="class for text" />
+
+    <apex:attribute name="outputText"
+                    type="String"
+                    description="class for text" />
+
+    <apex:attribute name="valueText"
+                    type="String"
+                    description="class for text" />
+
+    <apex:attribute name="valueTextStyle"
+                    type="String"
+                    description="class for text" />
+
+    <apex:outputPanel styleClass="{! textClass}">
+    {!pageMap[field].elementItemsMap[outputText].value}
+        <apex:outputPanel styleClass="{! valueTextStyle }">{! IF(valueText == null, '', pageMap[field].elementItemsMap[valueText].value)}</apex:outputPanel>
+    </apex:outputPanel>
+</apex:component>

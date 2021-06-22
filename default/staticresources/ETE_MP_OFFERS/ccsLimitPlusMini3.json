@@ -1,0 +1,105 @@
+{
+    "title": {
+        "default_impl": {
+            "en": "CCS Limit+ MINI 3",
+            "cs": "CCS Limit+ MINI 3"
+        }
+    },
+    "description": {
+        "default_impl": {
+            "en": "Cards with lower monthly card limit at a lower cost - Ideal for our smaller customers ordering up to 3 cards.",
+            "cs": "Karty s nižším měsíčním limitem na kartu za nižší cenu - ideální pro menší firmy do 3 karet."
+        }
+    },
+    "promos": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Discount at all fuel stations in Czech Republic",
+                    "cs": "Sleva na palivo v celé síti CCS v ČR"
+                },
+                "value": {
+                    "en": "-0.20 CZK per liter fuel without VAT",
+                    "cs": "-0.20 Kč bez DPH na litr PHM"
+                }
+            },
+            {
+                "label": {
+                    "en": "Maximum monthly limit per card",
+                    "cs": "Maximální měsíční limit na kartu"
+                },
+                "value": {
+                    "en": "5 000 CZK",
+                    "cs": "5 000 Kč"
+                }
+            },
+            {
+                "label": {
+                    "en": "Monthly card fee",
+                    "cs": "Měsíční poplatek za vedení jedné karty"
+                },
+                "value": {
+                    "en": "49 CZK without VAT",
+                    "cs": "49 Kč bez DPH"
+                }
+            }
+        ]
+    },
+    "brands": {
+        "default_impl": []
+    },
+    "enableBulk": {
+        "default_impl": false
+    },
+    "enableLocator": {
+        "default_impl": false
+    },
+    "offerItemsMaxCount": {
+        "default_impl": 3
+    },
+    "driverName": {
+        "default_impl": {
+            "default": "KARTA",
+            "show": true
+        }
+    },
+    "dailyLimit": {
+        "default_impl": {
+            "default":5000,
+            "show": false
+        }
+    },
+    "monthlyCardLimit": {
+        "default_impl": {
+            "default": 5000,
+            "show": false
+        }
+    },
+    "categoryOfProducts": {
+        "default_impl": {
+            "default": "Group 04",
+            "show": false
+        }
+    },
+    "lockedPinChange": {
+        "default_impl": {
+            "default": false,
+            "required": false,
+            "show": false
+        }
+    },
+    "mileageData": {
+        "default_impl": {
+            "default": false,
+            "required": false,
+            "show": false
+        }
+    },
+    "evCharging": {
+        "default_impl": {
+            "default": false,
+            "required": false,
+            "show": false
+        }
+    }
+}

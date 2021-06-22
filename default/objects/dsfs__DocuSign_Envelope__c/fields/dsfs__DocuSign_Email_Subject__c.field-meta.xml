@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__DocuSign_Email_Subject__c</fullName>
+    <defaultValue>"Documents for your DocuSign Signature"</defaultValue>
+    <deprecated>false</deprecated>
+    <description>DocuSign Email Subject</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients.</inlineHelpText>
+    <label>DocuSign Email Subject</label>
+    <length>255</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

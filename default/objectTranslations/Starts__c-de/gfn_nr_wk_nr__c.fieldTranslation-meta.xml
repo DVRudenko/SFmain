@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Concatenated key containing GFN Number and Client Week Number to uniquely identify each row of Starts per customer per week --></help>
+    <label><!-- GFN_Nr_Wk_Nr --></label>
+    <name>gfn_nr_wk_nr__c</name>
+</CustomFieldTranslation>

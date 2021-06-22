@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__UseAccountNotificationDefaults__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Enabling Reminder and Expiration Settings allows you to specify reminder and expiration defaults in DocuSign for Salesforce. These settings override the default Reminders &amp; Expirations settings from your DocuSign account.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enabling Reminder and Expiration Settings allows you to specify reminder and expiration defaults in DocuSign for Salesforce. These settings override the default Reminders &amp; Expirations settings from your DocuSign account.</inlineHelpText>
+    <label>Use Account Notification Defaults</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

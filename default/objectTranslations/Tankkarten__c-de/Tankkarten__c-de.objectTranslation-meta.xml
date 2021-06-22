@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Tankkarten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Tankkarten</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Tankkarten --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Tankkarten --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Tankkarten --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Tankkarten --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Tankkarten --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Tankkarten --></value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Customer Service Europe</layout>
+        <sections>
+            <label><!-- Benutzerdefinierte Links --></label>
+            <section>Benutzerdefinierte Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Tankkarten-Layout</layout>
+        <sections>
+            <label><!-- Benutzerdefinierte Links --></label>
+            <section>Benutzerdefinierte Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Tankkarten --></nameFieldLabel>
+    <recordTypes>
+        <label><!-- AllStar --></label>
+        <name>AllStar</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>Du kannst diese Produktkategorie nicht wählen!</errorMessage>
+        <name>Category_3_only_for_Switzerland</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Bitte entweder KFZ-Kennzeichen oder Fahrername eintragen</errorMessage>
+        <name>License_plate_or_Driver_name_mandatory</name>
+    </validationRules>
+</CustomObjectTranslation>

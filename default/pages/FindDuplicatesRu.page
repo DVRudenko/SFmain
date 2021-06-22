@@ -1,0 +1,208 @@
+<apex:page name="FindDuplicatesRu" controller="FindDuplicatesRuController" showHeader="true" action="{! init }"
+           sidebar="true" standardStylesheets="true" setup="true" showChat="true">
+    <apex:form >
+        <apex:pageMessages />
+        <head>
+            <style>
+            .labelCol {
+            text-align: right;
+            font-weight: bold;
+            }
+            </style>
+
+            <script type="text/javascript">
+                function getRemoteAccount(paramval) {
+                    return paramval;
+                }
+            </script>
+        </head>
+
+        <apex:pageBlock title="{!findPageTitle}">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Поиск дубликатов" action="{! searchPage}" style="width:150px;"/>
+                <apex:commandButton value="Назад к записи" rendered="{!isBackToRecord}" action="{! backToRecord }"
+                                    style="width:150px;"/>
+            </apex:pageBlockButtons>
+
+            <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="labelCol"></td>
+                    <td>
+                        <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="labelCol">Компания</td>
+                                <td>
+                                    <apex:inputCheckbox value="{!isCompanySelected}"/>
+                                    <apex:inputText label="Company" value="{!searchCompany}"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <apex:pageBlockTable value="{!matchingLeads}" var="leads" style="margin-bottom: 15px"
+                                 captionStyle="font-weight: bold; text-align: left;">
+                <apex:facet name="caption">Совпадающие Интересы</apex:facet>
+
+                <apex:column >
+                        {!matchingLeads[leads].ID}
+                </apex:column>
+
+                <apex:column headerValue="{!$ObjectType.Lead.fields.Name.label}"
+                             style="color:{!(IF((contains(upper(matchingLeads[leads].Name),upper(searchCompany)) || IF(FIND(' ',searchCompany)==0,false, contains(upper(matchingLeads[leads].name),upper(left(searchCompany,FIND(' ',searchCompany)-1))) || contains(upper(matchingLeads[leads].name),upper(right(searchCompany,Len(searchCompany)-FIND(' ',searchCompany)))))) && isCompanySelected && searchCompany!='','green',''))};">{!matchingLeads[leads].Name}
+                    <br>
+                    <apex:outputLink value="/{! matchingLeads[leads].Id }" target="_blank"
+                                     rendered="{! RecordAccessMap[matchingLeads[leads].ID].HasReadAccess }">
+                        --Переход--
+                    </apex:outputLink>
+                    <apex:outputLink value="/apex/SharingLead?id={!matchingLeads[leads].Id}" target="_blank"
+                                      rendered="{! AND(isInboundRole, NOT(RecordAccessMap[matchingLeads[leads].ID].HasReadAccess)) }">
+                        Подробнее
+                    </apex:outputLink>
+                    </br>
+                </apex:column>
+                <apex:column value="{! matchingLeads[leads].Company}"
+                             style="color:{!(IF((contains(upper(matchingLeads[leads].Company),upper(searchCompany)) || IF(FIND(' ',searchCompany)==0,false, contains(upper(matchingLeads[leads].Company),upper(left(searchCompany,FIND(' ',searchCompany)-1))) || contains(upper(matchingLeads[leads].Company),upper(right(searchCompany,Len(searchCompany)-FIND(' ',searchCompany)))))) && isCompanySelected && searchCompany!='','green',''))};"
+                             headerValue="{!$ObjectType.Lead.fields.Company.label}"/>
+
+                <apex:column value="{! matchingLeads[leads].Status}"
+                             headerValue="{!$ObjectType.Lead.fields.Status.label}"/>
+
+                <apex:column value="{! matchingLeads[leads].Source_of_Lead__c}"
+                             headerValue="{!$ObjectType.Lead.fields.Source_of_Lead__c.label}"/>
+
+                <apex:column >
+                   <apex:facet name="header">Дата задачи <img
+                            src="{!URLFOR($Resource.RussianImages, 'img/HelpText.png')}"
+                            title="Крайний срок открытой задачи. Если в поле пусто - задача была закрыта, или к данной записи не было создано ни одной задачи. Если дата находится в прошлом, задача была просрочена"/>
+                    </apex:facet>
+                    <apex:outputPanel rendered="{! AND(LeadActivityMap[matchingLeads[leads].ID].OpenActivities.size != null, LeadActivityMap[matchingLeads[leads].ID].OpenActivities.size > 0)}">
+                        <apex:outputText value="{0, date, d/MM/yyyy}">
+                            <apex:param value="{! LeadActivityMap[matchingLeads[leads].ID].OpenActivities[0].ActivityDate }"/>
+                        </apex:outputText>
+                    </apex:outputPanel>
+                </apex:column>
+                <apex:column value="{! matchingLeads[leads].CreatedDate}"
+                             headerValue="{!$ObjectType.Lead.fields.CreatedDate.label}"/>
+                <apex:column value="{! matchingLeads[leads].LastTransferDate}"
+                             headerValue="{!$ObjectType.Lead.fields.LastTransferDate.label}"/>
+                <apex:column headerValue="Имя ответств.">
+                    <a href="/{!matchingLeads[leads].OwnerId}" target="_blank">{!matchingLeads[leads].Owner.Name}</a>
+                </apex:column>
+                <apex:column value="{! matchingLeads[leads].Owner.Email}" headerValue="Email ответств."/>
+                <apex:column value="{! matchingLeads[leads].Owner.Phone}" headerValue="Телефон ответств."/>
+                <apex:column headerValue="Имя менеджера">
+                    <apex:outputPanel rendered="{! LEFT(matchingLeads[leads].OwnerId,3) = '005'}">
+                        <a href="/{! managerUserMap[matchingLeads[leads].OwnerId].ManagerId}" target="_blank">
+                        {! managerUserMap[matchingLeads[leads].OwnerId].Manager.FirstName} {! managerUserMap[matchingLeads[leads].OwnerId].Manager.LastName }
+                        </a>
+                    </apex:outputPanel>
+                </apex:column>
+            </apex:pageBlockTable>
+
+            <apex:pageBlockTable value="{! matchingOpportunities}" var="opportunity" style="margin-bottom: 15px"
+                                 captionStyle="font-weight: bold; text-align: left;">
+                <apex:facet name="caption">Совпадающие возможности</apex:facet>
+
+                <apex:column headerValue="{!$ObjectType.opportunity.fields.Name.label}"
+                             style="color:{!(IF((contains(upper(matchingOpportunities[opportunity].Name),upper(searchCompany)) || IF(FIND(' ',searchCompany)==0,false, contains(upper(matchingOpportunities[opportunity].name),upper(left(searchCompany,FIND(' ',searchCompany)-1))) || contains(upper(matchingOpportunities[opportunity].name),upper(right(searchCompany,Len(searchCompany)-FIND(' ',searchCompany))))))&& isCompanySelected && searchCompany!='','green',''))};">{!matchingOpportunities[opportunity].Name}
+                    <br>
+                    <apex:outputLink value="/{! matchingOpportunities[opportunity].Id }" target="_blank"
+                                     rendered="{! RecordAccessMap[matchingOpportunities[opportunity].ID].HasReadAccess }">
+                        --Переход--
+                    </apex:outputLink>
+                    <apex:outputLink value="/apex/SharingOpportunity?id={!matchingOpportunities[opportunity].Id}" target="_blank"
+                                                        rendered="{! AND(isInboundRole, NOT(RecordAccessMap[matchingOpportunities[opportunity].Id].HasReadAccess)) }">
+                        Подробнее
+                    </apex:outputLink>
+                    </br>
+                </apex:column>
+                <apex:column value="{! matchingOpportunities[opportunity].Company_Legal_Name__c}"
+                             headerValue="{!$ObjectType.opportunity.fields.Company_Legal_Name__c.label}"
+                             style="color:{!(IF(contains(upper(matchingOpportunities[opportunity].Company_Legal_Name__c),upper(searchCompany))&& isCompanySelected && searchCompany!='','green',''))};"/>
+                <apex:column value="{! matchingOpportunities[opportunity].Organization_Type__c}" headerValue="{!$ObjectType.opportunity.fields.Organization_Type__c.label}"></apex:column>
+                <apex:column value="{! matchingOpportunities[opportunity].StageName}"
+                             headerValue="{!$ObjectType.opportunity.fields.StageName.label}"/>
+                <apex:column value="{! matchingOpportunities[opportunity].Source_of_lead_o__c}"
+                             headerValue="{!$ObjectType.opportunity.fields.Source_of_Lead_o__c.label}"/>
+                <apex:column value="{! matchingOpportunities[opportunity].CreatedDate}"
+                             headerValue="{!$ObjectType.opportunity.fields.CreatedDate.label}"/>
+                <apex:column value="{! matchingOpportunities[opportunity].Last_Owner_Change_Date_RUS__c}"
+                             headerValue="{!$ObjectType.opportunity.fields.Last_Owner_Change_Date_RUS__c.label}"/>
+                <apex:column value="{! matchingOpportunities[opportunity].CloseDate}"
+                             headerValue="{!$ObjectType.opportunity.fields.CloseDate.label}"/>
+
+                <apex:column >
+                    <apex:facet name="header">Дата задачи <img
+                            src="{!URLFOR($Resource.RussianImages, 'img/HelpText.png')}"
+                            title="Крайний срок открытой задачи. Если в поле пусто - задача была закрыта, или к данной записи не было создано ни одной задачи. Если дата находится в прошлом, задача была просрочена"/>
+                    </apex:facet>
+                    <apex:outputPanel rendered="{! AND(OppActivityMap[matchingOpportunities[opportunity].ID].OpenActivities.size != null, OppActivityMap[matchingOpportunities[opportunity].ID].OpenActivities.size > 0)}">
+                        <apex:outputText value="{0, date, d/MM/yyyy}">
+                            <apex:param value="{! OppActivityMap[matchingOpportunities[opportunity].ID].OpenActivities[0].ActivityDate }"/>
+                        </apex:outputText>
+                    </apex:outputPanel>
+                </apex:column>
+
+                <apex:column value="{! matchingOpportunities[opportunity].OwnerId}" headerValue="Имя ответств."/>
+                <apex:column value="{! matchingOpportunities[opportunity].Owner.Email}" headerValue="Email ответств."/>
+                <apex:column value="{! matchingOpportunities[opportunity].Owner.Phone}"
+                             headerValue="Телефон ответств."/>
+                <apex:column headerValue="Имя менеджера">
+                    <a href="/{! matchingOpportunities[opportunity].Owner.ManagerId}" target="_blank">
+                    {! matchingOpportunities[opportunity].Owner.Manager.FirstName} {! matchingOpportunities[opportunity].Owner.Manager.LastName }
+                    </a>
+                </apex:column>
+            </apex:pageBlockTable>
+
+            <apex:pageBlockTable value="{! matchingAccounts}" var="account" style="margin-bottom: 15px"
+                                 captionStyle="font-weight: bold; text-align: left;">
+                <apex:facet name="caption">Совпадающие организации</apex:facet>
+                <apex:column headerValue="{!$ObjectType.account.fields.Name.label}"
+                             style="color:{!(IF((contains(upper(matchingAccounts[account].name),upper(searchCompany)) || IF(FIND(' ',searchCompany)==0,false, contains(upper(matchingAccounts[account].name),upper(left(searchCompany,FIND(' ',searchCompany)-1))) || contains(upper(matchingAccounts[account].name),upper(right(searchCompany,Len(searchCompany)-FIND(' ',searchCompany))))))&& isCompanySelected && searchCompany!='','green',''))};">{!matchingAccounts[account].Name}
+                    <br>
+                    <apex:outputLink value="/{! matchingAccounts[account].Id }" target="_blank"
+                                     rendered="{! RecordAccessMap[matchingAccounts[account].ID].HasReadAccess }">
+                        --Переход--
+                    </apex:outputLink>
+                    <apex:outputLink value="/apex/SharingAccount?id={! matchingAccounts[account].Id }" target="_blank"
+                                      rendered="{! AND(isInboundRole, NOT(RecordAccessMap[matchingAccounts[account].Id].HasReadAccess)) }">
+                        Подробнее
+                    </apex:outputLink>
+                    </br>
+                </apex:column>
+                <apex:column value="{! matchingAccounts[account].Company_Legal_Name1__c}"
+                             headerValue="{!$ObjectType.account.fields.Company_Legal_Name1__c.label}"
+                             style="color:{!(IF(contains(upper(matchingAccounts[account].Company_Legal_Name1__c),upper(searchCompany)) && isCompanySelected && searchCompany!='','green',''))};"/>
+
+                <apex:column value="{! matchingAccounts[account].Type}" headerValue="{!$ObjectType.account.fields.Type.label}"></apex:column>
+                
+                <apex:column headerValue="{!$Label.Parent_Account}">
+                    {!matchingAccounts[account].Parent.Name}
+                        <br>
+                        <apex:outputLink value="/{!matchingAccounts[account].Parent.Id}" target="_blank"
+                                         rendered="{! IF(matchingAccounts[account].ParentId != null,
+                                                    IF(RecordAccessMap[matchingAccounts[account].ParentId].HasReadAccess,
+                                                        true,
+                                                        false),
+                                                    false)}">
+                            --Переход--
+                        </apex:outputLink>
+                        </br>
+                </apex:column>
+
+                <apex:column value="{! matchingAccounts[account].CreatedDate}"
+                             headerValue="{!$ObjectType.account.fields.CreatedDate.label}"/>
+                <apex:column value="{! matchingAccounts[account].OwnerId}" headerValue="Имя ответств."/>
+                <apex:column value="{! matchingAccounts[account].Owner.Email}" headerValue="Email ответств."/>
+                <apex:column value="{! matchingAccounts[account].Owner.Phone}" headerValue="Телефон ответств."/>
+                <apex:column headerValue="Имя менеджера">
+                    <a href="/{! matchingAccounts[account].Owner.ManagerId}" target="_blank">
+                    {! matchingAccounts[account].Owner.Manager.FirstName} {! matchingAccounts[account].Owner.Manager.LastName }
+                    </a>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

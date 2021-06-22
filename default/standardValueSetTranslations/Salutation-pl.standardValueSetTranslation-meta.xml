@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Bc.</masterLabel>
+        <translation><!-- Bc. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Damen und Herren</masterLabel>
+        <translation><!-- Damen und Herren --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Dis.</masterLabel>
+        <translation><!-- Dis. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Dr.</masterLabel>
+        <translation><!-- Dr. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Frau</masterLabel>
+        <translation>Pani</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Frau Dr.</masterLabel>
+        <translation>Pani Doktor</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Frau Prof.</masterLabel>
+        <translation>Pani Profesor</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Herr</masterLabel>
+        <translation>Pan</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Herr Dr.</masterLabel>
+        <translation>Pan Doktor</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Herr Prof.</masterLabel>
+        <translation>Pan Profesor</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ing.</masterLabel>
+        <translation><!-- Ing. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>JUDr.</masterLabel>
+        <translation><!-- JUDr. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>MUDr.</masterLabel>
+        <translation><!-- MUDr. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>MVDr.</masterLabel>
+        <translation><!-- MVDr. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mgr.</masterLabel>
+        <translation><!-- Mgr. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mgr.Ing.</masterLabel>
+        <translation><!-- Mgr.Ing. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mr.</masterLabel>
+        <translation><!-- Mr. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Mrs.</masterLabel>
+        <translation><!-- Mrs. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ms.</masterLabel>
+        <translation><!-- Ms. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Prof.</masterLabel>
+        <translation><!-- Prof. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>RNDr.</masterLabel>
+        <translation><!-- RNDr. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Slečna</masterLabel>
+        <translation><!-- Slečna --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>plk.Ing.</masterLabel>
+        <translation><!-- plk.Ing. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>plk.Mgr.Bc.</masterLabel>
+        <translation><!-- plk.Mgr.Bc. --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

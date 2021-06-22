@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sicherheit angefodert --></label>
+    <name>Sicherheit_angefodert__c</name>
+    <picklistValues>
+        <masterLabel>Bankbürgschaft</masterLabel>
+        <translation><!-- Bankbürgschaft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kaution</masterLabel>
+        <translation><!-- Kaution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parent/Cross-Corporate Bürgschaft</masterLabel>
+        <translation><!-- Parent/Cross-Corporate Bürgschaft --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

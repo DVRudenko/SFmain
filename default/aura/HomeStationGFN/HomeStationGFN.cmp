@@ -1,0 +1,14 @@
+<aura:component extends="c:BaseComponent" controller="GFNI_DashboardCtrl">
+    <aura:attribute name="location" type="Object[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <c:CardWithTable iconName="standard:address" name="Home Station (GFN)" 
+            tableHead="{!v.tableHead}" itemList="{!v.itemList}" 
+            link="{!v.landingPageLink}" errorMessage="{!v.errorMessage}">
+        <!-- <aura:set attribute="footer">
+            <aura:if isTrue="{!not(empty(v.location))}">
+                    <lightning:map mapMarkers="{!v.location}" zoomLevel="16"/>
+            </aura:if>
+        </aura:set> -->
+    </c:CardWithTable>
+</aura:component>

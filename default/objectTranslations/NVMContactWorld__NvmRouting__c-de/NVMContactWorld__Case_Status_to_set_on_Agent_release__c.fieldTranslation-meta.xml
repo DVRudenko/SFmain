@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This Case Status will be set when an Agent releases a Case. --></help>
+    <label><!-- Case Status to set on Agent release --></label>
+    <name>NVMContactWorld__Case_Status_to_set_on_Agent_release__c</name>
+</CustomFieldTranslation>

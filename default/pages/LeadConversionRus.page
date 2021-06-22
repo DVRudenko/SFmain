@@ -1,0 +1,37 @@
+<apex:page controller="LeadConversionRusCtrl" action="{! init}">
+    <apex:form >
+        <apex:pageMessages />
+        <style>
+            .ownerId select {
+            display: none;
+            }
+        </style>
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Owner"/>
+                    <apex:outputPanel styleClass="ownerId">
+                        <apex:inputField value="{! lead.OwnerId}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <!--<apex:pageBlockSectionItem>
+                     <apex:outputLabel value="Salutation"/>
+                     <apex:outputPanel >
+                         <apex:inputField value="{! lead.Salutation}"/>
+                        <apex:outputText style="display: inline-block; margin-left: 5px;" value="{! lead.FirstName}"/>
+                        <apex:outputText style="display: inline-block; margin-left: 5px;" value="{! lead.LastName}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>-->
+                <apex:inputField value="{! lead.INN__c}" required="true"/>
+                <apex:inputField value="{! lead.Phone}" required="true"/>
+                <apex:inputField value="{! lead.Email}" required="true"/>
+                <apex:inputField value="{! lead.Company}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{! backToLeadWithoutSavingFields}" value="Cancel"/>
+                <apex:commandButton action="{! backToLeadWithSavingFields}" value="Save & Back to Lead"/>
+                <apex:commandButton action="{! continueConvert}" value="Convert"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

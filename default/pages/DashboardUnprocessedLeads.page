@@ -1,0 +1,121 @@
+<apex:page controller="DashboardUnprocessedLeadsCtrl" action="{! init }" showheader="false" sidebar="false">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+    <style>
+        #container {
+            height:90%;
+            width:100%;
+            position:absolute;        
+        }
+    </style>
+    <apex:form >
+    <apex:pageBlock mode="maindetail">    
+        <apex:actionPoller interval="30" action="{! init }" reRender="chart"/>
+        <apex:pageMessages />
+        <apex:outputPanel id="chart">
+            <div id="container" style="width: 100%; height: 90%; margin: 0 auto"></div>
+            <script>
+                $(function () {
+                    $('#container').highcharts({
+                        chart: {
+                            type: 'column'       
+                        },
+                        plotOptions: {
+                            series: {
+                                stacking: 'normal',
+                                dataLabels: {
+                                    enabled:true,
+                                    formatter:function() {
+                                        if(this.y > 0)
+                                            return this.y;
+                                    }
+                                }
+                            }
+                        },
+                         colors: [
+                            '#91351D',
+                            '#1D5191',
+                            '#c4c4c4',             
+                        ],                    
+                        title: {
+                            text: 'Unprocessed Leads By Country'
+                        },       
+                        xAxis: {  
+							categories: [<apex:repeat value="{! keysList }" var="key">'{! key }',</apex:repeat>],
+      					        type: 'category',
+                           		labels: {
+                                rotation: 0,
+                                	style: {
+                                    	fontSize: '20px',
+                                    	fontFamily: 'Verdana, sans-serif'
+                                }
+                            }                            
+                        },
+                        yAxis: {
+                            min: 0,
+                            title: {
+                                text: 'Number of Leads'
+                            }
+                        },
+                        legend: {
+                            align: 'right',
+                            x: -30,
+                            verticalAlign: 'top',
+                            y: 25,
+                            floating: true,
+                            backgroundColor: 'white',
+                            borderColor: '#CCC',
+                            borderWidth: 1,
+                            shadow: false
+                        },
+                        credits: {
+                              enabled: false
+                        },  
+                        exporting: { 
+                            enabled: false 
+                        },                                               
+                        series: [{
+                            name: 'Inbound Leads',
+                            data: [<apex:repeat value="{! keysList }" var="key">{! finalLeadsMapInbound[key] },</apex:repeat>],
+                            dataLabels: { 
+                                color: '#FFFFFF',
+                                style: {
+                                        fontWeight: 'bold',            
+                                        textShadow: '-4px 0 black, 0 4px black, 4px 0 black, 0 -4px black',           
+                                        fontSize: '64px',                                                                       
+                                        fontFamily: 'Verdana, sans-serif'
+                                    }
+                                } 
+                            }, {
+                            name: 'JITB Leads',
+                            data: [<apex:repeat value="{! keysList }" var="key">{! finalLeadsMapJITB[key] },</apex:repeat>],
+                            dataLabels: { 
+                                color: '#FFFFFF',  
+                                style: {
+                                        fontWeight: 'bold',            
+                                        textShadow: '-4px 0 black, 0 4px black, 4px 0 black, 0 -4px black',           
+                                        fontSize: '64px',                                                                       
+                                        fontFamily: 'Verdana, sans-serif'
+                                    }
+                                }
+                            }, {
+                            name: 'Partner Leads',
+                            data: [<apex:repeat value="{! keysList }" var="key">{! finalLeadsMapPartner[key] },</apex:repeat>],
+                            dataLabels: { 
+                                color: '#FFFFFF',  
+                                style: {
+                                    fontWeight: 'bold',            
+                                    textShadow: '-4px 0 black, 0 4px black, 4px 0 black, 0 -4px black',           
+                                    fontSize: '64px',                                                                       
+                                    fontFamily: 'Verdana, sans-serif'
+                                }
+                            } 
+                        }]  
+                    });
+                });
+            </script>
+        </apex:outputPanel>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

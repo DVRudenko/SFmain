@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_creation_Account_for_service</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISNEW(),
+Subaccount__c = false,
+NOT( $Permission.PO_Custom_Permission ),
+NOT( $Permission.Account_Creation_C_Permission ),
+OR($Profile.Name = "Service Manager",
+$Profile.Name = "Service Agent",
+$Profile.Name = "CCS Service Agent",
+$Profile.Name = "CCS Service Manager"))</errorConditionFormula>
+    <errorMessage>Service shall create Subaccounts only</errorMessage>
+</ValidationRule>

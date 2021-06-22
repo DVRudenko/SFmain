@@ -1,0 +1,10 @@
+@isTest
+global class CreditreformSearchInactiveCompanyMock implements HttpCalloutMock {
+  global HttpResponse respond(HTTPRequest req){
+    HttpResponse res = new HttpResponse();
+    res.setStatus('OK');
+    res.setStatusCode(200);
+    res.setBody('<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"><env:Header/><env:Body><ns2:searchResponse xmlns:ns2="https://onlineservice.creditreform.de/webservice/0520-0018"><ns2:header><ns2:communicationlanguage>en</ns2:communicationlanguage><ns2:transmissiontimestamp>2016-05-12T08:34:54.500+02:00</ns2:transmissiontimestamp><ns2:keylistversion>20</ns2:keylistversion><ns2:clientapplicationname>MyClientApplication</ns2:clientapplicationname><ns2:clientapplicationversion>100</ns2:clientapplicationversion><ns2:useraccount>345013323001</ns2:useraccount><ns2:responseid>d3b01809-75e3-4458-a813-2d0db799628d</ns2:responseid></ns2:header><ns2:body><ns2:hit><ns2:identificationnumber>03453452015622</ns2:identificationnumber><ns2:companyname>Kundentestsystem Warnampel gelb - BITTE NICHT ÄNDERN</ns2:companyname><ns2:tradename>Gelbe Warnampel TEST</ns2:tradename><ns2:street>Ernst-Kohl-Str.</ns2:street><ns2:housenumber>244</ns2:housenumber><ns2:postcode>99423</ns2:postcode><ns2:city>Weimar</ns2:city><ns2:country><ns2:key>DE</ns2:key><ns2:designation>Germany</ns2:designation></ns2:country><ns2:legalform><ns2:key>LEFO-DE-911</ns2:key><ns2:designation>Gesellschaft &amp; Co. KG</ns2:designation><ns2:shortdesignation>Gesellschaft &amp; Co. KG</ns2:shortdesignation></ns2:legalform><ns2:reportavailable>true</ns2:reportavailable><ns2:reportcompanyname>true</ns2:reportcompanyname><ns2:reportaddress>true</ns2:reportaddress><ns2:operationalstatus><ns2:key>ONST-1</ns2:key><ns2:designation>inactive</ns2:designation></ns2:operationalstatus><ns2:additionalinformation>true</ns2:additionalinformation></ns2:hit><ns2:morehits>false</ns2:morehits></ns2:body></ns2:searchResponse></env:Body></env:Envelope>');
+    return res;
+  }
+}

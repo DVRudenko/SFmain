@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Data_Product__c</fullName>
+    <externalId>false</externalId>
+    <label>E2E Data Product</label>
+    <referenceTo>E2E_Data_Product__c</referenceTo>
+    <relationshipLabel>E2E Data Locator Items</relationshipLabel>
+    <relationshipName>E2E_Data_Locator_Items</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Конкретный способ оплаты, который водители используют для покупки топлива.</help>
+    <label>Способ приобретения топлива (детали)</label>
+    <name>Primary_Fueling_Method_specific__c</name>
+    <picklistValues>
+        <masterLabel>EKA-Processing</masterLabel>
+        <translation>ЕКА-Процессинг</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expense reimbursement</masterLabel>
+        <translation>Возмещение расходов</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gazpromneft</masterLabel>
+        <translation>Газпромнефть</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inforkom</masterLabel>
+        <translation>Инфорком</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Licard</masterLabel>
+        <translation>Лукойл (Ликард)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MasterCard</masterLabel>
+        <translation>Mastercard</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Другое</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Petty cash</masterLabel>
+        <translation>Наличные</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rosneft</masterLabel>
+        <translation>Роснефть (ТНК, БашНефть, BP)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell Russia</masterLabel>
+        <translation>Шелл (Shell)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Surgutneftegas</masterLabel>
+        <translation>Сургутнефтегаз</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tatneft</masterLabel>
+        <translation>Татнефть</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation>Не знаю</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visa</masterLabel>
+        <translation>Visa</translation>
+    </picklistValues>
+</CustomFieldTranslation>

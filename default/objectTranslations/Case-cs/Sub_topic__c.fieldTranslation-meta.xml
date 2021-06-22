@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sub topic --></label>
+    <name>Sub_topic__c</name>
+    <picklistValues>
+        <masterLabel>+/-</masterLabel>
+        <translation><!-- +/- --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Address Change</masterLabel>
+        <translation><!-- Address Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Details Change</masterLabel>
+        <translation><!-- Bank Details Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Block and Order card(s)</masterLabel>
+        <translation><!-- Block and Order card(s) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Products &amp; Services</masterLabel>
+        <translation><!-- CCS Products &amp; Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Block my card(s)</masterLabel>
+        <translation>Blokace/Odblokace karty</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cancel Carnet/Unit</masterLabel>
+        <translation><!-- Cancel Carnet/Unit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Card Insurance</masterLabel>
+        <translation><!-- Card Insurance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Card changes</masterLabel>
+        <translation><!-- Card changes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Card other</masterLabel>
+        <translation><!-- Card other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Card(s) Cancellation</masterLabel>
+        <translation><!-- Card(s) Cancellation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carnet</masterLabel>
+        <translation><!-- Carnet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carnet other questions</masterLabel>
+        <translation><!-- Carnet other questions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change of Invoice Distribution/Freq</masterLabel>
+        <translation><!-- Change of Invoice Distribution/Freq --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment details change</masterLabel>
+        <translation><!-- Payment details change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ClubSmart</masterLabel>
+        <translation><!-- ClubSmart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Collection Agency/Legal</masterLabel>
+        <translation><!-- Collection Agency/Legal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Company Name Change</masterLabel>
+        <translation><!-- Company Name Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Company data change</masterLabel>
+        <translation><!-- Company data change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Confirmation</masterLabel>
+        <translation><!-- Confirmation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Person Change</masterLabel>
+        <translation><!-- Contact Person Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Limit (HLA)</masterLabel>
+        <translation><!-- Credit Limit (HLA) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit other requests</masterLabel>
+        <translation><!-- Credit other requests --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Double payment/Deposit execution</masterLabel>
+        <translation><!-- Double payment/Deposit execution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dunning</masterLabel>
+        <translation><!-- Dunning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>E-Shop</masterLabel>
+        <translation>E-Shop</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ECO Program</masterLabel>
+        <translation><!-- ECO Program --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EV Charging</masterLabel>
+        <translation><!-- EV Charging --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FAQs/General queries</masterLabel>
+        <translation><!-- FAQs/General queries --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forgotten PIN code</masterLabel>
+        <translation>Duplikát PINu</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guarantee</masterLabel>
+        <translation>Záruka</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guarantee adjustment</masterLabel>
+        <translation>Úprava záruky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>I&amp;P Other requests</masterLabel>
+        <translation><!-- I&amp;P Other requests --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal 1</masterLabel>
+        <translation><!-- Internal 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invoice Dispute</masterLabel>
+        <translation><!-- Invoice Dispute --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invoice Dispute / Question</masterLabel>
+        <translation>Reklamace / Vysvětlení</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invoice Resend</masterLabel>
+        <translation><!-- Invoice Resend --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manual Transaction</masterLabel>
+        <translation>Ruční zadání transakce</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Online Portals</masterLabel>
+        <translation><!-- Online Portals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New account</masterLabel>
+        <translation><!-- New account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Customer Credentials</masterLabel>
+        <translation>SUI Přístup pro nového zákazníka</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Order new Carnet/Unit</masterLabel>
+        <translation>Objednávka jednotky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Order new card(s)</masterLabel>
+        <translation>Přiobjednávka karty</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation>Ostatní</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parking</masterLabel>
+        <translation>Parkování</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment Advice</masterLabel>
+        <translation>Avízo</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment Terms</masterLabel>
+        <translation>Platební podmínky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment confirmation</masterLabel>
+        <translation>Potvrzení o zaplacení</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing</masterLabel>
+        <translation><!-- Pricing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Question about my Invoice</masterLabel>
+        <translation>Otázky k faktuře</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renewal</masterLabel>
+        <translation>Obnova</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retention</masterLabel>
+        <translation>Retence</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SME Products &amp; Services</masterLabel>
+        <translation><!-- SME Products &amp; Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subaccount</masterLabel>
+        <translation>Podúčet</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Termination</masterLabel>
+        <translation>Výpověď smlouvy</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Termination/Retention</masterLabel>
+        <translation><!-- Termination/Retention --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Toll</masterLabel>
+        <translation>Mýto</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transaction correction</masterLabel>
+        <translation>Oprava Transakce</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VAT Recovery</masterLabel>
+        <translation>Vratky DPH</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WPO</masterLabel>
+        <translation><!-- WPO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Welcome Call</masterLabel>
+        <translation><!-- Welcome Call --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,292 @@
+<apex:page
+    renderAs="pdf"
+    controller="B2BDocumentsCtrl"
+    showHeader="false"
+    sidebar="false"
+    applyBodyTag="false"
+    applyHtmlTag="false"
+    action="{!init}"
+>
+
+    <html>
+        <head>
+            <meta charset="utf-8"/>
+                <style>
+                    .table {
+                        display: table;
+                        width: 100%;
+                    }
+
+                    .table-row {
+                        display: table-row;
+                    }
+
+                    .table-cell {
+                        display: table-cell;
+                        width: 50%;
+                    }
+
+                    .main {
+                        font-size: 14px;
+                        font-family: Times New Roman;
+                    }
+
+                    .links {
+                        color: #1728c2;
+                    }
+
+                    footer {
+                        opacity: 0.5;
+                        font-size: 14px;
+                        text-align: center;
+                        margin-top: 14%;
+                        color: #a19b91;
+                        position: fixed;
+                        bottom: 0;
+                        margin: auto;
+                    }
+               </style>
+        </head>
+
+        <body>
+            <apex:outputPanel rendered="{! documentName = 'B2BInstructionsDE'}">
+                <div>
+                    <apex:image url="{!URLFOR($Resource.e2e_images, 'logo-pdf.jpg')}" width="150px"/>
+                </div>
+                <div class="wrapper">
+                    <div class="main">
+                        <p align="right"><b>Aktivierung Ihres B2B Mandates</b></p>
+                        <p>Das SEPA B2B Firmenlastschrift (Business to Business) soll bei Ihrer Bank aktiviert werden. <br/>
+                        Das ausgefüllte Formular senden Sie bitte in einer Ausfertigung an uns (FLEETCOR) und eine Ausfertigung an Ihre Bank.<br/>
+                        Es ist erforderlich, eine Autorisation bei Ihrer Bank durchzuführen. Entweder mit Hilfe des Registrierungsformulars direkt bei Ihrer Bank (siehe Links unten) oder können Sie unser Formular Ihrer Bank vorlegen und bestätigen lassen <br/>
+                        <b>(unser Formular finden Sie im Anhang inkl. <br/>
+                        Ihre Mandatreferenznummer finden Sie im Text der E-mail).</b><br/>
+                        Beachten Sie bitte, dass nur eine Absendung des Formulars an FLEETCOR ist leider nicht ausreichend.</p>
+                        <p>Registrierung des Mandates bei Ihrer Bank (manche Banken haben das Formular auf der Internetseiten zur Verfügung – in dem Fall sehen Sie ein Link, manche leider nicht – Info dazu finden Sie auch unten):</p>
+                        <div class="links">
+                            <p><a href="https://www.commerzbank.de/portal/media/a-30-sonstige-medien/pdf/beratung-1/broeschuere/muster_sepa-firmenlastschrift-mandat.pdf">Commerzbank</a> (auch für Dresdner Bank)</p>
+                            <p><a href="https://www.apobank.de/content/dam/g8008-0/Footer/Zahlungsverkehr/SEPA/SEPA-Firmenlastschriftmandat_deutsch_englisch.pdf">Deutsche apotheker- und ärztebank</a></p>
+                            <p><a href="https://www.berliner-volksbank.de/content/dam/f0120-0/webn/dokumente/firmenkunden/liquiditaet-und-zahlungsverkehr/sepa/firmenlastschrift-mandat.pdf">Volksbank</a> (dient auch für Raiffeisenbank und DZ Bank)</p>
+                            <p><a href="https://www.bayernlb.de/internet/media/de/ir/downloads_1/zahlungsverkehr/sonstiges_4/MT_SEPA_FirmenLS.pdf">Landesbank</a></p>
+                            <p>Sparkasse – nur bei dem Bankberater zur Verfügung</p>
+                            <p>Weberbank – nach der Anmeldung in die Internetbank</p>
+                            <p>DKB – nach der Anmeldung in die Internetbank</p>
+                            <p>Deutsche Bank - nur bei dem Bankberater zur Verfügung</p>
+                            <p>Hypovereinsbank – nur bei dem Bankberater zur Verfügung</p>
+                            <p>Auf dem Formular sind folgende Daten auszufüllen:</p>
+                        </div>
+                        <div class="table">
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    •	Name des Zahlungsempfängers:
+                                </div>
+                                <div class="table-cell">
+                                    FleetCor Deutschland GmbH
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    •	Gläubiger-Identifikationsnummer:
+                                </div>
+                                <div class="table-cell">
+                                    DE 33 ZZZ00001436721
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    •	Mandatsreferenznummer:
+                                </div>
+                                <div class="table-cell">
+                                    {! umr}
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    •	Anschrift des Zahlungsempfängers:
+                                </div>
+                                <div class="table-cell">
+                                    Frankenstrasse 150 c, 90461 Nürnberg
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>Nach der Ausfüllung und Absendung erhalten Sie eine Bestätigung von Ihrer Bank, Sie können die Autorisation auch durch Ihre Internetbanking durchführen.<br/>
+                        Wenn das Formular Ihrer Bank vorgelegt wird und bestätigt wird, werden die Zahlungen automatisch von Ihrem Bankkonto abgebucht.</p>
+                        <p>Falls Ihr Mandat B2B nicht aktiviert wird, die Abbuchungen werden nicht funktionieren und werden abgelehnt. In diesem Fall sind wir berechtigt, Ihre Tankkarten kurzfristig zu sperren.  Sie werden darüber per E-Mail informiert.</p>
+                        <p>Für eventuelle Fragen wenden Sie sich an Kundenservice Ihrer Bank.</p>
+                        <p>Ihre Fragen an Kreditabteilung FleetCor wegen Zahlungen senden Sie bitte an: <a href="credit@fleetcor.de">credit@fleetcor.de</a></p>
+
+                        <footer>
+                            <div style="text-align:center">
+                                FleetCor Deutschland GmbH| Frankenstraße 150 c | 90461 Nürnberg| Deutschland HRB: 98382 Amtsgericht Frankfurt / Main
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{! documentName = 'B2BInstructionsNL'}">
+                <div>
+                    <apex:image url="{!URLFOR($Resource.e2e_images, 'logo-pdf.jpg')}" width="150px"/>
+                </div>
+                <div class="wrapper">
+                    <div class="main">
+                        <p align="right"><b>Activering van uw B2B mandaat</b></p>
+                        <p>Een B2B (Business to Business) mandaat dient u te activeren via uw bank. U stuurt het ingevulde mandaat digitaal op naar FLEETCOR en naar uw bank. Daarnaast dient u de machtiging bij uw bank te registreren door middel van het registratieformulier van uw bank. <b>Let op,</b> het is niet voldoende het B2B mandaat enkel naar FLEETCOR te sturen.</p>
+                        <p>Informatie omtrent het aanmelden van een B2B mandaat per bank:</p>
+                        <div class="table">
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <a href="https://www.ing.nl/zakelijk/betalen/geld-ontvangen/incassomachtiging-beheren/registreren-wijzigen-intrekken.html">ING Bank</a>
+                                </div>
+                                <div class="table-cell">
+                                    <a href="https://www.rabobank.nl/images/registratieformulier-zakelijke-europese-incasso-b2b_29979501.pdf">Rabobank</a>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <a href="https://www.abnamro.nl/nl/zakelijk/producten/betalen/sepa/incasso/het-registreren-van-de-b2b-machtiging-geincasseerde.html">ABN AMRO</a>
+                                </div>
+                                <div class="table-cell">
+                                    <a href="https://www.snsbank.nl/zakelijk/zakelijk-betalen/automatische-incasso-registreren.html">SNS Bank</a>
+                                </div>
+                            </div>
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <a href="https://www.knab.nl/zakelijk/betalen/zakelijke-incasso-registreren">KNAB Bank</a>
+                                </div>
+                                <div class="table-cell">
+                                    <a href="https://www.vanlanschot.nl/-/media/files/faq/sepa-incasso-zakelijke-machtiging-registreren.ashx">Van Lanschot</a>
+                                </div>
+                            </div>
+                        </div>
+                        <p>Op het registratieformulier van uw bank dient u een aantal gegevens in te vullen, onder meer:</p>
+                        <ul>
+                            <li>Naam incassant: <b>FLEETCOR Technologieën B.V.</b></li>
+                            <li>Incassant indentificatiecode (incassant ID): <b>DE87ZZZ00001536435</b></li>
+                            <li>Kenmerk/referentie machtiging: <b>{! umr}</b></li>
+                            <li>Soort machtiging: <b>doorlopend</b></li>
+                            <li>Minimum/maximum bedrag: <b>geen</b> (om stornering te voorkomen)</li>
+                        </ul>
+                        <p>Nadat u het registratieformulier ingevuld en verstuurd heeft, ontvangt u een bevestiging van uw bank. U kunt dit tevens verifiëren via uw internetbankieren.</p>
+                        <p>Na bevestiging van uw bank zullen uw toekomstige facturen automatisch geïncasseerd worden.<br/></p>
+                        <p>Indien uw B2B mandaat niet geactiveerd is, kunnen de FLEETCOR factuurbedragen niet automatisch worden afgeschreven van uw bankrekening. Bij een mislukte afschrijfpoging zijn wij genoodzaakt uw Shell Cards tijdelijk te blokkeren. U wordt hiervan op de hoogte gesteld via e-mail.<br/></p>
+                        <p>Mocht u vragen hebben over de aanmelding van uw B2B mandaat, adviseren wij u contact op te nemen met de klantenservice van uw bank.</p>
+                        <p>Bij overige vragen over betalingen aan FLEETCOR kunt u contact opnemen via <a href="credit@fleetcor.nl">credit@fleetcor.nl</a></p>
+                    </div>
+
+                    <footer>
+                        <div style="text-align:center">
+                            FLEETCOR Technologieën B.V. | P.J. Oudweg 4 | 1314 CH Almere | Nederland KvK-nr.: 09094215 | btw-nr.: NL001435784B01
+                        </div>
+                    </footer>
+                </div>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{! documentName = 'B2BInstructionsBENL'}">
+                <div>
+                    <apex:image url="{!URLFOR($Resource.e2e_images, 'logo-pdf.jpg')}" width="150px"/>
+                </div>
+                <div class="wrapper">
+                    <div class="main">
+                        <p align="right"><b>Activering van uw B2B mandaat - domiciliëring</b></p>
+                        <p>Een B2B (Business to Business) mandaat dient u te activeren via uw bank. U stuurt het ingevulde mandaat digitaal op naar FLEETCOR en naar uw bank. Daarnaast dient u de machtiging bij uw bank te registreren door middel van het registratieformulier van uw bank. Let op, het is niet voldoende het B2B mandaat enkel naar FLEETCOR te sturen.<br/></p>
+                        <p>Op het registratieformulier van uw bank dient u een aantal gegevens in te vullen, onder meer:</p>
+                        <ul>
+                            <li>Naam incassant: <b>FLEETCOR Belgium bvba</b></li>
+                            <li>Incassant indentificatiecode (incassant ID): <b>DE17ZZZ00001536434</b></li>
+                            <li>Kenmerk/referentie machtiging: <b>{! umr}</b></li>
+                            <li>Soort machtiging: <b>doorlopend</b></li>
+                            <li>Minimum/maximum bedrag: <b>geen</b> (om stornering te voorkomen)<br/></li>
+                        </ul>
+                        <p>Nadat u het registratieformulier ingevuld en verstuurd heeft, ontvangt u een bevestiging van uw bank. U kunt dit tevens verifiëren via uw internetbankieren.</p>
+                        <p>Na bevestiging van uw bank zullen uw toekomstige facturen gedomicilieerd worden.<br/></p>
+                        <p>Indien uw B2B mandaat niet geactiveerd is, kunnen de FLEETCOR factuurbedragen niet automatisch worden afgeschreven van uw bankrekening. Bij een mislukte afschrijfpoging zijn wij genoodzaakt uw Shell Cards tijdelijk te blokkeren. U wordt hiervan op de hoogte gesteld via e-mail.<br/></p>
+                        <p>Mocht u vragen hebben over de aanmelding van uw B2B mandaat, adviseren wij u contact op te nemen met de klantenservice van uw bank.</p>
+                        <p>Bij overige vragen over betalingen aan FLEETCOR kunt u contact opnemen via <a href="credit@fleetcorcards.be">credit@fleetcorcards.be</a></p>
+                    </div>
+
+                    <footer>
+                        <div style="text-align:center">
+                            FLEETCOR Belgium bvba c/o TMF | Havenlaan 86c Bus 204 | 1000 Brussel | België btw-nr.: BE0505807092
+                        </div>
+                    </footer>
+                </div>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{! documentName = 'B2BInstructionsFR'}">
+                <div>
+                    <apex:image url="{!URLFOR($Resource.e2e_images, 'logo-pdf.jpg')}" width="150px"/>
+                </div>
+                <div class="wrapper">
+                    <div class="main">
+                        <p>Nous vous remercions de bien vouloir transmettre une copie du formulaire de prélèvement SEPA B2B (Business to Business) à votre banque et une à FLEETCOR.</p>
+                        <p>L'autorisation de votre banque est requise. Pour cela, vous pouvez utiliser le formulaire d'inscription directement auprès de votre banque ou soumettre notre formulaire à votre banque et le faire confirmer (notre formulaire se trouve en annexe, avec un numéro de référence de mandat).</p>
+                        <p>Veuillez noter que l'envoi du formulaire à FLEETCOR est insuffisant.</p>
+                        <p>L’enregistrement du mandat est disponible auprès de votre banque (certaines banques ont le formulaire disponible sur leur site web.)</p>
+                        <p>Après avoir rempli et soumis votre formulaire, vous recevrez une confirmation de la part de votre banque. Vous pouvez également effectuer l'autorisation via votre banque en ligne.</p>
+                        <p>Lorsque le formulaire est confirmé par votre banque, les paiements sont automatiquement débités de votre compte bancaire.</p>
+                        <p>Si votre mandat B2B n'est pas activé, les débits ne seront pas fonctionnels et seront rejetés. Dans ce cas, nous sommes en droit de bloquer vos cartes de carburant à court terme. Vous en serez informé par e-mail.</p>
+                        <p>Si vous avez des questions, veuillez contacter le service client de votre banque.</p>
+                        <p>Veuillez envoyer vos questions au service de crédit FLEETCOR concernant les paiements à: <a href="credit@fleetcor.fr">credit@fleetcor.fr</a></p>
+                    </div>
+                </div>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{! documentName = 'B2BInstructionsBEFR'}">
+                <div>
+                    <apex:image url="{!URLFOR($Resource.e2e_images, 'logo-pdf.jpg')}" width="150px"/>
+                </div>
+                <div class="wrapper">
+                    <div class="main">
+                        <p>Nous vous remercions de bien vouloir transmettre une copie du formulaire de prélèvement SEPA B2B (Business to Business) à votre banque et une à FLEETCOR.</p>
+                        <p>L'autorisation de votre banque est requise. Pour cela, vous pouvez utiliser le formulaire d'inscription directement auprès de votre banque ou soumettre notre formulaire à votre banque et le faire confirmer (notre formulaire se trouve en annexe, avec un numéro de référence de mandat).</p>
+                        <p>Veuillez noter que l'envoi du formulaire à FLEETCOR est insuffisant.</p>
+                        <p>L’enregistrement du mandat est disponible auprès de votre banque (certaines banques ont le formulaire disponible sur leur site web.)</p>
+                        <p>Après avoir rempli et soumis votre formulaire, vous recevrez une confirmation de la part de votre banque. Vous pouvez également effectuer l'autorisation via votre banque en ligne.</p>
+                        <p>Lorsque le formulaire est confirmé par votre banque, les paiements sont automatiquement débités de votre compte bancaire.</p>
+                        <p>Si votre mandat B2B n'est pas activé, les débits ne seront pas fonctionnels et seront rejetés. Dans ce cas, nous sommes en droit de bloquer vos cartes de carburant à court terme. Vous en serez informé par e-mail.</p>
+                        <p>Si vous avez des questions, veuillez contacter le service client de votre banque.</p>
+                        <p>Veuillez envoyer vos questions au service de crédit FLEETCOR concernant les paiements à: <a href="credit@fleetcorcards.be">credit@fleetcorcards.be</a></p>
+                    </div>
+                </div>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{! documentName = 'B2BSepaMandateDE' }">
+                <div id="B2BSepaMandate">
+                    <div class="sepa-font-11 content-wrap">
+                        <img src="{! URLFOR($Resource.B2BSepaMandateDE )}" width="90%" style="margin-left: 45px;"/>
+                    </div>
+                </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! documentName = 'B2BSepaMandateNL' }">
+                <div id="B2BSepaMandate">
+                    <div class="sepa-font-11 content-wrap">
+                        <img src="{! URLFOR($Resource.B2BSepaMandateNL )}" width="90%" style="margin-left: 45px;"/>
+                    </div>
+                </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! documentName = 'B2BSepaMandateBENL' }">
+                <div id="B2BSepaMandate">
+                    <div class="sepa-font-11 content-wrap">
+                        <img src="{! URLFOR($Resource.B2BSepaMandateBENL )}" width="90%" style="margin-left: 45px;"/>
+                    </div>
+                </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! documentName = 'B2BSepaMandateFR' }">
+                <div id="B2BSepaMandate">
+                    <div class="sepa-font-11 content-wrap">
+                        <img src="{! URLFOR($Resource.B2BSepaMandateFR )}" width="90%" style="margin-left: 45px;"/>
+                    </div>
+                </div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! documentName = 'B2BSepaMandateBEFR' }">
+                <div id="B2BSepaMandate">
+                    <div class="sepa-font-11 content-wrap">
+                        <img src="{! URLFOR($Resource.B2BSepaMandateBEFR )}" width="90%" style="margin-left: 45px;"/>
+                    </div>
+                </div>
+            </apex:outputPanel>
+        </body>
+    </html>
+</apex:page>

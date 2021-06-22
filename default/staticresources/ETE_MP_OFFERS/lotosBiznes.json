@@ -1,0 +1,99 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "Wait until you receive your Lotos cards and PIN numbers by post.",
+                "pl": "Poczekaj, aż pocztą otrzymasz karty Lotos i numery PIN."
+            },
+            {
+                "en": "You can now use your card(s) for the first time while refueling at a Lotos Station.",
+                "pl": "Teraz możesz skorzystać po raz pierwszy ze swojej karty podczas tankowania na stacji Lotos."
+            },
+            {
+                "en": "Your card has now been activated! Enjoy a care-free refueling experience with your Lotos fuel cards.",
+                "pl": "Poprzez pierwsze użycie Twoja karta została aktywowana. Ciesz się tankowaniem dzięki kartom paliwowym Lotos."
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Discount on diesel and gasoline at LOTOS stations",
+                    "pl": "Zniżka na olej napędowy i benzynę na stacjach LOTOS"
+                },
+                "value": {
+                    "en": "7 GR brutto/liter",
+                    "pl": "7 GR brutto/litr"
+                }
+            },
+            {
+                "label": {
+                    "en": "Carwash discount at LOTOS stations",
+                    "pl": "Zniżka na myjnie na stacjach LOTOS"
+                },
+                "value": {
+                    "en": "5%",
+                    "pl": "5%"
+                }
+            },
+            {
+                "label": {
+                    "en": "Card issuance and delivery",
+                    "pl": "Wydawanie i dostarczanie karty"
+                },
+                "value": {
+                    "en": "FREE",
+                    "pl": "NIEPOBIERANA"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "Lotos Fuel Card"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "LOTOS FUEL CARD",
+            "pl": "Karta paliwowa Lotos"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/card_lotos_1.png"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "LOTOS Biznes card can be used for any company, regardless of the type and size of the fleet. Cards are accepted at more than 500 LOTOS stations, including 21 MOP (Miejsce Obsługi Podróżnych) stations on the A1, A2, A4, A6 motorways and on the S3 and S7 routes.",
+            "pl": "Karta LOTOS Biznes to korzyści dla każdego przedsiębiorstwa, bez względu na rodzaj i wielkość floty pojazdów. Karty akceptowane są na ponad 500 stacjach LOTOS, w tym 21 stacjach MOP (Miejsce Obsługi Podróżnych) przy autostradach A1, A2, A4, A6 i przy trasach S3 i S7."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "LOTOS Biznes",
+            "pl": "LOTOS Biznes"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "LOTOS Biznes",
+            "pl": "LOTOS Biznes"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "Karta LOTOS Biznes",
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Lotos Biznes",
+            "cardsCount_default": "1",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "monthlyFuelConsumption_max": "5000",
+            "monthlyFuelConsumption_min": "50",
+            "order": 4
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Poland Lotos": "/resource/ETE_DOCUMENTS_1/tariffSheets_lotosBiznes.jpg"
+    }
+}

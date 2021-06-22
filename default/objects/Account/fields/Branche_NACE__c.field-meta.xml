@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Branche_NACE__c</fullName>
+    <externalId>false</externalId>
+    <label>Branche (NACE)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Accommodation and food service activities</fullName>
+                <default>false</default>
+                <label>Accommodation and food service activities</label>
+            </value>
+            <value>
+                <fullName>Activities of extraterritorial organizations and bodies</fullName>
+                <default>false</default>
+                <label>Activities of extraterritorial organizations and bodies</label>
+            </value>
+            <value>
+                <fullName>Activities of households as employers</fullName>
+                <default>false</default>
+                <label>Activities of households as employers</label>
+            </value>
+            <value>
+                <fullName>Administrative and support service activities</fullName>
+                <default>false</default>
+                <label>Administrative and support service activities</label>
+            </value>
+            <value>
+                <fullName>Agriculture, forestry and fishing</fullName>
+                <default>false</default>
+                <label>Agriculture, forestry and fishing</label>
+            </value>
+            <value>
+                <fullName>Arts, entertainment and recreation</fullName>
+                <default>false</default>
+                <label>Arts, entertainment and recreation</label>
+            </value>
+            <value>
+                <fullName>Construction</fullName>
+                <default>false</default>
+                <label>Construction</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Electricity, gas, steam and air conditioning supply</fullName>
+                <default>false</default>
+                <label>Electricity, gas, steam and air conditioning supply</label>
+            </value>
+            <value>
+                <fullName>Financial and insurance activities</fullName>
+                <default>false</default>
+                <label>Financial and insurance activities</label>
+            </value>
+            <value>
+                <fullName>Human health and social work activities</fullName>
+                <default>false</default>
+                <label>Human health and social work activities</label>
+            </value>
+            <value>
+                <fullName>Information and communication</fullName>
+                <default>false</default>
+                <label>Information and communication</label>
+            </value>
+            <value>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+                <label>Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Mining and quarrying</fullName>
+                <default>false</default>
+                <label>Mining and quarrying</label>
+            </value>
+            <value>
+                <fullName>Other services activities</fullName>
+                <default>false</default>
+                <label>Other services activities</label>
+            </value>
+            <value>
+                <fullName>Professional, scientific and technical activities</fullName>
+                <default>false</default>
+                <label>Professional, scientific and technical activities</label>
+            </value>
+            <value>
+                <fullName>Public administration and defense; compulsory social security</fullName>
+                <default>false</default>
+                <label>Public administration and defense; compulsory social security</label>
+            </value>
+            <value>
+                <fullName>Real estate activities</fullName>
+                <default>false</default>
+                <label>Real estate activities</label>
+            </value>
+            <value>
+                <fullName>Transporting and storage</fullName>
+                <default>false</default>
+                <label>Transporting and storage</label>
+            </value>
+            <value>
+                <fullName>Water supply; sewerage; waste management and remediation activities</fullName>
+                <default>false</default>
+                <label>Water supply; sewerage; waste management and remediation activities</label>
+            </value>
+            <value>
+                <fullName>Wholesale and retail trade; repair of motor vehicles and motorcycles</fullName>
+                <default>false</default>
+                <label>Wholesale and retail trade; repair of motor vehicles and motorcycles</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Počet vozů, které budou používat systém CCS Carnet. --></help>
+    <label><!-- Počet vozů s CCS Carnet --></label>
+    <name>Pocet_vozu_s_CCS_Carnet__c</name>
+</CustomFieldTranslation>

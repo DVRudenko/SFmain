@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__Attachment_NameEx__c</fullName>
+    <deprecated>false</deprecated>
+    <description>This longer attachment name field supercedes the Attachment_Name field which was 80 characters and could not hold the max. file name length.</description>
+    <externalId>false</externalId>
+    <label>Attachment Name Extended</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

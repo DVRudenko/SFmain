@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_bill__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>First bill more than 500 000</description>
+    <externalId>false</externalId>
+    <inlineHelpText>First bill more than 500 000</inlineHelpText>
+    <label>First bill</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

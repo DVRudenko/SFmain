@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Lost_Reasons__c</fullName>
+    <externalId>false</externalId>
+    <label>PPR Lost Reasons</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Rewards Programs/Rebates/Discounts</fullName>
+                <default>false</default>
+                <label>Rewards Programs/Rebates/Discounts</label>
+            </value>
+            <value>
+                <fullName>No suitable gas stations</fullName>
+                <default>false</default>
+                <label>No suitable gas stations</label>
+            </value>
+            <value>
+                <fullName>Gov't/Non-Profit/Tax Exempt</fullName>
+                <default>false</default>
+                <label>Gov't/Non-Profit/Tax Exempt</label>
+            </value>
+            <value>
+                <fullName>Onsite Tank(s)</fullName>
+                <default>false</default>
+                <label>Onsite Tank(s)</label>
+            </value>
+            <value>
+                <fullName>Denial of credit</fullName>
+                <default>false</default>
+                <label>Denial of credit</label>
+            </value>
+            <value>
+                <fullName>Bad Prior Experience</fullName>
+                <default>false</default>
+                <label>Bad Prior Experience</label>
+            </value>
+            <value>
+                <fullName>Unable to Reach</fullName>
+                <default>false</default>
+                <label>Unable to Reach</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>No Company Vehicles</fullName>
+                <default>false</default>
+                <label>No Company Vehicles</label>
+            </value>
+            <value>
+                <fullName>Not a Valid Business</fullName>
+                <default>false</default>
+                <label>Not a Valid Business</label>
+            </value>
+            <value>
+                <fullName>Out of Business</fullName>
+                <default>false</default>
+                <label>Out of Business</label>
+            </value>
+            <value>
+                <fullName>Existing Customer</fullName>
+                <default>false</default>
+                <label>Existing Customer</label>
+            </value>
+            <value>
+                <fullName>Return to funnel</fullName>
+                <default>false</default>
+                <label>Return to funnel</label>
+            </value>
+            <value>
+                <fullName>Refusal from PPR</fullName>
+                <default>false</default>
+                <label>Refusal from PPR</label>
+            </value>
+            <value>
+                <fullName>Bad Data/Wrong Phone Number</fullName>
+                <default>false</default>
+                <label>Bad Data/Wrong Phone Number</label>
+            </value>
+            <value>
+                <fullName>Re-request</fullName>
+                <default>false</default>
+                <label>Re-request</label>
+            </value>
+            <value>
+                <fullName>STK - terminal</fullName>
+                <default>false</default>
+                <label>STK - terminal</label>
+            </value>
+            <value>
+                <fullName>Email SPAM</fullName>
+                <default>false</default>
+                <label>Email SPAM</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Rewards Programs/Rebates/Discounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>No suitable gas stations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Gov't/Non-Profit/Tax Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Onsite Tank(s)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Denial of credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Bad Prior Experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Unable to Reach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Not Interested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>No Company Vehicles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Not a Valid Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Out of Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Existing Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Return to funnel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Refusal from PPR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Bad Data/Wrong Phone Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Re-request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>STK - terminal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Email SPAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отказ</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

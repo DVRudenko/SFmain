@@ -1,0 +1,44 @@
+<!--
+ - Created by Andrei.Katunin on 20.07.2018.
+ -->
+
+<apex:component id="E2EComponentOutputOrderDetailProperty">
+
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map" />
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="value of outputPanel" />
+
+    <apex:attribute name="tariff"
+                    type="String"
+                    description="value of outputPanel" />
+
+    <apex:attribute name="className"
+                    type="String"
+                    description="class outputpanel" />
+
+    <apex:attribute name="productID"
+                    type="String"
+                    description="parent map"/>
+    
+    <apex:attribute name="source"
+                    type="String"
+                    description="parent map" />
+
+    <apex:repeat var="productProperty" value="{! pageMap['PRODUCTS'].offers[source].products[productID].productProperties }">
+        <apex:outputPanel layout="block" styleClass="block__inputs validations goods">
+            <apex:outputLabel escape="false" styleClass="block__tables--title" value="{! pageMap['PRODUCTS'].offers[source].products[productID].productProperties[productProperty].propertyValue }"/>
+            <apex:outputPanel layout="block" styleClass="fake__inputs-text">
+                <apex:repeat var="item" value="{! pageMap['PRODUCTS'].offers[source].products[productID].productProperties[productProperty].propertyTariffs[pageMap['PRODUCT TARIFF'].elementItemsMap['TARIFF ID'].value].properties[productProperty].propertyItems }" id="listRepeat1">
+                    <span>&#8226; </span>
+                    <apex:outputText escape="false" value="{!IF(item.Value__c == null, '', item.Value__c)}"/>
+                    <BR/>
+                </apex:repeat>
+            </apex:outputPanel>
+        </apex:outputPanel>
+    </apex:repeat>
+
+</apex:component>

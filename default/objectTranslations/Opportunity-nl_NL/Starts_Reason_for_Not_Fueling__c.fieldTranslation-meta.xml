@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pick list of reasons for not fueling for Starts Team. --></help>
+    <label><!-- Starts: Reason for Not Fueling --></label>
+    <name>Starts_Reason_for_Not_Fueling__c</name>
+    <picklistValues>
+        <masterLabel>Cards were not given to the drivers</masterLabel>
+        <translation><!-- Cards were not given to the drivers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competitor Cards</masterLabel>
+        <translation><!-- Competitor Cards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer never ordered Cards</masterLabel>
+        <translation><!-- Customer never ordered Cards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Did not receive Cards</masterLabel>
+        <translation><!-- Did not receive Cards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Did not receive PINs</masterLabel>
+        <translation><!-- Did not receive PINs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forgot having Cards</masterLabel>
+        <translation><!-- Forgot having Cards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell fuel station too far away</masterLabel>
+        <translation><!-- Shell fuel station too far away --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wants to start pumping later (seasonality)</masterLabel>
+        <translation><!-- Wants to start pumping later (seasonality) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Winback customer</masterLabel>
+        <translation><!-- Winback customer --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

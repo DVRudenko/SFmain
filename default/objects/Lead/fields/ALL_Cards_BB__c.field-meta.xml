@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALL_Cards_BB__c</fullName>
+    <externalId>false</externalId>
+    <formula>Return_funnel_Opp__r.ALL_Cards__c</formula>
+    <label>ALL Cards return to funnel</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

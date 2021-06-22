@@ -1,0 +1,13 @@
+<template>
+    <div class={computedElementClass} tabindex="0" onmouseover={handleMouseOver} onclick={handleMouseOver}>
+        ?
+        <span class="fltbase-tooltip__arrow" onmouseover={stopEvent}></span>
+        <div    
+            class="fltbase-tooltip__content" 
+            data-value={value} 
+            onmouseover={stopEvent} 
+            onclick={stopEvent} 
+            lwc:dom="manual"
+        ></div>
+    </div>
+</template>

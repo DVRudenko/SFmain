@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_2_0_PL_for_distribution</fullName>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Anzahl_der_Karten__c</columns>
+    <columns>Total_consumption_l_month__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>E2E_Step__c</columns>
+    <columns>E2E_Finish_Details__c</columns>
+    <columns>E2E_Status__c</columns>
+    <columns>E2E_Errors__c</columns>
+    <columns>E2E_Last_Activity__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.FIRST_NAME</field>
+        <operation>contains</operation>
+        <value>E2E,Robert</value>
+    </filters>
+    <filters>
+        <field>Registered_Country__c</field>
+        <operation>equals</operation>
+        <value>Poland</value>
+    </filters>
+    <filters>
+        <field>E2E_2__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>E2E 2.0 PL for distribution</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Teamleiter_Inbound_2</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

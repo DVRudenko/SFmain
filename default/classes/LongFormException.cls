@@ -1,0 +1,1 @@
+global class LongFormException extends Exception {}

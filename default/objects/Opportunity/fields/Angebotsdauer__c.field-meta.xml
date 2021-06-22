@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Angebotsdauer__c</fullName>
+    <externalId>false</externalId>
+    <label>Angebotsdauer</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3 Monate</fullName>
+                <default>false</default>
+                <label>3 Monate</label>
+            </value>
+            <value>
+                <fullName>4 Monate</fullName>
+                <default>false</default>
+                <label>4 Monate</label>
+            </value>
+            <value>
+                <fullName>5 Monate</fullName>
+                <default>false</default>
+                <label>5 Monate</label>
+            </value>
+            <value>
+                <fullName>6 Monate</fullName>
+                <default>false</default>
+                <label>6 Monate</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Home Station offer (v.1)</controllingFieldValue>
+            <valueName>3 Monate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Home Station offer (v.1)</controllingFieldValue>
+            <valueName>4 Monate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Home Station offer (v.1)</controllingFieldValue>
+            <valueName>5 Monate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Home Station offer (v.1)</controllingFieldValue>
+            <valueName>6 Monate</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

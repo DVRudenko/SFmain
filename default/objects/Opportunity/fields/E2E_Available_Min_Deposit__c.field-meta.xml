@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Available_Min_Deposit__c</fullName>
+    <externalId>false</externalId>
+    <formula>E2E_Data_Object__r.Available_Min_Deposit__c</formula>
+    <label>E2E Available Min Deposit</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

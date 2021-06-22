@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Call_status__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Call status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>dovoláno</fullName>
+                <default>false</default>
+                <label>dovoláno</label>
+            </value>
+            <value>
+                <fullName>číslo neexistuje</fullName>
+                <default>false</default>
+                <label>číslo neexistuje</label>
+            </value>
+            <value>
+                <fullName>nezvedá, obsazeno</fullName>
+                <default>false</default>
+                <label>nezvedá, obsazeno</label>
+            </value>
+            <value>
+                <fullName>záznamník, fax</fullName>
+                <default>false</default>
+                <label>záznamník, fax</label>
+            </value>
+            <value>
+                <fullName>zavolat jindy, nemá čas</fullName>
+                <default>false</default>
+                <label>zavolat jindy, nemá čas</label>
+            </value>
+            <value>
+                <fullName>domluveno následné volání</fullName>
+                <default>false</default>
+                <label>domluveno následné volání</label>
+            </value>
+            <value>
+                <fullName>nevoláno</fullName>
+                <default>false</default>
+                <label>nevoláno</label>
+            </value>
+            <value>
+                <fullName>odmítnutý hovor - monitoring</fullName>
+                <default>false</default>
+                <label>odmítnutý hovor - monitoring</label>
+            </value>
+            <value>
+                <fullName>omyl</fullName>
+                <default>false</default>
+                <label>omyl</label>
+            </value>
+            <value>
+                <fullName>odmítnutý hovor</fullName>
+                <default>false</default>
+                <label>odmítnutý hovor</label>
+            </value>
+            <value>
+                <fullName>definitivně nezastižen</fullName>
+                <default>false</default>
+                <label>definitivně nezastižen</label>
+            </value>
+            <value>
+                <fullName>nevoláno - ve volání jinde</fullName>
+                <default>false</default>
+                <label>nevoláno - ve volání jinde</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

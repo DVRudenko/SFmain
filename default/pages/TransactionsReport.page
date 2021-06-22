@@ -1,0 +1,91 @@
+<apex:page controller="TransactionsReportController" action="{! init}" sidebar="false" showHeader="false">
+    <script src="https://signin.kontomatik.com/assets/signin-widget.js"></script>   
+    <style>
+        .footer {
+            width: 400px; 
+            margin: 3% auto 0;
+        }
+
+        .widget {
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .form {
+            width: 400px;
+            height: 560px;
+            margin: 0 auto;
+        }
+
+        .confirmMessage {
+            color: green;
+            text-align: center;
+            font-size: 18px;
+            background-color: none;
+            border-color: none;
+        }
+
+        .errorMessage {
+            color: red;
+            text-align: center;
+            font-size: 18px;
+            background-color: none;
+            border-color: none;
+        }
+    </style>
+    <div class="footer">
+        <apex:image width="100%" value="{! URLFOR($Resource.Bank_Transactions, 
+        'img/fltEuroshellCardLogo_PL.jpg')}"/>
+    </div>    
+    <div class="widget" id="kontomatik"></div>
+    <script>
+        embedKontomatik({
+            client: '{! userName}',
+            divId: 'kontomatik',
+            showFavicons: true,
+            ownerExternalId: '{! opportunityId}',
+            onSuccess: function(target, sessionId, sessionIdSignature) {
+                initiateDefaultImport(sessionId, sessionIdSignature);
+                document.getElementById('kontomatik').style.display='none';
+            },
+            styles: {
+                alertErrorBgColor: '#f4f4f4',
+                alertErrorBorderColor: 'transparent',
+                alertErrorTextColor: '#f62930',
+                borderRadius: '6px',
+                btnBgColor: '#f62930',
+                btnBorderColor: '#f62930',
+                btnPrimaryTextColor: '#fcf3ee',
+                btnPrimaryBgColor: '#f62930',
+                btnPrimaryBorderColor: '#f62930',
+                btnTextColor: '#fcf3ee',
+                inputBgColor: '#ffffff',
+                inputBorderColor: '#ccc',
+                inputBorderFocusColor: '#808080',
+                textColor: '#222222',
+            },
+            locale: 'pl',
+        });
+    </script>
+    <noscript>
+        <div class="widget">
+            <div class="errorMessage">JavaScript is not enabled!</div>
+        </div>
+    </noscript>
+    <apex:form id="formId">
+        <apex:actionFunction name="initiateDefaultImport" action="{! initiateDefaultImport }" reRender="formId">
+            <apex:param name="sessionId" value=""/>
+            <apex:param name="sessionIdSignature" value=""/>
+        </apex:actionFunction>
+        <apex:outputPanel rendered="{! isForm}">
+            <div class="form" style="margin-top: 1%">
+                <div class="errorMessage">{! errorMessage }</div>
+                <div class="confirmMessage">{! confirmMessage }</div>
+                <apex:actionPoller action="{! importData}" enabled="{! isPolling }" reRender="formId" interval="5"/>
+                <div style="text-align: center; margin-top: 20px">
+                    <apex:image value="/img/loading32.gif" rendered="{! isLoading }"/>
+                </div>
+            </div>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

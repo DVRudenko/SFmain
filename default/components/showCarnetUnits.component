@@ -1,0 +1,48 @@
+<apex:component controller="showCarnetUnits" access="global">
+<apex:attribute name="OppId" type="Id" description="Opportunity Id" assignTo="{!OpportunityId}"/>
+
+        <table border = "1">
+                 <tr>
+                    <th>Carnet Unit</th>
+                    <th>Pricing Approval Status</th>
+                    <th>Number of Units</th>
+                    <th>Carnet Tariff</th>
+                    <th>Contract term</th>
+                    <th>Monitoring in EU</th>
+                    <th>Monitoring in other European countries</th>
+                    <th>Standard Unit Package Price</th>
+                    <th>Total One-time Payment</th>
+                    <th>Total Monthly Payment</th>   
+                </tr>
+            <apex:repeat value="{!carnet}" var="c">
+                <tr>
+                    <td><a href="https://eu9.salesforce.com/{!c.Id}">{!c.Name}</a></td>
+                    <td>{!c.Pricing_Approval_Status__c}</td>
+                    <td>{!c.Number_of_Units__c}</td>
+                    <td>{!c.Carnet_Tariff__c}</td>
+                    <td>{!c.Contract_term__c}</td>
+                    <td>{!c.Monitoring_in_EU__c}</td>
+                    <td>{!c.Monitoring_in_other_European_countries__c}</td>
+                    <td>{!c.Standard_Unit_Package__c}</td>
+                    <td>PLN {!c.Total_One_time_Payment__c}</td>
+                    <td>PLN {!c.Total_Monthly_Payment__c}</td>
+                </tr>
+        </apex:repeat>
+        </table>
+        <br></br>
+        <table border = "1">
+                <tr>
+                    <th>Additional Hardware</th>
+                    <th>Pricing Approval Status</th>
+                    <th>Total One-time Payment</th>
+                </tr>
+            <apex:repeat value="{!ahw}" var="a">
+                <tr>
+                    <td><a href="https://eu9.salesforce.com/{!a.Id}">{!a.Name}</a></td>
+                    <td>{!a.Pricing_Approval_Status__c}</td>
+                    <td>PLN {!a.Total_One_time_Payment__c}</td>
+                </tr>
+        </apex:repeat>      
+    </table>
+    
+</apex:component>

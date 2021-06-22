@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>id контрагента в Транзите</label>
+    <name>E2E_Transit_Cont_Id__c</name>
+</CustomFieldTranslation>

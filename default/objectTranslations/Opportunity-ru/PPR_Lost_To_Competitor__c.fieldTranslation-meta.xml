@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Если потенциальный клиент ушел к конкуренту, укажите наименование этого конкурента</help>
+    <label>Ушел к конкуренту</label>
+    <name>PPR_Lost_To_Competitor__c</name>
+    <picklistValues>
+        <masterLabel>Avtocard-Voronezh</masterLabel>
+        <translation>Автокарт-Воронеж</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Computer LTD-1</masterLabel>
+        <translation>Компьютер ЛТД-1</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EKA-Processing</masterLabel>
+        <translation>ЕКА-процессинг</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gazpromneft</masterLabel>
+        <translation>Газпромнефть</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inforkom</masterLabel>
+        <translation>Инфорком</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Licard</masterLabel>
+        <translation>Ликард</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MNGK-Avtocard</masterLabel>
+        <translation>МНГК-Автокард</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Magystral</masterLabel>
+        <translation>Магистраль</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Novatorrus-invest</masterLabel>
+        <translation>Новаторрус-инвест</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Другой</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional operator</masterLabel>
+        <translation>Региональный оператор</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rosneft</masterLabel>
+        <translation>Роснефть</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SKON</masterLabel>
+        <translation>СКОН</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell Russia</masterLabel>
+        <translation>Шелл</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Surgutneftegas</masterLabel>
+        <translation>Сургутнефтегаз</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tatneft</masterLabel>
+        <translation>Татнефть</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- E2E Company List Source --></label>
+    <name>E2E_Company_List_Source__c</name>
+    <picklistValues>
+        <masterLabel>Creditreform</masterLabel>
+        <translation><!-- Creditreform --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Creditsafe</masterLabel>
+        <translation><!-- Creditsafe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Creditsafe livesearch</masterLabel>
+        <translation><!-- Creditsafe livesearch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FirmenWissen</masterLabel>
+        <translation><!-- FirmenWissen --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

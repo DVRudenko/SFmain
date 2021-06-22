@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- NVM Call Count automatically updated when using the Dialler --></help>
+    <label><!-- NVM Call Count --></label>
+    <name>NVM_Call_Count__c</name>
+</CustomFieldTranslation>

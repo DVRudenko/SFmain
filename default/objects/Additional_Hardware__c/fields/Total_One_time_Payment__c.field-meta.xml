@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_One_time_Payment__c</fullName>
+    <externalId>false</externalId>
+    <formula>(Acoustic_signaling_with_LED_Price__c * Acoustic_signaling_with_LED_Amount__c) +
+(Adhesive_switch_P_S_Price__c * Adhesive_switch_P_S_Amount__c) +
+(Adhesive_switch_P_S_with_diode_LED_Price__c * Adhesive_switch_P_S_withDiode_LED_Amoun__c) +
+(Antenna_GPS_FLAT_Price__c * Antenna_GPS_FLAT_Amount__c) +
+(Antenna_GPS_Shark_Price__c * Antenna_GPS_Shark_Amount__c) +
+(Basic_switch_Price__c * Basic_switch_Amount__c) +
+(Button_Panic_Price__c * Button_Panic_Amount__c) +
+(Button_Panic2_Price__c * Button_Panic2_Amount__c) +
+(Cable_CAN_Price__c * Cable_CAN_Amount__c) +
+(Calibrating_transducer_PT100_Price__c * Calibrating_transducer_PT100_Amount__c) +
+(Can_Bus_transducer_MCB_02_Price__c * Can_Bus_transducer_MCB_02_Amount__c) +
+(CAN_GO_CLICK_Price__c * CAN_GO_CLICK_Amount__c) +
+(Dalas_chip_Price__c * Dalas_chip_Amount__c) +
+(Guarding_cargo_space_Price__c * Guarding_cargo_space_Amount__c) +
+(Guarding_the_vehicle_one_switch_Price__c * Guarding_the_vehicle_one_switch_Amount__c) +
+(Guarding_the_vehicle_reader_Price__c * Guarding_the_vehicle_reader_Amount__c) +
+(Microwave_sensor_Price__c * Microwave_sensor_Amount__c) +
+(Piezoelectric_siren_Price__c * Piezoelectric_siren_Amount__c) +
+(Plastic_temperature_sensor_holder_Price__c * Plastic_temperature_sensor_holder_Amount__c) +
+(Power_supply_power_cable_harnesses_Price__c * Power_supplyPower_cable_harnesses_Amount__c) +
+(Reader_Dalas_Price__c * Reader_Dalas_Amount__c) +
+(Reader_HIDProx_Price__c * Reader_HIDProx_Amount__c) +
+(Reader_Inditag_Price__c * Reader_Inditag_Amount__c) +
+(Reader_Legic_Price__c * Reader_Legic_Amount__c) +
+(Reader_Mifare_Price__c * Reader_Mifare_Amount__c) +
+(Reader_Multi_125_Price__c * Reader_Multi_125_Amount__c) +
+(Reader_Multi_ISO_Price__c * Reader_Multi_ISO_Amount__c) +
+(Reader_RFID_Slim_Price__c * Reader_RFID_Slim_Amount__c) +
+(RFID_adhesive_chip_Price__c * RFID_adhesive_chip_Amount__c) +
+(RFID_fobs_Price__c * RFID_fobs_Amount__c) +
+(Siren_Alarm_Price__c * Siren_Alarm_Amount__c) +
+(Spare_battery_for_CN85_1_4_Price__c * Spare_battery_for_CN85_1_4_Amount__c) +
+(Temperature_measurementCargoSpace_Price__c * Temperature_measurementCargoSpace_Amount__c) +
+(Temperature_sensor_Dalas_Price__c * Temperature_sensor_Dalas_Amount__c) +
+(Temperature_sensor_Pt100A_Price__c * Temperature_sensor_Pt100A_Amount__c) +
+(Temperature_sensor_Pt100B_Price__c * Temperature_sensor_Pt100B_Amount__c) + 
+(X1_m_cable_to_the_temperature_Price__c * X1_m_cable_to_the_temperature_Amount__c) +
+(X1_m_silicone_cable_temp_sensor_Price__c * X1_m_silicone_cable_temp_sensor_Amount__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total One-time Payment</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

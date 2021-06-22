@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Spokojenost zákazníků</label>
+    <name>CCS_Client_Satisfaction__c</name>
+    <picklistValues>
+        <masterLabel>ano</masterLabel>
+        <translation><!-- ano --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ne</masterLabel>
+        <translation><!-- ne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>nedovoláno</masterLabel>
+        <translation><!-- nedovoláno --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>nevoláno</masterLabel>
+        <translation><!-- nevoláno --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>neznámo</masterLabel>
+        <translation><!-- neznámo --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

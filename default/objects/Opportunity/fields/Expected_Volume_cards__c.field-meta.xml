@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Volume_cards__c</fullName>
+    <description>Expected Volume based on number of cards. It calculates the expected volume in liters based on the number of cards from the field Anzahl der Karten by multiplying the number by the average for given card type. The averages are based on real volumes form GFN (2018) and PCMS (2017-18).</description>
+    <externalId>false</externalId>
+    <formula>CASE(Product_Solicited__c,
+"CCS Bonus",Anzahl_der_Karten__c*86,
+"CCS Bonus+",CCS_celkem_financni_naboj_Bonus__c/30/12,
+"CCS Bonus Fleet",Anzahl_der_Karten__c*377,
+"CCS Trucks",Anzahl_der_Karten__c*1192,
+"CCS Limit",Anzahl_der_Karten__c*139,
+"CCS Limit M4",Anzahl_der_Karten__c*139,
+"CCS Limit PRIM",Anzahl_der_Karten__c*139,
+"CCS Limit NP",Anzahl_der_Karten__c*139,
+"CCS Handy CardCCS Handy Card",Anzahl_der_Karten__c*139,
+"CCS Limit+",Anzahl_der_Karten__c*130,
+"CCS Limit+ mini",Anzahl_der_Karten__c*130,
+"CCS LIMIT Exclusive",Anzahl_der_Karten__c*97,
+"CCS Bundle",Anzahl_der_Karten__c*134,
+"UTA/CCS",Anzahl_der_Karten__c*106,
+IF(CONTAINS(RecordType.Name,"Euroshell"),
+CASE(Account.BillingCountry,
+"Poland",Anzahl_der_Karten__c*155,
+"Hungary",Anzahl_der_Karten__c*131,
+"Czech Republic",Anzahl_der_Karten__c*125,
+"Slovakia",Anzahl_der_Karten__c*133,
+0),
+0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Monthly Expected Volume (by cards)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

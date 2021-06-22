@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gruende_verloren__c</fullName>
+    <externalId>false</externalId>
+    <label>Gründe verloren</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>After Sales - Degussa</fullName>
+                <default>false</default>
+                <label>After Sales - Degussa</label>
+            </value>
+            <value>
+                <fullName>AGB nicht aktzeptiert</fullName>
+                <default>false</default>
+                <label>AGB nicht aktzeptiert</label>
+            </value>
+            <value>
+                <fullName>Already FLEETCOR Customer</fullName>
+                <default>false</default>
+                <label>Already FLEETCOR Customer</label>
+            </value>
+            <value>
+                <fullName>Andere Bezahlmethode - Cash</fullName>
+                <default>false</default>
+                <label>Andere Bezahlmethode - Cash</label>
+            </value>
+            <value>
+                <fullName>Andere Bezahlmethode - EC/Kreditkarte</fullName>
+                <default>false</default>
+                <label>Andere Bezahlmethode - EC/Kreditkarte</label>
+            </value>
+            <value>
+                <fullName>Andere Bezahlmethode - Tankkarte</fullName>
+                <default>false</default>
+                <label>Andere Bezahlmethode - Tankkarte</label>
+            </value>
+            <value>
+                <fullName>Andere Bezahlmethode - VISA</fullName>
+                <default>false</default>
+                <label>Andere Bezahlmethode - VISA</label>
+            </value>
+            <value>
+                <fullName>Anderes Produkt - bessere Zahlungsbeding</fullName>
+                <default>false</default>
+                <label>Anderes Produkt - bessere Zahlungsbeding</label>
+            </value>
+            <value>
+                <fullName>Anderes Produkt - geringere Kosten</fullName>
+                <default>false</default>
+                <label>Anderes Produkt - geringere Kosten</label>
+            </value>
+            <value>
+                <fullName>Anderes Produkt - höheres Kreditlimit</fullName>
+                <default>false</default>
+                <label>Anderes Produkt - höheres Kreditlimit</label>
+            </value>
+            <value>
+                <fullName>Anderes Produkt - keine Garantien</fullName>
+                <default>false</default>
+                <label>Anderes Produkt - keine Garantien</label>
+            </value>
+            <value>
+                <fullName>Anderes Produkt - mehr Features</fullName>
+                <default>false</default>
+                <label>Anderes Produkt - mehr Features</label>
+            </value>
+            <value>
+                <fullName>Angabenkorrektur nicht möglich</fullName>
+                <default>false</default>
+                <label>Angabenkorrektur nicht möglich</label>
+            </value>
+            <value>
+                <fullName>Bearbeitung - Degussa</fullName>
+                <default>false</default>
+                <label>Bearbeitung - Degussa</label>
+            </value>
+            <value>
+                <fullName>Bestellprozess zu lange</fullName>
+                <default>false</default>
+                <label>Bestellprozess zu lange</label>
+            </value>
+            <value>
+                <fullName>Black List</fullName>
+                <default>false</default>
+                <label>Black List</label>
+            </value>
+            <value>
+                <fullName>Brand</fullName>
+                <default>false</default>
+                <label>Brand</label>
+            </value>
+            <value>
+                <fullName>Change his mind</fullName>
+                <default>false</default>
+                <label>Change his mind</label>
+            </value>
+            <value>
+                <fullName>Competitors</fullName>
+                <default>false</default>
+                <label>Competitors</label>
+            </value>
+            <value>
+                <fullName>Coverage/Acceptance</fullName>
+                <default>false</default>
+                <label>Coverage/Acceptance</label>
+            </value>
+            <value>
+                <fullName>Credit Report not available</fullName>
+                <default>false</default>
+                <label>Credit Report not available</label>
+            </value>
+            <value>
+                <fullName>Customer not reached</fullName>
+                <default>false</default>
+                <label>Customer not reached</label>
+            </value>
+            <value>
+                <fullName>Deposit – not confirmed</fullName>
+                <default>false</default>
+                <label>Deposit – not confirmed</label>
+            </value>
+            <value>
+                <fullName>Didn't confirm card order</fullName>
+                <default>false</default>
+                <label>Didn't confirm card order</label>
+            </value>
+            <value>
+                <fullName>Direct debit</fullName>
+                <default>false</default>
+                <label>Direct debit</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Execution</fullName>
+                <default>false</default>
+                <label>Execution</label>
+            </value>
+            <value>
+                <fullName>Financial/Credit</fullName>
+                <default>false</default>
+                <label>Financial/Credit</label>
+            </value>
+            <value>
+                <fullName>Firma zu jung</fullName>
+                <default>false</default>
+                <label>Firma zu jung</label>
+            </value>
+            <value>
+                <fullName>Gebühren</fullName>
+                <default>false</default>
+                <label>Gebühren</label>
+            </value>
+            <value>
+                <fullName>Grundgebühr</fullName>
+                <default>false</default>
+                <label>Grundgebühr</label>
+            </value>
+            <value>
+                <fullName>Kartenantrag zu umfangreich</fullName>
+                <default>false</default>
+                <label>Kartenantrag zu umfangreich</label>
+            </value>
+            <value>
+                <fullName>Keine Kaution als Sicherheit</fullName>
+                <default>false</default>
+                <label>Keine Kaution als Sicherheit</label>
+            </value>
+            <value>
+                <fullName>Keine MwSt.-fähige Rechnung / Tankdaten</fullName>
+                <default>false</default>
+                <label>Keine MwSt.-fähige Rechnung / Tankdaten</label>
+            </value>
+            <value>
+                <fullName>Keine Produktlevel-Kontrolle</fullName>
+                <default>false</default>
+                <label>Keine Produktlevel-Kontrolle</label>
+            </value>
+            <value>
+                <fullName>Keine steuerbare Rechnung / Tankdaten</fullName>
+                <default>false</default>
+                <label>Keine steuerbare Rechnung / Tankdaten</label>
+            </value>
+            <value>
+                <fullName>Kreditlimit zu gering</fullName>
+                <default>false</default>
+                <label>Kreditlimit zu gering</label>
+            </value>
+            <value>
+                <fullName>Kunde meldet sich bei Interesse</fullName>
+                <default>false</default>
+                <label>Kunde meldet sich bei Interesse</label>
+            </value>
+            <value>
+                <fullName>Lost to competition</fullName>
+                <default>false</default>
+                <label>Lost to competition</label>
+            </value>
+            <value>
+                <fullName>Mindestbestellwert nicht erfüllt</fullName>
+                <default>false</default>
+                <label>Mindestbestellwert nicht erfüllt</label>
+            </value>
+            <value>
+                <fullName>Mit aktueller Lösung zufrieden</fullName>
+                <default>false</default>
+                <label>Mit aktueller Lösung zufrieden</label>
+            </value>
+            <value>
+                <fullName>Mitbewerber</fullName>
+                <default>false</default>
+                <label>Mitbewerber</label>
+            </value>
+            <value>
+                <fullName>Mitbewerber besseres Angebot</fullName>
+                <default>false</default>
+                <label>Mitbewerber besseres Angebot</label>
+            </value>
+            <value>
+                <fullName>Not a Lead/Opportunity</fullName>
+                <default>false</default>
+                <label>Not a Lead/Opportunity</label>
+            </value>
+            <value>
+                <fullName>Not a legal entity</fullName>
+                <default>false</default>
+                <label>Not a legal entity</label>
+            </value>
+            <value>
+                <fullName>Not interested</fullName>
+                <default>false</default>
+                <label>Not interested</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Package Carnet - card exchange</fullName>
+                <default>false</default>
+                <label>Package Carnet - card exchange</label>
+            </value>
+            <value>
+                <fullName>Payment Conditions</fullName>
+                <default>false</default>
+                <label>Payment Conditions</label>
+            </value>
+            <value>
+                <fullName>Potential fraud</fullName>
+                <default>false</default>
+                <label>Potential fraud</label>
+            </value>
+            <value>
+                <fullName>Preisvorteil zu gering</fullName>
+                <default>false</default>
+                <label>Preisvorteil zu gering</label>
+            </value>
+            <value>
+                <fullName>Processing Too Long</fullName>
+                <default>false</default>
+                <label>Processing Too Long</label>
+            </value>
+            <value>
+                <fullName>Product features</fullName>
+                <default>false</default>
+                <label>Product features</label>
+            </value>
+            <value>
+                <fullName>Refused Credit</fullName>
+                <default>false</default>
+                <label>Refused Credit</label>
+            </value>
+            <value>
+                <fullName>Refused Credit H, Š</fullName>
+                <default>false</default>
+                <label>Refused Credit H, Š</label>
+            </value>
+            <value>
+                <fullName>Sicherheit nicht bereitgestellt</fullName>
+                <default>false</default>
+                <label>Sicherheit nicht bereitgestellt</label>
+            </value>
+            <value>
+                <fullName>Sonstige</fullName>
+                <default>false</default>
+                <label>Sonstige</label>
+            </value>
+            <value>
+                <fullName>Sonstige Gebühren</fullName>
+                <default>false</default>
+                <label>Sonstige Gebühren</label>
+            </value>
+            <value>
+                <fullName>Spam</fullName>
+                <default>false</default>
+                <label>Spam</label>
+            </value>
+            <value>
+                <fullName>T&amp;C – Kartengebühr</fullName>
+                <default>false</default>
+                <label>T&amp;C – Kartengebühr</label>
+            </value>
+            <value>
+                <fullName>T&amp;C – sonstige Kosten und Gebühren</fullName>
+                <default>false</default>
+                <label>T&amp;C – sonstige Kosten und Gebühren</label>
+            </value>
+            <value>
+                <fullName>Tanken nur in einem Netz / an einer Station</fullName>
+                <default>false</default>
+                <label>Tanken nur in einem Netz / an einer Station</label>
+            </value>
+            <value>
+                <fullName>Too Small Price Advantage</fullName>
+                <default>false</default>
+                <label>Too Small Price Advantage</label>
+            </value>
+            <value>
+                <fullName>Unterlagen zu umfangreich</fullName>
+                <default>false</default>
+                <label>Unterlagen zu umfangreich</label>
+            </value>
+            <value>
+                <fullName>Vereinbarung zu umfangreich</fullName>
+                <default>false</default>
+                <label>Vereinbarung zu umfangreich</label>
+            </value>
+            <value>
+                <fullName>Wartezeit / Bearbeitung zu lange</fullName>
+                <default>false</default>
+                <label>Wartezeit / Bearbeitung zu lange</label>
+            </value>
+            <value>
+                <fullName>Wartezeit zu lange</fullName>
+                <default>false</default>
+                <label>Wartezeit zu lange</label>
+            </value>
+            <value>
+                <fullName>Wrong contact detail</fullName>
+                <default>false</default>
+                <label>Wrong contact detail</label>
+            </value>
+            <value>
+                <fullName>Young company (less than 18 months)</fullName>
+                <default>false</default>
+                <label>Young company (less than 18 months)</label>
+            </value>
+            <value>
+                <fullName>Zahlungsbedingungen</fullName>
+                <default>false</default>
+                <label>Zahlungsbedingungen</label>
+            </value>
+            <value>
+                <fullName>Zahlungsbedingungen zu kurz</fullName>
+                <default>false</default>
+                <label>Zahlungsbedingungen zu kurz</label>
+            </value>
+            <value>
+                <fullName>Zusätzliche Sicherheit / Kontrolle nicht interessant</fullName>
+                <default>false</default>
+                <label>Zusätzliche Sicherheit / Kontrolle nicht interessant</label>
+            </value>
+            <value>
+                <fullName>Zu wenig Nachlässe</fullName>
+                <default>false</default>
+                <label>Zu wenig Nachlässe</label>
+            </value>
+            <value>
+                <fullName>Zu wenig Rabatte</fullName>
+                <default>false</default>
+                <label>Zu wenig Rabatte</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Duplicate</controllingFieldValue>
+            <valueName>Package Carnet - card exchange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>After Sales - Degussa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Already FLEETCOR Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Bestellprozess zu lange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Grundgebühr</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Bearbeitung - Degussa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Mitbewerber besseres Angebot</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Black List</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Brand</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Kartenantrag zu umfangreich</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Change his mind</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Mitbewerber</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Competitors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Coverage/Acceptance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Kreditlimit zu gering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Customer not reached</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Kunde meldet sich bei Interesse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Deposit – not confirmed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>AGB nicht aktzeptiert</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Didn't confirm card order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Direct debit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Gebühren</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Financial/Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Firma zu jung</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Mit aktueller Lösung zufrieden</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Keine Produktlevel-Kontrolle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Lost to competition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Mindestbestellwert nicht erfüllt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Keine Kaution als Sicherheit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not a Lead/Opportunity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not a legal entity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Keine MwSt.-fähige Rechnung / Tankdaten</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not interested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Angabenkorrektur nicht möglich</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Sonstige</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Anderes Produkt - bessere Zahlungsbeding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Anderes Produkt - höheres Kreditlimit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Anderes Produkt - keine Garantien</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Zahlungsbedingungen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Payment Conditions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Potential fraud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Wartezeit zu lange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Processing Too Long</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Product features</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Refused Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Refused Credit H, Š</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Sicherheit nicht bereitgestellt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Zahlungsbedingungen zu kurz</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Sonstige Gebühren</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Spam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>T&amp;C – Kartengebühr</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>T&amp;C – sonstige Kosten und Gebühren</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Tanken nur in einem Netz / an einer Station</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Preisvorteil zu gering</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Too Small Price Advantage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Keine steuerbare Rechnung / Tankdaten</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Unterlagen zu umfangreich</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Wartezeit / Bearbeitung zu lange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Wrong contact detail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Young company (less than 18 months)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Zusätzliche Sicherheit / Kontrolle nicht interessant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Zu wenig Nachlässe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Zu wenig Rabatte</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

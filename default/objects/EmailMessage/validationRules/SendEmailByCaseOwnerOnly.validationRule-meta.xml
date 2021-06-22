@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SendEmailByCaseOwnerOnly</fullName>
+    <active>true</active>
+    <description>STCP1-86/STCP1-379 - limit access to send emails in Case where a user is not a case owner
+Note: system admin profile and automated process user were excluded</description>
+    <errorConditionFormula>AND( 
+ISNEW(), 
+NOT(Incoming),
+OR(Parent.RecordType.DeveloperName = &#39;Support&#39;,
+Parent.RecordType.DeveloperName = &#39;Support_CCS&#39;),
+$User.Id !=  Parent.Owner:User.ID__c, 
+$Profile.Name != &apos;System Administrator&apos;,
+$Profile.Name != &apos;Systemadministrator&apos;,
+$Profile.Name != &apos;API Only&apos;,
+$User.Alias != &apos;autoproc&apos;
+)</errorConditionFormula>
+    <errorMessage>You are not the owner of the case. You cannot send emails in it.</errorMessage>
+</ValidationRule>

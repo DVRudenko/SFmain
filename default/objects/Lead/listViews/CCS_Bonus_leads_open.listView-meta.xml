@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Bonus_leads_open</fullName>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.COUNTRY_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,Otevřený</value>
+    </filters>
+    <label>"CCS" - Bonus leads - open</label>
+    <language>en_US</language>
+    <queue>CCS_Web_Leads_bonus</queue>
+    <sharedTo>
+        <role>CCS_CZ_Telesales</role>
+        <role>CCS_Telesales_Team_Lead</role>
+    </sharedTo>
+</ListView>

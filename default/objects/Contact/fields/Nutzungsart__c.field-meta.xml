@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nutzungsart__c</fullName>
+    <externalId>false</externalId>
+    <label>Nutzungsart</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Keine Einschränkungen</fullName>
+                <default>false</default>
+                <label>Keine Einschränkungen</label>
+            </value>
+            <value>
+                <fullName>Nutzung nur an Tankstellen</fullName>
+                <default>false</default>
+                <label>Nutzung nur an Tankstellen</label>
+            </value>
+            <value>
+                <fullName>Nutzung nur an Tankstellen und Werkstätten</fullName>
+                <default>false</default>
+                <label>Nutzung nur an Tankstellen und Werkstätten</label>
+            </value>
+            <value>
+                <fullName>Reisekosten und Nutzung an Tankstellen und Werkstätten</fullName>
+                <default>false</default>
+                <label>Reisekosten und Nutzung an Tankstellen und Werkstätten</label>
+            </value>
+            <value>
+                <fullName>Bürobedarf, Reisekosten und Nutzung an Tankstellen und Werkstätten</fullName>
+                <default>false</default>
+                <label>Bürobedarf, Reisekosten und Nutzung an Tankstellen und Werkstätten</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

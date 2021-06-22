@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Reason_Lost_Other_mandatory</fullName>
+    <active>true</active>
+    <description>If Gruende_verloren__c = "Other", then CCS_Reason_Lost_Other__c is mandatory.</description>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(Gruende_verloren__c, "Other"),
+ISPICKVAL(Sub_stage_detail__c, "Other")),
+ISBLANK(CCS_Reason_Lost_Other__c))</errorConditionFormula>
+    <errorDisplayField>CCS_Reason_Lost_Other__c</errorDisplayField>
+    <errorMessage>Please provide a reason, why the customer was lost.</errorMessage>
+</ValidationRule>

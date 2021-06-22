@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Finance conducted payment instrument check. Result successful? --></help>
+    <label><!-- Token Payment Successful --></label>
+    <name>Token_Payment_Successful__c</name>
+</CustomFieldTranslation>

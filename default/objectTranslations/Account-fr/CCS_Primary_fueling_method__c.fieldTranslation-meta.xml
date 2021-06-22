@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS Primary fueling method --></label>
+    <name>CCS_Primary_fueling_method__c</name>
+    <picklistValues>
+        <masterLabel>Bankovní karta</masterLabel>
+        <translation><!-- Bankovní karta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bankovní karta&amp;Hotovost</masterLabel>
+        <translation><!-- Bankovní karta&amp;Hotovost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hotovost</masterLabel>
+        <translation><!-- Hotovost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jiný</masterLabel>
+        <translation><!-- Jiný --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karta CCS</masterLabel>
+        <translation><!-- Karta CCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karta leasingové společnosti</masterLabel>
+        <translation><!-- Karta leasingové společnosti --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karta řetězce ČS</masterLabel>
+        <translation><!-- Karta řetězce ČS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lokální kredit</masterLabel>
+        <translation><!-- Lokální kredit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vlastní bencalor</masterLabel>
+        <translation><!-- Vlastní bencalor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>neznámo</masterLabel>
+        <translation><!-- neznámo --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

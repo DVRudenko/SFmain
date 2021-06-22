@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Primary_fueling_method__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Primary fueling method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bankovní karta</fullName>
+                <default>false</default>
+                <label>Bankovní karta</label>
+            </value>
+            <value>
+                <fullName>Bankovní karta&amp;Hotovost</fullName>
+                <default>false</default>
+                <label>Bankovní karta&amp;Hotovost</label>
+            </value>
+            <value>
+                <fullName>Hotovost</fullName>
+                <default>false</default>
+                <label>Hotovost</label>
+            </value>
+            <value>
+                <fullName>Jiný</fullName>
+                <default>false</default>
+                <label>Jiný</label>
+            </value>
+            <value>
+                <fullName>Karta CCS</fullName>
+                <default>false</default>
+                <label>Karta CCS</label>
+            </value>
+            <value>
+                <fullName>Karta leasingové společnosti</fullName>
+                <default>false</default>
+                <label>Karta leasingové společnosti</label>
+            </value>
+            <value>
+                <fullName>Karta řetězce ČS</fullName>
+                <default>false</default>
+                <label>Karta řetězce ČS</label>
+            </value>
+            <value>
+                <fullName>Lokální kredit</fullName>
+                <default>false</default>
+                <label>Lokální kredit</label>
+            </value>
+            <value>
+                <fullName>neznámo</fullName>
+                <default>false</default>
+                <label>neznámo</label>
+            </value>
+            <value>
+                <fullName>Vlastní bencalor</fullName>
+                <default>false</default>
+                <label>Vlastní bencalor</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

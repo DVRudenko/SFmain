@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Důvod záruky</label>
+    <name>Deposit_reason__c</name>
+    <picklistValues>
+        <masterLabel>Address/Director/Name change 6M</masterLabel>
+        <translation><!-- Address/Director/Name change 6M --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cribis negative information</masterLabel>
+        <translation><!-- Cribis negative information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Executions</masterLabel>
+        <translation><!-- Executions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invalid contact</masterLabel>
+        <translation><!-- Invalid contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low Recommended CL</masterLabel>
+        <translation><!-- Low Recommended CL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low credit rating (no rating)</masterLabel>
+        <translation><!-- Low credit rating (no rating) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low credit rating (rating 0)</masterLabel>
+        <translation><!-- Low credit rating (rating 0) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low credit rating (rating 1)</masterLabel>
+        <translation><!-- Low credit rating (rating 1) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low credit rating (rating 2)</masterLabel>
+        <translation><!-- Low credit rating (rating 2) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low credit rating (rating 3)</masterLabel>
+        <translation><!-- Low credit rating (rating 3) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low credit rating (rating 4 &amp; 30+7)</masterLabel>
+        <translation><!-- Low credit rating (rating 4 &amp; 30+7) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low credit rating (rating 4)</masterLabel>
+        <translation><!-- Low credit rating (rating 4) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low credit rating (rating 5)</masterLabel>
+        <translation><!-- Low credit rating (rating 5) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low credit rating (rating 6)</masterLabel>
+        <translation><!-- Low credit rating (rating 6) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low credit rating (rating 99)</masterLabel>
+        <translation><!-- Low credit rating (rating 99) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low/no profitability</masterLabel>
+        <translation><!-- Low/no profitability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Missing financials</masterLabel>
+        <translation><!-- Missing financials --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Negative policy rule</masterLabel>
+        <translation><!-- Negative policy rule --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New business</masterLabel>
+        <translation><!-- New business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Obligation overdue</masterLabel>
+        <translation><!-- Obligation overdue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment details are 15+7</masterLabel>
+        <translation><!-- Payment details are 15+7 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment details are 30+7</masterLabel>
+        <translation><!-- Payment details are 30+7 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sole trader</masterLabel>
+        <translation><!-- Sole trader --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

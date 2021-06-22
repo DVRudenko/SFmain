@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Accepted T&amp;Cs (Yes/No) - always Yes</help>
+    <label>T&amp;C&#39;s accepted</label>
+    <name>AGB_Best_tigt__c</name>
+    <picklistValues>
+        <masterLabel>Ja</masterLabel>
+        <translation>Yes</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nein</masterLabel>
+        <translation>No</translation>
+    </picklistValues>
+</CustomFieldTranslation>

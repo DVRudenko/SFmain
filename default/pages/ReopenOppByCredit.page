@@ -1,0 +1,40 @@
+<apex:page controller="ReopenOppByCreditCtrl" action="{! init }" sidebar="true">
+	<apex:form id="formId">
+		<style>
+			.approveButton {
+				margin-left: 15% !important;
+			}
+			.rejectButton {
+				margin: 10px !important;
+			}
+			.bPageBlock .pbBody .black .pbSubheader {
+            	background-color: black;
+        	}
+		</style>
+		<apex:pageMessages />
+		<apex:pageBlock id="mainBlock">
+			<apex:outputPanel styleClass="black" layout="block">
+				<apex:pageBlockSection title="Opportunity" columns="1" collapsible="false">
+					<apex:outputField value="{! currentOpportunity.Name }"/>
+					<apex:outputField value="{! currentOpportunity.Owner.Name }"/>
+					<apex:outputField value="{! currentOpportunity.StageName }"/>
+					<apex:outputField value="{! currentOpportunity.bearbeitet_von__c }"/>
+					<apex:outputField value="{! currentOpportunity.Notes__c }"/>
+					<apex:outputField value="{! currentOpportunity.Credit_System_Rating__c }"/>
+					<apex:outputField value="{! currentOpportunity.Closed_Won_by_CF__c }"/>
+					<apex:outputField value="{! currentOpportunity.Pending_Deposit_by_CF__c }"/>
+					<apex:outputField value="{! currentOpportunity.CF_Stage__c }"/>
+					<apex:outputField value="{! currentOpportunity.Name_of_the_payer_Account_holder__c }"/>
+					<apex:outputField value="{! currentOpportunity.IBAN__c }"/>
+					<apex:outputField value="{! currentOpportunity.SWIFT_BIC__c }"/>
+					<apex:outputField value="{! currentOpportunity.Account.GFN_Nr__c }"/>
+					<apex:outputField value="{! currentOpportunity.Credit_check_date__c }"/>
+					<apex:outputField value="{! currentOpportunity.CF_Credit_Limit__c }"/>
+				</apex:pageBlockSection>
+			</apex:outputPanel>
+		</apex:pageBlock>
+		<apex:commandButton value="Approve" action="{! approveReopen }" styleClass="approveButton"/>
+        <apex:commandButton value="Reject" action="{! rejectReopen }" styleClass="rejectButton"/>
+        <apex:commandButton value="Cancel" action="{! backToOpportunity }" immediate="true"/>
+	</apex:form>
+</apex:page>

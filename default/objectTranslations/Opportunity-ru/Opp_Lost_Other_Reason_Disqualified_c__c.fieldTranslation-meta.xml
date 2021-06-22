@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Причина дисквалификации</label>
+    <name>Opp_Lost_Other_Reason_Disqualified_c__c</name>
+    <picklistValues>
+        <masterLabel>Existing client</masterLabel>
+        <translation>Существующий клиент</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect contact information</masterLabel>
+        <translation>Некорректная контактная информация</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not an organization</masterLabel>
+        <translation>Не является организацией</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Re-application</masterLabel>
+        <translation>Повторная заявка</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reseller</masterLabel>
+        <translation>Перекупщик</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Return to funnel</masterLabel>
+        <translation>Возврат в воронку</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tender with a little pumping</masterLabel>
+        <translation>Тендер с маленькой прокачкой</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test</masterLabel>
+        <translation>Тест</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>There is no fleet</masterLabel>
+        <translation>Нет автопарка</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>There is no time frame for decision</masterLabel>
+        <translation>Нет сроков принятия решения</translation>
+    </picklistValues>
+</CustomFieldTranslation>

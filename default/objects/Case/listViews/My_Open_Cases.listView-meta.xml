@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Open_Cases</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Sub_topic__c</columns>
+    <columns>Case_Status_Icon__c</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Topic__c</columns>
+    <columns>CASES.STATUS</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>Queue_Email__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CASES.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Case.Support,Case.Support_CCS</value>
+    </filters>
+    <filters>
+        <field>CASES.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>My Open Cases</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>CCS_Support_CaseManagement</group>
+        <group>CaseManagementEurope</group>
+        <group>Russian_Admins</group>
+    </sharedTo>
+</ListView>

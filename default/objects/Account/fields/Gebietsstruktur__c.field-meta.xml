@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gebietsstruktur__c</fullName>
+    <externalId>false</externalId>
+    <label>Gebietsstruktur</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Standortangaben__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Wohngebiet</fullName>
+                <default>false</default>
+                <label>Wohngebiet</label>
+            </value>
+            <value>
+                <fullName>Gewerbe-/Industriegebiet</fullName>
+                <default>false</default>
+                <label>Gewerbe-/Industriegebiet</label>
+            </value>
+            <value>
+                <fullName>Mischgebiet</fullName>
+                <default>false</default>
+                <label>Mischgebiet</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Stadt</controllingFieldValue>
+            <controllingFieldValue>ländliche Gegend</controllingFieldValue>
+            <valueName>Wohngebiet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stadt</controllingFieldValue>
+            <controllingFieldValue>ländliche Gegend</controllingFieldValue>
+            <valueName>Gewerbe-/Industriegebiet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stadt</controllingFieldValue>
+            <controllingFieldValue>ländliche Gegend</controllingFieldValue>
+            <valueName>Mischgebiet</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

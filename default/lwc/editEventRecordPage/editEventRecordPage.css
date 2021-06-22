@@ -1,0 +1,8 @@
+.inlineTitle {
+    text-align: center;
+    border-bottom: 1px solid var(--lwc-colorBorder,rgb(221, 219, 218));
+}
+
+.button-panel {
+    text-align: center
+}

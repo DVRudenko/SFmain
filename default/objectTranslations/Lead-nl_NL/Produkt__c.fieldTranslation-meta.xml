@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Produkt --></label>
+    <name>Produkt__c</name>
+    <picklistValues>
+        <masterLabel>CCS Aukce</masterLabel>
+        <translation><!-- CCS Aukce --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Bonus</masterLabel>
+        <translation><!-- CCS Bonus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Bonus Fleet</masterLabel>
+        <translation><!-- CCS Bonus Fleet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Bonus+</masterLabel>
+        <translation><!-- CCS Bonus+ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Bundle</masterLabel>
+        <translation><!-- CCS Bundle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Carnet</masterLabel>
+        <translation><!-- CCS Carnet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Carnet NP</masterLabel>
+        <translation><!-- CCS Carnet NP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS LIMIT Exclusive</masterLabel>
+        <translation><!-- CCS LIMIT Exclusive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Limit</masterLabel>
+        <translation><!-- CCS Limit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Limit M4</masterLabel>
+        <translation><!-- CCS Limit M4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Limit NP</masterLabel>
+        <translation><!-- CCS Limit NP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Limit PRIM</masterLabel>
+        <translation><!-- CCS Limit PRIM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Limit+</masterLabel>
+        <translation><!-- CCS Limit+ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Toll</masterLabel>
+        <translation><!-- CCS Toll --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Trucks</masterLabel>
+        <translation><!-- CCS Trucks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>E-shop</masterLabel>
+        <translation><!-- E-shop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ERV insurance</masterLabel>
+        <translation><!-- ERV insurance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UTA/CCS</masterLabel>
+        <translation><!-- UTA/CCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>euroShell Card International</masterLabel>
+        <translation><!-- euroShell Card International --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>euroShell Card Kompakt</masterLabel>
+        <translation><!-- euroShell Card Kompakt --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Use the criteria numbers along with boolean operators &apos;AND&apos; and &apos;OR&apos; to define the statement, e.g. 1 AND (2 OR 3) --></help>
+    <label><!-- Criteria Logic --></label>
+    <name>success__Criteria_Logic__c</name>
+</CustomFieldTranslation>

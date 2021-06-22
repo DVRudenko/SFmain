@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Konkurence - retence</label>
+    <name>CCS_Retention_Competition__c</name>
+    <picklistValues>
+        <masterLabel>Bankovní karta</masterLabel>
+        <translation><!-- Bankovní karta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benzina</masterLabel>
+        <translation><!-- Benzina --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hotovost</masterLabel>
+        <translation><!-- Hotovost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jiné</masterLabel>
+        <translation><!-- Jiné --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOL (Slovnaft, ENI, PapOil, LukOil)</masterLabel>
+        <translation><!-- MOL (Slovnaft, ENI, PapOil, LukOil) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OMV</masterLabel>
+        <translation><!-- OMV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RobinOil</masterLabel>
+        <translation><!-- RobinOil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell</masterLabel>
+        <translation><!-- Shell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TankOno</masterLabel>
+        <translation><!-- TankOno --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

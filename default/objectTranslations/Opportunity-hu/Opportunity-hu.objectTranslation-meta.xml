@@ -1,0 +1,1197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Start Fields --></label>
+        <name>Start_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Start Fields Other --></label>
+        <name>Start_Fields_Other</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Start Fields - read only --></label>
+        <name>Start_Fields_read_only</name>
+    </fieldSets>
+    <layouts>
+        <layout>CCS Opportunity Layout</layout>
+        <sections>
+            <label><!-- Credit --></label>
+            <section>Credit</section>
+        </sections>
+        <sections>
+            <label><!-- FLEETCOR Offers --></label>
+            <section>FLEETCOR Offers</section>
+        </sections>
+        <sections>
+            <label><!-- Implementation --></label>
+            <section>Implementation</section>
+        </sections>
+        <sections>
+            <label><!-- Notes --></label>
+            <section>Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Payment details --></label>
+            <section>Payment details</section>
+        </sections>
+        <sections>
+            <label><!-- Product information --></label>
+            <section>Product information</section>
+        </sections>
+        <sections>
+            <label><!-- Record Source/Consents --></label>
+            <section>Record Source/Consents</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Service Europe</layout>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Confirmation --></label>
+            <section>Confirmation</section>
+        </sections>
+        <sections>
+            <label><!-- Credit --></label>
+            <section>Credit</section>
+        </sections>
+        <sections>
+            <label><!-- FLEETCOR Offers --></label>
+            <section>FLEETCOR Offers</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Flexcard</layout>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Bestätigung --></label>
+            <section>Bestätigung</section>
+        </sections>
+        <sections>
+            <label><!-- Credit --></label>
+            <section>Credit</section>
+        </sections>
+        <sections>
+            <label><!-- Credit – Financials --></label>
+            <section>Credit – Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Degussa --></label>
+            <section>Degussa</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Source Information --></label>
+            <section>Lead Source Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Carnet Opportunity Layout</layout>
+        <sections>
+            <label><!-- Account Info --></label>
+            <section>Account Info</section>
+        </sections>
+        <sections>
+            <label><!-- Carnet Order --></label>
+            <section>Carnet Order</section>
+        </sections>
+        <sections>
+            <label><!-- Comments --></label>
+            <section>Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Source Information --></label>
+            <section>Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- Starts Information --></label>
+            <section>Starts Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Opportunity Euroshell Credit Layout</layout>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Bestätigung --></label>
+            <section>Bestätigung</section>
+        </sections>
+        <sections>
+            <label><!-- Credit --></label>
+            <section>Credit</section>
+        </sections>
+        <sections>
+            <label><!-- Credit – Financials --></label>
+            <section>Credit – Financials</section>
+        </sections>
+        <sections>
+            <label><!-- EuroShell Basic/Standard/Plus --></label>
+            <section>EuroShell Basic/Standard/Plus</section>
+        </sections>
+        <sections>
+            <label><!-- FLEETCOR Offer --></label>
+            <section>FLEETCOR Offer</section>
+        </sections>
+        <sections>
+            <label><!-- GFN --></label>
+            <section>GFN</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Source Information --></label>
+            <section>Lead Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Securities/Sicherheiten --></label>
+            <section>Securities/Sicherheiten</section>
+        </sections>
+        <sections>
+            <label><!-- Starts Information --></label>
+            <section>Starts Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Opportunity Layout</layout>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Bestätigung --></label>
+            <section>Bestätigung</section>
+        </sections>
+        <sections>
+            <label><!-- Credit --></label>
+            <section>Credit</section>
+        </sections>
+        <sections>
+            <label><!-- Credit – Financials --></label>
+            <section>Credit – Financials</section>
+        </sections>
+        <sections>
+            <label><!-- E2E --></label>
+            <section>E2E</section>
+        </sections>
+        <sections>
+            <label><!-- EuroShell Basic/Standard/Plus --></label>
+            <section>EuroShell Basic/Standard/Plus</section>
+        </sections>
+        <sections>
+            <label><!-- FLEETCOR Offer --></label>
+            <section>FLEETCOR Offer</section>
+        </sections>
+        <sections>
+            <label><!-- GFN --></label>
+            <section>GFN</section>
+        </sections>
+        <sections>
+            <label><!-- JITB Information --></label>
+            <section>JITB Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Source Information --></label>
+            <section>Lead Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Securities/Sicherheiten --></label>
+            <section>Securities/Sicherheiten</section>
+        </sections>
+        <sections>
+            <label><!-- Starts Information --></label>
+            <section>Starts Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Opportunity Lotos</layout>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Bestätigung --></label>
+            <section>Bestätigung</section>
+        </sections>
+        <sections>
+            <label><!-- Credit --></label>
+            <section>Credit</section>
+        </sections>
+        <sections>
+            <label><!-- Credit – Financials --></label>
+            <section>Credit – Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Dialoga Click-to-call --></label>
+            <section>Dialoga Click-to-call</section>
+        </sections>
+        <sections>
+            <label><!-- E2E --></label>
+            <section>E2E</section>
+        </sections>
+        <sections>
+            <label><!-- EuroShell Basic/Standard/Plus --></label>
+            <section>EuroShell Basic/Standard/Plus</section>
+        </sections>
+        <sections>
+            <label><!-- GFN --></label>
+            <section>GFN</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Source Information --></label>
+            <section>Lead Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Securities/Sicherheiten --></label>
+            <section>Securities/Sicherheiten</section>
+        </sections>
+        <sections>
+            <label><!-- Starts Information --></label>
+            <section>Starts Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Opportunity Lotos Credit Layout</layout>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Bestätigung --></label>
+            <section>Bestätigung</section>
+        </sections>
+        <sections>
+            <label><!-- Credit --></label>
+            <section>Credit</section>
+        </sections>
+        <sections>
+            <label><!-- Credit – Financials --></label>
+            <section>Credit – Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Dialoga Click-to-call --></label>
+            <section>Dialoga Click-to-call</section>
+        </sections>
+        <sections>
+            <label><!-- E2E --></label>
+            <section>E2E</section>
+        </sections>
+        <sections>
+            <label><!-- EuroShell Basic/Standard/Plus --></label>
+            <section>EuroShell Basic/Standard/Plus</section>
+        </sections>
+        <sections>
+            <label><!-- GFN --></label>
+            <section>GFN</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Source Information --></label>
+            <section>Lead Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Securities/Sicherheiten --></label>
+            <section>Securities/Sicherheiten</section>
+        </sections>
+        <sections>
+            <label><!-- Starts Information --></label>
+            <section>Starts Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>AllStar-ShellUC Opportunity Credit Layout</layout>
+        <sections>
+            <label><!-- Autharization --></label>
+            <section>Autharization</section>
+        </sections>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Credit --></label>
+            <section>Credit</section>
+        </sections>
+        <sections>
+            <label><!-- Credit – Financials --></label>
+            <section>Credit – Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Source Information --></label>
+            <section>Lead Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Required Documents --></label>
+            <section>Required Documents</section>
+        </sections>
+        <sections>
+            <label><!-- Securities/Sicherheiten --></label>
+            <section>Securities/Sicherheiten</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>AllStar-ShellUC Opportunity Layout</layout>
+        <sections>
+            <label><!-- Autharization --></label>
+            <section>Autharization</section>
+        </sections>
+        <sections>
+            <label><!-- Credit --></label>
+            <section>Credit</section>
+        </sections>
+        <sections>
+            <label><!-- Credit – Financials --></label>
+            <section>Credit – Financials</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Source Information --></label>
+            <section>Lead Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- Payment Details --></label>
+            <section>Payment Details</section>
+        </sections>
+        <sections>
+            <label><!-- Product Information --></label>
+            <section>Product Information</section>
+        </sections>
+        <sections>
+            <label><!-- Required Documents --></label>
+            <section>Required Documents</section>
+        </sections>
+        <sections>
+            <label><!-- Securities/Sicherheiten --></label>
+            <section>Securities/Sicherheiten</section>
+        </sections>
+        <sections>
+            <label><!-- Starts Information --></label>
+            <section>Starts Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Russian Opportunity Layout</layout>
+        <sections>
+            <label><!-- Company Information --></label>
+            <section>Company Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- E2E Information --></label>
+            <section>E2E Information</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Information --></label>
+            <section>Opportunity Information</section>
+        </sections>
+        <sections>
+            <label><!-- Product Diagnostic Information --></label>
+            <section>Product Diagnostic Information</section>
+        </sections>
+        <sections>
+            <label><!-- Shell NHF --></label>
+            <section>Shell NHF</section>
+        </sections>
+        <sections>
+            <label><!-- Starts Dashboard --></label>
+            <section>Starts Dashboard</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- AllStar --></label>
+        <name>AllStar</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- CCS Opportunity Layout --></label>
+        <name>CCS_Opportunity</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type for Carnet records. --></description>
+        <label><!-- Carnet --></label>
+        <name>Carnet</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Euroshell --></label>
+        <name>Euroshell</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Starts Team&apos;s Record Type --></description>
+        <label><!-- Euroshell Starts --></label>
+        <name>Euroshell_Starts</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Flexcard --></label>
+        <name>Flexcard</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Lotos --></label>
+        <name>Lotos</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Russian Sales --></label>
+        <name>Russian_Sales</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Shell Universal Card --></label>
+        <name>Shell_Universal_Card</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You don&apos;t have ability to change Owner Opportunity --></errorMessage>
+        <name>Ability_to_change_OwnerId</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You don&apos;t have ability to change Sec. Channel and Channel fields --></errorMessage>
+        <name>Ability_to_change_Sec_Channel_Channel</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change Account Price Book when Approval Process is in progress! --></errorMessage>
+        <name>Account_Price_Book_locked</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pflichtfelder: Zahlungsart &amp; Zahlungsziel --></errorMessage>
+        <name>Always_on_stage_CreditCheck_Flexcard</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;BE-FR 2,5 Cent&quot; is available only for Belgium-FR. --></errorMessage>
+        <name>BE_FR_2_5_Cent_for_BE_FR_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pole CCS Company ID je povinné. --></errorMessage>
+        <name>CCS_Company_ID_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a competitor. --></errorMessage>
+        <name>CCS_Competition_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CCS GFN číslo musí být vyplněné! --></errorMessage>
+        <name>CCS_GFN_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a Competition. --></errorMessage>
+        <name>CCS_Lost_To_Competitor_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a competitor. --></errorMessage>
+        <name>CCS_Lost_to_Competitors_Reason_Lost</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pole &quot;Počet GPS jednotek&quot; je povinné! --></errorMessage>
+        <name>CCS_Number_of_GPS_units_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Prosím, zvolte platný Opportunity Type (New GFN, Existing GFN). --></errorMessage>
+        <name>CCS_Opportunity_Type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pole &quot;Zvolený produkt&quot; je povinné. --></errorMessage>
+        <name>CCS_Product_Solicited_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please provide a reason, why the customer was lost. --></errorMessage>
+        <name>CCS_Reason_Lost_Other_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t change an opportunity &quot;Closed Won&quot;. Contact your Salesforce administrator. --></errorMessage>
+        <name>CHANGE_Stagename_Closed_Won</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- For CZ,SK country the only available Products are EuroShell Basic_v1, EuroShell Standard_v1 or EuroShell Plus_v1 --></errorMessage>
+        <name>CZ_SK_Available_offers</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You have Inactive Account Price Book selected on Opportunity. Please choose another (Active) Price Book. --></errorMessage>
+        <name>Carnet_Active_Account_Price_Book</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t have both &quot;Unit Package Price - Paid monthly&quot; and &quot;Sales Discount&quot;. --></errorMessage>
+        <name>Carnet_Discount_Package</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please, select a correct Product Price Book for this Opportunity! --></errorMessage>
+        <name>Carnet_OBD_Price_Book_Product</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Carnet Standard 2019&quot; is available only for Poland. --></errorMessage>
+        <name>Carnet_Standard_2019_CE_Markets</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change this field on Carnet OBD Opportunity! --></errorMessage>
+        <name>Carnet_Standard_Only_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please, select a correct Product Price Book for this Opportunity! --></errorMessage>
+        <name>Carnet_Standard_Price_Book_Product</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You don&apos;t have the ability to change Opportunity Starts: Status to &quot;0.9 Ready for GFN&quot; --></errorMessage>
+        <name>Change_Opp_Start_Status_to_Ready_for_GFN</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid Format --></errorMessage>
+        <name>Credit_System_Id</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot check DD Interested. --></errorMessage>
+        <name>DD_interested_locked</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pole &quot;Důvod k rozhodnutí - jiný&quot; je povinné. --></errorMessage>
+        <name>Decision_Reason_Other_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill in the &quot;Other reason lost&quot; field. --></errorMessage>
+        <name>Dependency_Other_Reason_Lost</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You need to send DocuSign documents! (DocuSign Status must be Completed. If Contract scan was uploaded manually, ask Admin to update the DocuSign Status field.) --></errorMessage>
+        <name>DocuSign_completed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t change E2E checkbox --></errorMessage>
+        <name>E2E_Checkbox</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ESI is required for this Product * --></errorMessage>
+        <name>ESI_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EuroShell Basic Discount is available for Registered Countries &quot;Czech Republic&quot;, &quot;Poland&quot;, &quot;Slovakia&quot; and Sec. Channel &quot;Inbound&quot;. Please select the correct product. --></errorMessage>
+        <name>EuroShell_Basic_Discount_for_CZ_PL_SK</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EuroShell Basic is available for Registered Countries &quot;Czech Republic&quot;, &quot;Poland&quot;, &quot;Slovakia&quot; and Sec. Channel &quot;Inbound&quot;. Please select the correct product. --></errorMessage>
+        <name>EuroShell_Basic_for_CZ_PL_SK</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;EuroShell Basic_v1 Contra&quot; is available only for Czech Republic and Slovakia. --></errorMessage>
+        <name>EuroShell_Basic_v1_Contra_for_CS_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;EuroShell Basic_v1&quot; is available only for Czech Republic and Slovakia. --></errorMessage>
+        <name>EuroShell_Basic_v1_for_CS_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EuroShell Plus is available for Registered Countries &quot;Czech Republic&quot;, &quot;Poland&quot;, &quot;Slovakia&quot; and Sec. Channel &quot;Inbound&quot;. Please select the correct product. --></errorMessage>
+        <name>EuroShell_Plus_for_CZ_PL_SK</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;EuroShell Plus_v1&quot; is available only for Czech Republic and Slovakia. --></errorMessage>
+        <name>EuroShell_Plus_v1_for_CS_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EuroShell Standard Discount is available for Registered Countries &quot;Czech Republic&quot;, &quot;Poland&quot;, &quot;Slovakia&quot; and Sec. Channel &quot;Inbound&quot;. Please select the correct product. --></errorMessage>
+        <name>EuroShell_Standard_Discount_for_CZ_PL_SK</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;EuroShell Standard RTL&quot; is available only for Poland. --></errorMessage>
+        <name>EuroShell_Standard_RTL_for_PL_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- EuroShell Standard is available for Registered Countries &quot;Czech Republic&quot;, &quot;Poland&quot;, &quot;Slovakia&quot; and Sec. Channel &quot;Inbound&quot;. Please select the correct product. --></errorMessage>
+        <name>EuroShell_Standard_for_CZ_PL_SK</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;EuroShell Standard_v1 Contra&quot; is available only for Czech Republic and Slovakia. --></errorMessage>
+        <name>EuroShell_Standard_v1_Contra_for_CS_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;EuroShell Standard_v1&quot; is available only for Czech Republic and Slovakia. --></errorMessage>
+        <name>EuroShell_Standard_v1_for_CS_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You don&apos;t have permissions to close this opportunity. You need to have Card Processing or admin profile. GFN_number_for_starts__c --></errorMessage>
+        <name>GNF_Number_Profile_CardProcessing</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Gold&quot; is available only for Germany. --></errorMessage>
+        <name>Gold_DE_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;HOME 1&quot; is available only for Netherlands. --></errorMessage>
+        <name>HOME_1_for_NL_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Home Station is required for this Product * --></errorMessage>
+        <name>Home_Station_is_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Home Station offer (v.2)&quot; is available only for Hungary. --></errorMessage>
+        <name>Home_Station_offer_v2_for_HU_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Germany only. --></errorMessage>
+        <name>Inbound_Regional_offer_v1_DE</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Poland only. --></errorMessage>
+        <name>Inbound_Sales_no_fee_promo_PL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Inbound Typ A&quot; is available only for Germany. --></errorMessage>
+        <name>Inbound_Typ_A_for_DE_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Inbound Typ B&quot; is available only for Germany. --></errorMessage>
+        <name>Inbound_Typ_B_for_DE_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Inbound Typ C&quot; is available only for Germany. --></errorMessage>
+        <name>Inbound_Typ_C_for_DE_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- JITB EuroShell Basic Discount is available for Registered Countries &quot;Czech Republic&quot;, &quot;Poland&quot;, &quot;Slovakia&quot; and Sec. Channel &quot;JITB&quot;. Please select the correct product. --></errorMessage>
+        <name>JITB_EuroShell_Basic_Disc_for_CZ_PL_SK</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- JITB EuroShell Basic is available for Registered Countries &quot;Czech Republic&quot;, &quot;Poland&quot;, &quot;Slovakia&quot; and Sec. Channel &quot;JITB&quot;. Please select the correct product. --></errorMessage>
+        <name>JITB_EuroShell_Basic_for_CZ_PL_SK</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- JITB EuroShell Plus is available for Registered Countries &quot;Czech Republic&quot;, &quot;Poland&quot;, &quot;Slovakia&quot; and Sec. Channel &quot;JITB&quot;. Please select the correct product. --></errorMessage>
+        <name>JITB_EuroShell_Plus_for_CZ_PL_SK</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- JITB EuroShell Standard Discount is available for Registered Countries &quot;Czech Republic&quot;, &quot;Poland&quot;, &quot;Slovakia&quot; and Sec. Channel &quot;JITB&quot;. Please select the correct product. --></errorMessage>
+        <name>JITB_EuroShell_Stand_Disc_for_CZ_PL_SK</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- JITB EuroShell Standard is available for Registered Countries &quot;Czech Republic&quot;, &quot;Poland&quot;, &quot;Slovakia&quot; and Sec. Channel &quot;JITB&quot;. Please select the correct product. --></errorMessage>
+        <name>JITB_EuroShell_Standard_for_CZ_PL_SK</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Germany only. --></errorMessage>
+        <name>JITB_Mittelstand_Systemgebuhr_DE</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Germany only. --></errorMessage>
+        <name>JITB_Regional_offer_v1_DE</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;LOCAL - RED&quot; is available only for Belgium and Luxembourg. --></errorMessage>
+        <name>LOCAL_RED_for_BE_LUX_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;LOCAL - YELLOW&quot; is available only for Belgium and Luxembourg. --></errorMessage>
+        <name>LOCAL_YELLOW_for_BE_LUX_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Opportunity is Closed, you cannot modify it. Please contact your manager. 1 --></errorMessage>
+        <name>Lock_Carnet_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Opportunity is Closed, you cannot modify it. Please contact your manager. 2 --></errorMessage>
+        <name>Lock_Carnet_Opportunity_Stage</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;LOTOS Biznes No fee&quot; is available only for Poland. --></errorMessage>
+        <name>Lotos_Biznes_No_fee_PL_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;LOTOS Biznes Standard&quot; is available only for Poland. --></errorMessage>
+        <name>Lotos_Biznes_Standard_PL_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please, select Monthly Payment Method. --></errorMessage>
+        <name>Monthly_Payment_Method_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t change an opportunity &quot;Closed Lost&quot;. Contact your Salesforce administrator. --></errorMessage>
+        <name>NOT_CHANGE_Closed_Lost_opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t change an opportunity &quot;Closed Won&quot;. Contact your Salesforce administrator. --></errorMessage>
+        <name>NOT_CHANGE_Closed_Won_opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Poland only. --></errorMessage>
+        <name>New_No_fee_offer</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a value. --></errorMessage>
+        <name>Next_Step_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You do not have permission to update Close Date or Stage. (OPP001) --></errorMessage>
+        <name>NoEditCloseNStageByStartsNCardP_OPP001</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t change Opportunity Record Type. --></errorMessage>
+        <name>Not_Change_Record_Type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pole &quot;Počet vozidel&quot; je povinné. --></errorMessage>
+        <name>Number_of_Vehicles_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Укажите корректное значение ИНН! --></errorMessage>
+        <name>Opp_INN_for_RU</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please, enter Order Payment Method. --></errorMessage>
+        <name>Order_Payment_Method_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Belgium-NL only. --></errorMessage>
+        <name>Outbound_HH_SME_BENL_0_8_BENL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Belgium-NL only. --></errorMessage>
+        <name>Outbound_HH_SME_BENL_10_BENL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Netherlands only. --></errorMessage>
+        <name>Outbound_HH_SME_NL_0_8_NL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Netherlands only. --></errorMessage>
+        <name>Outbound_HH_SME_NL_10_NL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Belgium-NL only. --></errorMessage>
+        <name>Outbound_SME_BENL_0_8_BENL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Belgium-NL only. --></errorMessage>
+        <name>Outbound_SME_BENL_10_BENL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Netherlands only. --></errorMessage>
+        <name>Outbound_SME_NL_0_8_NL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Netherlands only. --></errorMessage>
+        <name>Outbound_SME_NL_10_NL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Обратитесь к ответственному за Организацию или направьте запрос на перевод Организации Админиcтратору SF - ERROR:RU-OPTY001 --></errorMessage>
+        <name>PPR_AccountOwnerId</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR:RU-OPTY015. Укажите Дату получения скана (кроме МО) и Специальные условия! --></errorMessage>
+        <name>PPR_Agreement_Date_Contract_Number_Scan</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR:RU-OPTY018. Если продукт БК укажите кол-во карт &quot;БИЗНЕС CARD&quot; --></errorMessage>
+        <name>PPR_Business_card_Product_Credit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR:RU-OPTY018. Укажите причину! --></errorMessage>
+        <name>PPR_Decision_Reason_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please state the reason --></errorMessage>
+        <name>PPR_Decision_Reason_Other_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR:RU-OPTY002. У вас нет полномочий на выполнение данной операции. При необходимости обратитесь к администратору или ответственному за запись. --></errorMessage>
+        <name>PPR_E2E_Guest_User</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR:RU-OPTY020 - -  Направьте запрос Администратору SF для изменения &quot;Даты закрытия&quot;. --></errorMessage>
+        <name>PPR_Moved_to_Start_Close_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR: RU-OPTY021. Запрещено вносить изменения после закрепления на Старт. Обратитесь к Администратору SF. --></errorMessage>
+        <name>PPR_NOT_CHANGE_Close_Opty</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR: RU-OPTY022. Запрещено вносить изменения после закрепления на Старт. Обратитесь к Администратору SF! --></errorMessage>
+        <name>PPR_NOT_CHANGE_Close_Opty2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR:RU-OPTY031.Обязательный к заполнению, если не подходит наш оператор --></errorMessage>
+        <name>PPR_Operator_EMD</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Fill in the fields: Most Important Feature, Geography of trips &amp; Number of Vehicles --></errorMessage>
+        <name>PPR_Probability_10</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Заполните поле Отрасль в Организации! --></errorMessage>
+        <name>PPR_Probability_50</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- fill field Projected_Liters_weekly__c OR Projected_amount_in_rub_month__c if probability go up &gt;  0.1 --></errorMessage>
+        <name>PPR_Probability_more_10_Liters_Rub</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- fill field Number_of_cars__c or Number_of_trucks__c  if probability go up &gt; 0.1 --></errorMessage>
+        <name>PPR_Probability_more_10_Truck_Car</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- fill field Primary_Fueling_Method__c --></errorMessage>
+        <name>PPR_Probability_since_10</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR:RU-OPTY022. Сообщите Администратору SF &quot;Источник Интереса&quot; --></errorMessage>
+        <name>PPR_Source_lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Утвердите у Старт Менеджера!  - ERROR:RU-OPTY017 --></errorMessage>
+        <name>PPR_Start_Manager_Approval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ИНН должен содержать только цифры! ERROR:RU-OPTY005. --></errorMessage>
+        <name>PPR_Valid_INN_IS_not_NUMBER</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Некорректный ИНН! ERROR:RU-OPTY004. --></errorMessage>
+        <name>PPR_Valid_Len_INN</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- fill fields: Credit days ppr, PPR Electronic document management, Product PPR, Category of Contract and Number of Cards --></errorMessage>
+        <name>PPR_category_contract_Projected_Liters_w</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You don&apos;t have permission to change lead source --></errorMessage>
+        <name>Permission_to_change_E2E_LeadSource</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You don&apos;t have permission to change E2E Owner Opportunity --></errorMessage>
+        <name>Permission_to_change_E2E_OwnerId</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Platin&quot; is available only for Germany. --></errorMessage>
+        <name>Platin_DE_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product can not be selected by the outbound team. --></errorMessage>
+        <name>Product_Not_Change_team_outbound</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- For CZ,SK,HU, PL it is not possible to uncheck when already checked. Customer has to opt-out via email or calling Customer Service. --></errorMessage>
+        <name>Read_only_when_checked_CE</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please add E2E Customer Feedback --></errorMessage>
+        <name>Required_E2E_Customer_Feedback</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please launch Credit Factory to change Total consumption (l/month). --></errorMessage>
+        <name>Restrict_to_change_Total_Consumption</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- &quot;Reason for Termination&quot; field is required for &quot;5.5 Winback failed&quot; Starts Status. --></errorMessage>
+        <name>Rsn_for_Termination_required_Winback5_5</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;SME (BNF 0,025 € + fixed fee)&quot; is available only for Belgium and Netherlands. --></errorMessage>
+        <name>SME_BNF_0_025_fixed_for_BE_and_NL_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;SME (BNF 0,025 € + % fee)&quot; is available only for Belgium and Netherlands. --></errorMessage>
+        <name>SME_BNF_0_025_percent_for_BE_and_NL_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- 0 CU = discount 0%, 1-5 CU = discount max 5%; 6-10 CU = max 10%, 11+ CU = max 15% --></errorMessage>
+        <name>Sales_Basic_Monthly_Fee_Discount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sales Discount can&apos;t be blank! Either enter 0% or other values. --></errorMessage>
+        <name>Sales_Basic_Monthly_Fee_Discount_BLANK</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Manual Stage changes are not allowed. The only available values for manual selection are &quot;Closed Lost&quot;, &quot;CreditCheck&quot;, &quot;Credit Check - Pending Credit&quot;, &quot;Pending Sales - SEPA Confirmation&quot;, &quot;Pending Credit Report&quot;, &quot;Pending Credit - Contract Check&quot;. --></errorMessage>
+        <name>Salesteam_Closed_Lost</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This product is available for Poland only. --></errorMessage>
+        <name>Service_fee_offer</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Shell Basic 2020&quot; is available only for Czech Republic, Slovakia, Hungary and Poland. --></errorMessage>
+        <name>Shell_Basic_2020_CE_Markets</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Shell enjoy summer 2019&quot; is available only for Hungary and Poland. --></errorMessage>
+        <name>Shell_Enjoy_Summer_2019_HU_PL_Markets</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Shell No fee 2020&quot; is available only for Czech Republic, Slovakia, Hungary and Poland. --></errorMessage>
+        <name>Shell_No_fee_2020_CE_Markets</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Shell Promo 2019&quot; is available only for Czech Republic, Slovakia, Hungary and Poland. --></errorMessage>
+        <name>Shell_Promo_2019_CE_Markets</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Shell Standard 2019&quot; is available only for Czech Republic, Slovakia, Hungary and Poland. --></errorMessage>
+        <name>Shell_Standard_2019_CE_Markets</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Shell Summer 2019&quot; is available only for Czech Republic, Slovakia, Hungary and Poland. --></errorMessage>
+        <name>Shell_Summer_2019_CE_Markets</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;Smart&quot; is available only for Belgium-FR. --></errorMessage>
+        <name>Smart_for_BE_FR_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If Opp. Type = New GFN, Opportunity Starts: GFN Nr. field must be empty. Card Operations will add it after it is setup in GFN. --></errorMessage>
+        <name>Starts_GFN_nr_locked</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If Opp. Type = Existing GFN, please fill in GFN Nr. into Opportunity Starts: GFN Nr. field. --></errorMessage>
+        <name>Starts_GFN_nr_madatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- &quot;Starts: Karten erhalten am&quot; field is required for this Starts Status. --></errorMessage>
+        <name>Starts_Karten_required_if_Statuses_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Total consumption cannot be less than sum of diesel and gasoline consumption --></errorMessage>
+        <name>Total_cons_not_less_diesel_and_gasoline</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- False by default, True only if 11 or more Carnet Units are under Opportunity. --></errorMessage>
+        <name>Unit_Package_Price_11_or_More</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;5 Cent Neujahrs-Angebot&quot; is available only for Germany. --></errorMessage>
+        <name>Weihnachtsknaller_5_for_DE_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;6 Cent Neujahrs-Angebot&quot; is available only for Germany. --></errorMessage>
+        <name>Weihnachtsknaller_6_for_DE_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Offer &quot;7 Cent Neujahrs-Angebot&quot; is available only for Germany. --></errorMessage>
+        <name>Weihnachtsknaller_7_for_DE_only</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AML_Documents_Required --></label>
+        <name>AML_Documents_Required</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CCS_Merlin_Order --></label>
+        <name>CCS_Merlin_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CCS_new_opportunity --></label>
+        <name>CCS_new_opportunity</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Change_Owner --></label>
+        <name>Change_Owner</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Check_duplicates_Credit --></label>
+        <name>Check_duplicates_Credit</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Check_duplicates_New --></label>
+        <name>Check_duplicates_New</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Check_duplicates_Rus --></label>
+        <name>Check_duplicates_Rus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Convert_to_e2e --></label>
+        <name>Convert_to_e2e</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Commercial_Proposal --></label>
+        <name>Create_Commercial_Proposal</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Send_Order --></label>
+        <name>Create_Send_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Credit_Factory --></label>
+        <name>Credit_Factory</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deposit_Required --></label>
+        <name>Deposit_Required</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- E2E_Closed_Lost --></label>
+        <name>E2E_Closed_Lost</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- E2E_Move_To_Start --></label>
+        <name>E2E_Move_To_Start</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- E2E_Zoho --></label>
+        <name>E2E_Zoho</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Information_Required --></label>
+        <name>Information_Required</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PD_NewContact --></label>
+        <name>PD_NewContact</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PIT_CIT_Required --></label>
+        <name>PIT_CIT_Required</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Pending_Credit --></label>
+        <name>Pending_Credit</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Put_on_Start --></label>
+        <name>Put_on_Start</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reopen_Opportunity --></label>
+        <name>Reopen_Opportunity</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_SEPA_Request --></label>
+        <name>Send_SEPA_Request</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Transactions_Request --></label>
+        <name>Send_Transactions_Request</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Sparkalkulator --></label>
+        <name>Sparkalkulator</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Submit_for_Approval --></label>
+        <name>Submit_for_Approval</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Submit_for_Approval_Carnet --></label>
+        <name>Submit_for_Approval_Carnet</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Submit_for_Reopen --></label>
+        <name>Submit_for_Reopen</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Token_payment_Required --></label>
+        <name>Token_payment_Required</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Update_Processed_by --></label>
+        <name>Update_Processed_by</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Waiting_for_token_payment --></label>
+        <name>Waiting_for_token_payment</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Verify_with_DNB --></label>
+        <name>dsfs__Verify_with_DNB</name>
+    </webLinks>
+    <workflowTasks>
+        <name>Additional_Information_for_Credit_Check</name>
+        <subject><!-- Additional Information for Credit Check --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Anruf_Karten_erhalten</name>
+        <subject><!-- Anruf: Karten erhalten! --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Call_Cards_received</name>
+        <subject><!-- Call: Cards received! --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Credit_genehmigt_Kunden_bearbeiten</name>
+        <subject><!-- Credit genehmigt, Kunden bearbeiten --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Credit_guarantee_received_please_check_again_HU</name>
+        <subject><!-- Credit guarantee received, please check again! HU --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Credit_guarantee_received_please_check_again_PL</name>
+        <subject><!-- Credit guarantee received, please check again! PL --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- Hallo,
+
+bitte den Kunden anlegen.
+Kunde möchte eine Kaution hinterlegen.
+
+Viele Grüße --></description>
+        <name>Kunden_anlegen_Kaution</name>
+        <subject><!-- Kunden anlegen Kaution --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Sicherheit_bei_Kunden_einholen</name>
+        <subject><!-- Sicherheit bei Kunden einholen! --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Sicherheit_eingeholt_bitte_erneut_pr_fen</name>
+        <subject><!-- Sicherheit eingeholt, bitte erneut prüfen! --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Sicherheit_eingeholt_bitte_erneut_pr_fen_BeNeFra</name>
+        <subject><!-- Sicherheit eingeholt, bitte erneut prüfen! BeNeFra --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- Diese Karte bitte ausstellen. --></description>
+        <name>Zusatzkarte</name>
+        <subject><!-- Zusatzkarte --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting</fullName>
+        <default>false</default>
+        <label>Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call</fullName>
+        <default>false</default>
+        <label>Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>První schůzka</fullName>
+        <default>false</default>
+        <label>První schůzka</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Následná schůzka</fullName>
+        <default>false</default>
+        <label>Následná schůzka</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retence</fullName>
+        <default>false</default>
+        <label>Retence</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rozvoj</fullName>
+        <default>false</default>
+        <label>Rozvoj</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Péče</fullName>
+        <default>false</default>
+        <label>Péče</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trénink</fullName>
+        <default>false</default>
+        <label>Trénink</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Akvizice</fullName>
+        <default>false</default>
+        <label>Akvizice</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Online transfer call</fullName>
+        <default>false</default>
+        <label>Online transfer call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Post</fullName>
+        <default>false</default>
+        <label>Post</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ostatní</fullName>
+        <default>false</default>
+        <label>Ostatní</label>
+    </standardValue>
+</StandardValueSet>

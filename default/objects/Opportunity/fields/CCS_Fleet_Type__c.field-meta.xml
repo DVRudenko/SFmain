@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Fleet_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS_Fleet Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cars and vans up to 3.5 t</fullName>
+                <default>false</default>
+                <label>Cars and vans up to 3.5 t</label>
+            </value>
+            <value>
+                <fullName>Vans and trucks up to 12 t</fullName>
+                <default>false</default>
+                <label>Vans and trucks up to 12 t</label>
+            </value>
+            <value>
+                <fullName>Trucks over 12 t</fullName>
+                <default>false</default>
+                <label>Trucks over 12 t</label>
+            </value>
+            <value>
+                <fullName>Other heavy machinery</fullName>
+                <default>false</default>
+                <label>Other heavy machinery</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

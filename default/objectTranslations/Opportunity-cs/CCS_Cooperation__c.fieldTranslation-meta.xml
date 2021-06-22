@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Spolupráce s...</label>
+    <name>CCS_Cooperation__c</name>
+    <picklistValues>
+        <masterLabel>Ctibor Pokorný</masterLabel>
+        <translation><!-- Ctibor Pokorný --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>David Bartůněk</masterLabel>
+        <translation><!-- David Bartůněk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eva Pracná</masterLabel>
+        <translation><!-- Eva Pracná --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Irena Vraspírová</masterLabel>
+        <translation><!-- Irena Vraspírová --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jakub Novák</masterLabel>
+        <translation><!-- Jakub Novák --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jaroslav Peška</masterLabel>
+        <translation><!-- Jaroslav Peška --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jiří Schut</masterLabel>
+        <translation><!-- Jiří Schut --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Klára Horká</masterLabel>
+        <translation><!-- Klára Horká --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marek Gruber</masterLabel>
+        <translation><!-- Marek Gruber --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Miroslav Poklop</masterLabel>
+        <translation><!-- Miroslav Poklop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Miroslav Vaník</masterLabel>
+        <translation><!-- Miroslav Vaník --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pavel Záhora</masterLabel>
+        <translation><!-- Pavel Záhora --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pavla Platková</masterLabel>
+        <translation><!-- Pavla Platková --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Petra Doffková</masterLabel>
+        <translation><!-- Petra Doffková --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Petra Škorpíková</masterLabel>
+        <translation><!-- Petra Škorpíková --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Plzák Robert</masterLabel>
+        <translation><!-- Plzák Robert --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T-Mobile</masterLabel>
+        <translation><!-- T-Mobile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tomáš Zahajský</masterLabel>
+        <translation><!-- Tomáš Zahajský --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

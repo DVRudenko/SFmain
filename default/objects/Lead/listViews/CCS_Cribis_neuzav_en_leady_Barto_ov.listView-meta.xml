@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Cribis_neuzav_en_leady_Barto_ov</fullName>
+    <booleanFilter>1 AND 2 and 3 and 4</booleanFilter>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>CCS_Call_status__c</columns>
+    <columns>Quali_Status__c</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.MOBILE_PHONE</columns>
+    <columns>LEAD.STREET</columns>
+    <columns>LEAD.CITY</columns>
+    <columns>CCS_Names_2__c</columns>
+    <columns>CCS_Interest__c</columns>
+    <columns>CCS_Interest_YES__c</columns>
+    <columns>CCS_Reason_of_lack_of_interest__c</columns>
+    <columns>CCS_Description__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>bartoňová</value>
+    </filters>
+    <filters>
+        <field>CCS_Call_status__c</field>
+        <operation>contains</operation>
+        <value>,"nezvedá, obsazeno","zavolat jindy, nemá čas",domluveno následné volání</value>
+    </filters>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>contains</operation>
+        <value>kampaň,Cribis,VOLÁNÍ,WEB Telesales,Web CCS</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Uzavřeno,Disqualified</value>
+    </filters>
+    <label>CCS Cribis neuzavřené leady - Bartoňová</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>CCS_Administrator</role>
+        <role>CCS_CZ_Contact_Center</role>
+        <role>CCS_CZ_KAM</role>
+        <role>CCS_CZ_KAM_Team_Lead</role>
+        <role>CCS_CZ_LAM</role>
+        <role>CCS_CZ_SME</role>
+        <role>CCS_CZ_Telesales</role>
+        <role>CCS_Contact_Center_Team_Lead</role>
+        <role>CCS_SK_Contact_Center</role>
+        <role>CCS_SK_SME</role>
+        <role>CCS_SME_Team_Lead</role>
+        <role>CCS_Telesales_Team_Lead</role>
+    </sharedTo>
+</ListView>

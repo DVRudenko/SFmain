@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select who will receive the Reward that is generated when the Behaviour Criteria are fulfilled --></help>
+    <label><!-- Recipient --></label>
+    <name>success__Recipient__c</name>
+</CustomFieldTranslation>

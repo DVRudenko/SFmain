@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Quali_Status_mandatory</fullName>
+    <active>true</active>
+    <description>If Status = "Disqualified", then Quali_Status__c is mandatory.</description>
+    <errorConditionFormula>AND(
+OR(
+$Profile.Name = "CCS Sales Inbound",
+$Profile.Name = "CCS Sales Manager",
+$Profile.Name = "CCS SME",
+$Profile.Name = "CCS SME Team Lead",
+$Profile.Name = "CCS Salesteamleiter Inbound",
+$Profile.Name = "CCS Unassigned",
+$Profile.Name = "CCS KAM",
+$Profile.Name = "CCS KAM Team Lead",
+$Profile.Name = "CCS LAM",
+$Profile.Name = "CCS LAM Team Lead",
+$Profile.Name = "CCS Sales Lead",
+$Profile.Name = "CCS System Administrator"),
+ISPICKVAL(Status, "Disqualified"),
+ISBLANK(TEXT(Quali_Status__c)))</errorConditionFormula>
+    <errorDisplayField>Quali_Status__c</errorDisplayField>
+    <errorMessage>Pole "Důvod diskvalifikace" je povinné!</errorMessage>
+</ValidationRule>

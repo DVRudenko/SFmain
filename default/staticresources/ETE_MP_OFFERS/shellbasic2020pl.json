@@ -1,0 +1,101 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "Wait until you receive your Shell cards and PIN numbers by post.",
+                "pl": "Poczekaj, aż pocztą otrzymasz karty Shell i numery PIN."
+            },
+            {
+                "en": "You can now use your card(s) for the first time while refueling at a Shell Station.",
+                "pl": "Teraz możesz skorzystać po raz pierwszy ze swojej karty podczas tankowania na stacji Shell."
+            },
+            {
+                "en": "Your card has now been activated! Enjoy a care-free refueling experience with your Shell fuel cards.",
+                "pl": "Poprzez pierwsze użycie Twoja karta została aktywowana. Ciesz się tankowaniem dzięki kartom paliwowym Shell."
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Fuel discount at Shell stations in Poland",
+                    "pl": "Zniżka na stacjach Shell w Polsce"
+                },
+                "value": {
+                    "en": "8 GR brutto/liter",
+                    "pl": "8 gr brutto/litr"
+                }
+            },
+            {
+                "label": {
+                    "en": "Carwash discount at Shell stations in Poland",
+                    "pl": "Zniżka na myjnie na stacjach Shell w Polsce"
+                },
+                "value": {
+                    "en": "10%",
+                    "pl": "10%"
+                }
+            },
+            {
+                "label": {
+                    "en": "Card issuing and delivery",
+                    "pl": "Wydawanie i dostarczanie karty"
+                },
+                "value": {
+                    "en": "FREE",
+                    "pl": "NIEPOBIERANA"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "Shell Fuel Card"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "SHELL FUEL CARD",
+            "pl": "Karta paliwowa Shell"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/card_shell.png"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "With the Shell fuel card, you'll discover more benefits for yourself: effective fuel management for your fleet, simple and clear administration and a wide range of services.",
+            "pl": "Dzięki karcie paliwowej Shell odkryjesz więcej korzyści dla siebie: efektywne zarządzanie paliwem dla Twojej floty, prosta i jasna administracja oraz szeroki zakres usług."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "pl": "SHELL CARD"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "SHELL CARDS",
+            "pl": "SHELL CARD"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "Karta Shell",
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "1",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "monthlyFuelConsumption_max": "5000",
+            "monthlyFuelConsumption_min": "50",
+            "showEuroLocatorTab": false,
+            "euroLocatorProductNumber": "4",
+            "order": 4
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Poland": "/resource/ETE_DOCUMENTS_1/tariffSheets_shellbasic2020pl.png"
+    }
+}

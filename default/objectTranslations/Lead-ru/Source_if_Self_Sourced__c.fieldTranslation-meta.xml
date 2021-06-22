@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Обеспечение новых источников для успешного поиска потенциальных клиентов</help>
+    <label>Источник контактной информации</label>
+    <name>Source_if_Self_Sourced__c</name>
+</CustomFieldTranslation>

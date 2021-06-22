@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of warm transfers of the interaction from one agent to another --></help>
+    <label><!-- Number of Warm Transfers --></label>
+    <name>NVMStatsSF__Number_of_Warm_Transfers__c</name>
+</CustomFieldTranslation>

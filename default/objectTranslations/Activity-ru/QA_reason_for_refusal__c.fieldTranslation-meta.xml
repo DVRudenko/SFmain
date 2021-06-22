@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Причина отказа</label>
+    <name>QA_reason_for_refusal__c</name>
+    <picklistValues>
+        <masterLabel>Error CallCenter</masterLabel>
+        <translation>Ошибка КЦ</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error sales manager</masterLabel>
+        <translation>Ошибка КО</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not identified</masterLabel>
+        <translation>Не выявлено</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refusal on the client&#39;s initiative</masterLabel>
+        <translation>Отказ по инициативе клиента</translation>
+    </picklistValues>
+</CustomFieldTranslation>

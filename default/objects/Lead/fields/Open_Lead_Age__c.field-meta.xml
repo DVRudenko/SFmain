@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Lead_Age__c</fullName>
+    <description>A counter of how many days is the lead opened.</description>
+    <externalId>false</externalId>
+    <formula>IF(OR(ISPICKVAL(Status,"Open"),ISPICKVAL(Status,"Contacted")),TODAY() - DATEVALUE(CreatedDate),NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>A counter of how many days is the lead opened.</inlineHelpText>
+    <label>Open Lead Age</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

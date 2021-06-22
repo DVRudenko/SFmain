@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__DocuSign_Signer_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>DocuSign Signer Type</description>
+    <externalId>false</externalId>
+    <inlineHelpText>DOCUSIGN SIGNER TYPE</inlineHelpText>
+    <label>DocuSign Signer Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Signer</fullName>
+                <default>true</default>
+                <label>Signer</label>
+            </value>
+            <value>
+                <fullName>Carbon Copy</fullName>
+                <default>false</default>
+                <label>Carbon Copy</label>
+            </value>
+            <value>
+                <fullName>Certified Delivery</fullName>
+                <default>false</default>
+                <label>Certified Delivery</label>
+            </value>
+            <value>
+                <fullName>Sign in person</fullName>
+                <default>false</default>
+                <label>Sign in person</label>
+            </value>
+            <value>
+                <fullName>Address recipients</fullName>
+                <default>false</default>
+                <label>Address recipients</label>
+            </value>
+            <value>
+                <fullName>Manage envelope</fullName>
+                <default>false</default>
+                <label>Manage envelope</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

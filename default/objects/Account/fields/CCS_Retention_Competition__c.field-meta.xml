@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Retention_Competition__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Retention Competition</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CCS_Retention_Flag__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Shell</fullName>
+                <default>false</default>
+                <label>Shell</label>
+            </value>
+            <value>
+                <fullName>Benzina</fullName>
+                <default>false</default>
+                <label>Benzina</label>
+            </value>
+            <value>
+                <fullName>OMV</fullName>
+                <default>false</default>
+                <label>OMV</label>
+            </value>
+            <value>
+                <fullName>MOL (Slovnaft, ENI, PapOil, LukOil)</fullName>
+                <default>false</default>
+                <label>MOL (Slovnaft, ENI, PapOil, LukOil)</label>
+            </value>
+            <value>
+                <fullName>RobinOil</fullName>
+                <default>false</default>
+                <label>RobinOil</label>
+            </value>
+            <value>
+                <fullName>TankOno</fullName>
+                <default>false</default>
+                <label>TankOno</label>
+            </value>
+            <value>
+                <fullName>Bankovní karta</fullName>
+                <default>false</default>
+                <label>Bankovní karta</label>
+            </value>
+            <value>
+                <fullName>Hotovost</fullName>
+                <default>false</default>
+                <label>Hotovost</label>
+            </value>
+            <value>
+                <fullName>Jiné</fullName>
+                <default>false</default>
+                <label>Jiné</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>konkurence</controllingFieldValue>
+            <valueName>Shell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>konkurence</controllingFieldValue>
+            <valueName>Benzina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>konkurence</controllingFieldValue>
+            <valueName>OMV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>konkurence</controllingFieldValue>
+            <valueName>MOL (Slovnaft, ENI, PapOil, LukOil)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>konkurence</controllingFieldValue>
+            <valueName>RobinOil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>konkurence</controllingFieldValue>
+            <valueName>TankOno</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>konkurence</controllingFieldValue>
+            <valueName>Bankovní karta</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>konkurence</controllingFieldValue>
+            <valueName>Hotovost</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>konkurence</controllingFieldValue>
+            <valueName>Jiné</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

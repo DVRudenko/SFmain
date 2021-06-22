@@ -1,0 +1,4 @@
+({
+    openComponentInSubtab : function() {
+    }
+})

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Credit Class</label>
+    <name>Kreditklasse__c</name>
+    <picklistValues>
+        <masterLabel>Klasse 1 - 3</masterLabel>
+        <translation>Class 1 - 3</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Klasse 4</masterLabel>
+        <translation>Class 4</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Klasse 5</masterLabel>
+        <translation>Class 5</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Klasse 6</masterLabel>
+        <translation>Class 6</translation>
+    </picklistValues>
+</CustomFieldTranslation>

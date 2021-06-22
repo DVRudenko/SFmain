@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <submitter>Submit_for_Approval</submitter>
+        <type>group</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>credit@fleetcor.de</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Step 1</label>
+        <name>Step_1</name>
+    </approvalStep>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>AND(
+	 	NOT(ISNULL(Anzahl_der_Karten__c)), 
+	 	RecordType.Name = &apos;Shell Universal Card&apos;,   	
+	 	Account.BillingCountry = &apos;Poland&apos;,
+	 	NOT(ISPICKVAL(Account.Beschaeftigte__c, &apos;&apos;)),
+	 	Account.NIP__c &lt;&gt; &apos;&apos;,
+	 	NOT(ISPICKVAL(Account.Gesellschaftsform__c, &apos;&apos;)),
+	 	Account.Trading_Name__c &lt;&gt; &apos;&apos;,
+	 	NOT(ISNULL(Requested_monthly_Company_Credit_Spend__c)),
+	 	AGB_Datenschutzhinweise_Richtigkeit__c &lt;&gt; false,
+	 	Data_Protection_Act_1998__c &lt;&gt; false,
+	 	PIT_CIT_Annual_Financial_statement_for__c &lt;&gt; false,
+		Copy_of_national_ID_passport__c &lt;&gt; false,
+		Details_of_REGON_CEIDG_or_KRS__c &lt;&gt; false
+ 	)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Call_Cards_received</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>CreditCheckAML_AllStar_finished</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Opp_gewonnen_nach_CreditCheck</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Schlusstermin</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>true</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>CreditCheck_Absage</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CreditCheckAML_AllStar_finished</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Schlusstermin</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>CreditCheckAML_PL_ShellUC</label>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Opportunity Type from Lead --></label>
+    <name>Opportunity_Type_from_Lead__c</name>
+    <picklistValues>
+        <masterLabel>BAU</masterLabel>
+        <translation><!-- BAU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Existing Business</masterLabel>
+        <translation><!-- Existing Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Existing GFN</masterLabel>
+        <translation><!-- Existing GFN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New GFN</masterLabel>
+        <translation><!-- New GFN --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

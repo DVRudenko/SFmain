@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FS_Tree_Country__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>FS_Tree_Country</label>
+    <referenceTo>FS_Tree_Country__mdt</referenceTo>
+    <relationshipLabel>FS_Tree_Provinces</relationshipLabel>
+    <relationshipName>FS_Tree_Provinces</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

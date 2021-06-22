@@ -1,0 +1,210 @@
+<apex:page controller="RateDetailedReportCCSctrl" action="{!init}">
+	<apex:includeScript value="{! $Resource.jQuery }"/>
+    <apex:includeScript value="{! URLFOR($Resource.jQueryUI,'jquery-ui.min.js') }"/>
+    <apex:includeScript value="{! URLFOR($Resource.Tablesorter,'jquery.tablesorter.min.js') }"/>
+    <apex:form >
+    	<style>
+    		.legendbox {
+                display: inline-block; 
+                height: 12px; 
+                width: 12px; 
+                margin-right: 5px;
+            }
+            .infoTable {
+			    overflow:hidden;
+			    border:1px solid #d3d3d3;
+			    border-collapse: collapse;
+			    width:100%;
+			    margin:1% 0 0.5% 0;
+			    -moz-border-radius:5px; /* FF1+ */
+			    -webkit-border-radius:5px; /* Saf3-4 */
+			    border-radius:5px;
+			}			 
+			.infoTable th {
+			    background: -moz-linear-gradient(100% 20% 90deg, #f2f3f3, #ededed);
+			    background: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#ededed), to(#f2f3f3));
+			    font-size: 11px;
+			}
+			.homeTab .div1 .tertiaryPalette {
+                background: #37BC9B;
+            }
+
+            .homeTab .div2 .tertiaryPalette {
+                background: #D770AD;
+            }
+
+            .homeTab .div3 .tertiaryPalette {
+                background: #4A89DC;
+            }
+
+            .homeTab .div4 .tertiaryPalette {
+                background: #386dc1;
+            }
+
+            .homeTab .div5 .tertiaryPalette {
+                background: grey;
+            }
+            .homeTab .div6 .tertiaryPalette {
+                background: #5d6f8c;
+            }
+    	</style>
+    	<apex:outputText style="margin-left: 15px; font-size: 15px; font-weight:bold" value="Conversion/Approval Rate for "/>
+        <apex:selectList value="{! selectedPeriod }" size="1" multiselect="false" style="margin-left: 5px;">
+                <apex:selectOptions value="{! currentWeeks }"/>
+                <apex:actionSupport action="{! init }" event="onchange"/>
+        </apex:selectList>
+        <apex:selectList value="{! selectedYear }" size="1" multiselect="false" style="margin: 0 5px;">
+                <apex:selectOptions value="{! years }"/>
+                <apex:actionSupport action="{! changeYear }" event="onchange"/>
+        </apex:selectList> 
+        <apex:outputText style="margin-left: 5px; font-size: 15px; font-weight:bold" value="({! startDateOfMonthString } - {! endDateOfMonthString })"/>
+        <p><span style="background: #37BC9B;" class="legendbox"></span>1) All received Leads created in the selected period;</p>
+        <p><span style="background: #D770AD;" class="legendbox"></span>2) All "Closed Won" Opportunities created in the selected period;</p>
+        <p><span style="background: #4A89DC;" class="legendbox"></span>3) All Opportunies where StageName != "Duplicate";</p>
+        <p><span style="background: #386dc1;" class="legendbox"></span>4) All Opportunies where StageName != "Duplicate" AND CCS MerlinID is empty;</p>
+        <p><span style="background: grey;" class="legendbox"></span>5) All Excluded Opportunities: Disabled for KPI = TRUE;</p>
+        <p><span style="background: #3d5170;" class="legendbox"></span>6) All Excluded Leads: Disabled for KPI = TRUE</p>
+        <p><strong><span style="color: red;">KPI % = </span> <span style="color: #D770AD;">2</span> / <span style="color: #37BC9B;">1</span> * 100</strong></p>
+        <p><strong><span style="color: red;">Approval % = </span> <span style="color: #D770AD;">2</span> / <span style="color: #4A89DC;">3</span> * 100</strong></p>
+        <apex:pageBlock id="block1">
+            <table class="infoTable" width="100%" border="1">
+				<tr>
+					<th style="width: 16%;">Name</th>
+					<th style="width: 16%;">All Received Leads</th>
+					<th style="width: 16%;">All Closed Won Opportunities</th>
+					<th style="width: 16%;">All Not Duplicate Opportunities</th>
+					<th style="width: 16%;">Conversion, %</th>
+					<th style="width: 16%;">Approval, %</th>
+				</tr>
+				<tr>
+					<td>{! selectedUser.Name }</td>
+					<td>{! numberReceivedLeads }</td>
+					<td>{! numberClosedWonOpps }</td>
+					<td>{! numberNotDuplicateOpps }</td>
+					<td>{! ROUND(IF(numberReceivedLeads != 0, (numberClosedWonOpps / numberReceivedLeads) * 100, 0), 0)}</td>
+					<td>{! ROUND(IF(numberNotDuplicateOpps != 0, (numberClosedWonOpps / numberNotDuplicateOpps) * 100, 0), 0)}</td>
+				</tr>
+			</table>
+
+            <apex:outputPanel id="div1" styleClass="div1">
+                <apex:pageBlockSection title="Leads ({! numberReceivedLeads })" collapsible="true" columns="1" id="section1">
+                    <apex:pageBlockTable id="leadTable" value="{! receivedLeadsMap }" var="key">
+                        <apex:column headerValue="Name">
+                            <apex:outputLink value="/{!receivedLeadsMap[key].Id}" target="_blank">{! receivedLeadsMap[key].FirstName } {! receivedLeadsMap[key].LastName }</apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!receivedLeadsMap[key].Sec_Channel__c}"/>
+                        <apex:column value="{!receivedLeadsMap[key].Channel__c}"/>
+                        <apex:column value="{!receivedLeadsMap[key].LeadSource}"/>
+                        <apex:column value="{!receivedLeadsMap[key].Status}"/>
+                        <apex:column value="{!receivedLeadsMap[key].Quali_Status__c}"/>
+                        <apex:column value="{!receivedLeadsMap[key].OwnerId}"/>
+                        <apex:column value="{!receivedLeadsMap[key].id}"/>
+                        <apex:column value="{!receivedLeadsMap[key].ConvertedOpportunityId}"/>
+                    </apex:pageBlockTable>    
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            
+            <apex:outputPanel id="div2" styleClass="div2">
+                <apex:pageBlockSection title="All Closed Won Opportunities ({! numberClosedWonOpps })" collapsible="true" columns="1" id="section2">
+                    <apex:pageBlockTable id="closeWonOppties" value="{! closedWonOpportunitiesMap }" var="key">
+                        <apex:column headerValue="Name">
+                            <apex:outputLink value="/{!closedWonOpportunitiesMap[key].id}" target="_blank">
+                                {!closedWonOpportunitiesMap[key].Name}
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!closedWonOpportunitiesMap[key].StageName}"/>
+                        <apex:column value="{!closedWonOpportunitiesMap[key].Sec_Channel__c}"/>
+                        <apex:column value="{!closedWonOpportunitiesMap[key].Channel__c}"/>
+                        <apex:column value="{!closedWonOpportunitiesMap[key].LeadSource}"/>
+                        <apex:column value="{!closedWonOpportunitiesMap[key].CCS_MerlinID__c}"/>
+                        <apex:column value="{!closedWonOpportunitiesMap[key].OwnerId}"/>
+                        <apex:column value="{!closedWonOpportunitiesMap[key].id}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="div3" styleClass="div3">
+                <apex:pageBlockSection title="All Not Duplicate Opportunities ({! numberNotDuplicateOpps })" collapsible="true" columns="1" id="section3">
+                    <apex:pageBlockTable id="notDuplicateOppties" value="{!notDuplicateOppsMap}" var="key">
+                        <apex:column headerValue="Name">
+                            <apex:outputLink value="/{!notDuplicateOppsMap[key].id}" target="_blank">
+                                {!notDuplicateOppsMap[key].Name}
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!notDuplicateOppsMap[key].StageName}"/>
+                        <apex:column value="{!notDuplicateOppsMap[key].Sec_Channel__c}"/>
+                        <apex:column value="{!notDuplicateOppsMap[key].Channel__c}"/>
+                        <apex:column value="{!notDuplicateOppsMap[key].LeadSource}"/>
+                        <apex:column value="{!notDuplicateOppsMap[key].CCS_MerlinID__c}"/>
+                        <apex:column value="{!notDuplicateOppsMap[key].OwnerId}"/>
+                        <apex:column value="{!notDuplicateOppsMap[key].id}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="div4" styleClass="div4">
+                <apex:pageBlockSection title="All Not Merlin Opportunities ({! numberNotMerlinOpps })" collapsible="true" columns="1" id="section4">
+                    <apex:pageBlockTable id="notMerlinOppties" value="{!notMerlinOppsMap}" var="key">
+                        <apex:column headerValue="Name">
+                            <apex:outputLink value="/{!notMerlinOppsMap[key].id}" target="_blank">
+                                {!notMerlinOppsMap[key].Name}
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!notMerlinOppsMap[key].StageName}"/>
+                        <apex:column value="{!notMerlinOppsMap[key].Sec_Channel__c}"/>
+                        <apex:column value="{!notMerlinOppsMap[key].Channel__c}"/>
+                        <apex:column value="{!notMerlinOppsMap[key].LeadSource}"/>
+                        <apex:column value="{!notMerlinOppsMap[key].CCS_MerlinID__c}"/>
+                        <apex:column value="{!notMerlinOppsMap[key].OwnerId}"/>
+                        <apex:column value="{!notMerlinOppsMap[key].id}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="div5" styleClass="div5">
+                <apex:pageBlockSection title="All Excluded Opportunities ({! numberExcludedOpps })" collapsible="true" columns="1" id="section5">
+                    <apex:pageBlockTable id="excludedOppties" value="{!excludedOppsMap}" var="key">
+                        <apex:column headerValue="Name">
+                            <apex:outputLink value="/{!excludedOppsMap[key].id}" target="_blank">
+                                {!excludedOppsMap[key].Name}
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!excludedOppsMap[key].StageName}"/>
+                        <apex:column value="{!excludedOppsMap[key].Sec_Channel__c}"/>
+                        <apex:column value="{!excludedOppsMap[key].Channel__c}"/>
+                        <apex:column value="{!excludedOppsMap[key].LeadSource}"/>
+                        <apex:column value="{!excludedOppsMap[key].CCS_MerlinID__c}"/>
+                        <apex:column value="{!excludedOppsMap[key].OwnerId}"/>
+                        <apex:column value="{!excludedOppsMap[key].id}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="div6" styleClass="div6">
+                <apex:pageBlockSection title="All Excluded Leads ({! numberExcludedLeads })" collapsible="true" columns="1" id="section6">
+                    <apex:pageBlockTable id="excludedLead" value="{! excludedLeadsMap }" var="key">
+                        <apex:column headerValue="Name">
+                            <apex:outputLink value="/{!excludedLeadsMap[key].Id}" target="_blank">{! excludedLeadsMap[key].FirstName } {! excludedLeadsMap[key].LastName }</apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!excludedLeadsMap[key].Sec_Channel__c}"/>
+                        <apex:column value="{!excludedLeadsMap[key].Channel__c}"/>
+                        <apex:column value="{!excludedLeadsMap[key].LeadSource}"/>
+                        <apex:column value="{!excludedLeadsMap[key].Status}"/>
+                        <apex:column value="{!excludedLeadsMap[key].Quali_Status__c}"/>
+                        <apex:column value="{!excludedLeadsMap[key].OwnerId}"/>
+                        <apex:column value="{!excludedLeadsMap[key].id}"/>
+                        <apex:column value="{!excludedLeadsMap[key].ConvertedOpportunityId}"/>
+                    </apex:pageBlockTable>    
+                </apex:pageBlockSection>
+            </apex:outputPanel>      
+        </apex:pageBlock>
+        <script>    
+            twistSection(document.getElementById('{!$Component.block1.section1}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block1.section2}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block1.section3}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block1.section4}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block1.section5}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block1.section6}').getElementsByTagName('img')[0]);
+        </script>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_AssistantPhone_Number</fullName>
+    <active>true</active>
+    <description>Allows to enter a phone number in a valid format only</description>
+    <errorConditionFormula>AND(
+            NOT(BEGINS($User.Username, 'e2e_ru@fleetcoremea.force.com')),
+NOT(BEGINS($User.Username, 'sfintegration@transitcard.ru')),
+            OR(ISNEW(), ISCHANGED(AssistantPhone), ISCHANGED(AssistantPhone_Status__c)),
+            NOT(OR(
+            ISBLANK(AssistantPhone),
+            ISPICKVAL(AssistantPhone_Status__c, 'Needs validation'),
+            AND (
+            OR( AND(BEGINS(AssistantPhone, '+'), ISNUMBER(LEFT(SUBSTITUTE(AssistantPhone, '+', ''), 1))),
+            BEGINS(AssistantPhone, '8')
+            ),
+            NOT(FIND('+', AssistantPhone, 2) != 0),
+            NOT(CONTAINS(AssistantPhone, '.')),
+            ISNUMBER(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(AssistantPhone, '+', ''), '#', ''),' ', '')),
+            OR (
+            AND(NOT(CONTAINS(AssistantPhone, '#')),
+            IF(OR(BEGINS(AssistantPhone, '+7'), BEGINS(AssistantPhone, '8')),
+            LEN(SUBSTITUTE(SUBSTITUTE(AssistantPhone, '+', ''),' ', '')) = 11,
+            AND(LEN(SUBSTITUTE(SUBSTITUTE(AssistantPhone, '+', ''),' ', '')) &gt;= 8, LEN(SUBSTITUTE(SUBSTITUTE(AssistantPhone, '+', ''),' ', '')) &lt;= 15)
+            )
+            ),
+            AND(CONTAINS(AssistantPhone, '#'),
+            IF(OR(BEGINS(AssistantPhone, '+7'), BEGINS(AssistantPhone, '8')),
+            FIND('#', SUBSTITUTE(SUBSTITUTE(AssistantPhone, '+', ''),' ', '')) = 12,
+            AND(FIND('#', SUBSTITUTE(SUBSTITUTE(AssistantPhone, '+', ''),' ', '')) &gt;= 9, FIND('#', SUBSTITUTE(SUBSTITUTE(AssistantPhone, '+', ''),' ', '')) &lt;= 16)
+            )
+            )
+            )
+            )
+            ))
+            )</errorConditionFormula>
+    <errorDisplayField>AssistantPhone</errorDisplayField>
+    <errorMessage>Wrong phone number format. Only '+', '0-9' and spaces are allowed. Use '#' for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: '+49 5545555#045'</errorMessage>
+</ValidationRule>

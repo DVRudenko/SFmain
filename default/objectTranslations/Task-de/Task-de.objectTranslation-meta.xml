@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>CCS Tasks</layout>
+        <sections>
+            <label><!-- Benutzerdefinierte Links --></label>
+            <section>Benutzerdefinierte Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CTI Task Layout</layout>
+        <sections>
+            <label><!-- Benutzerdefinierte Links --></label>
+            <section>Benutzerdefinierte Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Case Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Service Europe</layout>
+        <sections>
+            <label><!-- Benutzerdefinierte Links --></label>
+            <section>Benutzerdefinierte Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Five9</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NVM Tasks</layout>
+        <sections>
+            <label><!-- Call Information --></label>
+            <section>Call Information</section>
+        </sections>
+        <sections>
+            <label><!-- Call Notes --></label>
+            <section>Call Notes</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Russian Task Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Task Layout</layout>
+        <sections>
+            <label><!-- Benutzerdefinierte Links --></label>
+            <section>Benutzerdefinierte Links</section>
+        </sections>
+        <sections>
+            <label><!-- InsideSales --></label>
+            <section>InsideSales</section>
+        </sections>
+        <sections>
+            <label><!-- NVM Details --></label>
+            <section>NVM Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Czech Republic processes --></description>
+        <label><!-- CCS Tasks --></label>
+        <name>CCS_Tasks</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- To be Used for the CTI Integration Automatic Task Creation for the Agents. --></description>
+        <label><!-- Call --></label>
+        <name>Call</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record type of Tasks for Cases --></description>
+        <label><!-- Case Task --></label>
+        <name>Case_Task</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Layout Tasks --></label>
+        <name>Layout_Tasks</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Sales Processes for Russian Sales --></description>
+        <label><!-- Russian Sales --></label>
+        <name>Russian_Sales</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- for tasks created by Service Agents (Shell and CCS) in Europe --></description>
+        <label><!-- Support Europe --></label>
+        <name>Support_Europe</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You must enter Due Date for In Progress Task! --></errorMessage>
+        <name>CCS_Due_Date_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Nur der Aufgabeneigentümer kann diese Aufgabe schließen</errorMessage>
+        <name>Close_task_by_myself</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- In order to mark any Task as “Complete”, please fill in all mandatory fields: Topic, Sub topic, Due Date, Phone, Account. --></errorMessage>
+        <name>Mandatory_fields_to_compete_Call_Task</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Interaction Quality must be a number between 1 and 10 --></errorMessage>
+        <name>NVMContactWorld__Interac_Quality_Must_Be_Between_1_and_10</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Nur der Aufgabeneingentümer kann diese Aufgabe bearbeiten</errorMessage>
+        <name>Owner_can_edit_task_only</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- &quot;Встреча FS проведена&quot; недоступно для редактирования после проверки QA. --></errorMessage>
+        <name>PPR_Prohibition_of_editing_after_QA</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Due date must meet or precede the present day. --></errorMessage>
+        <name>RU_Task_ActivityDate_More_then_TODAY</name>
+    </validationRules>
+</CustomObjectTranslation>

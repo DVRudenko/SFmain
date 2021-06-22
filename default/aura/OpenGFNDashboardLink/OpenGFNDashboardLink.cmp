@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName" access="global">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="sObjectName" type="String" />
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <div>
+        <a style="padding-left: 20px;" class="link-allign" onclick="{!c.openTab}">Open GFN Dashboard</a>
+    </div>    
+</aura:component>

@@ -1,0 +1,484 @@
+<apex:page id="e2eMoveToStart" controller="E2EMoveToStartCtrl" showHeader="true" action="{! init }" docType="html-5.0">
+    <head>
+        <apex:includeScript value="{!$Resource.jQuery}"/>
+        <apex:includeScript value="{!$Resource.jquery_mask}"/>
+        <apex:includeScript value="{!$Resource.jquerymCustomScrollbar}"/>
+        <apex:stylesheet value="{!$Resource.e2eRu_libs_min_css}"/>
+
+        <apex:stylesheet value="{!$Resource.e2eBusiness_style_main}"/>
+        <apex:includeScript value="{!$Resource.e2eBusiness_scripts}"/>
+
+        <apex:stylesheet value="{!URLFOR($Resource.E2ESpinner, 'spinner.css')}"/>
+
+        <script>
+            var approvalProcessRMDActive = '{!approvalProcessRMDActive}';
+            approvalProcessRMDActive = approvalProcessRMDActive && approvalProcessRMDActive == 'true';
+            var apiTokenDaData = '{!daDataToken}';
+            
+            //Function is used to get splash status bar when server side call is going on
+            function startSplash() {
+                document.getElementById('splashDiv').style.display = 'table-cell';
+                jQuery('.lightbox').fadeIn(50);
+                $j('html, body').css({
+                    overflow: 'hidden',
+                    height: 'auto'
+                });
+                $j("body").css("padding-right", "17px");
+            }
+
+            //Function will make the splash status to be stopped.
+            function endSplash() {
+                document.getElementById('splashDiv').style.display = 'none';
+                jQuery('.lightbox').fadeOut(50);
+                $j('html, body').css({
+                    overflow: '',
+                    height: ''
+                });
+                $j("body").css("padding-right", "");
+            }
+
+        </script>
+
+    </head>
+    <apex:sectionHeader title="Форма для запуска клиента" subTitle="E2E Move to Start"/>
+    <apex:form html-autocomplete="off">
+        <div class="lightbox"></div>
+        <apex:actionStatus id="splashStatus" onstart="startSplash();" onstop="endSplash(); "/>
+        <div class="splashStatus" id="splashDiv">
+            <div class="circle"><img src="{!URLFOR($Resource.e2eRu_images, 'spin.gif')}" height="40" width="40"
+                                     alt="spin"/></div>
+        </div>
+        <span class="errorNotificationsBlock">
+            <apex:pageMessages id="error"/>
+        </span>
+        <apex:pageBlock mode="edit" title="Данные клиента для проверки перед запуском E2E процесса"
+                        rendered="{! !hasPageError }">
+
+            <apex:outputPanel layout="block" styleClass="b-form" id="formE2EBusiness">
+                <div class="b-step contact-details">
+                    <span class="checkmark"><div class="checkmark_circle"></div><div class="checkmark_stem"></div><div
+                            class="checkmark_kick"></div>
+                    </span>
+                    <apex:outputPanel layout="block" styleClass="b-step-header">
+                        Контактные данные
+                    </apex:outputPanel>
+                    <div class="contact-phone">
+                        <apex:outputLabel value="Мобильный телефон" for="contactPhone"/>
+                        <apex:input id="contactPhone" html-placeholder="+7 900 000 00 00"
+                                    value="{! formParams.mainContactPhone }" html-maxlength="18"/>
+                    </div>
+                    <div class="contact-email">
+                        <apex:outputLabel value="Email" for="contactEmail"/>
+                        <apex:input id="contactEmail" html-placeholder="email@domain.ru"
+                                    value="{! formParams.mainContactEmail }" html-maxlength="80"/>
+                    </div>
+                    <div class="contact-name">
+                        <apex:outputLabel value="ФИО контакта" for="contactName"/>  
+                        <apex:input id="contactName"
+                                    value="{! formParams.contactFullName }" html-maxlength="80"/>         
+                   </div>
+                    <apex:inputHidden id="formDataInn" value="{! formDataInn }"/>
+                </div>
+                <div class="b-step company-details">
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div><div class="checkmark_stem"></div><div
+                            class="checkmark_kick"></div>
+                    </span>
+                    <apex:outputPanel layout="block" styleClass="b-step-header">
+                        Данные о компании
+                    </apex:outputPanel>
+                    <div class="company-name">
+                        <apex:outputLabel value="Компания" for="companyName"/>
+                        <apex:input id="companyName" value="{! formParams.companyName }" html-maxlength="50"/>
+                    </div>
+                    <div class="company-name">
+                        <apex:outputLabel value="Подразделение" for="userRole"/>
+                        <apex:outputPanel layout="block" id="userRole" styleClass="data">
+                                {! currentUserRole }
+                        </apex:outputPanel> 
+                    </div>
+                    <div class="company-name-spark">
+                        <apex:outputLabel value="Компания по ИНН в СПАРК" for="companyNameSpark"/>
+                        <apex:outputPanel layout="block" id="companyNameSpark" styleClass="data spark-name">
+                                {! formParams.mainCompanyFullNameSpark }
+                        </apex:outputPanel>
+                    </div>
+                    <div class="company-inn">
+                        <apex:outputLabel value="ИНН" for="companyInn"/>
+                        <apex:outputPanel layout="block" id="companyInn" styleClass="data">
+                                {! formParams.companyInn }
+                        </apex:outputPanel>
+                    </div>
+                    <div class="verified-decision">
+                        <apex:outputLabel value="Результат ЧЧС" for="verifiedDecision"/>
+                        <apex:outputPanel layout="block" id="verifiedDecision" styleClass="data">
+                                {! formParams.verifiedDecision }
+                        </apex:outputPanel>
+                    </div>
+                    <div class="scoring-decision">
+                        <apex:outputLabel value="Решение Скоринга" for="scoringDecision"/>
+                        <apex:outputPanel layout="block" id="scoringDecision" styleClass="data">
+                                {! formParams.scoringDecision }
+                        </apex:outputPanel>
+                    </div>
+                    <div class="verified-limitation">
+                        <apex:outputLabel value="Отсрочка (дни)" for="verifiedLimitation"/>
+                        <apex:outputPanel layout="block" id="verifiedLimitation" styleClass="data">
+                                {! formParams.verifiedLimitation }
+                        </apex:outputPanel>
+                    </div>
+                    <div class="scoring-date">
+                        <apex:outputLabel value="Дата последнего скоринга" for="scoringDate"/>
+                        <apex:outputPanel layout="block" id="scoringDate" styleClass="data">
+                                {! formParams.scoringDateString }
+                        </apex:outputPanel>
+                    </div>
+                    <div class="scoring-exp-date">
+                        <apex:outputLabel value="Дата окончания результата скоринга" for="scoringExpirationDate"/>
+                        <apex:outputPanel layout="block" id="scoringExpirationDate" styleClass="data">
+                                {! formParams.scoringExpirationDateString }
+                        </apex:outputPanel>
+                    </div>
+                    <apex:outputPanel layout="block" styleClass="check-message"></apex:outputPanel>
+                    <apex:outputPanel layout="block" styleClass="buttons">
+                        <apex:commandLink styleClass="btn check-company" value="Проверить компанию"
+                                          onclick="request('{! opportunityId }', '{! formDataId }', true);  return false;"
+                                          reRender=""
+                        />
+                        <apex:actionFunction name="updateCreditListAndSection" action="{!updateCreditList}" reRender="creditDecisions"/>
+                    </apex:outputPanel>
+
+                    <apex:inputHidden id="isSoleProprietor" value="{! formParams.isSoleProprietor}"/>
+                    <apex:inputHidden id="companyInfoSpark" value="{! companyInfoSpark }"/>
+                    <apex:inputHidden id="soleInfoSpark" value="{! soleInfoSpark }"/>
+                    <apex:inputHidden id="executiveId" value="{! formParams.executiveId}"/>
+
+                    <apex:outputPanel layout="block" id="remoteSparkRequest">
+                        <apex:inputHidden id="verification" value="{! formParams.verification}"/>
+                        <apex:inputHidden id="decision" value="{! formParams.decision }"/>
+                        <apex:inputHidden id="companySpark" value="{! formParams.companyInfoSpark }"/>
+                        <apex:inputHidden id="soleSpark" value="{! formParams.soleInfoSpark}"/>
+                    </apex:outputPanel>
+
+                </div>
+                <!-- VS SF-1429 start -->
+                <div class="b-step edm-details">
+                    <span class="checkmark"><div class="checkmark_circle"></div><div class="checkmark_stem"></div><div
+                            class="checkmark_kick"></div>
+                    </span>
+                    <apex:outputPanel layout="block" styleClass="b-step-header">
+                        Электронный документооборот
+                    </apex:outputPanel>
+                    <div class="electronic-document-management">
+                        <apex:outputLabel value="Подключение ЭДО" for="electronicDocumentManagement"/>
+                        <apex:selectList id="electronicDocumentManagement" size="1" value="{! formParams.electronicDocumentManagement }">
+                            <apex:selectOptions value="{! electronicDocumentManagementList }"/>
+                        </apex:selectList>
+                    </div>
+                </div>
+                <!-- VS SF-1429 end -->				
+                <div class="b-step tariffs">
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div><div class="checkmark_stem"></div><div
+                            class="checkmark_kick"></div>
+                    </span>
+                    <apex:outputPanel layout="block" styleClass="b-step-header">
+                        Условия и тариф
+                    </apex:outputPanel>
+                    <div class="product">
+                        <apex:outputLabel value="Продукт" for="product"/>
+                        <apex:selectList size="1" value="{! formParams.product }">
+                            <apex:selectOptions value="{! productOptions }"/>
+                            <apex:actionSupport event="onchange" reRender="promoCodeList,addPromoCodeList" action="{!gatherPromos}"
+                                                onSubmit="disableObject('promoCodeList')"/>
+                        </apex:selectList>
+                    </div>
+                    <div class="card-counter">
+                        <apex:outputLabel value="Количество карт" for="numOfCards"/>
+                        <apex:input id="numOfCards" value="{! formParams.numOfCards }" html-maxlength="3"/>
+                    </div>
+                    <div class="promo-code">
+                        <apex:outputLabel value="Промокод" for="promoCode"/>
+                        <apex:selectList id="promoCodeList" size="1" value="{! formParams.promoCode }" onchange="validatePromocodes();">
+                            <apex:selectOptions value="{! promoCodeList }"/>
+                        </apex:selectList>
+                    </div>
+                    <div class="additional-promo-code-checkbox">
+                        <div class="checkbox">
+                            <apex:inputCheckbox id="checkboxPromo" value="{! additionalPromoCode }" selected="false" onchange="validatePromocodes();"/>
+                            <apex:outputLabel value="Дополнительный промокод" for="checkboxPromo" escape="false"/>
+                        </div>
+                    </div>
+                    <div class="additional-promo-code" style="display:none">
+                        <apex:outputLabel value="Дополнительный промокод" for="addPromoCodeList"/>
+                        <apex:selectList id="addPromoCodeList" size="1" value="{! formParams.addPromoCode }" onchange="validatePromocodes();">
+                            <apex:selectOptions value="{! addPromoCodeList }"/>
+                        </apex:selectList>
+                    </div>
+                    <apex:outputPanel layout="block" styleClass="promo-code-error"></apex:outputPanel>
+                    <apex:outputPanel layout="block" styleClass="card-message"></apex:outputPanel>
+                    <apex:outputPanel layout="block" styleClass="virtual-cards"
+                                      rendered="{!$Profile.Name == 'System Administrator' || $Profile.Name == 'PPR Administrator' || $Profile.Name == 'In-house Developer'}">
+                        <div class="checkbox">
+                            <apex:inputCheckbox id="virtualCards" value="{! formParams.virtualCards }"/>
+                            <apex:image title="{!$ObjectType.Opportunity.Fields.Virtual_cards__c.inlineHelpText}"
+                                        value="{!URLFOR($Resource.e2eRu_images, 'tooltip-green.png')}"
+                                        height="1%" alt="help"/>
+                            <apex:outputLabel value="{!$ObjectType.Opportunity.Fields.Virtual_cards__c.Label}" for="virtualCards" escape="false"/>
+                        </div>
+                    </apex:outputPanel>
+                    <div class="personal-manager">
+                        <div class="checkbox">
+                            <apex:inputCheckbox id="checkbox1" value="{! formParams.hasPersonalManager }"/>
+                            <apex:outputLabel value="Персональный консультант" for="checkbox1" escape="false"/>
+                        </div>
+                    </div>
+                    <div class="document-delivery">
+                        <div class="checkbox">
+                            <apex:inputCheckbox id="checkbox2" value="{! formParams.hasDocumentDelivery }"/>
+                            <apex:outputLabel value="Экспресс-доставка отчетных документов" for="checkbox2" escape="false"/>
+                        </div>
+                    </div>
+                    <apex:outputPanel id="creditDecisions">
+                        <apex:outputLabel value="{!$Label.credit_decision}" for="creditDecision" />
+                        <apex:selectList id="creditDecision" size="1" value="{!formParams.creditDecision}">
+                            <apex:selectOptions value="{!creditDecisionList}" />
+                        </apex:selectList>
+                    </apex:outputPanel>
+                </div>
+                <apex:inputHidden id="cardsLimit" value="{! cardsLimit }"/>
+                <div class="b-step legal-details">
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div><div class="checkmark_stem"></div><div
+                            class="checkmark_kick"></div>
+                    </span>
+                    <apex:outputPanel layout="block" styleClass="b-step-header">
+                        Реквизиты компании
+                    </apex:outputPanel>
+                    <apex:outputPanel styleClass="ogrn" rendered="{! !formParams.isSoleProprietor }">
+                        <apex:outputLabel value="ОГРН" for="ogrn"/>
+                        <apex:input id="ogrn" value="{! formParams.ogrn }" html-maxlength="13" disabled="{! !formParams.isSoleProprietor }"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel styleClass="ogrnip" rendered="{! formParams.isSoleProprietor }">
+                        <apex:outputLabel value="ОГРНИП" for="ogrnip"/>
+                        <apex:input id="ogrnip" value="{! formParams.ogrn }" html-maxlength="15"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel styleClass="kpp" rendered="{! !formParams.isSoleProprietor }">
+                        <apex:outputLabel value="КПП" for="kpp"/>
+                        <apex:input id="kpp" value="{! formParams.kpp }" html-maxlength="9" disabled="{! !formParams.isSoleProprietor }"/>
+                    </apex:outputPanel>
+                    <div class="okpo">
+                        <apex:outputLabel value="ОКПО" for="okpo"/>
+                        <apex:input id="okpo" value="{! formParams.okpo }" html-maxlength="10" disabled="{!!formParams.emptySparkOkpo }"/>
+                    </div>
+                    <div class="legal-address-block">
+                        <apex:outputLabel value="Юридический адрес" for="legalAddress"/>
+                        <apex:inputTextarea id="legalAddress" styleClass="legal-address"
+                                    value="{! formParams.companyLegalAddress }" 
+                                    html-maxlength="1030" disabled="{! !formParams.isSoleProprietor }"/>
+                    </div>
+                    <div class="post-address">
+                        <apex:outputLabel value="Адрес для доставки документов и карт" for="postAddress"/>
+                        <apex:inputTextarea id="postAddress" styleClass="document-address" 
+                                            value="{! formParams.postalAddress }" html-maxlength="1030"/>
+                    </div>
+                    <div class="correspond-address">
+                        <div class="checkbox-address">
+                            <apex:inputCheckbox id="checkbox4"
+                                                value="{! formParams.isLegalAddressCorrespondWithPostAddress }" selected="false"/>
+                            <apex:outputLabel value="Совпадает с юридическим адресом" for="checkbox4" escape="false"/>
+                        </div>
+                    </div>
+                    <div id="delivery-comment" class="delivery-comment" >
+                        <apex:outputLabel value="Время, Контакт для доставки" for="deliveryComment" />
+                        <apex:inputTextarea id="deliveryComment" value="{! formParams.deliveryComments }"
+                                            html-maxlength="4000"/>
+                    </div>
+                    <apex:outputPanel styleClass="executive-name" rendered="{! !formParams.isSoleProprietor }">
+                        <apex:outputLabel value="ФИО руководителя компании" for="executiveName"/>
+                        <apex:input id="executiveName" value="{! formParams.executiveFioManual }" html-maxlength="50"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel styleClass="executive-position" rendered="{! !formParams.isSoleProprietor }">
+                        <apex:outputLabel value="Должность руководителя компании" for="executivePosition"/>
+                        <apex:input id="executivePosition" value="{! formParams.executivePositionManual }"
+                                    html-maxlength="50"/>
+                    </apex:outputPanel>
+                    <apex:outputPanel styleClass="executive-spark" rendered="{! !formParams.isSoleProprietor }">
+                        <apex:outputLabel value="Руководитель в СПАРК" for="executiveSpark"/>
+                        <apex:outputPanel layout="block" id="executiveSpark" styleClass="data spark-executive">
+                                {! IF(formParams.executiveFio != null, formParams.executiveFio + ', ' + formParams.executivePosition, 'нет данных')}
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    <apex:outputPanel styleClass="match-executive-spark" rendered="{! !formParams.isSoleProprietor }">
+                        <div class="checkbox-executive">
+                            <apex:inputCheckbox id="checkbox5" value="{! formParams.matchExecutiveSpark }"/>
+                            <apex:outputLabel value="Использовать данные руководителя из СПАРК" for="checkbox5"
+                                              escape="false"/>
+                        </div>
+                    </apex:outputPanel>
+                    <div class="code-word">
+                        <apex:outputLabel value="Кодовое слово" for="codeWord"/>
+                        <apex:input id="codeWord" value="{! formParams.codeWord }" html-maxlength="20"
+                                    html-placeholder="русские буквы"/>
+                    </div>
+                    <div class="personal-office-email">
+                        <apex:outputLabel value="Email для личного кабинета" for="personalOfficeEmail"/>
+                        <apex:input id="personalOfficeEmail" value="{! formParams.emailForPersonalOffice }"
+                                    html-maxlength="80"/>
+                    </div>
+                    <apex:outputPanel styleClass="personal-office-phone">
+                        <apex:outputLabel value="{!$ObjectType.Opportunity.Fields.Personal_office_phone__c.Label}"
+                                          for="personalOfficePhone" escape="false"/>
+                        <apex:input id="personalOfficePhone" value="{! formParams.personalOfficePhone }" html-maxlength="20"
+                                    html-placeholder="{!$ObjectType.Opportunity.Fields.Personal_office_phone__c.inlineHelpText}"/>
+                    </apex:outputPanel>
+                </div>
+                <apex:outputPanel id="address-information-block">
+                    <apex:inputHidden id="legalAddressInformationCity" 
+                                      value="{! formParams.companyLegalAddressCity }"/>
+                    <apex:inputHidden id="legalAddressInformationPostalCode"
+                                      value="{! formParams.companyLegalAddressPostalCode }"/>
+                    <apex:inputHidden id="legalAddressInformationState"
+                                      value="{! formParams.companyLegalAddressState }"/>
+                    <apex:inputHidden id="legalAddressInformationStreet"
+                                      value="{! formParams.companyLegalAddressStreet }"/>
+                    <apex:inputHidden id="legalAddressInformationHouse"
+                                      value="{! formParams.companyLegalAddressHouse }"/>
+                    <apex:inputHidden id="legalAddressInformationFlat" 
+                                      value="{! formParams.legalAddressAdditionally }"/>
+
+                    <apex:inputHidden id="postalAddressInformationCity" value="{! formParams.postalAddressCity }"/>
+                    <apex:inputHidden id="postalAddressInformationPostalCode"
+                                      value="{! formParams.postalAddressPostalCode }"/>
+                    <apex:inputHidden id="postalAddressInformationState" value="{! formParams.postalAddressState }"/>
+                    <apex:inputHidden id="postalAddressInformationStreet" value="{! formParams.postalAddressStreet }"/>
+                    <apex:inputHidden id="postalAddressInformationHouse" value="{! formParams.postalAddressHouse }"/>
+                    <apex:inputHidden id="postalAddressInformationFlat"  value="{! formParams.postalAddressAdditionally }"/>
+                </apex:outputPanel>
+                <div class="b-step payment-details">
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div><div class="checkmark_stem"></div><div
+                            class="checkmark_kick"></div>
+                    </span>
+                    <apex:outputPanel layout="block" styleClass="b-step-header">
+                        Реквизиты банка
+                    </apex:outputPanel>
+                    <div class="bank-short-name">
+                        <apex:outputLabel value="Наименование банка" for="bankShort"/>
+                        <apex:input id="bankShort" styleClass="bankName" value="{! formParams.bankName }"
+                                    html-maxlength="50"/>
+                    </div>
+                    <div class="bank-bic" style="pointer-events:none;">
+                        <apex:outputLabel value="БИК" for="bankBic"/>
+                        <apex:input id="bankBic" styleClass="bankBic" value="{! formParams.bankBic }" html-maxlength="9"
+                                    html-placeholder="9 цифр"/>
+                    </div>
+                    <div class="checking-account">
+                        <apex:outputLabel value="Расчетный счет" for="checkingAccount"/>
+                        <apex:input id="checkingAccount" value="{! formParams.checkingAccount }" html-maxlength="20"
+                                    html-placeholder="20 цифр"/>
+                    </div>
+                    <div class="cor-account" style="pointer-events:none;">
+                        <apex:outputLabel value="Корреспондентский счет" for="corBankAccount"/>
+                        <apex:input id="corBankAccount" styleClass="corBankAccount"
+                                    value="{! formParams.corBankAccount }" html-maxlength="20"
+                                    html-placeholder="20 цифр"/>
+                    </div>
+                    <div class="prepay-amount">
+                        <apex:outputLabel value="Инициирующий платеж, руб." for="prepayAmount"/>
+                        <apex:input id="prepayAmount" value="{! formParams.prepayAmount }" html-maxlength="7"/>
+                    </div>
+                    <apex:outputPanel layout="block" styleClass="buttons">
+                        <apex:commandLink styleClass="btn view-docs" value="Предпросмотр документов"
+                                          onclick="validateStepsForPreview(); return false;" reRender=""/>
+                        <apex:actionFunction id="previewContract"
+                                             name="previewContract"
+                                             action="{!activatePreviewContract}"
+                                             onComplete="downloadContractPreview('{!previewContractContent}');"
+                                             status="splashStatus"/>
+                    </apex:outputPanel>
+
+                    <apex:inputHidden id="bankInformationShortName" value="{! formParams.bankNameShort }"/>
+                    <apex:inputHidden id="bankInformationOKPO" value="{! formParams.bankOkpo }"/>
+                    <apex:inputHidden id="bankInformationTown" value="{! formParams.bankTown }"/>
+                    <apex:inputHidden id="bankInformationAddress" value="{! formParams.bankAddress }"/>
+                    <apex:inputHidden id="executionStatus" value="{! executionStatus }"/>
+                    <apex:inputHidden id="bankInformationInvalid" value="{! formParams.isBankInformationInvalid }"/>
+                </div>
+                <apex:outputPanel id="finalStep" layout="block" styleClass="b-step final" rendered="{! showFinalStep }">
+                    <span class="checkmark">
+                        <div class="checkmark_circle"></div><div class="checkmark_stem"></div><div
+                            class="checkmark_kick"></div>
+                    </span>
+                    <apex:outputPanel layout="block" styleClass="b-step-header">
+                        Результат запуска клиента
+                    </apex:outputPanel>
+                    <div class="mzk-request">
+                        <apex:outputLabel value="Номер заявки МЗК" for="requestNumMZK"/>
+                        <apex:outputPanel layout="block" id="requestNumMZK" styleClass="data">
+                                {! formParams.requestNumMZK }
+                        </apex:outputPanel>
+                    </div>
+                    <div class="transit-cont-id">
+                        <apex:outputLabel value="ID организации ОП в Транзит" for="transitId"/>
+                        <apex:outputPanel layout="block" id="transitId" styleClass="data">
+                                {! formParams.transitContId }
+                        </apex:outputPanel>
+                    </div>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            <apex:pageBlockButtons >
+                <apex:outputPanel id="buttons">
+                    <apex:commandLink styleClass="btn back" value="Назад" action="{! back }" immediate="true"/>
+                    <apex:commandLink styleClass="{!IF(isSaveButtonEnabled, 'btn save', 'btn save disabled')}" 
+                                    value="Сохранить" onclick="validateForm(); return false;" reRender=""/>
+                    <apex:actionFunction id="saveSObjects"
+                                        name="saveSObjects"
+                                        action="{! saveSObjects }"
+                                        status="splashStatus"
+                                        onComplete="alert('Информация сохранена')"/>
+                    <apex:commandLink styleClass="{!IF(isStartButtonEnabled, 'btn process', 'btn process disabled')}"
+                                    value="Запустить"
+                                    onclick="validateStepsDone('{! opportunityId }', '{! formDataId }'); return false;"/>
+                    <apex:actionFunction id="processData"
+                                        name="processData"
+                                        action="{! moveToStart }"
+                                        status="splashStatus"
+                                        reRender="executionStatus, finalStep, error, formE2EBusiness, buttons"
+                                        onComplete="postCheckForm(); notify(); checkFinalResponse();">
+                    </apex:actionFunction>
+                </apex:outputPanel>
+            </apex:pageBlockButtons>
+           
+        </apex:pageBlock>
+    </apex:form>
+
+    <!-- Scripts -->
+    <script type="text/javascript">
+        window.configSettings = {
+            remoteActions: {
+                remoteGetCompanyData: '{!$RemoteAction.E2EMoveToStartCtrl.remoteGetCompanyData}',
+                remoteGetEntrepreneurData: '{!$RemoteAction.E2EMoveToStartCtrl.remoteGetEntrepreneurData}',
+                remoteUpdateCompanySparkInfo: '{!$RemoteAction.E2EMoveToStartCtrl.remoteUpdateCompanySparkInfo}',
+                remoteUpdateEntrepreneurShortReport: '{!$RemoteAction.E2EMoveToStartCtrl.remoteUpdateEntrepreneurShortReport}',
+                remoteCreateExecutiveEmployee: '{!$RemoteAction.E2EMoveToStartCtrl.remoteCreateExecutiveEmployee}',
+                updateVerifiedDecision: '{!$RemoteAction.E2EMoveToStartCtrl.updateVerifiedDecision}',
+                updateScoreDecision: '{!$RemoteAction.E2EMoveToStartCtrl.updateScoreDecision}',
+                checkCompany: '{!$RemoteAction.E2EMoveToStartCtrl.checkCompany}',
+                getVerification: '{!$RemoteAction.E2EMoveToStartCtrl.getVerification}',
+                getDecision: '{!$RemoteAction.E2EMoveToStartCtrl.getDecision}',
+                getScore: '{!$RemoteAction.E2EMoveToStartCtrl.getScore}'
+            }
+        };
+
+        function disableObject(objId) {
+            var obj = document.querySelector('[id$=' + objId + ']');
+            obj.disabled = true;
+        }
+
+        function enableObject(objId) {
+            var obj = document.querySelector('[id$=' + objId + ']');
+            obj.disabled = false;
+        }
+    </script>
+</apex:page>

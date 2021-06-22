@@ -1,0 +1,43 @@
+<!--
+ - Created by Yury on 24.04.2020.
+ -->
+
+<apex:component id="E2EcomponentDetails" controller="E2EComponentsCtrl">
+
+    <apex:attribute name="ulClass"
+                    type="String"
+                    description="" />
+
+    <apex:attribute name="liClass"
+                    type="String"
+                    description="" />
+
+    <apex:attribute name="split"
+                    type="String"
+                    assignTo="{!splitRegex}"
+                    description="" />
+
+    <apex:attribute name="list"
+                    type="String"
+                    assignTo="{!listValueSplitString}"
+                    description="" />
+
+    <ul class="{!IF(ulClass == null, '', ulClass)}">
+        <apex:repeat var="item" value="{!Splits}" id="listRepeat">
+            <li class="{!IF(liClass == null, '', liClass)}">
+                <apex:outputText escape="false" value="{!item}"/>
+            </li>
+        </apex:repeat>
+    </ul>
+    <script>
+            function showHide(element_id) {
+                if (document.getElementById(element_id)) {
+                    var obj = document.getElementById(element_id);
+                    if (obj.style.display != "block") {
+                        obj.style.display = "block"; //Показываем элемент
+                    }
+                    else obj.style.display = "none"; //Скрываем элемент
+                }
+            }
+    </script>
+</apex:component>

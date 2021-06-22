@@ -1,0 +1,3133 @@
+{
+    "translations": {
+        "email_warning_cd":{
+            "default_impl": {
+                "en": "Please verify that you entered a valid email address.",
+                "sk": "Skontrolujte správnosť zadanej e-mailovej adresy.",
+                "cs": "Zkontrolujte správnost zadané e-mailové adresy.",
+                "hu": "Kérjük, adjon meg egy érvényes e-mail címet.",
+                "fr": "Vérifiez que l'adresse e-mail que vous avez saisie est correcte.",
+                "nl": "Geef een geldig e-mailadres in",
+                "pl": "Sprawdź poprawność adresu e-mail",
+                "de": "Korrigieren Sie bitte die angegebene E-Mail Adresse"
+            }
+        },
+        "personal_delimiter_cd":{
+            "default_impl": {
+                "en": "Contact person",
+                "fr": "Pesonne de contact",
+                "nl": "Contactpersoon",
+                "hu": "Kapcsolattartó",
+                "pl": "Osoba kontaktowa",
+                "cs": "Kontaktní osoba",
+                "sk": "Kontaktná osoba",
+                "de": "Ansprechpartner"
+            }
+        },
+        "owner_delimiter_cd":{
+            "default_impl": {
+                "en": "Company owner",
+                "cs": "Vlastník společnosti",
+                "sk": "Vlastník společnosti"
+            }
+        },
+        "owner_delimiter_description_cd":{
+            "default_impl": {
+                "en": "Provide the details of the official company owner.",
+                "cs": "Uveďte údaje oficiálního vlastníka společnosti.",
+                "sk": "Uveďte údaje oficiálního vlastníka společnosti."
+            }
+        },
+        "owner_confirm_cd":{
+            "default_impl": {
+                "en": "I confirm that I am the official owner of the company.",
+                "cs": "Potvrzuji, že jsem oficiální vlastník společnosti.",
+                "sk": "Potvrdzujem, že som oficiálny vlastník spoločnosti"
+            }
+        },
+        "authorized_delimiter_cd":{
+            "default_impl": {
+                "en": "Authorized representative",
+                "cs": "Zastupující osoba",
+                "sk": "Zastupující osoba"
+            }
+        },
+        "authorized_delimiter_description_cd":{
+            "default_impl": {
+                "en": "Provide the details of the person who is authorized to act on behalf of the company to confirm this order.",
+                "cs": "Uveďte údaje statutárního orgánu nebo jiné osoby, která je ze zákona oprávněná navenek jednat ve věci potvrzení této objednávky.",
+                "sk": "Uveďte údaje statutárneho orgánu alebo inej osoby, ktorá je zo zákona oprávnená navonok jednať vo veci potvrdenia tejto objednávky."
+            }
+        },
+        "authorized_confirm_cd":{
+            "default_impl": {
+                "en": "I confrim that I am authorized to act on behalf of the company to confirm this order.",
+                "cs": "Potvrzuji, že jsem osoba oprávněná jednat za společnost ve věci potvrzení této objednávky.",
+                "sk": "Potvrdzujem, že som osoba oprávnená jednať za spoločnosť vo veci potvrdenia tejto objednávky."
+            }
+        },
+        "authorized_error_cd": {
+            "default_impl": {
+                "en": "This consent is required for provision of the service.",
+                "sk": "Tento súhlas je potrebný pre poskytnutie služby.",
+                "cs": "Tento souhlas je nezbtyný pro poskytnutí služby."
+            }
+        },
+        "company_delimiter_cd":{
+            "default_impl": {
+                "en": "Company",
+                "fr": "Entreprise",
+                "nl": "Bedrijf",
+                "hu": "Vállalkozás",
+                "pl": "Firma",
+                "cs": "Společnost",
+                "sk": "Spoločnosť",
+                "de": "Unternehmen"
+            }
+        },
+        "step_title_cd": {
+            "default_impl": {
+                "en": "Provide your contact details",
+                "fr": "Veuillez entrer vos coordonnées.",
+                "sk": "Uveďte svoje kontaktné údaje",
+                "cs": "Uveďte své kontaktní údaje",
+                "nl": "Geef uw contactgegevens in",
+                "hu": "Adja meg elérhetőségeit",
+                "pl": "Wprowadź dane kontaktowe",
+                "de": "Bitte geben Sie Ihre Kontaktdaten ein."
+            }
+        },
+        "step_subtitle_cd": {
+            "default_impl": {
+                "en": "Contact person must be authorized to make decisions on behalf of the company",
+                "hu": "Kapcsolattartó személy, aki jogosult a vállalkozás nevében eljárni és aláírni",
+                "cs": "Kontaktní osoba musí být oprávněna rozhodovat jménem společnosti",
+                "sk": "Kontaktná osoba musí byť oprávnená rozhodovať za spoločnosť",
+                "fr": "La personne à contacter doit avoir le droit de prendre des décisions au nom de l'entreprise.",
+                "nl": "De contactpersoon moet geauthoriseerd zijn om beslissingen namens het bedrijf te maken",
+                "pl": "Osoba kontaktowa musi posiadać uprawnienia do podejmowania decyzji w imieniu firmy",
+                "de": "Die Kontaktperson muss bevollmächtigt sein, die Entscheidungen im Namen des Unternehmens zu treffen."
+            }
+        },
+        "salutation_cd": {
+            "default_impl": {
+                "en": "Salutation",
+                "hu": "Megszólítás",
+                "sk": "Oslovenie",
+                "cs": "Oslovení",
+                "fr": "",
+                "nl": "Aanhef",
+                "pl": "Przywitanie",
+                "de": "Anrede"
+            }
+        },
+        "mr_label_cd": {
+            "default_impl": {
+                "en": "Mr.",
+                "hu": "Úr",
+                "cs": "Pan",
+                "sk": "Pán",
+                "fr": "M.",
+                "nl": "Dhr.",
+                "pl": "Pan",
+                "de": "Herr"
+            }
+        },
+        "mrs_label_cd": {
+            "default_impl": {
+                "en": "Ms.",
+                "hu": "Hölgy",
+                "cs": "Paní",
+                "sk": "Pani",
+                "fr": "Mme",
+                "nl": "Mevr.",
+                "pl": "Pani",
+                "de": "Frau"
+            }
+        },
+        "firstName_label_cd": {
+            "default_impl": {
+                "en": "First Name",
+                "hu": "Keresztnév",
+                "cs": "Jméno",
+                "sk": "Krstné meno",
+                "fr": "Prénom",
+                "nl": "Voornaam",
+                "pl": "Imię",
+                "de": "Vorname"
+            },
+            "Czech Republic CCS": {
+                "en": "First Name",
+                "cs": "Křestní jméno"
+            },
+            "Slovakia CCS": {
+                "en": "First Name",
+                "sk": "Krstné meno"
+            }
+        },
+        "firstName_error_cd": {
+            "default_impl": {
+                "en": "Please enter your first name.",
+                "hu": "Adja meg keresztnevét.",
+                "cs": "Zadejte prosím své jméno",
+                "sk": "Zadajte prosím svoje krstné meno",
+                "fr": "Veuillez entrer votre prénom.",
+                "nl": "Geef uw voornaam in.",
+                "pl": "Proszę wprowadzić swoje imię.",
+                "de": "Bitte geben Sie Ihren Vornamen ein."
+            }
+        },
+        "lastName_label_cd": {
+            "default_impl": {
+                "en": "Last name",
+                "hu": "Vezetéknév",
+                "sk": "Priezvisko",
+                "cs": "Příjmení",
+                "fr": "Nom de famille",
+                "nl": "Achternaam",
+                "pl": "Nazwisko",
+                "de": "Nachname"
+            }
+        },
+        "lastName_error_cd": {
+            "default_impl": {
+                "en": "Please enter your last name.",
+                "hu": "Adja meg a vezetéknevét.",
+                "sk": "Zadajte prosím svoje priezvisko",
+                "cs": "Zadejte prosím své příjmení",
+                "fr": "Veuillez entrer votre nom de famille.",
+                "nl": "Geef uw achternaam in.",
+                "pl": "Proszę wprowadzić swoje nazwisko.",
+                "de": "Bitte geben Sie Ihren Nachnamen ein."
+            }
+        },
+        "phone_label_cd": {
+            "default_impl": {
+                "en": "Mobile phone",
+                "hu": "Mobiltelefon",
+                "cs": "Mobilní telefon",
+                "sk": "Mobilný telefón",
+                "fr": "Numéro de téléphone portable",
+                "nl": "Mobiel telefoonnummer",
+                "pl": "Numer telefonu komórkowego",
+                "de": "Handynummer"
+            }
+        },
+        "phone_error_cd": {
+            "default_impl": {
+                "en": "Please enter a valid mobile phone number.",
+                "sk": "Zadajte prosím platné mobilné telefonné číslo.",
+                "cs": "Zadejte prosím platné mobilní telefonní číslo.",
+                "hu": "Adjon meg egy érvényes mobiltelefonszámot.",
+                "pl": "Proszę podać swój numer telefonu komórkowego.",
+                "de": "Bitte geben Sie Ihre Handynummer im gültigen Format.",
+                "nl": "Geeft uw mobiel telefoonnummer in het correcte formaat.",
+                "fr": "Veuillez entrer votre numéro de téléphone portable dans un format correct."
+            }
+        },
+        "email_label_cd": {
+            "default_impl": {
+                "en": "E-mail",
+                "sk": "E-mail",
+                "cs": "E-mail",
+                "hu": "Email",
+                "fr": "Adresse e-mail",
+                "nl": "E-mail",
+                "pl": "Adres e-mail",
+                "de": "E-Mail Addresse"
+            }
+        },
+        "email_error_cd": {
+            "default_impl": {
+                "en": "Please enter a valid e-mail address.",
+                "sk": "Zadajte prosím platnú e-mailovú adresu.",
+                "cs": "Zadejte prosím platnou e-mailovou adresu.",
+                "hu": "Kérjük, valós e-mail címet adjon meg.",
+                "fr": "Veuillez entrer votre adresse email dans un format correct.",
+                "nl": "Geeft uw e-mailaders in het correcte formaat op.",
+                "pl": "Proszę wprowadzić adres e-mail w poprawnym formacie.",
+                "de": "Bitte geben Sie Ihre E-Mail Addresse ein."
+            }
+        },
+        "selectedCompanyName_label_cd": {
+            "default_impl": {
+                "en": "Company name or NIP",
+                "pl": "Nazwa firmy lub NIP"
+            },
+            "Slovakia": {
+                "en": "Company name or Tax ID",
+                "sk": "Názov spoločnosti alebo IČ"
+            },
+            "Slovakia CCS": {
+                "en": "Company name or Tax ID",
+                "sk": "Názov spoločnosti alebo IČ"
+            },
+            "Czech Republic": {
+                "en": "Company name or Tax ID",
+                "cs": "Název společnosti nebo IČ"
+            },
+            "Czech Republic CCS": {
+                "en": "Company name or Tax ID",
+                "cs": "Název společnosti nebo IČ"
+            },
+            "Germany": {
+                "en": "Company name or trade register number",
+                "de": "Firmenname order HR-Nummer"
+            },
+            "Netherlands": {
+                "en": "Company name or KvK",
+                "nl": "Bedrijfsnaam of KvK-nummer"
+            },
+            "Hungary":{
+                "en": "Company name or tax id",
+                "hu": "Cégnev vagy adószám"
+            },
+            "Belgium-FR": {
+                "en": "Company name or Kbo",
+                "fr": "Raison sociale ou numéro d’entreprise",
+                "nl": "Bedrijfsnaam of Kbo-nummer"
+            },
+            "Belgium-NL": {
+                "en": "Company name or Kbo",
+                "fr": "Raison sociale ou numéro d’entreprise",
+                "nl": "Bedrijfsnaam of Kbo-nummer"
+            },
+            "France": {
+                "en": "Company name or SIRET number",
+                "fr": "Raison sociale ou numéro de SIRET"
+            },
+            "Luxembourg": {
+                "en": "Company name or Trade Register Nr.",
+                "fr": "Nom de l'entreprise ou numéro d'entreprise (RCS)"
+            },
+            "Switzerland-DE": {
+                "en": "Company name or company ID",
+                "fr": "Nom de l'entreprise ou numéro d'entreprise (IDE)",
+                "de": "Firmenname oder Firmennummer"
+            },
+            "Switzerland-FR": {
+                "en": "Company name or company ID",
+                "fr": "Nom de l'entreprise ou numéro d'entreprise (IDE)",
+                "de": "Firmenname oder Firmennummer"
+            },
+            "Austria": {
+                "en": "Company name",
+                "de": "Firmenname"
+            }
+        },
+        "selectedCompanyName_error_cd": {
+            "default_impl": {
+                "en": "Please enter your company name.",
+                "pl": "Wpisz nazwę swojej firmy."
+            },
+            "Germany": {
+                "en": "Please enter your Company name or Trade register number in the correct format: HRA 12345 / HRB 12345.",
+                "de": "Bitte geben Sie Ihren Firmennamen oder Ihre Handelsregisternummer im richtigen Format ein: HRA 12345 / HRB 12345"
+            },
+            "Slovakia": {
+                "en": "Please enter your company name or tax id in the valid format.",
+                "sk": "Zadajte prosím názov Vašej spoločnosti alebo IČ vo platnom formáte."
+            },
+            "Slovakia CCS": {
+                "en": "Please enter your company name or tax id in the valid format.",
+                "sk": "Zadajte prosím názov Vašej spoločnosti alebo IČ vo platnom formáte."
+            },
+            "Czech Republic": {
+                "en": "Please enter your company name or tax id in the valid format.",
+                "cs": "Zadejte prosím název Vaší společnosti nebo IČ v platném formátu."
+            },
+            "Czech Republic CCS": {
+                "en": "Please enter your company name or tax id in the valid format.",
+                "cs": "Zadejte prosím název Vaší společnosti nebo IČ v platném formátu."
+            },
+            "Netherlands": {
+                "en": "Please enter your company name or KvK number in the valid format: 12345678",
+                "nl": "Geeft uw bedrijfsnaam of KvK-nummer in het correcte formaat op: 12345678"
+            },
+            "Belgium-FR": {
+                "en": "Please enter your company name or Kbo number in the valid format: XXX.XXX.XXX",
+                "fr": "Veuillez entrer le nom de votre entreprise ou le numéro d'entreprise dans le format suivant : XXX.XXX.XXX",
+                "nl": "Geeft uw bedrijfsnaam of KvK-nummer in het correcte formaat op: XXX.XXX.XXX"
+            },
+            "Belgium-NL": {
+                "en": "Please enter your company name or Kbo number in the valid format: XXX.XXX.XXX",
+                "fr": "Veuillez entrer le nom de votre entreprise ou le numéro d'entreprise dans le format suivant : XXX.XXX.XXX",
+                "nl": "Geeft uw bedrijfsnaam of KvK-nummer in het correcte formaat op: XXX.XXX.XXX"
+            },
+            "France": {
+                "en": "Please enter your company name or SIRET number in the valid format: 123456789",
+                "fr": "Veuillez entrer le nom de votre entreprise ou le numéro d'entreprise dans le format suivant : 123456789"
+            },
+            "Luxembourg": {
+                "en": "Please enter your company name or Trade Register Nr. (RCS) in the following format: B123456.",
+                "fr": "Veuillez entrer le nom de votre entreprise ou le numéro d'entreprise (RCS) dans le format suivant: B123456."
+            },
+            "Hungary":{
+                "en": "Please enter your company name or tax id in the valid format: 12345678-1-23",
+                "hu": "Kérjük, adja meg a cég nevét vagy adóazonosító számát az alábbi formátum alapján: 12345678-1-23"
+            },
+            "Switzerland-FR":{
+                "en": "Please enter your company name or company ID in the following format: CHEXXXXXXXXX",
+                "fr": "Veuillez entrer le nom de votre entreprise ou le numéro d'entreprise dans le format suivant (IDE):  CHEXXXXXXXXX",
+                "de": "Bitte geben Sie Ihre Firmenname oder Ihre Firmennummer im folgenden Format ein: CHEXXXXXXXXX"
+            },
+            "Switzerland-DE":{
+                "en": "Please enter your company name or company ID in the following format: CHEXXXXXXXXX",
+                "fr": "Veuillez entrer le nom de votre entreprise ou le numéro d'entreprise dans le format suivant (IDE):  CHEXXXXXXXXX",
+                "de": "Bitte geben Sie Ihre Firmenname oder Ihre Firmennummer im folgenden Format ein: CHEXXXXXXXXX"
+            }
+        },
+        "companyShortName_label_cd": {
+            "default_impl": {
+                "en": "Short company name",
+                "sk": "Krátky názov spoločnosti",
+                "cs": "Krátký název společnosti",
+                "hu": "Rövidített cégnév",
+                "fr": "Nom de l’entreprise en abrégé",
+                "nl": "Verkorte bedrijfsnaam of afkorting",
+                "pl": "Skrócona nazwa firmy",
+                "de": "Kurzer Firmenname"
+            }
+        },
+        "companyShortName_error_cd": {
+            "default_impl": {
+                "en": "The field should contain only letters (A-Z), numbers (0-9) and spaces. Special characters are not allowed.",
+                "sk": "Toto pole môže obsahovať iba písmená (A-Z), čísla (0-9) a medzery. Špeciálne znaky nie sú povolené.",
+                "cs": "Toto pole může obsahovat pouze písmena (A-Z), čísla (0-9) a mezery. Speciální znaky nejsou povoleny.",
+                "hu": "A mező csak az angol ábécé karaktereit (A-Z) illetve számokat (0-9) és szóközöket tartalmazhat. Speciális karakterek használata nem lehetséges.",
+                "fr": "Le champ ne doit comporter que des lettres (A-Z), des chiffres (0-9) et des espaces. Les caractères spéciaux ne sont pas autorisés.",
+                "nl": "Dit veld mag alleen letters (A-Z), cijfers (0-9) en spaties bevatten. Speciale karakters zijn niet toegestaan.",
+                "pl": "Pole powinno zawierać tylko litery (A-Z), cyfry (0-9) i spacje. Znaki specjalne nie są dozwolone.",
+                "de": "Das Feld sollte nur Buchstaben (A-Z), Zahlen (0-9) und Leerzeichen enthalten. Sonderzeichen sind nicht erlaubt."
+            }
+        },
+        "companyShortName_tooltip_cd": {
+            "default_impl": {
+                "en": "Please enter a short company name that does not exceed 25 characters. It will be printed on your card(s) and used for invoicing.",
+                "sk": "Zadajte prosím krátky názov spoločnosti, ktorý nebude presahovať 25 znakov. Bude vytlačený na Vašej karte (kartách) a použitý k fakturácii.",
+                "cs": "Zadejte prosím krátký název společnosti, který nebude přesahovat 25 znaků. Bude vytištěn na Vaší kartě (kartách) a použit k fakturaci.",
+                "fr": "Veuillez entrer le nom de votre entreprise ne dépassant pas 25 caractères. Ce nom sera embossé sur vos cartes.",
+                "nl": "Voer een korte bedrijfsnaam in die niet langer is dan 25 tekens voor de pas bedrukking.",
+                "pl": "Proszę podać skróconą nazwę firmy, która nie powinna przekraczać 25 znaków. Zostanie wydrukowana na twojej karcie (kartach) i użyta do fakturowania.",
+                "de": "Bitte geben Sie einen kurzen Firmennamen ein, der 25 Zeichen nicht überschreitet. Er wird auf Ihre Karte(n) gedruckt und für die Rechnungsstellung verwendet."
+            },
+            "Slovakia CCS": {
+                "en": "Enter a name that will be placed on all your cards (e.g. abbreviated company name, etc.) - up to 25 characters.",
+                "sk": "Uveďte názov, ktorý bude umiestnený na všetkých vašich kartách (napr. skrátený názov firmy a pod.) – najviac 25 znakov."
+            },
+            "Czech Republic CCS": {
+                "en": "Enter a name that will be placed on all your cards (e.g. abbreviated company name, etc.) - up to 25 characters.",
+                "cs": "Uveďte název, který bude umístěn na všech vašich kartách (např. zkrácený název firmy apod.) – nejvýše 25 znaků."
+            },
+            "Poland Lotos": {
+                "en": "Please enter a short company name that does not exceed 20 characters. It will be printed on your card(s) and used for invoicing.",
+                "pl": "Proszę podać skróconą nazwę firmy, która nie powinna przekraczać 20 znaków. Zostanie wydrukowana na twojej karcie (kartach) i użyta do fakturowania."
+            },
+            "Hungary": {
+                "en": "Please enter a short company name that does not exceed 22 characters. It will be printed on your card(s) and used for invoicing.",
+                "hu": "Kérjük, adja meg cége rövidített nevét, amely nem haladhatja meg a 22 karaktert. Ez lesz a feltüntetve a kártyáin valamint a számláin."
+            },
+            "Germany": {
+                "en": "Please enter a short company name that does not exceed 22 characters. It will be printed on your card(s) and used for invoicing.",
+                "de": "Bitte geben Sie einen kurzen Firmennamen ein, der 22 Zeichen nicht überschreitet. Er wird auf Ihre Karte(n) gedruckt und für die Rechnungsstellung verwendet."
+            },
+            "Netherlands": {
+                "en": "Please enter a short company name that does not exceed 22 characters. It will be printed on your card(s) and used for invoicing.",
+                "nl": "Voer een korte bedrijfsnaam in die niet langer is dan 22 tekens voor de pas bedrukking."
+            },
+            "Belgium-FR": {
+                "en": "Please enter a short company name that does not exceed 22 characters. It will be printed on your card(s) and used for invoicing.",
+                "fr": "Veuillez entrer le nom de votre entreprise ne dépassant pas 22 caractères. Ce nom sera embossé sur vos cartes.",
+                "nl": "Voer een korte bedrijfsnaam in die niet langer is dan 22 tekens voor de pas bedrukking."
+            },
+            "Belgium-NL": {
+                "en": "Please enter a short company name that does not exceed 22 characters. It will be printed on your card(s) and used for invoicing.",
+                "fr": "Veuillez entrer le nom de votre entreprise ne dépassant pas 22 caractères. Ce nom sera embossé sur vos cartes.",
+                "nl": "Voer een korte bedrijfsnaam in die niet langer is dan 22 tekens voor de pas bedrukking."
+            }
+        },
+        "company_selection_desc_cd": {
+            "default_impl": {
+                "en": "We use automatic identification through credit bureaus to identify your company. This company search is available only for companies registered in Poland.",
+                "pl": "Do identyfikacji Twojej firmy wykorzystujemy automatyczną identyfikację za pośrednictwem biur kredytowych. Wyszukiwarka firm online jest dostępna jedynie dla firm zarejestrowanych w Polsce."
+            },
+            "Slovakia": {
+                "en": "Please select your company from the live search results. This information is required to calculate a suitable credit limit for your selected products. This service is available only for companies registered in Slovakia.",
+                "sk": "Prosím vyberte svoju spoločnosť z aktuálnych výsledkov vyhľadávania. Tieto informácie sú potrebné pre výpočet vhodného úverového limitu pre vybrané produkty. Táto služba je k dispozícii len pre spoločnosti registrované v Slovenskej republike."
+            },
+            "Slovakia CCS": {
+                "en": "Please select your company from the live search results. This information is required to calculate a suitable credit limit for your selected products. This service is available only for companies registered in Slovakia.",
+                "sk": "Prosím vyberte svoju spoločnosť z aktuálnych výsledkov vyhľadávania. Tieto informácie sú potrebné pre výpočet vhodného úverového limitu pre vybrané produkty. Táto služba je k dispozícii len pre spoločnosti registrované v Slovenskej republike."
+            },
+            "Czech Republic": {
+                "en": "Please select your company from the live search results. This information is required to calculate a suitable credit limit for your selected products. This service is available only for companies registered in Czech Republic.",
+                "cs": "Vyberte prosím svou společnost z aktuálních výsledků vyhledávání. Tyto informace jsou nezbytné pro výpočet vhodného úvěrového limitu pro vybrané produkty. Tato služba je k dispozici pouze pro společnosti registrované v České republice."
+            },
+            "Czech Republic CCS": {
+                "en": "Please select your company from the live search results. This information is required to calculate a suitable credit limit for your selected products. This service is available only for companies registered in Czech Republic.",
+                "cs": "Vyberte prosím vaši společnost z aktuálních výsledků vyhledávání. Tyto informace jsou nezbytné pro výpočet správného kreditního limitu pro vámi vybrané produkty. Tato služba je k dispozici pouze pro společnosti registrované v České republice."
+            },
+            "Germany": {
+                "en": "In order to provide a suitable credit limit for your company, we need to find it in our partner credit bureau. This service is available only for the companies registered in Germany.",
+                "de": "Um ein geeignetes Kreditlimit für Ihr Unternehmen bereitzustellen, müssen wir es in unserem Partnerkreditbüro finden. Dieser Service ist nur für in Deutschland registrierte Unternehmen verfügbar."
+            },
+            "Netherlands": {
+                "en": "Please select your company from the live search results. This information is required to calculate a suitable credit limit for your selected products. This service is available only for companies registered in the Netherlands.",
+                "nl": "Selecteer uw bedrijf uit de zoekresultaten. Deze informatie is vereist om een geschikt kredietlimiet te berekenen voor uw geselecteerde producten. Deze service is alleen beschikbaar voor bedrijven die in Nederland zijn geregistreerd."
+            },
+            "Belgium-FR": {
+                "en": "Please select your company from the live search results. This information is required to calculate a suitable credit limit for your selected products. This service is available only for companies registered in the Belgium.",
+                "fr": "Sélectionnez votre entreprise dans les résultats de recherche. Cette information est nécessaire pour calculer une limite de crédit appropriée pour les produits choisis. Ce service n'est disponible que pour les entreprises enregistrées en Belgique.",
+                "nl": "Selecteer uw bedrijf uit de zoekresultaten. Deze informatie is vereist om een geschikt kredietlimiet te berekenen voor uw geselecteerde producten. Deze service is alleen beschikbaar voor bedrijven die in Belgium zijn geregistreerd."
+            },
+            "Belgium-NL": {
+                "en": "Please select your company from the live search results. This information is required to calculate a suitable credit limit for your selected products. This service is available only for companies registered in the Belgium.",
+                "fr": "Sélectionnez votre entreprise dans les résultats de recherche. Cette information est nécessaire pour calculer une limite de crédit appropriée pour les produits choisis. Ce service n'est disponible que pour les entreprises enregistrées en Belgique.",
+                "nl": "Selecteer uw bedrijf uit de zoekresultaten. Deze informatie is vereist om een geschikt kredietlimiet te berekenen voor uw geselecteerde producten. Deze service is alleen beschikbaar voor bedrijven die in België zijn geregistreerd."
+            },
+            "France": {
+                "en": "Please select your company from the live search results. This information is required to calculate a suitable credit limit for your selected products. This service is available only for companies registered in the France.",
+                "fr": "Sélectionnez votre entreprise dans les résultats de recherche. Cette information est nécessaire pour calculer une limite de crédit appropriée pour les produits choisis. Ce service n'est disponible que pour les entreprises enregistrées en France."
+            },
+            "Luxembourg": {
+                "en": "Please select your company from the live search results. This information is required to calculate a suitable credit limit for your selected products. This service is available only for companies registered in the Luxembourg.",
+                "fr": "Sélectionnez votre entreprise dans les résultats de recherche. Cette information est nécessaire pour calculer une limite de crédit appropriée pour les produits choisis. Ce service n'est disponible que pour les entreprises enregistrées en Luxembourg."
+            },
+            "Hungary":{
+                "en": "Please select your company from the live search results. This information is required to calculate a suitable credit limit for your selected products. This service is available only for companies registered in Hungary.",
+                "hu": "Kérjük, válassza ki a vállalkozását a keresési találatok közül. Ez az információ az Ön által megrendelt termékekhez tartozó hitelkeretet kiszámításához szükséges. Ezt a szolgáltatást csak a Magyarországon bejegyzett cégek vehetik igénybe."
+            },
+            "Switzerland-FR":{
+                "en": "Please select your company from the live search results. This information is required to calculate a suitable credit limit for your selected products. This service is available only for companies registered in Switzerland.",
+                "fr": "Sélectionnez votre entreprise dans les résultats de recherche. Cette information est nécessaire pour calculer une limite de crédit appropriée pour les produits choisis. Ce service n'est disponible que pour les entreprises enregistrées en Suisse.",
+                "de": "Um ein geeignetes Kreditlimit für Ihr Unternehmen bereitzustellen, müssen wir es in unserem Partnerkreditbüro finden. Dieser Service ist nur für in Switzerland registrierte Unternehmen verfügbar."
+            },
+            "Switzerland-DE":{
+                "en": "Please select your company from the live search results. This information is required to calculate a suitable credit limit for your selected products. This service is available only for companies registered in Switzerland.",
+                "fr": "Sélectionnez votre entreprise dans les résultats de recherche. Cette information est nécessaire pour calculer une limite de crédit appropriée pour les produits choisis. Ce service n'est disponible que pour les entreprises enregistrées en Suisse.",
+                "de": "Um ein geeignetes Kreditlimit für Ihr Unternehmen bereitzustellen, müssen wir es in unserem Partnerkreditbüro finden. Dieser Service ist nur für in der Schweiz registrierte Unternehmen verfügbar."
+            },
+            "Austria": {
+                "en": "In order to provide a suitable credit limit for your company, we need to find it in our partner credit bureau. This service is available only for the companies registered in Austria.",
+                "de": "Um ein geeignetes Kreditlimit für Ihr Unternehmen bereitzustellen, müssen wir es in unserem Partnerkreditbüro finden. Dieser Service ist nur für in Austria registrierte Unternehmen verfügbar."
+            }
+        },
+        "company_nothing_found_cd": {
+            "default_impl": {
+                "en": "Nothing was found.",
+                "pl": "Nic nie znaleziono."
+            }
+        },
+        "companySelection_error_cd": {
+            "default_impl": {
+                "en": "Please select your company from the list.",
+                "sk": "Prosím vyberte svoju spoločnosť.",
+                "cs": "Vyberte prosím svou společnost z výsledků vyhledávání.",
+                "fr": "Sélectionnez votre entreprise dans les résultats de recherche.",
+                "nl": "Selecteer uw bedrijf uit de zoekresultaten.",
+                "pl": "Proszę wybrać swoją firmę",
+                "de": "Bitte wählen Sie Ihr Unternehmen aus der Liste aus."
+            }
+        },
+        "tryWithTaxId_cd": {
+            "default_impl": {
+                "en": "Try searching by NIP for more precise results",
+                "pl": "W celu uzyskania lepszych wyników wyszukiwania, proszę, spróbuj wyszukać według NIP"
+            },
+            "Slovakia": {
+                "en": "We recommend searching by Tax id for more precise results.",
+                "sk": "Pre presnejšie výsledky doporučujeme hľadať podľa IČ."
+            },
+            "Slovakia CCS": {
+                "en": "We recommend searching by Tax id for more precise results.",
+                "sk": "Pre presnejšie výsledky doporučujeme hľadať podľa IČ."
+            },
+            "Czech Republic": {
+                "en": "We recommend searching by Tax id for more precise results.",
+                "cs": "Pro přesnější výsledky doporučujeme hledat podle IČ."
+            },
+            "Czech Republic CCS": {
+                "en": "We recommend searching by Tax id for more precise results.",
+                "cs": "Pro přesnější výsledky doporučujeme hledat podle IČ."
+            },
+            "Netherlands": {
+                "en": "We recommend searching by KvK for more precise results",
+                "nl": "Wij adviseren om te zoeken op KvK-nummer voor betere resultaten"
+            },
+            "Belgium-FR": {
+                "en": "We recommend searching by Kbo for more precise results",
+                "fr": "Nous vous recommandons de rechercher par numéro d'entreprise pour obtenir des résultats plus précis.",
+                "nl": "Wij adviseren om te zoeken op Kbo-nummer voor betere resultaten"
+            },
+            "Belgium-NL": {
+                "en": "We recommend searching by Kbo for more precise results",
+                "fr": "Nous vous recommandons de rechercher par numéro d'entreprise pour obtenir des résultats plus précis.",
+                "nl": "Wij adviseren om te zoeken op Kbo-nummer voor betere resultaten"
+            },
+            "France": {
+                "en": "We recommend searching by Kbo for more precise results",
+                "fr": "Nous vous recommandons de rechercher par numéro d'entreprise pour obtenir des résultats plus précis."
+            },
+            "Hungary":{
+                "en": "We recommend searching by Tax id for more precise results.",
+                "hu": "A pontosabb eredmények érdekében, próbáljon meg az adószáma alapján keresni."
+            }
+        },
+        "tryWithVatId_cd": {
+            "default_impl": {
+                "en": "We recommend searching by Company ID for more precise results",
+                "fr": "Nous vous recommandons de rechercher par numéro d'entreprise pour obtenir des résultats plus précis.",
+                "de": "Wir empfehlen die Suche nach Firmennummer für genauere Ergebnisse"
+            }
+        },
+        "tryWithTradeRegisterNumber_cd": {
+            "default_impl": {
+                "en": "We recommend searching by Company Trade Register number for more precise results",
+                "de": "Wir empfehlen, nach der Handelsregister-Nr des Unternehmens zu suchen, um genauere Ergebnisse zu erhalten."
+            },
+            "Luxembourg": {
+                "en": "We recommend searching by trade register number (RCS) for more precise results.",
+                "fr": "Nous vous recommandons de rechercher par numéro registre de commerce et des sociétés (RCS) pour obtenir des résultats plus précis."
+            }
+        },
+        "agreementToPhoneContact_label_cd": {
+            "default_impl": {
+                "en": "I agree to be contacted by <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>phone</a>.",
+                "sk": "Súhlasím s <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>telefonickým kontaktom</a>.",
+                "cs": "Souhlasím s <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>telefonickým kontaktem</a>.",
+                "hu": "Hozzájárulás <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>telefonos</a> kapcsolatfelvételhez.",
+                "pl": "Zgadzam się na kontakt <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>telefoniczny</a>."
+            },
+            "Germany": {
+                "en": "Yes, I would like to be contacted by FLEETCOR Deutschland GmbH for the purpose of processing of my order by email, text message or phone call. ",
+                "de": "Ja, ich möchte von der FLEETCOR Deutschland GmbH zur Bearbeitung meiner Bestellung oder meines Vertrages per Email, Textnachricht oder Telefonanruf kontaktiert werden."
+            },
+            "Netherlands": {
+                "en": "Yes, I would like to be contacted by FLEETCOR Technologieën B.V. for the purpose of processing of my order by email, text message or phone call. ",
+                "nl": "Ja, ik wil graag gecontacteerd worden door FLEETCOR Technologieën B.V. ten behoeve van de afhandeling van mijn bestelling per e-mail, sms of telefoon."
+            },
+            "Belgium-FR": {
+                "en": "Yes, I would like to be contacted by FLEETCOR Belgium for the purpose of processing of my order by email, text message or phone call. ",
+                "fr": "Oui, je souhaite être contacté (e) par FLEETCOR Belgium SRL aux fins du traitement de ma commande par email, SMS ou appel téléphonique.",
+                "nl": "Ja, ik wil graag gecontacteerd worden door FLEETCOR Belgium BV ten behoeve van de afhandeling van mijn bestelling per e-mail, sms of telefoon."
+            },
+            "Belgium-NL": {
+                "en": "Yes, I would like to be contacted by FLEETCOR Belgium for the purpose of processing of my order by email, text message or phone call. ",
+                "fr": "Oui, je souhaite être contacté (e) par FLEETCOR Belgium SRL aux fins du traitement de ma commande par email, SMS ou appel téléphonique.",
+                "nl": "Ja, ik wil graag gecontacteerd worden door FLEETCOR Belgium BV ten behoeve van de afhandeling van mijn bestelling per e-mail, sms of telefoon."
+            },
+            "France": {
+                "en": "Yes, I would like to be contacted by epyx France SAS (FLEETCOR) for the purpose of processing of my order by email, text message or phone call.",
+                "fr": "Oui, je souhaite être contacté (e) par epyx France SAS (FLEETCOR) aux fins du traitement de ma commande par email, SMS ou appel téléphonique."
+            },
+            "Luxembourg": {
+                "en": "Yes, I would like to be contacted by epyx Venturo Technologies S.à r.l. (FLEETCOR) for the purpose of processing of my order by email, text message or phone call.",
+                "fr": "Oui, je souhaite être contacté (e) par Venturo Technologies S.à r.l. (FLEETCOR) aux fins du traitement de ma commande par email, SMS ou appel téléphonique."
+            },
+            "Switzerland-FR": {
+                "en": "Yes, I would like to be contacted by Venturo Technologien Swiss GmbH (FLEETCOR) for the purpose of processing of my order by email, text message or phone call.",
+                "fr": "Oui, je souhaite être contacté (e) par Venturo Technologien Swiss GmbH (FLEETCOR) aux fins du traitement de ma commande par email, SMS ou appel téléphonique.",
+                "de": "Ja, ich möchte von der Venturo Technologien Swiss GmbH (FLEETCOR) zur Bearbeitung meiner Bestellung oder meines Vertrages per Email, Textnachricht oder Telefonanruf kontaktiert werden."
+            },
+            "Switzerland-DE": {
+                "en": "Yes, I would like to be contacted by Venturo Technologien Swiss GmbH (FLEETCOR) for the purpose of processing of my order by email, text message or phone call.",
+                "fr": "Oui, je souhaite être contacté (e) par Venturo Technologien Swiss GmbH (FLEETCOR) aux fins du traitement de ma commande par email, SMS ou appel téléphonique.",
+                "de": "Ja, ich möchte von der Venturo Technologien Swiss GmbH (FLEETCOR) zur Bearbeitung meiner Bestellung oder meines Vertrages per Email, Textnachricht oder Telefonanruf kontaktiert werden."
+            },
+            "Austria": {
+                "en": "Yes, I would like to be contacted by  FLEETCOR Tankkarten GmbH for the purpose of processing of my order by email, text message or phone call. ",
+                "de": "Ja, ich möchte von der  FLEETCOR Tankkarten GmbH zur Bearbeitung meiner Bestellung oder meines Vertrages per Email, Textnachricht oder Telefonanruf kontaktiert werden."
+            }
+        },
+        "agreementToPhoneContact_error_cd": {
+            "default_impl": {
+                "en": "This consent is required for provision of the service.",
+                "sk": "Tento súhlas je potrebný pre poskytnutie služby.",
+                "cs": "Tento souhlas je nezbtyný pro poskytnutí služby.",
+                "hu": "Ez a hozzájárulás szükséges a szolgáltatás nyújtásához.",
+                "fr": "Ce consentement est requis pour fournir le service.",
+                "nl": "Deze toestemming is vereist om de service te kunnen leveren.",
+                "pl": "Brak zaznaczenia pola uniemożliwia kontakt telefoniczny.",
+                "de": "Diese Zustimmung ist für die Erbringung der Dienstleistung erforderlich."
+            }
+        },
+        "agreementToReceiveInfoByEmail_label_cd": {
+            "default_impl": {
+                "en": "I agree to be contacted by <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>emails</a>.",
+                "cs": "Souhlasím s přijímáním <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>e-mailových obchodních sdělení</a>.",
+                "sk": "Súhlasím s prijímaním <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>e-mailových obchodných oznámení</a>.",
+                "hu": "Hozzájárulás <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>e-mailben</a> küldött üzleti tájékoztatókhoz.",
+                "pl": "Zgadzam się na otrzymywanie <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>e-mailowych</a> informacji handlowych."
+            }
+        },
+        "agreementToReceiveInfoByEmail_error_cd": {
+            "default_impl": {
+                "en": "This consent is required for provision of the service.",
+                "cs": "Tento souhlas je nezbtyný pro poskytnutí služby.",
+                "sk": "Tento súhlas je potrebný pre poskytnutie služby.",
+                "pl": "Brak zaznaczenia pola uniemożliwia kontakt drogą elektroniczną.",
+                "hu":"Ez a hozzájárulás szükséges a szolgáltatás nyújtásához."
+            }
+        },
+        "agreementPrivacyPolicy_label_cd": {
+            "default_impl": {
+                "en": "I agree to receive offers for <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>products and services</a>.",
+                "cs": "Souhlasím s nabídkami <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>produktů a služeb</a>.",
+                "sk": "Súhlasím s ponukou <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>produktov a služieb</a>.",
+                "hu": "Hozzájárulás <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>termékekkel és szolgáltatásokkal</a> kapcsolatos ajánlatok küldéséhez.",
+                "pl": "Zgadzam się na otrzymywanie ofert dotyczących <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>produktów i usług</a>."
+            }
+        },
+        "agreementPrivacyPolicy_error_cd": {
+            "default_impl": {
+                "en": "This consent is required for provision of the service.",
+                "hu": "Ez a hozzájárulás szükséges a szolgáltatás nyújtásához.",
+                "de": "Diese Zustimmung ist für die Erbringung der Dienstleistung erforderlich."
+            }
+        },
+        "agreeToProcessPersDataForMarketing_label_cd": {
+            "default_impl": {
+                "en": "Yes, I would like to receive <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>information and advertising</a> from FLEETCOR Deutschland GmbH. I would like to be contacted for this purpose by email, text message or phone call. This agreement can be revoked at any time.",
+                "de": "Ja, ich möchte von der FLEETCOR Deutschland GmbH <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>Informationen und Werbung</a> erhalten. Ich möchte zu diesem Zweck per Email, Textnachricht oder Telefonanruf kontaktiert werden. Diese Einwilligung kann ich jederzeit widerrufen."
+            },
+            "Poland": {
+                "en": "I agree to receive offers for <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>products and services</a>.",
+                "pl": "Zgadzam się na otrzymywanie ofert dotyczących <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>produktów i usług</a>."
+            },
+            "Switzerland-DE": {
+                "en": "Yes, I would like to receive <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>information and advertising</a> from Venturo Technologien Swiss GmbH (FLEETCOR). I would like to be contacted for this purpose by email, text message or phone call. This consent can be revoked at any time.",
+                "fr": "Oui, j'accepte de recevoir des <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>informations et des publicités</a> de la part de Venturo Technologien Swiss GmbH (FLEETCOR). À cette fin, j'accepte d'être contacté (e) par email, SMS ou appel téléphonique. Ce consentement est révocable à tout moment.",
+                "de": "Ja, ich möchte von der  Venturo Technologien Swiss GmbH (FLEETCOR). <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>Informationen und Werbung</a> erhalten. Ich möchte zu diesem Zweck per Email, Textnachricht oder Telefonanruf kontaktiert werden. Diese Einwilligung kann ich jederzeit widerrufen."
+            },
+            "Switzerland-FR": {
+                "en": "Yes, I would like to receive <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>information and advertising</a> from Venturo Technologien Swiss GmbH (FLEETCOR). I would like to be contacted for this purpose by email, text message or phone call. This consent can be revoked at any time.",
+                "fr": "Oui, j'accepte de recevoir des <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>informations et des publicités</a> de la part de Venturo Technologien Swiss GmbH (FLEETCOR). À cette fin, j'accepte d'être contacté (e) par email, SMS ou appel téléphonique. Ce consentement est révocable à tout moment.",
+                "de": "Ja, ich möchte von der  Venturo Technologien Swiss GmbH (FLEETCOR). <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>Informationen und Werbung</a> erhalten. Ich möchte zu diesem Zweck per Email, Textnachricht oder Telefonanruf kontaktiert werden. Diese Einwilligung kann ich jederzeit widerrufen."
+            },
+            "Hungary": {
+                "en": "I agree to <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>receive offers</a> for products and services.",
+                "hu": "Hozzájárulás termékekkel és szolgáltatásokkal kapcsolatos <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>ajánlatok küldéséhez</a>."
+            },
+            "Poland Lotos": {
+                "en": "I agree to receive offers for <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>products and services</a>.",
+                "pl": "Zgadzam się na otrzymywanie ofert dotyczących <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>produktów i usług</a>."
+            },
+            "Netherlands": {
+                "en": "Yes, I would like to receive <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>information and advertising</a> from FLEETCOR Technologieën B.V. I would like to be contacted for this purpose by email, text message or phone call. This agreement can be revoked at any time.",
+                "nl": "Ja, ik ontvang graag <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>informatie en reclame</a> van FLEETCOR Technologieën B.V. Ik wil hiervoor gecontacteerd worden per e-mail, sms of telefoon. Deze toestemming kan te allen tijde worden herroepen."
+            },
+            "Belgium-NL": {
+                "en": "Yes, I would like to receive <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>information and advertising</a> from FLEETCOR Belgium BV I would like to be contacted for this purpose by email, text message or phone call. This agreement can be revoked at any time.",
+                "fr": "Oui, j'accepte de recevoir des <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>informations et des publicités</a> de la part de FLEETCOR Belgium SRL. À cette fin, j'accepte d'être contacté (e) par email, SMS ou appel téléphonique. Ce consentement est révocable à tout moment.",
+                "nl": "Ja, ik ontvang graag <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>informatie en reclame</a> van FLEETCOR Belgium BV Ik wil hiervoor gecontacteerd worden per e-mail, sms of telefoon. Deze toestemming kan te allen tijde worden herroepen."
+            },
+            "Belgium-FR": {
+                "en": "Yes, I would like to receive <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>information and advertising</a> from FLEETCOR Belgium BV I would like to be contacted for this purpose by email, text message or phone call. This agreement can be revoked at any time.",
+                "fr": "Oui, j'accepte de recevoir des <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>informations et des publicités</a> de la part de FLEETCOR Belgium SRL. À cette fin, j'accepte d'être contacté (e) par email, SMS ou appel téléphonique. Ce consentement est révocable à tout moment.",
+                "nl": "Ja, ik ontvang graag <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>informatie en reclame</a> van FLEETCOR Belgium BV Ik wil hiervoor gecontacteerd worden per e-mail, sms of telefoon. Deze toestemming kan te allen tijde worden herroepen."
+            },
+            "France": {
+                "en": "Yes, I would like to receive <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>information and advertising</a> from epyx France SAS (FLEETCOR) I would like to be contacted for this purpose by email, text message or phone call. This consent can be revoked at any time.",
+                "fr": "Oui, j'accepte de recevoir des <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>informations et des publicités</a> de la part d'epyx France SAS (FLEETCOR). À cette fin, j'accepte d'être contacté (e) par email, SMS ou appel téléphonique. Ce consentement est révocable à tout moment."
+            },
+            "Luxembourg": {
+                "en": "Yes, I would like to receive <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>information and advertising</a> from epyx Venturo Technologies S.à r.l. (FLEETCOR) I would like to be contacted for this purpose by email, text message or phone call. This consent can be revoked at any time.",
+                "fr": "Oui, j'accepte de recevoir des <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>informations et des publicités</a> de la part de Venturo Technologies S.à r.l. (FLEETCOR). À cette fin, j'accepte d'être contacté (e) par email, SMS ou appel téléphonique. Ce consentement est révocable à tout moment."
+            },
+            "Czech Republic": {
+                "en": "I agree to receive offers for <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>products and services</a>.",
+                "cs": "Souhlasím s nabídkami <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>produktů a služeb</a>."
+            },
+            "Slovakia": {
+                "en": "I agree to receive offers for <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>products and services</a>.",
+                "sk": "Súhlasím s ponukou <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>produktov a služieb</a>."
+            },
+            "Austria": {
+                "en": "Yes, I would like to receive <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>information and advertising</a> from FLEETCOR Tankkarten GmbH. I would like to be contacted for this purpose by email, text message or phone call. This agreement can be revoked at any time.",
+                "de": "Ja, ich möchte von der FLEETCOR Tankkarten GmbH <a class='fltbase-checkbox__label-button' href='javascript:void(0);' target='_blank'>Informationen und Werbung</a> erhalten. Ich möchte zu diesem Zweck per Email, Textnachricht oder Telefonanruf kontaktiert werden. Diese Einwilligung kann ich jederzeit widerrufen."
+            }
+        },
+        "agreeToProcessPersDataForMarketing_error_cd": {
+            "default_impl": {
+                "en": "This consent is required for provision of the service.",
+                "sk": "Tento súhlas je potrebný pre poskytnutie služby.",
+                "cs": "Tento souhlas je nezbtyný pro poskytnutí služby."
+            }
+        },
+        "termsAndConditionsAgreement_label_cd": {
+            "default_impl": {
+                "en": "I accept the <a href='/etedocuments?doc=documentsTermsAndConditions$1$' target='_blank'>Terms & Conditions</a>.",
+                "fr": "J'accepte les <a href='/etedocuments?doc=documentsTermsAndConditions$1$' target='_blank'>conditions générales</a>.",
+                "nl": "Ik accepteer de <a href='/etedocuments?doc=documentsTermsAndConditions$1$' target='_blank'>Algemene Voorwaarden</a>.",
+                "de": "Ich bin einverstanden mit den <a href='/etedocuments?doc=documentsTermsAndConditions$1$' target='_blank'>Allgemeinen Geschäftsbedingungen</a>."
+            }
+        },
+        "termsAndConditionsAgreement_error_cd": {
+            "default_impl": {
+                "en": "This consent is required for provision of the service.",
+                "fr": "Ce consentement est requis pour fournir le service.",
+                "nl": "Deze toestemming is vereist om de service te kunnen leveren.",
+                "de": "Diese Zustimmung ist für die Erbringung der Dienstleistung erforderlich."
+            }
+        },
+        "authorizedSignatoryConfirmed_label_cd": {
+            "default_impl": {
+                "en": "I confirm that I am authorized to make decisions on behalf of the company.",
+                "de": "Ich bestätige, dass ich bevollmächtigt bin, die Entscheidungen im Namen des Unternehmens zu treffen."
+            }
+        },
+        "authorizedSignatoryConfirmed_error_cd": {
+            "default_impl": {
+                "en": "This consent is required for provision of the service.",
+                "de": "Diese Zustimmung ist für die Erbringung der Dienstleistung erforderlich."
+            }
+        },
+        "nextButton_duplicate_contact_cd": {
+            "default_impl": {
+                "en": "You have a duplicate contact."
+            }
+        },
+        "companyNotInTheList_cd": {
+            "default_impl": {
+                "en": "My company is not in the list",
+                "sk": "Moja spoločnosť nie je uvedená v zozname",
+                "cs": "Moje společnost není v seznamu uvedena",
+                "hu": "A vállalkozásom nem szerepel a listán",
+                "fr": "Ma société ne figure pas sur la liste",
+                "nl": "Mijn bedrijf is niet weergegeven",
+                "pl": "Moja firma nie jest na liście",
+                "de": "Mein Unternehmen ist nicht gelistet"
+            }
+        },
+        "phone_AL": {
+            "default_impl": {
+                "en": "Albania",
+                "fr": "Albanie",
+                "nl": "Albania",
+                "pl": "Albania",
+                "de": "Albanien"
+            }
+        },
+        "phone_AD": {
+            "default_impl": {
+                "en": "Andorra",
+                "fr": "Andorre",
+                "nl": "Andorra",
+                "pl": "Andora",
+                "de": "Andorra"
+            }
+        },
+        "phone_AT": {
+            "default_impl": {
+                "en": "Austria",
+                "fr": "Autriche",
+                "nl": "Oostenrijk",
+                "pl": "Austria",
+                "de": "Österreich"
+            }
+        },
+        "phone_BY": {
+            "default_impl": {
+                "en": "Belarus",
+                "fr": "Belarus",
+                "nl": "Belarus",
+                "pl": "Białoruś",
+                "de": "Belarus"
+            }
+        },
+        "phone_BE": {
+            "default_impl": {
+                "en": "Belgium",
+                "fr": "Belgique",
+                "nl": "België",
+                "pl": "Belgia",
+                "de": "Belgien"
+            }
+        },
+        "phone_BA": {
+            "default_impl": {
+                "en": "Bosnia and Herzegovina",
+                "fr": "La bosnie-et-Herzégovine",
+                "nl": "Bosnië en Herzegovina",
+                "pl": "Bośnia I Hercegowina",
+                "de": "Bosnien und Herzegowina"
+            }
+        },
+        "phone_BG": {
+            "default_impl": {
+                "en": "Bulgaria",
+                "fr": "Bulgarie",
+                "nl": "Bulgarije",
+                "pl": "Bułgaria",
+                "de": "Bulgarien"
+            }
+        },
+        "phone_HR": {
+            "default_impl": {
+                "en": "Croatia",
+                "fr": "Croatie",
+                "nl": "Kroatië",
+                "pl": "Chorwacja",
+                "de": "Kroatien"
+            }
+        },
+        "phone_CZ": {
+            "default_impl": {
+                "en": "Czech Republic",
+                "fr": "République tchèque",
+                "nl": "Tsjechië",
+                "pl": "Republika Czeska",
+                "de": "Tschechien"
+            }
+        },
+        "phone_DK": {
+            "default_impl": {
+                "en": "Denmark",
+                "fr": "Danemark",
+                "nl": "Denemarken",
+                "pl": "Dania",
+                "de": "Nemark"
+            }
+        },
+        "phone_EE": {
+            "default_impl": {
+                "en": "Estonia",
+                "fr": "Estonie",
+                "nl": "Estland",
+                "pl": "Estonia",
+                "de": "Estland"
+            }
+        },
+        "phone_FO": {
+            "default_impl": {
+                "en": "Faroe Islands",
+                "fr": "Îles Féroé",
+                "nl": "Faeröer",
+                "pl": "Wyspy Owcze",
+                "de": "Färöer"
+            }
+        },
+        "phone_FI": {
+            "default_impl": {
+                "en": "Finland",
+                "fr": "Finlande",
+                "nl": "Finland",
+                "pl": "Finlandia",
+                "de": "Finnland"
+            }
+        },
+        "phone_FR": {
+            "default_impl": {
+                "en": "France",
+                "fr": "France",
+                "nl": "Frankrijk",
+                "pl": "Francja",
+                "de": "Frankreich"
+            }
+        },
+        "phone_DE": {
+            "default_impl": {
+                "en": "Germany",
+                "fr": "Allemagne",
+                "nl": "Duitsland",
+                "pl": "Niemcy",
+                "de": "Deutschland"
+            }
+        },
+        "phone_GI": {
+            "default_impl": {
+                "en": "Gibraltar",
+                "fr": "Gibraltar",
+                "nl": "Gibraltar",
+                "pl": "Gibraltar",
+                "de": "Gibraltar"
+            }
+        },
+        "phone_GR": {
+            "default_impl": {
+                "en": "Greece",
+                "fr": "Grèce",
+                "nl": "Griekenland",
+                "pl": "Grecja",
+                "de": "Griechenland"
+            }
+        },
+        "phone_VA": {
+            "default_impl": {
+                "en": "Holy See (Vatican City State)",
+                "fr": "Saint-Siège (État De La Cité Du Vatican)",
+                "nl": "Heilige Stoel (Vaticaanstad))",
+                "pl": "Stolica Apostolska (Państwo Watykańskie)",
+                "de": "Heiliger Stuhl (Staat Vatikanstadt)"
+            }
+        },
+        "phone_HU": {
+            "default_impl": {
+                "en": "Hungary",
+                "fr": "Hongrie",
+                "nl": "Hongarije",
+                "pl": "Węgry",
+                "de": "Siebenbürgen"
+            }
+        },
+        "phone_IS": {
+            "default_impl": {
+                "en": "Iceland",
+                "fr": "Islande",
+                "nl": "IJsland",
+                "pl": "Islandia",
+                "de": "Island"
+            }
+        },
+        "phone_IE": {
+            "default_impl": {
+                "en": "Ireland",
+                "fr": "Irlande",
+                "nl": "Ierland",
+                "pl": "Irlandia",
+                "de": "Irland"
+            }
+        },
+        "phone_IT": {
+            "default_impl": {
+                "en": "Italy",
+                "fr": "Italie",
+                "nl": "Italië",
+                "pl": "Włochy",
+                "de": "Italien"
+            }
+        },
+        "phone_LV": {
+            "default_impl": {
+                "en": "Latvia",
+                "fr": "Lettonie",
+                "nl": "Letland",
+                "pl": "Łotwa",
+                "de": "Lettland"
+            }
+        },
+        "phone_LI": {
+            "default_impl": {
+                "en": "Liechtenstein",
+                "fr": "Liechtenstein",
+                "nl": "Liechtenstein",
+                "pl": "Liechtenstein",
+                "de": "Liechtenstein"
+            }
+        },
+        "phone_LT": {
+            "default_impl": {
+                "en": "Lithuania",
+                "fr": "Lituanie",
+                "nl": "Litouwen",
+                "pl": "Litwa",
+                "de": "Litauen"
+            }
+        },
+        "phone_LU": {
+            "default_impl": {
+                "en": "Luxembourg",
+                "fr": "Luxembourg",
+                "nl": "Luxemburgse",
+                "pl": "Luksemburg",
+                "de": "Luxemburg"
+            }
+        },
+        "phone_MK": {
+            "default_impl": {
+                "en": "Macedonia",
+                "fr": "Macédoine",
+                "nl": "Macedonië",
+                "pl": "Macedonia",
+                "de": "Mazedonien"
+            }
+        },
+        "phone_MT": {
+            "default_impl": {
+                "en": "Malta",
+                "fr": "Malte",
+                "nl": "Malta",
+                "pl": "Malta",
+                "de": "Malta"
+            }
+        },
+        "phone_MD": {
+            "default_impl": {
+                "en": "Moldova",
+                "fr": "Moldavie",
+                "nl": "Moldavië",
+                "pl": "Mołdawia",
+                "de": "Moldau"
+            }
+        },
+        "phone_MC": {
+            "default_impl": {
+                "en": "Monaco",
+                "fr": "Monaco",
+                "nl": "Monaco",
+                "pl": "Monako",
+                "de": "Monaco"
+            }
+        },
+        "phone_ME": {
+            "default_impl": {
+                "en": "Montenegro",
+                "fr": "Monténégro",
+                "nl": "Montenegro",
+                "pl": "Czarnogóra",
+                "de": "Montenegro"
+            }
+        },
+        "phone_NL": {
+            "default_impl": {
+                "en": "Netherlands",
+                "fr": "Néerlandais",
+                "nl": "Nederland",
+                "pl": "Niderlandy",
+                "de": "Niederlande"
+            }
+        },
+        "phone_NO": {
+            "default_impl": {
+                "en": "Norway",
+                "fr": "Norvège",
+                "nl": "Noorwegen",
+                "pl": "Norwegia",
+                "de": "Norwegen"
+            }
+        },
+        "phone_PL": {
+            "default_impl": {
+                "en": "Poland",
+                "fr": "Pologne",
+                "nl": "Polen",
+                "pl": "Polska",
+                "de": "Polen"
+            }
+        },
+        "phone_PT": {
+            "default_impl": {
+                "en": "Portugal",
+                "fr": "Portugal",
+                "nl": "Portugal",
+                "pl": "Portugalia",
+                "de": "Portugal"
+            }
+        },
+        "phone_RO": {
+            "default_impl": {
+                "en": "Romania",
+                "fr": "Roumanie",
+                "nl": "Roemenië",
+                "pl": "Rumunia",
+                "de": "Rumänien"
+            }
+        },
+        "phone_RU": {
+            "default_impl": {
+                "en": "Russia",
+                "fr": "Russie",
+                "nl": "Rusland",
+                "pl": "Rosja",
+                "de": "Russland"
+            }
+        },
+        "phone_SM": {
+            "default_impl": {
+                "en": "San Marino",
+                "fr": "San Marino",
+                "nl": "San Marino",
+                "pl": "San Marino",
+                "de": "San Marino"
+            }
+        },
+        "phone_RS": {
+            "default_impl": {
+                "en": "Serbia",
+                "fr": "Serbie",
+                "nl": "Servië",
+                "pl": "Serbia",
+                "de": "Serbien"
+            }
+        },
+        "phone_SK": {
+            "default_impl": {
+                "en": "Slovakia",
+                "fr": "Slovaquie",
+                "nl": "Slowakije",
+                "pl": "Słowacja",
+                "de": "Slowakei"
+            }
+        },
+        "phone_SI": {
+            "default_impl": {
+                "en": "Slovenia",
+                "fr": "Slovénie",
+                "nl": "Slovenia",
+                "pl": "Słowenia",
+                "de": "Slowenien"
+            }
+        },
+        "phone_ES": {
+            "default_impl": {
+                "en": "Spain",
+                "fr": "Espagne",
+                "nl": "Spanje",
+                "pl": "Hiszpania",
+                "de": "Spanien"
+            }
+        },
+        "phone_SE": {
+            "default_impl": {
+                "en": "Sweden",
+                "fr": "Suède",
+                "nl": "Zweden",
+                "pl": "Szwecja",
+                "de": "Schweden"
+            }
+        },
+        "phone_CH": {
+            "default_impl": {
+                "en": "Switzerland",
+                "fr": "Suisse",
+                "nl": "Zwitserland",
+                "pl": "Szwajca",
+                "de": "Schweiz"
+            }
+        },
+        "phone_UA": {
+            "default_impl": {
+                "en": "Ukraine",
+                "fr": "Ukraine",
+                "nl": "Oekraïne",
+                "pl": "Ukraina",
+                "de": "Ukraine"
+            }
+        },
+        "phone_GB": {
+            "default_impl": {
+                "en": "United Kingdom",
+                "fr": "Royaume",
+                "nl": "Brittannië",
+                "pl": "Zjednoczone Królestwo",
+                "de": "Großbritannien"
+            }
+        }
+    },
+    "settings": {
+        "data_object": {
+            "Company_Short_Name__c": {
+                "Poland": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "20",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "22",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "^[0-9a-zA-Z ÄäÖöÜü]+$",
+                    "maxlength": "22",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "22",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "France": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "22",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "22",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyShortName",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyShortName",
+                    "required": true
+                }
+            },
+            "Selected_Company_Name__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                }
+            },
+            "Name": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                }
+            },
+            "Selected_Company_Id__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "selectedCompanyId",
+                    "required": true
+                }
+            },
+            "Tax_ID__c": {
+                "Poland": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "10",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "10",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "^([0-9]{8}[-]{1}[0-9]{1}[-]{1}[0-9]{2})+$",
+                    "maxlength": "13",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "8",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "8",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "8",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "France": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "9",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "^([0]{0,1}[0-9]{9})+$",
+                    "maxlength": "10",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "^([0]{0,1}[0-9]{9})+$",
+                    "maxlength": "10",
+                    "mapto": "taxId",
+                    "required": false
+                }
+            },
+            "Vat_ID__c": {
+                "Switzerland-DE": {
+                    "regex": "^([Cc]{1}[Hh]{1}[Ee]{1}[0-9]{9})+$",
+                    "maxlength": "12",
+                    "mapto": "vatId",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "^([Cc]{1}[Hh]{1}[Ee]{1}[0-9]{9})+$",
+                    "maxlength": "12",
+                    "mapto": "vatId",
+                    "required": false
+                }
+            },
+            "Agreement_To_Phone_Contact__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                }
+            },
+            "Agreement_To_Receive_Info_By_Email__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToReceiveInfoByEmail",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToReceiveInfoByEmail",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToReceiveInfoByEmail",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToReceiveInfoByEmail",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToReceiveInfoByEmail",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToReceiveInfoByEmail",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToReceiveInfoByEmail",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreementToPhoneContact",
+                    "required": true
+                }
+            },
+            "Agree_to_process_pers_data_for_marketing__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "agreeToProcessPersDataForMarketing",
+                    "required": false
+                }
+            },
+            "Terms_And_Conditions_Agreement__c": {
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                }
+            },
+            "Current_Language__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                }
+            },
+            "Trade_Register_Number__c": {
+                "Germany" : {
+                    "regex": "^([Hh]{1}[Rr]{1}[AaBb]{1}[ ]{1}[0-9]{1,6}[ ]{0,1}[a-zA-Z]{0,5})+$",
+                    "maxlength": "50",
+                    "mapto": "tradeRegisterNumber",
+                    "required": false
+                },
+                "Luxembourg" : {
+                    "regex": "^.{0,}\\d{1,1}.{0,}\\d{1,1}.{0,}\\d{1,1}.{0,}$",
+                    "maxlength": "50",
+                    "mapto": "tradeRegisterNumber",
+                    "required": false
+                }
+            }
+        },
+        "ete_contact": {
+            "Name": {
+                "Poland": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "France": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "120",
+                    "mapto": "name",
+                    "required": true
+                }
+            },
+            "Salutation__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "3",
+                    "mapto": "salutation",
+                    "required": true
+                }
+            },
+            "First_Name__c": {
+                "Poland": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "France": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "30",
+                    "mapto": "firstName",
+                    "required": true
+                }
+            },
+            "Last_Name__c": {
+                "Poland": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "France": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "80",
+                    "mapto": "lastName",
+                    "required": true
+                }
+            },
+            "Phone__c": {
+                "Poland": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "France": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "^[0-9+() -]+$",
+                    "mapto": "phone",
+                    "maxlength": "25",
+                    "required": true
+                }
+            },
+            "Email__c": {
+                "Poland": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "France": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,5})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,5})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "^\\w+([.-]\\w+)*@\\w+([.-]\\w+)*(\\.\\w{2,4})+$",
+                    "maxlength": "80",
+                    "mapto": "email",
+                    "required": true
+                }
+            },
+            "isPrimary__c": {
+                "Poland": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "France": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "isPrimary",
+                    "required": false
+                }
+            },
+            "Role__c": {
+                "Poland": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "France": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                }
+            },
+            "Birthdate__c": {
+                "Slovakia" : {
+                    "regex": "^\\d{2}.\\d{2}.\\d{4}",
+                    "maxlength": "10",
+                    "mapto": "birthdate",
+                    "required": false
+                },
+                "Slovakia CCS" : {
+                    "regex": "^\\d{2}.\\d{2}.\\d{4}",
+                    "maxlength": "10",
+                    "mapto": "birthdate",
+                    "required": false
+                },
+                "Czech Republic" : {
+                    "regex": "^\\d{2}.\\d{2}.\\d{4}",
+                    "maxlength": "10",
+                    "mapto": "birthdate",
+                    "required": false
+                }
+            },
+            "Index__c": {
+                "Poland": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "France": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "^[0-10]+$",
+                    "maxlength": "2",
+                    "mapto": "index",
+                    "required": true
+                }
+            }
+        },
+        "offer_item": {
+            "Company_Name__c": {
+                "Poland": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "^[0-9a-zA-Z ÄäÖöÜü]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "France": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": true
+                }
+            }
+        }
+    }
+}

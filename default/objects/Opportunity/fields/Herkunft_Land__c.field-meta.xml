@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Herkunft_Land__c</fullName>
+    <externalId>false</externalId>
+    <label>Herkunft Land</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DE</fullName>
+                <default>false</default>
+                <label>DE</label>
+            </value>
+            <value>
+                <fullName>AT</fullName>
+                <default>false</default>
+                <label>AT</label>
+            </value>
+            <value>
+                <fullName>FR</fullName>
+                <default>false</default>
+                <label>FR</label>
+            </value>
+            <value>
+                <fullName>NE</fullName>
+                <default>false</default>
+                <label>NE</label>
+            </value>
+            <value>
+                <fullName>BE (Dutch)</fullName>
+                <default>false</default>
+                <label>BE (Dutch)</label>
+            </value>
+            <value>
+                <fullName>BE (French)</fullName>
+                <default>false</default>
+                <label>BE (French)</label>
+            </value>
+            <value>
+                <fullName>HU</fullName>
+                <default>false</default>
+                <label>HU</label>
+            </value>
+            <value>
+                <fullName>PL</fullName>
+                <default>false</default>
+                <label>PL</label>
+            </value>
+            <value>
+                <fullName>CH</fullName>
+                <default>false</default>
+                <label>CH</label>
+            </value>
+            <value>
+                <fullName>LU</fullName>
+                <default>false</default>
+                <label>LU</label>
+            </value>
+            <value>
+                <fullName>CZ</fullName>
+                <default>false</default>
+                <label>CZ</label>
+            </value>
+            <value>
+                <fullName>SK</fullName>
+                <default>false</default>
+                <label>SK</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,68 @@
+<aura:component controller="GFNI_DashboardCtrl" extends="c:BaseComponent">
+    <aura:attribute name="contactTableHead" type="List"/>
+    <aura:attribute name="contactDetails" type="List"/>
+    <aura:attribute name="loaded" type="Boolean" default="false" />
+    <aura:attribute name="gfnParams" type="String" />
+    <aura:attribute name="contactRedirectLink" type="String"/>
+    <aura:attribute name="errorMessage" type="String" default="No Data"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.gfnParams}" action="{!c.getContactData}"/>
+
+    <lightning:card iconName="standard:contact" class="slds-card_boundary slds-m-around_large slds-scrollable slds-table_col-bordered">
+        <aura:set attribute="title">
+            <a href="{!v.contactRedirectLink}" target="_blank"> Contacts (GFN)</a>
+        </aura:set>
+        <aura:if isTrue="{!v.loaded}">
+            <aura:if isTrue="{!empty(v.contactDetails)}">
+                <span class="slds-text-title_caps slds-align_absolute-center">{!v.errorMessage}</span>
+                <aura:set attribute="else">
+                    <div class="slds-card__body_inner">
+                        <table class="slds-table slds-no-row-hover slds-card_boundary slds-table_bordered">
+                            <thead>
+                                <tr class="slds-text-title_caps">
+                                    <aura:iteration items="{!v.tableHead}" var="columnName">
+                                        <th>
+                                            <div class="slds-truncate">{!columnName}</div>
+                                        </th>
+                                    </aura:iteration>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.contactDetails}" var="contact">
+                                    <tr class="slds-hint-parent">
+                                        <td>
+                                            <div class="slds-text-title slds-text-color_default">{!contact.ContactTitle}</div>
+                                        </td>
+                                        <td><span>{!contact.ForeName + ' ' + contact.MiddleName + ' ' + contact.LastName}</span></td>
+                                        <td>
+                                            <div class="slds-text-title slds-text-color_default">{!contact.Telephone}</div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-text-title slds-text-color_default">{!contact.MobilePhone}</div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-text-title slds-text-color_default">{!contact.EmailAddress}</div>
+                                        </td>
+                                        <td>
+                                            <div class="label-container">
+                                                <aura:iteration items="{!contact.ContactTypes}" var="type">
+                                                    <div class="slds-m-around_xx-small">
+                                                        <lightning:badge label="{!type.ContactType}"/>
+                                                    </div>
+                                                </aura:iteration>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </div>
+                </aura:set>        
+            </aura:if>
+            <aura:set attribute="else">
+                <lightning:spinner alternativeText="Loading" size="small" />
+            </aura:set>
+        </aura:if>
+    </lightning:card>
+</aura:component>

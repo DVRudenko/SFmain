@@ -1,0 +1,10 @@
+.section__title {
+    background: #061c3f;
+    padding: 0.5rem;
+}
+.section__td {
+    width: 25%;
+}
+.section__col:empty:after {
+    content: '\00A0';
+}

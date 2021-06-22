@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Selezionare questa opzione per mostrare il Chatter durante il flusso di lavoro della firma DocuSign.</help>
+    <label><!-- Enable Chatter Status Updates --></label>
+    <name>dsfs__ChatterUpdatesEnabled__c</name>
+</CustomFieldTranslation>

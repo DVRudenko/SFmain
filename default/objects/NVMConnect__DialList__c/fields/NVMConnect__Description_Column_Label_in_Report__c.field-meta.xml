@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMConnect__Description_Column_Label_in_Report__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Label in the report of the column holding the Description to be used in the Dial List of the entity to dial</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Label in the report of the column holding the Description to be used in the Dial List of the entity to dial</inlineHelpText>
+    <label>Description Column Label in Report</label>
+    <length>40</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

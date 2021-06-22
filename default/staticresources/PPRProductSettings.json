@@ -1,0 +1,269 @@
+{
+	"mapping": {
+
+		"Избранный+ 2020 с карты" : {
+			"tariff": "CHOOSEN_PLUS_CARDS",
+			"product": "PetrolPlus_Rover"
+		},
+		"Избранный+ 2020 с договора" : {
+			"tariff": "CHOOSEN_PLUS_CONTRACT",
+			"product": "PetrolPlus_Rover"
+		},
+		"Супер 2020 с карты" : {
+			"tariff": "SUPER_CARDS",
+			"product": "PetrolPlus_Rover"
+		},
+		"Супер 2020 с договора" : {
+			"tariff": "SUPER_CONTRACT",
+			"product": "PetrolPlus_Rover"
+		},
+		"Лайт 2020 с карты" : {
+			"tariff": "LIGHT_CARDS",
+			"product": "PetrolPlus_Rover"
+		},
+		"Лайт 2020 с договора" : {
+			"tariff": "LIGHT_CONTRACT",
+			"product": "PetrolPlus_Rover"
+		},
+		"ГАЗПРОМ 2020 с карты" : {
+			"tariff": "GAZ_CARDS",
+			"product": "PetrolPlus_Gaz"
+		},
+		"ГАЗПРОМ 2020 с договора" : {
+			"tariff": "GAZ_CONTRACT",
+			"product": "PetrolPlus_Gaz"
+		},
+		"Избранный - Газпромнефть 2020 с карты" : {
+			"tariff": "GAZ_CHOOSEN_CARDS",
+			"product": "PetrolPlus_Rover"
+		},
+		"Избранный - Газпромнефть 2020 с договора" : {
+			"tariff": "GAZ_CHOOSEN_CONTRACT",
+			"product": "PetrolPlus_Rover"
+		},
+		"Вездеход Online \"Оптимальный\" Карты" : {
+			"tariff": "1OPTIMAL_CARDS",
+			"product": "PetrolPlus_Rover"
+		},
+		"Вездеход Online \"Оптимальный\" Договор" : {
+			"tariff": "1OPTIMAL_CONTRACT",
+			"product": "PetrolPlus_Rover"
+		},
+		"Вездеход Online \"Избранный\" Карты" : {
+			"tariff": "2CHOOSEN_CARDS",
+			"product": "PetrolPlus_Rover"
+		},
+		"Вездеход Online \"Избранный\" Договор" : {
+			"tariff": "2CHOOSEN_CONTRACT",
+			"product": "PetrolPlus_Rover"
+		},
+		"Вездеход Online \"Супер\" Карты" : {
+			"tariff": "3SUPER_CARDS",
+			"product": "PetrolPlus_Rover"
+		},
+		"Вездеход Online \"Супер\" Договор" : {
+			"tariff": "3SUPER_CONTRACT",
+			"product": "PetrolPlus_Rover"
+		},
+		"Вездеход Online \"Лайт\" Карты" : {
+			"tariff": "4LIGHT_CARDS",
+			"product": "PetrolPlus_Rover"
+		},
+		"Вездеход Online \"Лайт\" Договор" : {
+			"tariff": "4LIGHT_CONTRACT",
+			"product": "PetrolPlus_Rover"
+		},
+		"ГАЗПРОМ – сеть АЗС Карты" : {
+			"tariff": "1CARDS_CARDS",
+			"product": "PetrolPlus_Gaz"
+		},
+		"ГАЗПРОМ – сеть АЗС Договор" : {
+			"tariff": "2CONTRACT_CARDS",
+			"product": "PetrolPlus_Gaz"
+		},
+		"Шелл Сайт_АИ" : {
+			"tariff": "SHELL_PETROL",
+			"product": "PetrolPlus_Rover"
+		},
+		"Шелл Сайт_ДТ" : {
+			"tariff": "SHELL_DF",
+			"product": "PetrolPlus_Rover"
+		},
+		"Оптимальный+ 2020": {
+			"tariff": "OPTIMAL+_2020",
+			"product": "PetrolPlus_Rover"
+		},
+		"Газпром+ 2020 с карты" : {
+			"tariff": "GAZ_CARDS_PLUS",
+			"product": "PetrolPlus_Gaz"
+		},
+		"Газпром+ 2020 с договора" : {
+			"tariff": "GAZ_CONTRACT_PLUS",
+			"product": "PetrolPlus_Gaz"
+		},
+		"Диджитал с договора" : {
+			"tariff": "DIGITAL_CONTRACT",
+			"product": "PetrolPlus_Rover"
+		}
+	},
+	"settings": {
+		"Partner_Rover": {
+			"mzkId": 77,
+			"reportId": 1
+		},
+		"Shell": {
+			"reportId": 3,
+			"TARIFF_SHELL": {
+				"reportId": 7
+			},
+			"SHELL_PETROL": {
+				"transitId": 76,
+				"reportId": 18
+			},
+			"SHELL_DF": {
+				"transitId": 77,
+				"reportId": 19
+			}
+		},
+		"PetrolPlus_Rover": {
+			"mzkId": 77,
+			"reportId": 1,
+			"OPTIMAL_CARDS": {
+				"transitId": 61,
+				"reportId": 2
+			},
+			"OPTIMAL_CONTRACT": {
+				"transitId": 62,
+				"reportId": 1
+			},
+			"CHOOSEN_CARDS": {
+				"transitId": 65,
+				"reportId": 17
+			},
+			"CHOOSEN_CONTRACT": {
+				"transitId": 66,
+				"reportId": 16
+			},
+            "CHOOSEN_PLUS_CARDS": {
+				"transitId": 78,
+				"reportId": 22
+			},
+			"CHOOSEN_PLUS_CONTRACT": {
+				"transitId": 79,
+				"reportId": 23
+			},
+			"SUPER_CARDS": {
+				"transitId": 63,
+				"reportId": 11
+			},
+			"SUPER_CONTRACT": {
+				"transitId": 64,
+				"reportId": 10
+			},
+			"LIGHT_CARDS": {
+				"transitId": 69,
+				"reportId": 13
+			},
+			"GAZ_CHOOSEN_CARDS": {
+				"transitId": 71,
+				"reportId": 15
+			},
+			"GAZ_CHOOSEN_CONTRACT": {
+				"transitId": 72,
+				"reportId": 14
+			},
+			"LIGHT_CONTRACT": {
+				"transitId": 70,
+				"reportId": 12
+			},
+			"1OPTIMAL_CARDS": {
+				"transitId": 61,
+				"reportId": 2
+			},
+			"1OPTIMAL_CONTRACT": {
+				"transitId": 62,
+				"reportId": 1
+			},
+			"2CHOOSEN_CARDS": {
+				"transitId": 65,
+				"reportId": 17
+			},
+			"2CHOOSEN_CONTRACT": {
+				"transitId": 66,
+				"reportId": 16
+			},
+			"3SUPER_CARDS": {
+				"transitId": 63,
+				"reportId": 11
+			},
+			"3SUPER_CONTRACT": {
+				"transitId": 64,
+				"reportId": 10
+			},
+			"4LIGHT_CARDS": {
+				"transitId": 69,
+				"reportId": 13
+			},
+			"4LIGHT_CONTRACT": {
+				"transitId": 70,
+				"reportId": 12
+			}, 
+			"SHELL_PETROL": {
+				"transitId": 76,
+				"reportId": 18
+			},
+			"SHELL_DF": {
+				"transitId": 77,
+				"reportId": 19
+			},
+			"OPTIMAL+_2020": {
+				"transitId": 82,
+				"reportId": 24
+			},
+			"ONLINE_CARDS": {
+				"transitId": 73,
+				"reportId": 25
+			},
+			"ONLINE_CONTRACT": {
+				"transitId": 73,
+				"reportId": 25
+			},
+			"DIGITAL_CONTRACT": {
+				"transitId": 88,
+				"reportId": 26
+			},
+			"DIGITAL_CARDS": {
+				"transitId": 88,
+				"reportId": 26
+			}
+		},
+		"PetrolPlus_Gaz": {
+			"mzkId": 73,
+			"reportId": 2,
+			"GAZ_CARDS": {
+				"transitId": 67,
+				"reportId": 6
+			},
+			"GAZ_CONTRACT": {
+				"transitId": 68,
+				"reportId": 5
+			},
+			"1CARDS_CARDS": {
+				"transitId": 57,
+				"reportId": 6
+			},
+			"2CONTRACT_CARDS": {
+				"transitId": 58,
+				"reportId": 5
+			},
+			"GAZ_CONTRACT_PLUS": {
+				"transitId": 81,
+				"reportId": 21
+			},
+			"GAZ_CARDS_PLUS": {
+				"transitId": 80,
+				"reportId": 20
+			}
+		}
+	}
+}

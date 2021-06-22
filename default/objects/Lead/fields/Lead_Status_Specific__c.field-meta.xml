@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Status_Specific__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the reason that best describes lead disqualification</inlineHelpText>
+    <label>Lead Status (Specific)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bank not in Kabbage system</fullName>
+                <default>false</default>
+                <label>Bank not in Kabbage system</label>
+            </value>
+            <value>
+                <fullName>Closed Account</fullName>
+                <default>false</default>
+                <label>Closed Account</label>
+            </value>
+            <value>
+                <fullName>Consumer Card</fullName>
+                <default>false</default>
+                <label>Consumer Card</label>
+            </value>
+            <value>
+                <fullName>Decisions Made Different Location</fullName>
+                <default>false</default>
+                <label>Decisions Made Different Location</label>
+            </value>
+            <value>
+                <fullName>Delinquent</fullName>
+                <default>false</default>
+                <label>Delinquent</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Economic Concerns</fullName>
+                <default>false</default>
+                <label>Economic Concerns</label>
+            </value>
+            <value>
+                <fullName>Employees not Mobile</fullName>
+                <default>false</default>
+                <label>Employees not Mobile</label>
+            </value>
+            <value>
+                <fullName>Existing Customer - Fuelman</fullName>
+                <default>false</default>
+                <label>Existing Customer - Fuelman</label>
+            </value>
+            <value>
+                <fullName>Existing Customer - Speedway</fullName>
+                <default>false</default>
+                <label>Existing Customer - Speedway</label>
+            </value>
+            <value>
+                <fullName>Features of Card</fullName>
+                <default>false</default>
+                <label>Features of Card</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Fuel Distributor</fullName>
+                <default>false</default>
+                <label>Fuel Distributor</label>
+            </value>
+            <value>
+                <fullName>Low Priority Now</fullName>
+                <default>false</default>
+                <label>Low Priority Now</label>
+            </value>
+            <value>
+                <fullName>Mobile Workers don't have Phones</fullName>
+                <default>false</default>
+                <label>Mobile Workers don't have Phones</label>
+            </value>
+            <value>
+                <fullName>No Sufficient Fuelman Business</fullName>
+                <default>false</default>
+                <label>No Sufficient Fuelman Business</label>
+            </value>
+            <value>
+                <fullName>Not a Current Customer</fullName>
+                <default>false</default>
+                <label>Not a Current Customer</label>
+            </value>
+            <value>
+                <fullName>Not enough business revenue (less than $50k)</fullName>
+                <default>false</default>
+                <label>Not enough business revenue (less than $50k)</label>
+            </value>
+            <value>
+                <fullName>Not in business for more than 1 year</fullName>
+                <default>false</default>
+                <label>Not in business for more than 1 year</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Privacy Concerns</fullName>
+                <default>false</default>
+                <label>Privacy Concerns</label>
+            </value>
+            <value>
+                <fullName>Remove from List/Do Not Contact</fullName>
+                <default>false</default>
+                <label>Remove from List/Do Not Contact</label>
+            </value>
+            <value>
+                <fullName>Satisfied with Competitor Program</fullName>
+                <default>false</default>
+                <label>Satisfied with Competitor Program</label>
+            </value>
+            <value>
+                <fullName>Terms</fullName>
+                <default>false</default>
+                <label>Terms</label>
+            </value>
+            <value>
+                <fullName>Too Few Vehicles</fullName>
+                <default>false</default>
+                <label>Too Few Vehicles</label>
+            </value>
+            <value>
+                <fullName>Too Little Fuel Consumption</fullName>
+                <default>false</default>
+                <label>Too Little Fuel Consumption</label>
+            </value>
+            <value>
+                <fullName>Under Long-Term Contract</fullName>
+                <default>false</default>
+                <label>Under Long-Term Contract</label>
+            </value>
+            <value>
+                <fullName>Using Non-Partner Solution</fullName>
+                <default>false</default>
+                <label>Using Non-Partner Solution</label>
+            </value>
+            <value>
+                <fullName>Using Partner Solution</fullName>
+                <default>false</default>
+                <label>Using Partner Solution</label>
+            </value>
+            <value>
+                <fullName>Wet Hosing</fullName>
+                <default>false</default>
+                <label>Wet Hosing</label>
+            </value>
+            <value>
+                <fullName>No Interest: Only Purchase Fuel</fullName>
+                <default>false</default>
+                <label>No Interest: Only Purchase Fuel</label>
+            </value>
+            <value>
+                <fullName>No Interest: Want More Rewards/Points</fullName>
+                <default>false</default>
+                <label>No Interest: Want More Rewards/Points</label>
+            </value>
+            <value>
+                <fullName>No Interest: Prefer Current Payment Method</fullName>
+                <default>false</default>
+                <label>No Interest: Prefer Current Payment Method</label>
+            </value>
+            <value>
+                <fullName>No Interest: Product Lacks Needed Feature</fullName>
+                <default>false</default>
+                <label>No Interest: Product Lacks Needed Feature</label>
+            </value>
+            <value>
+                <fullName>No Interest: Poor Prior Experience</fullName>
+                <default>false</default>
+                <label>No Interest: Poor Prior Experience</label>
+            </value>
+            <value>
+                <fullName>No Interest: Credit Line Offer is Not Competitive</fullName>
+                <default>false</default>
+                <label>No Interest: Credit Line Offer is Not Competitive</label>
+            </value>
+            <value>
+                <fullName>Unreachable: &gt;5 Attempts</fullName>
+                <default>false</default>
+                <label>Unreachable: &gt;5 Attempts</label>
+            </value>
+            <value>
+                <fullName>AGGREGATOR – an existing customer and partner</fullName>
+                <default>false</default>
+                <label>АГРЕГАТОР – существующий клиент партнера</label>
+            </value>
+            <value>
+                <fullName>Chybné/odpojené telefonní číslo</fullName>
+                <default>false</default>
+                <label>Chybné/odpojené telefonní číslo</label>
+            </value>
+            <value>
+                <fullName>Duplicate (Site)</fullName>
+                <default>false</default>
+                <label>Duplicate (Site)</label>
+            </value>
+            <value>
+                <fullName>Rewards Programs/Rebates/Discounts</fullName>
+                <default>false</default>
+                <label>Rewards Programs/Rebates/Discounts</label>
+            </value>
+            <value>
+                <fullName>No suitable gas stations</fullName>
+                <default>false</default>
+                <label>No suitable gas stations</label>
+            </value>
+            <value>
+                <fullName>Gov't/Non-Profit/Tax Exempt</fullName>
+                <default>false</default>
+                <label>Gov't/Non-Profit/Tax Exempt</label>
+            </value>
+            <value>
+                <fullName>Onsite Tank(s)</fullName>
+                <default>false</default>
+                <label>Onsite Tank(s)</label>
+            </value>
+            <value>
+                <fullName>Denial of credit</fullName>
+                <default>false</default>
+                <label>Denial of credit</label>
+            </value>
+            <value>
+                <fullName>Bad Prior Experience</fullName>
+                <default>false</default>
+                <label>Bad Prior Experience</label>
+            </value>
+            <value>
+                <fullName>Unable to Reach</fullName>
+                <default>false</default>
+                <label>Unable to Reach</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>No Company Vehicles</fullName>
+                <default>false</default>
+                <label>No Company Vehicles</label>
+            </value>
+            <value>
+                <fullName>Not a Valid Business</fullName>
+                <default>false</default>
+                <label>Not a Valid Business</label>
+            </value>
+            <value>
+                <fullName>Out of Business</fullName>
+                <default>false</default>
+                <label>Out of Business</label>
+            </value>
+            <value>
+                <fullName>Existing Customer</fullName>
+                <default>false</default>
+                <label>Existing Customer</label>
+            </value>
+            <value>
+                <fullName>Return to funnel</fullName>
+                <default>false</default>
+                <label>Return to funnel</label>
+            </value>
+            <value>
+                <fullName>Refusal from PPR</fullName>
+                <default>false</default>
+                <label>Refusal from PPR</label>
+            </value>
+            <value>
+                <fullName>Bad Data/Wrong Phone Number</fullName>
+                <default>false</default>
+                <label>Bad Data/Wrong Phone Number</label>
+            </value>
+            <value>
+                <fullName>Re-request</fullName>
+                <default>false</default>
+                <label>Re-request</label>
+            </value>
+            <value>
+                <fullName>STK - terminal</fullName>
+                <default>false</default>
+                <label>STK - terminal</label>
+            </value>
+            <value>
+                <fullName>Email SPAM</fullName>
+                <default>false</default>
+                <label>Email SPAM</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Bank not in Kabbage system</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Closed Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Consumer Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Decisions Made Different Location</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Delinquent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Duplicate</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Economic Concerns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Employees not Mobile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Existing Customer - Fuelman</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Existing Customer - Speedway</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Features of Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Fraud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Fuel Distributor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Low Priority Now</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Mobile Workers don't have Phones</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>No Sufficient Fuelman Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Not a Current Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Not enough business revenue (less than $50k)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Not in business for more than 1 year</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Pricing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Privacy Concerns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Remove from List/Do Not Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Satisfied with Competitor Program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Terms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Too Few Vehicles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Too Little Fuel Consumption</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Under Long-Term Contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Using Non-Partner Solution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Using Partner Solution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Wet Hosing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>No Interest: Only Purchase Fuel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>No Interest: Want More Rewards/Points</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>No Interest: Prefer Current Payment Method</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>No Interest: Product Lacks Needed Feature</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>No Interest: Poor Prior Experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>No Interest: Credit Line Offer is Not Competitive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Unreachable: &gt;5 Attempts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>AGGREGATOR – an existing customer and partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Chybné/odpojené telefonní číslo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Duplicate (Site)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Rewards Programs/Rebates/Discounts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>No suitable gas stations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Gov't/Non-Profit/Tax Exempt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Onsite Tank(s)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Denial of credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Bad Prior Experience</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Unable to Reach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Not Interested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>No Company Vehicles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Not a Valid Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Out of Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Existing Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Return to funnel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Refusal from PPR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Bad Data/Wrong Phone Number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Re-request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>STK - terminal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Email SPAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

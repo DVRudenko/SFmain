@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Time spent in PCI Payments in seconds --></help>
+    <label><!-- PCI Time --></label>
+    <name>NVMStatsSF__PCI_Time__c</name>
+</CustomFieldTranslation>

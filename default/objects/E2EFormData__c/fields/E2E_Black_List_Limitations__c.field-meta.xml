@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Black_List_Limitations__c</fullName>
+    <description>Максимальный срок отсрочки платежа, если ответ на проверку «ограничение по отсрочке»</description>
+    <externalId>false</externalId>
+    <label>Scoring limitations</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

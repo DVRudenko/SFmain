@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Retailer is aware of the bonus scheme for submitting new leads --></help>
+    <label><!-- Aware of retailer bonus program --></label>
+    <name>Aware_of_retailer_bonus_program__c</name>
+</CustomFieldTranslation>

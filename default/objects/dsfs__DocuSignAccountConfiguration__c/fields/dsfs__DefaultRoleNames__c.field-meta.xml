@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__DefaultRoleNames__c</fullName>
+    <defaultValue>"Signer 1" &amp; BR() &amp;
+"Signer 2" &amp; BR() &amp;
+"Signer 3" &amp; BR() &amp;
+"Signer 4"</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Recipient role names that correspond with the recipient role values when sending with DocuSign.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Recipient role names that correspond with the recipient role values when sending with DocuSign.</inlineHelpText>
+    <label>DefaultRoleNames</label>
+    <length>500</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

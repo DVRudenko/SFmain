@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bi_weekly_14_old__c</fullName>
+    <externalId>false</externalId>
+    <formula>ROUND( IF( Security_level_H_he_der_Sicherheit__c &gt; 1,
+((Auftragsvolumen__c * ( ( 15+21 )/30)*(1+ Buffer_2__c )+ Credit_Limit_Anpassung__c )* VALUE( TEXT(Security_level_H_he_der_Sicherheit__c))),
+((Auftragsvolumen__c * ( ( 15+14 )/30)*(1+ Buffer_2__c )+ Credit_Limit_Anpassung__c )* VALUE( TEXT(Security_level_H_he_der_Sicherheit__c)))), -1)</formula>
+    <label>Bi-weekly + 14_old</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

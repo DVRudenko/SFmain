@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- BRC_Brand --></label>
+    <name>BRC_Brand__c</name>
+    <picklistValues>
+        <masterLabel>DEA</masterLabel>
+        <translation><!-- DEA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non Branded</masterLabel>
+        <translation><!-- Non Branded --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell</masterLabel>
+        <translation><!-- Shell --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVM_CLID__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND( NVM_Country__c = "Hungary", RecordType.Name ="Contact layout"),1,
+            IF(AND( NVM_Country__c = "Belgium-NL", RecordType.Name ="Contact layout"),3,
+            IF(AND( NVM_Country__c = "Belgium-FR", RecordType.Name ="Contact layout"),3,
+            IF(AND( NVM_Country__c = "France", RecordType.Name ="Contact layout"),5,
+            IF(AND( NVM_Country__c = "Netherlands", RecordType.Name ="Contact layout"),6,
+            IF(AND( NVM_Country__c = "Poland", RecordType.Name ="Contact layout"),8,
+            IF(AND( NVM_Country__c = "Switzerland-DE", RecordType.Name ="Contact layout"),10,
+            IF(AND( NVM_Country__c = "Switzerland-FR", RecordType.Name ="Contact layout"),10,
+            IF(AND( NVM_Country__c = "Switzerland-IT", RecordType.Name ="Contact layout"),10,
+            IF(AND( NVM_Country__c = "Luxembourg", RecordType.Name ="Contact layout"),12,
+            IF(AND( NVM_Country__c = "Czech Republic", RecordType.Name ="Contact layout"),13,
+            IF(AND( NVM_Country__c = "Czech Republic", RecordType.Name ="CCS Contact layout"),15,
+            IF(AND( NVM_Country__c = "Slovakia", RecordType.Name ="Contact layout"),16,
+            IF(AND( NVM_Country__c = "Slovakia", RecordType.Name ="CCS Contact layout"),18,
+            IF(AND( NVM_Country__c = "Austria", RecordType.Name ="Contact layout"),19,
+            IF(AND( NVM_Country__c = "Germany", RecordType.Name ="Contact layout"),21,
+            IF(AND( NVM_Country__c = "Poland", RecordType.Name ="AllStar"),25
+            ,0)))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NVM CLID</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

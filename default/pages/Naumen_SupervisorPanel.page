@@ -1,0 +1,255 @@
+<apex:page id="SupervisorPanel" controller="Naumen_SupervisorPanelCtrl" showHeader="false" sideBar="false"  standardStylesheets="false" docType="html-5.0">
+    
+    <apex:slds />
+    
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    
+    <apex:includeScript value="{!URLFOR($Resource.Bootstrap_select_v181, 'Bootstrap_select_js_v181.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Bootstrap_select_v181, 'Bootstrap_select_css_v181.css')}"/>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+
+    <apex:includeScript value="{!URLFOR($Resource.moment_with_locales)}"/>
+    <apex:includeScript value="{!URLFOR($Resource.AngularJS_v1_2_23)}"/>
+    
+    <apex:includeScript value="{!URLFOR($Resource.NaumenSources, 'NaumenSupervisorPanelJS.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.NaumenSources, 'NaumenSupervisorPanelCSS.css')}"/>
+
+    <script type="text/javascript">
+    setLabels();
+        /* INIT NAUMEN SUPERVISOR PANEL */
+        var $label_title_ErrorOccurred = "{!$Label.title_ErrorOccurred}";
+        var $label_Naumen_notifMsg_NoRecordsFound = "{!$Label.Naumen_notifMsg_NoRecordsFound}";
+        var $label_label_uploadTo = "{!$Label.label_uploadTo}";
+		var $label_NaumenProjects__labelPlural = "{!$ObjectType.Naumen_Projects__c.labelPlural}";
+        var $label_NaumenSupervisor_notif_fillInData_header = "{!$Label.NaumenSupervisor_notif_fillInData_header}";
+        var $label_NaumenSupervisor_notif_fillInData_descr = "{!$Label.NaumenSupervisor_notif_fillInData_descr}";
+        var $label_NaumenSupervisor_notif_uploadExcelSuccess_header = "{!$Label.NaumenSupervisor_notif_uploadExcelSuccess_header}";
+        var $label_NaumenSupervisor_notif_uploadExcelSuccess_descr = "{!$Label.NaumenSupervisor_notif_uploadExcelSuccess_descr}";
+        var $label_NaumenSupervisor_notif_SearchRecordsResult_header = "{!$Label.NaumenSupervisor_notif_SearchRecordsResult_header}";
+        var $label_NaumenSupervisor_notif_SearchRecordsResult_descr = "{!$Label.NaumenSupervisor_notif_SearchRecordsResult_descr}";
+
+        function setLabels() {
+            $js('.bs-select-all').text("{!$Label.picklist_SelectAll}");
+            $js('.bs-deselect-all').text("{!$Label.picklist_Clear}");
+        }
+    </script>
+
+<apex:form id="supervisorPanelForm">
+    <div ng-app="NaumenSupervisorApp">
+        <div id="overlay" style="display:none;"/> 
+        <div ng-controller="NaumenSupervisorController" ng-init="init('{!$Profile.Name}')">
+        <!-- picklists values from leads/ opps fields which sf gets in "apex:inputField" automatically for RU recordtype -->
+            <apex:inputField id="ruOppStages" value="{!opp.StageName}" styleClass="ruOppStages picklistvalues"/>
+            <apex:inputField id="ruLeadStatuses" value="{!lead.Status}" styleClass="ruLeadStatuses picklistvalues"/>
+            <apex:inputField id="ruLeadDisqualReasons" value="{!lead.Lead_Status_Specific__c}" styleClass="ruLeadDisqualReasons picklistvalues"/>
+            <apex:inputField id="ruLeadIndustries" value="{!lead.Industry}" styleClass="ruLeadIndustries picklistvalues"/>
+            <apex:inputField id="ruLeadOrgTypes" value="{!lead.Organization_Type__c}" styleClass="ruLeadOrgTypes picklistvalues"/>
+            <apex:inputField id="ruAccOrgTypes" value="{!acc.Organization_Type__c}" styleClass="ruAccOrgTypes picklistvalues"/>
+        <!-- end of recordtype picklists -->
+   
+    <div class="block-container">
+        <div class="row">
+            <div class="h3">{!$Label.NaumenSupervisor_pageTitle}</div>
+        </div>
+    </div>
+    <br/>
+    <div class="block-container">
+         <div class="row">
+            <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3">
+                <div class="form-group" id="sObjTypesWrap">
+                    <label for="sObjTypes" class="filter-label">{!$Label.NaumenSupervisor_sObjectTypes}:</label>
+                    <br/>
+                    <select name="sObjTypes" id="sObjTypes"
+                            ng-model="selectedSObjTypes" ng-change="onSelectSObjType()" multiple="true" 
+                            class="selectpicker colorful-select dropdown-primary" title="{!$Label.selectElem_NotSelected}">
+                        <apex:repeat value="{!sObjTypes}" var="sObjType">
+                            <option value="{!sObjType}">{!sObjTypes[sObjType]}</option>
+                        </apex:repeat>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3 filter-wrap">
+                <div class="form-group" id="excludedNaumenProjectsWrap">
+                    <label for="excludedNaumenProjects" class="filter-label">{!$Label.NaumenSupervisor_exclude} {!$ObjectType.Naumen_Projects__c.labelPlural}:</label>
+                    <br/>
+                    <select name="excludedNaumenProjects" id="excludedNaumenProjects"
+                            ng-model="selectedExcludedNaumenProjects" ng-change="onSelectExcludedNaumenProject()"  multiple="true"  data-actions-box="true" 
+                            class="selectpicker colorful-select dropdown-primary" title="{!$Label.selectElem_NotSelected}">
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3 filter-wrap">
+                <div class="form-group" id="promocodesWrap">
+                    <label for="promocodes" class="filter-label">{!$ObjectType.Lead.fields.Promo_Code1__c.Label}:</label>
+                    <br/>
+                    <select name="promocodes" id="promocodes"
+                            ng-model="selectedPromocodes" multiple="true" data-actions-box="true" data-live-search="true" 
+                            class="selectpicker" title="{!$Label.selectElem_NotSelected}">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3 filter-wrap">
+                <div class="form-group" id="statusesWrap">
+                    <label for="statuses" class="filter-label">{!$ObjectType.Lead.fields.Status.Label}:</label>
+                    <br/>
+                    <!--
+                    <select ng-model="selectedStatuses" ng-change="onSelectStatuses()" name="statuses" id="statuses" multiple="true" class="selectpicker" title="{!$Label.selectElem_NotSelected}" ng-if="userProfile != 'RU_System_Administrator'">
+                    </select>
+                    -->
+                    <select name="statuses" id="statuses"
+                            ng-model="selectedStatuses"  ng-change="onSelectStatuses()" multiple="true" data-actions-box="true"
+                            class="selectpicker" title="{!$Label.selectElem_NotSelected}">
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3 filter-wrap" id="disqualReasonsBlock" style="display:none;">
+                <div class="form-group" id="disqualReasonsWrap">
+                    <label for="disqualReasons" class="filter-label">{!$ObjectType.Lead.fields.Lead_Status_Specific__c.Label}:</label> <!-- show if status = disqualification / refused -->
+                    <br/>
+                    <select name="disqualReasons" id="disqualReasons"
+                            ng-model="selectedDisqualReasons" multiple="true" data-actions-box="true"
+                            class="selectpicker" title="{!$Label.selectElem_NotSelected}">
+                    </select>
+                </div>
+            </div>         
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3 filter-wrap leads">
+                <div class="form-group" id="leadSoursesWrap">
+                    <label for="leadSourses" class="filter-label">{!$ObjectType.Lead.fields.Source_of_Lead__c.Label}:</label>
+                    <br/>
+                    <select name="leadSourses" id="leadSourses"
+                            ng-model="selectedLeadSources" multiple="true" data-actions-box="true"
+                            class="selectpicker" title="{!$Label.selectElem_NotSelected}">
+                    </select>
+                </div>
+            </div>  
+            <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3 filter-wrap">
+                <div class="form-group" id="orgTypesWrap">
+                    <label for="orgTypes" class="filter-label">{!$ObjectType.Lead.fields.Organization_Type__c.Label}:</label> <!-- объединять списки из 2 полей: Lead.Organization_Type__c и Account.Organization_Type__c -->
+                    <br/>
+                    <select name="orgTypes" id="orgTypes"
+                            ng-model="selectedOrgTypes" multiple="true" data-actions-box="true"
+                            class="selectpicker" title="{!$Label.selectElem_NotSelected}">
+                    </select>
+                </div>
+            </div> 
+            <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3 filter-wrap">
+                <div class="form-group" id="regionsWrap">
+                    <label for="regions" class="filter-label">{!$ObjectType.Lead.fields.Region__c.Label}:</label><!-- объединять списки из 2 полей: Lead.Region__c и Account.Region__c -->
+                    <br/>
+                    <select name="regions" id="regions"
+                            ng-model="selectedRegions" multiple="true" data-actions-box="true"
+                            class="selectpicker" title="{!$Label.selectElem_NotSelected}">
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3 filter-wrap">
+                <div class="form-group">
+                    <label for="industries" class="filter-label">{!$ObjectType.Lead.fields.Industry.Label}:</label>
+                    <br/>
+                    <select name="industries" id="industries"
+                            ng-model="selectedIndustries" multiple="true" data-actions-box="true"
+                            class="selectpicker" title="{!$Label.selectElem_NotSelected}"> 
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 filter-wrap">
+                <label for="expectedVolume" class="filter-label">{!$ObjectType.Lead.fields.Expected_Volume_Ru__c.Label}:</label>
+                <div class="form-group">
+                    <input ng-model="expectedVolume_from" id="expectedVolume_from" type="number" class="form-control input-diapason" min="0"></input>
+                    <span>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</span>
+                    <input ng-model="expectedVolume_to" id="expectedVolume_to" type="number" class="form-control input-diapason" min="0"></input>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 filter-wrap">
+                <label for="ratingFSNew_from">{!$ObjectType.Lead.fields.Rating_FS_New__c.Label}:</label>
+                <div class="form-group">
+                    <input ng-model="ratingFSNew_from" id="ratingFSNew_from" type="number" class="form-control input-diapason" min="0"></input>
+                    <span>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</span>
+                    <input ng-model="ratingFSNew_to" id="ratingFSNew_to" type="number" class="form-control input-diapason" min="0"></input>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12 filter-wrap">
+                <label for="ratingFS_from" class="filter-label">{!$ObjectType.Lead.fields.Rating_FS__c.Label}:</label>
+                <div class="form-group">
+                    <input ng-model="ratingFS_from" id="ratingFS_from" type="number" class="form-control input-diapason" min="0"></input>
+                    <span>&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;</span>
+                    <input ng-model="ratingFS_to" id="ratingFS_to" type="number" class="form-control input-diapason" min="0"></input>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 col-lg-3 col-md-3 col-sm-3 filter-wrap">
+                <div class="form-group" id="naumenProjectsWrap">
+                    <label for="naumenProjects" class="filter-label">{!$Label.label_uploadTo} {!$ObjectType.Naumen_Projects__c.labelPlural}:</label>
+                    <br/>
+                    <select name="naumenProjects" id="naumenProjects"
+                            ng-model="selectedProjectUUID" ng-change="onSelectNaumenProject()" multiple="true" data-max-options="1" 
+                            class="selectpicker colorful-select dropdown-primary" title="{!$Label.selectElem_NotSelected}">
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block-container">
+        <div class="row">
+            <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 filter-wrap">
+                <button type="button" ng-click="getPreviewData();" class="slds-button slds-button_outline-brand width-100"><span class="h6">{!$Label.NaumenSupervisor_checkNumberOfRecords}</span></button>
+            </div>
+        </div>
+    </div>
+    <br/><br/><br/>
+    <div class="block-container">
+        <div class="row">
+            <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 filter-wrap">
+                <button type="button" ng-click="uploadToExcel();" class="slds-button slds-button_brand width-100"><span class="h6">{!$Label.NaumenSupervisor_uploadToExcel}</span></button>
+            </div>
+            <div class="col-xs-2 col-lg-2 col-md-2 col-sm-2 filter-wrap">
+                <button type="button" ng-click="getNumberOfRecordsAndUploadToNaumen();" class="slds-button slds-button_brand width-100"><span class="h6">{!$Label.NaumenSupervisor_uploadToNaumen}</span></button>
+            </div>
+            <div class="col-xs-4 col-lg-4 col-md-4 col-sm-4 filter-wrap" id="checkRecordAccessWrap" ng-show="userProfile == 'RU_System_Administrator'">
+                <label for="checkRecordAccess" id="checkRecordAccessLabel">{!$Label.NaumenSupervisor_checkRecordAccess}</label>
+                &nbsp;
+                <input type="checkbox" ng-model="checkRecordAccess" name="checkRecordAccess" id="checkRecordAccess" class="form-check-input"></input>
+            </div>
+        </div>
+    </div>
+    <br/> 
+   
+    <div class="block-container">
+        <div id="previewDataWrap">
+        </div>
+    </div>
+    <div id="notification" class="modal_popup" ng-show="notification != null">
+        <section class="slds-modal slds-fade-in-open slds-modal_large">
+          <div class="slds-modal__container">
+            <header class="slds-modal__header">
+              <label class="slds-modal__title slds-hyphenate">
+                <span>{{notification.headerText}}</span>
+              </label>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="notificationDescription">
+            </div>
+            <footer class="slds-modal__footer">
+              <button type="button" ng-click="closeModal()" class="slds-button slds-button_brand">{!$Label.Naumen_CloseModal}</button>
+            </footer>
+          </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div> 
+
+</div>
+</div>
+</apex:form>
+</apex:page>

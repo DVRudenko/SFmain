@@ -1,0 +1,96 @@
+<template>
+    <template if:true={isModalOpen} class="modal-window">
+        <section role="dialog"
+                tabindex="-1"
+                aria-labelledby="modal-heading-01"
+                aria-modal="true"
+                aria-describedby="calculation-modal-content"
+                class={modalClass}>
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning-button-icon class="slds-modal__close"
+                                            icon-name="utility:close"
+                                            variant="border-inverse"
+                                            alternative-text="Close"
+                                            onclick={closeModal}></lightning-button-icon>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">
+                        Credit Factory Calculation
+                    </h2>
+                </header>
+                <div class="slds-modal__content calculation-modal-content slds-p-around_medium" id="calculation-modal-content">
+                    <div class="slds-grid slds-wrap">
+                        <template if:true={picklistFields}>
+                            <template if:true={picklistFields.length}>
+                                <template for:each={picklistFields} for:item="field">
+                                    <div key={field.key} class="slds-col slds-m-bottom_small slds-size_1-of-1">
+                                        <lightning-combobox name={field.key}
+                                                            label={field.label}
+                                                            options={field.picklistvalues.values}
+                                                            value={field.value}
+                                                            class="calculation-field"
+                                                            required={field.required}
+                                                            onchange={handlePicklistValue}>
+                                        </lightning-combobox>
+                                    </div>
+                                </template>
+                            </template>
+                        </template>
+
+                        <template if:true={depositReason.picklistvalues}>
+                            <div class="slds-col slds-m-bottom_small slds-size_1-of-1">
+                                <lightning-combobox name={depositReason.key}
+                                                    label={depositReason.label}
+                                                    options={depositReason.picklistvalues.values}
+                                                    value={depositReason.value}
+                                                    class="calculation-field deposit-reason-field"
+                                                    disabled={depositReason.disabled}
+                                                    required={depositReason.required}>
+                                </lightning-combobox>
+                            </div>
+                        </template>
+
+                        <template if:true={textFields}>
+                            <template if:true={textFields.length}>
+                                <template for:each={textFields} for:item="field">
+                                    <div key={field.key} class="slds-col slds-m-bottom_small slds-size_1-of-1">
+                                        <lightning-input type="text"
+                                                         name={field.key}
+                                                         data-name={field.key}
+                                                         label={field.label}
+                                                         value={field.value}
+                                                         class="calculation-field"
+                                                         required={field.required}
+                                                         onchange={handleInputValue}>
+                                        </lightning-input>
+                                    </div>
+                                </template>
+                            </template>
+                        </template>
+
+                        <template if:true={checkboxFields}>
+                            <template if:true={checkboxFields.length}>
+                                <template for:each={checkboxFields} for:item="field">
+                                    <div key={field.key} class="slds-col slds-m-bottom_small slds-size_1-of-1">
+                                        <lightning-input type="checkbox"
+                                                         name={field.key}
+                                                         label={field.label}
+                                                         checked={field.value}
+                                                         class="calculation-field">
+                                        </lightning-input>
+                                    </div>
+                                </template>
+                            </template>
+                        </template>
+                    </div>
+                </div>
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral"
+                            onclick={closeModal}>Cancel</button>
+                    <button class="slds-button slds-button_brand"
+                            onclick={saveCalculation}>Save</button>        
+                </footer>
+            </div>
+        </section>
+    <div class={modalBgc}></div>    
+    </template>
+</template>

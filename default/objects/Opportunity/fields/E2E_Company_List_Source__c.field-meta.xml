@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Company_List_Source__c</fullName>
+    <externalId>false</externalId>
+    <label>E2E Company List Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FirmenWissen</fullName>
+                <default>false</default>
+                <label>FirmenWissen</label>
+            </value>
+            <value>
+                <fullName>Creditreform</fullName>
+                <default>false</default>
+                <label>Creditreform</label>
+            </value>
+            <value>
+                <fullName>Creditsafe livesearch</fullName>
+                <default>false</default>
+                <label>Creditsafe livesearch</label>
+            </value>
+            <value>
+                <fullName>Creditsafe</fullName>
+                <default>false</default>
+                <label>Creditsafe</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Jm_na__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Jména</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bronislava Štajerová</fullName>
+                <default>false</default>
+                <label>Bronislava Nováková</label>
+            </value>
+            <value>
+                <fullName>Iveta Baštářová</fullName>
+                <default>false</default>
+                <label>Iveta Baštářová</label>
+            </value>
+            <value>
+                <fullName>Věra Staňková</fullName>
+                <default>false</default>
+                <label>Věra Staňková</label>
+            </value>
+            <value>
+                <fullName>Vladimíra Ouřadová</fullName>
+                <default>false</default>
+                <label>Vladimíra Ouřadová</label>
+            </value>
+            <value>
+                <fullName>Radka Zahajská</fullName>
+                <default>false</default>
+                <label>Radka Zahajská</label>
+            </value>
+            <value>
+                <fullName>Hanka Bartoňová</fullName>
+                <default>false</default>
+                <label>Hanka Bartoňová</label>
+            </value>
+            <value>
+                <fullName>Veronika Filipová</fullName>
+                <default>false</default>
+                <label>Veronika Filipová</label>
+            </value>
+            <value>
+                <fullName>Martina Kabíčková</fullName>
+                <default>false</default>
+                <label>Martina Kabíčková</label>
+            </value>
+            <value>
+                <fullName>Olga Maníková</fullName>
+                <default>false</default>
+                <label>Olga Maníková</label>
+            </value>
+            <value>
+                <fullName>Pavel Porubiak</fullName>
+                <default>false</default>
+                <label>Pavel Porubiak</label>
+            </value>
+            <value>
+                <fullName>Filip Směšný</fullName>
+                <default>false</default>
+                <label>Filip Směšný</label>
+            </value>
+            <value>
+                <fullName>Helena Jandová</fullName>
+                <default>false</default>
+                <label>Helena Jandová</label>
+            </value>
+            <value>
+                <fullName>Tereza Raušová</fullName>
+                <default>false</default>
+                <label>Tereza Raušová</label>
+            </value>
+            <value>
+                <fullName>Miroslava Lohniská</fullName>
+                <default>false</default>
+                <label>Miroslava Lohniská</label>
+            </value>
+            <value>
+                <fullName>Matěj Peltán</fullName>
+                <default>false</default>
+                <label>Matěj Peltán</label>
+            </value>
+            <value>
+                <fullName>Miroslav Děd</fullName>
+                <default>false</default>
+                <label>Miroslav Děd</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

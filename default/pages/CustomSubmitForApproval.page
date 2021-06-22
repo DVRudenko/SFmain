@@ -1,0 +1,228 @@
+<apex:page controller="CustomSubmitForApprovalCtrl" action="{! init }" sidebar="true" lightningStylesheets="true">
+    <apex:form id="formId">
+        <apex:includeScript value="{!$Resource.jQuery}"/>
+        <apex:stylesheet value="{!URLFOR($Resource.Spinner, 'spinner.css')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.Spinner, 'spinner.js')}"/>
+        <style>
+            .submitButton {
+                margin-left: 15% !important;        
+            }
+            .saveAndBack {
+                margin: 5px !important;
+            }
+            .bPageBlock .pbBody .black .pbSubheader {
+                background-color: black;
+                color: white;
+            }
+            .errorMessage {
+                color: #ca0813;
+                display: none;
+                margin-left: 1rem;
+            }
+            .requestBicButton {
+                display: none;
+                margin-left: 1rem;
+            }
+            .errorInput {
+                border: 2px solid #ca0813;
+            }
+            .errorInput:focus {
+                outline: none;
+            }
+            #lightbox-cf {
+                display: none;
+                background: #000000;
+                opacity: 0.7;
+                filter: alpha(opacity=70);
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                min-width: 100%;
+                min-height: 100%;
+                z-index: 1000;
+            }
+        </style>
+        
+        <script>
+            function startSplash() {
+                document.getElementById('splashDiv').style.display='table-cell';
+                document.getElementById('lightbox-cf').style.display = 'block';
+            }
+    
+            function endSplash() {
+                document.getElementById('splashDiv').style.display='none';
+                document.getElementById('lightbox-cf').style.display = 'none';
+            }
+        </script>
+        
+        <div class="splashStatus" id="splashDiv">
+            <div class="circle"><img src="{!URLFOR($Resource.Spinner, 'spinner.gif')}"/></div>
+            <div class="txt">Please Wait. Loading...</div>
+        </div>
+        
+        <apex:actionStatus id="splashStatus" onstart="startSplash();" onstop="endSplash();"/>
+        
+        <apex:pageMessages />           
+        <apex:pageBlock id="mainBlock" rendered="{! changeOfTotalConsumption = false}">
+            <apex:outputPanel styleClass="black" layout="block" id="panelblock">
+                <apex:pageBlockSection title="Account" columns="1" collapsible="false">
+                    <apex:repeat value="{! finalAccountFieldsList }" var="accFieldApiName">
+                        <apex:inputField value="{! acc[accFieldApiName] }" required="true"/>
+                    </apex:repeat>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Registered Country"/>
+                        <apex:outputPanel >
+                            <apex:outputField value="{! acc.BillingCountry }"/><apex:commandLink action="{! changeRegisteredCountry }" value="[Change]" style="margin-left: 5px;" immediate="true"/>
+                        </apex:outputPanel>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="1" collapsible="false" id="taxSection" rendered="{! type = 'creditfactory' }">
+                    <apex:inputField value="{! acc.Steuernummer__c}" id="taxId" required="true" rendered="{! ! acc.No_Tax__c}"/>
+                    <apex:pageBlockSectionItem rendered="{! AND(opp.Tankkarten__r.size = 0, ! isInternationalOffers, OR(acc.BillingCountry = 'Germany', acc.BillingCountry = 'Austria', acc.BillingCountry = 'Switzerland-DE', acc.BillingCountry = 'Switzerland-FR', acc.BillingCountry = 'Switzerland-IT'))}">
+                        <apex:outputLabel value="No Tax" rendered="{! ! acc.No_Vat__c }"/>
+                        <apex:actionRegion>
+                            <apex:inputField value="{! acc.No_Tax__c}" rendered="{! ! acc.No_Vat__c }">
+                                <apex:actionSupport event="onchange" reRender="taxSection, vatSection"/>
+                            </apex:inputField>
+                        </apex:actionRegion>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="1" collapsible="false" id="vatSection" rendered="{! type = 'creditfactory' }">
+                    <apex:inputField value="{! acc.Umsatzsteuer_ID__c}" id="vatNumber" required="true" rendered="{! ! acc.No_Vat__c}"/>
+                    <apex:pageBlockSectionItem rendered="{! AND(opp.Tankkarten__r.size = 0, ! isInternationalOffers)}">
+                        <apex:outputLabel value="No Vat" rendered="{! ! acc.No_Tax__c }"/>
+                        <apex:actionRegion >
+                            <apex:inputField value="{! acc.No_Vat__c}" rendered="{! ! acc.No_Tax__c }">
+                                <apex:actionSupport event="onchange" reRender="vatSection, taxSection"/>
+                            </apex:inputField>
+                        </apex:actionRegion>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel styleClass="black" layout="block">
+                <apex:pageBlockSection title="Opportunity" columns="1" collapsible="false">
+                    <apex:repeat value="{! finalOpportunityFieldsList }" var="oppFieldApiName">
+                        <apex:inputField value="{! opp[oppFieldApiName] }" required="true"/>
+                    </apex:repeat>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! opp.RecordType.Name = 'Lotos'}">
+                <apex:pageBlockSection columns="1" collapsible="false">
+                    <apex:outputField value="{! opp.Total_consumption_per_card__c }" rendered="{! AND(opp.Total_consumption_per_card__c != null, opp.Total_consumption_per_card__c != 0) }"/>
+                    <apex:outputField value="{! opp.Total_cards_consumption_monthly__c }" rendered="{! OR(opp.Total_consumption_per_card__c = null, opp.Total_consumption_per_card__c = 0) }"/>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! opp.RecordType.Name = 'CCS Opportunity Layout'}">
+                <apex:pageBlockSection columns="1" collapsible="false">
+                    <apex:inputField value="{! opp.Total_consumption_l_month__c }" id="totalConsumption"/>
+                    <apex:inputField value="{! opp.Sec_Channel__c }" id="secChannel" required="true"/>
+                    <apex:inputField value="{! opp.Channel__c }" id="channel" required="true"/>
+                    <apex:outputField value="{! opp.Total_consumption_per_card__c }" rendered="{! AND(opp.Total_consumption_per_card__c != null, opp.Total_consumption_per_card__c != 0) }"/>
+                    <apex:outputField value="{! opp.Total_cards_consumption_monthly__c }" rendered="{! OR(opp.Total_consumption_per_card__c = null, opp.Total_consumption_per_card__c = 0) }"/>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! AND(OR(opp.RecordType.Name = 'Euroshell', opp.RecordType.Name = 'Euroshell Starts'), acc.BillingCountry = 'Poland') }">
+                <apex:pageBlockSection columns="1" collapsible="false">
+                    <apex:inputField value="{! opp.Number_of_GPS_units__c}" id="numberOfGpsUnits"/>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! OR(opp.RecordType.Name = 'Euroshell', opp.RecordType.Name = 'Euroshell Starts', opp.RecordType.Name = 'Lotos')}">
+                <apex:pageBlockSection columns="1" collapsible="false">
+                    <apex:inputField value="{! opp.Total_consumption_l_month__c }" id="totalConsumption"/>
+                    <apex:outputField value="{! opp.Non_fuel_exposure__c }" id="nonfuelexposure"/>
+                    <apex:inputField value="{! opp.Sec_Channel__c }" id="secChannel" required="true"/>
+                    <apex:inputField value="{! opp.Channel__c }" id="channel" required="true"/>
+                    <apex:inputField value="{! opp.Product__c }" id="product">
+                        <apex:actionSupport event="onchange"/>
+                    </apex:inputField>
+                    <apex:inputField value="{! opp.Angebotsdauer__c }" id="offerDuration"/>
+                    <apex:inputField value="{! opp.Home_Station__c }" id="homeStation" rendered="{! IF(OR(opp.Product__c = 'Home Station offer (v.1)', opp.Product__c = 'HOME 1', opp.Product__c = 'Inbound Typ C'), true, false) }"/>
+                    <apex:inputField value="{! opp.ESI__c }" id="esi" rendered="{! IF(OR(opp.Product__c = 'Home Station offer (v.1)', opp.Product__c = 'HOME 1', opp.Product__c = 'Inbound Typ C'), true, false) }"/>
+                    <apex:inputField value="{! opp.Zahlungsart__c }" id="paymentMethod" required="true">
+                        <apex:actionSupport event="onchange"/>
+                    </apex:inputField>  
+                    <apex:inputField id="mandateType" value="{! opp.Direct_Debit_Mandate_Type__c }"/>
+                    
+                    <apex:inputField value="{! opp.IBAN__c }" rendered="{! AND(opp.Zahlungsart__c = 'Lastschrift', OR(type = 'submitforapproval', AND(type = 'creditfactory', 
+                        OR(acc.BillingCountry = 'Poland', acc.BillingCountry = 'Hungary', acc.BillingCountry = 'Switzerland-DE', acc.BillingCountry = 'Switzerland-FR', acc.BillingCountry = 'Switzerland-IT', acc.BillingCountry = 'Slovakia')))) }"/>
+                    <apex:inputField value="{! opp.SWIFT_BIC__c }" rendered="{! AND(opp.Zahlungsart__c = 'Lastschrift', OR(type = 'submitforapproval', AND(type = 'creditfactory', 
+                        OR(acc.BillingCountry = 'Poland', acc.BillingCountry = 'Hungary', acc.BillingCountry = 'Switzerland-DE', acc.BillingCountry = 'Switzerland-FR', acc.BillingCountry = 'Switzerland-IT', acc.BillingCountry = 'Slovakia')))) }"/>
+                    
+                    <apex:inputField id="iban" style="width: 150px" value="{! opp.IBAN__c }" rendered="{! AND(opp.Zahlungsart__c = 'Lastschrift', type = 'creditfactory', 
+                            OR(acc.BillingCountry = 'Germany', acc.BillingCountry = 'Austria', acc.BillingCountry = 'Luxembourg', acc.BillingCountry = 'Netherlands', acc.BillingCountry = 'Belgium-NL',
+                            acc.BillingCountry = 'France', acc.BillingCountry = 'Belgium-FR')) }">
+                        <span id="errorIban" class="errorMessage">Please enter the IBAN in a valid format.</span>
+                    </apex:inputField>
+                    
+                    <apex:inputField id="ecoFee" value="{! opp.Eco_Fee__c }"/>
+                    <script>
+                        function changePicklist() {
+                            if (document.getElementById('{! $Component.paymentMethod }').value != '{! opp.Zahlungsart__c }') {
+                                document.getElementById('{! $Component.paymentMethod }').value = '{! opp.Zahlungsart__c }';
+                            }
+                            if (document.getElementById('{! $Component.product }').value != '{! opp.Product__c }') {
+                                document.getElementById('{! $Component.product }').value = '{! opp.Product__c }';
+                            }       
+                        }
+                        window.onload = changePicklist;
+                    </script>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! IF(opp.RecordType.Name = 'Shell Universal Card', true, false) }">
+                <apex:pageBlockSection columns="1" collapsible="false">
+                    <apex:outputField id="docusign" value="{! opp.DocuSign_Status__c }"/>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel styleClass="black" layout="block" rendered="{! primaryContact != null}">
+                <apex:pageBlockSection title="Contact" columns="1" collapsible="false">
+                    <apex:inputField value="{! primaryContact.FirstName}" required="true"/>
+                    <apex:inputField value="{! primaryContact.LastName}" required="true"/>
+                    <apex:inputField value="{! primaryContact.Email}" required="true"/>
+                    <apex:inputField value="{! primaryContact.Birthdate}" rendered="{! OR(acc.BillingCountry = 'Slovakia', acc.BillingCountry = 'Czech Republic')}" required="true"/>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+        </apex:pageBlock>
+        <apex:pageBlock id="totalConsumption" rendered="{! changeOfTotalConsumption = true}">
+            <apex:outputPanel styleClass="black" layout="block" id="panelblock">
+                <apex:pageBlockSection title="Opportunity" columns="1" collapsible="false">
+                     <apex:inputField value="{! opp.Total_consumption_l_month__c }" id="totalConsumptionChange" rendered="{! OR(opp.RecordType.Name = 'Euroshell', opp.RecordType.Name = 'Euroshell Starts')}"/>
+                     <apex:outputField value="{! opp.Non_fuel_exposure__c }" id="nonfuelexposureChange" rendered="{! OR(opp.RecordType.Name = 'Euroshell', opp.RecordType.Name = 'Euroshell Starts', acc.BillingCountry = 'Germany')}"/>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+        </apex:pageBlock>
+        <apex:commandButton value="Submit for Approval" action="{! submitForApprovalFromValidationPage }" styleClass="submitButton" rendered="{! type = 'submitforapproval'}"/>
+        <apex:commandButton value="Save and Process Credit Factory" action="{! redirectToCreditFactory }" styleClass="submitButton" rendered="{! OR(type = 'creditfactory', type = 'creditfactoryfob')}"/>
+        <apex:commandButton value="Save and Back" action="{! saveAndBack }" styleClass="saveAndBack" rendered="{! type = 'submitforapproval'}"/>
+        <apex:commandButton value="Cancel" action="{! backToOpportunity }" immediate="true"/>
+        <script>
+            var ibanInput = $('[id$=iban]');
+            var errorIban = $('[id$=errorIban]');
+            var ibanFormat = /(^$|^[Dd]{1}[Ee]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{2}?$|^[Aa]{1}[Tt]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}?$|^[Ll]{1}[Uu]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}?$|^[Nn]{1}[Ll]{1}[0-9]{2}[A-Za-z]{4}[0-9]{10}?$|^[Bb]{1}[Ee]{1}[0-9]{14}?$|^[Ff]{1}[Rr]{1}[0-9]{12}[A-Za-z0-9]{11}[0-9]{2}?$)/;
+            if (ibanInput.val() != '' && ibanInput.val() != undefined) {
+                validateInput(ibanInput, errorIban, new RegExp(ibanFormat));
+            }
+            
+            ibanInput.on('input', function(e) {
+                validateInput(ibanInput, errorIban, new RegExp(ibanFormat));
+            });   
+            
+            function validateInput(element, error, regex) {
+                var isValid = false;
+                var elementValue = element.val();
+                console.log('elementValue', elementValue);
+                if (regex.test(elementValue)) {
+                    element.removeClass('errorInput');
+                    error.hide();
+                    isValid = true;
+                } 
+                else {
+                    element.addClass('errorInput');
+                    error.show();
+                    isValid = false;
+                }
+                return isValid;
+            }
+        </script>
+    </apex:form>
+    <div id="lightbox-cf"></div>
+</apex:page>

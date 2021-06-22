@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Dial List Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description and Guidance --></label>
+            <section>Description and Guidance</section>
+        </sections>
+        <sections>
+            <label><!-- Statistics --></label>
+            <section>Statistics</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Priority cannot be less than zero. --></errorMessage>
+        <name>NVMConnect__Priority_Less_Than_Zero</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AssignUsers --></label>
+        <name>NVMConnect__AssignUsers</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_From_Report --></label>
+        <name>NVMConnect__Create_From_Report</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Delete --></label>
+        <name>NVMConnect__Delete</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Duplicate --></label>
+        <name>NVMConnect__Duplicate</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Upload_List --></label>
+        <name>NVMConnect__Upload_List</name>
+    </webLinks>
+</CustomObjectTranslation>

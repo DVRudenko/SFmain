@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Gebietsstruktur --></label>
+    <name>Gebietsstruktur__c</name>
+    <picklistValues>
+        <masterLabel>Gewerbe-/Industriegebiet</masterLabel>
+        <translation><!-- Gewerbe-/Industriegebiet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mischgebiet</masterLabel>
+        <translation><!-- Mischgebiet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wohngebiet</masterLabel>
+        <translation><!-- Wohngebiet --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

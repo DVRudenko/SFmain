@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PL_Carnet_Won_Opportunities</fullName>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Product__c</columns>
+    <columns>Sales_Basic_Monthly_Fee_Discount__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Account_Price_Book__c</columns>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Registered_Country__c</field>
+        <operation>equals</operation>
+        <value>Poland</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Closed Won</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Carnet</value>
+    </filters>
+    <label>PL_Carnet_Won_Opportunities</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>Carnet_PL</group>
+        <role>Credit</role>
+        <roleAndSubordinatesInternal>Service_Manager</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>START</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>CCS_Administrator</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Salesmanager_2</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

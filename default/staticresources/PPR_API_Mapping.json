@@ -1,0 +1,260 @@
+{
+    "CustomerStatus": {
+        "New": "1",
+		"Processing": "2",
+        "Failed": "3",
+        "Hand processing": "4",
+        "Double": "5",
+        "BlackList": "6",
+        "Created": "7",
+        "Moved to start": "8"
+    },
+    "NewClientRequest": {
+        "metadata": {
+            "type": "container",
+            "required": "true",
+            "contains": {
+                "source": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "id": {
+                    "type": "string",
+                    "required": "true"
+                },
+                "user": {
+                    "type": "string",
+                    "required": "false"
+                }
+            }
+        },
+        "customerInfo": {
+            "type": "container",
+            "required": "true",
+            "contains": {
+                "legalInfo": {
+                    "type": "container",
+                    "required": "true",
+                    "contains": {
+                        "inn": {
+                            "type": "string",
+                            "required": "true"
+                        },
+                        "codeWord": {
+                            "type": "string",
+                            "required": "false"
+                        },
+                        "emails": {
+                            "type": "list",
+                            "required": "true",
+                            "contains": {
+                                "value": {
+                                    "type": "string",
+                                    "required": "true"
+                                },
+                                "type": {
+                                    "type": "stringList",
+                                    "required": "true"
+                                }
+                            }
+                        },
+                        "phones": {
+                            "type": "list",
+                            "required": "true",
+                            "contains": {
+                                "value": {
+                                    "type": "container",
+                                    "required": "true",
+                                    "contains": {
+                                        "code": {
+                                            "type": "string",
+                                            "required": "true"
+                                        },
+                                        "numberStr": {
+                                            "type": "string",
+                                            "required": "true"
+                                        },
+                                        "ext": {
+                                            "type": "string",
+                                            "required": "false"
+                                        }
+                                    }
+                                },
+                                "type": {
+                                    "type": "stringList",
+                                    "required": "true"
+                                }
+                            }
+                        },
+                        "agreements": {
+                            "type": "stringList",
+                            "required": "true"
+                        }
+                    }
+                },
+                "additionalInfo": {
+                    "type": "container",
+                    "required": "false",
+                    "contains": {
+                        "courierServiceComments": {
+                            "type": "string",
+                            "required": "false"
+                        }
+                    }
+                },
+                "orderInfo": {
+                    "type": "container",
+                    "required": "true",
+                    "contains": {
+                        "product": {
+                            "type": "string",
+                            "required": "false"
+                        },
+                        "tariff": {
+                            "type": "string",
+                            "required": "false"
+                        },
+                        "orderType": {
+                            "type": "string",
+                            "required": "false"
+                        },
+                        "overdraftSum": {
+                            "type": "string",
+                            "required": "true"
+                        },
+                        "services": {
+                            "type": "stringList",
+                            "required": "false"
+                        },
+                        "promos": {
+                            "type": "stringList",
+                            "required": "true"
+                        },
+                        "cards": {
+                            "type": "stringList",
+                            "required": "true"
+                        }
+                    }
+                },
+                "bankInfo": {
+                    "type": "container",
+                    "required": "true",
+                    "contains": {
+                        "bik": {
+                            "type": "string",
+                            "required": "true"
+                        },
+                        "accountNum": {
+                            "type": "string",
+                            "required": "true"
+                        }
+                    }
+                },
+                "addresses": {
+                    "type": "list",
+                    "required": "false",
+                    "contains": {
+                        "countryCode": {
+                            "type": "string",
+                            "required": "false"
+                        },
+                        "addressId": {
+                            "type": "string",
+                            "required": "false"
+                        },
+                        "zipCode": {
+                            "type": "string",
+                            "required": "true"
+                        },
+                        "country": {
+                            "type": "string",
+                            "required": "false"
+                        },
+                        "state": {
+                            "type": "string",
+                            "required": "true"
+                        },
+                        "city": {
+                            "type": "string",
+                            "required": "true"
+                        },
+                        "street": {
+                            "type": "string",
+                            "required": "true"
+                        },
+                        "house": {
+                            "type": "string",
+                            "required": "true"
+                        },
+                        "apartment": {
+                            "type": "string",
+                            "required": "false"
+                        },
+                        "type": {
+                            "type": "stringList",
+                            "required": "true"
+                        }
+                    }
+                },
+                "staff": {
+                    "type": "list",
+                    "required": "false",
+                    "contains": {
+                        "firstName": {
+                            "type": "string",
+                            "required": "true"
+                        },
+                        "lastName": {
+                            "type": "string",
+                            "required": "true"
+                        },
+                        "Surname": {
+                            "type": "string",
+                            "required": "false"
+                        },
+                        "email": {
+                            "type": "string",
+                            "required": "true"
+                        },
+                        "role": {
+                            "type": "string",
+                            "required": "true"
+                        },
+                        "position": {
+                            "type": "string",
+                            "required": "true"
+                        },
+                        "phones": {
+                            "type": "list",
+                            "required": "true",
+                            "contains": {
+                                "value": {
+                                    "type": "container",
+                                    "required": "true",
+                                    "contains": {
+                                        "code": {
+                                            "type": "string",
+                                            "required": "true"
+                                        },
+                                        "numberStr": {
+                                            "type": "string",
+                                            "required": "true"
+                                        },
+                                        "ext": {
+                                            "type": "string",
+                                            "required": "false"
+                                        }
+                                    }
+                                },
+                                "type": {
+                                    "type": "stringList",
+                                    "required": "true"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 

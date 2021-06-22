@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Тип цели</label>
+    <name>Goal_Type__c</name>
+    <picklistValues>
+        <masterLabel>План по Активностям</masterLabel>
+        <translation><!-- План по Активностям --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>План по Картам</masterLabel>
+        <translation><!-- План по Картам --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>План по Открытым Действиям</masterLabel>
+        <translation><!-- План по Открытым Действиям --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>План по договорам</masterLabel>
+        <translation><!-- План по договорам --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

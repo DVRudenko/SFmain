@@ -1,0 +1,162 @@
+<apex:page controller="CreateCommercialProposalController" action="{! init }">
+	<apex:includeScript value="{!$Resource.jQuery}"/>
+	<style>
+		a.btn,
+		a.btn:hover {
+			text-decoration: none;
+			color: black;
+			padding: 4px 3px;
+		}
+
+		h2 {
+			display: block;
+			font-size: 14px;
+		}
+
+		h3.angebot {
+			display: block;
+			font-size: 12px;
+			margin: 10px 0;
+		}
+
+		.homeTab .tertiaryPalette, .individualPalette .homeBlock .tertiaryPalette, 
+		.layoutEdit .individualPalette .homeBlock .tertiaryPalette {
+			background: grey;
+		}
+
+		.tableBrands {
+			margin-left: 10px;
+			margin-top: 5px;
+		}
+
+		.tableBrands td {
+			padding: 5px 0;
+		}
+
+		.tableBrands img {
+			float: left;
+		}
+
+		.tableBrands span {
+			float: left;
+			width: 30px;
+		}
+
+		.tableBrands span {
+			margin-top: 8px;
+			width: 250px;
+		}
+
+		.tableBrands span.index {
+			background: #dd1d21;
+			color: white;
+			font-size: 12px;
+			padding: 5px;
+			margin: 0;
+			width: 20px;
+			height: 20px;
+			text-align: center;
+		}
+	</style>
+
+	<apex:form >
+		<apex:pageBlock title="Create Commercial Proposal for {! opportunity.Name }" id="allBlock">
+			<apex:pageMessages escape="false"/>
+			<apex:outputPanel rendered="{! isError == false }">
+				<apex:pageBlockSection columns="1">
+					<apex:outputField value="{! opportunity.Product__c }" label="Opportunity Product"/>
+					<apex:selectList value="{! selectedRadius }" label="Map Radius" size="1" multiselect="false">
+						<apex:selectOptions value="{! radius }"/>
+					</apex:selectList>
+
+					<apex:selectList value="{! selectedProduct }" label="Product" size="1" multiselect="false">
+						<apex:selectOptions value="{! products }"/>
+					</apex:selectList>
+				</apex:pageBlockSection>
+
+				<apex:pageBlockSection columns="1" title="Brands (all brands by default)" 
+					collapsible="true" id="brandssection">
+					<apex:selectCheckboxes value="{! selectedBrands }" layout="PageDirection">
+						<apex:selectOptions value="{! brands }"/>
+					</apex:selectCheckboxes>
+				</apex:pageBlockSection>
+
+				<apex:pageBlockSection columns="1" collapsible="false" title="Attachments">
+					<apex:pageBlockSection rendered="{!IF(NOT(selectedAttachments.empty), true, false)}">
+						<apex:selectCheckboxes value="{! selectedAttachments }" layout="PageDirection">
+							<apex:selectOptions value="{! allAttachmentsOptionsList }"/>
+						</apex:selectCheckboxes>
+					</apex:pageBlockSection>
+					<apex:outputText value="No attachments" rendered="{!IF(selectedAttachments.empty, true, false)}"/>
+				</apex:pageBlockSection>
+
+				<apex:pageBlockSection columns="1" collapsible="false" title="Email and PDF text settings">
+					<apex:outputPanel >
+						<h2>Email Text</h2>
+						<h3 class="angebot">Current user: <input value="{! $User.FirstName + ' ' + $User.LastName }" disabled="disabled"/> <input value="{! $User.Email }" disabled="disabled"/></h3>
+						<apex:inputField value="{! template.Email_Body__c }"/>
+					</apex:outputPanel>
+					
+					<apex:outputPanel >
+						<h2>PDF Text</h2>
+						<h3 class="angebot">Account Contacts</h3>
+						<apex:variable value="1" var="index"/>
+						<apex:pageBlockTable value="{! contactsMap }" var="key">
+							<apex:column width="20px">
+								<input name="contactslist" type="radio" class="{!contactsMap[key].Id}" onclick="$('.selectedContact').val('{!contactsMap[key].Id}');"/>
+							</apex:column>
+							<apex:column headerValue="Name">
+								<input value="{! contactsMap[key].Name }" disabled="disabled"/>
+							</apex:column>
+							<apex:column headerValue="Email" value="{! contactsMap[key].Email }"/>
+							<apex:variable var="index" value="{!VALUE(index) + 1}"/>
+						</apex:pageBlockTable>
+						<apex:inputText value="{! selectedContact }" styleClass="selectedContact" style="display: none;"/>
+						<apex:inputField value="{! template.PDF_Body__c }"/>
+					</apex:outputPanel>
+				</apex:pageBlockSection>
+				<script>
+					$(document).ready(function() {
+						if ($('.selectedContact').val() == null || $('.selectedContact').val() == '') {
+							$("input:radio[name=contactslist]:first").click();
+						} else {
+							var selectorForRadio = $('.selectedContact').val();
+							$('.' + selectorForRadio).click();
+						}
+					});
+				</script>
+				<apex:pageBlockSection columns="1" collapsible="false" title="Map preview"/>
+				<table width="100%" cellspacing="0" cellpadding="0">
+					<tr>
+						<td>
+							<apex:image url="/servlet/servlet.FileDownload?file={! attachmentId }" style="width: 100%; margin-top: 5px;"/>
+						</td>
+						<td width="400px" valign="top">
+							<table width="100%" cellspacing="0" cellpadding="0" class="tableBrands">
+								<apex:repeat value="{! petrolStations }" var="station">
+									<tr>
+										<td valign="middle">
+											<!-- <span class="index">{! station.indexNumber }</span> --><apex:image url="{!URLFOR($Resource.CommercialProposalIcons, station.brand.Name + '.png')}" width="30" height="30"/> <span>{! station.brand.Name }, {! station.address }	</span>
+										</td>
+									</tr>
+								</apex:repeat>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</apex:outputPanel>
+
+			<apex:pageBlockButtons >
+				<apex:commandLink value="Generate PDF" action="{! generatePDF }" styleClass="btn" rendered="{! isError == false }"/>
+				<apex:commandButton value="Update Map Preview" action="{! returnMap }" rendered="{! isError == false }"/>
+				<apex:commandLink value="Preview PDF" action="{! previewPDF }" target="_blank" styleClass="btn" rendered="{! AND(isGenerate,isError == false) }"/>
+				<apex:commandButton value="Send Email" action="{! sendEmail }" onclick="return confirm('Email to selected Contact. Are you sure?');" rendered="{! AND(isGenerate,isError == false) }"/>
+				<apex:commandButton value="Cancel" action="{! cancel }"/>
+			</apex:pageBlockButtons>
+
+		</apex:pageBlock>
+		<script>
+			twistSection(document.getElementById('{! $Component.allBlock.brandssection }').getElementsByTagName('img')[0])
+		</script>
+	</apex:form>
+</apex:page>

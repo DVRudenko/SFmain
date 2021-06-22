@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fleetcor_Calendar_Year__c</fullName>
+    <externalId>false</externalId>
+    <label>Fleetcor Calendar Year</label>
+    <referenceTo>Fleetcor_Calendar_Year__c</referenceTo>
+    <relationshipLabel>Fleetcor Calendar Monthes</relationshipLabel>
+    <relationshipName>Fleetcor_Calendar_Monthes</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

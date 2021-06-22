@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Date/Time stamp of Call End --></help>
+    <label><!-- CallEndTime --></label>
+    <name>NVMStatsSF__CallEndTime__c</name>
+</CustomFieldTranslation>

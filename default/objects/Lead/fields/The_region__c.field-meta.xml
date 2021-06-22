@@ -1,0 +1,1198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>The_region__c</fullName>
+    <externalId>false</externalId>
+    <label>The region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Area_Traveled__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>г. Санкт-Петербург</fullName>
+                <default>false</default>
+                <label>г. Санкт-Петербург</label>
+            </value>
+            <value>
+                <fullName>г. Москва</fullName>
+                <default>false</default>
+                <label>г. Москва</label>
+            </value>
+            <value>
+                <fullName>Республика Адыгея</fullName>
+                <default>false</default>
+                <label>Республика Адыгея</label>
+            </value>
+            <value>
+                <fullName>Ханты-Мансийский автономный округ - Югра</fullName>
+                <default>false</default>
+                <label>Ханты-Мансийский автономный округ - Югра</label>
+            </value>
+            <value>
+                <fullName>Ямало-Ненецкий автономный округ</fullName>
+                <default>false</default>
+                <label>Ямало-Ненецкий автономный округ</label>
+            </value>
+            <value>
+                <fullName>Республика Башкортостан</fullName>
+                <default>false</default>
+                <label>Республика Башкортостан</label>
+            </value>
+            <value>
+                <fullName>Республика Бурятия</fullName>
+                <default>false</default>
+                <label>Республика Бурятия</label>
+            </value>
+            <value>
+                <fullName>Республика Алтай</fullName>
+                <default>false</default>
+                <label>Республика Алтай</label>
+            </value>
+            <value>
+                <fullName>Севастополь</fullName>
+                <default>false</default>
+                <label>Севастополь</label>
+            </value>
+            <value>
+                <fullName>Республика Дагестан</fullName>
+                <default>false</default>
+                <label>Республика Дагестан</label>
+            </value>
+            <value>
+                <fullName>Республика Ингушетия</fullName>
+                <default>false</default>
+                <label>Республика Ингушетия</label>
+            </value>
+            <value>
+                <fullName>Кабардино-Балкарская Республика</fullName>
+                <default>false</default>
+                <label>Кабардино-Балкарская Республика</label>
+            </value>
+            <value>
+                <fullName>Республика Калмыкия</fullName>
+                <default>false</default>
+                <label>Республика Калмыкия</label>
+            </value>
+            <value>
+                <fullName>Республика Карачаево-Черкесия</fullName>
+                <default>false</default>
+                <label>Республика Карачаево-Черкесия</label>
+            </value>
+            <value>
+                <fullName>Республика Карелия</fullName>
+                <default>false</default>
+                <label>Республика Карелия</label>
+            </value>
+            <value>
+                <fullName>Республика Коми</fullName>
+                <default>false</default>
+                <label>Республика Коми</label>
+            </value>
+            <value>
+                <fullName>Республика Марий Эл</fullName>
+                <default>false</default>
+                <label>Республика Марий Эл</label>
+            </value>
+            <value>
+                <fullName>Республика Мордовия</fullName>
+                <default>false</default>
+                <label>Республика Мордовия</label>
+            </value>
+            <value>
+                <fullName>Республика Саха (Якутия)</fullName>
+                <default>false</default>
+                <label>Республика Саха (Якутия)</label>
+            </value>
+            <value>
+                <fullName>Республика Северная Осетия - Алания</fullName>
+                <default>false</default>
+                <label>Республика Северная Осетия - Алания</label>
+            </value>
+            <value>
+                <fullName>Республика Татарстан</fullName>
+                <default>false</default>
+                <label>Республика Татарстан</label>
+            </value>
+            <value>
+                <fullName>Республика Тыва</fullName>
+                <default>false</default>
+                <label>Республика Тыва</label>
+            </value>
+            <value>
+                <fullName>Удмуртская Республика</fullName>
+                <default>false</default>
+                <label>Удмуртская Республика</label>
+            </value>
+            <value>
+                <fullName>Республика Хакасия</fullName>
+                <default>false</default>
+                <label>Республика Хакасия</label>
+            </value>
+            <value>
+                <fullName>Чеченская республика</fullName>
+                <default>false</default>
+                <label>Чеченская республика</label>
+            </value>
+            <value>
+                <fullName>Чувашская Республика</fullName>
+                <default>false</default>
+                <label>Чувашская Республика</label>
+            </value>
+            <value>
+                <fullName>Алтайский край</fullName>
+                <default>false</default>
+                <label>Алтайский край</label>
+            </value>
+            <value>
+                <fullName>Краснодарский край</fullName>
+                <default>false</default>
+                <label>Краснодарский край</label>
+            </value>
+            <value>
+                <fullName>Красноярский край</fullName>
+                <default>false</default>
+                <label>Красноярский край</label>
+            </value>
+            <value>
+                <fullName>Приморский край</fullName>
+                <default>false</default>
+                <label>Приморский край</label>
+            </value>
+            <value>
+                <fullName>Ставропольский край</fullName>
+                <default>false</default>
+                <label>Ставропольский край</label>
+            </value>
+            <value>
+                <fullName>Хабаровский край</fullName>
+                <default>false</default>
+                <label>Хабаровский край</label>
+            </value>
+            <value>
+                <fullName>Амурская область</fullName>
+                <default>false</default>
+                <label>Амурская область</label>
+            </value>
+            <value>
+                <fullName>Архангельская область</fullName>
+                <default>false</default>
+                <label>Архангельская область</label>
+            </value>
+            <value>
+                <fullName>Астраханская область</fullName>
+                <default>false</default>
+                <label>Астраханская область</label>
+            </value>
+            <value>
+                <fullName>Белгородская область</fullName>
+                <default>false</default>
+                <label>Белгородская область</label>
+            </value>
+            <value>
+                <fullName>Брянская область</fullName>
+                <default>false</default>
+                <label>Брянская область</label>
+            </value>
+            <value>
+                <fullName>Владимирская область</fullName>
+                <default>false</default>
+                <label>Владимирская область</label>
+            </value>
+            <value>
+                <fullName>Волгоградская область</fullName>
+                <default>false</default>
+                <label>Волгоградская область</label>
+            </value>
+            <value>
+                <fullName>Вологодская область</fullName>
+                <default>false</default>
+                <label>Вологодская область</label>
+            </value>
+            <value>
+                <fullName>Воронежская область</fullName>
+                <default>false</default>
+                <label>Воронежская область</label>
+            </value>
+            <value>
+                <fullName>Ивановская область</fullName>
+                <default>false</default>
+                <label>Ивановская область</label>
+            </value>
+            <value>
+                <fullName>Иркутская область</fullName>
+                <default>false</default>
+                <label>Иркутская область</label>
+            </value>
+            <value>
+                <fullName>Калининградская область</fullName>
+                <default>false</default>
+                <label>Калининградская область</label>
+            </value>
+            <value>
+                <fullName>Калужская область</fullName>
+                <default>false</default>
+                <label>Калужская область</label>
+            </value>
+            <value>
+                <fullName>Камчатский край</fullName>
+                <default>false</default>
+                <label>Камчатский край</label>
+            </value>
+            <value>
+                <fullName>Камчатская область</fullName>
+                <default>false</default>
+                <label>Камчатская область</label>
+            </value>
+            <value>
+                <fullName>Кемеровская область</fullName>
+                <default>false</default>
+                <label>Кемеровская область</label>
+            </value>
+            <value>
+                <fullName>Кировская область</fullName>
+                <default>false</default>
+                <label>Кировская область</label>
+            </value>
+            <value>
+                <fullName>Костромская область</fullName>
+                <default>false</default>
+                <label>Костромская область</label>
+            </value>
+            <value>
+                <fullName>Курганская область</fullName>
+                <default>false</default>
+                <label>Курганская область</label>
+            </value>
+            <value>
+                <fullName>Курская область</fullName>
+                <default>false</default>
+                <label>Курская область</label>
+            </value>
+            <value>
+                <fullName>Ленинградская область</fullName>
+                <default>false</default>
+                <label>Ленинградская область</label>
+            </value>
+            <value>
+                <fullName>Липецкая область</fullName>
+                <default>false</default>
+                <label>Липецкая область</label>
+            </value>
+            <value>
+                <fullName>Магаданская область</fullName>
+                <default>false</default>
+                <label>Магаданская область</label>
+            </value>
+            <value>
+                <fullName>Московская область</fullName>
+                <default>false</default>
+                <label>Московская область</label>
+            </value>
+            <value>
+                <fullName>Мурманская область</fullName>
+                <default>false</default>
+                <label>Мурманская область</label>
+            </value>
+            <value>
+                <fullName>Нижегородская область</fullName>
+                <default>false</default>
+                <label>Нижегородская область</label>
+            </value>
+            <value>
+                <fullName>Новгородская область</fullName>
+                <default>false</default>
+                <label>Новгородская область</label>
+            </value>
+            <value>
+                <fullName>Новосибирская область</fullName>
+                <default>false</default>
+                <label>Новосибирская область</label>
+            </value>
+            <value>
+                <fullName>Омская область</fullName>
+                <default>false</default>
+                <label>Омская область</label>
+            </value>
+            <value>
+                <fullName>Оренбургская область</fullName>
+                <default>false</default>
+                <label>Оренбургская область</label>
+            </value>
+            <value>
+                <fullName>Орловская область</fullName>
+                <default>false</default>
+                <label>Орловская область</label>
+            </value>
+            <value>
+                <fullName>Пензенская область</fullName>
+                <default>false</default>
+                <label>Пензенская область</label>
+            </value>
+            <value>
+                <fullName>Пермский край</fullName>
+                <default>false</default>
+                <label>Пермский край</label>
+            </value>
+            <value>
+                <fullName>Пермская область</fullName>
+                <default>false</default>
+                <label>Пермская область</label>
+            </value>
+            <value>
+                <fullName>Псковская область</fullName>
+                <default>false</default>
+                <label>Псковская область</label>
+            </value>
+            <value>
+                <fullName>Ростовская область</fullName>
+                <default>false</default>
+                <label>Ростовская область</label>
+            </value>
+            <value>
+                <fullName>Рязанская область</fullName>
+                <default>false</default>
+                <label>Рязанская область</label>
+            </value>
+            <value>
+                <fullName>Самарская область</fullName>
+                <default>false</default>
+                <label>Самарская область</label>
+            </value>
+            <value>
+                <fullName>Саратовская область</fullName>
+                <default>false</default>
+                <label>Саратовская область</label>
+            </value>
+            <value>
+                <fullName>Сахалинская область</fullName>
+                <default>false</default>
+                <label>Сахалинская область</label>
+            </value>
+            <value>
+                <fullName>Свердловская область</fullName>
+                <default>false</default>
+                <label>Свердловская область</label>
+            </value>
+            <value>
+                <fullName>Смоленская область</fullName>
+                <default>false</default>
+                <label>Смоленская область</label>
+            </value>
+            <value>
+                <fullName>Тамбовская область</fullName>
+                <default>false</default>
+                <label>Тамбовская область</label>
+            </value>
+            <value>
+                <fullName>Тверская область</fullName>
+                <default>false</default>
+                <label>Тверская область</label>
+            </value>
+            <value>
+                <fullName>Томская область</fullName>
+                <default>false</default>
+                <label>Томская область</label>
+            </value>
+            <value>
+                <fullName>Тульская область</fullName>
+                <default>false</default>
+                <label>Тульская область</label>
+            </value>
+            <value>
+                <fullName>Тюменская область</fullName>
+                <default>false</default>
+                <label>Тюменская область</label>
+            </value>
+            <value>
+                <fullName>Ульяновская область</fullName>
+                <default>false</default>
+                <label>Ульяновская область</label>
+            </value>
+            <value>
+                <fullName>Челябинская область</fullName>
+                <default>false</default>
+                <label>Челябинская область</label>
+            </value>
+            <value>
+                <fullName>Забайкальский край</fullName>
+                <default>false</default>
+                <label>Забайкальский край</label>
+            </value>
+            <value>
+                <fullName>Читинская область</fullName>
+                <default>false</default>
+                <label>Читинская область</label>
+            </value>
+            <value>
+                <fullName>Ярославская область</fullName>
+                <default>false</default>
+                <label>Ярославская область</label>
+            </value>
+            <value>
+                <fullName>Еврейская автономная область</fullName>
+                <default>false</default>
+                <label>Еврейская автономная область</label>
+            </value>
+            <value>
+                <fullName>Агинский Бурятский автономный округ</fullName>
+                <default>false</default>
+                <label>Агинский Бурятский автономный округ</label>
+            </value>
+            <value>
+                <fullName>Коми-Пермяцкий автономный округ</fullName>
+                <default>false</default>
+                <label>Коми-Пермяцкий автономный округ</label>
+            </value>
+            <value>
+                <fullName>Корякский автономный округ</fullName>
+                <default>false</default>
+                <label>Корякский автономный округ</label>
+            </value>
+            <value>
+                <fullName>Ненецкий автономный округ</fullName>
+                <default>false</default>
+                <label>Ненецкий автономный округ</label>
+            </value>
+            <value>
+                <fullName>Таймырский автономный округ</fullName>
+                <default>false</default>
+                <label>Таймырский автономный округ</label>
+            </value>
+            <value>
+                <fullName>УстьОрдынский Бурятский автономный округ</fullName>
+                <default>false</default>
+                <label>УстьОрдынский Бурятский автономный округ</label>
+            </value>
+            <value>
+                <fullName>Чукотский автономный округ</fullName>
+                <default>false</default>
+                <label>Чукотский автономный округ</label>
+            </value>
+            <value>
+                <fullName>Эвенкийский автономный округ</fullName>
+                <default>false</default>
+                <label>Эвенкийский автономный округ</label>
+            </value>
+            <value>
+                <fullName>Республика Крым</fullName>
+                <default>false</default>
+                <label>Республика Крым</label>
+            </value>
+            <value>
+                <fullName>г.Севастополь</fullName>
+                <default>false</default>
+                <label>г.Севастополь</label>
+            </value>
+            <value>
+                <fullName>Россия</fullName>
+                <default>false</default>
+                <label>Россия</label>
+            </value>
+            <value>
+                <fullName>Центральный федеральный округ</fullName>
+                <default>false</default>
+                <label>Центральный федеральный округ</label>
+            </value>
+            <value>
+                <fullName>Южный федеральный округ</fullName>
+                <default>false</default>
+                <label>Южный федеральный округ</label>
+            </value>
+            <value>
+                <fullName>Северо-Западный федеральный округ</fullName>
+                <default>false</default>
+                <label>Северо-Западный федеральный округ</label>
+            </value>
+            <value>
+                <fullName>Дальневосточный федеральный округ</fullName>
+                <default>false</default>
+                <label>Дальневосточный федеральный округ</label>
+            </value>
+            <value>
+                <fullName>Сибирский федеральный округ</fullName>
+                <default>false</default>
+                <label>Сибирский федеральный округ</label>
+            </value>
+            <value>
+                <fullName>Уральский федеральный округ</fullName>
+                <default>false</default>
+                <label>Уральский федеральный округ</label>
+            </value>
+            <value>
+                <fullName>Приволжский федеральный округ</fullName>
+                <default>false</default>
+                <label>Приволжский федеральный округ</label>
+            </value>
+            <value>
+                <fullName>Крымский федеральный округ</fullName>
+                <default>false</default>
+                <label>Крымский федеральный округ</label>
+            </value>
+            <value>
+                <fullName>Норвегия</fullName>
+                <default>false</default>
+                <label>Норвегия</label>
+            </value>
+            <value>
+                <fullName>Финляндия</fullName>
+                <default>false</default>
+                <label>Финляндия</label>
+            </value>
+            <value>
+                <fullName>Эстония</fullName>
+                <default>false</default>
+                <label>Эстония</label>
+            </value>
+            <value>
+                <fullName>Латвия</fullName>
+                <default>false</default>
+                <label>Латвия</label>
+            </value>
+            <value>
+                <fullName>Литва</fullName>
+                <default>false</default>
+                <label>Литва</label>
+            </value>
+            <value>
+                <fullName>Польша</fullName>
+                <default>false</default>
+                <label>Польша</label>
+            </value>
+            <value>
+                <fullName>Белоруссия</fullName>
+                <default>false</default>
+                <label>Белоруссия</label>
+            </value>
+            <value>
+                <fullName>Украина</fullName>
+                <default>false</default>
+                <label>Украина</label>
+            </value>
+            <value>
+                <fullName>Абхазия</fullName>
+                <default>false</default>
+                <label>Абхазия</label>
+            </value>
+            <value>
+                <fullName>Грузия</fullName>
+                <default>false</default>
+                <label>Грузия</label>
+            </value>
+            <value>
+                <fullName>Южная Осетия</fullName>
+                <default>false</default>
+                <label>Южная Осетия</label>
+            </value>
+            <value>
+                <fullName>Азербайджан</fullName>
+                <default>false</default>
+                <label>Азербайджан</label>
+            </value>
+            <value>
+                <fullName>Казахстан</fullName>
+                <default>false</default>
+                <label>Казахстан</label>
+            </value>
+            <value>
+                <fullName>Китай</fullName>
+                <default>false</default>
+                <label>Китай</label>
+            </value>
+            <value>
+                <fullName>Монголия</fullName>
+                <default>false</default>
+                <label>Монголия</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>г. Санкт-Петербург</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>г. Москва</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Адыгея</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Ханты-Мансийский автономный округ - Югра</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Ямало-Ненецкий автономный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Башкортостан</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Бурятия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Алтай</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Севастополь</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Дагестан</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Ингушетия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Кабардино-Балкарская Республика</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Калмыкия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Карачаево-Черкесия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Карелия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Коми</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Марий Эл</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Мордовия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Саха (Якутия)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Северная Осетия - Алания</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Татарстан</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Тыва</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Удмуртская Республика</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Хакасия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Чеченская республика</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Чувашская Республика</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Алтайский край</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Краснодарский край</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Красноярский край</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Приморский край</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Ставропольский край</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Хабаровский край</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Амурская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Архангельская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Астраханская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Белгородская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Брянская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Владимирская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Волгоградская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Вологодская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Воронежская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Ивановская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Иркутская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Калининградская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Калужская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Камчатский край</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Камчатская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Кемеровская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Кировская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Костромская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Курганская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Курская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Ленинградская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Липецкая область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Магаданская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Московская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Мурманская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Нижегородская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Новгородская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Новосибирская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Омская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Оренбургская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Орловская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Пензенская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Пермский край</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Пермская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Псковская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Ростовская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Рязанская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Самарская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Саратовская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Сахалинская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Свердловская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Смоленская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Тамбовская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Тверская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Томская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Тульская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Тюменская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Ульяновская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Челябинская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Забайкальский край</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Читинская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Ярославская область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Еврейская автономная область</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Агинский Бурятский автономный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Коми-Пермяцкий автономный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Корякский автономный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Ненецкий автономный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Таймырский автономный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>УстьОрдынский Бурятский автономный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Чукотский автономный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Эвенкийский автономный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>Республика Крым</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <valueName>г.Севастополь</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Норвегия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Финляндия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Эстония</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Латвия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Литва</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Польша</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Белоруссия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Украина</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Абхазия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Грузия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Южная Осетия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Азербайджан</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Казахстан</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Китай</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Монголия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National</controllingFieldValue>
+            <valueName>Россия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National</controllingFieldValue>
+            <valueName>Центральный федеральный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National</controllingFieldValue>
+            <valueName>Южный федеральный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National</controllingFieldValue>
+            <valueName>Северо-Западный федеральный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National</controllingFieldValue>
+            <valueName>Дальневосточный федеральный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National</controllingFieldValue>
+            <valueName>Сибирский федеральный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National</controllingFieldValue>
+            <valueName>Уральский федеральный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National</controllingFieldValue>
+            <valueName>Приволжский федеральный округ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>National</controllingFieldValue>
+            <valueName>Крымский федеральный округ</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

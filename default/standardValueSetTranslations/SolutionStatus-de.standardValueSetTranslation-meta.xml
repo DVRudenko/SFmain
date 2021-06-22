@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Draft</masterLabel>
+        <translation>Entwurf</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Duplicate</masterLabel>
+        <translation>Duplikat</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Reviewed</masterLabel>
+        <translation>Bewertet</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

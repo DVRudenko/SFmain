@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Manual_Opportunities_NL</fullName>
+    <columns>Anzahl_der_Karten__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Sec_Channel__c</columns>
+    <columns>E2E_Errors__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>E2E_Sales_Type__c</columns>
+    <columns>E2E_Status__c</columns>
+    <columns>E2E_Sub_Status__c</columns>
+    <columns>E2E__c</columns>
+    <columns>OPPORTUNITY.LEAD_SOURCE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>E2E__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>cgeer</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSED</field>
+        <operation>notEqual</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.WON</field>
+        <operation>notEqual</operation>
+        <value>1</value>
+    </filters>
+    <label>E2E Manual Opportunities_NL</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>E2E_Form_Development_team</group>
+        <group>E2E_Manual</group>
+    </sharedTo>
+</ListView>

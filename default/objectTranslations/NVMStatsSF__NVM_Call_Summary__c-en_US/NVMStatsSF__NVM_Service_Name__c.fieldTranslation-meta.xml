@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The service/line name that was called --></help>
+    <label><!-- NVM Service Name --></label>
+    <name>NVMStatsSF__NVM_Service_Name__c</name>
+</CustomFieldTranslation>

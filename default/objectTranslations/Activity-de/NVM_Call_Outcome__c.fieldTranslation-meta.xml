@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Setting one of these on the &quot;Log a Call&quot; quick action will lead to follow up actions/tasks to be created in Salesforce automatically --></help>
+    <label><!-- Call Outcome --></label>
+    <name>NVM_Call_Outcome__c</name>
+    <picklistValues>
+        <masterLabel>Additional info requested</masterLabel>
+        <translation>Zusatzinfos benötigt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Black list</masterLabel>
+        <translation><!-- Black list --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed</masterLabel>
+        <translation>Geschlossen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer N/A</masterLabel>
+        <translation>Beschäftigt/Urlaub</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer thinking</masterLabel>
+        <translation>Entscheidung anstehend</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deposit Paid</masterLabel>
+        <translation>Kaution bezahlt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deposit requested</masterLabel>
+        <translation>Kaution verlangt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Didn’t talk to DM</masterLabel>
+        <translation>Entscheider nicht erreicht</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disqualified</masterLabel>
+        <translation>Disqualifiziert</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Left voicemail</masterLabel>
+        <translation>AB hinterlassen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No answer</masterLabel>
+        <translation>Kunde NE</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Offer sent</masterLabel>
+        <translation>Angebot versendet</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Starts process</masterLabel>
+        <translation><!-- Starts process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Submitted to Credit</masterLabel>
+        <translation>Credit Check/Credit Factory</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technical problem</masterLabel>
+        <translation>Technisches Problem</translation>
+    </picklistValues>
+</CustomFieldTranslation>

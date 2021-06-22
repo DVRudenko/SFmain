@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Причины Отказа</label>
+    <name>PPR_Lost_Reasons__c</name>
+    <picklistValues>
+        <masterLabel>Bad Data/Wrong Phone Number</masterLabel>
+        <translation>Некорректная контактная информация</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bad Prior Experience</masterLabel>
+        <translation>Негативный опыт работы с нами</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Denial of credit</masterLabel>
+        <translation>Отказ в кредите</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email SPAM</masterLabel>
+        <translation>Тест/СПАМ</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Existing Customer</masterLabel>
+        <translation>Существующий клиент</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gov&#39;t/Non-Profit/Tax Exempt</masterLabel>
+        <translation>Тендер/Бюджетная организация</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Company Vehicles</masterLabel>
+        <translation>Нет автопарка</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No suitable gas stations</masterLabel>
+        <translation>Нет подходящих АЗС</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Interested</masterLabel>
+        <translation>Отказ от разговора</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a Valid Business</masterLabel>
+        <translation>Не является организацией</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onsite Tank(s)</masterLabel>
+        <translation>Топливо оптом/Собственная АЗС</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Другое</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Out of Business</masterLabel>
+        <translation>Банкрот</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Re-request</masterLabel>
+        <translation>Повторная заявка</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refusal from PPR</masterLabel>
+        <translation>Отказ со стороны ППР</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Return to funnel</masterLabel>
+        <translation>Возврат в воронку</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rewards Programs/Rebates/Discounts</masterLabel>
+        <translation>Хотят более выгодной цены/скидки/условий</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STK - terminal</masterLabel>
+        <translation>СТК - терминал</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable to Reach</masterLabel>
+        <translation>Контактное лицо недостижимо</translation>
+    </picklistValues>
+</CustomFieldTranslation>

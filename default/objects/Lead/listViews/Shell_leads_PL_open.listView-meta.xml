@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shell_leads_PL_open</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>Number_of_days__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Endkunde</value>
+    </filters>
+    <filters>
+        <field>Laenderkennung__c</field>
+        <operation>equals</operation>
+        <value>Poland</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>notContain</operation>
+        <value>pilot,test</value>
+    </filters>
+    <label>Shell_leads_PL - open</label>
+    <language>cs</language>
+    <sharedTo>
+        <role>Salesteam_Inbound_2</role>
+        <role>Teamleiter_Inbound_2</role>
+    </sharedTo>
+</ListView>

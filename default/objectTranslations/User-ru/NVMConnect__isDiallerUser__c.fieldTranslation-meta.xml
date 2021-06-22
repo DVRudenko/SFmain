@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Check to allocate dialler capability to this user.  They must have a ContactWorld Agent Id as well. --></help>
+    <label><!-- Can Dial Lists via Connect --></label>
+    <name>NVMConnect__isDiallerUser__c</name>
+</CustomFieldTranslation>

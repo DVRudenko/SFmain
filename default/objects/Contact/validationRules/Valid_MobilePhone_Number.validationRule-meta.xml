@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_MobilePhone_Number</fullName>
+    <active>true</active>
+    <description>Allows to enter a phone number in a valid format only</description>
+    <errorConditionFormula>AND(
+            NOT(BEGINS($User.Username, 'e2e_ru@fleetcoremea.force.com')),
+NOT(BEGINS($User.Username, 'sfintegration@transitcard.ru')),
+            OR(ISNEW(), ISCHANGED(MobilePhone), ISCHANGED(MobilePhone_Status__c)),
+            NOT(OR(
+            ISBLANK(MobilePhone),
+            ISPICKVAL(MobilePhone_Status__c, 'Needs validation'),
+            AND (
+            OR( AND(BEGINS(MobilePhone, '+'), ISNUMBER(LEFT(SUBSTITUTE(MobilePhone, '+', ''), 1))),
+            BEGINS(MobilePhone, '8')
+            ),
+            NOT(FIND('+', MobilePhone, 2) != 0),
+            NOT(CONTAINS(MobilePhone, '.')),
+            ISNUMBER(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(MobilePhone, '+', ''), '#', ''),' ', '')),
+            OR (
+            AND(NOT(CONTAINS(MobilePhone, '#')),
+            IF(OR(BEGINS(MobilePhone, '+7'), BEGINS(MobilePhone, '8')),
+            LEN(SUBSTITUTE(SUBSTITUTE(MobilePhone, '+', ''),' ', '')) = 11,
+            AND(LEN(SUBSTITUTE(SUBSTITUTE(MobilePhone, '+', ''),' ', '')) &gt;= 8, LEN(SUBSTITUTE(SUBSTITUTE(MobilePhone, '+', ''),' ', '')) &lt;= 15)
+            )
+            ),
+            AND(CONTAINS(MobilePhone, '#'),
+            IF(OR(BEGINS(MobilePhone, '+7'), BEGINS(MobilePhone, '8')),
+            FIND('#', SUBSTITUTE(SUBSTITUTE(MobilePhone, '+', ''),' ', '')) = 12,
+            AND(FIND('#', SUBSTITUTE(SUBSTITUTE(MobilePhone, '+', ''),' ', '')) &gt;= 9, FIND('#', SUBSTITUTE(SUBSTITUTE(MobilePhone, '+', ''),' ', '')) &lt;= 16)
+            )
+            )
+            )
+            )
+            ))
+            )</errorConditionFormula>
+    <errorDisplayField>MobilePhone</errorDisplayField>
+    <errorMessage>Wrong phone number format. Only '+', '0-9' and spaces are allowed. Use '#' for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: '+49 5545555#045'</errorMessage>
+</ValidationRule>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carnet_Standard_Only_Fields</fullName>
+    <active>true</active>
+    <description>Fields that can be modified only for Carnet Standard.</description>
+    <errorConditionFormula>IF(
+AND(
+RecordType.DeveloperName = "Carnet",
+ISCHANGED(Unit_Package_Price_Paid_monthly__c),
+CONTAINS(TEXT(Product__c), "Carnet OBD")),
+true,
+false)</errorConditionFormula>
+    <errorMessage>You cannot change this field on Carnet OBD Opportunity!</errorMessage>
+</ValidationRule>

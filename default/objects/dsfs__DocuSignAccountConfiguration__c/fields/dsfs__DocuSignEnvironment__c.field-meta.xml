@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__DocuSignEnvironment__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The DocuSign environment that api calls will be sent to. Value should be prod for normal use, and can be set to demo or preview for testing purposes, or when running in a sandbox.</description>
+    <externalId>false</externalId>
+    <label>DocuSignEnvironment</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>production</fullName>
+                <default>true</default>
+                <label>production</label>
+            </value>
+            <value>
+                <fullName>demo</fullName>
+                <default>false</default>
+                <label>demo</label>
+            </value>
+            <value>
+                <fullName>preview</fullName>
+                <default>false</default>
+                <label>preview</label>
+            </value>
+            <value>
+                <fullName>test</fullName>
+                <default>false</default>
+                <label>test</label>
+            </value>
+            <value>
+                <fullName>stage</fullName>
+                <default>false</default>
+                <label>stage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

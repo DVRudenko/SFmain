@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Комментарий для команды сервиса --></help>
+    <label>Дополнительные договоренности с клиентом</label>
+    <name>Extra_terms__c</name>
+</CustomFieldTranslation>

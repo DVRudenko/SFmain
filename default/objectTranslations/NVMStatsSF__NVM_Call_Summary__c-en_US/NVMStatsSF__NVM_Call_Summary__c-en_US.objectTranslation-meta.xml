@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Case Layout</layout>
+        <sections>
+            <label><!-- Call Segments &amp; Times --></label>
+            <section>Call Segments &amp; Times</section>
+        </sections>
+        <sections>
+            <label><!-- Call Timeline --></label>
+            <section>Call Timeline</section>
+        </sections>
+        <sections>
+            <label><!-- Caller and Agent Related --></label>
+            <section>Caller and Agent Related</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Interaction Plan --></label>
+            <section>Interaction Plan</section>
+        </sections>
+        <sections>
+            <label><!-- Segmentation --></label>
+            <section>Segmentation</section>
+        </sections>
+        <sections>
+            <label><!-- Summary Record Processing --></label>
+            <section>Summary Record Processing</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Internal Call Summary Layout</layout>
+        <sections>
+            <label><!-- Call Segments &amp; Times --></label>
+            <section>Call Segments &amp; Times</section>
+        </sections>
+        <sections>
+            <label><!-- Call Timeline --></label>
+            <section>Call Timeline</section>
+        </sections>
+        <sections>
+            <label><!-- Caller and Agent Related --></label>
+            <section>Caller and Agent Related</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Segmentation --></label>
+            <section>Segmentation</section>
+        </sections>
+        <sections>
+            <label><!-- Summary Record Processing --></label>
+            <section>Summary Record Processing</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NVM Analytics Internal Summary</layout>
+        <sections>
+            <label><!-- Call Segments &amp; Times --></label>
+            <section>Call Segments &amp; Times</section>
+        </sections>
+        <sections>
+            <label><!-- Call Timeline --></label>
+            <section>Call Timeline</section>
+        </sections>
+        <sections>
+            <label><!-- Caller and Agent Related --></label>
+            <section>Caller and Agent Related</section>
+        </sections>
+        <sections>
+            <label><!-- Conversation Analyzer --></label>
+            <section>Conversation Analyzer</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Segmentation --></label>
+            <section>Segmentation</section>
+        </sections>
+        <sections>
+            <label><!-- Summary Record Processing --></label>
+            <section>Summary Record Processing</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NVM Analytics Outbound Summary</layout>
+        <sections>
+            <label><!-- Call Segments &amp; Times --></label>
+            <section>Call Segments &amp; Times</section>
+        </sections>
+        <sections>
+            <label><!-- Call Timeline --></label>
+            <section>Call Timeline</section>
+        </sections>
+        <sections>
+            <label><!-- Caller and Agent Related --></label>
+            <section>Caller and Agent Related</section>
+        </sections>
+        <sections>
+            <label><!-- Conversation Analyzer --></label>
+            <section>Conversation Analyzer</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Segmentation --></label>
+            <section>Segmentation</section>
+        </sections>
+        <sections>
+            <label><!-- Summary Record Processing --></label>
+            <section>Summary Record Processing</section>
+        </sections>
+        <sections>
+            <label><!-- Transcription --></label>
+            <section>Transcription</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NVM Analytics Summary</layout>
+        <sections>
+            <label><!-- Call Plan Path --></label>
+            <section>Call Plan Path</section>
+        </sections>
+        <sections>
+            <label><!-- Call Segments &amp; Times --></label>
+            <section>Call Segments &amp; Times</section>
+        </sections>
+        <sections>
+            <label><!-- Call Timeline --></label>
+            <section>Call Timeline</section>
+        </sections>
+        <sections>
+            <label><!-- Caller and Agent Related --></label>
+            <section>Caller and Agent Related</section>
+        </sections>
+        <sections>
+            <label><!-- Conversation Analyzer --></label>
+            <section>Conversation Analyzer</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Segmentation --></label>
+            <section>Segmentation</section>
+        </sections>
+        <sections>
+            <label><!-- Summary Record Processing --></label>
+            <section>Summary Record Processing</section>
+        </sections>
+        <sections>
+            <label><!-- Transcription --></label>
+            <section>Transcription</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NVM Call Summary Layout</layout>
+        <sections>
+            <label><!-- Call Plan Path --></label>
+            <section>Call Plan Path</section>
+        </sections>
+        <sections>
+            <label><!-- Call Segments &amp; Times --></label>
+            <section>Call Segments &amp; Times</section>
+        </sections>
+        <sections>
+            <label><!-- Call Timeline --></label>
+            <section>Call Timeline</section>
+        </sections>
+        <sections>
+            <label><!-- Caller and Agent Related --></label>
+            <section>Caller and Agent Related</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Segmentation --></label>
+            <section>Segmentation</section>
+        </sections>
+        <sections>
+            <label><!-- Summary Record Processing --></label>
+            <section>Summary Record Processing</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Outbound Call Layout</layout>
+        <sections>
+            <label><!-- Call Segments &amp; Times --></label>
+            <section>Call Segments &amp; Times</section>
+        </sections>
+        <sections>
+            <label><!-- Call Timeline --></label>
+            <section>Call Timeline</section>
+        </sections>
+        <sections>
+            <label><!-- Caller and Agent Related --></label>
+            <section>Caller and Agent Related</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Segmentation --></label>
+            <section>Segmentation</section>
+        </sections>
+        <sections>
+            <label><!-- Summary Record Processing --></label>
+            <section>Summary Record Processing</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Case --></label>
+        <name>NVMStatsSF__Case</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Inbound Call --></label>
+        <name>NVMStatsSF__Inbound_Call</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Calls between Agents (outbound for one and inbound for the other) --></description>
+        <label><!-- Internal Call --></label>
+        <name>NVMStatsSF__Internal_Call</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Outbound Call --></label>
+        <name>NVMStatsSF__Outbound_Call</name>
+    </recordTypes>
+</CustomObjectTranslation>

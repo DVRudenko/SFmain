@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Simple Week count of the UTC Week number of the event start --></help>
+    <label><!-- Week of Year --></label>
+    <name>NVMStatsSF__Week_of_Year__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vehicle_Card_specific__c</fullName>
+    <description>Florian Skiba</description>
+    <externalId>false</externalId>
+    <label>Disclosure Group – no insurance</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FCCT0000</fullName>
+                <default>false</default>
+                <label>FCCT0000</label>
+            </value>
+            <value>
+                <fullName>FCCT0099</fullName>
+                <default>false</default>
+                <label>FCCT0099</label>
+            </value>
+            <value>
+                <fullName>FCCT0149</fullName>
+                <default>false</default>
+                <label>FCCT0149</label>
+            </value>
+            <value>
+                <fullName>FCCI0249</fullName>
+                <default>false</default>
+                <label>FCCI0249</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

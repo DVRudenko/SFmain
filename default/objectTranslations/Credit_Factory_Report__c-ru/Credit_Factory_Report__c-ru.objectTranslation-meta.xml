@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value><!-- Credit Factory Report --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value><!-- Credit Factory Report --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value><!-- Credit Factory Report --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value><!-- Credit Factory Report --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value><!-- Credit Factory Report --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value><!-- Credit Factory Report --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value><!-- Credit Factory Report --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value><!-- Credit Factory Report --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value><!-- Credit Factory Report --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value><!-- Credit Factory Report --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>false</plural>
+        <value><!-- Credit Factory Report --></value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>true</plural>
+        <value><!-- Credit Factory Report --></value>
+    </caseValues>
+    <gender><!-- Neuter --></gender>
+    <layouts>
+        <layout>Company Info</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Credit Factory Report Layout</layout>
+        <sections>
+            <label><!-- BIG --></label>
+            <section>BIG</section>
+        </sections>
+        <sections>
+            <label><!-- Calculations --></label>
+            <section>Calculations</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- LexisNexis --></label>
+            <section>LexisNexis</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Russian credit check</layout>
+        <sections>
+            <label>ЧЧС</label>
+            <section>Black list check</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label>Общая информация</label>
+            <section>General information</section>
+        </sections>
+        <sections>
+            <label>Пре-скоринг</label>
+            <section>Prescoring</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Russian credit check manual</layout>
+        <sections>
+            <label>ЧЧС</label>
+            <section>Black list check</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label>Общая информация</label>
+            <section>General information</section>
+        </sections>
+        <sections>
+            <label>Скоринг</label>
+            <section>Scoring</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Credit Factory Report Name --></nameFieldLabel>
+    <recordTypes>
+        <label><!-- Company Info --></label>
+        <name>Company_Info</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Default --></label>
+        <name>Default</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Russian credit check --></label>
+        <name>Russian_credit_check</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Russian credit check manual --></label>
+        <name>Russian_credit_check_manual</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- FRAUD Scoring --></description>
+        <label>Российский дополнительный скоринг</label>
+        <name>Russian_FRAUD_check</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t edit this record because you are not the owner of it --></errorMessage>
+        <name>Change_RU_Scoring_record</name>
+    </validationRules>
+</CustomObjectTranslation>

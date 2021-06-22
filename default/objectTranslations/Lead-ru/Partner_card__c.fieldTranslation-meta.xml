@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Карта Партнера</label>
+    <name>Partner_card__c</name>
+    <picklistValues>
+        <masterLabel>PORT ONE OU</masterLabel>
+        <translation><!-- PORT ONE OU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell</masterLabel>
+        <translation><!-- Shell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unicard oil</masterLabel>
+        <translation><!-- Unicard oil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>АЗС Технология</masterLabel>
+        <translation><!-- АЗС Технология --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>АЗС-ПРОСТОР</masterLabel>
+        <translation><!-- АЗС-ПРОСТОР --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>АЛЬКОРР</masterLabel>
+        <translation><!-- АЛЬКОРР --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Альгазтранс</masterLabel>
+        <translation><!-- Альгазтранс --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ВАЛАР</masterLabel>
+        <translation><!-- ВАЛАР --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ГПН</masterLabel>
+        <translation><!-- ГПН --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ГЭС</masterLabel>
+        <translation><!-- ГЭС --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Гамаюн</masterLabel>
+        <translation><!-- Гамаюн --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Грилен-Карт</masterLabel>
+        <translation><!-- Грилен-Карт --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Другое</masterLabel>
+        <translation><!-- Другое --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ИНТРАНСГАЗ-СЕРВИС</masterLabel>
+        <translation><!-- ИНТРАНСГАЗ-СЕРВИС --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Л-Ульяновскнефтепродукт</masterLabel>
+        <translation><!-- Л-Ульяновскнефтепродукт --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Лукойл</masterLabel>
+        <translation><!-- Лукойл --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>МАСТЕРС</masterLabel>
+        <translation><!-- МАСТЕРС --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Магистраль</masterLabel>
+        <translation><!-- Магистраль --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>НОВГОРОДНЕФТЕПРОДУКТ</masterLabel>
+        <translation><!-- НОВГОРОДНЕФТЕПРОДУКТ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Нефтемаркет</masterLabel>
+        <translation><!-- Нефтемаркет --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ОПТАН-Мордовия</masterLabel>
+        <translation><!-- ОПТАН-Мордовия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ПИТ-СТОП</masterLabel>
+        <translation><!-- ПИТ-СТОП --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ПТК</masterLabel>
+        <translation><!-- ПТК --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ПТК Уралнефть</masterLabel>
+        <translation><!-- ПТК Уралнефть --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Петролстарт</masterLabel>
+        <translation><!-- Петролстарт --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Пикалёвская Топливная Компания</masterLabel>
+        <translation><!-- Пикалёвская Топливная Компания --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Роснефть</masterLabel>
+        <translation><!-- Роснефть --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Сапсан</masterLabel>
+        <translation><!-- Сапсан --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Совинтеравтосервис</masterLabel>
+        <translation><!-- Совинтеравтосервис --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ТАИФ-НК АЗС</masterLabel>
+        <translation><!-- ТАИФ-НК АЗС --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ТД ИЛИМ</masterLabel>
+        <translation><!-- ТД ИЛИМ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ТД Нефтьмагистраль</masterLabel>
+        <translation><!-- ТД Нефтьмагистраль --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ТК ТранзитСити</masterLabel>
+        <translation><!-- ТК ТранзитСити --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ТРАНСЕРВИС-АЗС</masterLabel>
+        <translation><!-- ТРАНСЕРВИС-АЗС --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Тайм</masterLabel>
+        <translation><!-- Тайм --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Терминал</masterLabel>
+        <translation><!-- Терминал --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ТрансКарт</masterLabel>
+        <translation><!-- ТрансКарт --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Транспорт</masterLabel>
+        <translation><!-- Транспорт --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Фаэтон- топливная сеть номер 1</masterLabel>
+        <translation><!-- Фаэтон- топливная сеть номер 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Фриз</masterLabel>
+        <translation><!-- Фриз --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ЦНП-КАРД</masterLabel>
+        <translation><!-- ЦНП-КАРД --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Шельф (ТУРБО)</masterLabel>
+        <translation><!-- Шельф (ТУРБО) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ЭЦК</masterLabel>
+        <translation><!-- ЭЦК --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

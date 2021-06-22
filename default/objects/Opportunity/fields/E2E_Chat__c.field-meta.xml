@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Chat__c</fullName>
+    <externalId>false</externalId>
+    <label>E2E Chat Usage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>not initiated</fullName>
+                <default>true</default>
+                <label>not initiated</label>
+            </value>
+            <value>
+                <fullName>initiated manual</fullName>
+                <default>false</default>
+                <label>initiated manual</label>
+            </value>
+            <value>
+                <fullName>initiated auto</fullName>
+                <default>false</default>
+                <label>initiated auto</label>
+            </value>
+            <value>
+                <fullName>auto-replied</fullName>
+                <default>false</default>
+                <label>auto-replied</label>
+            </value>
+            <value>
+                <fullName>auto-not replied</fullName>
+                <default>false</default>
+                <label>auto-not replied</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

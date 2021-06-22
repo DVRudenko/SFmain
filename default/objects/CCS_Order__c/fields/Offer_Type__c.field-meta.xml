@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Offer_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Offer Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Limit Standard</fullName>
+                <default>false</default>
+                <label>Limit Standard</label>
+            </value>
+            <value>
+                <fullName>CCS Limit INDIVIDUAL</fullName>
+                <default>false</default>
+                <label>CCS Limit INDIVIDUAL</label>
+            </value>
+            <value>
+                <fullName>CCS LIMIT ESO!</fullName>
+                <default>false</default>
+                <label>CCS LIMIT ESO!</label>
+            </value>
+            <value>
+                <fullName>CCS Limit ESO</fullName>
+                <default>false</default>
+                <label>CCS Limit ESO</label>
+            </value>
+            <value>
+                <fullName>CCS Limit Celá síť</fullName>
+                <default>false</default>
+                <label>CCS Limit Celá síť</label>
+            </value>
+            <value>
+                <fullName>CCS Limit Moje síť</fullName>
+                <default>false</default>
+                <label>CCS Limit Moje síť</label>
+            </value>
+            <value>
+                <fullName>CCS Limit Moje síť/M4</fullName>
+                <default>false</default>
+                <label>CCS Limit Moje síť/M4</label>
+            </value>
+            <value>
+                <fullName>CCS Limit Štandard</fullName>
+                <default>false</default>
+                <label>CCS Limit Štandard</label>
+            </value>
+            <value>
+                <fullName>CCS Limit Moja sieť</fullName>
+                <default>false</default>
+                <label>CCS Limit Moja sieť</label>
+            </value>
+            <value>
+                <fullName>CCS Limit Celá sieť</fullName>
+                <default>false</default>
+                <label>CCS Limit Celá sieť</label>
+            </value>
+            <value>
+                <fullName>Limit+</fullName>
+                <default>false</default>
+                <label>Limit+</label>
+            </value>
+            <value>
+                <fullName>Limit+ Mini</fullName>
+                <default>false</default>
+                <label>Limit+ Mini</label>
+            </value>
+            <value>
+                <fullName>Limit+ Mini3</fullName>
+                <default>false</default>
+                <label>Limit+ Mini3</label>
+            </value>
+            <value>
+                <fullName>Bonus</fullName>
+                <default>false</default>
+                <label>Bonus</label>
+            </value>
+            <value>
+                <fullName>Bonus+</fullName>
+                <default>false</default>
+                <label>Bonus+</label>
+            </value>
+            <value>
+                <fullName>Carnet výhodně</fullName>
+                <default>false</default>
+                <label>Carnet výhodně</label>
+            </value>
+            <value>
+                <fullName>Sada KOMPLET</fullName>
+                <default>false</default>
+                <label>Sada KOMPLET</label>
+            </value>
+            <value>
+                <fullName>Carnet 10+ za 1Kč</fullName>
+                <default>false</default>
+                <label>Carnet 10+ za 1Kč</label>
+            </value>
+            <value>
+                <fullName>Carnet 5+ks za 1Kč!</fullName>
+                <default>false</default>
+                <label>Carnet 5+ks za 1Kč!</label>
+            </value>
+            <value>
+                <fullName>Carnet za 1 Kč</fullName>
+                <default>false</default>
+                <label>Carnet za 1 Kč</label>
+            </value>
+            <value>
+                <fullName>1+1 Zdarma</fullName>
+                <default>false</default>
+                <label>1+1 Zdarma</label>
+            </value>
+            <value>
+                <fullName>2+1 Zdarma</fullName>
+                <default>false</default>
+                <label>2+1 Zdarma</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet s předplacenou kartou na PHM s nábojem 1500 Kč zdarma!</fullName>
+                <default>false</default>
+                <label>CCS Carnet s předplacenou kartou na PHM s nábojem 1500 Kč zdarma!</label>
+            </value>
+            <value>
+                <fullName>Carnet výhodne</fullName>
+                <default>false</default>
+                <label>Carnet výhodne</label>
+            </value>
+            <value>
+                <fullName>Carnet 5+ks za 1 EUR!</fullName>
+                <default>false</default>
+                <label>Carnet 5+ks za 1 EUR!</label>
+            </value>
+            <value>
+                <fullName>Carnet 10ks+ za 1 EUR!</fullName>
+                <default>false</default>
+                <label>Carnet 10ks+ za 1 EUR!</label>
+            </value>
+            <value>
+                <fullName>Carnet za 1 EUR</fullName>
+                <default>false</default>
+                <label>Carnet za 1 EUR</label>
+            </value>
+            <value>
+                <fullName>1+1 zadarmo</fullName>
+                <default>false</default>
+                <label>1+1 zadarmo</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet s predplatenou kartou na 50 EUR</fullName>
+                <default>false</default>
+                <label>CCS Carnet s predplatenou kartou na 50 EUR</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet s predplatenou kartou na 40 EUR</fullName>
+                <default>false</default>
+                <label>CCS Carnet s predplatenou kartou na 40 EUR</label>
+            </value>
+            <value>
+                <fullName>Mobilní jednotka OBD2</fullName>
+                <default>false</default>
+                <label>Mobilní jednotka OBD2</label>
+            </value>
+            <value>
+                <fullName>Bonus Fleet</fullName>
+                <default>false</default>
+                <label>Bonus Fleet</label>
+            </value>
+            <value>
+                <fullName>Bonus FLEET Celá síť</fullName>
+                <default>false</default>
+                <label>Bonus FLEET Celá síť</label>
+            </value>
+            <value>
+                <fullName>Bonus FLEET Celá sieť</fullName>
+                <default>false</default>
+                <label>Bonus FLEET Celá sieť</label>
+            </value>
+            <value>
+                <fullName>Bonus FLEET Truck</fullName>
+                <default>false</default>
+                <label>Bonus FLEET Truck</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <valueName>CCS Limit INDIVIDUAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <valueName>CCS LIMIT ESO!</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <valueName>CCS Limit ESO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <valueName>CCS Limit Štandard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <valueName>CCS Limit Moja sieť</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <valueName>CCS Limit Celá sieť</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <valueName>Limit+</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <valueName>Limit+ Mini</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <valueName>Limit+ Mini3</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <valueName>Bonus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <valueName>Bonus+</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Bonus Fleet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <valueName>Bonus Fleet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Bonus Fleet SK</controllingFieldValue>
+            <valueName>Bonus FLEET Celá sieť</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Bonus Fleet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <valueName>Bonus FLEET Truck</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <valueName>Carnet výhodne</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <valueName>Carnet 5+ks za 1 EUR!</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <valueName>Carnet 10ks+ za 1 EUR!</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <valueName>Carnet za 1 EUR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <valueName>1+1 zadarmo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <valueName>CCS Carnet s predplatenou kartou na 50 EUR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <valueName>CCS Carnet s predplatenou kartou na 40 EUR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Mobilní jednotka OBD2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <valueName>Limit Standard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <valueName>CCS Limit Celá síť</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <valueName>CCS Limit Moje síť</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <valueName>CCS Limit Moje síť/M4</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <valueName>Carnet výhodně</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <valueName>Sada KOMPLET</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <valueName>Carnet 10+ za 1Kč</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <valueName>Carnet 5+ks za 1Kč!</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <valueName>Carnet za 1 Kč</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <valueName>1+1 Zdarma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <valueName>2+1 Zdarma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <valueName>CCS Carnet s předplacenou kartou na PHM s nábojem 1500 Kč zdarma!</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <valueName>Bonus FLEET Celá síť</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

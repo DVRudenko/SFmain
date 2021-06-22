@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__badge_name_and_type_are_dependent</fullName>
+    <active>true</active>
+    <errorConditionFormula>false</errorConditionFormula>
+    <errorMessage>Badge name and Badge Type fields must either both be populated or both be empty</errorMessage>
+</ValidationRule>

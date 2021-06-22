@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CloseCaseValidation</fullName>
+    <active>true</active>
+    <description>STCP1-48/UPD:STCP1-105/STCP1-414 - 'Closed' status has been replaced with 'Resolved'
+Note: sys admin profile and automated process user were exluded</description>
+    <errorConditionFormula>AND(
+ISCHANGED(Status), 
+ISPICKVAL(Status, 'Resolved'),
+OR(RecordType.DeveloperName = 'Support',
+RecordType.DeveloperName = 'Support_CCS'),
+OwnerId != $User.Id, 
+$Profile.Name != 'System Administrator',
+$Profile.Name != 'Systemadministrator',
+$Profile.Name != 'API Only',
+$User.Alias != 'autoproc'
+)</errorConditionFormula>
+    <errorMessage>You are not the owner of this case, you cannot resolve it.</errorMessage>
+</ValidationRule>

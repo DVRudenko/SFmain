@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Salutation_NL__c</fullName>
+    <description>Used for LEX Email Templates only, will be replaced/removed in the future hopefully.</description>
+    <externalId>false</externalId>
+    <formula>if(ISPICKVAL(Salutation,&quot;Herr&quot;), &quot;heer&quot;,
+if(ISPICKVAL(Salutation,&quot;Herr&quot;), &quot;heer&quot;,
+if(ISPICKVAL(Salutation,&quot;Frau&quot;), &quot;mevrouw&quot;,
+if(ISPICKVAL(Salutation,&quot;Frau Dr.&quot;), &quot;mevrouw&quot;,
+if(ISPICKVAL(Salutation,&quot;Herr Dr.&quot;), &quot;heer&quot;,
+if(ISPICKVAL(Salutation,&quot;Herr Prof.&quot;), &quot;heer&quot;,
+if(ISPICKVAL(Salutation,&quot;Frau Prof.&quot;), &quot;mevrouw&quot;, &quot;&quot;)))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Email Salutation NL</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

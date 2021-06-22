@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Why_not_interested__c</fullName>
+    <externalId>false</externalId>
+    <label>Why not interested?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Gruende_verloren__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Financial: no discount</fullName>
+                <default>false</default>
+                <label>Financial: no discount</label>
+            </value>
+            <value>
+                <fullName>Financial: monthly card fees</fullName>
+                <default>false</default>
+                <label>Financial: monthly card fees</label>
+            </value>
+            <value>
+                <fullName>Financial: transaction fees</fullName>
+                <default>false</default>
+                <label>Financial: transaction fees</label>
+            </value>
+            <value>
+                <fullName>Financial: other fees</fullName>
+                <default>false</default>
+                <label>Financial: other fees</label>
+            </value>
+            <value>
+                <fullName>Brand: Fleetcor</fullName>
+                <default>false</default>
+                <label>Brand: Fleetcor</label>
+            </value>
+            <value>
+                <fullName>Brand: Allstar Mondo</fullName>
+                <default>false</default>
+                <label>Brand: Allstar Mondo</label>
+            </value>
+            <value>
+                <fullName>Service: control</fullName>
+                <default>false</default>
+                <label>Service: control</label>
+            </value>
+            <value>
+                <fullName>Service: custom PIN</fullName>
+                <default>false</default>
+                <label>Service: custom PIN</label>
+            </value>
+            <value>
+                <fullName>Service: other</fullName>
+                <default>false</default>
+                <label>Service: other</label>
+            </value>
+            <value>
+                <fullName>Process: too complex, too many stages, too long</fullName>
+                <default>false</default>
+                <label>Process: too complex, too many stages, too long</label>
+            </value>
+            <value>
+                <fullName>Process: too many documents to hand in</fullName>
+                <default>false</default>
+                <label>Process: too many documents to hand in</label>
+            </value>
+            <value>
+                <fullName>Unable to reclaim VAT with invoice</fullName>
+                <default>false</default>
+                <label>Unable to reclaim VAT with invoice</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Not interested</controllingFieldValue>
+            <valueName>Financial: no discount</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not interested</controllingFieldValue>
+            <valueName>Financial: monthly card fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not interested</controllingFieldValue>
+            <valueName>Financial: transaction fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not interested</controllingFieldValue>
+            <valueName>Financial: other fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not interested</controllingFieldValue>
+            <valueName>Brand: Fleetcor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not interested</controllingFieldValue>
+            <valueName>Brand: Allstar Mondo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not interested</controllingFieldValue>
+            <valueName>Service: control</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not interested</controllingFieldValue>
+            <valueName>Service: custom PIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not interested</controllingFieldValue>
+            <valueName>Service: other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not interested</controllingFieldValue>
+            <valueName>Process: too complex, too many stages, too long</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not interested</controllingFieldValue>
+            <valueName>Process: too many documents to hand in</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not interested</controllingFieldValue>
+            <valueName>Unable to reclaim VAT with invoice</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

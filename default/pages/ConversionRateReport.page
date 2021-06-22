@@ -1,0 +1,425 @@
+<apex:page controller="ConversionRateReport" action="{!init}">
+    <apex:includeScript value="{! $Resource.jQuery }"/>
+    <apex:includeScript value="{! URLFOR($Resource.jQueryUI,'jquery-ui.min.js') }"/>
+    <apex:includeScript value="{! URLFOR($Resource.Tablesorter,'jquery.tablesorter.min.js') }"/>
+    <apex:form >
+        <style>
+            body .pbBody .sorterStyle.list tr.headerRow th {
+                background-image: url({! URLFOR($Resource.Tablesorter,'blue/bg.gif') });
+                background-repeat: no-repeat;
+                background-position: center right;
+                cursor: pointer;
+                padding-right: 20px;
+            }
+
+            body .pbBody table.list tr.headerRow th.headerSortUp {
+                background: url({! URLFOR($Resource.Tablesorter,'blue/asc.gif') }) grey no-repeat center right;
+                color: white;
+                font-weight: bold;
+            }
+
+            body .pbBody table.list tr.headerRow th.headerSortDown {
+                background: url({! URLFOR($Resource.Tablesorter,'blue/desc.gif') }) grey no-repeat center right;
+                color: white;
+                font-weight: bold;
+            }
+            .legendbox {
+                display: inline-block; 
+                height: 12px; 
+                width: 12px; 
+                margin-right: 5px;
+            }
+
+            .homeTab .div0 .tertiaryPalette {
+                background: #2F4F4F;
+            }
+
+            .homeTab .div1 .tertiaryPalette {
+                background: #37BC9B;
+            }
+
+            .homeTab .div2 .tertiaryPalette {
+                background: #D770AD;
+            }
+
+            .homeTab .div3 .tertiaryPalette {
+                background: #4A89DC;
+            }
+
+            .homeTab .div4 .tertiaryPalette {
+                background: #967ADC;
+            }
+
+            .homeTab .div5 .tertiaryPalette {
+                background: grey;
+            }
+            .homeTab .div6 .tertiaryPalette {
+                background: #5d6f8c;
+            }
+            .homeTab .div7 .tertiaryPalette {
+                background: #3d5170;
+            }
+
+            .div1 {
+                margin-top: 10px;
+                display: block;
+            }
+
+            .title {
+                font-family: "Times New Roman", Times, serif;
+                font-size: 110%;
+                text-align: center;
+                font-weight: 600;
+            }
+
+            .column1 {
+                background: #d9d9d9;
+                font-family: "Times New Roman", Times, serif;
+                font-size: 110%;
+                text-align: center;
+                width: 90px;
+            }
+
+            .column2 {
+                background: #fff1d1;
+                font-family: "Times New Roman", Times, serif;
+                font-size: 110%;
+                text-align: center;
+                width: 120px;
+            }
+
+            .column3 {
+                background: #fde4a2;
+                font-family: "Times New Roman", Times, serif;
+                font-size: 110%;
+                text-align: center;
+                width: 120px;
+            }
+
+            .column4 {
+                background: #fdd876;
+                font-family: "Times New Roman", Times, serif;
+                font-size: 110%;
+                text-align: center;
+                width: 120px;
+            }
+
+            .column5 {
+                background: #bd8d2d;
+                font-family: "Times New Roman", Times, serif;
+                font-size: 110%;
+                text-align: center;
+                width: 70px;
+            }
+
+            .result {
+                background: #ecf1dd;
+                font-family: "Times New Roman", Times, serif;
+                font-size: 100%;
+                text-align: center;
+                vertical-align: middle !important;
+            }
+            .fontForBonus {
+                font-size: 130%;
+            }
+
+            .arrow {
+                font-size: 500%;
+                text-align: right;
+                margin-top: 10px;
+                width: 65px;
+            }
+        </style>
+        <script type="text/javascript">
+            $j = jQuery.noConflict();    
+            $j(document).ready(function () {
+            $j("[id$=leadTable]").tablesorter();
+            $j("[id$=manualOppties]").tablesorter();
+            $j("[id$=closeWonOppties]").tablesorter();
+            $j("[id$=openDeals]").tablesorter();
+            $j("[id$=excludedOppties]").tablesorter();
+            $j("[id$=excludedLead]").tablesorter();
+            });
+        </script>    
+        <apex:pageMessages />
+        <apex:outputText value="Select period: " rendered="{! isNULL(periodId) }"/>
+        <apex:selectList value="{! selectedPeriod }" size="1" multiselect="false" rendered="{! isNULL(periodId) }">
+            <apex:selectOptions value="{! currentWeeks }"/>
+            <apex:actionSupport event="onchange" action="{! init }"/>
+        </apex:selectList>
+
+        <apex:outputText style="margin: 15px 0; font-size: 15px; display: block;" value="Select User: " rendered="{! isNULL(userParam) }"/>
+        <apex:selectList value="{! selectedUserId }" size="1" multiselect="false" rendered="{! isNULL(userParam) }">
+            <apex:selectOptions value="{! userOptions }"/>
+            <apex:actionSupport event="onchange" action="{! init }"/>
+        </apex:selectList>
+  
+        <apex:outputText style="margin-left: 15px; font-size: 15px; font-weight:bold" value="Conversion Rate for "/>
+        <apex:selectList value="{! selectedPeriod }" size="1" multiselect="false" style="margin-left: 5px;">
+                <apex:selectOptions value="{! currentWeeks }"/>
+                <apex:actionSupport action="{! init }" event="onchange"/>
+        </apex:selectList>
+        <apex:selectList value="{! selectedYear }" size="1" multiselect="false" style="margin: 0 5px;">
+                <apex:selectOptions value="{! years }"/>
+                <apex:actionSupport action="{! changeYear }" event="onchange"/>
+        </apex:selectList> <apex:outputText style="margin-left: 5px; font-size: 15px; font-weight:bold" value="({! startDateOfMonthString } - {! endDateOfMonthString })"/>
+        <p><span style="background: #37BC9B;" class="legendbox"></span>1) All leads where LastTransferDate in selected Fleetcor month. Quali_Status__c not equals to "Offer sent", "No reply – Quick Process", "Dublette", "Spam", "Sent to Support", "Not a legal entity", "Bereits Kunde - FleetCor", "Bereits Kunde - Shell", "Gesprächsverweigerer", "Keine Fahrzeuge", "Kontaktdaten falsch", "Do Not Contact", "Unternehmen erloschen". Lead Status not equals to "Disqualified" if Quali_Status__c equals to "Auto-detect". Lead Source not equals to "Adressbroker", "Bestandskunde Shell" or "Online_Chat";</p>
+        <p><span style="background: #D770AD;" class="legendbox"></span>2) All opportuninities manually created (without lead convertion) and Last_Owner_Change_Date__c selected Fleetcor month;</p>
+        <p><span style="background: #4A89DC;" class="legendbox"></span>3) All Closed Won Opportunities that converted/updated from records (1) and (2). Close Date should be in period from Last_Owner_Change_Date__c to Last_Owner_Change_Date__c + 28 days;</p>
+        <p><span style="background: #4A89DC;" class="legendbox"></span>4) {! IF(AND(OR(currentUser.UserRole.Name == 'AllStar Teamleader', currentUser.UserRole.Name == 'AllStar Sales'), radioButtonValue == 'ARamlCheck'), 'Credit Check - Pending Credit AML Opportunities: Credit Check action should be in period from Last_Owner_Change_Date__c to Last_Owner_Change_Date__c + 28 days;', 'Credit Check Opportunities: Credit Check action should be in period from Last_Owner_Change_Date__c to Last_Owner_Change_Date__c + 28 days;') }</p>
+        <p><span style="background: grey;" class="legendbox"></span>5) All Open Opportunities and Leads where Last Owner Change Date &lt; 28;</p>
+        <p><span style="background: #5d6f8c;" class="legendbox"></span>6) All Excluded Opportunities: Disabled for KPI = TRUE;</p>
+        <p><span style="background: #3d5170;" class="legendbox"></span>7) All Excluded Leads: Disabled for KPI = TRUE</p>
+        <p><strong><span style="color: red;">KPI % = </span> <span style="color: #4A89DC;">3</span> / (<span style="color: #37BC9B;">1</span> + <span style="color: #D770AD;">2</span>) * 100</strong></p>
+        <p><strong><span style="color: red;">Approval % = </span> <span style="color: #4A89DC;">3</span> / <span style="color: #967ADC;">4</span> * 100</strong></p>
+        <p>Note: If Owner of Opportunity doesn't equal to Lead Owner – we get Last_Owner_Change_Date__c from Opportunity (NOT LastTransferDate from Lead) and add existing Lead to Opportunity Owner.</p>
+        <apex:outputPanel id="div0" styleClass="div0">
+            <apex:pageBlock id="blockTable" rendered="{!AND(OR(currentUser.Profile.Name == 'Sales Inbound', currentUser.Profile.Name == 'Salesteamleiter Inbound',
+            currentUser.Profile.Name == 'Sales Director', currentUser.Profile.Name == 'System Administrator', currentUser.Profile.Name == 'AllStar Teamleader', currentUser.Profile.Name == 'AllStar Sales'), currentUser.LocaleSidKey != 'nl_BE', currentUser.LocaleSidKey != 'nl_NL')}">
+                <apex:pageblocksection title="Rating table" collapsible="true" columns="1" id="sectionTable">
+                    <table cellspacing="0" cellpadding="5" style="border-spacing: 0px 5px;">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="title">poor</td>
+                            <td class="title">average</td>
+                            <td class="title">good</td>
+                            <td class="title">excellent</td>
+                        </tr>
+                        <tr>
+                            <td><font face="Times">Conversion rate</font></td>
+                            <td class="column1"></td>
+                            <td class="column2">45%&#8804;</td>
+                            <td class="column3">46-49%</td>
+                            <td class="column4">50-53%</td>
+                            <td class="column5">&#8805;0,54%</td>
+                        </tr>
+                        <tr>
+                            <td><font face="Times">Multiplikator</font></td>
+                            <td class="result">(eurocents/<br/> 
+                            NetStarts liters)</td>
+                            <td class="result"><b>0,120</b></td>
+                            <td class="result"><b>0,175</b></td>
+                            <td class="result"><b>0,230</b></td>
+                            <td class="result"><b>0,285</b></td>
+                        </tr>
+                    </table>
+                </apex:pageblocksection>
+            </apex:pageBlock>
+
+            <apex:pageBlock id="blockTableForBENLandNL" rendered="{! AND(CONTAINS(currentUser.Profile.Name,'Inbound'), OR(currentUser.LocaleSidKey == 'nl_BE', currentUser.LocaleSidKey == 'nl_NL'))}">
+                <apex:pageblocksection title="Rating table" collapsible="true" columns="1" id="sectionTableForBENLandNL">
+                    <table cellspacing="0" cellpadding="5" style="border-spacing: 0px 5px;">
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="title">poor</td>
+                            <td class="title">average</td>
+                            <td class="title">good</td>
+                            <td class="title">excellent</td>
+                        </tr>
+                        <tr>
+                            <td><font face="Times">Conversion rate</font></td>
+                            <td class="column1"></td>
+                            <td class="column2">45%&#8804;</td>
+                            <td class="column3">46-49%</td>
+                            <td class="column4">50-53%</td>
+                            <td class="column5">&#8805;0,54%</td>
+                        </tr>
+                        <tr>
+                            <td><font face="Times">Multiplikator</font></td>
+                            <td class="result"><b>(Chech Korunas/<br/> 
+                            NetStarts liters)</b></td>
+                            <td class="result fontForBonus"><b>0,021</b></td>
+                            <td class="result fontForBonus"><b>0,0306</b></td>
+                            <td class="result fontForBonus"><b>0,04025</b></td>
+                            <td class="result fontForBonus"><b>0,0499</b></td>
+                        </tr>
+                    </table>
+                </apex:pageblocksection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+
+        <apex:pageBlock id="block1">
+            <apex:pageBlockTable value="{!finalList}" var="key" id="theTable">
+                <apex:column headerValue="Name">
+                    {! salesTeamMap[key.Id].Name }
+                </apex:column>
+                <apex:column headerValue="All Leads + Opps fixed">
+                    {! allLeadsOppsMap[key.Id] }
+                </apex:column>
+                <apex:column headerValue="All Closed Won Opportunities">
+                    {! closedWonOpps[key.Id] }
+                </apex:column>
+                <apex:column headerValue="{! IF(AND(OR(currentUser.UserRole.Name == 'AllStar Teamleader', currentUser.UserRole.Name == 'AllStar Sales'), radioButtonValue == 'ARamlCheck'), 'All Credit Check - Pending Credit AML Opportunities', 'All Credit Check Opportunities') }">
+                    {! numberOfCreditCheck }
+                </apex:column>
+                <apex:column headerValue="Conversion %">
+                    <apex:outputText value="{0, number, 0.00}">
+                        <apex:param value="{! IF(AND(NOT(ISNULL(closedWonOpps[key.Id])),allLeadsOppsMap[key.Id] != 0,NOT(ISNULL(allLeadsOppsMap[key.Id]))),closedWonOpps[key.Id] / allLeadsOppsMap[key.Id] * 100, 0)}" />
+                    </apex:outputText>%
+                </apex:column>  
+                <apex:column headerValue="Approval %">
+                    <apex:outputText value="{0, number, 0.00}">
+                        <apex:param value="{! IF(numberOfCreditCheck != 0, (closedWonOpps[key.Id] / numberOfCreditCheck) * 100, 0) }" />
+                    </apex:outputText>%
+                </apex:column>               
+            </apex:pageBlockTable>
+
+            <apex:outputPanel id="div1" styleClass="div1">
+                <apex:pageBlockSection title="Leads ({! numberOfLeads })" collapsible="true" columns="1" id="section1">
+                    <apex:pageBlockTable id="leadTable" styleClass="sorterStyle" value="{! finalCreatedLeadsMap }" var="key">
+                        <apex:column headerValue="Name">
+                            <apex:outputLink value="/{!finalCreatedLeadsMap[key].Id}" target="_blank">{! finalCreatedLeadsMap[key].FirstName } {! finalCreatedLeadsMap[key].LastName }</apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!finalCreatedLeadsMap[key].LastTransferDate}"/>
+                        <apex:column value="{!finalCreatedLeadsMap[key].isConverted}"/>
+                        <apex:column value="{!finalCreatedLeadsMap[key].Sec_Channel__c}"/>
+                        <apex:column value="{!finalCreatedLeadsMap[key].Channel__c}"/>
+                        <apex:column value="{!finalCreatedLeadsMap[key].LeadSource}"/>
+                        <apex:column value="{!finalCreatedLeadsMap[key].Status}"/>
+                        <apex:column value="{!finalCreatedLeadsMap[key].OwnerId}"/>
+                        <apex:column value="{!finalCreatedLeadsMap[key].Lead_Nr__c}"/>
+                        <apex:column value="{!finalCreatedLeadsMap[key].id}"/>
+                        <apex:column value="{!finalCreatedLeadsMap[key].ConvertedOpportunityId}"/>
+                    </apex:pageBlockTable>    
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            
+            <apex:outputPanel id="div2" styleClass="div2">
+                <apex:pageBlockSection title="Opportunities manually created ({! numberOfOpportunities })" collapsible="true" columns="1" id="section2">
+                    <apex:pageBlockTable id="manualOppties" styleClass="sorterStyle" value="{! finalCreatedOpportunitiesMap }" var="key">
+                        <apex:column headerValue="Name">
+                            <apex:outputLink value="/{!finalCreatedOpportunitiesMap[key].id}" target="_blank">
+                                {!finalCreatedOpportunitiesMap[key].Name}
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!finalCreatedOpportunitiesMap[key].StageName}"/>
+                        <apex:column value="{!finalCreatedOpportunitiesMap[key].Last_Owner_Change_Date__c}"/>
+                        <apex:column value="{!finalCreatedOpportunitiesMap[key].CloseDate}"/>
+                        <apex:column value="{!finalCreatedOpportunitiesMap[key].OwnerId}"/>
+                        <apex:column value="{!finalCreatedOpportunitiesMap[key].Opportunity_Nr__c}"/>
+                        <apex:column value="{!finalCreatedOpportunitiesMap[key].id}"/>
+                    </apex:pageBlockTable> 
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="div3" styleClass="div3">
+                <apex:pageBlockSection title="All Closed Won Opportunities ({! numberOfClosedWon })" collapsible="true" columns="1" id="section3">
+                    <apex:pageBlockTable id="closeWonOppties" styleClass="sorterStyle" value="{!finalClosedWonOpportunitiesMap}" var="key">
+                        <apex:column headerValue="Name">
+                            <apex:outputLink value="/{!finalClosedWonOpportunitiesMap[key].id}" target="_blank">
+                                {!finalClosedWonOpportunitiesMap[key].Name}
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!finalClosedWonOpportunitiesMap[key].StageName}"/>
+                        <apex:column value="{!finalClosedWonOpportunitiesMap[key].Last_Owner_Change_Date__c}"/>
+                        <apex:column value="{!finalClosedWonOpportunitiesMap[key].CloseDate}"/>
+                        <apex:column value="{!finalClosedWonOpportunitiesMap[key].OwnerId}"/>
+                        <apex:column value="{!finalClosedWonOpportunitiesMap[key].Opportunity_Nr__c}"/>
+                        <apex:column value="{!finalClosedWonOpportunitiesMap[key].Id}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="div4" styleClass="div4">
+                <apex:pageBlockSection title="{! IF(AND(OR(currentUser.UserRole.Name == 'AllStar Teamleader', currentUser.UserRole.Name == 'AllStar Sales'), radioButtonValue == 'ARamlCheck'), 'Credit Check - Pending Credit AML', 'Credit Check') } ({! numberOfCreditCheck })" collapsible="true" columns="1" id="section4">
+                    <apex:pageBlockTable value="{!creditCheckList}" var="opp">
+                        <apex:column headerValue="Name">
+                            <apex:outputLink value="/{!opp.id}" target="_blank">
+                                {!opp.Name}
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!opp.StageName}"/>
+                        <apex:column value="{!opp.Last_Owner_Change_Date__c}"/>
+                        <apex:column value="{!opp.CloseDate}"/>
+                        <apex:column value="{!opp.OwnerId}"/>
+                        <apex:column value="{!opp.Opportunity_Nr__c}"/>
+                        <apex:column value="{!opp.Id}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="div5" styleClass="div5">
+                <apex:pageBlockSection title="All Open Opportunities ({! numberHotOppties }) and Leads ({! numberHotLeads })" collapsible="true" columns="1" id="section5">
+                    <apex:pageBlockTable id="openDeals" value="{!finalOpenHotDealsList}" var="key" styleClass="sorterStyle">
+                        <apex:column headerValue="Lead Name">
+                            <apex:outputLink value="/{! IF(finalOpenHotDealsList[key].objectType = 'Lead', finalOpenHotDealsList[key].objectId, '') }" target="_blank">{! IF(finalOpenHotDealsList[key].objectType = 'Lead', finalOpenHotDealsList[key].objectName, '') }
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Opportunity Name">
+                            <apex:outputLink value="/{! IF(finalOpenHotDealsList[key].objectType = 'Opportunity', finalOpenHotDealsList[key].objectId, '') }" target="_blank">{! IF(finalOpenHotDealsList[key].objectType = 'Opportunity', finalOpenHotDealsList[key].objectName, '') }
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Status/Stage">
+                            {!finalOpenHotDealsList[key].objectStatus}
+                        </apex:column>
+                        <apex:column headerValue="Created Date">
+                            {!finalOpenHotDealsList[key].createdDate}
+                        </apex:column>
+                        <apex:column headerValue="Last Owner Change Date">
+                            {!finalOpenHotDealsList[key].assignToUserDate} 
+                        </apex:column>
+                        <apex:column headerValue="Owner">
+                            <apex:outputLink value="/{!finalOpenHotDealsList[key].ownerId}" target="_blank">{! finalOpenHotDealsList[key].ownerName }
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Until SLA Deadline">
+                            {!finalOpenHotDealsList[key].daysUntilSLAdeadline}
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="div6" styleClass="div6">
+                <apex:pageBlockSection title="All Excluded Opportunities ({! numberExcludedOppties })" collapsible="true" columns="1" id="section6">
+                    <apex:pageBlockTable id="excludedOppties" styleClass="sorterStyle" value="{!excludedOpptiesMap}" var="key">
+                        <apex:column headerValue="Name">
+                            <apex:outputLink value="/{!excludedOpptiesMap[key].id}" target="_blank">
+                                {!excludedOpptiesMap[key].Name}
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!excludedOpptiesMap[key].StageName}"/>
+                        <apex:column value="{!excludedOpptiesMap[key].Last_Owner_Change_Date__c}"/>
+                        <apex:column value="{!excludedOpptiesMap[key].CloseDate}"/>
+                        <apex:column value="{!excludedOpptiesMap[key].OwnerId}"/>
+                        <apex:column value="{!excludedOpptiesMap[key].Opportunity_Nr__c}"/>
+                        <apex:column value="{!excludedOpptiesMap[key].Id}"/>
+                        <apex:column value="{!excludedOpptiesMap[key].Disable_for_KPI__c}"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="div7" styleClass="div7">
+                <apex:pageBlockSection title="All Excluded Leads ({! numberExcludedLeads })" collapsible="true" columns="1" id="section7">
+                    <apex:pageBlockTable id="excludedLead" styleClass="sorterStyle" value="{! excludedLeadsMap }" var="key">
+                        <apex:column headerValue="Name">
+                            <apex:outputLink value="/{!excludedLeadsMap[key].Id}" target="_blank">{! excludedLeadsMap[key].FirstName } {! excludedLeadsMap[key].LastName }</apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!excludedLeadsMap[key].LastTransferDate}"/>
+                        <apex:column value="{!excludedLeadsMap[key].isConverted}"/>
+                        <apex:column value="{!excludedLeadsMap[key].Sec_Channel__c}"/>
+                        <apex:column value="{!excludedLeadsMap[key].Channel__c}"/>
+                        <apex:column value="{!excludedLeadsMap[key].LeadSource}"/>
+                        <apex:column value="{!excludedLeadsMap[key].Status}"/>
+                        <apex:column value="{!excludedLeadsMap[key].OwnerId}"/>
+                        <apex:column value="{!excludedLeadsMap[key].Lead_Nr__c}"/>
+                        <apex:column value="{!excludedLeadsMap[key].id}"/>
+                        <apex:column value="{!excludedLeadsMap[key].ConvertedOpportunityId}"/>
+                        <apex:column value="{!excludedLeadsMap[key].Disable_for_KPI__c}"/>
+                    </apex:pageBlockTable>    
+                </apex:pageBlockSection>
+            </apex:outputPanel>        
+        </apex:pageBlock>
+        <script>    
+            twistSection(document.getElementById('{!$Component.div0}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block1.section1}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block1.section2}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block1.section3}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block1.section4}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block1.section5}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block1.section6}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block1.section7}').getElementsByTagName('img')[0]);
+        </script>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__NVM_Call_Summary__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>NVM Call Summary</label>
+    <referenceTo>NVMStatsSF__NVM_Call_Summary__c</referenceTo>
+    <relationshipLabel>NVM Call Segments</relationshipLabel>
+    <relationshipName>NVM_Call_Segments</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_Change_Record_Type</fullName>
+    <active>true</active>
+    <description>Harte Hanke (Sales), Sales Inbound, Sales, CCS Sales Inbound, CCS Sales Manager can't change Opportunity Record Type.</description>
+    <errorConditionFormula>IF(
+($Profile.Name = "Sales Inbound" ||
+$Profile.Name = "Sales" ||
+$Profile.Name = "CCS Sales Inbound" ||
+$Profile.Name = "CCS Sales Manager" ||
+$Profile.Name = "Harte Hanke (Sales)")
+&amp;&amp;
+ISCHANGED(RecordTypeId)
+&amp;&amp;
+(RecordTypeId &lt;&gt; '0120O000000XMWa' &amp;&amp; RecordTypeId &lt;&gt; '0123Y0000003ds6')
+&amp;&amp;
+$UserRole.Name &lt;&gt; "Altevida Telesales Team Lead",
+true,
+false
+)</errorConditionFormula>
+    <errorMessage>You can't change Opportunity Record Type.</errorMessage>
+</ValidationRule>

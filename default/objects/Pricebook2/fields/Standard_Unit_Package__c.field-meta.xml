@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standard_Unit_Package__c</fullName>
+    <description>The standard pack for stationary installations, appropriate monitoring cars and trucks. The pack includes GPS unit and antenna, CAN GO CLICK and route type switch.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>one-time fee / unit</inlineHelpText>
+    <label>Standard Unit Package</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

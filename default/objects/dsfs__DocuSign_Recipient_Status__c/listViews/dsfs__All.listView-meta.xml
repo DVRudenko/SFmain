@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__All</fullName>
+    <columns>NAME</columns>
+    <columns>dsfs__DocuSign_Recipient_Email__c</columns>
+    <columns>dsfs__DocuSign_Routing_Order__c</columns>
+    <columns>dsfs__Recipient_Status__c</columns>
+    <columns>dsfs__Parent_Status_Record__c</columns>
+    <columns>dsfs__Date_Sent__c</columns>
+    <columns>dsfs__Date_Delivered__c</columns>
+    <columns>dsfs__Date_Signed__c</columns>
+    <columns>dsfs__Date_Declined__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

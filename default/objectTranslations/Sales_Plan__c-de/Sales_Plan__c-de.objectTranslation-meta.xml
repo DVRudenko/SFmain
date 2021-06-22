@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Sales Plan</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Sales Plans</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Plan Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Record type for Sales --></description>
+        <label><!-- Sales --></label>
+        <name>Sales</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record type for Sales Team Lead --></description>
+        <label><!-- Sales Team Lead --></label>
+        <name>Sales_Team_Lead</name>
+    </recordTypes>
+</CustomObjectTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- E2E Chat Usage --></label>
+    <name>E2E_Chat__c</name>
+    <picklistValues>
+        <masterLabel>auto-not replied</masterLabel>
+        <translation><!-- auto-not replied --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>auto-replied</masterLabel>
+        <translation><!-- auto-replied --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>initiated auto</masterLabel>
+        <translation><!-- initiated auto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>initiated manual</masterLabel>
+        <translation><!-- initiated manual --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>not initiated</masterLabel>
+        <translation><!-- not initiated --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

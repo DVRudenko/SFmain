@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_data_relevance__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Relevance of business data to use it without update like deduplication data, black list data, etc (in days)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Relevance of business data to use it without update like deduplication data, black list data, etc (in days)</inlineHelpText>
+    <label>Business data relevance</label>
+    <precision>5</precision>
+    <required>true</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

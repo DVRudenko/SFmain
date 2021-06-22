@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Kundensegment * --></label>
+    <name>Kundensegment__c</name>
+    <picklistValues>
+        <masterLabel>Campaign_1</masterLabel>
+        <translation><!-- Campaign_1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Segment 1-3</masterLabel>
+        <translation><!-- Segment 1-3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Segment 10+</masterLabel>
+        <translation><!-- Segment 10+ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Segment 4-10</masterLabel>
+        <translation><!-- Segment 4-10 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

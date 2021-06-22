@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Austria</masterLabel>
+        <translation>Austria</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Belgium-FR</masterLabel>
+        <translation>Belgio-FR</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Belgium-NL</masterLabel>
+        <translation>Belgio-NL</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Czech Republic</masterLabel>
+        <translation>Repubblica Ceca</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>France</masterLabel>
+        <translation>Francia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Germany</masterLabel>
+        <translation>Germania</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Hungary</masterLabel>
+        <translation>Ungheria</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Italien</masterLabel>
+        <translation><!-- Italien --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Lithuania</masterLabel>
+        <translation><!-- Lithuania --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Luxembourg</masterLabel>
+        <translation>Luxemburgo</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Netherlands</masterLabel>
+        <translation>Olanda</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Poland</masterLabel>
+        <translation>Polonia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Russia</masterLabel>
+        <translation>Russia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Slovakia</masterLabel>
+        <translation>Slovacchia</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Switzerland-DE</masterLabel>
+        <translation>Svizzera-DE</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Switzerland-FR</masterLabel>
+        <translation>Svizzera-FR</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Switzerland-IT</masterLabel>
+        <translation>Svizzera-IT</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

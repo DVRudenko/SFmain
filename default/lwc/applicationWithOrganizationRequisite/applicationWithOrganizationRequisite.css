@@ -1,0 +1,22 @@
+@import 'c/styles';
+.form {
+    width: 100%;
+}
+.block {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.field {
+    padding: 0.5%;
+    width: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.header {
+    position: absolute;
+    text-align: center;
+}
+.spinner {
+    position: fixed;
+}

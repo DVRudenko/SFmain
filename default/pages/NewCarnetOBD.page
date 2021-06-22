@@ -1,0 +1,40 @@
+<apex:page controller="NewCarnetOBDctrl" action="{!init}">
+    <apex:form >
+        <apex:pageMessages escape="false"/>
+        <apex:commandButton action="{!Cancel}" value="Go Back" immediate="true" rendered="{!hide}"/>
+        <apex:outputpanel rendered="{!isntValid}">
+            <apex:pageBlock >
+                <apex:pageBlockSection columns="2">
+                    <apex:outputField value="{!CU.Opportunity__c}"/>
+                    <apex:outputField value="{!CU.Account_Price_Book__c}"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="2" title="Unit Details" >
+                    <apex:inputField value="{!CU.Number_of_Units__c}" required="true"/>
+                    <br></br>
+                    <apex:inputField value="{!CU.Prepaid__c}"/>
+                    <br></br>
+                    <apex:inputField value="{!CU.Contract_term__c}" required="true"/>
+                    <apex:inputField value="{!CU.Standard_Unit_Package__c}" html-disabled="true"/>
+                    <br></br>
+                    <apex:inputField value="{!CU.Unit_Activation__c}" html-disabled="true"/>
+                    <br></br>
+                    <apex:inputField value="{!CU.Installation__c}" html-disabled="true"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="2" title="Additional services to basic tariffs">
+                    <apex:inputField value="{!CU.Monitoring_in_EU__c}"/>
+                    <apex:inputField value="{!CU.Monitoring_in_EU_Price__c}" html-disabled="true"/>
+                    <apex:inputField value="{!CU.Monitoring_in_other_European_countries__c}"/>
+                    <apex:inputField value="{!CU.Tariff_World_Price__c}" html-disabled="true"/>
+                    <apex:inputField value="{!CU.Archiving__c}"/>
+                    <apex:inputField value="{!CU.Archiving_Price__c}" html-disabled="true"/>
+                    <apex:inputField value="{!CU.Web_services__c}"/>
+                    <apex:inputField value="{!CU.Web_services_Price__c}" html-disabled="true"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!save}" value="Save"/>
+                    <apex:commandButton action="{!Cancel}" value="Cancel" immediate="true"/>
+                </apex:pageBlockButtons>
+            </apex:pageBlock>
+        </apex:outputpanel>
+    </apex:form>
+</apex:page>

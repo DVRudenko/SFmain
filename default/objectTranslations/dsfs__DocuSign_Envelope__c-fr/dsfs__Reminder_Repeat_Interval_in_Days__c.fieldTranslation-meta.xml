@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Indiquer la fréquence (en jours) à laquelle le rappel doit être envoyé jusqu&#39;à validation de la transaction.</help>
+    <label><!-- Repeat every N day(s) until complete --></label>
+    <name>dsfs__Reminder_Repeat_Interval_in_Days__c</name>
+</CustomFieldTranslation>

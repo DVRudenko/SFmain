@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_DateTime__c</fullName>
+    <description>Created datetime of the archived log with readable format</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Created datetime of the archived log with readable format</inlineHelpText>
+    <label>Created DateTime</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,209 @@
+<apex:page controller="EcoFeeConfirmationController" action="{! init }" sidebar="false" showHeader="false" standardStylesheets="false">
+	<apex:form >
+		<head>
+			<style>
+				html, 
+				body,
+				form {
+					background: #f6f6f6;
+					height: 100%;
+				}
+				* {
+					margin:0;
+				}
+				#header {
+					height: 100px;
+					background: white;
+					padding-top: 10px;
+				}
+				#wrapper {
+					position: relative;
+  					min-height: 100%;
+				}
+
+				#content {
+					padding-bottom: 250px;
+				}
+				#header .in_header {
+					max-width: 900px;
+					margin: 10px auto;
+				}
+				#content .in_content {
+					max-width: 900px;
+					margin: auto;
+					text-align: left;
+					font-family: 'PT Sans','Arial','Helvetica','Sans-serif';
+					font-size: 16px;
+				}
+				p {
+					margin: 15px 0;
+				}
+				.buttonsBlock {
+					text-align: center;
+					margin: 40px 0 0 0;
+				}
+				.agreeButton {
+					position: relative;
+					display: inline-block;
+					font-size: 90%;
+					font-weight: 700;
+					color: white;
+					text-decoration: none;
+					text-shadow: 0 -1px 2px rgba(0,0,0,.2);
+					padding: .5em 1em;
+					outline: none;
+					border: 1px;
+					border-radius: 3px;
+					margin-right: 20px;
+					background: #0c9c0d linear-gradient(#82d18d, #0c9c0d);
+  					box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);
+					transition: .2s ease-in-out;
+					cursor: pointer;
+				}
+				.agreeButton:hover:not(:active) {
+				    background: rgb(76, 155, 45);
+				}
+				.agreeButton:active {
+				  	top: 1px;
+				    background: rgb(76, 155, 45);
+				    box-shadow: 0 0 1px rgba(0,0,0,.5) inset,  0 2px 3px rgba(0,0,0,.5) inset, 0 1px 1px rgba(255,255,255,.1);
+				}
+				.disagreeButton {
+					cursor: pointer;
+					position: relative;
+					display: inline-block;
+				  	font-size: 90%;
+				  	font-weight: 700;
+				  	color: rgb(209,209,217);
+				  	text-decoration: none;
+				  	text-shadow: 0 -1px 2px rgba(0,0,0,.2);
+				  	padding: .5em 1em;
+				  	outline: none;
+				  	border: 1px;
+				  	border-radius: 3px;	  	
+				    background: linear-gradient(rgb(126,126,134), rgb(70,71,76)) rgb(126,126,134);
+					box-shadow: 0 1px rgba(255,255,255,.2) inset, 0 3px 5px rgba(0,1,6,.5), 0 0 1px 1px rgba(0,1,6,.2);
+				  	transition: .2s ease-in-out;
+				}
+				.disagreeButton:hover:not(:active) {
+				    background: rgb(70,71,76);
+				}
+				.disagreeButton:active {
+				    top: 1px;
+				    background: linear-gradient(rgb(76,77,82), rgb(56,57,62)) rgb(76,77,82);
+				    box-shadow: 0 0 1px rgba(0,0,0,.5) inset,  0 2px 3px rgba(0,0,0,.5) inset, 0 1px 1px rgba(255,255,255,.1);
+				}
+				#footer {
+					position: absolute;
+				  	left: 0;
+				  	bottom: 0;
+				  	width: 100%;
+				  	height: 60px;
+					padding: 20px 0;
+					background: #4c4c4c; /* Old browsers */
+                    background: -moz-linear-gradient(left, #4c4c4c 0%, #131313 0%, #474747 0%, #474747 0%, #000000 0%, #666666 0%, #2c2c2c 0%, #474747 0%, #111111 52%, #474747 100%, #595959 100%, #2b2b2b 100%, #1c1c1c 100%);
+                    background: -webkit-linear-gradient(left, #4c4c4c 0%,#131313 0%,#474747 0%,#474747 0%,#000000 0%,#666666 0%,#2c2c2c 0%,#474747 0%,#111111 52%,#474747 100%,#595959 100%,#2b2b2b 100%,#1c1c1c 100%);
+                    background: linear-gradient(to right, #4c4c4c 0%,#131313 0%,#474747 0%,#474747 0%,#000000 0%,#666666 0%,#2c2c2c 0%,#474747 0%,#111111 52%,#474747 100%,#595959 100%,#2b2b2b 100%,#1c1c1c 100%);
+					/*margin-top: 150px;*/
+				}
+				#footer .inner {
+					max-width: 900px;
+					margin: 0 auto;
+					text-align: center;
+				}
+				#footer li {
+					display: inline-block;
+					color: white;
+					font-family: 'PT Sans','Arial','Helvetica','Sans-serif';
+				}	
+				#footer li a:link,
+				#footer li a:hover,
+				#footer li a:active {
+					color: white;
+					font-family: 'PT Sans','Arial','Helvetica','Sans-serif';
+				}
+			</style>
+		</head>
+		<div id="wrapper">
+			<div id="header">
+				<div class="in_header">
+					<a href="http://cleanadvantage.eu/de/projekte/" target="_blank">
+						<apex:image value="{!URLFOR($Resource.Eco_Fee_Fleetcor, 'img/ecoFeeLogo.png')}" width="285px" height="75px"/>
+					</a>
+			   </div>
+			</div>
+			<apex:pageMessages />
+			<div id="content">
+				<div class="in_content">
+					<apex:outputPanel rendered="{! AND(thanksPage = false, rejectPage = false) }">
+						<div style="overflow: hidden;">
+							<apex:image value="{!URLFOR($Resource.Eco_Fee_Fleetcor, 'img/EcoFeeBackground.png')}"/>
+						</div>
+						<div style="padding: 20px;">
+							<p style="text-align: center; font-weight: bold;">Mit FLEETCOR-Tankkarten CO2-Emissionen reduzieren</p>
+							<p>Das FLEETCOR Clean Advantage-Programm verbessert den Umweltschutz: Nutzen Sie für Ihre Fahrzeugflotte eine Tankkarte von FLEETCOR und sorgen Sie so für eine besonders umweltfreundliche Kompensation der CO2-Emissionen Ihrer Fahrzeuge.</p>
+							<p>Im Rahmen des Clean Advantage-Programms unterstützt FLEETCOR viele Initiativen und Projekte, die sowohl regional als auch weltweit das in der Atmosphäre vorkommende CO2 reduzieren.</p>
+							<p>Das Clean Advantage-Programm gleicht Kohlendioxid und andere Treibhausgase (Kohlendioxid-Äquivalente oder CO2-Emissionen) durch Investitionen in Aufforstung, Alternativenergie, Biomasse und andere Projekte aus – lokal als auch weltweit, da Verwendung, Kosten und andere Faktoren im Laufe eines Jahres variieren. Zusätzlich zu diesen Projekten arbeiten wir mit der Arbor Day Foundation zusammen, pflanzen Bäume und unterstützen ihre zertifizierten Projekte zur Reduzierung von CO2-Emissionen. Diese Investitionen und Partner erlauben uns gemeinsam und automatisch eine dauerhafte Lösung für Ihr Unternehmen, Ihre Mitarbeiter und der Gemeinschaft bereitzustellen.</p>
+						</div>
+						<div class="buttonsBlock">
+							<apex:commandButton styleClass="agreeButton" value="Abbrechen" action="{! confirmEcoFee }" />
+							<apex:commandButton styleClass="disagreeButton" value="Nein, ich möchte mit FLEETCOR die Umwelt wirklich nicht schützen" action="{! rejectEcoFee }"/>	
+						</div> 
+					</apex:outputPanel>
+					<apex:outputText rendered="{! thanksPage = true }">
+						<p style="text-align: center; font-size: 25px;">
+							Vielen Dank für Ihre Unterstützung mit uns gemeinsam die Umwelt zu schützen.
+						</p>
+					</apex:outputText>
+					<apex:outputText rendered="{! rejectPage = true }">
+						<p style="text-align: center; font-size: 25px;">
+							Sie haben sich erfolgreich abgemeldet.
+						</p>
+					</apex:outputText>					
+			   	</div>
+			</div>
+			<div id="footer">
+				<div class="inner">
+					<ul>
+						<li>© Copyright FLEETCOR 2017.</li>
+						<li>
+							<span class="delimiter">|</span>
+							<a href="https://fleetcor.de/impressum">Impressum</a>
+						</li>
+						<li><span class="delimiter">|</span>
+							<a href="https://fleetcor.de/richtlinien-zur-zulassigen-nutzung">Richtlinie für akzeptable Nutzung</a>
+						</li>
+						<li>
+							<span class="delimiter">|</span>
+							<a href="https://fleetcor.de/cookie-richtlinie">Cookie-Richtlinie</a>
+						</li>
+						<li>
+							<span class="delimiter">|</span>
+							<a href="https://fleetcor.de/urheberrecht-und-haftungsausschluss">Copyright und Haftungsausschluss</a>
+						</li>
+						<li>
+							<span class="delimiter">|</span>
+							<a href="https://fleetcor.de/datenschutzrichtlinie">Datenschutzrichtlinie</a>
+						</li>
+						<li>
+							<span class="delimiter">|</span>
+							<a href="https://fleetcor.de/website-nutzungsbedingungen">Website-Nutzungsbedingungen</a>
+						</li>
+						<li>
+							<span class="delimiter">|</span>
+							<a href="https://fleetcor.de/willkommen-bei-fleetcor">Über FLEETCOR</a>
+						</li>
+						<li>
+							<span class="delimiter">|</span>
+							<a href="https://fleetcor.de/karriere">Karriere</a>
+						</li>
+						<li>
+							<span class="delimiter">|</span>
+							<a href="https://fleetcor.de/retailer-portal/login" target="_blank">Händler-login</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</apex:form>
+</apex:page>

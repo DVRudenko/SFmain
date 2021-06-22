@@ -1,0 +1,95 @@
+<apex:page controller="DuplicatesLeadsController" action="{! init }" lightningStylesheets="true">
+    <apex:pageBlock >
+        <apex:pageMessages />
+
+        <apex:pageBlockButtons location="bottom">
+            <apex:outputLink style="color: black; text-decoration: none;" styleClass="btn" value="/{! currentLead.Id }">Back to Lead</apex:outputLink>
+        </apex:pageBlockButtons>
+        
+        <h2>Current Lead</h2>
+        <apex:pageBlockSection >
+            <apex:outputField value="{! currentLead.FirstName }"/>
+            <apex:outputField value="{! currentLead.LastName }"/>
+            <apex:outputField value="{! currentLead.OwnerId}"/>
+            <apex:outputField value="{! currentLead.Company }"/>
+            <apex:outputField value="{! currentLead.Phone }"/>
+            <apex:outputField value="{! currentLead.Email }"/>
+            <apex:outputField value="{! currentLead.Steuernummer__c }"/>
+            <apex:outputField value="{! currentLead.Umsatzsteuer_ID__c }"/>
+            <apex:outputField value="{! currentLead.IBAN__c }"/>
+            <apex:outputField value="{! currentLead.City }"/>
+            <apex:outputField value="{! currentLead.Street }"/>
+        </apex:pageBlockSection>
+
+        <apex:outputPanel layout="block" rendered="{! finalDuplicateLeadsList.size > 0}">
+            <h2>Lead Duplicates</h2>
+        </apex:outputPanel>
+        <apex:outputPanel layout="block" rendered="{! finalDuplicateLeadsList.size == 0}" style="margin-bottom: 15px">
+            <h2>Lead Duplicates are not found</h2>
+        </apex:outputPanel>
+        <apex:pageBlockTable value="{! finalDuplicateLeadsList }" var="duplicateLead" rendered="{! finalDuplicateLeadsList.size > 0}" style="margin-bottom: 15px">
+            <apex:column headerValue="Lead Name">
+                <a href="/{! duplicateLead.Id }">{! duplicateLead.FirstName } {! duplicateLead.LastName }</a>
+            </apex:column>
+            <apex:column value="{! duplicateLead.FirstName }"/>
+            <apex:column value="{! duplicateLead.LastName }"/>
+            <apex:column value="{! duplicateLead.Company }"/>
+            <apex:column value="{! duplicateLead.Phone }"/>
+            <apex:column value="{! duplicateLead.Email }"/>
+            <apex:column value="{! duplicateLead.OwnerId}"/>
+            <apex:column value="{! duplicateLead.Steuernummer__c }"/>
+            <apex:column value="{! duplicateLead.Umsatzsteuer_ID__c }"/>
+            <apex:column value="{! duplicateLead.IBAN__c }"/>
+        </apex:pageBlockTable>
+
+        <apex:outputPanel layout="block" rendered="{! finalDuplicateOpportunitiesList.size > 0}">
+            <h2>Opportunity Duplicates</h2>
+        </apex:outputPanel>
+        <apex:outputPanel layout="block" rendered="{! finalDuplicateOpportunitiesList.size == 0}" style="margin-bottom: 15px">
+            <h2>Opportunity Duplicates are not found</h2>
+        </apex:outputPanel>
+        <apex:pageBlockTable value="{! finalDuplicateOpportunitiesList }" var="duplicateOpportunity" rendered="{! finalDuplicateOpportunitiesList.size > 0}" style="margin-bottom: 15px">
+            <apex:column headerValue="Opportunity Name">
+                <a href="/{! duplicateOpportunity.Id }">{! duplicateOpportunity.Name }</a>
+            </apex:column>
+            <apex:column value="{! duplicateOpportunity.OwnerId }"/>
+            <apex:column value="{! duplicateOpportunity.IBAN__c }"/>
+            <apex:column value="{! duplicateOpportunity.Name_of_the_payer_Account_holder__c }"/>
+        </apex:pageBlockTable>
+
+        <apex:outputPanel layout="block" rendered="{! finalDuplicateAccountsList.size > 0}">
+            <h2>Account Duplicates</h2>
+        </apex:outputPanel>
+        <apex:outputPanel layout="block" rendered="{! finalDuplicateAccountsList.size == 0}" style="margin-bottom: 15px">
+            <h2>Account Duplicates are not found</h2>
+        </apex:outputPanel>
+        <apex:pageBlockTable value="{! finalDuplicateAccountsList }" var="duplicateAccount" rendered="{! finalDuplicateAccountsList.size > 0}" style="margin-bottom: 15px">
+            <apex:column headerValue="Account Name">
+                <a href="/{! duplicateAccount.Id }">{! duplicateAccount.Name }</a>
+            </apex:column>
+            <apex:column value="{! duplicateAccount.OwnerId}"/>
+            <apex:column value="{! duplicateAccount.Steuernummer__c }"/>
+            <apex:column value="{! duplicateAccount.Umsatzsteuer_ID__c }"/>
+            <apex:column value="{! duplicateAccount.BillingCity }"/>
+            <apex:column value="{! duplicateAccount.BillingStreet }"/>
+            <apex:column value="{! duplicateAccount.BillingPostalCode }"/>
+        </apex:pageBlockTable>
+    
+        <apex:outputPanel layout="block" rendered="{! finalDuplicateContactsList.size > 0}">
+            <h2>Contact Duplicates</h2>
+        </apex:outputPanel>
+        <apex:outputPanel layout="block" rendered="{! finalDuplicateContactsList.size == 0}" style="margin-bottom: 15px">
+            <h2>Contact Duplicates are not found</h2>
+        </apex:outputPanel>
+        <apex:pageBlockTable value="{! finalDuplicateContactsList }" var="duplicateContact" rendered="{! finalDuplicateContactsList.size > 0}" style="margin-bottom: 15px">
+            <apex:column headerValue="Contact Name">
+                <a href="/{! duplicateContact.Id }">{! duplicateContact.Name }</a>
+            </apex:column>
+            <apex:column value="{! duplicateContact.FirstName }"/>
+            <apex:column value="{! duplicateContact.LastName }"/>
+            <apex:column value="{! duplicateContact.OwnerId}"/>
+            <apex:column value="{! duplicateContact.Phone }"/>
+            <apex:column value="{! duplicateContact.Email }"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>    
+</apex:page>

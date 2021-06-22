@@ -1,0 +1,65 @@
+<apex:page controller="LeadExtension"
+           docType="html-5.0"
+           sideBar="false"
+           showHeader="false"
+           standardStylesheets="false"
+           cache="false">
+
+    <style>
+        body {
+            font-family: Courier, serif;
+            font-size: 12pt;
+        }
+
+        td {
+            border-width: 1px;
+            padding: 4px;
+            border-style: solid;
+            border-color: #000000;
+            background-color: #FFEECC;
+        }
+
+        th {
+            color: #000000;
+            border-width: 1px;
+            padding: 4px;
+            border-style: solid;
+            border-color: #000000;
+            background-color: #FFFFF0;
+        }
+
+        p {
+            margin-bottom: 4px;
+            margin-top: 4px;
+        }
+    </style>
+
+    <apex:outputPanel >
+        <p>Уважаемый менеджер.</p>
+        <p>Интерес дисквалифицирован, клиент передан в E2E.</p><br/>
+
+        <table>
+            <tr>
+                <th>Владелец:</th>
+                <td>{!IF(Lead.Owner.Name == null, 'Undefined', Lead.Owner.Name)}</td>
+            </tr>
+            <tr>
+                <th>Интерес:</th>
+                <td>
+                    <apex:outputLink target="_blank" value="{!$CurrentPage.parameters.domain + Lead.Id}">
+                            {!Lead.Name}
+                    </apex:outputLink>
+                </td>
+            </tr>
+            <tr>
+                <th>ИНН: </th>
+                <td>{!IF(Lead.INN__c == null, 'none', Lead.INN__c)};</td>
+            </tr>
+            <tr>
+                <th>Телефон: </th>
+                <td>{!IF(Lead.Phone == null, 'none', Lead.Phone)};</td>
+            </tr>
+        </table>
+    </apex:outputPanel>
+
+</apex:page>

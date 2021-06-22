@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Starts_GFN_nr_madatory</fullName>
+    <active>true</active>
+    <description>When Type = "Existing GFN", Starts GFN Nr. is mandatory for certain Profiles on Carnet Record Type.</description>
+    <errorConditionFormula>IF(
+AND(
+RecordType.DeveloperName = "Carnet",
+NOT(ISPICKVAL(StageName,'Qualify')),
+ISPICKVAL(PRIORVALUE(Type),'Existing GFN'),
+ISBLANK(GFN_number_for_starts__c),
+NOT(OR($Profile.Name = "System Administrator",
+$Profile.Name = 'API Only',
+$Profile.Name = "CCS API System Admin",
+$Profile.Name = "CCS System Administrator"))),
+true,
+false)</errorConditionFormula>
+    <errorDisplayField>GFN_number_for_starts__c</errorDisplayField>
+    <errorMessage>If Opp. Type = Existing GFN, please fill in GFN Nr. into Opportunity Starts: GFN Nr. field.</errorMessage>
+</ValidationRule>

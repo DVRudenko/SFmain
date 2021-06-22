@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>CCS Events</layout>
+        <sections>
+            <label><!-- Benutzerdefinierte Links --></label>
+            <section>Benutzerdefinierte Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Event Layout</layout>
+        <sections>
+            <label><!-- Benutzerdefinierte Links --></label>
+            <section>Benutzerdefinierte Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Five9</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Russian Event Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Russian Sales Event</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Дополнительное описание</label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label>Поля</label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label>Другие сведения</label>
+            <section>Other Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- CCS Events --></label>
+        <name>CCS_Events</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Euroshell Event --></label>
+        <name>Euroshell_Event</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Russian Sales Event --></label>
+        <name>Russian_Sales_Event</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage>Пожалуйста, назначьте встречу на корректного менеджера.</errorMessage>
+        <name>EventCreatedByCallCenterRussia</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Пожалуйста, укажите тему: Встреча КЦ</errorMessage>
+        <name>EventCreatedByCallCenterRussiaSubject</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Завершенные события недоступны для Правки!</errorMessage>
+        <name>Event_FS_Closed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Выберите Тему из списка!</errorMessage>
+        <name>Event_FS_Subject</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Тема &quot;Встреча КЦ&quot; недоступна для редактирования. При создании нового события выберите тему из списка</errorMessage>
+        <name>Event_FS_Subject_MeetingCC</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage>Дата начала должна соответствовать или предшествовать Сегодняшнему дню.</errorMessage>
+        <name>RU_Event_ActivityDate_more_then_TODAY</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Presentation --></label>
+        <name>Presentation</name>
+    </webLinks>
+</CustomObjectTranslation>

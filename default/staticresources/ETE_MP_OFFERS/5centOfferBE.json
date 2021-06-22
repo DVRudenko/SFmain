@@ -1,0 +1,110 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "Wait until you receive your Shell cards and PIN numbers by post.",
+                "fr": "Veuillez attendre la livraison de vos cartes Shell et vos codes PIN par la poste.",
+                "nl": "Wacht tot u uw Shell Cards en pincodes per post ontvangt."
+            },
+            {
+                "en": "Once received, your cards are automatically active and you can start using the cards! Enjoy a care-free refueling experience with your Shell Cards.",
+                "fr": "Dès réception de vos cartes déjà activées et codes pin, vous pouvez en faire l’usage immédiat et vous ravitailler en toute tranquillité.",
+                "nl": "Na ontvangst kunt u direct gebruik maken van uw Shell Cards. Geniet van een zorgeloze tankervaring met uw Shell Cards."
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Discount at all Shell stations in Belgium",
+                    "fr": "Rabais dans toutes les stations Shell en Belgique",
+                    "nl": "Korting op alle Shell stations in België"
+                },
+                "value": {
+                    "en": "5 CENT PER LITER",
+                    "fr": "5 CENTIMES PAR LITRE",
+                    "nl": "5 CENT PER LITER"
+                }
+            },
+            {
+                "label": {
+                    "en": "Replaces the price at the fuel station (for more transparency)",
+                    "fr": "remplace le prix affiché à la station (pour plus de transparence)",
+                    "nl": "vervangt de pompprijs (voor meer transparantie)"
+                },
+                "value": {
+                    "en": "DAILY FIXED PRICE",
+                    "fr": "LE PRIX JOURNALIER OFFICIEL",
+                    "nl": "VASTE DAGPRIJS"
+                }
+            },
+            {
+                "label": {
+                    "en": "card issuing and delivery",
+                    "fr": "Émission et livraison de carte",
+                    "nl": "Kaart productie en verzending"
+                },
+                "value": {
+                    "en": "FREE",
+                    "fr": "GRATUIT",
+                    "nl": "GRATIS"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "5 Cent Offer BE"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "fr": "CARTE SHELL",
+            "nl": "SHELL CARD"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/shellkarte_eu.jpg"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "Shell fuel card for business guarantees your company stable and permanent fuel discounts, a convenient online customer portal and a dense network of stations.",
+            "fr": "La carte carburant Shell vous garantit que votre entreprise bénéficiera de réductions stables et constantes sur le carburant, d’un portail client en ligne facile à utiliser et d’un réseau étendu de stations-service.",
+            "nl": "De Shell Card voor bedrijven garandeert uw bedrijf stabiele en permanente brandstofkortingen, een handig online klantenportaal en een groot netwerk van stations."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "fr": "CARTE SHELL",
+            "nl": "SHELL CARD"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "SHELL CARDS",
+            "fr": "CARTES SHELL",
+            "nl": "SHELL CARDS"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "SHELL CARD",
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "0",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "monthlyFuelConsumption_max": "5000",
+            "monthlyFuelConsumption_min": "50",
+            "showEuroLocatorTab": false,
+            "euroLocatorProductNumber": "4",
+            "order": 4
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Belgium-NL": "/resource/ETE_DOCUMENTS_1/tariffSheets_benl_5centOfferBE.jpg",
+        "Belgium-FR": "/resource/ETE_DOCUMENTS_1/tariffSheets_befr_5centOfferBE.jpg"
+    }
+}

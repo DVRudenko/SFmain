@@ -1,0 +1,105 @@
+.fltbase-tooltip {
+    outline: none;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: help;
+    border-radius: 50%;
+    font-weight: 400;
+    
+    animation: fadeOut 0.3s linear;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.fltbase-tooltip_small {
+    color: #B4AFB5;
+    background: #F8F8F8;
+    font-size: 12px;
+    line-height: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.fltbase-tooltip_large {
+    color: #212E35;
+    background: #E2E2E2;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 16px;
+    width: 86px;
+    height: 40px;
+    border-radius: 32px;
+}
+
+.fltbase-tooltip:focus {
+    background: #80D3DD;
+    color: #FFFFFF;
+}
+
+.fltbase-tooltip__button-unfocused {
+    background: #FFFFFF;
+}
+
+.fltbase-tooltip::after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 16px;
+    height: 32px;
+    margin-top: -24px;
+    visibility: hidden;
+}
+
+.fltbase-tooltip__arrow {
+    display: inline-block;
+    position: absolute;
+    cursor: default;
+    border: 8px solid transparent;
+    border-top: 8px solid rgba(33, 46, 53, 0.1);
+    visibility: hidden;
+    z-index: 999999;
+}
+
+.fltbase-tooltip__content {
+    padding: 12px;
+    position: absolute;
+    visibility: hidden;
+    cursor: default;
+    color: #80828A;
+    user-select: text;
+    
+    letter-spacing: 0.02em;
+    line-height: 14px;
+    font-size: 12px;
+    font-weight: 300;
+    text-align: left;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px rgba(33, 46, 53, 0.2);
+    border-radius: 12px;
+    z-index: 999998;
+    left: 0;
+}
+
+.fltbase-tooltip:hover .fltbase-tooltip__content,
+.fltbase-tooltip:hover .fltbase-tooltip__arrow,
+.fltbase-tooltip:focus .fltbase-tooltip__content,
+.fltbase-tooltip:focus .fltbase-tooltip__arrow,
+.fltbase-tooltip:hover::after,
+.fltbase-tooltip:focus::after {
+    visibility: visible;
+    animation: fadeOut 0.2s linear;
+}
+
+@media (min-width: 768px) {
+    .fltbase-tooltip__content {
+        line-height: 16px;
+        font-size: 14px;
+    }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}

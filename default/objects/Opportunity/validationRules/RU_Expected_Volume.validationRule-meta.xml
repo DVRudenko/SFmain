@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RU_Expected_Volume</fullName>
+    <active>true</active>
+    <description>Minimum value:
+1 car = 5 Liters per month
+1 truck = 10 Liters per month
+1 car = 225 Rub per month
+1 truck = 450 Rub per month</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = 'Russian_Sales',
+$Profile.Name != "E2E RU Profile",
+$Profile.Name != "System Administrator",
+$Profile.Name != "RU_System_Administrator",
+$Profile.Name != 'API Only',
+$Profile.Name != "Russian Call Center",
+NOT(ISCHANGED( OwnerId )),
+NOT(ISCHANGED( Rating_attractive__c )),
+NOT(ISCHANGED( Last_Owner_Change_Date_RUS__c )),
+NOT(ISCHANGED( Number_of_open_tasks__c)),
+NOT(ISCHANGED( Open_Task__c )),
+Probability &gt; 0.1,
+OR(
+AND( 
+OR(!ISNULL(Projected_Liters_weekly__c), Projected_Liters_weekly__c &gt; 0),
+(Projected_Liters_weekly__c &lt;(IF(OR(ISNULL(Number_of_cars__c),Number_of_cars__c =0),0,Number_of_cars__c *5)+IF(OR(ISNULL(Number_of_trucks__c),Number_of_trucks__c =0),0,Number_of_trucks__c*10)))),
+AND(
+OR(!ISNULL(Projected_amount_in_rub_month__c), Projected_amount_in_rub_month__c &gt; 0),
+(Projected_amount_in_rub_month__c  &lt;(IF(OR(ISNULL(Number_of_cars__c),Number_of_cars__c =0),0, Number_of_cars__c*225)+IF(OR(ISNULL(Number_of_trucks__c),Number_of_trucks__c =0),0,Number_of_trucks__c*450))))))</errorConditionFormula>
+    <errorMessage>Less than the minimum value:
+1 car = 5 Liters per month
+1 truck = 10 Liters per month
+1 car = 225 Rub per month
+1 truck = 450 Rub per month</errorMessage>
+</ValidationRule>

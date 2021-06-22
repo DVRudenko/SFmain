@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>State/Province*</label>
+    <name>Bundesland__c</name>
+    <picklistValues>
+        <masterLabel>Aargau AG</masterLabel>
+        <translation><!-- Aargau AG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Alsace</masterLabel>
+        <translation><!-- Alsace --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Antwerpen</masterLabel>
+        <translation><!-- Antwerpen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Appenzell Ausserrhoden AR</masterLabel>
+        <translation><!-- Appenzell Ausserrhoden AR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Appenzell Innerrhoden AI</masterLabel>
+        <translation><!-- Appenzell Innerrhoden AI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aquitaine</masterLabel>
+        <translation><!-- Aquitaine --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Austria</masterLabel>
+        <translation><!-- Austria --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Auvergne</masterLabel>
+        <translation><!-- Auvergne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Baden-Württemberg</masterLabel>
+        <translation><!-- Baden-Württemberg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Banská Bystrica</masterLabel>
+        <translation><!-- Banská Bystrica --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Basel-Land BL</masterLabel>
+        <translation><!-- Basel-Land BL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Basel-Stadt BS</masterLabel>
+        <translation><!-- Basel-Stadt BS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Basse-Normandie</masterLabel>
+        <translation><!-- Basse-Normandie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bayern</masterLabel>
+        <translation><!-- Bayern --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Berlin</masterLabel>
+        <translation><!-- Berlin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bern BE</masterLabel>
+        <translation><!-- Bern BE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bourgogne</masterLabel>
+        <translation><!-- Bourgogne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brandenburg</masterLabel>
+        <translation><!-- Brandenburg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bratislava</masterLabel>
+        <translation><!-- Bratislava --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bremen</masterLabel>
+        <translation><!-- Bremen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bretagne</masterLabel>
+        <translation><!-- Bretagne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Burgenland</masterLabel>
+        <translation><!-- Burgenland --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Central Bohemia</masterLabel>
+        <translation><!-- Central Bohemia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Centre-Val de Loire</masterLabel>
+        <translation><!-- Centre-Val de Loire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Clerf</masterLabel>
+        <translation><!-- Clerf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Corse</masterLabel>
+        <translation><!-- Corse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diekirch</masterLabel>
+        <translation><!-- Diekirch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dolnośląskie</masterLabel>
+        <translation><!-- Dolnośląskie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Drente</masterLabel>
+        <translation><!-- Drente --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Echternach</masterLabel>
+        <translation><!-- Echternach --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Esch an der Alzette</masterLabel>
+        <translation><!-- Esch an der Alzette --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flevoland</masterLabel>
+        <translation><!-- Flevoland --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Franche-ComtÃ</masterLabel>
+        <translation><!-- Franche-ComtÃ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fribourg FR</masterLabel>
+        <translation><!-- Fribourg FR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FryslÃ¢n</masterLabel>
+        <translation><!-- FryslÃ¢n --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gelderland</masterLabel>
+        <translation><!-- Gelderland --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Genève GE</masterLabel>
+        <translation><!-- Genève GE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Glarus GL</masterLabel>
+        <translation><!-- Glarus GL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Graubünden GR</masterLabel>
+        <translation><!-- Graubünden GR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grevenmacher</masterLabel>
+        <translation><!-- Grevenmacher --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Groningen</masterLabel>
+        <translation><!-- Groningen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guadeloupe</masterLabel>
+        <translation><!-- Guadeloupe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guyane</masterLabel>
+        <translation><!-- Guyane --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hainaut</masterLabel>
+        <translation><!-- Hainaut --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hamburg</masterLabel>
+        <translation><!-- Hamburg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Haute-Normandie</masterLabel>
+        <translation><!-- Haute-Normandie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hessen</masterLabel>
+        <translation><!-- Hessen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hradec Králové</masterLabel>
+        <translation><!-- Hradec Králové --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hungary</masterLabel>
+        <translation><!-- Hungary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jura JU</masterLabel>
+        <translation><!-- Jura JU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kanton Capellen</masterLabel>
+        <translation><!-- Kanton Capellen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karlovy Vary</masterLabel>
+        <translation><!-- Karlovy Vary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Košice</masterLabel>
+        <translation><!-- Košice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kujawsko-pomorskie</masterLabel>
+        <translation><!-- Kujawsko-pomorskie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kärnten</masterLabel>
+        <translation><!-- Kärnten --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Languedoc-Roussillon</masterLabel>
+        <translation><!-- Languedoc-Roussillon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Liberec</masterLabel>
+        <translation><!-- Liberec --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Limburg</masterLabel>
+        <translation><!-- Limburg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Limousin</masterLabel>
+        <translation><!-- Limousin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lorraine</masterLabel>
+        <translation><!-- Lorraine --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lubelskie</masterLabel>
+        <translation><!-- Lubelskie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lubuskie</masterLabel>
+        <translation><!-- Lubuskie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Luik</masterLabel>
+        <translation><!-- Luik --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Luxemburg</masterLabel>
+        <translation><!-- Luxemburg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Luzern LU</masterLabel>
+        <translation><!-- Luzern LU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Martinique</masterLabel>
+        <translation><!-- Martinique --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mayotte</masterLabel>
+        <translation><!-- Mayotte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mazowieckie</masterLabel>
+        <translation><!-- Mazowieckie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Małopolskie</masterLabel>
+        <translation><!-- Małopolskie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mecklenburg-Vorpommern</masterLabel>
+        <translation><!-- Mecklenburg-Vorpommern --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mersch</masterLabel>
+        <translation><!-- Mersch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Midi-PyrÃ©nÃ©es</masterLabel>
+        <translation><!-- Midi-PyrÃ©nÃ©es --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Moravia-Silesia</masterLabel>
+        <translation><!-- Moravia-Silesia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Namur</masterLabel>
+        <translation><!-- Namur --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Neuchâtel NE</masterLabel>
+        <translation><!-- Neuchâtel NE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nidwalden NW</masterLabel>
+        <translation><!-- Nidwalden NW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Niedersachsen</masterLabel>
+        <translation><!-- Niedersachsen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Niederösterreich</masterLabel>
+        <translation><!-- Niederösterreich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nitra</masterLabel>
+        <translation><!-- Nitra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Noord-Brabant</masterLabel>
+        <translation><!-- Noord-Brabant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Noord-Holland</masterLabel>
+        <translation><!-- Noord-Holland --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nord-Pas-de-Calais</masterLabel>
+        <translation><!-- Nord-Pas-de-Calais --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nordrhein-Westfalen</masterLabel>
+        <translation><!-- Nordrhein-Westfalen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oberösterreich</masterLabel>
+        <translation><!-- Oberösterreich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Obwalden OW</masterLabel>
+        <translation><!-- Obwalden OW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Olomouc</masterLabel>
+        <translation><!-- Olomouc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oost-Vlaanderen</masterLabel>
+        <translation><!-- Oost-Vlaanderen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opolskie</masterLabel>
+        <translation><!-- Opolskie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Overijssel</masterLabel>
+        <translation><!-- Overijssel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pardubice</masterLabel>
+        <translation><!-- Pardubice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pays de la Loire</masterLabel>
+        <translation><!-- Pays de la Loire --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Picardie</masterLabel>
+        <translation><!-- Picardie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Plzeň</masterLabel>
+        <translation><!-- Plzeň --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Podkarpackie</masterLabel>
+        <translation><!-- Podkarpackie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Podlaskie</masterLabel>
+        <translation><!-- Podlaskie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Poitou-Charentes</masterLabel>
+        <translation><!-- Poitou-Charentes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pomorskie</masterLabel>
+        <translation><!-- Pomorskie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prague</masterLabel>
+        <translation><!-- Prague --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prešov</masterLabel>
+        <translation><!-- Prešov --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Provence-Alpes-CÃŽte dâAzur</masterLabel>
+        <translation><!-- Provence-Alpes-CÃŽte dâAzur --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Redingen</masterLabel>
+        <translation><!-- Redingen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Region de Bruxelles-Capitale</masterLabel>
+        <translation><!-- Region de Bruxelles-Capitale --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remich</masterLabel>
+        <translation><!-- Remich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rheinland-Pfalz</masterLabel>
+        <translation><!-- Rheinland-Pfalz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Saarland</masterLabel>
+        <translation><!-- Saarland --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sachsen</masterLabel>
+        <translation><!-- Sachsen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sachsen-Anhalt</masterLabel>
+        <translation><!-- Sachsen-Anhalt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salzburg</masterLabel>
+        <translation><!-- Salzburg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sankt Gallen SG</masterLabel>
+        <translation><!-- Sankt Gallen SG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Schaffhausen SH</masterLabel>
+        <translation><!-- Schaffhausen SH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Schleswig-Holstein</masterLabel>
+        <translation><!-- Schleswig-Holstein --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Schwyz SZ</masterLabel>
+        <translation><!-- Schwyz SZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Solothurn SO</masterLabel>
+        <translation><!-- Solothurn SO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>South Bohemia</masterLabel>
+        <translation><!-- South Bohemia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>South Moravia</masterLabel>
+        <translation><!-- South Moravia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Steiermark</masterLabel>
+        <translation><!-- Steiermark --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thurgau TG</masterLabel>
+        <translation><!-- Thurgau TG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thüringen</masterLabel>
+        <translation><!-- Thüringen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ticino TI</masterLabel>
+        <translation><!-- Ticino TI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tirol</masterLabel>
+        <translation><!-- Tirol --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trenčín</masterLabel>
+        <translation><!-- Trenčín --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trnava</masterLabel>
+        <translation><!-- Trnava --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Uri UR</masterLabel>
+        <translation><!-- Uri UR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Utrecht</masterLabel>
+        <translation><!-- Utrecht --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Valais VS</masterLabel>
+        <translation><!-- Valais VS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vaud VD</masterLabel>
+        <translation><!-- Vaud VD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vianden</masterLabel>
+        <translation><!-- Vianden --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vlaams-Brabant</masterLabel>
+        <translation><!-- Vlaams-Brabant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vorarlberg</masterLabel>
+        <translation><!-- Vorarlberg --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vysočina</masterLabel>
+        <translation><!-- Vysočina --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waals-Brabant</masterLabel>
+        <translation><!-- Waals-Brabant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warmińsko-mazurskie</masterLabel>
+        <translation><!-- Warmińsko-mazurskie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>West-Vlaanderen</masterLabel>
+        <translation><!-- West-Vlaanderen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wielkopolskie</masterLabel>
+        <translation><!-- Wielkopolskie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wien</masterLabel>
+        <translation><!-- Wien --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wiltz</masterLabel>
+        <translation><!-- Wiltz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zachodniopomorskie</masterLabel>
+        <translation><!-- Zachodniopomorskie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zeeland</masterLabel>
+        <translation><!-- Zeeland --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zlín</masterLabel>
+        <translation><!-- Zlín --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zug ZG</masterLabel>
+        <translation><!-- Zug ZG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zuid-Holland</masterLabel>
+        <translation><!-- Zuid-Holland --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zürich ZH</masterLabel>
+        <translation><!-- Zürich ZH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ãle-de-France</masterLabel>
+        <translation><!-- Ãle-de-France --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ústí nad Labem</masterLabel>
+        <translation><!-- Ústí nad Labem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Łódzkie</masterLabel>
+        <translation><!-- Łódzkie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Śląskie</masterLabel>
+        <translation><!-- Śląskie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Świętokrzyskie</masterLabel>
+        <translation><!-- Świętokrzyskie --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Žilina</masterLabel>
+        <translation><!-- Žilina --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Bestandskunde Shell</fullName>
+        <default>false</default>
+        <label>Bestandskunde Shell</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Competitor</fullName>
+        <default>false</default>
+        <label>Competitor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer</fullName>
+        <default>true</default>
+        <label>Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Denial of cooperation</fullName>
+        <default>false</default>
+        <label>Denial of cooperation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Kündiger</fullName>
+        <default>false</default>
+        <label>Kündiger</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Multiplikator</fullName>
+        <default>false</default>
+        <label>Multiplikator</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partner</fullName>
+        <default>false</default>
+        <label>Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospect</fullName>
+        <default>false</default>
+        <label>Prospect</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retailer</fullName>
+        <default>false</default>
+        <label>Retailer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Клиент GPC</fullName>
+        <default>false</default>
+        <label>Клиент GPC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Санкционный запрет</fullName>
+        <default>false</default>
+        <label>Санкционный запрет</label>
+    </standardValue>
+</StandardValueSet>

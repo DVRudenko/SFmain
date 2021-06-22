@@ -1,0 +1,25 @@
+@import 'c/styles';
+
+.legalAddress {
+  max-height: 200px;
+  overflow-y: scroll;
+  margin-left: 11% !important;
+  margin-right: 60%;
+}
+
+.legalAddress li{
+  display: inline-block;
+  cursor: pointer;
+}
+
+.postalAddress {
+  max-height: 200px;
+  overflow-y: scroll;
+  margin-left: 11% !important;
+  margin-right: 60%;
+}
+
+.postalAddress li{
+  display: inline-block;
+  cursor: pointer;
+}

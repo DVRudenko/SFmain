@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pick list of reasons for not fueling for Starts Team. --></help>
+    <label>Starts: Gründe für nicht tanken</label>
+    <name>Starts_Reason_for_Not_Fueling__c</name>
+    <picklistValues>
+        <masterLabel>Cards were not given to the drivers</masterLabel>
+        <translation>An Mitarbeiter nicht verteilt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competitor Cards</masterLabel>
+        <translation>Mitbewerber</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer never ordered Cards</masterLabel>
+        <translation>Karten nie bestellt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Did not receive Cards</masterLabel>
+        <translation>Karten nicht erhalten</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Did not receive PINs</masterLabel>
+        <translation>PINs nicht erhalten</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forgot having Cards</masterLabel>
+        <translation>Vergessen Karten einzusetzen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Sonstiges: s. Notizen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell fuel station too far away</masterLabel>
+        <translation>Shell Tankstelle zu weit weg</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wants to start pumping later (seasonality)</masterLabel>
+        <translation>Möchte später mit dem Tanken beginnen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Winback customer</masterLabel>
+        <translation>WinBack Kunde</translation>
+    </picklistValues>
+</CustomFieldTranslation>

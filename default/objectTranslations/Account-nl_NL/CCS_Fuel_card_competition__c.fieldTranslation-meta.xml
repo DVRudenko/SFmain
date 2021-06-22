@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS Fuel card competition --></label>
+    <name>CCS_Fuel_card_competition__c</name>
+    <picklistValues>
+        <masterLabel>AS24</masterLabel>
+        <translation><!-- AS24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benzina</masterLabel>
+        <translation><!-- Benzina --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DKV</masterLabel>
+        <translation><!-- DKV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENI</masterLabel>
+        <translation><!-- ENI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Erneks Inv.</masterLabel>
+        <translation><!-- Erneks Inv. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EuroWag</masterLabel>
+        <translation><!-- EuroWag --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuelomat</masterLabel>
+        <translation><!-- Fuelomat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LukOil</masterLabel>
+        <translation><!-- LukOil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOL</masterLabel>
+        <translation><!-- MOL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OMV</masterLabel>
+        <translation><!-- OMV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PapOil</masterLabel>
+        <translation><!-- PapOil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RobinOil</masterLabel>
+        <translation><!-- RobinOil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell</masterLabel>
+        <translation><!-- Shell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slovnaft</masterLabel>
+        <translation><!-- Slovnaft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TankOno</masterLabel>
+        <translation><!-- TankOno --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tankomat</masterLabel>
+        <translation><!-- Tankomat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vlastní ČS</masterLabel>
+        <translation><!-- Vlastní ČS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>bankovní</masterLabel>
+        <translation><!-- bankovní --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>hotovost</masterLabel>
+        <translation><!-- hotovost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>lokální kredit</masterLabel>
+        <translation><!-- lokální kredit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>lokální závozy na stavby</masterLabel>
+        <translation><!-- lokální závozy na stavby --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>místní ČS</masterLabel>
+        <translation><!-- místní ČS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Čepro</masterLabel>
+        <translation><!-- Čepro --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

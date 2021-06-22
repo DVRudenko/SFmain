@@ -1,0 +1,26 @@
+<!--
+ - Created by Andrei.Katunin on 20.07.2018.
+ -->
+
+<apex:component id="E2EComponentOutputOrderDetail">
+
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map" />
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="value of outputPanel" />
+
+    <apex:attribute name="className"
+                    type="String"
+                    description="class outputpanel" />
+
+    <apex:outputPanel layout="block" styleClass="block__inputs validations goods">
+        <label for="">{!pageMap[field].elementItemsMap['LABEL'].value}</label>
+        <apex:outputPanel layout="block" styleClass="fake__inputs-text">
+            {!pageMap[field].elementItemsMap['DEFAULT VALUE'].value}
+        </apex:outputPanel>
+    </apex:outputPanel>
+
+</apex:component>

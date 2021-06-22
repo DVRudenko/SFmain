@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CreditCheck_BNF</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Notes__c</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>bearbeitet_von__c</columns>
+    <columns>Registered_Country__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Gruendungsjahr__c</columns>
+    <columns>Gasoline_consumption_l_month__c</columns>
+    <columns>Diesel_consumption_l_month__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>CreditCheck,CC In Progress,Pending Credit,Credit Check - Pending Credit,Pending Credit - E2E Check</value>
+    </filters>
+    <filters>
+        <field>Registered_Country__c</field>
+        <operation>equals</operation>
+        <value>Netherlands,France,Belgium-FR,Belgium-NL,Luxembourg</value>
+    </filters>
+    <label>CreditCheck BNF</label>
+    <language>de</language>
+    <sharedTo>
+        <role>Credit</role>
+        <role>Credit_Managing_Cases</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,23 @@
+<template>
+    <div class={computedComponentClass} tabindex="0" onclick={handleClick} onblur={handleBlur}>
+        <div class="fltbase-picklist-square__view">
+            <span class={computedLabelClass}>{label}</span>
+            <span class={computedSelectedLabelClass}>{selectedLabel}</span>
+        </div>
+        
+        <div class={computedDropdownClass} style={computedDropdownStyle}>
+            <template for:each={optionsList} for:item="next">
+                <div 
+                    key={next.index} 
+                    class='fltbase-picklist-square__option'
+                    data-active={next.active} 
+                    data-index={next.index}
+                    onclick={handleSelect}
+                >
+                    <span>{next.label}</span>
+                    <span class="fltbase-picklist-square__option-description">{next.description}</span>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

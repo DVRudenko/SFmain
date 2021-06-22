@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Produkt__c</fullName>
+    <description>To choose, which card product is taken</description>
+    <externalId>false</externalId>
+    <label>Produkt</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>-</fullName>
+                <default>false</default>
+                <label>-</label>
+            </value>
+            <value>
+                <fullName>Driver Card</fullName>
+                <default>false</default>
+                <label>Driver Card</label>
+            </value>
+            <value>
+                <fullName>Vehicle Card</fullName>
+                <default>false</default>
+                <label>Vehicle Card</label>
+            </value>
+            <value>
+                <fullName>Driver and Vehicle Card</fullName>
+                <default>false</default>
+                <label>Driver and Vehicle Card</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

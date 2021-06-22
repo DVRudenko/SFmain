@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Unique Name of the Report this List was generated from - as seen on the Save As dialogue for the Report --></help>
+    <label><!-- Report Unique Name --></label>
+    <name>NVMConnect__Report_Unique_Name__c</name>
+</CustomFieldTranslation>

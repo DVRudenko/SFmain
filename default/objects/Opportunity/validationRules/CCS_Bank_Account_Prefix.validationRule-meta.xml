@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Bank_Account_Prefix</fullName>
+    <active>true</active>
+    <description>Bank Account Prefix for CCS must have between 2 and 6 numbers if populated.</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = &quot;CCS_Opportunity&quot;,
+NOT(ISBLANK(Bank_Account_Prefix__c)), 
+OR(
+LEN(Bank_Account_Prefix__c) &gt; 6,
+LEN(Bank_Account_Prefix__c) &lt; 2 
+  )
+)</errorConditionFormula>
+    <errorDisplayField>Bank_Account_Prefix__c</errorDisplayField>
+    <errorMessage>Please verify the validity of the Bank Account Prefix (length must be between 2 and 6) or contact your administrator.</errorMessage>
+</ValidationRule>

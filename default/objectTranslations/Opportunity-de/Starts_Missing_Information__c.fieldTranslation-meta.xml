@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Starts: Fehlende Unterlagen</label>
+    <name>Starts_Missing_Information__c</name>
+    <picklistValues>
+        <masterLabel>Already customer</masterLabel>
+        <translation>Kunde ist bereits Bestandskunde</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Club Smart cards n/a for trucks</masterLabel>
+        <translation>Keine Club Smart für LKW´s</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit</masterLabel>
+        <translation><!-- Credit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer wants termination</masterLabel>
+        <translation>Kunde möchte kündigen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email is missing</masterLabel>
+        <translation>Emailadresse fehlt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuel cards are missing</masterLabel>
+        <translation>Tankkarten fehlen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home station missing</masterLabel>
+        <translation>Stammtankstelle fehlt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>House Nr. is missing</masterLabel>
+        <translation>Hausnummer fehlt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Driver/VRN in Card</masterLabel>
+        <translation><!-- No Driver/VRN in Card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Sonstiges</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product is missing / Not entered correctly</masterLabel>
+        <translation>Produkt fehlt / Nicht korrekt eingegeben</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEPA wrong / insufficient</masterLabel>
+        <translation><!-- SEPA wrong / insufficient --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Set up cards differ from entered # of cards</masterLabel>
+        <translation>Die Karten stimmt mit der Anzahl nicht</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VAT / Ref. Number missing</masterLabel>
+        <translation><!-- VAT / Ref. Number missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Card Type</masterLabel>
+        <translation><!-- Wrong Card Type --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong address</masterLabel>
+        <translation><!-- Wrong address --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

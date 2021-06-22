@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Edit_Personal_Data</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Edit Personal Data</masterLabel>
+    <openType>sidebar</openType>
+    <page>PD_EditLead</page>
+    <protected>false</protected>
+</WebLink>

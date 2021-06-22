@@ -1,0 +1,116 @@
+<apex:page controller="LeadProcessingTimeReportCCSctrl" action="{! init }">
+    <style>
+        .homeTab .tertiaryPalette, .individualPalette .homeBlock .tertiaryPalette, 
+        .layoutEdit .individualPalette .homeBlock .tertiaryPalette {
+            background:  black;
+        }
+        .timeOfProcTable {
+            border-collapse: collapse;
+        }
+
+        .timeOfProcTable td, 
+        .timeOfProcTable th {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        .timeOfProcTable th {
+            background: #ededed;
+            color: grey;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .timeOfProcTable td {
+            color: #3f3f3f;
+            vertical-align: middle;
+        } 
+    </style>
+    <apex:pageBlock id="block1">
+        <apex:pageMessages />
+        <apex:pageBlockSection title="Leads to process ({! leadsToProcessListWrapper.size })" collapsible="false"/>
+        <apex:pageBlockTable value="{! leadsToProcessListWrapper }" var="lead">
+            <apex:column headerValue="Name">
+                <a href="/{! lead.lead.Id }" target="_blank">{! lead.lead.Name }</a>
+            </apex:column>
+            <apex:column value="{! lead.lead.LastTransferDate }"/>
+           	<apex:column value="{! lead.lead.Status }" rendered="{! currentUser.UserRole.Name = 'CCS Telesales Team Lead' }"/>
+           	<apex:column value="{! lead.lead.Quali_Status__c }" rendered="{! currentUser.UserRole.Name = 'CCS SME Team Lead' }"/>
+            <apex:column headerValue="{! IF(currentUser.UserRole.Name = 'CCS Telesales Team Lead', 'Minutes unprocessed', 'Hours unprocessed') }">
+                {! lead.diff }
+            </apex:column>
+            <apex:column value="{! lead.lead.OwnerId }"/>
+            <apex:column value="{! lead.lead.Channel__c }"/>
+            <apex:column value="{! lead.lead.Sec_Channel__c }"/>
+            <apex:column value="{! lead.lead.LeadSource }"/>          
+            <apex:column value="{! lead.lead.IsConverted }"/>
+        </apex:pageBlockTable>
+        <apex:pageBlockSection title="Dashboard ({! leadsListWrapper.size })" collapsible="false"/>
+        <apex:outputPanel rendered="{! currentUser.UserRole.Name = 'CCS Telesales Team Lead' }">
+	        <p>1) Sec Channel: Inbound AND (Channel: web)</p>
+	        <p><table>
+                    <tr>
+                        <td style="width: 90px;">
+                            2) Lead Source:
+                        </td>
+                        <td>
+                            efektivnetankovanie.sk, efektivnitankovani.cz, Web CCS, Web CCS (Napište nám), Web CCS (Napište nám SK), Web CCS (objednávka CCS Bonus+ SK), Web CCS (objednávka CCS Bonus Fleet), Web CCS (objednávka CCS Bonus Fleet SK), Web CCS (objednávka CCS Bonus SK), Web CCS (objednávka CCS Business), Web CCS (objednávka CCS Business SK), Web CCS (objednávka CCS Carnet), Web CCS (objednávka CCS Limit), Web CCS (objednávka CCS Limit+), Web CCS (objednávka CCS Limit +MINI)', Web CCS (objednávka CCS Limit+ SK), Web CCS (objednávka CCS Limit SK), Web CCS (objednávka CCS Toll), Web CCS (objednávka CCS Toll SK), Web CCS (objednávka UTA/CCS), Web CCS (objednávka UTA/CCS SK)
+                        </td>    
+                    </tr>    
+               </table> 
+            </p>
+	        <p>3) Lead Status not equals "Open"</p>
+	        <p>4) Change from Lead Status = "Open" in range</p>
+	        <p style="margin-bottom: 10px;">5) User owner - subordinate role</p>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{! currentUser.UserRole.Name = 'CCS SME Team Lead' }">
+	        <p>1) Sec Channel: Inbound AND (Channel: E-mail OR web)</p>
+	        <p>2) Quali Status not equals "Customer reached – forwarded to Field"</p>
+	        <p>3) Change from Quali Status = "Customer reached – forwarded to Field" in range</p>
+	        <p style="margin-bottom: 10px;">4) User owner - subordinate role</p>
+        </apex:outputPanel>
+        <apex:pageBlockTable value="{! leadsListWrapper }" var="lead">
+            <apex:column headerValue="Name">
+                <a href="/{! lead.lead.Id }" target="_blank">{! lead.lead.Name }</a>
+            </apex:column>
+            <apex:column value="{! lead.lead.LastTransferDate }"/>
+            <apex:column value="{! lead.lead.Status }" rendered="{! currentUser.UserRole.Name = 'CCS Telesales Team Lead' }"/>
+            <apex:column value="{! lead.lead.Quali_Status__c }"/>
+            <apex:column headerValue="{! IF(currentUser.UserRole.Name = 'CCS Telesales Team Lead', 'Diff in munutes', 'Diff in hours') }">
+                {! lead.diff }
+            </apex:column>
+            <apex:column value="{! lead.lead.OwnerId }"/>
+            <apex:column value="{! lead.lead.Channel__c }"/>
+            <apex:column value="{! lead.lead.Sec_Channel__c }"/>
+            <apex:column value="{! lead.lead.LeadSource }"/>  
+            <apex:column value="{! lead.lead.IsConverted }"/>
+        </apex:pageBlockTable>  
+        <table width="15%" cellspacing="0" cellpadding="0" border="0" class="timeOfProcTable">
+            <tr>
+                <td>
+                    <apex:outputPanel >
+                        <strong>{! IF(currentUser.UserRole.Name = 'CCS Telesales Team Lead', 'Total diff in minutes:', 'Total diff in hours:') }</strong> {! timeofProcess }   
+                    </apex:outputPanel>
+                </td>
+            </tr>
+        </table>
+        <apex:pageBlockSection title="All Excluded Leads ({! numberExcludedLeads }) (max 1000 records)" collapsible="false"/>
+        <apex:pageBlockTable value="{! excludedLeadsMap }" var="key">
+            <apex:column headerValue="Name">
+                <a href="/{! excludedLeadsMap[key].Id }" target="_blank">{! excludedLeadsMap[key].Name }</a>
+            </apex:column>
+            <apex:column value="{! excludedLeadsMap[key].LastTransferDate }"/>
+            <apex:column value="{! excludedLeadsMap[key].Status }" rendered="{! currentUser.UserRole.Name = 'CCS Telesales Team Lead' }"/>
+            <apex:column value="{! excludedLeadsMap[key].Quali_Status__c }"/>
+            <apex:column value="{! excludedLeadsMap[key].OwnerId }"/>
+            <apex:column value="{! excludedLeadsMap[key].Channel__c }"/>
+            <apex:column value="{! excludedLeadsMap[key].Sec_Channel__c }"/>
+            <apex:column value="{! excludedLeadsMap[key].LeadSource }"/>  
+            <apex:column value="{! excludedLeadsMap[key].IsConverted }"/>
+            <apex:column value="{! excludedLeadsMap[key].Disable_for_Processing_Time__c }"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <script> 
+        twistSection(document.getElementById('{!$Component.block1.section1}').getElementsByTagName('img')[0]);
+    </script>
+</apex:page>

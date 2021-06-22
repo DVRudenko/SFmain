@@ -1,0 +1,1911 @@
+{
+    "translations": {
+        "step_title_pas": {
+            "default_impl": {
+                "en": "Add products to your shopping cart and configure cards",
+                "nl": "Voeg producten toe en bepaal de instellingen",
+                "fr": "Ajouter des produits et définir les paramètres",
+                "de": "Wählen Sie Produkte aus und konfigurieren Sie Ihre Karten",
+                "pl": "Dodaj produkty do koszyka i skonfiguruj karty"
+            },
+            "Hungary": {
+                "en": "Add products to your order and configure cards",
+                "hu": "Termékek hozzáadása és kártyák személyre szabása"
+            },
+            "Slovakia": {
+                "en": "Add products to your order and configure cards",
+                "sk": "Pridajte k Vašej objednávke produkty a nakonfigurujte karty"
+            },
+            "Czech Republic": {
+                "en": "Add products to your order and configure cards",
+                "cs": "Přidejte další karty k Vaší objednávce a proveďte nastavení karet"
+            }
+        },
+        "tariffBtn_pas": {
+            "default_impl": {
+                "en": "Tariff details",
+                "fr": "Liste des tarifs",
+                "nl": "KOSTEN OVERZICHT",
+                "hu": "TARIFA RÉSZLETEK",
+                "pl": "TARYFA",
+                "de": "TARIFÜBERSICHT",
+                "cs": "Detaily tarifu",
+                "sk": "Detaily tarifu"
+            },
+            "Czech Republic CCS": {
+                "en": "TARIFF DETAILS",
+                "cs": "CENÍK SLUŽEB"
+            },
+            "Slovakia CCS": {
+                "en": "TARIFF DETAILS",
+                "sk": "DETAILY TARIFU"
+            }
+        },
+        "configureBtn_pas": {
+            "default_impl": {
+                "en": "CARD SETTINGS",
+                "fr": "PARAMÈTRES DE LA CARTE",
+                "nl": "KAART INSTELLINGEN",
+                "hu": "kártya beállításait",
+                "pl": "KONFIGURACJA",
+                "de": "KARTEN-KONFIGURATION",
+                "cs": "NASTAVENÍ KARTY",
+                "sk": "NASTAVENIE KARTY"
+            },
+            "Netherlands": {
+                "en": "CARD SETTINGS",
+                "nl": "PAS INSTELLINGEN"
+            }
+        },
+        "deleteBtn_pas": {
+            "default_impl": {
+                "en": "delete",
+                "fr": "SUPPRIMER",
+                "hu": "TÖRÖL",
+                "nl": "Verwijderen",
+                "pl": "usunąć",
+                "de": "LÖSCHEN"
+            }
+        },
+        "cancelBtn_pas": {
+            "default_impl": {
+                "en": "cancel",
+                "fr": "ANNULER",
+                "nl": "ANNULEREN",
+                "hu": "MEGSZÜNTETI",
+                "pl": "anuluj",
+                "de": "ABBRECHEN"
+            }
+        },
+        "saveBtn_pas": {
+            "default_impl": {
+                "en": "save",
+                "fr": "ENREGISTRER",
+                "nl": "OPSLAAN",
+                "hu": "MEGMENT",
+                "pl": "Zapisz",
+                "de": "SPEICHERN"
+            }
+        },
+        "driverName_pas": {
+            "default_impl": {
+                "en": "Name on the card:",
+                "fr": "Nom:",
+                "hu": "Név a Kártyán:",
+                "nl": "Naam:",
+                "pl": "Wytłoczenie na karcie:",
+                "de": "Name auf der Karte:",
+                "cs": "Jméno na kartě:",
+                "sk": "Meno na karte:"
+            },
+            "Czech Republic CCS": {
+                "en": "Card name:",
+                "cs": "Název na kartě:"
+            },
+            "Slovakia CCS": {
+                "en": "Card name:",
+                "cs": "Názov na karte:"
+            }
+        },
+        "driverName_tooltip_pas": {
+            "default_impl": {
+                "en": "Please provide the name of the driver or vehicle registration number",
+                "pl": "Proszę podać imię i nazwisko kierowcy lub numer rejestracyjny pojazdu"
+            },
+            "Czech Republic CCS": {
+                "en": "You can enter driver's name, license plate number or simply card number",
+                "cs": "Můžete zadat jméno řidiče, RZ vozidla nebo jen číslo karty"
+            },
+            "Slovakia CCS": {
+                "en": "You can enter driver's name, license plate number or simply card number",
+                "cs": "Môžete zadať meno vodiča, ŠPZ vozidla alebo len číslo karty"
+            }
+        },
+        "driverName_error_pas": {
+            "default_impl": {
+                "en": "Please enter a valid name",
+                "fr": "Veuillez entrer un nom valide",
+                "nl": "Geef een geldige naam in",
+                "hu": "Kérlek, adj meg egy érvényes nevet",
+                "pl": "Proszę podać poprawną nazwę",
+                "de": "Bitte geben Sie einen gültigen Namen ein.",
+                "cs": "Zadejte prosím platné jméno",
+                "sk": "Zadajte prosím platné meno"
+            }
+        },
+        "unitName_pas": {
+            "default_impl": {
+                "en": "Name of the Unit:",
+                "pl": "Nazwa Urządzenia:"
+            }
+        },
+        "unitName_error_pas": {
+            "default_impl": {
+                "en": "Please enter a valid name",
+                "pl": "Proszę podać poprawną nazwę"
+            }
+        },
+        "typeOfVehicle_pas": {
+            "default_impl": {
+                "en": "Vehicle type:",
+                "fr": "Type de véhicule:",
+                "nl": "Voertuigtype:",
+                "hu": "Jármű típus:",
+                "pl": "Typ pojazdu:",
+                "de": "Fahrzeugtyp:",
+                "cs": "Typ vozidla:",
+                "sk": "Typ vozidla:"
+            }
+        },
+        "typeOfCard_pas": {
+            "default_impl": {
+                "en": "Refueling abroad:",
+                "fr": "Ravitaillement à l'international:",
+                "nl": "Internationaal tanken:",
+                "hu": "tankolás külföldön:",
+                "pl": "Tankowanie za granicą:",
+                "de": "Tanken im Ausland:",
+                "cs": "Tankování v zahraničí:",
+                "sk": "Tankovanie v zahraničí:"
+            }
+        },
+        "typeOfCardCarnet_pas": {
+            "default_impl": {
+                "en": "Use abroad:",
+                "pl": "Użycie za granicą:"
+            }
+        },
+        "monthlyFuelConsumption_pas": {
+            "default_impl": {
+                "en": "Monthly fuel consumption:",
+                "fr": "Consommation mensuelle:",
+                "hu": "Havi üzemanyag-fogyasztás:",
+                "nl": "Maandelijks brandstofverbruik:",
+                "pl": "Miesięczne zużycie paliwa:",
+                "de": "Monatlicher Kraftstoffverbrauch:",
+                "cs": "Měsíční spotřeba paliva:",
+                "sk": "Mesačná spotreba paliva:"
+            }
+        },
+        "monthlyFuelConsumption_tooltip_pas": {
+            "default_impl": {
+                "en": "Please enter volume between 50 and 5000 liters",
+                "fr": "Veuillez entrer un volume entre 50 et 5000 litres",
+                "nl": "Geef een volume tussen 50 en 5000 liter aan",
+                "hu": "Kérjük, adja térfogata 50 és 5000 literes",
+                "pl": "Proszę podać ilość litrów od 50 do 5000",
+                "de": "Bitte geben Sie ein Volumen zwischen 50 und 5.000 Litern ein.",
+                "cs": "Zadejte prosím spotřebu mezi 50 a 5000 litry",
+                "sk": "Zadajte prosím objem medzi 50 a 5000 litrov"
+            }
+        },
+        "monthlyFuelConsumption_error_pas": {
+            "default_impl": {
+                "en": "Please enter valid volume",
+                "fr": "Veuillez entrer un volume valide",
+                "nl": "Geef een geldig volume aan",
+                "hu": "Adjon meg egy érvényes hangerő",
+                "pl": "Proszę podać poprawną wartość",
+                "de": "Bitte geben Sie ein gültiges Volumen ein.",
+                "cs": "Zadejte prosím platné množství",
+                "sk": "Zadajte prosím platné množstvo"
+            }
+        },
+        "addCardTooltip_pas": {
+            "default_impl": {
+                "en": "You can choose only one offer for each product.",
+                "pl": "Możesz wybrać tylko jedną ofertę dla każdego produktu"
+            }
+        },
+        "nextBtnError_pas": {
+            "default_impl": {
+                "en": "Please add at least one product",
+                "fr": "Ajouter au moins un produit",
+                "nl": "Voeg minstens één product toe",
+                "hu": "Adjon meg legalább egy terméket",
+                "pl": "Musisz wybrać przynajmniej jedną ofertę",
+                "de": "Bitte wählen Sie mindestens ein Produkt aus",
+                "cs": "Přidejte prosím alespoň jeden produkt",
+                "sk": "Pridajte prosím aspoň jeden produkt"
+            }
+        },
+        "dailyLimit_pas": {
+            "default_impl": {
+                "en": "Daily limit in CZK"
+            },
+            "Czech Republic CCS": {
+                "en": "Daily limit in CZK",
+                "cs": "Denní limit v Kč"
+            },
+            "Slovakia CCS": {
+                "en": "Daily limit in EUR",
+                "sk": "Denný limit v EUR"
+            }
+        },
+        "dailyLimit_tooltip_pas": {
+            "default_impl": {
+                "en": "Set a daily withdrawal limit on the card"
+            },
+            "Czech Republic CCS": {
+                "en": "Set a daily withdrawal limit on the card (in CZK). The daily limit serves as protection in case of loss or theft of the card. Please enter volume between $min$ and $max$ CZK",
+                "cs": "Zadejte denní limit čerpání na kartu (v Kč). Denní limit slouží jako ochranný prvek pro případ ztráty nebo odcizení karty. Jde o nepovinný údaj. Zadejte prosím spotřebu mezi $min$ a $max$ Kč"
+            },
+            "Slovakia CCS": {
+                "en": "Set a daily withdrawal limit on the card (in EUR). The daily limit serves as protection in case of loss or theft of the card. Please enter volume between $min$ and $max$ EUR",
+                "sk": "Stanovte denný limit čerpania na kartu (v EUR). Denný limit slúži ako ochranný element pre prípad straty alebo odcudzenia karty. Ide o nepovinný údaj. Zadajte prosím objem medzi $min$ a $max$ EUR"
+            }
+        },
+        "dailyLimit_error_pas": {
+            "default_impl": {
+                "en": "Please enter valid volume",
+                "cs": "Zadejte prosím platné jméno",
+                "sk": "Zadajte prosím platné meno"
+            }
+        },
+        "monthlyCardLimit_pas": {
+            "default_impl": {
+                "en": "Monthly limit"
+            },
+            "Czech Republic CCS": {
+                "en": "Monthly limit in CZK",
+                "cs": "Měsíční limit v Kč"
+            },
+            "Slovakia CCS": {
+                "en": "Monthly limit in EUR",
+                "sk": "Mesačný limit v EUR"
+            }
+        },
+        "monthlyCardLimit_tooltip_pas": {
+            "default_impl": {
+                "en": "Set a maximum monthly withdrawal limit on one card "
+            },
+            "Czech Republic CCS": {
+                "en": "Set a maximum monthly withdrawal limit on one card in CZK. The monthly limit is valid for each card separately and it is not possible to count it and make an average amount from all ordered cards. Please enter volume between $min$ and $max$ CZK",
+                "cs": "Zadejte maximální měsíční výši čerpání (v Kč) na jednu kartu. Měsíční limit je platný pro každou kartu zvlášť a nelze jej sčítat a průměrovat za všechny karty dohromady. Zadejte prosím spotřebu mezi $min$ a $max$ Kč"
+            },
+            "Slovakia CCS": {
+                "en": "Set a maximum monthly withdrawal limit on one card in EUR. The monthly limit is valid for each card separately and it is not possible to count it and make an average amount from all ordered cards. Please enter volume between $min$ and $max$ EUR",
+                "sk": "Stanovený mesačný limit čerpania na kartu (v EUR). Zadajte prosím objem medzi $min$ a $max$ EUR"
+            }
+        },
+        "monthlyCardLimit_error_pas": {
+            "default_impl": {
+                "en": "Please enter valid volume",
+                "cs": "Zadejte prosím platné jméno",
+                "sk": "Zadajte prosím platné meno"
+            }
+        },
+        "categoryOfProducts_pas": {
+            "default_impl": {
+                "en": "Category of spend",
+                "cs": "Povolené skupiny zboží",
+                "sk": "Skupiny tovarov"
+            }
+        },
+        "categoryOfProducts_error_pas": {
+            "default_impl": {
+                "en": "Please enter valid volume"
+            }
+        },
+        "lockedPinChange_pas": {
+            "default_impl": {
+                "en": "Lock PIN code change",
+                "cs": "Zablokovat změnu PIN kódu",
+                "sk": "Zablokovať zmenu PIN kódu"
+            }
+        },
+        "lockedPinChange_tooltip_pas": {
+            "default_impl": {
+                "en": "Check the box to disable the PIN Code change function when issuing a new card after the expiration of the previous one.",
+                "cs": "Jestliže si chcete zachovat stejný PIN při každé obnově karty, zaškrtněte políčko.",
+                "cz": "Ak chcete funkciu zmeny PIN zablokovať, označte políčko."
+            }
+        },
+        "lockedPinChange_error_pas": {
+            "default_impl": {
+                "en": "Please enter valid volume",
+                "cs": "Zadejte prosím platné jméno",
+                "sk": "Zadajte prosím platné meno"
+            }
+        },
+        "mileageData_pas": {
+            "default_impl": {
+                "en": "Odometer",
+                "cs": "Zadávat stav kilometrů",
+                "sk": "Zadávanie stavu kilometrov"
+            }
+        },
+        "mileageData_tooltip_pas": {
+            "default_impl": {
+                "en": "Check the box to enable the function for this card.",
+                "cs": "Chcete-li tuto funkci využívat, zaškrtněte políčko.",
+                "sk": "Ak chcete túto funkciu využívať, označte políčko."
+            }
+        },
+        "mileageData_error_pas": {
+            "default_impl": {
+                "en": "Please enter valid volume",
+                "cs": "Zadejte prosím platné jméno",
+                "sk": "Zadajte prosím platné meno"
+            }
+        },
+        "evCharging_pas": {
+            "default_impl": {
+                "en": "Activate EV charging",
+                "cs": "Aktivovat dobíjení EV",
+                "sk": "Aktivovať dobíjanie EV"
+            }
+        },
+        "evCharging_tooltip_pas": {
+            "default_impl": {
+                "en": "Check the box to add a possibility of charging electric vehicles to your CCS card.",
+                "cs": "Pro možnost dobíjení elektro vozidel s vaší kartou CCS, zaškrtněte políčko.",
+                "sk": "Pre možnosť dobíjania elektro vozidiel s vašou kartou CCS, zaškrtnite políčko."
+            }
+        },
+        "evCharging_error_pas": {
+            "default_impl": {
+                "en": "Please enter valid volume",
+                "cs": "Zadejte prosím platné jméno",
+                "sk": "Zadajte prosím platné meno"
+            }
+        },
+        "hideBulk_pas": {
+            "default_impl": {
+                "en": "Hide bulk card settings",
+                "cs": "Skrýt hromadné parametry",
+                "sk": "Skrýt hromadné parametry"
+            }
+        },
+        "showBulk_pas": {
+            "default_impl": {
+                "en": "Show bulk card settings",
+                "cs": "Nastavit hromadné parametry",
+                "sk": "Nastaviť hromadné parametre"
+            }
+        },
+        "alreadyCustomer_pas": {
+            "default_impl": {
+                "en": "I am already a CCS customer:",
+                "cs": "Jsem klientem CCS:"
+            }
+        },
+        "useCustomerService_pas": {
+            "default_impl": {
+                "en": "Dear Customer, please order new CCS LIMIT cards through CCS Customer Service.",
+                "cs": "Vážený kliente, pro objednávku nových karet CCS LIMIT využijte Zákaznický servis CCS.",
+                "sk": "Vážený klient, pre objednávku nových kariet CCS LIMIT využite Zákaznický servis CCS."
+            }
+        },
+        "all_pas": {
+            "default_impl": {
+                "en": "All",
+                "cs": "Všechny karty",
+                "sk": "všetky karty"
+            }
+        },
+        "nextButton_error_pas": {
+            "default_impl": {
+                "en": "Please finish configuring your cards",
+                "cs": "Dokončete prosím nastavení vašich karet",
+                "sk": "Dokončite prosím nastavenie vašich kariet"
+            }
+        },
+        "chooseNetworkBrand_button_pas": {
+            "default_impl": {
+                "en": "Choose the fuel station network brand",
+                "cs": "Vyberte značku sítě čerpacích stanic"
+            }
+        },
+        "chooseNetworkBrand_description_pas": {
+            "default_impl": {
+                "en": "Please choose 1 of the following gas stations networks",
+                "cs": "Sítě čerpacích stanic pro váš výběr"
+            }
+        },
+        "chooseFuelStations_button_pas": {
+            "default_impl": {
+                "en": "Choose up to 4 individual fuel stations",
+                "cs": "Identifikujte 4 samostatné čerpací stanice"
+            }
+        },
+        "chooseFuelStations_description_pas": {
+            "default_impl": {
+                "en": "Please provide up to 4 individual fuel stations",
+                "cs": "Identifikujte 4 samostatné čerpací stanice"
+            }
+        }
+    },
+    "settings": {
+        "data_object": {
+            "Client_Id__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "googleClientId",
+                    "required": false
+                }
+            },
+            "Selected_Company_Name__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                }
+            },
+            "Name": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": true
+                }
+            },
+            "Current_Language__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                }
+            },
+            "Utm_Products__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "utmProducts"
+                }
+            }
+        },
+        "product": {
+            "Name": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                }
+            },
+            "ProductID__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "18",
+                    "mapto": "productId",
+                    "required": false
+                }
+            },
+            "Type_ID__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "21",
+                    "mapto": "typeId",
+                    "required": true
+                }
+            },
+            "Type_Name__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "typeName",
+                    "required": true
+                }
+            }
+        },
+        "offer_item": {
+            "Offer_Name__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "offerName",
+                    "required": false
+                }
+            },
+            "Driver_Name__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "25",
+                    "mapto": "driverName",
+                    "required": false
+                }
+            },
+            "Type_Of_Card__c": {
+                "Poland": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "mapto": "typeOfCard",
+                    "required": false
+                }
+            },
+            "Type_Of_Vehicle__c": {
+                "Poland": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "mapto": "typeOfVehicle",
+                    "required": false
+                }
+            },
+            "Monthly_Fuel_Consumption__c": {
+                "Poland": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                },
+                "France": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyFuelConsumption",
+                    "required": false
+                }
+            },
+            "Company_Name__c": {
+                "Poland": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "France": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "^[0-9a-zA-Z ]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "^[0-9a-zA-Z]+$",
+                    "maxlength": "25",
+                    "mapto": "companyName",
+                    "required": false
+                }
+            },
+            "Category_Of_Products__c": {
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "categoryOfProducts",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "categoryOfProducts",
+                    "required": true
+                }
+            },
+            "Mileage_Data__c": {
+                "Slovakia CCS": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "mileageData",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "mileageData",
+                    "required": false
+                }
+            },
+            "Locked_Pin_Change__c": {
+                "Slovakia CCS": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "lockedPinChange",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "lockedPinChange",
+                    "required": false
+                }
+            },
+            "Activate_EV_Charging__c": {
+                "Slovakia CCS": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "evCharging",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "evCharging",
+                    "required": false
+                }
+            },
+            "Monthly_Card_Limit__c": {
+                "Slovakia CCS": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyCardLimit",
+                    "minValue": "100",
+                    "maxValue": "740",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "monthlyCardLimit",
+                    "minValue": "1000",
+                    "maxValue": "20000",
+                    "required": true
+                }
+            },
+            "Daily_Card_Limit__c": {
+                "Slovakia CCS": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "dailyLimit",
+                    "minValue": "100",
+                    "maxValue": "740",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "^[0-9]+$",
+                    "mapto": "dailyLimit",
+                    "minValue": "1000",
+                    "maxValue": "20000",
+                    "required": true
+                }
+            }
+        },
+        "locator_item": {
+            "Name": {
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "80",
+                    "mapto": "name",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "name",
+                    "required": false
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ausweisart__c</fullName>
+    <externalId>false</externalId>
+    <label>Ausweisart</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Personalausweis</fullName>
+                <default>false</default>
+                <label>Personalausweis</label>
+            </value>
+            <value>
+                <fullName>Reisepass</fullName>
+                <default>false</default>
+                <label>Reisepass</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

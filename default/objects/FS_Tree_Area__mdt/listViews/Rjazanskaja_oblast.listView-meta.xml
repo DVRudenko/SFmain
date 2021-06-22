@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rjazanskaja_oblast</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>NamespacePrefix</columns>
+    <columns>FS_Territory__c</columns>
+    <columns>FS_Tree_Province__c</columns>
+    <columns>OKATO__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>FS_Tree_Province__c</field>
+        <operation>equals</operation>
+        <value>Rjazanskaja_oblast</value>
+    </filters>
+    <label>Рязанская область</label>
+    <language>en_US</language>
+</ListView>

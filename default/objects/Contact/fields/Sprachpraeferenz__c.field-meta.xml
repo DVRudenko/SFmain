@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sprachpraeferenz__c</fullName>
+    <externalId>false</externalId>
+    <label>Sprachpräferenz</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>französisch</fullName>
+                <default>false</default>
+                <label>französisch</label>
+            </value>
+            <value>
+                <fullName>niederländisch</fullName>
+                <default>false</default>
+                <label>niederländisch</label>
+            </value>
+            <value>
+                <fullName>deutsch</fullName>
+                <default>false</default>
+                <label>deutsch</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

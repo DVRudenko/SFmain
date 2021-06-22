@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_HW_SUM__c</fullName>
+    <externalId>false</externalId>
+    <formula>X1_m_cable_to_the_temperature_Amount__c +
+X1_m_silicone_cable_temp_sensor_Amount__c +
+Acoustic_signaling_with_LED_Amount__c +
+Adhesive_switch_P_S_Amount__c +
+Adhesive_switch_P_S_withDiode_LED_Amoun__c +
+Antenna_GPS_FLAT_Amount__c +
+Antenna_GPS_Shark_Amount__c +
+Basic_switch_Amount__c +
+Button_Panic_Amount__c +
+Button_Panic2_Amount__c +
+Cable_CAN_Amount__c +
+Calibrating_transducer_PT100_Amount__c +
+Can_Bus_transducer_MCB_02_Amount__c +
+CAN_GO_CLICK_Amount__c +
+Dalas_chip_Amount__c +
+Guarding_cargo_space_Amount__c +
+Guarding_the_vehicle_one_switch_Amount__c +
+Guarding_the_vehicle_reader_Amount__c +
+Microwave_sensor_Amount__c +
+Piezoelectric_siren_Amount__c +
+Plastic_temperature_sensor_holder_Amount__c +
+Power_supplyPower_cable_harnesses_Amount__c +
+Reader_Dalas_Amount__c +
+Reader_HIDProx_Amount__c +
+Reader_Inditag_Amount__c +
+Reader_Legic_Amount__c +
+Reader_Mifare_Amount__c +
+Reader_Multi_125_Amount__c +
+Reader_Multi_ISO_Amount__c +
+Reader_RFID_Slim_Amount__c +
+RFID_adhesive_chip_Amount__c +
+RFID_fobs_Amount__c +
+Siren_Alarm_Amount__c +
+Spare_battery_for_CN85_1_4_Amount__c +
+Temperature_measurementCargoSpace_Amount__c +
+Temperature_sensor_Dalas_Amount__c +
+Temperature_sensor_Pt100A_Amount__c +
+Temperature_sensor_Pt100B_Amount__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Additional HW SUM</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

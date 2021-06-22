@@ -1,0 +1,67 @@
+<apex:component controller="showCarnetUnits" access="global">
+<apex:attribute name="OppId" type="Id" description="Opportunity Id" assignTo="{!OpportunityId}"/>
+
+    <style type="text/css">
+    @page{
+        size: A4 landscape;
+    }
+                  
+    td, th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+    </style>
+
+    <table style="border-collapse: collapse; width: 100%;">
+        <h1><b>Carnet Units</b></h1>
+                 <tr>
+                    <th><b>Carnet Unit</b></th>
+                    <th><b>Pricing Approval Status</b></th>
+                    <th><b>Number of Units</b></th>
+                    <th><b>Carnet Tariff</b></th>
+                    <th><b>Contract term</b></th>
+                    <th><b>Monitoring in EU</b></th>
+                    <th><b>Monitoring in other European countries</b></th>
+                    <th><b>Standard Unit Package Price</b></th>
+                    <th><b>Total One-time Payment</b></th>
+                    <th><b>Total Monthly Payment</b></th>   
+                </tr>
+            <apex:repeat value="{!carnetBO}" var="cBO">
+                <tr>
+                    <td><a href="https://eu9.salesforce.com/{!cBO.Id}">{!cBO.Name}</a></td>
+                    <td>{!cBO.Pricing_Approval_Status__c}</td>
+                    <td>{!cBO.Number_of_Units__c}</td>
+                    <td>{!cBO.Carnet_Tariff__c}</td>
+                    <td>{!cBO.Contract_term__c}</td>
+                    <td>{!cBO.Monitoring_in_EU__c}</td>
+                    <td>{!cBO.Monitoring_in_other_European_countries__c}</td>
+                    <td>{!cBO.Standard_Unit_Package__c}</td>
+                    <td>PLN {!cBO.Total_One_time_Payment__c}</td>
+                    <td>PLN {!cBO.Total_Monthly_Payment__c}</td>
+                </tr>
+        </apex:repeat>
+        <br></br>
+        <h1><b>Additional Hardware</b></h1>
+                <tr>
+                    <th><b>Additional Hardware</b></th>
+                    <th><b>Pricing Approval Status</b></th>
+                    <th><b>Total One-time Payment</b></th>
+                </tr>
+            <apex:repeat value="{!ahwBO}" var="aBO">
+                <tr>
+                    <td><a href="https://eu9.salesforce.com/{!aBO.Id}">{!aBO.Name}</a></td>
+                    <td>{!aBO.Pricing_Approval_Status__c}</td>
+                    <td>PLN {!aBO.Total_One_time_Payment__c}</td>
+                </tr>
+        </apex:repeat>      
+    </table>
+    
+</apex:component>

@@ -1,0 +1,98 @@
+{
+    "title": {
+        "default_impl": {
+            "en": "CCS Limit+",
+            "cs": "CCS Limit+",
+            "sk": "CCS Limit+"
+        }
+    },
+    "description": {
+        "default_impl": {
+            "en": "A card that will provide you with a comprehensive package of services for the effective management of a smaller vehicle fleet with a monthly limit of 1 card up to CZK 10,000.",
+            "cs": "Karta, která vám poskytne komplexní balíček služeb pro efektivní správu menšího vozového parku s měsíčním limitem na 1 kartu do 10 000 Kč."
+        },
+        "Slovakia CCS": {
+            "en": "A card that will provide you with a comprehensive package of services for the effective management of a smaller vehicle fleet with a monthly limit of 1 card up to xx Eur.",
+            "sk": "Karta, ktorá vám poskytne komplexný balík služieb pre efektívnu správu menšieho vozového parku s mesačným limitom na 1 kartu do xx Eur."
+        }
+    },
+    "defaultOfferIntagrationName": {
+        "default_impl": "ccsLimitPlusMini3",
+        "Slovakia CCS": "ccsLimitPlusMini3Sk"
+    },
+    "categoryOfProducts": {
+        "default_impl": []
+    },
+    "services": {
+        "default_impl": [
+            {
+                "icon": "car-wash.svg",
+                "label": {
+                    "en": "Carwash",
+                    "cs": "Platby za mytí vozů",
+                    "sk": "Platby za mytí vozů"
+                }
+            },
+            {
+                "icon": "gear.svg",
+                "label": {
+                    "en": "Service centres",
+                    "cs": "Platby v servisech",
+                    "sk": "Platby v servisech"
+                }
+            },
+            {
+                "icon": "iphone.svg",
+                "label": {
+                    "en": "Mobile application",
+                    "cs": "Mobilní aplikace",
+                    "sk": "Mobilná aplikácia"
+                }
+            },
+            {
+                "icon": "papers.svg",
+                "label": {
+                    "en": "Single invoice",
+                    "cs": "Souhrnná faktura",
+                    "sk": "Súhrnná faktúra"
+                }
+            },
+            {
+                "icon": "gps.svg",
+                "label": {
+                    "en": "Extensive network",
+                    "cs": "Rozsáhlá akceptační síť",
+                    "sk": "Rozsiahla akceptačná sieť"
+                }
+            },
+            {
+                "icon": "parking.svg",
+                "label": {
+                    "en": "Parking fee payment",
+                    "cs": "Platby parkovného",
+                    "sk": "Platby parkovného"
+                }
+            },
+            {
+                "icon": "phone.svg",
+                "label": {
+                    "en": "Infoline",
+                    "cs": "Infolinka",
+                    "sk": "Infolinka 7 dní v týždni"
+                }
+            }
+        ]
+    },
+    "order": {
+        "default_impl": 200
+    },
+    "integrationName": {
+        "default_impl": "ccsfuelcardlimitplus"
+    },
+    "image_path": {
+        "default_impl": "/resource/ete_images/"
+    },
+    "image": {
+        "default_impl": "ccsLimitPlus.png"
+    }
+}

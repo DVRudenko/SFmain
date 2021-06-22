@@ -1,0 +1,102 @@
+<apex:page controller="DashboardFieldMeetingsPlanCCSreportCtrl" action="{! init }">
+	<apex:includeScript value="{! $Resource.jQuery }"/>
+    <apex:includeScript value="{! URLFOR($Resource.jQueryUI,'jquery-ui.min.js') }"/>
+    <apex:includeScript value="{! URLFOR($Resource.Tablesorter,'jquery.tablesorter.min.js') }"/>
+	<apex:form >
+		<style>
+			.infoTable {
+                overflow:hidden;
+                border:1px solid #d3d3d3;
+                border-collapse: collapse;
+                width:100%;
+                margin:0 0 1.5% 0;
+                -moz-border-radius:5px; /* FF1+ */
+                -webkit-border-radius:5px; /* Saf3-4 */
+                border-radius:5px;
+            }
+			.infoTable th {
+                background: -moz-linear-gradient(100% 20% 90deg, #f2f3f3, #ededed);
+                background: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#ededed), to(#f2f3f3));
+            }
+            body .pbBody table.list tr.headerRow th {
+				background-image: url({! URLFOR($Resource.Tablesorter,'blue/bg.gif') });
+				background-repeat: no-repeat;
+				background-position: center right;
+				cursor: pointer;
+				padding-right: 20px;
+			}
+
+			body .pbBody table.list tr.headerRow th.headerSortUp {
+				background: url({! URLFOR($Resource.Tablesorter,'blue/asc.gif') }) grey no-repeat center right;
+				color: white;
+				font-weight: bold;
+			}
+
+			body .pbBody table.list tr.headerRow th.headerSortDown {
+				background: url({! URLFOR($Resource.Tablesorter,'blue/desc.gif') }) grey no-repeat center right;
+				color: white;
+				font-weight: bold;
+			}
+		</style>
+		<apex:pageBlock >
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <h1 style="margin-bottom: 10px; font-size: 15px; display: block;">Field meetings plan report for 
+                    <apex:selectList value="{! selectedPeriod }" size="1" multiselect="false" style="margin-left: 5px;">
+                        <apex:selectOptions value="{! periodsList }"/>
+                        <apex:actionSupport action="{! init }" event="onchange"/>
+                    </apex:selectList>
+                    <apex:selectList value="{! selectedYear }" size="1" multiselect="false" style="margin: 0 5px;">
+                        <apex:selectOptions value="{! yearsList }"/>
+                        <apex:actionSupport action="{! changeYear }" event="onchange"/>
+                    </apex:selectList>({! startDateOfMonthString } - {! endDateOfMonthString })</h1>
+            </table>
+            <apex:pageMessages />
+        </apex:pageBlock>
+        <table class="infoTable" width="100%" border="1">
+            <tr>
+                <th style="width: 20%;">User Name</th>
+                <th style="width: 20%;">All Events</th>
+                <th style="width: 20%;">Plan</th>
+            </tr>
+            <tr>
+                <td>
+                	<a href="/{! selectedUser.Id }" target="_blank">{! selectedUser.Name }</a>
+                </td>
+                <td>{! allFieldMeetingsList.size }</td>
+                <td>{! currentPlan }</td>
+            </tr>
+        </table>
+        <apex:pageBlock title="All Field Meetings ({! allFieldMeetingsList.size })">
+            <apex:pageBlockTable id="tableOfReport" value="{! allFieldMeetingsList }" var="key" rows="1000">
+                <apex:column headerValue="Assigned">
+	                    <apex:outputLink value="/{! key.ownerId }" target="_blank">{! key.ownerName }</apex:outputLink>
+	                </apex:column>
+	                <apex:column headerValue="Activity Type" value="{! key.type }"/>
+	                <apex:column headerValue="Subject">
+	                    <apex:outputLink value="/{! key.meetingId }" target="_blank">{! key.subject }</apex:outputLink>
+	                </apex:column>
+	                <apex:column headerValue="Status" value="{! key.status }"/>
+	                <apex:column headerValue="Start Date" value="{! key.startDateTime }"/>
+	                <apex:column headerValue="Priority" value="{! key.priority }"/>
+	                <apex:column headerValue="Lead">
+	                    <apex:outputLink value="/{! key.leadId }" target="_blank">{! key.leadName }</apex:outputLink>
+	                </apex:column>
+	                <apex:column headerValue="Company / Account">
+	                    <apex:outputLink value="/{! key.accountId }" target="_blank">{! key.accountName }</apex:outputLink>
+	                </apex:column>
+	                <apex:column headerValue="Contact">
+	                    <apex:outputLink value="/{! key.contactId }" target="_blank">{! key.contactName }</apex:outputLink>
+	                </apex:column>
+	                <apex:column headerValue="Opportunity">
+	                    <apex:outputLink value="/{! key.opportunityId }" target="_blank">{! key.opportunityName }</apex:outputLink>
+	                </apex:column>
+            </apex:pageBlockTable>    
+        </apex:pageBlock>
+        <script type="text/javascript">
+	        $j = jQuery.noConflict();    
+	        $j(document).ready(function () {
+	        $j("[id$=tableOfReport]").tablesorter();
+	        });    
+	    </script>
+	</apex:form>
+</apex:page>

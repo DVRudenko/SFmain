@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Creditreform_Lead</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Creditreform</label>
+    <language>de</language>
+    <queue>Creditreform</queue>
+    <sharedTo>
+        <role>Teamleiter_Outbound_1</role>
+        <role>Teamleiter_Outbound_2</role>
+        <role>Teamleiter_Outbound_3</role>
+        <role>Teamleiter_Outbound_4</role>
+    </sharedTo>
+</ListView>

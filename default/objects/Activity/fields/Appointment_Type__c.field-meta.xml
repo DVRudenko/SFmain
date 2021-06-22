@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Appointment_Type__c</fullName>
+    <description>Identifies type of appointment so Subject field can be freed up to put in info appropriate for sending external invitation</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Identifies type of appointment so Subject field can be freed up to put in info appropriate for sending external invitation</inlineHelpText>
+    <label>Appointment Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Net New Appointment</fullName>
+                <default>false</default>
+                <label>Net New Appointment</label>
+            </value>
+            <value>
+                <fullName>Follow-up Appointment</fullName>
+                <default>false</default>
+                <label>Follow-up Appointment</label>
+            </value>
+            <value>
+                <fullName>Marketer Touch Point - Phone</fullName>
+                <default>false</default>
+                <label>Marketer Touch Point - Phone</label>
+            </value>
+            <value>
+                <fullName>Marketer Touch Point - Face to Face</fullName>
+                <default>false</default>
+                <label>Marketer Touch Point - Face to Face</label>
+            </value>
+            <value>
+                <fullName>Driver/Online Training</fullName>
+                <default>false</default>
+                <label>Driver/Online Training</label>
+            </value>
+            <value>
+                <fullName>Out of Office-Vacation/Personal/Holiday</fullName>
+                <default>false</default>
+                <label>Out of Office-Vacation/Personal/Holiday</label>
+            </value>
+            <value>
+                <fullName>Field Sales Training</fullName>
+                <default>false</default>
+                <label>Field Sales Training</label>
+            </value>
+            <value>
+                <fullName>Outbound Sales Training</fullName>
+                <default>false</default>
+                <label>Outbound Sales Training</label>
+            </value>
+            <value>
+                <fullName>CCS Retention</fullName>
+                <default>false</default>
+                <label>CCS Retention</label>
+            </value>
+            <value>
+                <fullName>CCS Development</fullName>
+                <default>false</default>
+                <label>CCS Development</label>
+            </value>
+            <value>
+                <fullName>CCS Care</fullName>
+                <default>false</default>
+                <label>CCS Care</label>
+            </value>
+            <value>
+                <fullName>CCS Training</fullName>
+                <default>false</default>
+                <label>CCS Training</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

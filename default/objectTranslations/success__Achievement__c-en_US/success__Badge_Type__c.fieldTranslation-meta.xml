@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Badges are grouped, counted and reported by &apos;type&apos; --></help>
+    <label><!-- Type --></label>
+    <name>success__Badge_Type__c</name>
+    <relationshipLabel><!-- Base Behaviours --></relationshipLabel>
+</CustomFieldTranslation>

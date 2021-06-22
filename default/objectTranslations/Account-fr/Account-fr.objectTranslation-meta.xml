@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- All Phone Fields --></label>
+        <name>All_Phone_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- All Phone Fields EU --></label>
+        <name>All_Phone_Fields_EU</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- ClickToCall --></label>
+        <name>ClickToCall</name>
+    </fieldSets>
+    <layouts>
+        <layout>Account Layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Company Details --></label>
+            <section>Company Details</section>
+        </sections>
+        <sections>
+            <label><!-- GFN Information --></label>
+            <section>GFN Information</section>
+        </sections>
+        <sections>
+            <label><!-- JITB Information --></label>
+            <section>JITB Information</section>
+        </sections>
+        <sections>
+            <label><!-- Starts Dashboard --></label>
+            <section>Starts Dashboard</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account Layout Retailer</layout>
+        <sections>
+            <label><!-- Account Classification --></label>
+            <section>Account Classification</section>
+        </sections>
+        <sections>
+            <label><!-- Adresse --></label>
+            <section>Adresse</section>
+        </sections>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Feedback --></label>
+            <section>Feedback</section>
+        </sections>
+        <sections>
+            <label><!-- Klassifizierung --></label>
+            <section>Klassifizierung</section>
+        </sections>
+        <sections>
+            <label><!-- Registrierte Adresse --></label>
+            <section>Registrierte Adresse</section>
+        </sections>
+        <sections>
+            <label><!-- Retailer Check --></label>
+            <section>Retailer Check</section>
+        </sections>
+        <sections>
+            <label><!-- Station employee --></label>
+            <section>Station employee</section>
+        </sections>
+        <sections>
+            <label><!-- Systeminfo --></label>
+            <section>Systeminfo</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Account Layout WinBack</layout>
+        <sections>
+            <label><!-- Adresse --></label>
+            <section>Adresse</section>
+        </sections>
+        <sections>
+            <label><!-- Bankdaten --></label>
+            <section>Bankdaten</section>
+        </sections>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Click to Call --></label>
+            <section>Click to Call</section>
+        </sections>
+        <sections>
+            <label><!-- Kartenübersicht --></label>
+            <section>Kartenübersicht</section>
+        </sections>
+        <sections>
+            <label><!-- Klassifizierung --></label>
+            <section>Klassifizierung</section>
+        </sections>
+        <sections>
+            <label><!-- Registrierte Adresse --></label>
+            <section>Registrierte Adresse</section>
+        </sections>
+        <sections>
+            <label><!-- Shell Tankstelle --></label>
+            <section>Shell Tankstelle</section>
+        </sections>
+        <sections>
+            <label><!-- WinBack --></label>
+            <section>WinBack</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>AllStar-ShellUC Account Layout</layout>
+        <sections>
+            <label><!-- Adresse --></label>
+            <section>Adresse</section>
+        </sections>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Company --></label>
+            <section>Company</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>AllStar-ShellUC Account Layout</layout>
+        <sections>
+            <label><!-- Adresse --></label>
+            <section>Adresse</section>
+        </sections>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Company --></label>
+            <section>Company</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCS Account Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Adress Information --></label>
+            <section>Adress Information</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Total customer potential --></label>
+            <section>Total customer potential</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCS Account Layout</layout>
+        <sections>
+            <label><!-- Adresa --></label>
+            <section>Adresa</section>
+        </sections>
+        <sections>
+            <label><!-- Attrition, retence a klientská spokojenost --></label>
+            <section>Attrition, retence a klientská spokojenost</section>
+        </sections>
+        <sections>
+            <label><!-- Charakteristika potenciálu --></label>
+            <section>Charakteristika potenciálu</section>
+        </sections>
+        <sections>
+            <label><!-- Informace z GFN --></label>
+            <section>Informace z GFN</section>
+        </sections>
+        <sections>
+            <label><!-- Poznámka --></label>
+            <section>Poznámka</section>
+        </sections>
+        <sections>
+            <label><!-- Systémové informace --></label>
+            <section>Systémové informace</section>
+        </sections>
+        <sections>
+            <label><!-- Zdroj Účtu --></label>
+            <section>Zdroj Účtu</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Service Europe</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Company Details --></label>
+            <section>Company Details</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Flexcard</layout>
+        <sections>
+            <label><!-- Adresse --></label>
+            <section>Adresse</section>
+        </sections>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Click to Call --></label>
+            <section>Click to Call</section>
+        </sections>
+        <sections>
+            <label><!-- Klassifizierung --></label>
+            <section>Klassifizierung</section>
+        </sections>
+        <sections>
+            <label><!-- Rahmenvertragsdaten --></label>
+            <section>Rahmenvertragsdaten</section>
+        </sections>
+        <sections>
+            <label><!-- Registrierte Adresse --></label>
+            <section>Registrierte Adresse</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Partner</layout>
+        <sections>
+            <label><!-- Account Information --></label>
+            <section>Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Company information --></label>
+            <section>Company information</section>
+        </sections>
+        <sections>
+            <label><!-- New Leads Dashboard --></label>
+            <section>New Leads Dashboard</section>
+        </sections>
+        <sections>
+            <label><!-- Partner Check --></label>
+            <section>Partner Check</section>
+        </sections>
+        <sections>
+            <label><!-- Qualifizierung --></label>
+            <section>Qualifizierung</section>
+        </sections>
+        <sections>
+            <label><!-- Systeminfo --></label>
+            <section>Systeminfo</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Russian Account Layout</layout>
+        <sections>
+            <label><!-- Black list check --></label>
+            <section>Black list check</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- SPARK data --></label>
+            <section>SPARK data</section>
+        </sections>
+        <sections>
+            <label><!-- Номера телефонов --></label>
+            <section>Номера телефонов</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- AllStar --></label>
+        <name>AllStar</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- CCS --></label>
+        <name>CCS</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Endkunde --></label>
+        <name>Endkunde</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Endkunde PL and HU --></label>
+        <name>Endkunde_PL_and_HU</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Flexcard --></label>
+        <name>Flexcard</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record type for Partner Accounts of Fleetcor EU --></description>
+        <label><!-- Partner --></label>
+        <name>Partner</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Retailer --></label>
+        <name>Retailer</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Russian --></label>
+        <name>Russian</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Shell Universal Card --></label>
+        <name>Shell_Universal_Card</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- WinBack --></label>
+        <name>WinBack</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please update Account Name. In case of physical person, you can use First Name Surname. In case of legal entity, use official Account Name according to the Business Register. --></errorMessage>
+        <name>CCS_Company_ID_NICHT_VORHANDEN</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pole IČO je povinné! --></errorMessage>
+        <name>CCS_Company_ID_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please, select Registered Country. --></errorMessage>
+        <name>Country_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR: ACCT001. Enter the correct INN value! --></errorMessage>
+        <name>INN_for_PPR</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR: ACCT006. У вас нет полномочий на выполнение данной операции. При необходимости обратитесь к администратору или ответственному за запись. --></errorMessage>
+        <name>PPR_E2E_Guest_User</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR: ACCT005 - Организация принята на Старт. Для изменения ответственного обратитесь к Администратору SF. --></errorMessage>
+        <name>PPR_NOT_CHANGE_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ИНН должен содержать только цифры! ERROR: ACCT003. --></errorMessage>
+        <name>PPR_Valid_INN_IS_not_NUMBER</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Некорректный ИНН! ERROR: ACCT002. --></errorMessage>
+        <name>PPR_Valid_Len_INN</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Wrong phone number format. Only &apos;+&apos;, &apos;0-9&apos; and spaces are allowed. Use &apos;#&apos; for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: &apos;+49 5545555#045&apos; --></errorMessage>
+        <name>Valid_Phone_Number</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CCS_Merlin_Order --></label>
+        <name>CCS_Merlin_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CRIF_PL_Check_Account --></label>
+        <name>CRIF_PL_Check_Account</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Change_Owner_Request --></label>
+        <name>Change_Owner_Request</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Check_duplicates_Credit --></label>
+        <name>Check_duplicates_Credit</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Eurolocator_Fleetcor --></label>
+        <name>Eurolocator_Fleetcor</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PD_NewContact --></label>
+        <name>PD_NewContact</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Request_Information --></label>
+        <name>Request_Information</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Shell_Station_Finder_DE --></label>
+        <name>Shell_Station_Finder_DE</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Station_Locator --></label>
+        <name>Station_Locator</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Verify_with_DNB --></label>
+        <name>dsfs__Verify_with_DNB</name>
+    </webLinks>
+</CustomObjectTranslation>

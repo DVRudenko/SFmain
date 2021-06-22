@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_duplicates_Credit</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Check duplicates (Credit)</masterLabel>
+    <openType>sidebar</openType>
+    <page>DuplicatesOpportunities</page>
+    <protected>false</protected>
+</WebLink>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Convert_to_Opportunity</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName  = 'Russian_Sales',
+$Profile.Name != "E2E RU Profile",
+$Profile.Name != "System Administrator",
+$Profile.Name != "RU_System_Administrator",
+$Profile.Name != 'API Only',
+NOT(ISCHANGED( OwnerId )),
+NOT(ISCHANGED( Number_of_open_tasks__c)),
+NOT(ISCHANGED( Open_Task__c )),
+ISPICKVAL(Status, "QUALIFIED - Convert to Opportunity"),
+(ISBLANK(INN__c) ||
+ISBLANK( TEXT(Region__c) ) ||
+ISBLANK( TEXT(Source_of_Lead__c ) ) ||
+ISBLANK( TEXT( Insurance__c ) ) ||
+ISBLANK( TEXT(Primary_Fueling_Method__c))))</errorConditionFormula>
+    <errorMessage>It is necessary fill the INN, Region, Insurance, Source of Lead and Primary Fueling Method.</errorMessage>
+</ValidationRule>

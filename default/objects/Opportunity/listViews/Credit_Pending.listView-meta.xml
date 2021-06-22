@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Pending</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>OPPORTUNITY.LEAD_SOURCE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Registered_Country__c</columns>
+    <columns>Anzahl_der_Karten__c</columns>
+    <columns>Creditreform_Rating__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>CreditCheck,CC In Progress,Pending Credit</value>
+    </filters>
+    <filters>
+        <field>Registered_Country__c</field>
+        <operation>contains</operation>
+        <value>Germany,Austria,Switzerland</value>
+    </filters>
+    <label>AAA_Pending-credit-DACH</label>
+    <language>de</language>
+    <sharedTo>
+        <role>Teamleiter</role>
+    </sharedTo>
+</ListView>

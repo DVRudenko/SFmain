@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Jména</label>
+    <name>CCS_Jm_na__c</name>
+    <picklistValues>
+        <masterLabel>Bronislava Nováková</masterLabel>
+        <translation><!-- Bronislava Nováková --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Filip Směšný</masterLabel>
+        <translation><!-- Filip Směšný --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hanka Bartoňová</masterLabel>
+        <translation><!-- Hanka Bartoňová --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Helena Jandová</masterLabel>
+        <translation><!-- Helena Jandová --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Iveta Baštářová</masterLabel>
+        <translation><!-- Iveta Baštářová --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Martina Kabíčková</masterLabel>
+        <translation><!-- Martina Kabíčková --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Matěj Peltán</masterLabel>
+        <translation><!-- Matěj Peltán --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Miroslav Děd</masterLabel>
+        <translation><!-- Miroslav Děd --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Miroslava Lohniská</masterLabel>
+        <translation><!-- Miroslava Lohniská --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Olga Maníková</masterLabel>
+        <translation><!-- Olga Maníková --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pavel Porubiak</masterLabel>
+        <translation><!-- Pavel Porubiak --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Radka Zahajská</masterLabel>
+        <translation><!-- Radka Zahajská --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tereza Raušová</masterLabel>
+        <translation><!-- Tereza Raušová --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Veronika Filipová</masterLabel>
+        <translation><!-- Veronika Filipová --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vladimíra Ouřadová</masterLabel>
+        <translation><!-- Vladimíra Ouřadová --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Věra Staňková</masterLabel>
+        <translation><!-- Věra Staňková --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Price_Book__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Select Account Price Book from Account. If you don't see any, create new under your Account.</inlineHelpText>
+    <label>Account Price Book</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>You must add Account Price Book under Account!</errorMessage>
+        <filterItems>
+            <field>Account_Price_Book__c.Account__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <filterItems>
+            <field>Account_Price_Book__c.Approval_Status__c</field>
+            <operation>equals</operation>
+            <value>Not required, Approved</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account_Price_Book__c</referenceTo>
+    <relationshipLabel>Opportunities</relationshipLabel>
+    <relationshipName>Opportunities</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

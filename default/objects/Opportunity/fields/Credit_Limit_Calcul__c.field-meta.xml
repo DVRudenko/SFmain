@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Limit_Calcul__c</fullName>
+    <externalId>false</externalId>
+    <formula>Auftragsvolumen__c * ( ( VALUE(TEXT(Zahlungsziel_2__c)) + VALUE(TEXT(Rechnungsperiode_2__c)) ) / 30)*(1+ Buffer_2__c ) + Credit_Limit_Anpassung__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Credit Limit (Calcul)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The total number of hours between date/time closed and date/time opened. --></help>
+    <label><!-- Processing time --></label>
+    <name>Processing_time__c</name>
+</CustomFieldTranslation>

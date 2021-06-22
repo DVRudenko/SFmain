@@ -1,0 +1,15 @@
+.THIS .inactive {
+    color: gainsboro !important;
+}
+
+.THIS .logged-off {
+    background-color: #ee4444;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.THIS .login-button {
+    color: #ee4444;
+    border-color: #ee4444;
+}

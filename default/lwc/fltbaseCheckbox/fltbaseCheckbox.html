@@ -1,0 +1,14 @@
+<template>
+    <label class="fltbase-checkbox">
+        <input class="fltbase-checkbox__input"
+               type="checkbox"
+               checked={checked}
+               disabled={disabled}
+               onchange={handleChange} />
+        <span class={computedSpanClass}></span>
+        <div class="fltbase-checkbox__label"
+             data-value={label}
+             lwc:dom="manual"></div>
+    </label>
+    <p class={computedErrorClass} if:true={errorMessage}>{errorMessage}</p>
+</template>

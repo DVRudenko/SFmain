@@ -1,0 +1,240 @@
+{
+    "translations": {
+        "title_ds": {
+            "default_impl": {
+                "en": "Electronic signature of the documents",
+                "hu": "Elektronikus aláírás a dokumentumokon",
+                "cs": "Elektronický podpis dokumentů",
+                "sk": "Elektronický podpis dokumentov",
+                "pl": "Podpisz dokument elektronicznie"
+            }
+        },
+        "description_ds": {
+            "default_impl": {
+                "en": "In order to complete the online order in accordance with legal regulations, it is necessary to sign the following documents.",
+                "pl": "W celu zakończenia zamówienia kart paliwowych online zgodnie z przepisami prawnymi konieczne jest podpisanie następujących dokumentów."
+            }
+        },
+        "document_title_base_ds": {
+            "default_impl": {
+                "en": "Contract",
+                "hu": "Szerződés",
+                "cs": "Objednávka karet Shell",
+                "sk": "Objednávka kariet Shell",
+                "pl": "Umowa"
+            },
+            "Slovakia":{
+                "sk": "Objednávka kariet Shell",
+                "en": "Shell card order"
+            },
+            "Czech Republic":{
+                "cs": "Objednávka karet Shell",
+                "en": "Shell card order"
+            }
+        },
+        "document_title_added_ds": {
+            "default_impl": {
+                "en": "Contract, Deposit agreement",
+                "cs": "Objednávka karet Shell, Hotovostní záruka",
+                "sk": "Objednávka kariet Shell, Hotovostná zábezpeka",
+                "hu": "Szerződés, Óvadéki szerződés",
+                "pl": "Umowa, Umowa kaucja"
+            },
+            "Slovakia":{
+                "sk": "Objednávka kariet Shell, Hotovostná zábezpeka",
+                "en": "Shell card order, Deposit agreement"
+            },
+            "Czech Republic":{
+                "cs": "Objednávka karet Shell, Hotovostní záruka",
+                "en": "Shell card order, Deposit agreement"
+            }
+        },
+        "carnet_title_added_ds":{
+            "default_impl":{
+                "en": "Carnet OBD Order, Data Processing Agreement",
+                "pl": "Umowa Carnet OBD, Umowa Powierzenia Danych"
+            }
+        },
+        "document_link_ds": {
+            "default_impl": {
+                "en": "/etedocuments?doc=documentsAgreement",
+                "pl": "/etedocuments?doc=documentsAgreement",
+                "sk": "/etedocuments?doc=documentsAgreement",
+                "cs": "/etedocuments?doc=documentsAgreement",
+                "hu": "/etedocuments?doc=documentsAgreement"
+            }
+        },
+        "docusign_description_ds": {
+            "default_impl": {
+                "en": "DocuSign is a leading digital platform, offering the world's best solutions in the field of electronic signature.",
+                "cs": "DocuSign je digitální platforma nabízející jedno z nejlepších řešení v oblasti elektronického podpisu.",
+                "sk": "DocuSign je digitálna platforma ponúkajúca najlepšie riešenie v oblasti elektronického podpisu.",
+                "pl": "DocuSign to wiodąca platforma cyfrowa, oferująca najlepsze na świecie rozwiązania w zakresie podpisu elektronicznego.",
+                "hu": "A DocuSign az egyik vezető digitális platform az elektronikus aláírás piacán, amely az egyik legjobb és legmegbízhatóbb szolgáltatást nyújtja e téren."
+            }
+        },
+        "first_checkbox_html_ds": {
+            "default_impl": {
+                "en": "I confirm that I am authorized to act on behalf of $1$ and to conclude contracts.",
+                "cs": "Potvrzuji, že jsem oprávněn jednat jménem $1$ a uzavírat smlouvy.",
+                "sk": "Potvrdzujem, že som oprávnený jednať $1$ a uzatvárať zmluvy.",
+                "pl": "Oświadczam, że posiadam umocowanie prawne do działania w imieniu $1$ oraz do zawierania umów.",
+                "hu": "Kijelentem, hogy a $1$ nevében eljárási és aláírási jogosultsággal rendelkezem"
+            }
+        },
+        "next_ds": {
+            "default_impl": {
+                "en": "SIGN",
+                "hu": "ALÁÍRÁS",
+                "cs": "PODEPSAT",
+                "sk": "ĎALŠIA",
+                "pl": "Podpisać"
+            }
+        },
+        "first_checkbox_error_ds": {
+            "default_impl": {
+                "pl": "Pole wymagane",
+                "en": "Required field"
+            },
+            "Hungary":{
+                "hu": "Ez a hozzájárulás szükséges a szolgáltatás nyújtásához.",
+                "en": "This consent is required for provision of the service."
+            },
+            "Slovakia":{
+                "sk": "Tento súhlas je požadovaný pre poskytnutie služby.",
+                "en": "This consent is required for provision of the service."
+            },
+            "Czech Republic":{
+                "cs": "Tento souhlas je vyžadován pro poskytování služby.",
+                "en": "This consent is required for provision of the service."
+            }
+        },
+        "second_checkbox_error_ds": {
+            "default_impl": {
+                "pl": "Pole wymagane",
+                "en": "Required field"
+            },
+            "Hungary":{
+                "hu": "Ez a hozzájárulás szükséges a szolgáltatás nyújtásához.",
+                "en": "This consent is required for provision of the service."
+            },
+            "Slovakia":{
+                "sk": "Tento súhlas je požadovaný pre poskytnutie služby.",
+                "en": "This consent is required for provision of the service."
+            },
+            "Czech Republic":{
+                "cs": "Tento souhlas je vyžadován pro poskytování služby.",
+                "en": "This consent is required for provision of the service."
+            }
+        },
+        "second_checkbox_html_ds": {
+            "default_impl": {
+                "en": "I confirm that I have read and understood the <a href='/etedocuments?doc=documentsTermsAndConditions$1$' target='_blank'>Terms & Conditions</a> and <a href='/etedocuments?doc=tariffPolicy&countryCode=$2$$1$' target='_blank'>Tariff sheet</a> and I agree to them.",
+                "cs": "Potvrzuji, že jsem si přečetl <a href='/etedocuments?doc=documentsTermsAndConditions$1$' target='_blank'>Všeobecné obchodní podmínky</a> a <a href='/etedocuments?doc=tariffPolicy&countryCode=$2$$1$' target='_blank'>Ceník poplatků</a> a že jim rozumím a souhlasím s nimi.",
+                "sk": "Potvrdzujem, že som si prečíta <a href='/etedocuments?doc=documentsTermsAndConditions$1$' target='_blank'>Všeobecné obchodné podmienky</a> a <a href='/etedocuments?doc=tariffPolicy&countryCode=$2$$1$' target='_blank'>Cenník poplatkov</a> a že im rozumiem a súhlasím s nimi.",
+                "pl": "Niniejszym oświadczam, że zapoznałem/zapoznałam się ze wszystkimi <a href='/etedocuments?doc=documentsTermsAndConditions$1$' target='_blank'>Warunkami</a> i <a href='/etedocuments?doc=tariffPolicy&countryCode=$2$$1$' target='_blank'>Tabelą opłat</a> i wyrażam na nie zgodę.",
+                "hu": "Kijelentem, hogy elolvastam és megértettem az <a href='/etedocuments?doc=documentsTermsAndConditions$1$' target='_blank'>Általános Szerződési Feltételeket</a> valamint a <a href='/etedocuments?doc=tariffPolicy&countryCode=$2$$1$' target='_blank'>Díjtáblázatot</a>, és a benne foglaltakat elfogadom."
+            },
+            "Poland":{
+                "en": "I confirm that I have read and understood the <a href='/etepdfview?target=ete_step_documents_terms_and_conditions$1$' target='_blank'>Terms & Conditions</a> and <a href='/etepdfview?target=ete_step_documents_tabel_price$2$' target='_blank'>Tariff sheet</a> and I agree to them.",
+                "pl": "Niniejszym oświadczam, że zapoznałem/zapoznałam się ze wszystkimi <a href='/etepdfview?target=ete_step_documents_terms_and_conditions$1$' target='_blank'>Warunkami</a> i <a href='/etepdfview?target=ete_step_documents_tabel_price$2$' target='_blank'>Tabelą opłat</a> i wyrażam na nie zgodę."
+            }
+        }
+    },
+    "settings": {
+        "data_object": {
+            "Terms_And_Conditions_Agreement__c": {
+                "Poland" : {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                },
+                "Poland Lotos" : {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                },
+                "Slovakia" : {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                },
+                "Czech Republic" : {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                },
+                "Hungary" : {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                }
+            },
+            "Current_Language__c": {
+                "Poland Lotos" : {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Hungary" : {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                }
+            }
+        },
+        "ete_contact": {
+            "Role__c": {
+                "Poland" : {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Poland Lotos" : {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Slovakia" : {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Czech Republic" : {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                },
+                "Hungary" : {
+                    "regex": "^[a-zA-Z\\x7f-\\xff—\\s'-]+$",
+                    "maxlength": "255",
+                    "mapto": "role",
+                    "required": true
+                }
+            },
+            "Birthdate__c": {
+                "Poland Lotos" : {
+                    "regex": "^\\d{2}.\\d{2}.\\d{4}",
+                    "maxlength": "10",
+                    "mapto": "birthdate",
+                    "required": false
+                },
+                "Hungary" : {
+                    "regex": "^\\d{2}.\\d{2}.\\d{4}",
+                    "maxlength": "10",
+                    "mapto": "birthdate",
+                    "required": false
+                }
+            }
+        }
+    }
+}

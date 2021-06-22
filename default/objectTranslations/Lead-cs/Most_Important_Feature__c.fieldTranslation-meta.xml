@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What is the most important feature in a fleet card for the prospect? --></help>
+    <label><!-- Most Important Feature --></label>
+    <name>Most_Important_Feature__c</name>
+    <picklistValues>
+        <masterLabel>Controls</masterLabel>
+        <translation><!-- Controls --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cost Savings</masterLabel>
+        <translation><!-- Cost Savings --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eliminate AR Risk</masterLabel>
+        <translation><!-- Eliminate AR Risk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Locations</masterLabel>
+        <translation><!-- Locations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing</masterLabel>
+        <translation><!-- Pricing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rebates</masterLabel>
+        <translation><!-- Rebates --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reporting</masterLabel>
+        <translation><!-- Reporting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Simplicity</masterLabel>
+        <translation><!-- Simplicity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Terms</masterLabel>
+        <translation><!-- Terms --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Volume Growth</masterLabel>
+        <translation><!-- Volume Growth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Бренд</masterLabel>
+        <translation><!-- Бренд --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ГАЗовые АЗС</masterLabel>
+        <translation><!-- ГАЗовые АЗС --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Конкретные АЗС</masterLabel>
+        <translation><!-- Конкретные АЗС --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>НДС</masterLabel>
+        <translation><!-- НДС --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Налив</masterLabel>
+        <translation><!-- Налив --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Отсрочка, кредит</masterLabel>
+        <translation><!-- Отсрочка, кредит --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Рекомендация</masterLabel>
+        <translation><!-- Рекомендация --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Сервис</masterLabel>
+        <translation><!-- Сервис --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Тендер</masterLabel>
+        <translation><!-- Тендер --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Условия договора</masterLabel>
+        <translation><!-- Условия договора --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

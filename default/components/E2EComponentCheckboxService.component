@@ -1,0 +1,57 @@
+<!--
+ - Created by Andrei.Katunin on 20.07.2018.
+ -->
+
+<apex:component id="E2EComponentCheckboxService">
+
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map" />
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="" />
+
+    <apex:attribute name="firstClass"
+                    type="String"
+                    description="class name of label and input div" />
+
+    <apex:attribute name="secondClass"
+                    type="String"
+                    description="class name of input div" />
+
+    <apex:attribute name="tooltipClass"
+                    type="String"
+                    description="class name of tooltip div" />
+
+    <apex:attribute name="styleTop"
+                    type="String"
+                    description="" />
+
+    <apex:outputPanel layout="block" styleClass="checkbox_helptext">
+        <div class="{! firstClass }">
+            <div class="df">
+                <apex:inputCheckbox styleClass="{! pageMap[field].elementItemsMap['ID'].value }" value="{! pageMap[field].elementItemsMap['DEFAULT VALUE'].value }" />
+                <apex:outputPanel layout="block" styleClass="fake__checkbox"></apex:outputPanel>
+                <span class="fake__checkbox-text">{! pageMap[field].elementItemsMap['LABEL'].value}</span>
+                <div class="tooltip-image tooltip-checkbox tooltip-image-checkbox" data-toggle="tooltip" data-placement="top" data-html="true" title="{! pageMap[field].elementItemsMap['POPUP'].value }">
+                    <div class="js-tooltips-text">
+                        <apex:outputText escape="false" value="{! pageMap[field].elementItemsMap['POPUP'].value }"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tooltip-additional-text">
+            {! pageMap[field].elementItemsMap['ADDITIONAL TOOLTIP TEXT'].value }
+        </div>
+        <!--<div class="i-helper inline-block"-->
+             <!--data-content="{! pageMap[field].elementItemsMap['POPUP'].value }"-->
+             <!--data-trigger="hover"-->
+             <!--data-container="body" data-toggle="popover" data-placement="top">?</div>-->
+        <apex:outputPanel layout="block" styleClass="mobile__tooltips">
+            <apex:outputText escape="false" value="{! pageMap[field].elementItemsMap['POPUP'].value }"/>
+        </apex:outputPanel>
+    </apex:outputPanel>
+
+
+</apex:component>

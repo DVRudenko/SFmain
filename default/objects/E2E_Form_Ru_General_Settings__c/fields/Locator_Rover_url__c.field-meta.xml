@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Locator_Rover_url__c</fullName>
+    <description>Ссылка на локатор по Вездеход online</description>
+    <externalId>false</externalId>
+    <label>Locator Rover</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

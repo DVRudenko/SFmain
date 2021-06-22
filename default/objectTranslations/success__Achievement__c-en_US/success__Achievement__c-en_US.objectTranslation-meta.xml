@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Criteria --></label>
+        <name>success__StandardCriteriaFieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Information --></label>
+        <name>success__StandardInformationFieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Reward --></label>
+        <name>success__StandardRewardFieldSet</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- System Information --></label>
+        <name>success__SystemInformationFieldSet</name>
+    </fieldSets>
+    <layouts>
+        <layout>Achievement Layout</layout>
+        <sections>
+            <label><!-- Criteria --></label>
+            <section>Criteria</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Evaluation Criteria --></label>
+            <section>Evaluation Criteria</section>
+        </sections>
+        <sections>
+            <label><!-- Information (2-Column) --></label>
+            <section>Information (2-Column)</section>
+        </sections>
+        <sections>
+            <label><!-- Reward --></label>
+            <section>Reward</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Recurring Achievement Layout</layout>
+        <sections>
+            <label><!-- Completion Reward --></label>
+            <section>Completion Reward</section>
+        </sections>
+        <sections>
+            <label><!-- Criteria --></label>
+            <section>Criteria</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Evaluation Criteria --></label>
+            <section>Evaluation Criteria</section>
+        </sections>
+        <sections>
+            <label><!-- Information (2-Column) --></label>
+            <section>Information (2-Column)</section>
+        </sections>
+        <sections>
+            <label><!-- Repetition Reward --></label>
+            <section>Repetition Reward</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- A base behaviour that is assessed (and rewarded) in real time --></description>
+        <label><!-- One-Off --></label>
+        <name>success__One_Off</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A base behaviour that is assessed after each occurrence and on completion --></description>
+        <label><!-- Recurring --></label>
+        <name>success__Recurring</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A base behaviour that is assessed (and rewarded) on a scheduled basis --></description>
+        <label><!-- Scheduled --></label>
+        <name>success__Scheduled</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- If aggregate rewarding is required, an Aggregate Function and a Function Value must both be specified. --></errorMessage>
+        <name>success__If_Not_Aggregate_then_no_Aggregate_value</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If aggregate rewarding is required, an Aggregate Function and a Function Value must both be specified. --></errorMessage>
+        <name>success__If_Number_of_occurrences_then_aggregate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If a Time Limit is required, then both a value and a period must be specified. --></errorMessage>
+        <name>success__If_Time_Limit_then_Unit_of_Time</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- If a Wait Time is required, then both a value and a period must be specified. --></errorMessage>
+        <name>success__If_Wait_Time_then_Unit_of_Time</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The maximum number of rewards that can be set is  998 --></errorMessage>
+        <name>success__Must_not_exceed_998</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pacing requires an Aggregate Function, a Function Value and a Time Limit --></errorMessage>
+        <name>success__Pacing_for_aggregates</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Recipient is required --></errorMessage>
+        <name>success__Recipient_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Badge name and Badge Type fields must either both be populated or both be empty --></errorMessage>
+        <name>success__badge_name_and_type_are_dependent</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Required Field --></errorMessage>
+        <name>success__reward_message_is_required</name>
+    </validationRules>
+</CustomObjectTranslation>

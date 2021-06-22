@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Fuel_card_competition__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Fuel card competition</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Shell</fullName>
+                <default>false</default>
+                <label>Shell</label>
+            </value>
+            <value>
+                <fullName>OMV</fullName>
+                <default>false</default>
+                <label>OMV</label>
+            </value>
+            <value>
+                <fullName>Benzina</fullName>
+                <default>false</default>
+                <label>Benzina</label>
+            </value>
+            <value>
+                <fullName>LukOil</fullName>
+                <default>false</default>
+                <label>LukOil</label>
+            </value>
+            <value>
+                <fullName>PapOil</fullName>
+                <default>false</default>
+                <label>PapOil</label>
+            </value>
+            <value>
+                <fullName>RobinOil</fullName>
+                <default>false</default>
+                <label>RobinOil</label>
+            </value>
+            <value>
+                <fullName>ENI</fullName>
+                <default>false</default>
+                <label>ENI</label>
+            </value>
+            <value>
+                <fullName>EuroWag</fullName>
+                <default>false</default>
+                <label>EuroWag</label>
+            </value>
+            <value>
+                <fullName>Čepro</fullName>
+                <default>false</default>
+                <label>Čepro</label>
+            </value>
+            <value>
+                <fullName>TankOno</fullName>
+                <default>false</default>
+                <label>TankOno</label>
+            </value>
+            <value>
+                <fullName>Slovnaft</fullName>
+                <default>false</default>
+                <label>Slovnaft</label>
+            </value>
+            <value>
+                <fullName>Erneks Inv.</fullName>
+                <default>false</default>
+                <label>Erneks Inv.</label>
+            </value>
+            <value>
+                <fullName>Vlastní ČS</fullName>
+                <default>false</default>
+                <label>Vlastní ČS</label>
+            </value>
+            <value>
+                <fullName>DKV</fullName>
+                <default>false</default>
+                <label>DKV</label>
+            </value>
+            <value>
+                <fullName>AS24</fullName>
+                <default>false</default>
+                <label>AS24</label>
+            </value>
+            <value>
+                <fullName>bankovní</fullName>
+                <default>false</default>
+                <label>bankovní</label>
+            </value>
+            <value>
+                <fullName>místní ČS</fullName>
+                <default>false</default>
+                <label>místní ČS</label>
+            </value>
+            <value>
+                <fullName>hotovost</fullName>
+                <default>false</default>
+                <label>hotovost</label>
+            </value>
+            <value>
+                <fullName>MOL</fullName>
+                <default>false</default>
+                <label>MOL</label>
+            </value>
+            <value>
+                <fullName>lokální závozy na stavby</fullName>
+                <default>false</default>
+                <label>lokální závozy na stavby</label>
+            </value>
+            <value>
+                <fullName>Fuelomat</fullName>
+                <default>false</default>
+                <label>Fuelomat</label>
+            </value>
+            <value>
+                <fullName>lokální kredit</fullName>
+                <default>false</default>
+                <label>lokální kredit</label>
+            </value>
+            <value>
+                <fullName>Tankomat</fullName>
+                <default>false</default>
+                <label>Tankomat</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

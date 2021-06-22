@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel_Source_Lead__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(ISPICKVAL( Source_of_Lead_o__c , "Актуализированная БД"),
+ISPICKVAL(Source_of_Lead_o__c , "Прочая БД"),
+ISPICKVAL(Source_of_Lead_o__c , "Бизнес карта Пилот"),
+ISPICKVAL(Source_of_Lead_o__c , "БизнесCard"),
+ISPICKVAL(Source_of_Lead_o__c , "Найден в Интернете"),
+ISPICKVAL(Source_of_Lead_o__c , "Реклама Клиента")), "Прочая БД",
+IF(OR(ISPICKVAL(Source_of_Lead_o__c , "Выставка"),
+ISPICKVAL(Source_of_Lead_o__c , "Полевой канал"),
+ISPICKVAL(Source_of_Lead_o__c , "Рекомендация"),
+ISPICKVAL(Source_of_Lead_o__c , "Акция Рекомендация")), "Входящие",
+IF(OR(ISPICKVAL(Source_of_Lead_o__c , "Партнерская Программа"),
+ISPICKVAL(Source_of_Lead_o__c , "Сайт fuel.veb-leasing.ru")), "Партнерская Программа",
+IF(OR(ISPICKVAL(Source_of_Lead_o__c , "Почтовая Рассылка"),
+ISPICKVAL(Source_of_Lead_o__c , "Реклама на АЗС"),
+ISPICKVAL(Source_of_Lead_o__c , "Email Рассылка"),
+ISPICKVAL(Source_of_Lead_o__c , "Сайт Petrolplus.ru"),
+ISPICKVAL(Source_of_Lead_o__c , "Сайт Petrolcards.ru"),
+ISPICKVAL(Source_of_Lead_o__c , "Email рассылка;Сайт Petrolplus.ru"),
+ISPICKVAL(Source_of_Lead_o__c , "Сайт Petrolplus.ru Возможности inbound"),
+ISPICKVAL(Source_of_Lead_o__c , "Поисковая Система"),
+ISPICKVAL(Source_of_Lead_o__c , "Реклама в СМИ"),
+ISPICKVAL(Source_of_Lead_o__c , "Интернет-источники"),
+ISPICKVAL(Source_of_Lead_o__c , "Petrolcards.ru - АГГРЕГАТОР"),
+ISPICKVAL(Source_of_Lead_o__c , "Email рассылка:Сайт Petrolplus.ru"),
+ISPICKVAL(Source_of_Lead_o__c , "Сайт Petrolplus.kz"),
+ISPICKVAL(Source_of_Lead_o__c , "АЗС Заявка Shell"),
+ISPICKVAL(Source_of_Lead_o__c , "Сайт gpc-store.ru"),
+ISPICKVAL(Source_of_Lead_o__c , "АЗС Заявка Шелл"),
+ISPICKVAL(Source_of_Lead_o__c , "Petrolcards.ru – АГГРЕГАТОР"),
+ISPICKVAL(Source_of_Lead_o__c , "Интернет Источники")), "Маркетинг",
+IF(ISPICKVAL(Source_of_Lead_o__c , "E2E Form RU"), "E2E Form RU",
+IF(ISPICKVAL(Source_of_Lead_o__c , "Business card"), "Business card", "Пусто"))))))</formula>
+    <label>Channel Source Lead</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

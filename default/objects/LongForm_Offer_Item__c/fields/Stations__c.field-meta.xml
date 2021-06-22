@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stations__c</fullName>
+    <externalId>false</externalId>
+    <label>Stations</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Shell (Home Station)</fullName>
+                <default>false</default>
+                <label>Shell (Home Station)</label>
+            </value>
+            <value>
+                <fullName>Shell (All Stations)</fullName>
+                <default>false</default>
+                <label>Shell (All Stations)</label>
+            </value>
+            <value>
+                <fullName>Shell &amp; Partners</fullName>
+                <default>false</default>
+                <label>Shell &amp; Partners</label>
+            </value>
+            <value>
+                <fullName>Not specified yet</fullName>
+                <default>false</default>
+                <label>Not specified yet</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

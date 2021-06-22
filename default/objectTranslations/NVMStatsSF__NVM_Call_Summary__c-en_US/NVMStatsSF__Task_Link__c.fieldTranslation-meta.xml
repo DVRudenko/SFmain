@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- URL to open a new tab for the relates task if one exists --></help>
+    <label><!-- Task Link --></label>
+    <name>NVMStatsSF__Task_Link__c</name>
+</CustomFieldTranslation>

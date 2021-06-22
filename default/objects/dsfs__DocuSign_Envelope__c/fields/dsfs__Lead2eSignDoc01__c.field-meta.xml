@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__Lead2eSignDoc01__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Quick Lead to eSign Document</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Quick Lead to eSign Document</inlineHelpText>
+    <label>Lead to eSign Document</label>
+    <referenceTo>Lead</referenceTo>
+    <relationshipLabel>DocuSign Envelopes</relationshipLabel>
+    <relationshipName>DocuSign_Envelopes</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

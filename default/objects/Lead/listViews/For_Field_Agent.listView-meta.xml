@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>For_Field_Agent</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Beschaeftigte__c</field>
+        <operation>equals</operation>
+        <value>100-149,150-199,&gt;200</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,offen</value>
+    </filters>
+    <filters>
+        <field>Branchentext__c</field>
+        <operation>contains</operation>
+        <value>trans</value>
+    </filters>
+    <filters>
+        <field>Name_campaign__c</field>
+        <operation>equals</operation>
+        <value>DE Creditreform 10607_2</value>
+    </filters>
+    <label>For Field Agent</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>Teamleiter</role>
+        <role>Teamleiter_Outbound_1</role>
+        <role>Teamleiter_Outbound_2</role>
+        <role>Teamleiter_Outbound_3</role>
+        <role>Teamleiter_Outbound_4</role>
+        <role>Teamleiter_Outbound_5</role>
+    </sharedTo>
+</ListView>

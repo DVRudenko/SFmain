@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Name_der_B_rge_Name_of_the_guaranteeing__c</fullName>
+    <description>для Cermak Petr</description>
+    <externalId>false</externalId>
+    <label>Name der Bürge/Name of the guaranteeing</label>
+    <length>250</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

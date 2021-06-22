@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>True_User_Closed_Contract__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Для маркировки воронки сэйлза переведенного в другую группу продаж</description>
+    <externalId>false</externalId>
+    <label>True User Closed Contract</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Opportunities_User</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Opportunity</fullName>
+    <active>true</active>
+    <description>Users can&#39;t change Opportunity after choosing one.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(PRIORVALUE(Opportunity__c))),
+ISCHANGED(Opportunity__c),
+NOT(ISNEW())
+)</errorConditionFormula>
+    <errorDisplayField>Opportunity__c</errorDisplayField>
+    <errorMessage>You cannot change Opportunity on Additional Hardware once it has been assigned.</errorMessage>
+</ValidationRule>

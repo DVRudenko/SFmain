@@ -1,0 +1,25 @@
+<apex:page controller="FindDuplicatesCtrl" sidebar="true" showHeader="true" id="page1">
+    <apex:form id="form1">
+        <div style="text-align: left;">
+            <apex:inputText id="inputField" onkeypress="handleKeyPress(event);" value="{!searchString}" label="Account/Contact Search" size="10" />
+            <apex:commandLink id="searchBtn" styleClass="btn" style="text-decoration: none;" value="Поиск" action="{!searchFromSidebar}"
+                target="_blank" />
+        </div>
+
+    </apex:form>
+    <script type="text/javascript"> 
+        window.onload = function () {
+            var inputField = document.getElementById("{!$Component.page1.form1.inputField}");
+            inputField.blur();
+        };
+
+        var sbutton = document.getElementById("{!$Component.page1.form1.searchBtn}"); 
+        function handleKeyPress(e) {
+            var key = 0;
+            if (window.event) { key = e.keyCode; }
+            else if (e.which) { key = e.which; }
+
+            if (key == 13) { sbutton.click(); }
+        }
+    </script>
+</apex:page>

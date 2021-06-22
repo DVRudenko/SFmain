@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Geschaeftsbereich__c</fullName>
+    <externalId>false</externalId>
+    <label>Geschäftsbereich</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Produzierendes Gewerbe</fullName>
+                <default>false</default>
+                <label>Produzierendes Gewerbe</label>
+            </value>
+            <value>
+                <fullName>Technische Dienstleistung</fullName>
+                <default>false</default>
+                <label>Technische Dienstleistung</label>
+            </value>
+            <value>
+                <fullName>Energie-Versorgung</fullName>
+                <default>false</default>
+                <label>Energie-Versorgung</label>
+            </value>
+            <value>
+                <fullName>Handwerker (Maler, Lackierer, etc.)</fullName>
+                <default>false</default>
+                <label>Handwerker (Maler, Lackierer, etc.)</label>
+            </value>
+            <value>
+                <fullName>Automobil-Gewerbe (KFZ)</fullName>
+                <default>false</default>
+                <label>Automobil-Gewerbe (KFZ)</label>
+            </value>
+            <value>
+                <fullName>Vertrieb und Beratung</fullName>
+                <default>false</default>
+                <label>Vertrieb und Beratung</label>
+            </value>
+            <value>
+                <fullName>Transport (Fracht)</fullName>
+                <default>false</default>
+                <label>Transport (Fracht)</label>
+            </value>
+            <value>
+                <fullName>Transport (Personen)</fullName>
+                <default>false</default>
+                <label>Transport (Personen)</label>
+            </value>
+            <value>
+                <fullName>Soziale Dienstleistung</fullName>
+                <default>false</default>
+                <label>Soziale Dienstleistung</label>
+            </value>
+            <value>
+                <fullName>Verarbeitendes Gewerbe</fullName>
+                <default>false</default>
+                <label>Verarbeitendes Gewerbe</label>
+            </value>
+            <value>
+                <fullName>Sonstiges</fullName>
+                <default>false</default>
+                <label>Sonstiges</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

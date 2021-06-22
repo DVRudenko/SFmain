@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Payment terms Credit</label>
+    <name>Zahlungsziel_Credit__c</name>
+    <picklistValues>
+        <masterLabel>10</masterLabel>
+        <translation>10 days</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>14</masterLabel>
+        <translation>14 days</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>21</masterLabel>
+        <translation>21 days</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>27</masterLabel>
+        <translation>27 days</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30</masterLabel>
+        <translation>30 days</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>35</masterLabel>
+        <translation>35 days</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>45</masterLabel>
+        <translation>45 days</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7</masterLabel>
+        <translation>7 days</translation>
+    </picklistValues>
+</CustomFieldTranslation>

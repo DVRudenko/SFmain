@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Once a Lead is converted, a value of a Contact Email Body field from Lead object is copied to a  Lead Email Body field of the newly created Opportunity. --></help>
+    <label><!-- Lead Email Body --></label>
+    <name>Lead_Email_Body__c</name>
+</CustomFieldTranslation>

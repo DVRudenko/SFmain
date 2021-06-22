@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total time 2 agents were connected while the Caller was on hold prior to transfers --></help>
+    <label><!-- Warm Transfer Time --></label>
+    <name>NVMStatsSF__Warm_Transfer_Time__c</name>
+</CustomFieldTranslation>

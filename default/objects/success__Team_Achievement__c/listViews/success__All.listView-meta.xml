@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__All</fullName>
+    <columns>NAME</columns>
+    <columns>success__Behaviour_Name__c</columns>
+    <columns>success__Badge_Name__c</columns>
+    <columns>success__Experience_Formula__c</columns>
+    <columns>success__Featured__c</columns>
+    <columns>success__Wait_Time__c</columns>
+    <columns>success__Wait_time_unit__c</columns>
+    <columns>success__Maximum_number_of_rewards__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

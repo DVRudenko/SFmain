@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVM_Opp_Score__c</fullName>
+    <description>NVM basic score formula for Opp dial lists</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    AND(
+        ISPICKVAL(StageName, "Pending Sales – Information"),
+        Number_of_open_tasks__c =0
+       ), 1,
+
+IF(
+    AND(
+        ISPICKVAL(StageName, "Pending Sales – PIT/CIT"),
+        Number_of_open_tasks__c =0
+       ), 2,
+IF(
+    AND(
+        ISPICKVAL(StageName, "Pending Sales – AML doc."),
+        Number_of_open_tasks__c =0
+       ), 3,
+IF(
+    AND(
+        ISPICKVAL(StageName, "Pending Sales – Deposit"),
+        Number_of_open_tasks__c =0
+       ), 4,
+IF(
+    AND(
+        ISPICKVAL(StageName, "Pending Sales - Token payment"),
+        Number_of_open_tasks__c =0
+       ), 5,
+IF(
+    AND(
+        ISPICKVAL(StageName, "Pending Sales - SEPA Confirmation"),
+        Number_of_open_tasks__c =0
+       ), 6,
+IF(
+    AND(
+        ISPICKVAL(StageName, "Prospecting"),
+        Number_of_open_tasks__c =0
+       ), 7,
+8)))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NVM Opp Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

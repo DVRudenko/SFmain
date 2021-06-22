@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Merlin_Last_Modified_By__c</fullName>
+    <description>Used to set the Last Modified By Email address for sending BO notifications.</description>
+    <externalId>false</externalId>
+    <label>Merlin Last Modified By</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

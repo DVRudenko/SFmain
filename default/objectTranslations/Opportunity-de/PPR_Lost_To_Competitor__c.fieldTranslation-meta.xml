@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If FleetCor lost to a competitor, the name of that competitor. --></help>
+    <label><!-- PPR Lost To Competitor --></label>
+    <name>PPR_Lost_To_Competitor__c</name>
+    <picklistValues>
+        <masterLabel>Avtocard-Voronezh</masterLabel>
+        <translation><!-- Avtocard-Voronezh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Computer LTD-1</masterLabel>
+        <translation><!-- Computer LTD-1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EKA-Processing</masterLabel>
+        <translation><!-- EKA-Processing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gazpromneft</masterLabel>
+        <translation><!-- Gazpromneft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inforkom</masterLabel>
+        <translation><!-- Inforkom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Licard</masterLabel>
+        <translation><!-- Licard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MNGK-Avtocard</masterLabel>
+        <translation><!-- MNGK-Avtocard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Magystral</masterLabel>
+        <translation><!-- Magystral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Novatorrus-invest</masterLabel>
+        <translation><!-- Novatorrus-invest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional operator</masterLabel>
+        <translation><!-- Regional operator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rosneft</masterLabel>
+        <translation><!-- Rosneft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SKON</masterLabel>
+        <translation><!-- SKON --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell Russia</masterLabel>
+        <translation><!-- Shell Russia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Surgutneftegas</masterLabel>
+        <translation><!-- Surgutneftegas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tatneft</masterLabel>
+        <translation><!-- Tatneft --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

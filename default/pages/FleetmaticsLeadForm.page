@@ -1,0 +1,115 @@
+<apex:page controller="FleetmaticsLeadFormCtrl" action="{! init}" showHeader="false" sidebar="false">
+	<style>	
+	    body {
+	        font-size: 13px;
+	        font-weight: normal;
+	    }
+
+	    input, select, textarea {
+	        border: 1px solid #d0d0d0;  
+	        border-radius: 3px;
+	        height: 2em;
+	        font: 10px BlinkMacSystemFont;
+	    }
+
+	    textarea {
+	        height: 180px;
+	    }
+
+        .bPageBlock {         
+            border-top:0px;
+        }
+
+        .wrapper {
+        	width: 820px;
+        	margin: 0 auto;
+        }
+
+        .wrapper input[type="text"],
+        .wrapper textarea {
+        	width: 100%;
+        }
+	</style>
+	<apex:form >
+		<div class="wrapper">
+			<div style="text-align: center;">
+				<img style="height: 100px" src="{! URLFOR($Resource.Fleetmatics, 'LOGO.jpeg')}"/>
+			</div>
+			<apex:pageMessages />
+			<apex:pageBlock mode="maindetail" id="pageBlock" rendered="{! isValid}">
+
+				<apex:pageBlockSection columns="1" title="Sales Contact Information" collapsible="false">
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Name"/>	
+						<apex:inputText value="{! ownerName}" required="true" label="Name"/>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Email"/>	
+						<apex:inputText value="{! ownerEmail}" required="true" label="Email"/>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Contact Number"/>	
+						<apex:inputText value="{! ownerPhone}" required="true" label="Contact Number"/>
+					</apex:pageBlockSectionItem>
+				</apex:pageBlockSection>
+
+				<apex:pageBlockSection columns="1" title="Lead Information" collapsible="false">
+					<apex:selectRadio style="margin-left: 15%" value="{! leadSource}">
+	                    <apex:selectOptions value="{! leadSources}"/>
+	                </apex:selectRadio>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Company Name"/>
+						<apex:inputField value="{! newLead.Company}"/>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="First Name"/>
+						<apex:inputField value="{! newLead.FirstName}" required="true"/>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Last Name"/>
+						<apex:inputField value="{! newLead.LastName}"/>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Country"/>
+						<apex:selectList value="{! selectedCountry}" size="1">
+							<apex:selectOptions value="{! countries}"/>
+						</apex:selectList>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Position"/>
+						<apex:inputField value="{! newLead.Title}"/>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Zip Code"/>
+						<apex:inputField value="{! newLead.PostalCode}"/>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Phone"/>
+						<apex:inputField value="{! newLead.Phone}" required="true"/>
+					</apex:pageBlockSectionItem>	
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Email Address"/>
+						<apex:inputField value="{! newLead.Email}" required="true"/>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Total Fuel Consumption (l/month)"/>
+						<apex:inputField value="{! newLead.Monatlicher_Kraftstoffverbrauch_in_Liter__c}"/>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem > 
+						<apex:outputLabel value="Total number of vehicles"/>
+						<apex:inputField value="{! newLead.Anzahl_der_Fahrzeuge__c}"/>
+					</apex:pageBlockSectionItem>
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Notes"/>
+						<apex:inputTextarea value="{! newLead.Note__c}"/>
+					</apex:pageBlockSectionItem>
+				</apex:pageBlockSection>
+
+				<apex:pageBlockButtons location="bottom">
+					<apex:commandButton action="{! createLead}" value="Submit"/>
+				</apex:pageBlockButtons>
+
+			</apex:pageBlock>
+		</div>
+	</apex:form>
+</apex:page>

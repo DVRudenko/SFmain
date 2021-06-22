@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Název banky</label>
+    <name>Bank_Name__c</name>
+    <picklistValues>
+        <masterLabel>ABAPAY s.r.o.</masterLabel>
+        <translation><!-- ABAPAY s.r.o. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ALTERNATIVE PAYMENT SOLUTIONS</masterLabel>
+        <translation><!-- ALTERNATIVE PAYMENT SOLUTIONS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Air Bank a.s.</masterLabel>
+        <translation><!-- Air Bank a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Artesa</masterLabel>
+        <translation><!-- Artesa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B-Efekt a.s.</masterLabel>
+        <translation><!-- B-Efekt a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BKS Bank AG</masterLabel>
+        <translation><!-- BKS Bank AG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BNP Paribas Personal Finance SA</masterLabel>
+        <translation><!-- BNP Paribas Personal Finance SA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BNP Paribas S.A.</masterLabel>
+        <translation><!-- BNP Paribas S.A. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank of China (CEE) Ltd. Prague Branch</masterLabel>
+        <translation><!-- Bank of China (CEE) Ltd. Prague Branch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank of Communications Co.</masterLabel>
+        <translation><!-- Bank of Communications Co. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Banka CREDITAS a.s.</masterLabel>
+        <translation><!-- Banka CREDITAS a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COFIDIS SA</masterLabel>
+        <translation><!-- COFIDIS SA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>COMMERZBANK Aktiengesellschaft</masterLabel>
+        <translation><!-- COMMERZBANK Aktiengesellschaft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Centrálny depozitár cenných papierov SR</masterLabel>
+        <translation><!-- Centrálny depozitár cenných papierov SR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Citfin</masterLabel>
+        <translation><!-- Citfin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Citibank Europe plc</masterLabel>
+        <translation><!-- Citibank Europe plc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deutsche Bank Aktiengesellschaft Filiale Prag</masterLabel>
+        <translation><!-- Deutsche Bank Aktiengesellschaft Filiale Prag --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Družstevní záložna Kredit</masterLabel>
+        <translation><!-- Družstevní záložna Kredit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXIMBANKA SR</masterLabel>
+        <translation><!-- EXIMBANKA SR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Equa bank a.s.</masterLabel>
+        <translation><!-- Equa bank a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expobank CZ a.s.</masterLabel>
+        <translation><!-- Expobank CZ a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FAS finance company s.r.o.</masterLabel>
+        <translation><!-- FAS finance company s.r.o. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fairplay Pay s.r.o.</masterLabel>
+        <translation><!-- Fairplay Pay s.r.o. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fio banka</masterLabel>
+        <translation><!-- Fio banka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GrisPayUnion s.r.o.</masterLabel>
+        <translation><!-- GrisPayUnion s.r.o. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HSBC Continental Europe</masterLabel>
+        <translation><!-- HSBC Continental Europe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hypoteční banka</masterLabel>
+        <translation><!-- Hypoteční banka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ING Bank N.V.</masterLabel>
+        <translation><!-- ING Bank N.V. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Industrial and Commercial Bank of China Limited</masterLabel>
+        <translation><!-- Industrial and Commercial Bank of China Limited --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>J &amp; T BANKA</masterLabel>
+        <translation><!-- J &amp; T BANKA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>K-PAY a.s.</masterLabel>
+        <translation><!-- K-PAY a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KDB Bank Europe Ltd.</masterLabel>
+        <translation><!-- KDB Bank Europe Ltd. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Komerční banka, a.s.</masterLabel>
+        <translation><!-- Komerční banka, a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MONETA Money Bank</masterLabel>
+        <translation><!-- MONETA Money Bank --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MONETA Money Bank, a.s.</masterLabel>
+        <translation><!-- MONETA Money Bank, a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MONETA Stavební Spořitelna</masterLabel>
+        <translation><!-- MONETA Stavební Spořitelna --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MUFG Bank (Europe) N.V. Prague Branch</masterLabel>
+        <translation><!-- MUFG Bank (Europe) N.V. Prague Branch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mercurius partners s.r.o.</masterLabel>
+        <translation><!-- Mercurius partners s.r.o. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Modrá pyramida stavební spořitelna</masterLabel>
+        <translation><!-- Modrá pyramida stavební spořitelna --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MoneyPolo Europe s.r.o.</masterLabel>
+        <translation><!-- MoneyPolo Europe s.r.o. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NEY spořitelní družstvo</masterLabel>
+        <translation><!-- NEY spořitelní družstvo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Národná banka Slovenska</masterLabel>
+        <translation><!-- Národná banka Slovenska --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OTP Banka Slovensko</masterLabel>
+        <translation><!-- OTP Banka Slovensko --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oberbank AG  pobočka zahraničnej banky v Slovenskej republike</masterLabel>
+        <translation><!-- Oberbank AG  pobočka zahraničnej banky v Slovenskej republike --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oberbank AG pobočka Česká republika</masterLabel>
+        <translation><!-- Oberbank AG pobočka Česká republika --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PKO BP S.A.</masterLabel>
+        <translation><!-- PKO BP S.A. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PPF banka a.s.</masterLabel>
+        <translation><!-- PPF banka a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PRIVAT BANK der Raiffeisenlandesbank Oberösterreich Aktiengesellschaft</masterLabel>
+        <translation><!-- PRIVAT BANK der Raiffeisenlandesbank Oberösterreich Aktiengesellschaft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment Institution NFD a.s.</masterLabel>
+        <translation><!-- Payment Institution NFD a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment execution s.r.o.</masterLabel>
+        <translation><!-- Payment execution s.r.o. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Peněžní dům</masterLabel>
+        <translation><!-- Peněžní dům --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Podnikatelská družstevní záložna</masterLabel>
+        <translation><!-- Podnikatelská družstevní záložna --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Poštová banka</masterLabel>
+        <translation><!-- Poštová banka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prima banka Slovensko</masterLabel>
+        <translation><!-- Prima banka Slovensko --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Privatbanka</masterLabel>
+        <translation><!-- Privatbanka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prvá stavebná sporiteľňa</masterLabel>
+        <translation><!-- Prvá stavebná sporiteľňa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Qpay s.r.o.</masterLabel>
+        <translation><!-- Qpay s.r.o. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Raiffeisen stavební spořitelna a.s.</masterLabel>
+        <translation><!-- Raiffeisen stavební spořitelna a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Raiffeisenbank a.s.</masterLabel>
+        <translation><!-- Raiffeisenbank a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SIA Central Europe</masterLabel>
+        <translation><!-- SIA Central Europe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sberbank CZ</masterLabel>
+        <translation><!-- Sberbank CZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slovenská sporiteľňa</masterLabel>
+        <translation><!-- Slovenská sporiteľňa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slovenská záručná a rozvojová banka</masterLabel>
+        <translation><!-- Slovenská záručná a rozvojová banka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sparkasse Oberlausitz-Niederschlesien</masterLabel>
+        <translation><!-- Sparkasse Oberlausitz-Niederschlesien --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stavební spořitelna České spořitelny</masterLabel>
+        <translation><!-- Stavební spořitelna České spořitelny --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRINITY BANK a.s.</masterLabel>
+        <translation><!-- TRINITY BANK a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tatra banka</masterLabel>
+        <translation><!-- Tatra banka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trust Pay</masterLabel>
+        <translation><!-- Trust Pay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UniCredit Bank Czech Republic and Slovakia</masterLabel>
+        <translation><!-- UniCredit Bank Czech Republic and Slovakia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VIVA PAYMENT SERVICES S.A. odštěpný závod</masterLabel>
+        <translation><!-- VIVA PAYMENT SERVICES S.A. odštěpný závod --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Volksbank Raiffeisenbank Nordoberpfalz eG pobočka Cheb</masterLabel>
+        <translation><!-- Volksbank Raiffeisenbank Nordoberpfalz eG pobočka Cheb --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Všeobecná úverová banka a.s.</masterLabel>
+        <translation><!-- Všeobecná úverová banka a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waldviertler Sparkasse Bank AG</masterLabel>
+        <translation><!-- Waldviertler Sparkasse Bank AG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wustenrot stavebná sporiteľňa</masterLabel>
+        <translation><!-- Wustenrot stavebná sporiteľňa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>mBank S.A.</masterLabel>
+        <translation><!-- mBank S.A. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ČESKÁ NÁRODNÍ BANKA</masterLabel>
+        <translation><!-- ČESKÁ NÁRODNÍ BANKA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ČSOB Stavební spořitelna</masterLabel>
+        <translation><!-- ČSOB Stavební spořitelna --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ČSOB stavebná sporiteľňa</masterLabel>
+        <translation><!-- ČSOB stavebná sporiteľňa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Českomoravská záruční a rozvojová banka</masterLabel>
+        <translation><!-- Českomoravská záruční a rozvojová banka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Československá obchodná banka</masterLabel>
+        <translation><!-- Československá obchodná banka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Československá obchodní banka, a. s.</masterLabel>
+        <translation><!-- Československá obchodní banka, a. s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Československé úvěrní družstvo</masterLabel>
+        <translation><!-- Československé úvěrní družstvo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Česká exportní banka</masterLabel>
+        <translation><!-- Česká exportní banka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Česká spořitelna</masterLabel>
+        <translation><!-- Česká spořitelna --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Štátna pokladnica</masterLabel>
+        <translation><!-- Štátna pokladnica --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Account</fullName>
+    <active>true</active>
+    <description>STCP1-1298</description>
+    <errorConditionFormula>AND(
+OR ( (ISCHANGED( Account__c)), ISNEW() ),
+ISBLANK(Account__c ),
+    AND ( 
+								OR (
+$Profile.Name = &#39;Service Manager&#39;,
+$Profile.Name = &#39;Service Agent&#39;,
+$Profile.Name = &#39;CCS Service Manager&#39;,
+$Profile.Name = &#39;CCS Service Agent&#39;,
+$Profile.Name = &#39;Retention Manager&#39;,
+$Profile.Name = &#39;Retention Agent&#39;
+				),
+NOT($Permission.PO_Custom_Permission )
+			)			
+   )</errorConditionFormula>
+    <errorMessage>GFN needs to have an account associated with it</errorMessage>
+</ValidationRule>

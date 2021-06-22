@@ -1,0 +1,178 @@
+{
+    "title": {
+        "default_impl": {
+            "en": "CCS Limit MY NETWORK",
+            "cs": "CCS Limit MOJE SÍŤ"
+        }
+    },
+    "description": {
+        "default_impl": {
+            "en": "<p>Become a CCS client and get special discount at 1 fuel station network of your choice or 4 individual fuel stations.</p><p>Please provide the fuel station network brand (from those given below) or name and address of up to 4 individual fuel stations where you want to receive a discount of 0.30 CZK per liter fuel without VAT.</p>",
+            "cs": "<p>Staňte se klientem CCS a získáte speciální slevu v jedné vámi vybrané síti čerpacích stanic nebo na 4 vašich oblíbených čerpacích stanicích.</p><p>Zde prosím vyplňte 1 vámi vybranou síť čerpacích stanic z níže uvedených, u které chcete čerpat palivo se slevou 0.30 Kč bez DPH/l. Pokud si síť z níže uvedených nevyberete, je možné místo ní definovat 4 jednotlivé konkrétní čerpací stanice. V tom případě uveďte prosím jejich název a adresu.</p>"
+        }
+    },
+    "promos": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Discount on fuel at one fuel station network or 4 individual stations of your choice",
+                    "cs": "Sleva na palivo v jedné vámi vybrané síti čerpacích stanic (nebo u 4 konkrétních čerpacích stanic)"
+                },
+                "value": {
+                    "en": "-0.30 CZK per liter fuel without VAT",
+                    "cs": "-0.30 Kč bez DPH na litr PHM"
+                }
+            },
+            {
+                "label": {
+                    "en": "Discount at all other fuel stations in Czech Republic",
+                    "cs": "Sleva u ostatních čerpacích stanic v ČR"
+                },
+                "value": {
+                    "en": "-0.10 CZK per liter fuel without VAT",
+                    "cs": "-0.10 Kč bez DPH/l"
+                }
+            },
+            {
+                "label": {
+                    "en": "Monthly card fee",
+                    "cs": "Měsíční poplatek za vedení jedné karty"
+                },
+                "value": {
+                    "en": "89 CZK without VAT",
+                    "cs": "89 Kč bez DPH"
+                }
+            }
+        ]
+    },
+    "brands": {
+        "default_impl": [
+            {
+                "label": "Benzina",
+                "value": "Benzina"
+            },
+            {
+                "label": "MOL",
+                "value": "MOL"
+            },
+            {
+                "label": "OMV",
+                "value": "OMV"
+            },
+            {
+                "label": "Shell",
+                "value": "Shell"
+            },
+            {
+                "label": "Robin Oil",
+                "value": "Robin Oil"
+            },
+            {
+                "label": "Čepro",
+                "value": "Čepro"
+            },
+            {
+                "label": "KM-Prona",
+                "value": "KM-Prona"
+            },
+            {
+                "label": "Ahold",
+                "value": "Ahold"
+            },
+            {
+                "label": "Globus",
+                "value": "Globus"
+            },
+            {
+                "label": "Kontakt-služby motoristům",
+                "value": "Kontakt-služby motoristům"
+            },
+            {
+                "label": "Medos (Stanislav Šefl)",
+                "value": "Medos (Stanislav Šefl)"
+            },
+            {
+                "label": "Tank ONO",
+                "value": "Tank ONO"
+            },
+            {
+                "label": "Tesco",
+                "value": "Tesco"
+            },
+            {
+                "label": "Pasoil",
+                "value": "Pasoi l"
+            },
+            {
+                "label": "Unicorn ČS",
+                "value": "Unicorn ČS"
+            },
+            {
+                "label": "Silmet",
+                "value": "Silmet"
+            },
+            {
+                "label": "Armex",
+                "value": "Armex"
+            },
+            {
+                "label": "F1",
+                "value": "F1"
+            }
+        ]
+    },
+    "enableBulk": {
+        "default_impl": true
+    },
+    "offerItemsMaxCount": {
+        "default_impl": 70
+    },
+    "enableLocator": {
+        "default_impl": true
+    },
+    "driverName": {
+        "default_impl": {
+            "default": "KARTA",
+            "show": true
+        }
+    },
+    "dailyLimit": {
+        "default_impl": {
+            "default": null,
+            "show": true
+        }
+    },
+    "monthlyCardLimit": {
+        "default_impl": {
+            "default": null,
+            "show": true
+        }
+    },
+    "categoryOfProducts": {
+        "default_impl": {
+            "default": "Group 04",
+            "show": true
+        }
+    },
+    "lockedPinChange": {
+        "default_impl": {
+            "default": false,
+            "required": false,
+            "show": true
+        }
+    },
+    "mileageData": {
+        "default_impl": {
+            "default": false,
+            "required": false,
+            "show": true
+        }
+    },
+    "evCharging": {
+        "default_impl": {
+            "default": false,
+            "required": false,
+            "show": true
+        }
+    }
+}

@@ -1,0 +1,41 @@
+<aura:component controller="GFNI_DashboardCtrl" extends="c:BaseComponent">
+    <aura:attribute name="emptyServiceListMessage" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.gfnParams}" action="{!c.getServices}"/>
+
+    <lightning:card iconName="standard:service_contract" class="slds-card_boundary slds-m-around_large slds-scrollable">
+        <aura:set attribute="title">
+            <a href="{!v.landingPageLink}" target="_blank"> Services (GFN)</a>
+        </aura:set>
+            <aura:if isTrue="{!and(not(empty(v.itemList)), v.loaded)}">
+                <div class="slds-card__body_inner">
+                    <table class="slds-table slds-no-row-hover slds-table_bordered slds-table_striped slds-table_col-bordered slds-card_boundary">
+                        <thead>
+                            <tr class="slds-text-title_caps">
+                                <th>
+                                    <div class="slds-truncate">Service</div>
+                                </th>
+                                <th>
+                                    <div class="slds-truncate">Start Date</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.itemList}" var="service">
+                                <aura:if isTrue="{!service.Registered}">
+                                    <tr class="slds-hint-parent">
+                                        <td class="slds-cell-buffer_left slds-cell-buffer_right">{!service.ServiceDescription}</td>
+                                        <td class="slds-cell-buffer_left slds-cell-buffer_right">{!service.StartDate}</td>
+                                    </tr>
+                                </aura:if>
+                            </aura:iteration>
+                        </tbody>
+                    </table>
+                </div>
+                <aura:set attribute="else">
+                    <span class="slds-align_absolute-center slds-text-title_caps">{!v.emptyServiceListMessage}</span>
+                </aura:set>
+            </aura:if>
+    </lightning:card>
+</aura:component>

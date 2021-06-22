@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Ich/wir bestätigen, dass ich/wir rechtlich bevollmächtigt bin/sind, im Namen und auf Rechnung der im Antrag genannten Firma zu handeln. --></help>
+    <label>Autorizace statutara</label>
+    <name>Bevollmaechtigung__c</name>
+</CustomFieldTranslation>

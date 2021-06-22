@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMContactWorld__Call_Object_Identifier_Deprecated</fullName>
+    <active>true</active>
+    <errorConditionFormula>!ISBLANK(NVMContactWorld__CallObjectIdentifier__c)</errorConditionFormula>
+    <errorMessage>CallObjectIdentifier field is no longer used. Use IndexedCallObjectIdentifier.</errorMessage>
+</ValidationRule>

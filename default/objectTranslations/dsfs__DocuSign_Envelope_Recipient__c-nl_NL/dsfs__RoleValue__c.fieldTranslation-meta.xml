@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>WAARDE GEKOPPELD AAN DE ONTVANGERSROL VAN DOCUSIGN. DEZE WAARDE WORDT GEBRUIKT OM STANDAARD ANKERTAGS IN DOCUMENTEN IN KAART TE BRENGEN.</help>
+    <label><!-- RoleValue --></label>
+    <name>dsfs__RoleValue__c</name>
+</CustomFieldTranslation>

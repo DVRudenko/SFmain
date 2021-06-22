@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllCommunicationsNumber__c</fullName>
+    <description>STCP1-56/calculate the sum of internal and external communications made by owner in particular case/using in reports and dashboards</description>
+    <externalId>false</externalId>
+    <formula>MessagesSentToNonClient__c + PostsByOwner__c + MessagesSentToClient__c</formula>
+    <label>AllCommunicationsNumber</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

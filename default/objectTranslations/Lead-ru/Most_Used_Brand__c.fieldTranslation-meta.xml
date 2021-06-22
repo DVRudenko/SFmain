@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Какой бренд АЗС предпочитает использовать потенциальный клиент</help>
+    <label>Любимый бренд АЗС</label>
+    <name>Most_Used_Brand__c</name>
+    <picklistValues>
+        <masterLabel>76</masterLabel>
+        <translation><!-- 76 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ARCO</masterLabel>
+        <translation><!-- ARCO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BP-Amoco</masterLabel>
+        <translation><!-- BP-Amoco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bashneft</masterLabel>
+        <translation>Башнефть</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chevron</masterLabel>
+        <translation><!-- Chevron --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Citgo</masterLabel>
+        <translation><!-- Citgo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conoco</masterLabel>
+        <translation><!-- Conoco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Costco</masterLabel>
+        <translation><!-- Costco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Crystal</masterLabel>
+        <translation><!-- Crystal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EKA-AZS</masterLabel>
+        <translation>ЕКА-АЗС</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Exxon</masterLabel>
+        <translation><!-- Exxon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flying J</masterLabel>
+        <translation><!-- Flying J --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gazpromneft&#39;</masterLabel>
+        <translation>Газпромнефть</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Independent</masterLabel>
+        <translation>Независимый</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Love&#39;s</masterLabel>
+        <translation><!-- Love&apos;s --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lukoil</masterLabel>
+        <translation>Лукойл</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MTK</masterLabel>
+        <translation>МТК</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marathon</masterLabel>
+        <translation><!-- Marathon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobil</masterLabel>
+        <translation><!-- Mobil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Murphy USA</masterLabel>
+        <translation><!-- Murphy USA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Phillips 66</masterLabel>
+        <translation><!-- Phillips 66 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pilot</masterLabel>
+        <translation><!-- Pilot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QuikTrip</masterLabel>
+        <translation><!-- QuikTrip --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Racetrack</masterLabel>
+        <translation><!-- Racetrack --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rosneft</masterLabel>
+        <translation>Роснефть</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell</masterLabel>
+        <translation><!-- Shell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell Russia</masterLabel>
+        <translation>Шелл</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Surgutneftegas</masterLabel>
+        <translation>Сургутнефтегаз</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TNK</masterLabel>
+        <translation>ТНК-ВР</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tatneft</masterLabel>
+        <translation>Татнефть</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Texaco</masterLabel>
+        <translation><!-- Texaco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Valero</masterLabel>
+        <translation><!-- Valero --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Starts: Missing Information --></label>
+    <name>Starts_Missing_Information__c</name>
+    <picklistValues>
+        <masterLabel>Already customer</masterLabel>
+        <translation><!-- Already customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Club Smart cards n/a for trucks</masterLabel>
+        <translation><!-- Club Smart cards n/a for trucks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit</masterLabel>
+        <translation><!-- Credit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer wants termination</masterLabel>
+        <translation><!-- Customer wants termination --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email is missing</masterLabel>
+        <translation><!-- Email is missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuel cards are missing</masterLabel>
+        <translation><!-- Fuel cards are missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home station missing</masterLabel>
+        <translation><!-- Home station missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>House Nr. is missing</masterLabel>
+        <translation><!-- House Nr. is missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Driver/VRN in Card</masterLabel>
+        <translation><!-- No Driver/VRN in Card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product is missing / Not entered correctly</masterLabel>
+        <translation><!-- Product is missing / Not entered correctly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEPA wrong / insufficient</masterLabel>
+        <translation><!-- SEPA wrong / insufficient --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Set up cards differ from entered # of cards</masterLabel>
+        <translation><!-- Set up cards differ from entered # of cards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VAT / Ref. Number missing</masterLabel>
+        <translation><!-- VAT / Ref. Number missing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Card Type</masterLabel>
+        <translation><!-- Wrong Card Type --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong address</masterLabel>
+        <translation><!-- Wrong address --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

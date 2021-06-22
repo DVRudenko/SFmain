@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Starts_DD_Calls__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>A number of the call attempt to persuade the Customer to switch his Payment Method to Direct Debit.</inlineHelpText>
+    <label>Starts: DD Calls</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 Attempt</fullName>
+                <default>false</default>
+                <label>1 Attempt</label>
+            </value>
+            <value>
+                <fullName>2 Attempt</fullName>
+                <default>false</default>
+                <label>2 Attempt</label>
+            </value>
+            <value>
+                <fullName>3 Attempt</fullName>
+                <default>false</default>
+                <label>3 Attempt</label>
+            </value>
+            <value>
+                <fullName>4 Attempt</fullName>
+                <default>false</default>
+                <label>4 Attempt</label>
+            </value>
+            <value>
+                <fullName>5 Attempt</fullName>
+                <default>false</default>
+                <label>5 Attempt</label>
+            </value>
+            <value>
+                <fullName>6 Attempt</fullName>
+                <default>false</default>
+                <label>6 Attempt</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

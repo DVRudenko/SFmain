@@ -1,0 +1,55 @@
+<style>
+    .how-to-pay {
+        font-size: 11px;
+    }
+
+    .how-to-pay__table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .how-to-pay__table tr {
+        margin-top: 5px;
+    }
+
+    .how-to-pay__table tr td {
+        width: 50%;
+        padding: 4px 0 0;
+        border-bottom: 1px solid rgb(196, 196, 196);
+    }
+</style>
+
+<div class="how-to-pay">
+    <p class="doc-header" style="text-align:left">
+        Venturo Technologies<br>
+        46A, Avenue J.F. Kennedy, 1855<br>
+        Luxembourg<br>
+    </p>
+    <p class="doc-header" style="text-align:left">Si vous choisissez de déposer une caution, l’argent doit être viré à notre compte :</p>
+    <table class="how-to-pay__table">
+        <tr>
+            <td>Montant à payer:</td>
+            <td>{!securityAmountToPay} EUR</td>
+        </tr>
+        <tr>
+            <td>Titulaire de compte</td>
+            <td>Venturo Technologies S.à r.l.</td>
+        </tr>
+        <tr>
+            <td>Réfèrence</td>
+            <td>Nom de votre entreprise</td>
+        </tr>
+        <tr>
+            <td>Banque</td>
+            <td>Barclays Bank</td>
+        </tr>
+        <tr>
+            <td>IBAN</td>
+            <td>DE41 5031 0400 0737 5365 04</td>
+        </tr>
+        <tr>
+            <td>SWIFT\BIC</td>
+            <td>BARCDEFF</td>
+        </tr>
+    </table>
+</div>

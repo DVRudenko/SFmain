@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- PPR_Transit_StatusContract --></label>
+    <name>PPR_Transit_StatusContract__c</name>
+    <picklistValues>
+        <masterLabel>Банкрот</masterLabel>
+        <translation><!-- Банкрот --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ведется работа</masterLabel>
+        <translation><!-- Ведется работа --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Договор расторгнут</masterLabel>
+        <translation><!-- Договор расторгнут --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Должник</masterLabel>
+        <translation><!-- Должник --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Заведен</masterLabel>
+        <translation><!-- Заведен --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Заключен контракт</masterLabel>
+        <translation><!-- Заключен контракт --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Закрыт</masterLabel>
+        <translation><!-- Закрыт --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Остановлен</masterLabel>
+        <translation><!-- Остановлен --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Произведена установка</masterLabel>
+        <translation><!-- Произведена установка --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Работает</masterLabel>
+        <translation><!-- Работает --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Работает(дисконт)</masterLabel>
+        <translation><!-- Работает(дисконт) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Расторжение</masterLabel>
+        <translation><!-- Расторжение --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Удален</masterLabel>
+        <translation><!-- Удален --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

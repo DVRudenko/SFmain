@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Product</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inbound Typ B</fullName>
+                <default>false</default>
+                <label>Inbound Typ B</label>
+            </value>
+            <value>
+                <fullName>Inbound Typ C</fullName>
+                <default>false</default>
+                <label>Inbound Typ C</label>
+            </value>
+            <value>
+                <fullName>HOME 1</fullName>
+                <default>false</default>
+                <label>HOME 1</label>
+            </value>
+            <value>
+                <fullName>Home Station offer (v.1)</fullName>
+                <default>false</default>
+                <label>Home Station offer (v.1)</label>
+            </value>
+            <value>
+                <fullName>Shell Promo 2019</fullName>
+                <default>false</default>
+                <label>Shell Promo 2019</label>
+            </value>
+            <value>
+                <fullName>Shell Summer 2019</fullName>
+                <default>false</default>
+                <label>Shell Summer 2019</label>
+            </value>
+            <value>
+                <fullName>Swiss Pro 5</fullName>
+                <default>false</default>
+                <label>Swiss Pro 5</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

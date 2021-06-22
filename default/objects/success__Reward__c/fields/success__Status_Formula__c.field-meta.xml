@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Status_Formula__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(success__Achievement__c!=null,
+
+  IF(ISBLANK(success__Achievement__r.success__Aggregate_Field__c), &#39;Awarded&#39;,
+    IF(success__Reward_Type__c == &#39;Milestone&#39;, &#39;Awarded&#39;,
+      IF(AND(success__Exceeds_Time_Limit__c,success__Meets_Function_Value__c), &#39;Awarded&#39;,
+        IF(AND(!ISBLANK(success__Time_Limit_Date_Time__c), success__Exceeds_Time_Limit__c), &#39;Failed&#39;,
+          IF(success__Exceeds_Function_Limit__c, &#39;Failed&#39;, &#39;In Progress&#39;)
+        )
+      )
+    )
+  )
+
+,IF(success__Reward_Type__c==&#39;Manual&#39;,&#39;Awarded&#39;,&#39;Invalid&#39;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_task_by_myself</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( $Profile.Name != &quot;System Administrator&quot;,
+$Profile.Name != &quot;API Only&quot;,
+$Profile.Name != &quot;CCS System Administrator&quot;,
+$Profile.Name != &quot;CCS API System Admin&quot;,
+$Profile.Name != &quot;Systemadministrator&quot;, 
+$Profile.Name != &quot;CCS SME Team Lead&quot;, 
+$Profile.Name != &quot;FEETCOR DE Administartor&quot;, 
+$Profile.Name != &quot;E2E Profile&quot;,
+NOT(($Profile.Name = &quot;Starts Team&quot; || $Profile.Name = &quot;Starts Team Lead&quot;) 
+&amp;&amp; (Owner:User.Profile.Name = &quot;Sales&quot; || Owner:User.Profile.Name = &quot;Sales Inbound&quot;)), 
+ISCHANGED( Status ),
+NOT( TRIM(Owner:User.FirstName) = &quot;Integration&quot;),
+RecordType.Name &lt;&gt; &#39;Russian Sales&#39;,
+RecordType.Name &lt;&gt; &#39;Layout Tasks&#39;,
+RecordType.Name &lt;&gt; &#39;CCS Tasks&#39;,
+        NOT ($Profile.Name = &quot;Service Manager&quot; &amp;&amp; RecordType.Name = &#39;Call&#39;),
+OR(ISPICKVAL(Status, &#39;Geschlossen&#39;), 
+ISPICKVAL(Status, &#39;Completed&#39;), 
+ISPICKVAL(Status, &#39;Emailed&#39;), 
+ISPICKVAL(Status, &#39;Escalated&#39;), 
+ISPICKVAL(Status, &#39;Fraud&#39;), 
+ISPICKVAL(Status, &#39;Ineligible&#39;), 
+ISPICKVAL(Status, &#39;Unreached&#39;)), 
+$User.Id &lt;&gt; OwnerId )</errorConditionFormula>
+    <errorDisplayField>OwnerId</errorDisplayField>
+    <errorMessage>Only task owner can close this task.</errorMessage>
+</ValidationRule>

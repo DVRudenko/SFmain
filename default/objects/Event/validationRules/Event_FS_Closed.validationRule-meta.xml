@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_FS_Closed</fullName>
+    <active>true</active>
+    <description>Closed Events are not available for editing Sales &amp; TL</description>
+    <errorConditionFormula>AND( 
+OR( 
+$Profile.Name = &quot;Russian Team Leader&quot;, 
+$Profile.Name = &quot;Russian Sales Manager&quot; 
+), 
+NOT(BEGINS($User.Username,&#39;anastasiya.grishina@pprcard.ru&#39;)),
+RecordType.Name = &#39;Russian Sales Event&#39;,
+(	
+( ISPICKVAL(PRIORVALUE(Event_Status__c),&quot;Completed&quot; )) 
+|| 
+( ISPICKVAL(PRIORVALUE(Event_Status__c),&quot;Cancellation&quot; )) 
+), 
+NOT(ISNEW()) , 
+NOT(ISCHANGED(  WhoId )), 
+NOT(ISCHANGED(  WhatId )), 
+NOT(ISCHANGED( LastModifiedDate )), 
+NOT(ISCHANGED( Attachments_Exist__c )) 
+)</errorConditionFormula>
+    <errorMessage>Completed events are not available for Editing!</errorMessage>
+</ValidationRule>

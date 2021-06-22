@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Flexcard</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>CC In Progress</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Credit approved</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>CreditCheck</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>CreditCheck abgelehnt</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>DG - Kundenantrag erhalten und angelegt</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Entscheidung anstehend</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Follow Up Termin</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Infoversand</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Karten werden versendet</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Kartenantrag  PC wird bearbeitet</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Kartenantrag PC unvollständig</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Kartenantrag PC vollständig</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Kartenantrag bei PC eingetroffen</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Kundenantrag FC unvollständig</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Kundenantrag FC wird geprüft</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Kundenantrag an Degussa gesendet</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Kundenantrag vollständig erhalten</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New customer</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Paper Contract sent</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Credit</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Sales %E2%80%93 Deposit</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Sales %E2%80%93 Information</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Prospecting</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Sales - Follow UP Call Kartenantrag</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Sales - Karten erhalten Anruf</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Sales - Karten erhalten pending</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Sales - Kartenantrag versendet</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Sales - Kundenantrag in Bearbeitung</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Sales - verloren nach Credit Check</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>qualifizierter Termin</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

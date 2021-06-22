@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__All</fullName>
+    <columns>NAME</columns>
+    <columns>success__User__c</columns>
+    <columns>success__Achievement__c</columns>
+    <columns>success__Collective__c</columns>
+    <columns>success__Experience__c</columns>
+    <columns>success__Reward_Status__c</columns>
+    <columns>success__Last_Updated_Date_Time__c</columns>
+    <columns>success__Badge_Name__c</columns>
+    <columns>success__Badge_Type__c</columns>
+    <columns>success__Reward_Type__c</columns>
+    <columns>success__Hidden__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

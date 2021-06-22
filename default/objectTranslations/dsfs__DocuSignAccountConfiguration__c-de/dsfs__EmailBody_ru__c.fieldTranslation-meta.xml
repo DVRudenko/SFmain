@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Bearbeiten Sie den E-Mail-Nachrichtentext (max. 2.000 Zeichen). Dieser wird in der zu signierenden Nachricht für Ihren DocuSign-Empfänger angezeigt.</help>
+    <label><!-- EmailBody_ru --></label>
+    <name>dsfs__EmailBody_ru__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disqualification_type__c</fullName>
+    <description>on Activity - to input CC disqual reason</description>
+    <externalId>false</externalId>
+    <label>Disqualification type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>PhoneStatus</valueSetName>
+    </valueSet>
+</CustomField>

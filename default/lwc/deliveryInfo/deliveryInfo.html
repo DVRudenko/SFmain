@@ -1,0 +1,52 @@
+<template>
+  <lightning-card variant="base">
+    <h3 slot="title" class="header exportable-header">{labels.DELIVERY_INFO}</h3>
+    <div>
+      <lightning-textarea
+        class="field changeShippingAdress exportable-field"
+        name="shippingAddress"
+        label={labels.SHIPPING_ADDRESS}
+        value={deliveryInfo.shippingAddress}
+        onchange={handelShippingAdressChange}
+        pattern={pattern.address}
+        required
+      ></lightning-textarea>
+      <ul class="shippinglAddress" if:true={showShippingAdress}>
+        <template
+          for:each={shippingAdressSuggestions}
+          for:item="data"
+          for:index="index"
+        >
+          <li
+            key={data.region_fias_id}
+            onclick={handelClickСhangeShippingAdress}
+          >
+            <strong>{data.unrestricted_value}</strong>
+          </li>
+        </template>
+      </ul>
+    </div>
+    <lightning-button
+      variant="brand"
+      label={labels.SAME_AS_POSTAL_ADDRESS}
+      onclick={handleCopyAddressClick}
+      disabled={isDisabledCopyButton}
+      class="field"
+    >
+    </lightning-button>
+    <lightning-textarea
+      name="originalDocumentCourierInfo"
+      label={labels.ORIGINAL_DOCUMENT_COURIER_INFO}
+      value={deliveryInfo.originalDocumentCourierInfo}
+      onchange={handelChange}
+      class="exportable-field"
+    ></lightning-textarea>
+    <lightning-textarea
+      name="cardsDeliveryCourierInfo"
+      label={labels.CARDS_DELIVERY_COURIER_INFO}
+      value={deliveryInfo.cardsDeliveryCourierInfo}
+      onchange={handelChange}
+      class="exportable-field"
+    ></lightning-textarea>
+  </lightning-card>
+</template>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Checked if this is the last inbound call stats transaction log for this channel --></help>
+    <label><!-- Is Last Inbound --></label>
+    <name>NVMStatsSF__IsLast__c</name>
+</CustomFieldTranslation>

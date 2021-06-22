@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- By the Billing Call, training has to have been offered by the ELM rep. This field allows tracking on whether new customer training has been completed --></help>
+    <label><!-- CCS ELM Training Status --></label>
+    <name>ELM_Training_Status__c</name>
+    <picklistValues>
+        <masterLabel>Trained on Welcome Call</masterLabel>
+        <translation><!-- Trained on Welcome Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trainined on Billing Call</masterLabel>
+        <translation><!-- Trainined on Billing Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training Declined</masterLabel>
+        <translation><!-- Training Declined --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training Rescheduled</masterLabel>
+        <translation><!-- Training Rescheduled --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

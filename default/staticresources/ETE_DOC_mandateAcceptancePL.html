@@ -1,0 +1,322 @@
+<style>
+    .mandate-acceptance {
+        font-size: 11px;
+    }
+
+    .mandate-acceptance__header {
+        margin: 0;
+    }
+
+    .mandate-acceptance__block-header {
+        font-size: 14px; 
+        margin-top: 3px; 
+        text-align: center; 
+        font-weight: bold;
+    }
+
+    .mandate-acceptance__underline {
+        border-bottom: 1px solid black;
+    }
+
+    .mandate-acceptance__id-block {
+        width: 300px; 
+        height: 40px; 
+        font-size: 21px; 
+        padding: 4px 0 0 0; 
+        margin-left: -14px;  
+        text-align: center; 
+        float: left;
+    }
+
+    .mandate-acceptance__id-block-char {
+        width: 28px; 
+        border: 2px solid #B4AFB5; 
+        border-right: none; 
+        margin-left: -6px; 
+        display: inline-block;
+    }
+
+    .mandate-acceptance__id-block-char_last {
+        border-right: 2px solid #B4AFB5; 
+    }
+
+    .mandate-acceptance__number-char {
+        width: 19px; 
+        height: 26px; 
+        border: 2px solid #B4AFB5; 
+        border-right: none; 
+        margin-left: -6px; 
+        display: inline-block;
+    }
+
+    .mandate-acceptance__number-char_first {
+        margin-left: 0; 
+    }
+
+    .mandate-acceptance__number-char_last {
+        width: 17px; 
+        border: 2px solid #B4AFB5;
+    }
+
+    .mandate-acceptance__line-dot {
+        display: inline-block; 
+        border-bottom: 3px solid #B4AFB5; 
+        width: 25px; 
+        margin-left: 20px;
+    }
+
+    .mandate-acceptance__signature-item {
+        display: inline-block;
+        text-align: center; 
+        vertical-align: top;
+        border-top: 1px solid gray; 
+        width: 32%; 
+        margin: 12px 1% 0 0;
+        color: gray;
+    }
+    
+</style>
+
+<div class="mandate-acceptance">
+    <h2 class="mandate-acceptance__header">INSTRUKCJE DO ZGODY NA OBCIĄŻENIE RACHUNKU:</h2>
+
+    <div style=" font-size: 8px;">
+        <div>1. Prosimy wpisać wszystkie brakujące dane dotyczące banku w obu formularzach Zgody na obciążenie rachunku.</div>
+        <div>2. Prosimy podpisać oba formularze Zgody na obciążenie rachunku oraz przedstawić formularze w Państwa banku w celu aktywacji polecenia zapłaty na Państwa rachunku bankowym. Do momentu otrzymania od FLEETCOR potwierdzenia o uruchomieniu polecenia zapłaty, prosimy regulować płatności <span>przelewem bankowym.</span></div>
+        <div>3. Prosimy odesłać skan potwierdzenia aktywacji polecenia zapłaty z podpisem i pieczątką banku w postaci elektronicznej na adres e-mail <span class="mandate-acceptance__underline">obslugaklienta@fleetcor.pl</span></div>
+    </div>
+
+    <hr style="border-color: #B4AFB5;"/>
+
+    <div style="font-size: 7px;">Zwracamy Państwa uwagę, że nie ponosimy odpowiedzialności za poprawność uruchomienia polecenia zapłaty w Państwa banku. W przypadku, że po otrzymaniu zgody na obciążenie rachunku nie będziemy mogli pobrać środków z Państwa konta (niepoprawnie uruchomione polecenie zapłaty, brak odpowiedniej kwoty na rachunku), może Państwu zostać naliczona opłata za zwłokę w płatności.</div>
+    <div class="mandate-acceptance__block-header">ZGODA NA OBCIĄŻENIE RACHUNKU</div>
+    <div>Niniejszym wyrażam zgodę na obciążanie wskazanego poniżej rachunku bankowego w formie polecenia zapłaty, kwotami wynikającymi z moich zobowiązań w umownych terminach zapłaty, zgodnie z przesyłanymi mi fakturami / rachunkami.</div>
+    <div style=" border-bottom: 2px solid #CCCBCC; margin-top: 3px;">Rezydent</div>
+
+    <table border="0" width="100%">
+        <tr>
+            <td valign="top" style="border-right: 2px solid #CCCBCC;" width="50%">
+                <div>NAZWA I ADRES ODBIORCY</div>
+                <div>FLEETCOR POLAND SP. Z O.O.</div>
+                <div>GENERATION PARK Z,</div>
+                <div>UL. TOWAROWA 28, 00-839 WARSZAWA, POLSKA</div>
+            </td>
+            <td valign="top" style="padding-left: 50px;" width="50%">
+                <div>IDENTYFIKATOR ODBIORCY *</div>
+                <div class="mandate-acceptance__id-block">
+                    <span class="mandate-acceptance__id-block-char">5</span>
+                    <span class="mandate-acceptance__id-block-char">2</span>
+                    <span class="mandate-acceptance__id-block-char">5</span>
+                    <span class="mandate-acceptance__id-block-char">2</span>
+                    <span class="mandate-acceptance__id-block-char">5</span>
+                    <span class="mandate-acceptance__id-block-char">8</span>
+                    <span class="mandate-acceptance__id-block-char">4</span>
+                    <span class="mandate-acceptance__id-block-char">1</span>
+                    <span class="mandate-acceptance__id-block-char">2</span>
+                    <span class="mandate-acceptance__id-block-char mandate-acceptance__id-block-char_last">1</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div style="padding: 5px; border: 3px solid #CCCBCC;">
+        <div>NAZWA I ADRES PŁATNIKA – POSIADACZA RACHUNKU BANKOWEGO</div>
+        <div style="height: 20px;">
+            <span>{!currentOpportunity.Name}</span>
+            <span style="margin-left: 40px;">{!currentOpportunity.Account.BillingCity} {!currentOpportunity.Account.BillingStreet}</span>
+            <span style="margin-left: 40px;">{!currentOpportunity.Account.BillingPostalCode}</span>
+        </div>
+        <div style="height: 20px; border-top: 1px solid gray;"></div>
+        <div style="height: 10px; border-top: 1px solid gray;"></div>
+        <table border="0" width="100%">
+            <tr>
+                <td width="210px" valign="top">
+                    <span>NUMER RACHUNKU BANKOWEGO PŁATNIKA</span>
+                </td>
+                <td>
+                    <div style="width: 535px;">
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+                    </div>
+                    <div>
+                        <span style="float: left; margin-left: 10px;">Pozostali płatnicy **</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="210px">
+                    <span>IDENTYFIKATOR PŁATNOŚCI</span>
+                </td>
+                <td>
+                    <div style="border-bottom: 1px solid gray; height: 20px; display: inline-block; padding-left: 10px;">{!umr}</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <p style="margin: 0;  font-size: 10px; color: gray;">Niniejszy dokument stanowi jednocześnie zgodę dla banku na obciążanie mojego rachunku bankowego w formie polecenia zapłaty z tytułu moich zobowiązań wobec odbiorcy.</p>
+    <div style="height: 10px"></div>
+
+    <div style="width: 100%;">
+        <div class="mandate-acceptance__signature-item">miejscowość, data</div>
+        <div class="mandate-acceptance__signature-item">podpis płatnika - posiadacza rachunku zgodny z wzorem złożonym w banku</div>
+        <div class="mandate-acceptance__signature-item" style="margin-right: 0;">pieczątka banku – potwierdzenie ustanowienia PZ w banku</div>
+    </div>
+
+    <div style="font-size: 12px;">OTRZYMUJE ODBIORCA</div>
+
+    <div style="margin-top: -8px;">
+        <span class="mandate-acceptance__line-dot" style="margin: 0;"></span>
+        <span class="mandate-acceptance__line-dot"></span>
+        <span class="mandate-acceptance__line-dot"></span>
+        <span class="mandate-acceptance__line-dot"></span>
+        <span class="mandate-acceptance__line-dot"></span>
+        <span class="mandate-acceptance__line-dot"></span>
+        <span class="mandate-acceptance__line-dot"></span>
+        <span class="mandate-acceptance__line-dot"></span>
+        <span class="mandate-acceptance__line-dot"></span>
+        <span class="mandate-acceptance__line-dot"></span>
+        <span class="mandate-acceptance__line-dot"></span>
+        <span class="mandate-acceptance__line-dot"></span>
+        <span class="mandate-acceptance__line-dot"></span>
+        <span class="mandate-acceptance__line-dot"></span>
+        <span class="mandate-acceptance__line-dot" style="width: 15px;"></span>
+    </div>
+
+    <div class="mandate-acceptance__block-header">ZGODA NA OBCIĄŻENIE RACHUNKU</div>
+    <div>Niniejszym wyrażam zgodę na obciążanie wskazanego poniżej rachunku bankowego w formie polecenia zapłaty, kwotami wynikającymi z moich zobowiązań w umownych terminach zapłaty, zgodnie z przesyłanymi mi fakturami / rachunkami.</div>
+    <div style=" border-bottom: 2px solid #CCCBCC; margin-top: 3px;">Rezydent</div>
+    <table border="0" width="100%" style="margin-top: 3px;">
+        <tr>
+            <td valign="top" style="border-right: 2px solid #CCCBCC;" width="50%">
+                <div>NAZWA I ADRES ODBIORCY</div>
+                <div>FLEETCOR POLAND SP. Z O.O.</div>
+                <div>GENERATION PARK Z,</div>
+                <div>UL. TOWAROWA 28, 00-839 WARSZAWA, POLSKA</div>
+            </td>
+            <td valign="top" style="padding-left: 50px;" width="50%">
+                <div>IDENTYFIKATOR ODBIORCY *</div>
+                <div class="mandate-acceptance__id-block">
+                    <span class="mandate-acceptance__id-block-char">5</span>
+                    <span class="mandate-acceptance__id-block-char">2</span>
+                    <span class="mandate-acceptance__id-block-char">5</span>
+                    <span class="mandate-acceptance__id-block-char">2</span>
+                    <span class="mandate-acceptance__id-block-char">5</span>
+                    <span class="mandate-acceptance__id-block-char">8</span>
+                    <span class="mandate-acceptance__id-block-char">4</span>
+                    <span class="mandate-acceptance__id-block-char">1</span>
+                    <span class="mandate-acceptance__id-block-char">2</span>
+                    <span class="mandate-acceptance__id-block-char mandate-acceptance__id-block-char_last">1</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div style="padding: 5px; border: 3px solid #CCCBCC;">
+        <div>NAZWA I ADRES PŁATNIKA - POSIADACZA RACHUNKU BANKOWEGO</div>
+        <div style="height: 20px;">
+            <span>{!currentOpportunity.Name}</span>
+            <span style=" margin-left: 40px;">{!currentOpportunity.Account.BillingCity} {!currentOpportunity.Account.BillingStreet}</span>
+            <span style=" margin-left: 40px;">{!currentOpportunity.Account.BillingPostalCode}</span>
+        </div>
+        <div style="height: 20px; border-top: 1px solid gray;"></div>
+        <div style="height: 10px; border-top: 1px solid gray;"></div>
+        <table border="0" width="100%">
+            <tr>
+                <td width="210px" valign="top">
+                    <span>NUMER RACHUNKU BANKOWEGO PŁATNIKA</span>
+                </td>
+                <td>
+                    <div style="width: 535px;">
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_first"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char"></span>
+                        <span class="mandate-acceptance__number-char mandate-acceptance__number-char_last"></span>
+                    </div>
+                    <div>
+                        <span style="float: left; margin-left: 10px;">Pozostali płatnicy **</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="210px">
+                    <span>IDENTYFIKATOR PŁATNOŚCI**</span>
+                </td>
+                <td>
+                    <div style="border-bottom: 1px solid gray; height: 20px; display: inline-block; padding-left: 10px;">{!umr}</div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table border="0" width="100%" style="padding-bottom: 20px; font-family: Arial Unicode MS; ">
+        <tr>
+            <td style="text-align: left; width: 35%; color: gray;">Niniejszy dokument stanowi jednocześnie zgodę  dla  banku  na  obciążanie  mojego rachunku bankowego w formie polecenia zapłaty z tytułu moich zobowiązań wobec odbiorcy.</td>
+            <td style="width: 1%;"></td>
+            <td style="width: 23%; padding-top: 20px; vertical-align:top;">
+                <span style="width: 100%; display: inline-block; text-align: center; border-top: 1px solid gray; color: gray;">miejscowość, data</span>
+            </td>
+            <td style="width: 1%;"></td>
+            <td style="width: 40%; padding-top: 20px; vertical-align:top;">
+                <span style="width: 100%; display: inline-block; text-align: center; border-top: 1px solid gray; color: gray;">podpis płatnika - posiadacza rachunku zgodny z wzorem złożonym w banku</span>
+            </td>
+        </tr>
+    </table>
+    <div style=" text-align: left;">OTRZYMUJE BANK PŁATNIKA</div>
+    <p style="margin-top: 10px;   color: gray;">*)- 10-cio cyfrowy NIP/NIW odbiorcy <span style="padding-left: 73px;">**)- zaznaczyć właściwy status płatnika</span></p>
+</div>

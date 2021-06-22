@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Ondersteunt grote DocuSign-enveloppen door enveloppen zonder documentgegevens naar DocuSign te sturen en DocuSign toe te staan documentgegevens zonodig op te halen. Alleen inschakelen als het verzenden van enveloppen de verzendlimieten van Saleforce overschrijdt.</help>
+    <label><!-- Fetch Documents --></label>
+    <name>dsfs__FetchDocuments__c</name>
+</CustomFieldTranslation>

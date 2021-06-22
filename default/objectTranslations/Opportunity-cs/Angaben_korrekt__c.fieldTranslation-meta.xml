@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Informace v pořádku?</label>
+    <name>Angaben_korrekt__c</name>
+    <picklistValues>
+        <masterLabel>BIC stimmt nicht</masterLabel>
+        <translation>Špatný BIC</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IBAN stimmt nicht</masterLabel>
+        <translation>Špatný IBAN</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ja</masterLabel>
+        <translation>Ano</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Name der Firma stimmt nicht</masterLabel>
+        <translation>Špatné jméno společnosti</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nein, sieh Notes</masterLabel>
+        <translation>Ne, viz poznámka</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registrierte Adresse stimmt nicht</masterLabel>
+        <translation>Špatná adresa</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Steuernummer falsch</masterLabel>
+        <translation>Špatné DIČ</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ust – IdNr. stimmt nicht</masterLabel>
+        <translation><!-- Ust – IdNr. stimmt nicht --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

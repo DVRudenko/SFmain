@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EU_36__c</fullName>
+    <description>Monthly flat fee for services FLEETCOR Carnet in Poland and in the border, include rental SIM card, data transmission (communication fees) and background maps within the EU.
+Commitment for a period of 36 months.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>monthly / unit</inlineHelpText>
+    <label>EU 36</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

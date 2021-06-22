@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Branche (NACE) --></label>
+    <name>Branche_NACE__c</name>
+    <picklistValues>
+        <masterLabel>Accommodation and food service activities</masterLabel>
+        <translation>Gastgewerbe</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Activities of extraterritorial organizations and bodies</masterLabel>
+        <translation>Exterritoriale Organisationen und Körperschaften</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Activities of households as employers</masterLabel>
+        <translation>Private Haushalte mit Hauspersonal; Herstellung von Waren und Erbringung von Dienstleistungen durch Private Haushalte für den Eigenbedarf ohne Ausgeprägten Schwerpunkt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Administrative and support service activities</masterLabel>
+        <translation>Erbringung von Sonstigen Wirtschaftlichen Dienstleistungen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Agriculture, forestry and fishing</masterLabel>
+        <translation>Land- und Forstwirtschaft, Fischerei</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arts, entertainment and recreation</masterLabel>
+        <translation>Kunst, Unterhaltung und Erholung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Construction</masterLabel>
+        <translation>Baugewerbe</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education</masterLabel>
+        <translation>Erziehung und Unterricht</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Electricity, gas, steam and air conditioning supply</masterLabel>
+        <translation>Energieversorgung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial and insurance activities</masterLabel>
+        <translation>Erbringung von Finanz- und Versicherungsdienstleistungen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Human health and social work activities</masterLabel>
+        <translation>Gesundheits- und Sozialwesen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Information and communication</masterLabel>
+        <translation>Information und Kommunkation</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manufacturing</masterLabel>
+        <translation>Verarbeitendes Gewerbe</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mining and quarrying</masterLabel>
+        <translation>Bergbau und Gewinnung von Steinen und Erden</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other services activities</masterLabel>
+        <translation>Erbringung von Sonstigen Dienstleistungen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Professional, scientific and technical activities</masterLabel>
+        <translation>Erbringung von Freiberuflichen, Wissenschaftlichen und technischen Dienstleistungen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Public administration and defense; compulsory social security</masterLabel>
+        <translation>Öffentliche Verwaltung, Verteidigung, Sozialversicherung</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Real estate activities</masterLabel>
+        <translation>Grundstücks- und Wohnungswesen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transporting and storage</masterLabel>
+        <translation>Transport und Lager</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Water supply; sewerage; waste management and remediation activities</masterLabel>
+        <translation>Wasserversorgung, Abwasser und Abfallentsorgung und beseitigung von Umweltverschmutzungen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wholesale and retail trade; repair of motor vehicles and motorcycles</masterLabel>
+        <translation>Handel, Instandhaltung und Reparatur von Kraftfahrzeugen</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<aura:component implements="lightning:isUrlAddressable">
+    <aura:attribute name="gfnParams" type="String" />
+    <aura:attribute name="isClassic" type="Boolean"/>
+
+
+    <c:AccountDetailsGFN gfnParams="{!v.gfnParams}" isClassic="{!v.isClassic}"/>
+    <c:ContactsGFN gfnParams="{!v.gfnParams}"/>
+    <c:AddressesGFN gfnParams="{!v.gfnParams}"/>
+    <c:ServicesGFN gfnParams="{!v.gfnParams}"/>
+</aura:component>

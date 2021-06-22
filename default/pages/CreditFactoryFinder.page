@@ -1,0 +1,99 @@
+<apex:page controller="CreditFactoryFinderController" action="{! init }">
+    <style>
+        .btn {
+            color: black; 
+            text-decoration: none; 
+            padding: 3px 4px;
+            margin: 4px 0;
+        }
+
+        .btn:hover {
+            text-decoration: none;
+        }
+        
+        .help {
+            font-size: 12px;
+            float: right;
+            padding: 0 10px 5px 0;
+        }
+
+        #lightbox-cf {
+            display: none;
+            background: #000000;
+            opacity: 0.7;
+            filter: alpha(opacity=70);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 1000;
+        }
+    </style>
+    <apex:stylesheet value="{!URLFOR($Resource.Spinner, 'spinner.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Spinner, 'spinner.js')}"/>
+    <script>
+        //Function is used to get splash status bar when server side call is going on
+        function startSplash() {
+            document.getElementById('splashDiv').style.display='table-cell';
+            document.getElementById('lightbox-cf').style.display = 'block';
+        }
+
+        //Function will make the splash status to be stopped.
+        function endSplash() {
+            document.getElementById('splashDiv').style.display='none';
+            document.getElementById('lightbox-cf').style.display = 'none';
+        }
+    </script>
+    <div class="splashStatus" id="splashDiv">
+        <div class="circle"><img src="{!URLFOR($Resource.Spinner, 'spinner.gif')}"/></div>
+        <div class="txt">Please Wait. Loading...</div>
+    </div>
+    <apex:actionStatus id="splashStatus" onstart="startSplash();" onstop="endSplash();"/>
+
+    <apex:form id="formId">
+        <apex:pageBlock >
+            <apex:outputText >
+                <a href="/articles/Knowledge/Help-page-for-Credit-Factory" class="help" target="_blank">Help</a>
+            </apex:outputText>
+            <div style="padding-top: 20px">
+                <apex:pageMessages escape="false"/>
+            </div>
+            <apex:variable value="{!0}" var="companyIndex"/>
+            <apex:pageBlockTable value="{! companiesList }" var="company" rendered="{! AND(companiesList != null, companiesList.size > 0) }">
+                <apex:column >
+                    <apex:commandLink value="Select" action="{! selectCompanyForReport }" styleClass="btn" status="splashStatus" reRender="formId">
+                        <apex:param name="companyIndex" value="{! companyIndex }"/>
+                    </apex:commandLink>
+                    <apex:variable value="{! companyIndex + 1 }" var="companyIndex"/>
+                </apex:column>
+                <apex:column headerValue="Company Name" value="{! company.name }"/>
+                <apex:column headerValue="Tradename" value="{! company.tradename }" rendered="{! AND(creditSystemName != 'Crediconnect', creditSystemName != 'Schufa')}"/>
+                <apex:column headerValue="Street" value="{! company.street }" rendered="{! currentOpportunity.Account.BillingCountryCode != 'FR'}"/>
+                <apex:column headerValue="Housenumber" value="{! company.housenumber }" rendered="{! AND(currentOpportunity.Account.BillingCountryCode != 'FR', creditSystemName != 'Schufa')}"/>
+                <apex:column headerValue="Postcode" value="{! company.postcode }" rendered="{! currentOpportunity.Account.BillingCountryCode != 'FR'}"/>
+                <apex:column headerValue="City" value="{! company.city }" rendered="{! currentOpportunity.Account.BillingCountryCode != 'FR'}"/>
+                <apex:column headerValue="Address" value="{! company.address }" rendered="{! currentOpportunity.Account.BillingCountryCode = 'FR'}"/>
+                <apex:column headerValue="Credit System Company Number" value="{! company.creditSystemCompanyNumber }"/>
+                <apex:column headerValue="Status" value="{! company.status}"/>
+            </apex:pageBlockTable>
+
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Back to Opportunity" action="{! backToOpporutnity }" status="splashStatus" reRender="formId"/>
+                <apex:commandButton value="Approve Tax Id" action="{! approveTaxId}" rendered="{! AND(displayTaxIdApprove, creditSystemName == 'Coface')}" status="splashStatus" reRender="formId"/>
+                <apex:commandButton value="My company is not in the list" action="{! setInvalidSearch}" rendered="{! currentOpportunity.CF_Stage__c = 'Launched'}" status="splashStatus" reRender="formId"/>  
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        <div style="text-align: right;">
+            <apex:image value="{! 
+                IF(creditSystemName == 'Creditsafe',
+                    URLFOR($Resource.CreditFactoryFiles,'images/creditsafelogo.png'),
+                IF(OR(creditSystemName == 'CreditreformAT', creditSystemName == 'CreditreformLU'),
+                    URLFOR($Resource.CreditFactoryFiles,'images/creditreformlogo.png'),
+                IF(creditSystemName == 'Coface',
+                    URLFOR($Resource.CreditFactoryFiles,'images/cofacelogo.png'),
+                    '')))}" width="100px"/>
+        </div>
+    </apex:form>
+    <div id="lightbox-cf"></div>
+</apex:page>

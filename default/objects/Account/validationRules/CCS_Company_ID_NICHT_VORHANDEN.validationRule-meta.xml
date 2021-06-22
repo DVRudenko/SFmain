@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Company_ID_NICHT_VORHANDEN</fullName>
+    <active>true</active>
+    <description>If CCS_Company_ID__c isn't blank, Account Name cannot be "[nicht vorhanden]".</description>
+    <errorConditionFormula>AND(
+            NOT(ISBLANK(CCS_Company_ID__c)),
+            Name = "[NICHT VORHANDEN]")</errorConditionFormula>
+    <errorDisplayField>Name</errorDisplayField>
+    <errorMessage>Please update Account Name. In case of physical person, you can use First Name Surname. In case of legal entity, use official Account Name according to the Business Register.</errorMessage>
+</ValidationRule>

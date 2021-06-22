@@ -1,0 +1,64 @@
+<!--
+ - Created by Andrei.Katunin on 06.12.2018.
+ -->
+
+<apex:component id="E2EComponentInputList">
+
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map"
+                    required="true"/>
+
+    <apex:attribute name="Offer"
+                    type="String"
+                    description="parent map"
+                    required="true"/>
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="name of field in parent page"
+                    required="true"/>
+
+    <apex:attribute name="firstClass"
+                    type="String"
+                    description="class name of label and input div" />
+
+    <apex:attribute name="secondClass"
+                    type="String"
+                    description="class name of input div" />
+
+    <apex:attribute name="inputClass"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="errorClass"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="maxLength"
+                    type="String"
+                    description="maximum length of input" />
+
+    <apex:attribute name="inputType"
+                    type="String"
+                    description="input type" />
+
+    <apex:outputPanel layout="block" styleClass="{! firstClass }">
+        <label for="">{!pageMap[field].elementItemsMap['LABEL'].value}<sup>{! pageMap[field].elementItemsMap['ASTERISK'].value }</sup></label>
+        <apex:outputPanel layout="block" styleClass="{! secondClass }">
+            <apex:input id="inputID"
+                        styleClass="{! inputClass }"
+                        value="{!pageMap[field].elementItemsMap['DEFAULT VALUE'].value}"
+                        type="{!IF(inputType == null, 'text', inputType)}"
+                        html-maxlength="{! maxLength }"/>
+            <apex:outputPanel layout="block" styleClass="list-product">
+
+                <apex:repeat var="item" value="{! pageMap['PRODUCTS'].offers[Offer].products }" id="listRepeat1">
+                    <div product-id="{! pageMap['PRODUCTS'].offers[Offer].products[item].productName }" class="product-item">{! pageMap['PRODUCTS'].offers[Offer].products[item].productLabel }</div>
+                </apex:repeat>
+
+            </apex:outputPanel>
+        </apex:outputPanel>
+    </apex:outputPanel>
+
+</apex:component>

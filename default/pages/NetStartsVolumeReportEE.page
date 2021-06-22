@@ -1,0 +1,677 @@
+<!--
+ - Created by Andrei.Moiseev on 13.02.2018.
+ -->
+
+<apex:page controller="NetStartsVolumeReportEECtrl" docType="html-5.0" id="NetStartsVolumeReportEE">
+    <apex:includeScript value="{! $Resource.jQuery }"/>
+    <apex:includeScript value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/jquery-ui.min.js')  }"/>
+    <apex:includeScript value="{! $Resource.JQueryTablesorterMin}"/>
+    <apex:includeScript value="{!$Resource.download_files_js }"/>
+    <apex:includeScript value="{!$Resource.OverflowScrolling }"/>
+    <apex:stylesheet value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/jquery-ui.structure.min.css')  }"/>
+    <apex:stylesheet value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/jquery-ui.min.css')  }"/>
+
+    <script type="text/javascript">
+                //formatter for numbers
+                const locale = ("{! reportApi.currentUserLocale}").replace("_", "-");
+                const formatterFloat = new Intl.NumberFormat(locale, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+                const formatterInt = new Intl.NumberFormat(locale, {minimumFractionDigits: 0, maximumFractionDigits: 0});
+
+                j$ = jQuery.noConflict();
+
+                //modify tableSorter default configuration
+                j$.extend(true, j$.tablesorter.defaults, {
+                    emptyTo: "max",
+                    headers: {
+                        5: {
+                            sorter: 'shortDate'
+                        },
+                        10: {
+                            sorter: 'digit'
+                        },
+                        12: {
+                            sorter: 'shortDate'
+                        },
+                        13: {
+                            sorter: 'shortDate'
+                        },
+                        41: {
+                            sorter: 'false',
+                            parser: 'false'
+                        }
+                    }
+                });
+
+                j$(document).ready(function () {
+
+                    j$.datepicker.regional['ru'] = {
+                        closeText: 'Закрыть',
+                        prevText: '&#x3c;Пред',
+                        nextText: 'След&#x3e;',
+                        currentText: 'Сегодня',
+                        monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+                            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                        monthNamesShort: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+                            'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                        dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+                        dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+                        dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+                        weekHeader: 'Нед',
+                        dateFormat: 'dd/mm/yyyy',
+                        firstDay: 1,
+                        isRTL: false,
+                        showMonthAfterYear: false,
+                        yearSuffix: ''
+                    };
+
+                    j$.datepicker.setDefaults(j$.datepicker.regional['ru']);
+
+                    // set format for datepicker
+                    j$('[id$=dateFrom]').datepicker({dateFormat: 'dd/mm/yy'});
+                    j$('[id$=dateTo]').datepicker({dateFormat: 'dd/mm/yy'});
+
+                    // render table with onboarding data
+                    renderTable();
+
+                    // init search field
+                    var searchColumnsIndex = [1, 2, 3, 4, 41, 43];
+                    initSearch(searchColumnsIndex);
+                });
+
+                function getSelectedValue() {
+                    showLoaderCycle();
+                    disabledTablePlace();
+
+                    var elements = j$("*[name*='sl']");
+                    var tagsValue = {};
+                    for (var i = 0; i < elements.length; i++) {
+                        var elem = elements[i];
+                        if (elem.tagName == "SELECT" && elem.selectedIndex != -1) {
+
+                            if ( elem.options[elem.selectedIndex].value != "--None--" && ( !elem.name.endsWith("firstPumpDateEE") && !elem.name.endsWith("firstPumpDate") )) {
+                                tagsValue[elem.name.substring(elem.name.lastIndexOf(":") + 1)] = [elem.options[elem.selectedIndex].value];
+                            } else if (elem.options[elem.selectedIndex].value != "--None--" && (elem.name.endsWith("firstPumpDateEE") || elem.name.endsWith("firstPumpDate")) ) {
+                                tagsValue[elem.name.substring(elem.name.lastIndexOf(":") + 1)] =  elem.options[elem.selectedIndex].value;
+                            }
+                        } else if (elem.tagName == "INPUT") {
+                            if(!elem.value)
+                                continue;
+                            if (elem.name.endsWith("STR")) {
+                                    tagsValue[elem.name.substring(elem.name.lastIndexOf(":") + 1)] = '\'' + elem.value.replace(/["']/g, "") + '\'';
+                                continue;
+                            }
+                            var parts = elem.value.split("/");
+                            var date = new Date(Number(parts[2]), Number(parts[1]) - 1, Number(parts[0]));
+                            var mm = date.getMonth() + 1;
+                            tagsValue[elem.name.substring(elem.name.lastIndexOf(":") + 1)] = date.getFullYear() + "-" + mm + "-" + date.getDate();
+                        }
+                    }
+                    var json = JSON.stringify(tagsValue);
+                    passFilterParams(json);
+                }
+
+                function removeTable(tableId) {
+                    var innerTable = document.getElementById(tableId);
+                    if (innerTable != null && innerTable != undefined) {
+                        innerTable.remove();
+                    }
+                }
+
+                function convertJsonToTable(jsonData, totalData) {
+                    var jsonDataArray = JSON.parse(jsonData);
+                    var fields = {! reportApi.reportFieldsJson };
+                    var translateLabels = JSON.parse('{! reportApi.labelTranslateJson }');
+                    var totalData = JSON.parse(totalData);
+
+                    var mTable = document.createElement("table");
+                    mTable.setAttribute('id', 'mainTable');
+                    mTable.setAttribute('class', 'detailList');
+                    mTable.setAttribute('cellpadding', '1');
+                    mTable.setAttribute('cellspacing', '1');
+
+                    var tBody = document.createElement("tbody");
+                    var tr = document.createElement("tr");
+                    var td = document.createElement("td");
+                    td.setAttribute('class', 'dataCol  first  last ');
+                    td.setAttribute('colspan', '2');
+
+                    tr.appendChild(td);
+                    tBody.appendChild(tr);
+                    mTable.appendChild(tBody);
+
+                    var wrapper = document.createElement("div");
+                    wrapper.setAttribute('class', 'wrapper');
+                    td.appendChild(wrapper);
+
+                    var innerTable = document.createElement("table");
+                    innerTable.setAttribute('id', 'innerTable');
+                    innerTable.setAttribute('class', 'list sorterStyle');
+                    innerTable.setAttribute('border', '0');
+                    innerTable.setAttribute('cellpadding', '1');
+                    innerTable.setAttribute('cellspacing', '1');
+                    wrapper.appendChild(innerTable);
+
+                    var tableHeader = initTableHeader(fields, translateLabels);
+                    innerTable.appendChild(tableHeader);
+
+                    var tableBody = initBody(fields, jsonDataArray);
+                    innerTable.appendChild(tableBody);
+
+                    var tableTotal = initTotal(fields, totalData);
+                    innerTable.appendChild(tableTotal);
+
+                    return mTable;
+                }
+
+                function tableRender() {
+                    var jsonBody = j$('[id$=jsonBody]')[0].value;
+                    var jsonTotal = j$('[id$=jsonTotal]')[0].value;
+                    var jsonDataArray = JSON.parse(jsonBody);
+                    var fields = {! reportApi.reportFieldsJson };
+                    var translateLabels = JSON.parse('{! reportApi.labelTranslateJson }');
+                    var totalData = JSON.parse(jsonTotal);
+
+                    // remove Table if exists
+                    removeTable('mainTable');
+
+                    var mTable = document.createElement("table");
+                    mTable.setAttribute('id', 'mainTable');
+                    mTable.setAttribute('class', 'detailList');
+                    mTable.setAttribute('cellpadding', '1');
+                    mTable.setAttribute('cellspacing', '1');
+
+                    var tBody = document.createElement("tbody");
+                    var tr = document.createElement("tr");
+                    var td = document.createElement("td");
+                    td.setAttribute('class', 'dataCol  first  last ');
+                    td.setAttribute('colspan', '2');
+
+                    tr.appendChild(td);
+                    tBody.appendChild(tr);
+                    mTable.appendChild(tBody);
+
+                    var tableMain = document.getElementById('tableMain');
+                    tableMain.appendChild(mTable);
+
+                    var wrapper = document.createElement("div");
+                    wrapper.setAttribute('class', 'wrapper');
+                    td.appendChild(wrapper);
+
+                    var innerTable = document.createElement("table");
+                    innerTable.setAttribute('id', 'innerTable');
+                    innerTable.setAttribute('class', 'list sorterStyle fixed_headers');
+                    innerTable.setAttribute('border', '0');
+                    innerTable.setAttribute('cellpadding', '1');
+                    innerTable.setAttribute('cellspacing', '1');
+                    wrapper.appendChild(innerTable);
+
+                    var tableHeader = initTableHeader(fields, translateLabels);
+                    innerTable.appendChild(tableHeader);
+
+                    var tableBody = initBody(fields, jsonDataArray);
+                    innerTable.appendChild(tableBody);
+
+                    var tableTotal = initTotal(fields, totalData);
+                    innerTable.appendChild(tableTotal);
+
+                    // Apply sort to table columns using default config
+                    if (locale == "ru-RU") {
+                        j$("#innerTable").tablesorter({ dateFormat: "ddmmyyyy" });
+                    } else if (locale.search(/en-/) != -1) {
+                        j$("#innerTable").tablesorter({ dateFormat: "mmddyyyy" });
+                    }
+
+                    //  Marks all table rows, besides header row.
+                    //  Marked rows used in filters for showUnselectedRows and hideUnselectedRows functions
+                    j$("#innerTable tr:not(.first_tr)").click(function(){
+                       j$(this).toggleClass("click_color");
+                       j$(this).toggleClass("selectedRow");cl
+                    });
+
+                    hideLoaderCycle();
+                    enabledTablePlace();
+
+                    // init Float header
+                    floatThreadInit('#innerTable');
+                }
+
+                function initTableHeader(fields, translateLabels) {
+                    var tr = document.createElement("tr");
+                    tr.setAttribute('class', 'headerRow header');
+
+                    for (var index in fields) {
+                        var field = fields[index];
+
+                        var th = document.createElement("th");
+                        th.setAttribute('id', "th_" + index);
+                        th.setAttribute('class', 'headerRow header');
+                        th.setAttribute('scope', 'col');
+                        th.setAttribute('colspan', '1');
+
+                        var div = document.createElement("div");
+                        div.setAttribute('id', "div_" + index + ":sortDiv");
+
+                        if (translateLabels[field] != undefined) {
+                            div.innerHTML = translateLabels[field];
+                        } else {
+                            div.innerHTML = field;
+                        }
+
+                        th.appendChild(div);
+                        tr.appendChild(th);
+                    }
+                    var thead = document.createElement("thead");
+                    thead.appendChild(tr);
+                    return thead
+                }
+
+                function initBody(fields, jsonDataArray) {
+                    var tbody = document.createElement("tbody");
+                    for (var index in jsonDataArray) {
+                        var object = jsonDataArray[index];
+                        tbody.appendChild(getDataRow(fields, object));
+                    }
+                    return tbody;
+                }
+
+                function getDataRow(fields, jsonData) {
+                    var tr = document.createElement("tr");
+                    tr.setAttribute("class", "dataRow even first");
+
+                    tr.onmouseover = function(e) {
+                        if (window.hiOn) {
+                            hiOn(this);
+                        }
+                    };
+
+                    tr.onmouseout = function(e) {
+                        if (window.hiOff) {
+                            hiOff(this);
+                        }
+                    };
+
+                    tr.onblur = function(e) {
+                        if (window.hiOff) {
+                            hiOff(this);
+                        }
+                    };
+
+                    tr.onfocus = function(e) {
+                        if (window.hiOn) {
+                            hiOn(this);
+                        }
+                    };
+
+                    for (var index in fields) {
+                        var value = jsonData[fields[index]];
+                        var td = getCellData(fields[index], value);
+                        tr.appendChild(td);
+                    }
+                    return tr;
+                }
+
+                function getCellData(field, value) {
+                    var td = document.createElement("td");
+                    td.setAttribute("class", "dataCell");
+                    td.setAttribute("colspan", "1");
+
+                    if (value == undefined) {
+                        var span = document.createElement("span");
+                        span.innerHTML = "";
+                        td.appendChild(span);
+                    } else if (value["refer"] != undefined || value["name"] != undefined) {
+                        if (value["refer"] != undefined && value["name"] != undefined) {
+                            var a = document.createElement("a");
+                            a.setAttribute('href', "/" + value["refer"]);
+                            a.setAttribute('target', "_blank");
+                            a.appendChild(document.createTextNode(value["name"]));
+                            td.appendChild(a);
+                        } else if (value["name"] != undefined) {
+                            var span = document.createElement("span");
+                            span.innerHTML = value["name"];
+                            td.appendChild(span);
+                        }
+                    } else if (j$.isNumeric(value) && field != 'INN') {
+                        //formatting Decimal fields
+                        var span = document.createElement("span");
+                        if (field == 'Reality and Expected') {
+                            span.innerHTML = formatterFloat.format(parseFloat(value)) + ' %';
+                        } else if (
+                            field == 'All Cards' || field == 'Number Cards' ||
+                            field == 'Liters Weekly' || field == 'Expected Volume' || field == 'First Payed Transit'
+                            ) {
+                            span.innerHTML = formatterInt.format(parseInt(value));
+                        } else {
+                            span.innerHTML = formatterFloat.format(parseFloat(value));
+                        }
+                        td.appendChild(span);
+
+                    } else {
+                        var span = document.createElement("span");
+                        span.innerHTML = value;
+                        td.appendChild(span);
+                    }
+                    return td;
+                }
+
+                function initTotal(fields, jsonData) {
+                    var tr = document.createElement("tr");
+                    tr.setAttribute("class", "totalRow");
+                    for (var index in fields) {
+                        var th = document.createElement("th");
+                        th.setAttribute("class", "totalRow");
+                        th.setAttribute("scope", "col");
+                        th.setAttribute("colspan", "1");
+                        //skip rendering this field value because of redundancy
+                        if (fields[index] != "Reality and Expected") {
+                            var object = jsonData[fields[index]];
+                            th.innerHTML = getCellData(fields[index], object).innerText;
+                        }
+                        if (index == fields.length - 1) {
+                            console.log(index + " " + fields.length);
+                            th.setAttribute("class", "totalRow total");
+                        }
+                        tr.appendChild(th);
+                    }
+                    var tfoot = document.createElement("tfoot");
+                    tfoot.appendChild(tr);
+                    return tfoot;
+                }
+
+                function downloadExcelFile(reportBlob, totalRow) {
+                    var readyString = reportBlob.replace('][', ',');
+                    var completedTable = convertJsonToTable(readyString, totalRow);
+                    download(completedTable.outerHTML, 'test.xls', 'application/vnd.ms-excel');
+                }
+
+                function lockExportToExcelButton(jobTimeOut, buttonId, indicateId) {
+                    var time = parseInt(jobTimeOut);
+                    setTimeout(function() {
+                        j$('[id$=' +  indicateId + ']').hide();
+                        j$('[id$=' +  buttonId + ']').attr('disabled', false);
+                    }, time * 25000);
+                }
+
+                function goToReportGenerate(buttonId, indicateId) {
+                    j$('[id$=' +  buttonId + ']').attr('disabled', true);
+                    j$('[id$=' +  indicateId + ']').show();
+                }
+
+                function saveCurrentPage() {
+                    var tableNode = j$('[id$=tableMain]');
+                    download('<style> td { vnd.ms-excel.numberformat:@; } </style>' + tableNode[0].outerHTML, 'onboarding_report.xls', 'application/vnd.ms-excel');
+                }
+
+                function hideUnselectedRows() {
+                    floatThreadDestroy('#innerTable');
+                    j$('#innerTable tr:not(.headerRow):not(.totalRow)').not('.click_color').hide();
+                    floatThreadInit('#innerTable');
+                }
+
+                function showUnselectedRows() {
+                    floatThreadDestroy('#innerTable');
+                    j$('#innerTable tr:not(.headerRow):not(.totalRow)').not('.click_color').show();
+                    floatThreadInit('#innerTable');
+                }
+
+                function clearUnselectedRows() {
+                    j$(".click_color").each(function(){
+                        j$(this).toggleClass("click_color", false);
+                        j$(this).toggleClass("selectedRow", false);
+                     });
+                }
+
+                function showLoaderCycle(loader) {
+                    document.getElementById("loader").style.display = "block";
+                }
+
+                function hideLoaderCycle() {
+                    document.getElementById("loader").style.display = "none";
+                }
+
+
+                // Enabled (activate) table with id tablePlace
+                function enabledTablePlace() {
+                    document.getElementById("tablePlace").classList.remove("disabled-div");
+                }
+
+                // Disabled table with id tablePlace
+                function disabledTablePlace() {
+                    document.getElementById("tablePlace").classList.add("disabled-div");
+                }
+
+                function floatThreadInit(tableName) {
+                     j$(tableName).floatThead({
+                       scrollContainer: function($table){
+                          return $table.closest('wrapper-table');
+                       }
+                    });
+                }
+
+                function floatThreadDestroy(tableName) {
+                     j$(tableName).floatThead('destroy');
+                }
+
+                function initSearch(searchColumnsIndex) {
+                    j$('#search').on("keyup", function() {
+                        floatThreadDestroy('#innerTable');
+
+                        var value = j$(this).val();
+
+                        j$('#innerTable tr:not(.headerRow):not(.totalRow)').each(function(index) {
+                            $row = j$(this);
+                            var show = false;
+
+                            $row.find("td").each(function(index) {
+                                if (searchColumnsIndex.indexOf(index) !== -1) {
+                                    if (j$( this ).text().lastIndexOf(value, 0) !== -1) {
+                                        show = true;
+                                    }
+                                }
+                            });
+
+                            if (show) {
+                                $row.show();
+                            } else {
+                                $row.hide();
+                            }
+                        });
+                        floatThreadInit('#innerTable');
+                    });
+                }
+
+
+
+
+    </script>
+    <style>
+                .totalRow .total{
+                    background-color:#BBE3DF;
+                }
+
+                body .pbBody .sorterStyle.list tr.headerRow th {
+                    background-image: url({! URLFOR($Resource.Tablesorter,'blue/bg.gif') });
+                    background-repeat: no-repeat;
+                    background-position: center right;
+                    cursor: pointer;
+                    padding-right: 20px;
+                }
+
+                body .pbBody table.list tr.headerRow th.headerSortUp {
+                    background: url({! URLFOR($Resource.Tablesorter,'blue/asc.gif') }) grey no-repeat center right;
+                    color: white;
+                    font-weight: bold;
+                }
+
+                body .pbBody table.list tr.headerRow th.headerSortDown {
+                    background: url({! URLFOR($Resource.Tablesorter,'blue/desc.gif') }) grey no-repeat center right;
+                    color: white;
+                    font-weight: bold;
+                }
+
+                input:disabled.btn {
+                    background: #dddddd;
+                }
+
+                .disabled-div {
+                    pointer-events: none;
+                    opacity: 0.4;
+                }
+
+                .loader {
+                    border: 5px solid #f3f3f3;
+                    border-radius: 50%;
+                    border-top: 5px solid blue;
+                    border-right: 5px solid green;
+                    border-bottom: 5px solid red;
+                    width: 10px;
+                    height: 10px;
+                    -webkit-animation: spin 2s linear infinite;
+                    animation: spin 2s linear infinite;
+                }
+
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+
+                body .pbBody .sorterStyle.list tr.headerRow th {
+                    white-space: pre-wrap;
+                }
+
+                .click_color {
+                    background-color: #90ee90 !important;
+                }
+
+                .box {
+                  float: left;
+                  width: 220px;
+                  height: 20px;
+                  margin: 1em;
+                }
+
+                .little-box {
+                  float: left;
+                  width: 110px;
+                  height: 20px;
+                }
+
+    </style>
+
+    <apex:form >
+        <apex:inputHidden value="{!reportApi.recordsJson}" id="jsonBody"/>
+        <apex:inputHidden value="{!reportApi.totalRow}" id="jsonTotal"/>
+        <apex:actionFunction name="passFilterParams" action="{!passFilterParams}"
+                             reRender="paginationId, jsonBody, jsonTotal" oncomplete="tableRender(); return false;">
+            <apex:param id="filterParams" name="filterParams" value=""/>
+        </apex:actionFunction>
+        <apex:actionFunction name="renderTable" oncomplete="tableRender(); return false;"/>
+        <apex:actionFunction name="sendExcelReport" action="{! reportApi.sendExcelReportToEmail }"
+                             onComplete="lockExportToExcelButton('{! reportApi.jobTimeOut }', 'exportToExcelButton', 'senderExcel'); return false;"/>
+        <apex:actionFunction name="sendCSVReport" action="{! reportApi.sendCSVReportToEmail }"
+                             onComplete="lockExportToExcelButton('{! reportApi.jobTimeOut }', 'exportToCSVButton', 'senderCSV'); return false;"/>
+    </apex:form>
+
+    <apex:outputText id="selectOutput" value="{! reportApi.selectTable }" escape="false"/>
+    <div id="loader" style="display: none">
+        <div class="loader" style="inline-block"/>
+        <div style="inline-block">
+            <h4>{! $Label.RU_0071_Download }</h4>
+        </div>
+    </div>
+    <div id="tablePlace">
+        <div>
+            <div class="box">
+                <apex:form id="paginationId">
+                    <apex:panelGrid id="pagination" columns="7">
+                        <apex:commandButton id="first" action="{! reportApi.first }"
+                                            reRender="pagination, jsonBody, jsonTotal" status="PaginationStatus"
+                                            oncomplete="tableRender(); return false;" value="|<" title="First Page"
+                                            disabled="{! !reportApi.hasPrevious }"/>
+                        <apex:commandButton id="previous" action="{! reportApi.previous }"
+                                            reRender="pagination, jsonBody, jsonTotal" status="PaginationStatus"
+                                            oncomplete="tableRender(); return false;" value="<" title="Previous Page"
+                                            disabled="{! !reportApi.hasPrevious }"/>
+                        <apex:commandButton id="next" action="{! reportApi.next }"
+                                            reRender="pagination, jsonBody, jsonTotal" status="PaginationStatus"
+                                            oncomplete="tableRender(); return false;" value=">" title="Next Page"
+                                            disabled="{! !reportApi.hasNext }"/>
+                        <apex:commandButton id="last" action="{! reportApi.last }"
+                                            reRender="pagination, jsonBody, jsonTotal" status="PaginationStatus"
+                                            oncomplete="tableRender(); return false;" value=">|" title="Last Page"
+                                            disabled="{! !reportApi.hasNext }"/>
+                        <apex:outputText >{!(reportApi.page *
+                            reportApi.pageSize)+1-reportApi.pageSize}-{!IF((reportApi.page *
+                            reportApi.pageSize)>reportApi.totalPages, reportApi.totalPages,(reportApi.page *
+                            reportApi.pageSize))} of {!reportApi.totalPages}
+                        </apex:outputText>
+                        <apex:actionStatus id="PaginationStatus">
+                            <apex:facet name="start"><img src="/img/loading.gif" alt=""/></apex:facet>
+                            <apex:facet name="stop"></apex:facet>
+                        </apex:actionStatus>
+                    </apex:panelGrid>
+                </apex:form>
+            </div>
+            <div class="box" style="width: 130px;">
+                <apex:form >
+                    <div class="little-box">
+                        <apex:commandButton id="exportToExcelButton" value="{! $Label.RU_0065_Upload_to_Ecxel }"
+                                            onClick="goToReportGenerate('exportToExcelButton', 'senderExcel'); sendExcelReport(); return false;"/>
+                    </div>
+                    <div class="little-box" style="width: 20px;">
+                        <div id="senderExcel" style="display: none">
+                            <div class="loader" style="inline-block"/>
+                        </div>
+                    </div>
+                </apex:form>
+            </div>
+            <div class="box" style="width: 130px;">
+                <apex:form >
+                    <div class="little-box">
+                        <apex:commandButton id="exportToCSVButton" value="{! $Label.RU_0066_Upload_to_CSV }"
+                                            onClick="goToReportGenerate('exportToCSVButton', 'senderCSV'); sendCSVReport(); return false;"/>
+                    </div>
+                    <div class="little-box" style="width: 20px;">
+                        <div id="senderCSV" style="display: none">
+                            <div class="loader" style="inline-block"/>
+                        </div>
+                    </div>
+                </apex:form>
+            </div>
+            <div class="box" style="width: 130px;">
+                <apex:form >
+                    <div class="little-box">
+                        <!--Выгрузить текущую страницу в Excel-->
+                        <apex:commandButton id="exportToExcelCurrentPageButton"
+                                            value="{! $Label.RU_0067_Upload_Current_Page_to_Excel }"
+                                            onClick="saveCurrentPage(); return false;"/>
+                    </div>
+                </apex:form>
+            </div>
+        </div>
+        <apex:form id="myform">
+            <apex:pageBlock id="pg">
+                <div style="margin-left: 10px; display: inline-block;">
+                    <!--Показать выбранные-->
+                    <button type="button"
+                            onclick="hideUnselectedRows(); return false;">{! $Label.RU_0068_Show_Selected }</button>
+                </div>
+                <div style="margin-left: 10px; display: inline-block;">
+                    <!--Показать все-->
+                    <button type="button"
+                            onclick="showUnselectedRows(); return false;">{! $Label.RU_0069_Show_All }</button>
+                </div>
+                <div style="margin-left: 10px; display: inline-block;">
+                    <!--Очистить выборку-->
+                    <button type="button"
+                            onclick="clearUnselectedRows(); return false;">{! $Label.RU_0069_Clear_Selection }</button>
+                </div>
+                <div style="margin-left: 10px; display: inline-block;">
+                    <input type="text" id="search" placeholder=" {! $Label.RU_0070_Search }"
+                           style="width: 300px; margin-left: 70px; height: 19px;"></input>
+                </div>
+                <span id="tableMain" class="wrapper-table"></span>
+            </apex:pageBlock>
+        </apex:form>
+    </div>
+</apex:page>

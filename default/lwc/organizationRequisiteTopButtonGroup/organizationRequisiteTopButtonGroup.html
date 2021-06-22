@@ -1,0 +1,39 @@
+<template>
+  <div class="slds-grid slds-grid_align-center slds-gutters">
+    <div class="slds-col">
+      <lightning-button
+        variant="brand"
+        label={labels.START_DEDUPLICATION}
+        disabled={isDisabled}
+        onclick={handleStartDeduplicationClick}
+      >
+      </lightning-button>
+    </div>
+    <div class="slds-col">
+      <lightning-button
+        variant="brand"
+        class="startDeduplication"
+        label={labels.SAVE}
+        onclick={handleStartSaving}
+      >
+      </lightning-button>
+    </div>
+    <div class="slds-col">
+      <lightning-button
+              variant="brand"
+              label={labels.CREATE_CLIENT}
+              class="createClient"
+              onclick={handleOpenModal}
+      >
+      </lightning-button>
+    </div>
+    <div class="slds-col">
+      <lightning-button
+              variant="brand"
+              label={labels.EXPORT_XLS}
+              onclick={handleExportXLS}
+      >
+      </lightning-button>
+    </div>
+  </div>
+</template>

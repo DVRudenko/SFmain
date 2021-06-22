@@ -1,0 +1,17 @@
+<apex:page controller="DownloadE2EAttachmentController" action="{! init }" showHeader="false" sidebar="false">
+	<apex:outputPanel rendered="{! doc != NULL && attachmentId != null }">
+		<script>
+			window.location.href = '{!URLFOR($Action.Attachment.Download, attachmentId)}';		
+		</script>		
+	</apex:outputPanel>	
+	<apex:outputPanel rendered="{! doc != NULL && docId != null }">
+		<script>
+			window.location.href = '{!URLFOR($Action.Document.Download, docId)}';		
+		</script>		
+	</apex:outputPanel>
+	<apex:outputPanel rendered="{! doc != NULL && fileUrl != null }">
+		<script>
+			window.location.href = '{! fileUrl }';
+		</script>
+	</apex:outputPanel>
+</apex:page>

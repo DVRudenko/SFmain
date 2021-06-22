@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Web_Leads_bonus_Lead</fullName>
+    <filterScope>Queue</filterScope>
+    <label>CCS Web Leads (bonus)</label>
+    <language>de</language>
+    <queue>CCS_Web_Leads_bonus</queue>
+    <sharedTo>
+        <group>CCS_Records</group>
+    </sharedTo>
+</ListView>

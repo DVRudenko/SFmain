@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Primary Phone Field --></label>
+    <name>NVMConnect__Primary_Phone_Field__c</name>
+    <picklistValues>
+        <masterLabel>Contact.HomePhone</masterLabel>
+        <translation><!-- Contact.HomePhone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact.MobilePhone</masterLabel>
+        <translation><!-- Contact.MobilePhone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact.Phone</masterLabel>
+        <translation><!-- Contact.Phone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HomePhone</masterLabel>
+        <translation><!-- HomePhone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MobilePhone</masterLabel>
+        <translation><!-- MobilePhone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NVMContactWorld__Customer_Number__c</masterLabel>
+        <translation><!-- NVMContactWorld__Customer_Number__c --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NVM_Phone__c</masterLabel>
+        <translation><!-- NVM_Phone__c --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opp Phone</masterLabel>
+        <translation><!-- Opp Phone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OtherPhone</masterLabel>
+        <translation><!-- OtherPhone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Phone</masterLabel>
+        <translation><!-- Phone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SuppliedPhone</masterLabel>
+        <translation><!-- SuppliedPhone --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

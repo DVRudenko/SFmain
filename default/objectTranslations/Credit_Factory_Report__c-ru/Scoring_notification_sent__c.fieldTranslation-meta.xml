@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Scoring notification was sent from SF --></help>
+    <label>Скоринг рассылка отправлена</label>
+    <name>Scoring_notification_sent__c</name>
+</CustomFieldTranslation>

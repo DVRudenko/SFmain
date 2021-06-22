@@ -1,0 +1,98 @@
+<style>
+    .documents-agreement {
+        font-size: 11px;
+    }
+
+    .documents-agreement__underline {
+        border-bottom: 1px solid black;
+    }
+
+    .documents-agreement__item {
+        margin: 0 0 12px 0;
+    }
+
+    .documents-agreement__item div {
+        width: 48%;
+        display: inline-block;
+    }
+
+    .documents-agreement__item div p {
+        height: 20px;
+    }
+
+    .documents-agreement__item-last {
+        margin-left: 3%;
+    }
+
+    p {
+        margin: 0;
+    }
+</style>
+
+<div class="documents-agreement">
+    <div style="text-align: right;">
+        <p>SEPA-Lastschrift-Mandat</p>
+        <p>Wiederkehrende Zahlung</p>
+    </div>
+    <div>
+        <p>FFLEETCOR Tankkarten GmbH</p>
+        <p>Teinfaltstrasse 8/4</p>
+        <p>1010 Wien</p>
+        <p>Österreich</p>
+    </div>
+
+    <p style="margin: 24px 0 12px 0;">Gläubiger-Identifikationsnummer: DE 09ZZZ00001494383</p>
+
+    <div style="margin: 0 0 12px 0;">
+        Ich ermächtige/ Wir ermächtigen (A) FLEETCOR Tankkarten GmbH, Zahlungen von meinem/ unserem Konto mittels Lastschrift einzuziehen. Zugleich (B) weise ich mein/ weisen wir unser Kreditinstitut an, die von FLEETCOR Tankkarten GmbH auf mein/ unser Konto gezogenen Lastschriften einzulösen.
+    </div>
+    <div style="margin: 0 0 24px 0;">
+        Hinweis: Ich kann/ Wir können innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrages verlangen. Es gelten dabei die mit meinem/ unserem Kreditinstitut vereinbarten Bedingungen.
+    </div>
+
+    <div class="documents-agreement__item">
+        <div>
+            <p class="documents-agreement__underline">{!dataObject.Selected_Company_Name__c}</p>
+            <p>Firmenname</p>
+        </div>
+        <div class="documents-agreement__item-last">
+            <p class="documents-agreement__underline">{!dataObject.Registered_Street__c}</p>
+            <p>Straße und Hausnummer</p>
+        </div>
+    </div>
+
+    <div class="documents-agreement__item">
+        <div>
+            <p class="documents-agreement__underline">{!dataObject.Registered_Postal_Code__c}
+                {!dataObject.Registered_City__c}</p>
+            <p>Postleitzahl und Ort</p>
+        </div>
+        <div class="documents-agreement__item-last">
+            <p class="documents-agreement__underline">{!dataObject.Account_Holder__c}</p>
+            <p>Kontoinhaber</p>
+        </div>
+    </div>
+
+    <div class="documents-agreement__item">
+        <div>
+            <p class="documents-agreement__underline">{!dataObject.IBAN__c}</p>
+            <p>IBAN</p>
+        </div>
+        <div class="documents-agreement__item-last">
+            <p class="documents-agreement__underline">{!dataObject.SWIFT__c}</p>
+            <p>BIC</p>
+        </div>
+    </div>
+
+    <div class="documents-agreement__item">
+        <div>
+            <p class="documents-agreement__underline">{!today} {!dataObject.Registered_City__c}</p>
+            <p>Datum und Ort</p>
+        </div>
+    </div>
+
+    <div style="text-align: center; color: rgb(116, 116, 116);">
+        FLEETCOR Tankkarten GmbH | Teinfaltstrasse 8/4 | 1010 Wien, Österreich <br>
+        Firmenbuchnummer: FN 410978 f, HG Wien | UID: ATU68985039 | Geschäftsführer: Anita Kravos-Medimorec, Michael de Groot
+    </div>
+</div>

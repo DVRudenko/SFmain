@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recipients__c</fullName>
+    <description>fields of the E2E_Form_Ru_General_Settings__c (E2EFormRu) object separated by the &quot;;&quot;. 
+Example: &quot;Call_Center_Managers__c; External_Main_Managers__c&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>fields of the E2E_Form_Ru_General_Settings__c (E2EFormRu) object separated by the &quot;;&quot;. 
+Example: &quot;Call_Center_Managers__c; External_Main_Managers__c&quot;</inlineHelpText>
+    <label>Recipients</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

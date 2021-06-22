@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Competition</label>
+    <name>Lost_To_Competitor__c</name>
+    <picklistValues>
+        <masterLabel>Axigon</masterLabel>
+        <translation><!-- Axigon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bankovní karta</masterLabel>
+        <translation><!-- Bankovní karta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benzina</masterLabel>
+        <translation><!-- Benzina --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DFC</masterLabel>
+        <translation><!-- DFC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DKV</masterLabel>
+        <translation><!-- DKV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EuroOil</masterLabel>
+        <translation><!-- EuroOil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eurowag</masterLabel>
+        <translation><!-- Eurowag --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expensa (Direct Fidoo)</masterLabel>
+        <translation><!-- Expensa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hotovost</masterLabel>
+        <translation><!-- Hotovost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jiný</masterLabel>
+        <translation><!-- Jiný --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOL</masterLabel>
+        <translation><!-- MOL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monitoring - Carcontrol (O2)</masterLabel>
+        <translation><!-- Monitoring - Carcontrol (O2) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monitoring - Commander</masterLabel>
+        <translation><!-- Monitoring - Commander --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monitoring - GX Solutions</masterLabel>
+        <translation><!-- Monitoring - GX Solutions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monitoring - Infocar</masterLabel>
+        <translation><!-- Monitoring - Infocar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monitoring - Level</masterLabel>
+        <translation><!-- Monitoring - Level --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monitoring - Princip (Webdispecing)</masterLabel>
+        <translation><!-- Monitoring - Princip --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monitoring - T-Com</masterLabel>
+        <translation><!-- Monitoring - T-Com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monitoring - T-cars</masterLabel>
+        <translation><!-- Monitoring - T-cars --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Monitoring - oni System</masterLabel>
+        <translation><!-- Monitoring - oni System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nesdělil</masterLabel>
+        <translation><!-- Nesdělil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OMV</masterLabel>
+        <translation><!-- OMV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RobinOil</masterLabel>
+        <translation><!-- RobinOil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell</masterLabel>
+        <translation><!-- Shell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slovnaft</masterLabel>
+        <translation><!-- Slovnaft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TankONO</masterLabel>
+        <translation><!-- TankONO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UTA</masterLabel>
+        <translation><!-- UTA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vlastní ČS</masterLabel>
+        <translation><!-- Vlastní ČS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

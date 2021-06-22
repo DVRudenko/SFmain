@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Contact_Inbound_Outbound__c</fullName>
+    <description>Was first contact inbound from the Lead, or outbound by the sales team?  This is particularly helpful to know when the Lead was included in a marketing campaign.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Was first contact inbound from the Lead, or outbound by the sales team?  This is particularly helpful to know when the Lead was included in a marketing campaign.</inlineHelpText>
+    <label>First Contact: Inbound/Outbound</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+                <label>Inbound Call</label>
+            </value>
+            <value>
+                <fullName>Outbound Call</fullName>
+                <default>false</default>
+                <label>Outbound Call</label>
+            </value>
+            <value>
+                <fullName>Inbound Fax</fullName>
+                <default>false</default>
+                <label>Inbound Fax</label>
+            </value>
+            <value>
+                <fullName>Inbound Mail</fullName>
+                <default>false</default>
+                <label>Inbound Mail</label>
+            </value>
+            <value>
+                <fullName>Inbound Website</fullName>
+                <default>false</default>
+                <label>Inbound Website</label>
+            </value>
+            <value>
+                <fullName>Onsite Visit</fullName>
+                <default>false</default>
+                <label>Onsite Visit</label>
+            </value>
+            <value>
+                <fullName>Не контактировали</fullName>
+                <default>false</default>
+                <label>Не контактировали</label>
+            </value>
+            <value>
+                <fullName>Inbound SMS</fullName>
+                <default>false</default>
+                <label>Inbound SMS</label>
+            </value>
+            <value>
+                <fullName>Outbound e-mail</fullName>
+                <default>false</default>
+                <label>Outbound e-mail</label>
+            </value>
+            <value>
+                <fullName>Inbound Banner Ads</fullName>
+                <default>false</default>
+                <label>Inbound Banner Ads</label>
+            </value>
+            <value>
+                <fullName>Direct App - Fax</fullName>
+                <default>false</default>
+                <label>Direct App - Fax</label>
+            </value>
+            <value>
+                <fullName>Direct App - Web</fullName>
+                <default>false</default>
+                <label>Direct App - Web</label>
+            </value>
+            <value>
+                <fullName>citypoint</fullName>
+                <default>false</default>
+                <label>citypoint</label>
+            </value>
+            <value>
+                <fullName>omnicomm</fullName>
+                <default>false</default>
+                <label>omnicomm</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Form_Ru_Data__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>reference to Form data object with business data</description>
+    <externalId>false</externalId>
+    <inlineHelpText>reference to Form data object with business data</inlineHelpText>
+    <label>E2E Form Ru Data</label>
+    <referenceTo>E2EFormData__c</referenceTo>
+    <relationshipLabel>Logs</relationshipLabel>
+    <relationshipName>Logs</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

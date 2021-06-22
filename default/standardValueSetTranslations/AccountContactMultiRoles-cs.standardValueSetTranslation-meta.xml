@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Assessor</masterLabel>
+        <translation>Poradce</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Coach</masterLabel>
+        <translation>Kouč</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Decider</masterLabel>
+        <translation>Řešitel</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Endorser</masterLabel>
+        <translation>Rozhodovatel</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>User</masterLabel>
+        <translation>Uživatel</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

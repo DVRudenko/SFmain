@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>bearbeitet_von__c</fullName>
+    <externalId>false</externalId>
+    <label>bearbeitet von</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Anita Eštóková</fullName>
+                <default>false</default>
+                <label>Anita Eštóková</label>
+            </value>
+            <value>
+                <fullName>Autoprocessed by Sales</fullName>
+                <default>false</default>
+                <label>Autoprocessed by Sales</label>
+            </value>
+            <value>
+                <fullName>CCS Credit</fullName>
+                <default>false</default>
+                <label>CCS Credit</label>
+            </value>
+            <value>
+                <fullName>Čermák Petr</fullName>
+                <default>false</default>
+                <label>Čermák Petr</label>
+            </value>
+            <value>
+                <fullName>Credit UK</fullName>
+                <default>false</default>
+                <label>Credit UK</label>
+            </value>
+            <value>
+                <fullName>Dalma Decsiová</fullName>
+                <default>false</default>
+                <label>Dalma Decsiová</label>
+            </value>
+            <value>
+                <fullName>David Witteveen</fullName>
+                <default>false</default>
+                <label>David Witteveen</label>
+            </value>
+            <value>
+                <fullName>Jaroslava Polaskova</fullName>
+                <default>false</default>
+                <label>Jaroslava Polaskova</label>
+            </value>
+            <value>
+                <fullName>Jaroslava Pribylova</fullName>
+                <default>false</default>
+                <label>Jaroslava Pribylova</label>
+            </value>
+            <value>
+                <fullName>Katarzyna Sobek</fullName>
+                <default>false</default>
+                <label>Katarzyna Sobek</label>
+            </value>
+            <value>
+                <fullName>Katarzyna Szuflak</fullName>
+                <default>false</default>
+                <label>Katarzyna Szuflak</label>
+            </value>
+            <value>
+                <fullName>Lucie Cechova</fullName>
+                <default>false</default>
+                <label>Lucie Cechova</label>
+            </value>
+            <value>
+                <fullName>Lucie Konvickova</fullName>
+                <default>false</default>
+                <label>Lucie Konvickova</label>
+            </value>
+            <value>
+                <fullName>Martin Elstner</fullName>
+                <default>false</default>
+                <label>Martin Elstner</label>
+            </value>
+            <value>
+                <fullName>Michal Ulrich</fullName>
+                <default>false</default>
+                <label>Michal Ulrich</label>
+            </value>
+            <value>
+                <fullName>NIzam Boodoo</fullName>
+                <default>false</default>
+                <label>NIzam Boodoo</label>
+            </value>
+            <value>
+                <fullName>Petr Hlavac</fullName>
+                <default>false</default>
+                <label>Petr Hlavac</label>
+            </value>
+            <value>
+                <fullName>Radana Benešová</fullName>
+                <default>false</default>
+                <label>Radana Benešová</label>
+            </value>
+            <value>
+                <fullName>Renata Dvorakova</fullName>
+                <default>false</default>
+                <label>Renata Dvorakova</label>
+            </value>
+            <value>
+                <fullName>Romy Stehlinová</fullName>
+                <default>false</default>
+                <label>Romy Stehlinová</label>
+            </value>
+            <value>
+                <fullName>Ruben Elgersma</fullName>
+                <default>false</default>
+                <label>Ruben Elgersma</label>
+            </value>
+            <value>
+                <fullName>Veronika Coffa</fullName>
+                <default>false</default>
+                <label>Veronika Coffa</label>
+            </value>
+            <value>
+                <fullName>Vincent Coffa</fullName>
+                <default>false</default>
+                <label>Vincent Coffa</label>
+            </value>
+            <value>
+                <fullName>Ewa Szmigowska</fullName>
+                <default>false</default>
+                <label>Ewa Szmigowska</label>
+            </value>
+            <value>
+                <fullName>Mario Kozik</fullName>
+                <default>false</default>
+                <label>Mario Kozik</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

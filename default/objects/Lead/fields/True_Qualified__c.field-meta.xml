@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>True_Qualified__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(   IsConverted =True,"True",
+IF( ( LEFT(TEXT(Status), 9)  = "Contacted"  &amp;&amp;    LEFT(TEXT(Quali_Status__c),11) &lt;&gt;  "Not reached"),"True" ,
+IF(  (OR(TEXT(Status) = "Disqualified",TEXT(Status) = "Qualified")  &amp;&amp;
+OR(TEXT(Quali_Status__c)= "",
+TEXT(Quali_Status__c)= "Follow UP",
+TEXT(Quali_Status__c)= "Leasing",
+TEXT(Quali_Status__c)= "Kein Interesse",
+TEXT(Quali_Status__c)= "zu viele Fahrzeuge",
+TEXT(Quali_Status__c)= "Zentralentscheid",
+TEXT(Quali_Status__c)= "Competitors",
+TEXT(Quali_Status__c)= "Young company (less than 18 months)")),"True" ,"False")))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>True Qualified</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

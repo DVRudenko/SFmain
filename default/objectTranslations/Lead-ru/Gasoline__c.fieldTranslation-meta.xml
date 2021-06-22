@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Отметьте, если клиент заправляется бензином (отметь также Дизель, если клиент заправляется всеми видами топлива)</help>
+    <label>Бензин</label>
+    <name>Gasoline__c</name>
+</CustomFieldTranslation>

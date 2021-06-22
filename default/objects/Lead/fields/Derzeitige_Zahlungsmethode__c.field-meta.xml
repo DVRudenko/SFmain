@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Derzeitige_Zahlungsmethode__c</fullName>
+    <externalId>false</externalId>
+    <label>Derzeitige Zahlungsmethode</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Bankkarte</fullName>
+                <default>false</default>
+                <label>Bankkarte</label>
+            </value>
+            <value>
+                <fullName>Barzahlung</fullName>
+                <default>false</default>
+                <label>Barzahlung</label>
+            </value>
+            <value>
+                <fullName>Kreditkarte</fullName>
+                <default>false</default>
+                <label>Kreditkarte</label>
+            </value>
+            <value>
+                <fullName>Stationskarte</fullName>
+                <default>false</default>
+                <label>Stationskarte</label>
+            </value>
+            <value>
+                <fullName>Tankkarte</fullName>
+                <default>false</default>
+                <label>Tankkarte</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

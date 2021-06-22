@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_nekontaktovan_leady</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.MOBILE_PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>CCS_Note__c</columns>
+    <columns>LEAD.CITY</columns>
+    <columns>T_Postleitzahl__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>NEW - Not Yet Contacted,Nekontaktovaný,NEW – Not Yet Contacted</value>
+    </filters>
+    <label>CCS - nekontaktované leady</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>Salesteam_Inbound</group>
+        <group>Teamleiters</group>
+        <role>CCS_Administrator</role>
+        <role>CCS_CZ_Contact_Center</role>
+        <role>CCS_CZ_KAM</role>
+        <role>CCS_CZ_KAM_Team_Lead</role>
+        <role>CCS_CZ_LAM</role>
+        <role>CCS_CZ_SME</role>
+        <role>CCS_Contact_Center_Team_Lead</role>
+        <role>CCS_SK_Contact_Center</role>
+        <role>CCS_SK_SME</role>
+        <role>CCS_SME_Team_Lead</role>
+    </sharedTo>
+</ListView>

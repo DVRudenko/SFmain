@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Agent name (if known - links to User record in Salesforce) --></help>
+    <label><!-- Agent --></label>
+    <name>NVMStatsSF__Agent__c</name>
+    <relationshipLabel><!-- NVM Call Summaries (Agent) --></relationshipLabel>
+</CustomFieldTranslation>

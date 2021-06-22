@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+        <label>On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+        <label>Escalated</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Approved for development</fullName>
+        <default>false</default>
+        <label>Approved for development</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>In development</fullName>
+        <default>false</default>
+        <label>In development</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Ready on sandbox</fullName>
+        <default>false</default>
+        <label>Ready on sandbox</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for information</fullName>
+        <default>false</default>
+        <label>Waiting for information</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>BACKLOG</fullName>
+        <default>false</default>
+        <label>BACKLOG</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>TO DO</fullName>
+        <default>false</default>
+        <label>TO DO</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>IN PROGRESS</fullName>
+        <default>false</default>
+        <label>IN PROGRESS</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>WAITING ON</fullName>
+        <default>false</default>
+        <label>WAITING ON</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>DONE</fullName>
+        <default>false</default>
+        <label>DONE</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>CANCELLED</fullName>
+        <default>false</default>
+        <label>CANCELLED</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Internally waiting</fullName>
+        <default>false</default>
+        <label>Internally waiting</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Internally updated</fullName>
+        <default>false</default>
+        <label>Internally updated</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer waiting</fullName>
+        <default>false</default>
+        <label>Customer waiting</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer updated</fullName>
+        <default>false</default>
+        <label>Customer updated</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Resolved</fullName>
+        <default>false</default>
+        <label>Resolved</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Reopened</fullName>
+        <default>false</default>
+        <label>Reopened</label>
+        <closed>false</closed>
+    </standardValue>
+</StandardValueSet>

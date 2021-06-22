@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Inbound Transfer Time rounded to the nearest minute --></help>
+    <label><!-- Inbound Transfer Time (hh:mm) --></label>
+    <name>NVMStatsSF__Inbond_Xfer_Call_Time_hh_mm__c</name>
+</CustomFieldTranslation>

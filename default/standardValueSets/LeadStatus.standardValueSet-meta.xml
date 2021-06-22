@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Open</fullName>
+        <default>true</default>
+        <label>Open</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted</fullName>
+        <default>false</default>
+        <label>Contacted</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted - 1st attempt</fullName>
+        <default>false</default>
+        <label>Contacted - 1st attempt</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted - 2nd Attempt</fullName>
+        <default>false</default>
+        <label>Contacted - 2nd Attempt</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted - 3rd Attempt</fullName>
+        <default>false</default>
+        <label>Contacted - 3rd Attempt</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted - 4th Attempt</fullName>
+        <default>false</default>
+        <label>Contacted - 4th Attempt</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacted - 5th Attempt</fullName>
+        <default>false</default>
+        <label>Contacted - 5th Attempt</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Qualified</fullName>
+        <default>false</default>
+        <label>Qualified to Disqualified</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>E-mail zaslán</fullName>
+        <default>false</default>
+        <label>E-mail zaslán</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Uzavřeno</fullName>
+        <default>false</default>
+        <label>Uzavřeno</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>zavolat jindy/nemá čas</fullName>
+        <default>false</default>
+        <label>zavolat jindy/nemá čas</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>V procesu</fullName>
+        <default>false</default>
+        <label>V procesu</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>NEW - Not Yet Contacted</fullName>
+        <default>false</default>
+        <label>NEW - Not Yet Contacted</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>IN PROCESS - 1st Attempt</fullName>
+        <default>false</default>
+        <label>IN PROCESS - 1st Attempt</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>IN PROCESS - 2nd Attempt</fullName>
+        <default>false</default>
+        <label>IN PROCESS - 2nd Attempt</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>IN PROCESS - 3rd Attempt</fullName>
+        <default>false</default>
+        <label>IN PROCESS - 3rd Attempt</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>IN PROCESS - 4th Attempt</fullName>
+        <default>false</default>
+        <label>IN PROCESS - 4th Attempt</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>IN PROCESS - 5th Attempt</fullName>
+        <default>false</default>
+        <label>IN PROCESS - 5th Attempt</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting INN</fullName>
+        <default>false</default>
+        <label>Waiting INN</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Request Partner Card</fullName>
+        <default>false</default>
+        <label>Request Partner Card</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Disqualified</fullName>
+        <default>false</default>
+        <label>Disqualified</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>QUALIFIED - Convert to Opportunity</fullName>
+        <default>false</default>
+        <label>QUALIFIED - Convert to Opportunity</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Konvertierte Leads</fullName>
+        <default>false</default>
+        <label>Konvertierte Leads</label>
+        <converted>true</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Unprocessed</fullName>
+        <default>false</default>
+        <label>Unprocessed</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Prequal</fullName>
+        <default>false</default>
+        <label>Prequal</label>
+        <converted>false</converted>
+    </standardValue>
+</StandardValueSet>

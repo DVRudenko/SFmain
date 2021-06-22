@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>ABVP</masterLabel>
+        <translation><!-- ABVP --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>ARCO_CNT</masterLabel>
+        <translation><!-- ARCO_CNT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Adressbroker</masterLabel>
+        <translation><!-- Adressbroker --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Allstar Mondo Contact Form</masterLabel>
+        <translation><!-- Allstar Mondo Contact Form --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Allstar Mondo Web Long Form</masterLabel>
+        <translation><!-- Allstar Mondo Web Long Form --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Allstar Mondo Web Short Form</masterLabel>
+        <translation><!-- Allstar Mondo Web Short Form --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Aussendienst</masterLabel>
+        <translation><!-- Aussendienst --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>BDS/BVMU</masterLabel>
+        <translation><!-- BDS/BVMU --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>BVK</masterLabel>
+        <translation><!-- BVK --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Bestandskunde FleetCor</masterLabel>
+        <translation><!-- Bestandskunde FleetCor --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Bestandskunde Shell</masterLabel>
+        <translation><!-- Bestandskunde Shell --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Bestellanfrage</masterLabel>
+        <translation><!-- Bestellanfrage --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>BilloMat</masterLabel>
+        <translation><!-- BilloMat --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Biznode – pilot 5000</masterLabel>
+        <translation><!-- Biznode – pilot 5000 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Bizzbooster</masterLabel>
+        <translation><!-- Bizzbooster --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS 16. seznam PCMS</masterLabel>
+        <translation><!-- CCS 16. seznam PCMS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS 16. seznam PCMS NEW</masterLabel>
+        <translation><!-- CCS 16. seznam PCMS NEW --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS 16. seznam PCMS NEW 2. várka</masterLabel>
+        <translation><!-- CCS 16. seznam PCMS NEW 2. várka --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS 16. seznam PCMS NEW 3. várka</masterLabel>
+        <translation><!-- CCS 16. seznam PCMS NEW 3. várka --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Advertising 1</masterLabel>
+        <translation><!-- CCS Advertising 1 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Altevida E2E</masterLabel>
+        <translation><!-- CCS Altevida E2E --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Altevida E2E Carnet x-selling</masterLabel>
+        <translation><!-- CCS Altevida E2E Carnet x-selling --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Altevida SME</masterLabel>
+        <translation><!-- CCS Altevida SME --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Autoparky 01/2017</masterLabel>
+        <translation><!-- CCS Autoparky 01/2017 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Autoparky 02/2016</masterLabel>
+        <translation><!-- CCS Autoparky 02/2016 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Autoparky 04/2016</masterLabel>
+        <translation><!-- CCS Autoparky 04/2016 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Autoparky 04/2017</masterLabel>
+        <translation><!-- CCS Autoparky 04/2017 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Autoparky 08/2017</masterLabel>
+        <translation><!-- CCS Autoparky 08/2017 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Autoparky 10/2017</masterLabel>
+        <translation><!-- CCS Autoparky 10/2017 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Bisnode 02/2019</masterLabel>
+        <translation><!-- CCS Bisnode 02/2019 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Carnet + Bonus 600CZK / 24EUR</masterLabel>
+        <translation><!-- CCS Carnet + Bonus 600CZK / 24EUR --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Carnet CZ Custumers</masterLabel>
+        <translation><!-- CCS Carnet CZ Custumers --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Carnet off-line dtb</masterLabel>
+        <translation><!-- CCS Carnet off-line dtb --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Cribis PILOT OSVČ neplátci</masterLabel>
+        <translation><!-- CCS Cribis PILOT OSVČ neplátci --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Cribis PILOT OSVČ plátci</masterLabel>
+        <translation><!-- CCS Cribis PILOT OSVČ plátci --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Cribis SK SME PILOT</masterLabel>
+        <translation><!-- CCS Cribis SK SME PILOT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Database 3</masterLabel>
+        <translation><!-- CCS Database 3 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Database 4</masterLabel>
+        <translation><!-- CCS Database 4 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS LAM Cross sell Bundle</masterLabel>
+        <translation><!-- CCS LAM Cross sell Bundle --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS LT 04/16</masterLabel>
+        <translation><!-- CCS LT 04/16 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS LT 05/16</masterLabel>
+        <translation><!-- CCS LT 05/16 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS ML 04/2016</masterLabel>
+        <translation><!-- CCS ML 04/2016 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS ML 04/2017</masterLabel>
+        <translation><!-- CCS ML 04/2017 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS ML 06/2016</masterLabel>
+        <translation><!-- CCS ML 06/2016 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS MSP A1</masterLabel>
+        <translation><!-- CCS MSP A1 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Partnerhip PRO_DOMA  4/2018</masterLabel>
+        <translation><!-- CCS Partnerhip PRO_DOMA  4/2018 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS QB E2E</masterLabel>
+        <translation><!-- CCS QB E2E --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS QB SME</masterLabel>
+        <translation><!-- CCS QB SME --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS SK karty bez Carnetu 0617</masterLabel>
+        <translation><!-- CCS SK karty bez Carnetu 0617 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS SK leady 201805</masterLabel>
+        <translation><!-- CCS SK leady 201805 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS SK leady updated</masterLabel>
+        <translation><!-- CCS SK leady updated --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS SME Cross sell Bundle</masterLabel>
+        <translation><!-- CCS SME Cross sell Bundle --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Shell SME - SME</masterLabel>
+        <translation><!-- CCS Shell SME - SME --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Shell SME - TLS</masterLabel>
+        <translation><!-- CCS Shell SME - TLS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Spokojenost zákazníků</masterLabel>
+        <translation><!-- CCS Spokojenost zákazníků --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS T-mobile 201804</masterLabel>
+        <translation><!-- CCS T-mobile 201804 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS 1. kampaň</masterLabel>
+        <translation><!-- CCS TLS 1. kampaň --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS 2. kampaň</masterLabel>
+        <translation><!-- CCS TLS 2. kampaň --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS 3. kampaň</masterLabel>
+        <translation><!-- CCS TLS 3. kampaň --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS 4. kampaň</masterLabel>
+        <translation><!-- CCS TLS 4. kampaň --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS 5. kampaň</masterLabel>
+        <translation><!-- CCS TLS 5. kampaň --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS Cribis PILOT</masterLabel>
+        <translation><!-- CCS TLS Cribis PILOT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS Cribis PILOT SK</masterLabel>
+        <translation><!-- CCS TLS Cribis PILOT SK --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS Cribis SK</masterLabel>
+        <translation><!-- CCS TLS Cribis SK --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS Cribis SME 1.kolo</masterLabel>
+        <translation><!-- CCS TLS Cribis SME 1.kolo --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS Cribis new</masterLabel>
+        <translation><!-- CCS TLS Cribis new --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS Cribis safe team</masterLabel>
+        <translation><!-- CCS TLS Cribis safe team --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS Cribis test</masterLabel>
+        <translation><!-- CCS TLS Cribis test --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS Cribis test 2</masterLabel>
+        <translation><!-- CCS TLS Cribis test 2 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS Cribis test 3</masterLabel>
+        <translation><!-- CCS TLS Cribis test 3 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS FP 1. vlna</masterLabel>
+        <translation><!-- CCS TLS FP 1. vlna --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS I.DRUHÉ KOLO VOLÁNÍ</masterLabel>
+        <translation><!-- CCS TLS I.DRUHÉ KOLO VOLÁNÍ --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS II.DRUHÉ KOLO VOLÁNÍ</masterLabel>
+        <translation><!-- CCS TLS II.DRUHÉ KOLO VOLÁNÍ --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS vlastní zdroj</masterLabel>
+        <translation><!-- CCS TLS vlastní zdroj --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS TLS_O2 KAMPAN</masterLabel>
+        <translation><!-- CCS TLS_O2 KAMPAN --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Unicall SME</masterLabel>
+        <translation><!-- CCS Unicall SME --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS W.A.G. 08/2017</masterLabel>
+        <translation><!-- CCS W.A.G. 08/2017 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS W.A.G. pilot</masterLabel>
+        <translation><!-- CCS W.A.G. pilot --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS WEB Telesales</masterLabel>
+        <translation><!-- CCS WEB Telesales --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS WEB Telesales CC</masterLabel>
+        <translation><!-- CCS WEB Telesales CC --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS WEB Telesales FB</masterLabel>
+        <translation><!-- CCS WEB Telesales FB --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS WEB Telesales market</masterLabel>
+        <translation><!-- CCS WEB Telesales market --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Waftcom ML pilot</masterLabel>
+        <translation><!-- CCS Waftcom ML pilot --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Waftcom SME</masterLabel>
+        <translation><!-- CCS Waftcom SME --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS chat</masterLabel>
+        <translation><!-- CCS chat --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS dtb Filípek 3/2017</masterLabel>
+        <translation><!-- CCS dtb Filípek 3/2017 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS nový klienti 022015</masterLabel>
+        <translation><!-- CCS nový klienti 022015 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS projekt Up!</masterLabel>
+        <translation><!-- CCS projekt Up! --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS péče o SME - PILOT</masterLabel>
+        <translation><!-- CCS péče o SME - PILOT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS recyklace JP 07/17</masterLabel>
+        <translation><!-- CCS recyklace JP 07/17 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS recyklace SME 4/2018</masterLabel>
+        <translation><!-- CCS recyklace SME 4/2018 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS recyklace diskvalifikovaných leadů 0617</masterLabel>
+        <translation><!-- CCS recyklace diskvalifikovaných leadů 0617 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS ČSOBL</masterLabel>
+        <translation><!-- CCS ČSOBL --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS živnostníci</masterLabel>
+        <translation><!-- CCS živnostníci --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CEFCO_CNT</masterLabel>
+        <translation><!-- CEFCO_CNT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CITGO Inbound Call</masterLabel>
+        <translation><!-- CITGO Inbound Call --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Carnet</masterLabel>
+        <translation><!-- Carnet --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Carnet 5+</masterLabel>
+        <translation><!-- Carnet 5+ --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Carnet OBD</masterLabel>
+        <translation><!-- Carnet OBD --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>E2E Form</masterLabel>
+        <translation><!-- E2E Form --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>EV Short Form</masterLabel>
+        <translation><!-- EV Short Form --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Email-Marketing</masterLabel>
+        <translation><!-- Email-Marketing --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Emailmarketing</masterLabel>
+        <translation><!-- Emailmarketing --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Empfehlung</masterLabel>
+        <translation><!-- Empfehlung --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>FMWALMART_CNT</masterLabel>
+        <translation><!-- FMWALMART_CNT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Facebook</masterLabel>
+        <translation><!-- Facebook --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>FleetGo</masterLabel>
+        <translation><!-- FleetGo --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Fleetexpert</masterLabel>
+        <translation><!-- Fleetexpert --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Fleetmatics</masterLabel>
+        <translation><!-- Fleetmatics --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Fleetmatics_new</masterLabel>
+        <translation><!-- Fleetmatics_new --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>GFN</masterLabel>
+        <translation><!-- GFN --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>GFN subaccount</masterLabel>
+        <translation><!-- GFN subaccount --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Google AdWords</masterLabel>
+        <translation><!-- Google AdWords --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>House</masterLabel>
+        <translation><!-- House --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>IVD</masterLabel>
+        <translation><!-- IVD --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Inbound</masterLabel>
+        <translation><!-- Inbound --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Inbound Call</masterLabel>
+        <translation><!-- Inbound Call --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Inbound Email</masterLabel>
+        <translation><!-- Inbound Email --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Inbound Phone Call</masterLabel>
+        <translation><!-- Inbound Phone Call --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Incomplete Web Form Step 1</masterLabel>
+        <translation><!-- Incomplete Web Form Step 1 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Incomplete Web Form Step 2</masterLabel>
+        <translation><!-- Incomplete Web Form Step 2 --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Internet</masterLabel>
+        <translation><!-- Internet --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kooperationspartner</masterLabel>
+        <translation><!-- Kooperationspartner --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Landingpage</masterLabel>
+        <translation><!-- Landingpage --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Live Agent Chat</masterLabel>
+        <translation><!-- Live Agent Chat --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>MVF Web Lead</masterLabel>
+        <translation><!-- MVF Web Lead --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Merchant Referral</masterLabel>
+        <translation><!-- Merchant Referral --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Migrated</masterLabel>
+        <translation><!-- Migrated --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS</masterLabel>
+        <translation><!-- OZ login - Web CCS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Bonus Fleet SK)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Bonus Fleet SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Bonus Fleet)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Bonus Fleet) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Bonus SK)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Bonus SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Bonus)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Bonus) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Bonus+ SK)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Bonus+ SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Bonus+)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Bonus+) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Business SK)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Business SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Business)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Business) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Carnet SK)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Carnet SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Carnet)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Carnet) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Limit +MINI)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Limit +MINI) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Limit SK)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Limit SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Limit)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Limit) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Limit+ SK)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Limit+ SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Limit+)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Limit+) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Toll SK)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Toll SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka CCS Toll)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka CCS Toll) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka UTA/CCS SK)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka UTA/CCS SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>OZ login - Web CCS (objednávka UTA/CCS)</masterLabel>
+        <translation><!-- OZ login - Web CCS (objednávka UTA/CCS) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Sonstiges</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Outbound</masterLabel>
+        <translation><!-- Outbound --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>PCMS</masterLabel>
+        <translation><!-- PCMS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Paper application</masterLabel>
+        <translation><!-- Paper application --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Partner</masterLabel>
+        <translation>Partner</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Polk</masterLabel>
+        <translation><!-- Polk --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Příchozí poptávka</masterLabel>
+        <translation><!-- Příchozí poptávka --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>QR Code</masterLabel>
+        <translation><!-- QR Code --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Referal Shell TEam</masterLabel>
+        <translation><!-- Referal Shell TEam --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Russian Web</masterLabel>
+        <translation><!-- Russian Web --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>SMS</masterLabel>
+        <translation><!-- SMS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Shell</masterLabel>
+        <translation><!-- Shell --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Shell Email</masterLabel>
+        <translation><!-- Shell Email --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Shell Website</masterLabel>
+        <translation><!-- Shell Website --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Site Agg</masterLabel>
+        <translation><!-- Site Agg --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Stationskunde</masterLabel>
+        <translation><!-- Stationskunde --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>T-Mobile CZ</masterLabel>
+        <translation><!-- T-Mobile CZ --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>T-mobile Autopark</masterLabel>
+        <translation><!-- T-mobile Autopark --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Tablet</masterLabel>
+        <translation><!-- Tablet --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Tablet Short Form</masterLabel>
+        <translation><!-- Tablet Short Form --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Telesales</masterLabel>
+        <translation><!-- Telesales --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Transitcard</masterLabel>
+        <translation><!-- Transitcard --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>URL</masterLabel>
+        <translation><!-- URL --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Vimcar</masterLabel>
+        <translation><!-- Vimcar --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Vlastní iniciativa</masterLabel>
+        <translation><!-- Vlastní iniciativa --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Vodafone CZ</masterLabel>
+        <translation><!-- Vodafone CZ --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web</masterLabel>
+        <translation>Internet</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web Application</masterLabel>
+        <translation><!-- Web Application --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS</masterLabel>
+        <translation><!-- Web CCS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (Napište nám SK)</masterLabel>
+        <translation><!-- Web CCS (Napište nám SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (Napište nám)</masterLabel>
+        <translation><!-- Web CCS (Napište nám) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (landing page)</masterLabel>
+        <translation><!-- Web CCS (landing page) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Bonus Fleet SK)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Bonus Fleet SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Bonus Fleet)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Bonus Fleet) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Bonus SK)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Bonus SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Bonus)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Bonus) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Bonus+ SK)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Bonus+ SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Bonus+)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Bonus+) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Business SK)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Business SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Business)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Business) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Carnet SK)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Carnet SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Carnet)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Carnet) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Limit Exclusive)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Limit Exclusive) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Limit SK)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Limit SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Limit)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Limit) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Limit+ SK)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Limit+ SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Limit+)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Limit+) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Limit +MINI)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Limit +MINI) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Toll SK)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Toll SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka CCS Toll)</masterLabel>
+        <translation><!-- Web CCS (objednávka CCS Toll) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka UTA/CCS SK)</masterLabel>
+        <translation><!-- Web CCS (objednávka UTA/CCS SK) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web CCS (objednávka UTA/CCS)</masterLabel>
+        <translation><!-- Web CCS (objednávka UTA/CCS) --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web_LP и web_short-form</masterLabel>
+        <translation><!-- Web_LP и web_short-form --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web_short-form</masterLabel>
+        <translation><!-- Web_short-form --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web_short-form_flex-karte</masterLabel>
+        <translation><!-- Web_short-form_flex-karte --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>WinBack</masterLabel>
+        <translation><!-- WinBack --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>bobex.com</masterLabel>
+        <translation><!-- bobex.com --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>bonusky.cz</masterLabel>
+        <translation><!-- bonusky.cz --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>efektivnetankovanie.sk</masterLabel>
+        <translation><!-- efektivnetankovanie.sk --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>efektivnitankovani.cz</masterLabel>
+        <translation><!-- efektivnitankovani.cz --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>sevDesk</masterLabel>
+        <translation><!-- sevDesk --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Список Европлан</masterLabel>
+        <translation><!-- Список Европлан --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

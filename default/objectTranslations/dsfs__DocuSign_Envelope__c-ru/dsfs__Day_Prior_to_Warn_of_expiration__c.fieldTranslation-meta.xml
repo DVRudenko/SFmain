@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Указывает, за сколько дней до истечения срока действия требуется предупреждать получателей по электронной почте о приближающемся крайнем сроке завершения. Предупреждение отправляется только тем получателям, которые не завершили операцию.</help>
+    <label><!-- Warn of expiration in N day(s) prior --></label>
+    <name>dsfs__Day_Prior_to_Warn_of_expiration__c</name>
+</CustomFieldTranslation>

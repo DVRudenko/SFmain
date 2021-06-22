@@ -1,0 +1,57 @@
+<apex:page controller="LeadConversionCtrl" action="{! init}" lightningStylesheets="true">
+    <apex:form id="formId">
+        <apex:pageMessages escape="false"/>
+        <style>
+            .ownerId select {
+                display: none;
+            }
+        </style>
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Owner"/>
+                    <apex:outputPanel styleClass="ownerId">
+                        <apex:inputField value="{! lead.OwnerId}"/> 
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Salutation"/>
+                    <apex:outputPanel >
+                        <apex:inputField value="{! lead.Salutation}"/>
+                        <apex:outputText style="display: inline-block; margin-left: 5px;" value="{! lead.FirstName}"/>
+                        <apex:outputText style="display: inline-block; margin-left: 5px;" value="{! lead.LastName}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:inputField value="{! lead.FirstName}" required="true"/>
+                <apex:inputField value="{! lead.Anzahl_der_Fahrzeuge__c}" required="true"/>
+                <apex:inputField value="{! lead.Branche_NACE__c}" required="{! IF(AND(lead.Country == 'Germany',lead.Sec_Channel__c == 'JITB', lead.Channel__c == 'Fax'), false, true) }"/>
+                <apex:inputField value="{! lead.Beschaeftigte__c}" required="{! IF(AND(lead.Country == 'Germany',lead.Sec_Channel__c == 'JITB', lead.Channel__c == 'Fax'), false, true) }"/>
+                <apex:inputField value="{! lead.Country}" required="true"/>
+                <apex:inputField value="{! lead.Street}" required="true"/>
+                <apex:inputField value="{! lead.City}" required="true"/>
+                <apex:inputField value="{! lead.PostalCode}" required="true"/>
+                <apex:inputField value="{! lead.NIP__c }"
+                                 required="{! lead.RecordType.Name == 'Shell Universal Card' }"
+                                 rendered="{! lead.RecordType.Name == 'Shell Universal Card' }"/>
+                <apex:inputField value="{! lead.Product__c }"
+                                 required="{! lead.RecordType.Name == 'Shell Universal Card' }"
+                                 rendered="{! lead.RecordType.Name == 'Shell Universal Card' }"/>
+                <apex:inputCheckbox label="Not duplicate" value="{! isNotDuplicate}" rendered="{! areDuplicatesFound}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{! backToLeadWithoutSavingFields}" value="Cancel" immediate="true"/>
+                <apex:commandButton action="{! backToLeadWithSavingFields}" value="Save & Back to Lead"/>
+                <!-- <apex:commandButton action="{! continueConvert}" value="Convert"/> -->
+
+                    <apex:actionStatus id="converting">
+                        <apex:facet name="stop">
+                            <apex:commandButton value="Convert" action="{! continueConvert }" status="converting" reRender="formId" />
+                        </apex:facet>
+                        <apex:facet name="start">
+                            <apex:commandButton value="Convert..." disabled="true" status="converting"/>
+                        </apex:facet>
+                    </apex:actionStatus>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

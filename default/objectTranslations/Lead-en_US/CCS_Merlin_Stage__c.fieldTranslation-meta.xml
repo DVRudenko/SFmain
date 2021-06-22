@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS Merlin Stage --></label>
+    <name>CCS_Merlin_Stage__c</name>
+    <picklistValues>
+        <masterLabel>Closed Lost</masterLabel>
+        <translation><!-- Closed Lost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed won</masterLabel>
+        <translation><!-- Closed won --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate</masterLabel>
+        <translation><!-- Duplicate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Order entered</masterLabel>
+        <translation><!-- Order entered --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Order entered - deposit</masterLabel>
+        <translation><!-- Order entered - deposit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Order entered - more often DD</masterLabel>
+        <translation><!-- Order entered - more often DD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Sales</masterLabel>
+        <translation><!-- Pending Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waitiing for components</masterLabel>
+        <translation><!-- Waitiing for components --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for Credit decision</masterLabel>
+        <translation><!-- Waiting for Credit decision --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for DD confirmation</masterLabel>
+        <translation><!-- Waiting for DD confirmation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for MANDAT</masterLabel>
+        <translation><!-- Waiting for MANDAT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for PIT/CIT</masterLabel>
+        <translation><!-- Waiting for PIT/CIT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for amendment</masterLabel>
+        <translation><!-- Waiting for amendment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for card issuance</masterLabel>
+        <translation><!-- Waiting for card issuance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for deposit</masterLabel>
+        <translation><!-- Waiting for deposit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for order signature</masterLabel>
+        <translation><!-- Waiting for order signature --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Waiting for power of attorney</masterLabel>
+        <translation><!-- Waiting for power of attorney --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

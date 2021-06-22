@@ -1,0 +1,63 @@
+<template>
+  <lightning-card variant="base" class="block">
+    <h3 slot="title" class="header exportable-header">{labels.CREDIT_CONDITIONS}</h3>
+    <lightning-button
+      variant="brand"
+      label={labels.CHECK_COMPANY_BUTTON_LABEL}
+      onclick={handleCheckCompanyClick}
+      class="field"
+    >
+    </lightning-button>
+    <lightning-input
+      name="blackListDecision"
+      class="field exportable-field"
+      required
+      disabled
+      value={credit.blackListDecision}
+      label={labels.RESULT}
+      type="text"
+      onchange={handleChange}
+    >
+    </lightning-input>
+    <lightning-button
+      variant="brand"
+      label={labels.SEND_FOR_RMD_APPROVAL}
+      disabled={disabled}
+      onclick={handleStartRMDApproval}
+      class="field"
+    >
+    </lightning-button>
+    <lightning-textarea
+      name="preScoringDecision"
+      class="field exportable-field"
+      required
+      disabled
+      value={credit.preScoringDecision}
+      label={labels.PRESCORING_DECISION}
+      type="text"
+      onchange={handleChange}
+    >
+    </lightning-textarea>
+    <lightning-input
+      name="preScoringExpirationDate"
+      class="field exportable-field"
+      required
+      disabled
+      value={credit.preScoringExpirationDate}
+      label={labels.SCORING_EXPIRATION}
+      type="text"
+      onchange={handleChange}
+    >
+    </lightning-input>
+    <lightning-combobox
+      name="creditDecision"
+      class="field exportable-field"
+      label={labels.CREDIT}
+      options={creditDecisions}
+      value={credit.creditDecision}
+      placeholder={labels.CHOOSE_SOLUTION}
+      onchange={handleChange}
+    >
+    </lightning-combobox>
+  </lightning-card>
+</template>

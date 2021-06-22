@@ -1,0 +1,20 @@
+{
+    "typeOfCard": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Yes", 
+                    "pl": "Tak"
+                }, 
+                "value": "Multi Network Card -- International"
+            }, 
+            {
+                "label": {
+                    "en": "No", 
+                    "pl": "Nie"
+                }, 
+                "value": "Multi Network Card -- National"
+            }
+        ]
+    }
+}

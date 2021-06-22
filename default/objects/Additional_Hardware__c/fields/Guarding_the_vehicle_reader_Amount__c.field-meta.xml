@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Guarding_the_vehicle_reader_Amount__c</fullName>
+    <defaultValue>0</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>RFID Reader used to warn the owner of an unauthorized vehicle being set in motion, sending an SMS to any two phone numbers in case that the driver can not be identified by using any or selected chips (max. 25 pcs).</inlineHelpText>
+    <label>Guarding the vehicle - reader</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

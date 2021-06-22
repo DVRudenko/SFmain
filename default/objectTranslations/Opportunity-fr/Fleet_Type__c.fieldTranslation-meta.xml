@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Fleet Type --></label>
+    <name>Fleet_Type__c</name>
+    <picklistValues>
+        <masterLabel>Cars and vans up to 3.5 t</masterLabel>
+        <translation><!-- Cars and vans up to 3.5 t --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trucks over 12 t</masterLabel>
+        <translation><!-- Trucks over 12 t --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vans and trucks up to 12 t</masterLabel>
+        <translation><!-- Vans and trucks up to 12 t --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Автобус</masterLabel>
+        <translation><!-- Автобус --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Газель - микроавтобус</masterLabel>
+        <translation><!-- Газель - микроавтобус --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Грузовой</masterLabel>
+        <translation><!-- Грузовой --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Другое - указать в Описании</masterLabel>
+        <translation><!-- Другое - указать в Описании --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Легковой</masterLabel>
+        <translation><!-- Легковой --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Спецтехника</masterLabel>
+        <translation><!-- Спецтехника --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

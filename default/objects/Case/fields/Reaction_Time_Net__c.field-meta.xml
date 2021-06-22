@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reaction_Time_Net__c</fullName>
+    <description>STCP1-446/STCP1-630 - shows the number of hours between the first interaction with a client and creation date considering working hours only - Net Reaction Time
+Shell - Mo-Fri 8am-5pm GMT+2 time
+CCS -  Mo-Fri 7am-7pm GMT+2 time</description>
+    <externalId>false</externalId>
+    <formula>IF(
+
+NOT(ISBLANK(First_Interaction_Date__c)) &amp;&amp; OR(CreatedBy.Alias = 'autocase', CreatedBy.Alias = 'intadmin') &amp;&amp; RecordType.DeveloperName = 'Support',
+
+9 *((5*FLOOR((DATEVALUE(First_Interaction_Date__c)-DATE(1900,1,8))/7) + MIN(5, MOD(DATEVALUE(First_Interaction_Date__c)-DATE(1900,1,8),7)+ MIN(1,24/9*(MOD(First_Interaction_Date__c-DATETIMEVALUE('1900-01-08 06:00:00'), 1))) )) - (5*FLOOR((DATEVALUE(CreatedDate + MAX(DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate))&amp;" 06:00:00")-CreatedDate,0))- DATE(1900,1,8))/7)+ MIN(5, MOD(DATEVALUE(CreatedDate+MAX(DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate))&amp;" 06:00:00")-CreatedDate,0))-DATE(1900,1,8),7)+ MIN(1,24/9*(MOD(CreatedDate + MAX(DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate))&amp;" 06:00:00")-CreatedDate,0)-DATETIMEVALUE('1900-01-08 06:00:00'), 1))))) ),
+
+IF(NOT(ISBLANK(First_Interaction_Date__c)) &amp;&amp; OR(CreatedBy.Alias = 'autocase', CreatedBy.Alias = 'intadmin') &amp;&amp; RecordType.DeveloperName = 'Support_CCS',
+
+12 *((5*FLOOR((DATEVALUE(First_Interaction_Date__c)-DATE(1900,1,8))/7) + MIN(5, MOD(DATEVALUE(First_Interaction_Date__c)-DATE(1900,1,8),7)+ MIN(1,24/12*(MOD(First_Interaction_Date__c-DATETIMEVALUE('1900-01-08 05:00:00'), 1))) )) - (5*FLOOR((DATEVALUE(CreatedDate + MAX(DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate))&amp;" 05:00:00")-CreatedDate,0))- DATE(1900,1,8))/7)+ MIN(5, MOD(DATEVALUE(CreatedDate+MAX(DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate))&amp;" 05:00:00")-CreatedDate,0))-DATE(1900,1,8),7)+ MIN(1,24/12*(MOD(CreatedDate + MAX(DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate))&amp;" 05:00:00")-CreatedDate,0)-DATETIMEVALUE('1900-01-08 05:00:00'), 1))))) ),
+
+Null)
+
+)</formula>
+    <inlineHelpText>The number of hours between date/time opened and the date/time when the first interaction with a client has been made considering working hours only.
+Shell - Mo-Fri 8am-5pm PRG time
+CCS -  Mo-Fri 7am-7pm PRG  time</inlineHelpText>
+    <label>Reaction Time Net</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

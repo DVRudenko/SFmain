@@ -1,0 +1,11 @@
+.THIS .disabled-link {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: rgb(144, 144, 144);
+}
+
+.THIS .account-name {
+    word-break: break-all;
+    white-space: normal;
+    max-width: 200px;
+}

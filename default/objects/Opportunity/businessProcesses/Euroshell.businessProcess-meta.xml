@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Euroshell</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Already FleetCor customer</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>CC In Progress</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Entscheidung anstehend</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Follow Up Termin</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Kundenantrag FC eingetroffen</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Not a legal entity</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Sales %E2%80%93 Deposit</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Sales %E2%80%93 Information</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Sales - Advance payment</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Prospecting</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Spam</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Waiting for cash security</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

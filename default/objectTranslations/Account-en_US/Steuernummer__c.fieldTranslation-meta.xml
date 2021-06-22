@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- DE: Steuernummer (123456789), NL: KvK-nummer (12345678), BE: Ondernemingsnr. (NL) / Nr. d&apos;identification fiscale (FR) (123456789), PL: NIP (1234567890), HU: Adószám (12345678-1-12), FR: SIREN (123456789) --></help>
+    <label>Tax ID</label>
+    <name>Steuernummer__c</name>
+</CustomFieldTranslation>

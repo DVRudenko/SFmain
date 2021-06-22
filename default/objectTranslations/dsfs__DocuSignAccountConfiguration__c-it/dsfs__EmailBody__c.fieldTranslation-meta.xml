@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Modificare il testo del messaggio (fino a 2.000 caratteri) da visualizzare nella notifica per la firma inviata al destinatario DocuSign.</help>
+    <label><!-- EmailBody --></label>
+    <name>dsfs__EmailBody__c</name>
+</CustomFieldTranslation>

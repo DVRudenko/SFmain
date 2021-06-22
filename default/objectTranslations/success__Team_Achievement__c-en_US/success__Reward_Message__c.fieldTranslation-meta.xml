@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This message will be shown to the player whenever they view the rewards generated from the behaviour --></help>
+    <label><!-- Reward Message --></label>
+    <name>success__Reward_Message__c</name>
+</CustomFieldTranslation>

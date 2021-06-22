@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RU_scoring_decision_status__c</fullName>
+    <description>Показывает просрочен ли скоринг</description>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK(RU_Scoring_expiration_date__c), &#39;Решения нет&#39;, IF(RU_Scoring_expiration_date__c &lt;= TODAY(), &#39;Просрочено&#39;, &#39;Действующее&#39;))</formula>
+    <inlineHelpText>Показывает просрочен ли скоринг</inlineHelpText>
+    <label>Scoring status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

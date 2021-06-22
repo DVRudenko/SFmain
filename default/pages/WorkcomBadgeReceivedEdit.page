@@ -1,0 +1,14 @@
+<apex:page controller="WorkcomBadgeReceivedEditCtrl" showheader="false" sidebar="false">
+    <apex:form >
+        <apex:pageMessages id="msgInfo"></apex:pageMessages>
+        <apex:pageBlock title="Edit Recieved Badge({! user.Name }): ">
+            <apex:pageBlockSection id="ps" title="Badge name: {! workBadgeDefinition.Name }">
+                <apex:inputTextarea label="Message: " value="{!Message}" cols="50" rows="3"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{! save }" reRender="msgInfo"/>
+                <apex:commandButton value="Cancel" action="{! cancel }" reRender="msgInfo"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

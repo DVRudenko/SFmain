@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>One_time_Payment_Services__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Product__c, "Carnet Standard 2019"),
+Activation_Installation_Price__c,
+IF(
+AND(ISPICKVAL(Product__c, "Carnet OBD"), Total_Monthly_Payment_Formula__c = 0),
+(Total_One_time_Payment__c - One_time_Payment_Goods__c),
+0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>One-time Payment - Services</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

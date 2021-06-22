@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Contacted</masterLabel>
+        <translation>Kontaktovaný</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Contacted - 1st attempt</masterLabel>
+        <translation>Probíhá - 1. pokus</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Contacted - 2nd Attempt</masterLabel>
+        <translation>Probíhá - 2. pokus</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Contacted - 3rd Attempt</masterLabel>
+        <translation>Probíhá - 3. pokus</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Contacted - 4th Attempt</masterLabel>
+        <translation>Probíhá - 4. pokus</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Contacted - 5th Attempt</masterLabel>
+        <translation>Probíhá - 5. pokus</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Disqualified</masterLabel>
+        <translation>Diskvalifikován</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>E-mail zaslán</masterLabel>
+        <translation><!-- E-mail zaslán --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>IN PROCESS - 1st Attempt</masterLabel>
+        <translation><!-- IN PROCESS - 1st Attempt --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>IN PROCESS - 2nd Attempt</masterLabel>
+        <translation><!-- IN PROCESS - 2nd Attempt --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>IN PROCESS - 3rd Attempt</masterLabel>
+        <translation><!-- IN PROCESS - 3rd Attempt --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>IN PROCESS - 4th Attempt</masterLabel>
+        <translation><!-- IN PROCESS - 4th Attempt --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>IN PROCESS - 5th Attempt</masterLabel>
+        <translation><!-- IN PROCESS - 5th Attempt --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Konvertierte Leads</masterLabel>
+        <translation>Převedeno do Příležitosti</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>NEW - Not Yet Contacted</masterLabel>
+        <translation>Nekontaktovaný</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Open</masterLabel>
+        <translation>Otevřený</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>QUALIFIED - Convert to Opportunity</masterLabel>
+        <translation><!-- QUALIFIED - Convert to Opportunity --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Qualified to Disqualified</masterLabel>
+        <translation>Kvalifikovaný</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Request Partner Card</masterLabel>
+        <translation><!-- Request Partner Card --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Unprocessed</masterLabel>
+        <translation><!-- Unprocessed --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Uzavřeno</masterLabel>
+        <translation><!-- Uzavřeno --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>V procesu</masterLabel>
+        <translation><!-- V procesu --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting INN</masterLabel>
+        <translation><!-- Waiting INN --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>zavolat jindy/nemá čas</masterLabel>
+        <translation><!-- zavolat jindy/nemá čas --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

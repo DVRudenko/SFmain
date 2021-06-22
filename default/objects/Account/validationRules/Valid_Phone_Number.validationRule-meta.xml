@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_Phone_Number</fullName>
+    <active>true</active>
+    <description>Allows to enter a phone number in a valid format only</description>
+    <errorConditionFormula>AND(
+            OR(ISNEW(), ISCHANGED(Phone), ISCHANGED(Phone_Status__c)),
+            NOT(OR(
+            ISBLANK(Phone),
+            ISPICKVAL(Phone_Status__c, 'Needs validation'),
+            AND (
+            OR( AND(BEGINS(Phone, '+'), ISNUMBER(LEFT(SUBSTITUTE(Phone, '+', ''), 1))),
+            BEGINS(Phone, '8')
+            ),
+            NOT(FIND('+', Phone, 2) != 0),
+            NOT(CONTAINS(Phone, '.')),
+            ISNUMBER(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(Phone, '+', ''), '#', ''),' ', '')),
+            OR (
+            AND(NOT(CONTAINS(Phone, '#')),
+            IF(OR(BEGINS(Phone, '+7'), BEGINS(Phone, '8')),
+            LEN(SUBSTITUTE(SUBSTITUTE(Phone, '+', ''),' ', '')) = 11,
+            AND(LEN(SUBSTITUTE(SUBSTITUTE(Phone, '+', ''),' ', '')) &gt;= 8, LEN(SUBSTITUTE(SUBSTITUTE(Phone, '+', ''),' ', '')) &lt;= 15)
+            )
+            ),
+            AND(CONTAINS(Phone, '#'),
+            IF(OR(BEGINS(Phone, '+7'), BEGINS(Phone, '8')),
+            FIND('#', SUBSTITUTE(SUBSTITUTE(Phone, '+', ''),' ', '')) = 12,
+            AND(FIND('#', SUBSTITUTE(SUBSTITUTE(Phone, '+', ''),' ', '')) &gt;= 9, FIND('#', SUBSTITUTE(SUBSTITUTE(Phone, '+', ''),' ', '')) &lt;= 16)
+            )
+            )
+            )
+            )
+            ))
+            )</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>Wrong phone number format. Only '+', '0-9' and spaces are allowed. Use '#' for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: '+49 5545555#045'</errorMessage>
+</ValidationRule>

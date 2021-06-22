@@ -1,0 +1,18 @@
+<apex:page controller="SwitchLeadToE2EController" showHeader="false" sidebar="false">
+	<apex:form >
+		<apex:pageMessages />
+		<apex:outputPanel rendered="{! NOT(isError) }">
+			<apex:actionFunction name="doRedirect" action="{! init }"/>
+			<script>
+				window.onload = function() {
+					doRedirect();
+				}
+			</script>
+			<div style="width: 100%">
+				<div style="width: 50px; margin: 100px auto;">
+					<img src="{!URLFOR($Resource.e2e_images, 'preloader-loop.gif')}" width="50px;" />
+				</div>	
+			</div>
+		</apex:outputPanel>
+	</apex:form>
+</apex:page>

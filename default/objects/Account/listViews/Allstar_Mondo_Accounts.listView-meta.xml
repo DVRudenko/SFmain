@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allstar_Mondo_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE_CODE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>Subaccount__c</columns>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.AllStar</value>
+    </filters>
+    <label>Allstar Mondo Accounts</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>AllStar_Sales</role>
+        <role>AllStar_Teamleader</role>
+        <role>CCS_Administrator</role>
+        <role>Data_Analyst</role>
+        <role>Salesmanager</role>
+        <role>Salesmanager_2</role>
+        <role>Teamleiter_Inbound_2</role>
+        <role>Teamleiter_Outbound_5</role>
+    </sharedTo>
+</ListView>

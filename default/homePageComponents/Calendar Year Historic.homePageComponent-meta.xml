@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;pre&gt;
+&amp;lt;br&amp;gt;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+function insert(pobjSelect, psText, psValue){
+ var lobjOption = document.createElement(&amp;quot;Option&amp;quot;); lobjOption.text = psText;  lobjOption.value = psValue;  pobjSelect.options.add(lobjOption);
+}
+var winLoaded = window.onload;
+window.onload = function(){   if(winLoaded){
+  winLoaded();
+ }
+ var e = document.getElementById(&amp;quot;calYearPicker&amp;quot;);
+ if(e != null){
+  for(i = e.length - 1; i&amp;gt;=0; i--){
+   e.remove(i);
+  }
+  var d = new Date();    var startYear = d.getFullYear() + 6;
+  for(var i = 1920; i&amp;lt;startYear; i++){    insert(e, i, i);   }  }
+}
+&amp;lt;/script&amp;gt;&lt;/pre&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>narrow</width>
+</HomePageComponent>

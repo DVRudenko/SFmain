@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Stellen Sie den DocuSign-Tagger so ein, dass dieser in einem separaten Fenster angezeigt wird und nicht im Salesforce-Header und/oder in der Sidebar eingebettet ist.</help>
+    <label><!-- Display Tagger In Own Window --></label>
+    <name>dsfs__DisplayTaggerInOwnWindow__c</name>
+</CustomFieldTranslation>

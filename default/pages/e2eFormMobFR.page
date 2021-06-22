@@ -1,0 +1,11 @@
+<apex:page id="e2eFormMobFR"
+           controller="LongFormController"
+           action="{! init }"
+           sidebar="false"
+           showHeader="false"
+           language="en-US"
+           standardStylesheets="false"
+           cache="false"
+           docType="html-5.0">
+
+</apex:page>

@@ -1,0 +1,66 @@
+<style>
+    .how-to-pay {
+        font-size: 11px;
+    }
+
+    .how-to-pay__table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .how-to-pay__table tr {
+        margin-top: 5px;
+    }
+
+    .how-to-pay__table tr td {
+        width: 50%;
+        padding: 4px 0 0;
+        border-bottom: 1px solid rgb(196, 196, 196);
+    }
+</style>
+
+<div class="how-to-pay">
+    <p class="doc-header" style="text-align:left">
+        Frankenstraße 150 c<br>
+        90461 Nürnberg<br>
+        Deutschland<br>
+        Gläubiger-Identifikationsnummer DE 33 ZZZ00001436721
+    </p>
+    <p class="doc-header" style="text-align:left">
+        Angaben für die Überweisung
+    </p>
+    <table class="how-to-pay__table">
+        <tr>
+            <td>Zu zahlende Kaution:</td>
+            <td>{!securityAmountToPay} EUR</td>
+        </tr>
+        <tr>
+            <td>Kontoinhaber</td>
+            <td>FLEETCOR Deutschland GmbH</td>
+        </tr>
+        <tr>
+            <td>Verwendungszweck</td>
+            <td>Name Ihrer Firma</td>
+        </tr>
+        <tr>
+            <td>Kontonummer</td>
+            <td>737506304</td>
+        </tr>
+        <tr>
+            <td>Bank</td>
+            <td>Barclays Bank PLC, Frankfurt Branch</td>
+        </tr>
+        <tr>
+            <td>Bankleitzahl</td>
+            <td>503 104 00</td>
+        </tr>
+        <tr>
+            <td>SWIFT\BIC</td>
+            <td>BARCDEFF</td>
+        </tr>
+        <tr>
+            <td>IBAN</td>
+            <td>DE59503104000737506304</td>
+        </tr>
+    </table>
+</div>

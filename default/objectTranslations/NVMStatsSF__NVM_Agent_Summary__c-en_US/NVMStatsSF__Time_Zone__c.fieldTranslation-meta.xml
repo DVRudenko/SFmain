@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Time Zone of this Agent - inherited from the User Record carrying the same NVM Agent ID or defaulted to the Time Zone of the Channel transaction which fetched the data --></help>
+    <label><!-- Time Zone --></label>
+    <name>NVMStatsSF__Time_Zone__c</name>
+</CustomFieldTranslation>

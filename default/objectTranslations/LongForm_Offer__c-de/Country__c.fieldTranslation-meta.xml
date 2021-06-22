@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Country --></label>
+    <name>Country__c</name>
+    <picklistValues>
+        <masterLabel>Austria</masterLabel>
+        <translation><!-- Austria --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Belgium</masterLabel>
+        <translation><!-- Belgium --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Belgium-FR</masterLabel>
+        <translation><!-- Belgium-FR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Belgium-NL</masterLabel>
+        <translation><!-- Belgium-NL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>France</masterLabel>
+        <translation><!-- France --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Germany</masterLabel>
+        <translation><!-- Germany --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Netherlands</masterLabel>
+        <translation><!-- Netherlands --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Switzerland-DE</masterLabel>
+        <translation><!-- Switzerland-DE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Switzerland-FR</masterLabel>
+        <translation><!-- Switzerland-FR --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

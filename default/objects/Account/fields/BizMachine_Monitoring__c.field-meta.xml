@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BizMachine_Monitoring__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates if the Account is being monitored by BizMachine or not.</description>
+    <externalId>false</externalId>
+    <label>BizMachine Monitoring</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Monthly_Payment__c</fullName>
+    <externalId>false</externalId>
+    <formula>(IF(
+Discount_FALSE__c = True,
+Carnet_Tariff_Price__c,
+Carnet_Tariff_Price_DISCOUNT__c) +
+IF(Driving_Style__c = TRUE &amp;&amp; Prepaid__c = FALSE, Driving_Style_Price__c, 0) +
+IF(Reservations__c = TRUE &amp;&amp; Prepaid__c = FALSE, Reservations_Price__c, 0) +
+IF(Archiving__c = TRUE &amp;&amp; Prepaid__c = FALSE, Archiving_Price__c, 0) +
+IF(On_line_position_above_standard__c = TRUE &amp;&amp; Prepaid__c = FALSE, On_line_position_above_standard_Price__c, 0) +
+IF(Web_services__c = TRUE &amp;&amp; Prepaid__c = FALSE, Web_services_Price__c, 0) +
+IF(Service_Alarm__c = TRUE &amp;&amp; Prepaid__c = FALSE, Service_Alarm_Price__c, 0) +
+IF(Monitoring_in_other_European_countries__c = TRUE &amp;&amp; Prepaid__c = FALSE, Tariff_World_Price__c, 0)-
+IF(Prepaid__c = True,
+Carnet_Tariff_Price_DISCOUNT__c,
+0))
+* Number_of_Units__c</formula>
+    <label>Total Monthly Payment</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

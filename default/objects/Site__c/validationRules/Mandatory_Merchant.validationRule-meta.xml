@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Merchant</fullName>
+    <active>true</active>
+    <description>STCP1-1013</description>
+    <errorConditionFormula>AND (
+
+OR ($Profile.Name = &quot;Retention Agent&quot;, $Profile.Name = &quot;Retention Manager&quot;,$Profile.Name = &quot;Service Agent&quot;, $Profile.Name = &quot;Service Manager&quot;,$Profile.Name = &quot;CCS Service Agent&quot;, $Profile.Name = &quot;CCS Service Manager&quot;),
+ISBLANK ( Merchant__c )
+
+)</errorConditionFormula>
+    <errorMessage>Please fill a Merchant</errorMessage>
+</ValidationRule>

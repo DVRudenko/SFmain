@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Virtual_cards__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Issue virtual cards</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Issue virtual cards</inlineHelpText>
+    <label>Virtual cards</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

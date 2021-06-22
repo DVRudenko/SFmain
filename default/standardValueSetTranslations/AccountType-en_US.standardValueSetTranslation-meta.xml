@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Bestandskunde Shell</masterLabel>
+        <translation>Existing Shell customer</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Competitor</masterLabel>
+        <translation><!-- Competitor --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Customer</masterLabel>
+        <translation>Customer</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Denial of cooperation</masterLabel>
+        <translation><!-- Denial of cooperation --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kündiger</masterLabel>
+        <translation>Expert</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Multiplikator</masterLabel>
+        <translation>Multiplier</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Other</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Partner</masterLabel>
+        <translation>Partner</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Prospect</masterLabel>
+        <translation><!-- Prospect --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Retailer</masterLabel>
+        <translation>Retailer</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Клиент GPC</masterLabel>
+        <translation><!-- Клиент GPC --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Санкционный запрет</masterLabel>
+        <translation><!-- Санкционный запрет --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

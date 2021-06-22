@@ -1,0 +1,51 @@
+<template>
+  <lightning-card variant="base">
+    <h3 slot="title" class="header exportable-header">{labels.PERSONAL_ACCOUNT}</h3>
+    <lightning-input
+      name="codeWord"
+      class="field exportable-field"
+      required
+      min-length="5"
+      max-length="20"
+      label={labels.CODEWORD}
+      pattern={pattern.codeWord}
+      type="text"
+      onchange={handleChange}
+      value={profile.codeWord}
+    >
+    </lightning-input>
+    <lightning-input
+      name="email"
+      class="field exportable-field"
+      required
+      label={labels.ACCOUNT_EMAIL}
+      max-length="80"
+      type="email"
+      pattern={pattern.email}
+      onchange={handleChange}
+      value={profile.email}
+    >
+    </lightning-input>
+    <lightning-input
+      name="unificationLKGK"
+      class="field exportable-field"
+      label={labels.CONSOLIDATION_LC}
+      max-length="255"
+      type="text"
+      onchange={handleChange}
+      value={profile.unificationLKGK}
+    >
+    </lightning-input>
+    <lightning-input
+      name="phoneNumber"
+      class="field phone exportable-field"
+      label={labels.RECIVING_NOTIFICATION}
+      max-length="16"
+      type="tel"
+      pattern={pattern.phone}
+      value={profile.phoneNumber}
+      onchange={handleProfilePhoneNumberChange}
+    >
+    </lightning-input>
+  </lightning-card>
+</template>

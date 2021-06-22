@@ -1,0 +1,97 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "You will receive your Travelcard charging solution shortly by post.",
+                "nl": "U ontvangt uw Travelcard-laadpas binnenkort per post."
+            },
+            {
+                "en": "You can now start charging easily and conveniently. Because your charging chip is automatically activated.",
+                "nl": "U kunt nu eenvoudig en gemakkelijk beginnen met opladen, omdat uw laadpas automatisch wordt geactiveerd."
+            },
+            {
+                "en": "Find all suitable charging stations in our Travelcard EV app.",
+                "nl": "Vind alle geschikte laadpalen in onze Travelcard EV app."
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Charging stations in Europe",
+                    "nl": "oplaadpunten in Europa"
+                },
+                "value": {
+                    "en": "MORE THAN 150 000",
+                    "nl": "MEER DAN 150 000"
+                }
+            },
+            {
+                "label": {
+                    "en": "for all transactions",
+                    "nl": "voor alle transacties"
+                },
+                "value": {
+                    "en": "Single invoice",
+                    "nl": "ÉÉN FACTUUR"
+                }
+            },
+            {
+                "label": {
+                    "en": "Card issuing and delivery",
+                    "nl": "Pas productie en verzending"
+                },
+                "value": {
+                    "en": "FREE",
+                    "nl": "GRATIS"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "EV NL"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "CHARGING CARD",
+            "nl": "LAADPAS"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/ev_fob.png"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "Charge your electric fleet quickly and easily with the charging key fob from Travelcard.",
+            "nl": "Laadt uw elektrische auto's snel and gemakkelijk op met de laadpas van Travelcard."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "CHARGING CARD",
+            "nl": "LAADPAS"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "CHARGING CARDS",
+            "nl": "LAADPASSEN"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "LAADPAS",
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "0",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "order": 5
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Netherlands": "/resource/ETE_DOCUMENTS_1/tariffSheets_evnl.jpg"
+    }
+}

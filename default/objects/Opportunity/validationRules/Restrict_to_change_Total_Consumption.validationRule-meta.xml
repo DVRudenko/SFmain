@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_to_change_Total_Consumption</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR($Profile.Name = 'CCIG',
+$Profile.Name = 'Key Account Manager',
+$Profile.Name = 'Mellon',
+$Profile.Name = 'Sales Inbound',
+$Profile.Name = 'Salesteamleiter Inbound',
+$Profile.Name = 'TR Callcenter'),
+OR(RecordType.Name = 'Euroshell', RecordType.Name = 'Euroshell Starts'),
+OR(ISPICKVAL(bearbeitet_von__c, 'Autoprocessed by Sales'), ISPICKVAL(bearbeitet_von__c, 'Autoprocessed by E2E')),
+ISCHANGED(Total_consumption_l_month__c),
+NOT(ISCHANGED(Relaunch_CF__c)))</errorConditionFormula>
+    <errorMessage>Please launch Credit Factory to change Total consumption (l/month).</errorMessage>
+</ValidationRule>

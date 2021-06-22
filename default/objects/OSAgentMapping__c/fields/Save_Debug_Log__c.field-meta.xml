@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Save_Debug_Log__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Enable to save debug log to Unify CC Log Storage big object</description>
+    <externalId>false</externalId>
+    <label>Save Debug Log</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

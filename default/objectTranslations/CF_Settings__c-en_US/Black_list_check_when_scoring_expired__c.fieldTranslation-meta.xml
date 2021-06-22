@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Black list checking is processed only when scoring is expired --></help>
+    <label><!-- Black list check when scoring expired --></label>
+    <name>Black_list_check_when_scoring_expired__c</name>
+</CustomFieldTranslation>

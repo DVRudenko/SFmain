@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Why customer decided to go for Allstar Mondo Card? --></help>
+    <label><!-- Why interested? --></label>
+    <name>Why_interested__c</name>
+    <picklistValues>
+        <masterLabel>Advantageous pricing</masterLabel>
+        <translation><!-- Advantageous pricing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cashless payment method</masterLabel>
+        <translation><!-- Cashless payment method --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Large acceptance home and abroad</masterLabel>
+        <translation><!-- Large acceptance home and abroad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment for many travel expenses</masterLabel>
+        <translation><!-- Payment for many travel expenses --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Total control</masterLabel>
+        <translation><!-- Total control --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visa brand</masterLabel>
+        <translation><!-- Visa brand --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_cons_not_less_diesel_and_gasoline</fullName>
+    <active>true</active>
+    <description>Total_consumption_l_month__c &lt; ( Gasoline_consumption_l_month__c +  Diesel_consumption_l_month__c )</description>
+    <errorConditionFormula>AND((RecordTypeId != '0120O000000jmuMQAQ'),(Total_consumption_l_month__c &lt; ( Gasoline_consumption_l_month__c + Diesel_consumption_l_month__c )))</errorConditionFormula>
+    <errorDisplayField>Total_consumption_l_month__c</errorDisplayField>
+    <errorMessage>Total consumption cannot be less than sum of diesel and gasoline consumption</errorMessage>
+</ValidationRule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Rozsah založený na obratu společnosti</help>
+    <label>Obrat společnosti - kategorie</label>
+    <name>Company_Turnover_Category__c</name>
+</CustomFieldTranslation>

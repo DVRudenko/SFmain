@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Volume Operator Filter --></label>
+    <name>Volume_Operator_Filter__c</name>
+    <picklistValues>
+        <masterLabel>Unlimited</masterLabel>
+        <translation><!-- Unlimited --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>more than [X] liters</masterLabel>
+        <translation><!-- more than [X] liters --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>more than [X] liters per 1 card</masterLabel>
+        <translation><!-- more than [X] liters per 1 card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>more than [X] liters per 1 month</masterLabel>
+        <translation><!-- more than [X] liters per 1 month --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>more than [X] liters per account\company</masterLabel>
+        <translation><!-- more than [X] liters per account\company --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>not more than [X] liters</masterLabel>
+        <translation><!-- not more than [X] liters --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>not more than [X] liters per 1 card</masterLabel>
+        <translation><!-- not more than [X] liters per 1 card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>not more than [X] liters per 1 month</masterLabel>
+        <translation><!-- not more than [X] liters per 1 month --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>not more than [X] liters per account\company</masterLabel>
+        <translation><!-- not more than [X] liters per account\company --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>only for [X] liters</masterLabel>
+        <translation><!-- only for [X] liters --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>only for [X] liters per 1 card</masterLabel>
+        <translation><!-- only for [X] liters per 1 card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>only for [X] liters per 1 month</masterLabel>
+        <translation><!-- only for [X] liters per 1 month --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>only for [X] liters per account\company</masterLabel>
+        <translation><!-- only for [X] liters per account\company --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

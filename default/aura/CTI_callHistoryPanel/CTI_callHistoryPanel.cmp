@@ -1,0 +1,37 @@
+<aura:component controller="CTI_callInfoPanelController" implements="flexipage:availableForRecordHome" access="global" >
+    
+    <aura:attribute name="callHistoryTableHead" type="List"/>
+    <aura:attribute name="callHistory" type="List"/>
+    <aura:attribute name="isC2DEnabled" type="Boolean"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:registerEvent name="CTIinfoEvent" type="c:CTI_infoEvent"/>
+
+
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered" style="font-size: 11px;">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <aura:iteration items="{!v.callHistoryTableHead}" var="headItem">
+                    <th scope="col"> {!headItem} </th>
+                </aura:iteration>
+            </tr>
+        </thead>
+        <tbody>
+            <aura:iteration items="{!v.callHistory}" var="historyItem">
+                <tr class="slds-hint-parent">
+                    <th scope="row"> {!historyItem.Type} </th>
+                    <th scope="row">
+                        <a class="{!v.isC2DEnabled ? '' : 'disabled-link'}" onclick="{!c.handleCall}" name="{!join(',', historyItem.PhoneNumber, historyItem.AccountId)}">{!historyItem.PhoneNumber}</a>
+                    </th>
+                    <th scope="row"> 
+                        <div class="account-name">{!historyItem.AccountName}</div>
+                        <a onclick="{!c.openAccountRecordPage}" name="{!historyItem.AccountId}">{!historyItem.GFNNumber}</a> 
+                    </th>
+                    <th scope="row"> {!historyItem.Time} </th>
+                    <th scope="row"> {!historyItem.Duration} </th>
+                </tr>                
+            </aura:iteration>
+        </tbody>
+    </table>
+</aura:component>

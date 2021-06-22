@@ -1,0 +1,4 @@
+<apex:component controller="showCCSOrder" access="global">
+<apex:attribute name="OppId" type="Id" description="Opportunity Id" assignTo="{!OpportunityId}"/>
+                <apex:outputLink value="https://fleetcor-eu.my.salesforce.com/{!CCSOrder}">https://fleetcor-eu.my.salesforce.com/{!CCSOrder}</apex:outputLink>
+</apex:component>

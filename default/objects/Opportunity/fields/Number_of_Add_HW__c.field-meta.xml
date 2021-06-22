@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Add_HW__c</fullName>
+    <externalId>false</externalId>
+    <label>Number of Add. HW</label>
+    <summarizedField>Additional_Hardware__c.Additional_HW_SUM__c</summarizedField>
+    <summaryForeignKey>Additional_Hardware__c.Opportunity__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DOS_LEADS_4_OB1</fullName>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Language_Preference__c</columns>
+    <columns>Quali_Status__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Quali_Status__c</field>
+        <operation>equals</operation>
+        <value>Not reached – voicemail,Not reached – dial tone</value>
+    </filters>
+    <filters>
+        <field>Lead_Owner_Role_Name__c</field>
+        <operation>equals</operation>
+        <value>salesteam inbound</value>
+    </filters>
+    <filters>
+        <field>Laenderkennung__c</field>
+        <operation>equals</operation>
+        <value>Switzerland-de,austria,germany</value>
+    </filters>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>notEqual</operation>
+        <value>Partner,Inbound Call,Inbound Email</value>
+    </filters>
+    <filters>
+        <field>LEAD.CREATED_DATE</field>
+        <operation>lessOrEqual</operation>
+        <value>7/17/2017 12:00 AM</value>
+    </filters>
+    <label>DOS LEADS 4 OB</label>
+    <language>de</language>
+    <sharedTo>
+        <group>Salesteam_Inbound</group>
+        <group>Teamleiters</group>
+        <group>Teamleiters_2</group>
+    </sharedTo>
+</ListView>

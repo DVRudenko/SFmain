@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Access_for_FleetcorEmea_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Access for FleetcorEmea User</label>
+        <sharedTo>
+            <group>FleetcorEmea_Site_User</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>AllStar,Euroshell,CCS Opportunity Layout,Euroshell Starts</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Access_to_Integration_Opportunity_for_Sales</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>0050O000006SFYdQAO - Integration Administrator</description>
+        <label>Access to Integration Opportunity for Sales</label>
+        <sharedTo>
+            <group>Euroshell_Group_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000006SFYdQAO</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Access_to_Integration_Opportunity_for_Teamleaders</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>0050O000006SFYdQAO - Integration Administrator</description>
+        <label>Access to Integration Opportunity for Teamleaders</label>
+        <sharedTo>
+            <group>Euroshell_Group_Teamleaders</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000006SFYdQAO</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AllStar_Opportunities</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>AllStar_Opportunities</label>
+        <sharedTo>
+            <group>AllStar</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>AllStar</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Altevida_Shell</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Shell Opportunities for Altevida users.</description>
+        <label>Altevida_Shell</label>
+        <sharedTo>
+            <group>Shell_Records</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Euroshell Starts,Euroshell</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CARW</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>access to CARW Opp-ty</description>
+        <label>CARW</label>
+        <sharedTo>
+            <role>PPRMarketing_Product_manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>Promo_Code1__c</field>
+            <operation>equals</operation>
+            <value>CARW</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CCS_Opp_s_to_CCS_Opportunities_Read_Write</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Read/Write access to CCS Opportunities for members of CCS Opportunities Read/Write group.</description>
+        <label>CCS Opp&#39;s to CCS Opportunities Read/Write</label>
+        <sharedTo>
+            <group>CCS_Opportunities_Read_Write</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CCS Opportunity Layout</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CCS_Sales_Access_to_Integration_Opportunity</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>0050O000006SFYdQAO - Integration Administrator</description>
+        <label>CCS Sales Access to Integration Opportunity</label>
+        <sharedTo>
+            <group>CCS_Group_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000006SFYdQAO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CCS Opportunity Layout</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CCS_Teamleaders_Access_to_Integration_Opportunity</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>0050O000006SFYdQAO - Integration Administrator</description>
+        <label>CCS Teamleaders Access to Integration Opportunity</label>
+        <sharedTo>
+            <group>CCS_Group_Teamleaders</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000006SFYdQAO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CCS Opportunity Layout</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CCS_all</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CCS_all</label>
+        <sharedTo>
+            <group>CCS_Records</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CCS Opportunity Layout</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CSOpportunityShareAccess</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>access to european opportunities for Customer Service Europe</description>
+        <label>CSOpportunityShareAccess</label>
+        <sharedTo>
+            <group>CaseManagementEurope</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Russian Sales</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Carnet</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share Carnet Record Type Opportunities with Carnet PL Public Group.</description>
+        <label>Carnet</label>
+        <sharedTo>
+            <group>Carnet_PL</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Carnet</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CreditStarts_Access_for_Opp</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CreditStarts_Access_for_Opp</label>
+        <sharedTo>
+            <role>START</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Euroshell Starts,Euroshell</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Credit_Access_for_Opp</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Credit_Access_for_Opp</label>
+        <sharedTo>
+            <roleAndSubordinates>Credit</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Euroshell Starts,Euroshell,AllStar</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>E2E_RU_Opportunity</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Расшарить записи, которые принадлежать E2E RU Guest User для менеджеров группы</description>
+        <label>E2E RU Opportunity</label>
+        <sharedTo>
+            <group>PPR_E2E_Form_Managers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000008GFdp</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Euroshell_Access_for_Harte_Hanks</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Euroshell Access for Harte Hanks</label>
+        <sharedTo>
+            <group>Euroshell_Access_for_Harte_Hanks</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Euroshell Starts,Euroshell</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Euroshell_For_Salesmanager2</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>0050O000006SFYdQAO - Integration Administrator</description>
+        <label>Euroshell For Salesmanager2</label>
+        <sharedTo>
+            <role>Salesmanager_2</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Euroshell Starts,Euroshell</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>notEqual</operation>
+            <value>0050O000006SFYdQAO</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Opp_Lotos</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Lotos Opportunities for PL team.</description>
+        <label>Opp_Lotos</label>
+        <sharedTo>
+            <group>Shell_PL_Agents_Prague</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Lotos</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PPR_Call_Center_Opp</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>PPR Call Center</label>
+        <sharedTo>
+            <group>PPR_Call_Center</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000008GFdp</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PPR_Call_Center_Team_Leader</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Открывает &quot;PPR Call Center Team Leader&quot; доступ только к Возможностям на &quot;Moved to Start&quot;</description>
+        <label>PPR Call Center Team Leader</label>
+        <sharedTo>
+            <role>PPR_Call_Center_Team_Leader</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>StageName</field>
+            <operation>equals</operation>
+            <value>Moved to Start</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PPR_METRO</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>доступ к лидам METRO</description>
+        <label>PPR_METRO</label>
+        <sharedTo>
+            <group>PPR_METRO</group>
+        </sharedTo>
+        <booleanFilter>1 or 2</booleanFilter>
+        <criteriaItems>
+            <field>Source_PP__c</field>
+            <operation>equals</operation>
+            <value>Metro</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Utm_source__c</field>
+            <operation>equals</operation>
+            <value>Metro</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PPR_Marketing_share_E2E</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>PPR Marketing_share_E2E</label>
+        <sharedTo>
+            <group>PPR_Marketing_E2E</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000008GFdp</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PPR_Partner_sales_Source_Opp_Partner</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Access to Opp-ty if Source_PP and Insurance not blank</description>
+        <label>PPR Partner sales_Source_Opp_Partner</label>
+        <sharedTo>
+            <role>PPR_Partner_sales</role>
+        </sharedTo>
+        <booleanFilter>(1 OR 3 OR 4) AND 2</booleanFilter>
+        <criteriaItems>
+            <field>Source_PP__c</field>
+            <operation>notEqual</operation>
+            <value/>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Russian Sales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Insurance__c</field>
+            <operation>notEqual</operation>
+            <value/>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Source_of_Lead_o__c</field>
+            <operation>equals</operation>
+            <value>Партнерская Программа</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Pardot_Opportunities</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share CCS and Shell Opportunities with Pardot user.</description>
+        <label>Pardot_Opportunities</label>
+        <sharedTo>
+            <role>Pardot</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CCS Opportunity Layout</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Euroshell</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>RU_Client_Service</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>RU_Client_Service</label>
+        <sharedTo>
+            <group>RU_Client_Service</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Russian Sales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>StageName</field>
+            <operation>equals</operation>
+            <value>Decision pending</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>ShellCZSK_Bartonova</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>ShellCZSK_Bartonova</label>
+        <sharedTo>
+            <group>Hana_Bartonova_provision</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Euroshell</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Shell_UC_Oppties_Read_Only</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Share Oppties of Record Type Shell Universal Card to Public Group Shell Universal Card. Permission/Visibility - Read Only</description>
+        <label>Shell UC Oppties Read Only</label>
+        <sharedTo>
+            <group>Shell_Universal_Card</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Shell Universal Card</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>StartsTeamManagers_Access_for_Opp</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>0050O000006SFYdQAO - Integration Administrator</description>
+        <label>StartsTeamManagers_Access_for_Opp</label>
+        <sharedTo>
+            <role>Starts_Team_Manager</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Euroshell Starts,Euroshell</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>notEqual</operation>
+            <value>0050O000006SFYdQAO</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Starts_team_access_to_Euroshell_and_Euroshell_Starts_record_type</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Starts team access to Euroshell and Euroshell Starts record type</label>
+        <sharedTo>
+            <group>Starts_team</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Euroshell Starts,Euroshell</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>StageName</field>
+            <operation>equals</operation>
+            <value>Closed Won</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Teamleiter</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>view EU opportunities</description>
+        <label>Teamleiter</label>
+        <sharedTo>
+            <role>Teamleiter</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Russian Sales,CCS Opportunity Layout</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>access_delegated_admin_to_E2E</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>access delegated admin to E2E</label>
+        <sharedTo>
+            <group>Russian_Admins</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000008GFdp</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>CCS_KAM_LAM_Opps_to_SME_TL</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Rights to edit KAM/LAM opps for SME Team Lead</description>
+        <label>CCS KAM LAM Opps to SME TL</label>
+        <sharedTo>
+            <role>CCS_SME_Team_Lead</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>CCS_CZ_KAM_Team_Lead</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CarnetPL</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Carnet Opportunities Sharing Rules.</description>
+        <label>CarnetPL</label>
+        <sharedTo>
+            <group>Carnet_PL</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Carnet_PL</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>E2E_RU_User_Opportunity</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Расшарить всех российских возможностей для E2E RU Guest User для функции поиска дубликатов</description>
+        <label>E2E RU User Opportunity</label>
+        <sharedTo>
+            <group>PPR_E2E_Guest_User</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>PPR_Fleetcor</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>FieldSales_Territory</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Buddy access to funnel Mng FS_territory</description>
+        <label>FieldSales_Territory</label>
+        <sharedTo>
+            <role>PPR_FieldTerritory_Call_Center</role>
+        </sharedTo>
+        <sharedFrom>
+            <group>PPR_FieldSalesTerritory</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PPR_Marketing_Opp</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>PPR Marketing Opp</label>
+        <sharedTo>
+            <role>PPR_Marketing</role>
+        </sharedTo>
+        <sharedFrom>
+            <group>AllRussianRoles</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PPR_QC_7</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>PPR_QC_7</label>
+        <sharedTo>
+            <group>PPR_Quality_Control</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>AllRussianRoles</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PPR_Teamleader_KAM</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>PPR Teamleader KAM</label>
+        <sharedTo>
+            <role>PPR_KAM_Teamleader</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>PPR_KAM_Teamleader</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Partner_Sales_Opp_on_FS</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Даём доступ А.Кареву на просмотр возможностей на филд- менеджерах - если они помогают закрыть сделку по партнёрам</description>
+        <label>Partner Sales Opp on FS</label>
+        <sharedTo>
+            <role>PPR_Partner_sales</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>PPR_Partner_sales</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Partner_Sales_Opp_on_SME</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Даём доступ А.Кареву к опп-ти В.Поляковой</description>
+        <label>Partner Sales Opp on SME</label>
+        <sharedTo>
+            <role>PPR_Partner_sales</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>PPR_Bryansk</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Salesmanager2Users_Access_for_Opp</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Salesmanager2Users_Access_for_Opp</label>
+        <sharedTo>
+            <roleAndSubordinates>Salesmanager_2</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Salesmanager_2</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>SalesmanagerUsers_Access_for_Opp</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>SalesmanagerUsers_Access_for_Opp</label>
+        <sharedTo>
+            <roleAndSubordinates>Salesmanager</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Salesmanager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

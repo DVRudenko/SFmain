@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Where the call originated - Click-to-Call, Seek List, or Domino list. --></help>
+    <label><!-- Dialer Type --></label>
+    <name>isdc_dialer_call_type__c</name>
+    <picklistValues>
+        <masterLabel>Click-to-Call</masterLabel>
+        <translation><!-- Click-to-Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Domino</masterLabel>
+        <translation><!-- Domino --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Seek</masterLabel>
+        <translation><!-- Seek --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

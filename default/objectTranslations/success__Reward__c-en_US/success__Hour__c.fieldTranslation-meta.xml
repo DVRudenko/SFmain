@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The hour of the day (24 hour clock) that the reward was awarded --></help>
+    <label><!-- Hour --></label>
+    <name>success__Hour__c</name>
+</CustomFieldTranslation>

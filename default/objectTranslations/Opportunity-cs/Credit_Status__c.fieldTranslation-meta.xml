@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Stanovisko kreditního</label>
+    <name>Credit_Status__c</name>
+    <picklistValues>
+        <masterLabel>Conditional Approval</masterLabel>
+        <translation>Podmíněné schválení</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Approved</masterLabel>
+        <translation>Schváleno</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Declined</masterLabel>
+        <translation>Zamítnuto</translation>
+    </picklistValues>
+</CustomFieldTranslation>

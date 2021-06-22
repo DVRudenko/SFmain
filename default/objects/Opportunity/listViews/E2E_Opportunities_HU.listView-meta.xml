@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Opportunities_HU</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>Total_consumption_l_month__c</columns>
+    <columns>CF_Stage__c</columns>
+    <columns>Anzahl_der_Karten__c</columns>
+    <columns>Sec_Channel__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>E2E_Active_Substep__c</columns>
+    <columns>E2E_Sales_Type__c</columns>
+    <columns>E2E_Status__c</columns>
+    <columns>E2E_Sub_Status__c</columns>
+    <columns>E2E_Errors__c</columns>
+    <columns>E2E__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>E2E__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Registered_Country__c</field>
+        <operation>equals</operation>
+        <value>Hungary</value>
+    </filters>
+    <label>E2E Opportunities HU</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>CCS_Administrator</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Salesmanager_2</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMContactWorld__RelatedTo_Field_Is_Deprecated</fullName>
+    <active>true</active>
+    <description>The RelatedTo field has been replaced by the Who and What fields.</description>
+    <errorConditionFormula>!ISBLANK(NVMContactWorld__RelatedTo__c)</errorConditionFormula>
+    <errorMessage>The RelatedTo field is deprecated and has been replaced by the Who and What.</errorMessage>
+</ValidationRule>

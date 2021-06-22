@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_1bit_Lead</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Queue</filterScope>
+    <label>PPR 1bit</label>
+    <language>en_US</language>
+    <queue>PPR_1bit</queue>
+    <sharedTo>
+        <group>Russian_Admins</group>
+        <role>PPR_Bryansk</role>
+        <role>PPR_Partner_sales</role>
+    </sharedTo>
+</ListView>

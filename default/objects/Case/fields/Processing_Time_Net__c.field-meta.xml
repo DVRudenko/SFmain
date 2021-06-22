@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Processing_Time_Net__c</fullName>
+    <description>STCP1-366/STCP1-630 - shows the number of hours between date/time closed and date/time opened without considering non-working hours - Net Resolution time
+SHELL - 8AM-5PM (GMT+2)
+CCS - 7AM-7PM  (GMT+2)</description>
+    <externalId>false</externalId>
+    <formula>IF(
+
+IsClosed &amp;&amp; RecordType.DeveloperName = 'Support',
+
+9 *((5*FLOOR((DATEVALUE(ClosedDate)-DATE(1900,1,8))/7) + MIN(5, MOD(DATEVALUE(ClosedDate)-DATE(1900,1,8),7)+ MIN(1,24/9*(MOD(ClosedDate-DATETIMEVALUE('1900-01-08 06:00:00'), 1))) )) - (5*FLOOR((DATEVALUE(CreatedDate + MAX(DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate))&amp;" 06:00:00")-CreatedDate,0))- DATE(1900,1,8))/7)+ MIN(5, MOD(DATEVALUE(CreatedDate+MAX(DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate))&amp;" 06:00:00")-CreatedDate,0))-DATE(1900,1,8),7)+ MIN(1,24/9*(MOD(CreatedDate + MAX(DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate))&amp;" 06:00:00")-CreatedDate,0)-DATETIMEVALUE('1900-01-08 06:00:00'), 1))))) ),
+
+IF(IsClosed &amp;&amp; RecordType.DeveloperName = 'Support_CCS',
+
+12 *((5*FLOOR((DATEVALUE(ClosedDate)-DATE(1900,1,8))/7) + MIN(5, MOD(DATEVALUE(ClosedDate)-DATE(1900,1,8),7)+ MIN(1,24/12*(MOD(ClosedDate-DATETIMEVALUE('1900-01-08 05:00:00'), 1))) )) - (5*FLOOR((DATEVALUE(CreatedDate + MAX(DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate))&amp;" 05:00:00")-CreatedDate,0))- DATE(1900,1,8))/7)+ MIN(5, MOD(DATEVALUE(CreatedDate+MAX(DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate))&amp;" 05:00:00")-CreatedDate,0))-DATE(1900,1,8),7)+ MIN(1,24/12*(MOD(CreatedDate + MAX(DATETIMEVALUE(TEXT(DATEVALUE(CreatedDate))&amp;" 05:00:00")-CreatedDate,0)-DATETIMEVALUE('1900-01-08 05:00:00'), 1))))) ),
+
+Null)
+
+)</formula>
+    <inlineHelpText>The number of hours between date/time closed and date/time opened considering working hours only.
+SHELL - 8AM-5PM (PRG Time)
+CCS - 7AM-7PM  (PRG Time)</inlineHelpText>
+    <label>Processing Time Net</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

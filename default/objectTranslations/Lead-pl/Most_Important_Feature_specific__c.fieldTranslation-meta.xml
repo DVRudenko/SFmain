@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Most Important Feature (specific) --></label>
+    <name>Most_Important_Feature_specific__c</name>
+    <picklistValues>
+        <masterLabel>Бензовоз</masterLabel>
+        <translation><!-- Бензовоз --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Би Пи</masterLabel>
+        <translation><!-- Би Пи --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Газпром</masterLabel>
+        <translation><!-- Газпром --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Другое</masterLabel>
+        <translation><!-- Другое --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Клиент не прошел по критериям</masterLabel>
+        <translation><!-- Клиент не прошел по критериям --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Лукойл</masterLabel>
+        <translation><!-- Лукойл --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Мало АЗС</masterLabel>
+        <translation><!-- Мало АЗС --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Метан</masterLabel>
+        <translation><!-- Метан --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Не готовы начать работать по предоплате</masterLabel>
+        <translation><!-- Не готовы начать работать по предоплате --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Не устроили  предоставленные условия</masterLabel>
+        <translation><!-- Не устроили  предоставленные условия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Не участвовали</masterLabel>
+        <translation><!-- Не участвовали --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Проиграли</masterLabel>
+        <translation><!-- Проиграли --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Работа по предоплате, с последующей отсрочкой</masterLabel>
+        <translation><!-- Работа по предоплате, с последующей отсрочкой --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Работает по предоставленным условиям</masterLabel>
+        <translation><!-- Работает по предоставленным условиям --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Роснефть</masterLabel>
+        <translation><!-- Роснефть --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Своя АЗС</masterLabel>
+        <translation><!-- Своя АЗС --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ТНК</masterLabel>
+        <translation><!-- ТНК --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Татнефть</masterLabel>
+        <translation><!-- Татнефть --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

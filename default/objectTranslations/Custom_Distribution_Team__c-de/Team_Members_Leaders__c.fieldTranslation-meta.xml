@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Email addresses of the team leaders for notification --></help>
+    <label><!-- Team Members Leaders --></label>
+    <name>Team_Members_Leaders__c</name>
+</CustomFieldTranslation>

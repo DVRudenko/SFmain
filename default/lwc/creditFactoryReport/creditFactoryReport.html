@@ -1,0 +1,152 @@
+<template>
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+            <div class="slds-media__figure">
+                <span class="slds-icon_container slds-icon-custom-custom57">
+                    <svg class="slds-icon" 
+                         aria-hidden="true">
+                        <use xlink:href="/apexpages/slds/latest/assets/icons/custom-sprite/svg/symbols.svg#custom57"></use>
+                    </svg>
+                </span>
+            </div>
+            <div class="slds-media__body">
+                <h2 class="slds-card__header-title">
+                <a href="javascript:void(0);" 
+                   class="slds-card__header-link slds-truncate" 
+                   title="Report">
+                    <span>Report</span>
+                </a>
+                </h2>
+            </div>
+            </header>
+        </div>
+        <div class="slds-card__body">
+            <template if:true={loading}>
+                <div class="report__spinner-wrapper">
+                    <lightning-spinner alternative-text="Loading"
+                                       size="large"></lightning-spinner>
+                </div>
+            </template>
+            <template if:false={loading}>
+                <div class="slds-clearfix slds-m-around_medium slds-box slds-theme_shade">
+                    <div class="slds-float_left">
+                        <lightning-button label="Back to Opportunity" 
+                                          onclick={handleBackClick} 
+                                          class="slds-m-left_medium"></lightning-button>
+                    </div>
+                    <div class="slds-float_right">
+                        <template if:true={isUpdateOpportunity}>
+                            <lightning-button label="Update Opportunity" 
+                                              onclick={handleUpdateOpportunityClick} 
+                                              class="slds-m-right_medium"></lightning-button>
+                        </template>
+                        <template if:true={isContactParentCompany}>
+                            <lightning-button label="Get Parent Company Employees"
+                                              onclick={handleUpdateContactsClick}
+                                              class="slds-m-right_medium"></lightning-button>
+                        </template>
+                        <template if:true={isPendingDeposit}>
+                            <lightning-button label="Pending Deposit" 
+                                              onclick={handlePendingDepositClick} 
+                                              class="slds-m-right_medium"
+                                              variant="success"></lightning-button>
+                        </template>
+                        <template if:true={isClosedWon}>
+                            <lightning-button label="Closed Won" 
+                                              onclick={handleClosedWonClick} 
+                                              class="slds-m-right_medium"
+                                              variant="success"></lightning-button>
+                        </template>
+                        <template if:true={isPendingSepa}>
+                            <lightning-button label="Pending SEPA"
+                                              onclick={handlePendingSepaClick}
+                                              class="slds-m-right_medium"
+                                              variant="success"></lightning-button>
+                        </template>
+                        <template if:true={isContractCheck}>
+                            <lightning-button label="Contract Check" 
+                                              onclick={handleContractCheckClick} 
+                                              class="slds-m-right_medium"
+                                              variant="success"></lightning-button>
+                        </template>
+                        <template if:true={isPendingAdvancePayment}>
+                            <lightning-button label="Pending Advance Payment"
+                                              onclick={handlePendingAdvancePaymentClick}
+                                              class="slds-m-right_medium"
+                                              variant="success"></lightning-button>
+                        </template>
+                    </div>
+                </div>
+                <template if:true={error}>
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" 
+                         role="alert">
+                        <span class="slds-assistive-text">error</span>
+                        <h2>
+                            <lightning-formatted-rich-text value={errorMessage}></lightning-formatted-rich-text>
+                        </h2>
+                    </div>
+                </template>
+                <template if:true={info}>
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_info" 
+                         role="alert">
+                        <span class="slds-assistive-text">info</span>
+                        <h2>
+                            <lightning-formatted-rich-text value={infoMessage}></lightning-formatted-rich-text>
+                        </h2>
+                    </div>
+                </template>
+                <template if:true={warning}>
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" 
+                         role="alert">
+                        <span class="slds-assistive-text">warning</span>
+                        <h2>
+                            <lightning-formatted-rich-text value={warningMessage}></lightning-formatted-rich-text>
+                        </h2>
+                    </div>
+                </template>
+                <div class="report__update" 
+                     ondisablebuttons={handleDisableButtons}
+                     onenablebuttons={handleEnableButtons}>
+                    <template if:true={isInvalidAddress}>
+                        <c-credit-factory-report-update fields={addressUpdate}
+                                                        map-data={dataMap} class="report__update-item-js"></c-credit-factory-report-update>
+                    </template>
+                    <template if:true={isInvalidName}>
+                        <c-credit-factory-report-update fields={nameUpdate}
+                                                        map-data={dataMap} class="report__update-item-js"></c-credit-factory-report-update>
+                    </template>
+                    <template if:true={isInvalidTaxId}>
+                        <c-credit-factory-report-update fields={taxIdUpdate}
+                                                        map-data={dataMap} class="report__update-item-js"></c-credit-factory-report-update>
+                    </template>
+                    <template if:true={isInvalidTradeRegisterNumber}>
+                        <c-credit-factory-report-update fields={tradeRegisterNumberUpdate}
+                                                        map-data={dataMap} class="report__update-item-js"></c-credit-factory-report-update>
+                    </template>
+                    <template if:true={isInvalidVatNumber}>
+                        <c-credit-factory-report-update fields={vatNumberUpdate}
+                                                        map-data={dataMap} class="report__update-item-js"></c-credit-factory-report-update>
+                    </template>
+                    <template if:true={isInvalidSwiftBic}>
+                        <c-credit-factory-report-update fields={swiftBicUpdate}
+                                                        map-data={dataMap} class="report__update-item-js"></c-credit-factory-report-update>
+                    </template>
+                    <template if:true={isInvalidContactRole}>
+                        <c-credit-factory-report-call opportunity-id={opportunityId}
+                                                      map-data={dataMap} class="report__update-item-js"></c-credit-factory-report-call>
+                    </template>
+                </div>
+                <template if:true={isReportGenerated}>
+                    <template for:each={sectionsData} 
+                              for:item="sectionData">
+                        <div key={sectionData}>
+                            <c-credit-factory-report-section title={sectionData.title}
+                                                             fields={sectionData.items}></c-credit-factory-report-section>
+                        </div>
+                    </template>
+                </template>
+            </template>
+        </div>
+    </article>
+</template>

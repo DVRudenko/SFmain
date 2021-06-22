@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Level__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CEO/Generální ředitel</fullName>
+                <default>false</default>
+                <label>CEO/Generální ředitel</label>
+            </value>
+            <value>
+                <fullName>Board/Člen představenstva</fullName>
+                <default>false</default>
+                <label>Board/Člen představenstva</label>
+            </value>
+            <value>
+                <fullName>B-1</fullName>
+                <default>false</default>
+                <label>B-1</label>
+            </value>
+            <value>
+                <fullName>B-2</fullName>
+                <default>false</default>
+                <label>B-2</label>
+            </value>
+            <value>
+                <fullName>B-3</fullName>
+                <default>false</default>
+                <label>B-3</label>
+            </value>
+            <value>
+                <fullName>Člen dozorčí rady</fullName>
+                <default>false</default>
+                <label>Člen dozorčí rady</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

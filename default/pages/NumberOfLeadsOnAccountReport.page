@@ -1,0 +1,43 @@
+<apex:page controller="NumberOfLeadsOnAccountReportCtrl" action="{! init}">
+	<apex:form >
+		<apex:pageBlock title="{! thisMonth}">
+		    <apex:pageBlockTable value="{!listLeadsWithCreatedDateInThisMonth}" var="lead">
+		        <apex:column headerValue="Lead Name" style="width:20%">
+		        	<apex:outputLink value="/{!lead.Id}" target="_blank">{! lead.FirstName } {! lead.LastName }</apex:outputLink>
+		        </apex:column>  
+		        <apex:column value="{! lead.CreatedDate}" style="width:20%"/>  
+		        <apex:column value="{! lead.Status}" style="width:15%"/>  
+		        <apex:column value="{! lead.Channel__c}" style="width:8%"/>
+		        <apex:column value="{! lead.Sec_Channel__c}" style="width:8%"/>
+		        <apex:column value="{! lead.LeadSource}" style="width:15%"/>
+		        <apex:column value="{! lead.OwnerId}"/>     
+		    </apex:pageBlockTable> 
+		</apex:pageBlock>
+		<apex:pageBlock title="{! lastMonth}">
+		    <apex:pageBlockTable value="{!listLeadsWithCreatedDateInLastMonth}" var="lead">
+		        <apex:column headerValue="Lead Name" style="width:20%">
+		        	<apex:outputLink value="/{!lead.Id}" target="_blank">{! lead.FirstName } {! lead.LastName }</apex:outputLink>
+		        </apex:column>    
+		        <apex:column value="{! lead.CreatedDate}" style="width:20%"/> 
+		        <apex:column value="{! lead.Status}" style="width:15%"/> 
+		        <apex:column value="{! lead.Channel__c}" style="width:8%"/>
+		        <apex:column value="{! lead.Sec_Channel__c}" style="width:8%"/>
+		        <apex:column value="{! lead.LeadSource}" style="width:15%"/>
+		        <apex:column value="{! lead.OwnerId}"/>          
+		    </apex:pageBlockTable>
+		</apex:pageBlock>
+		<apex:pageBlock title="{! penaltMonth}">
+		    <apex:pageBlockTable value="{!listLeadsWithCreatedDateInPenaltMonth}" var="lead">
+		        <apex:column headerValue="Lead Name" style="width:20%">
+		        	<apex:outputLink value="/{!lead.Id}" target="_blank">{! lead.FirstName } {! lead.LastName }</apex:outputLink>
+		        </apex:column>   
+		        <apex:column value="{! lead.CreatedDate}" style="width:20%"/>   
+		        <apex:column value="{! lead.Status}" style="width:15%"/> 
+		        <apex:column value="{! lead.Channel__c}" style="width:8%"/>
+		        <apex:column value="{! lead.Sec_Channel__c}" style="width:8%"/>
+		        <apex:column value="{! lead.LeadSource}" style="width:15%"/>
+		        <apex:column value="{! lead.OwnerId}"/>        
+		    </apex:pageBlockTable>
+		</apex:pageBlock>
+    </apex:form>
+</apex:page>

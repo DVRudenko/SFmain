@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_In_negotiation__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS In negotiation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ano</fullName>
+                <default>false</default>
+                <label>ano</label>
+            </value>
+            <value>
+                <fullName>ne</fullName>
+                <default>false</default>
+                <label>ne</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_Lost_Other_Reason_Disqualified_c__c</fullName>
+    <description>Для дисквалификации Е2Е Возможностей</description>
+    <externalId>false</externalId>
+    <label>Opp_Lost_Other_Reason_Disqualified</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Return to funnel</fullName>
+                <default>false</default>
+                <label>Return to funnel</label>
+            </value>
+            <value>
+                <fullName>Incorrect contact information</fullName>
+                <default>false</default>
+                <label>Incorrect contact information</label>
+            </value>
+            <value>
+                <fullName>There is no fleet</fullName>
+                <default>false</default>
+                <label>There is no fleet</label>
+            </value>
+            <value>
+                <fullName>Not an organization</fullName>
+                <default>false</default>
+                <label>Not an organization</label>
+            </value>
+            <value>
+                <fullName>Re-application</fullName>
+                <default>false</default>
+                <label>Re-application</label>
+            </value>
+            <value>
+                <fullName>Existing client</fullName>
+                <default>false</default>
+                <label>Existing client</label>
+            </value>
+            <value>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+                <label>Reseller</label>
+            </value>
+            <value>
+                <fullName>Tender with a little pumping</fullName>
+                <default>false</default>
+                <label>Tender with a little pumping</label>
+            </value>
+            <value>
+                <fullName>There is no time frame for decision</fullName>
+                <default>false</default>
+                <label>There is no time frame for decision</label>
+            </value>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <label>Test</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

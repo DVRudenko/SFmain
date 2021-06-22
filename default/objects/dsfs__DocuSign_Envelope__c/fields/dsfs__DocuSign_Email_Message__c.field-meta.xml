@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__DocuSign_Email_Message__c</fullName>
+    <defaultValue>"SENT TO YOU BY: " &amp; $User.FirstName &amp; " " &amp; $User.LastName &amp; " " &amp; $User.Email &amp; " with the DocuSign Electronic Signature Service" &amp; BR() &amp; BR() &amp; "I am sending you this request for your electronic signature, please review and electronically sign by following the link below. " &amp; BR() &amp; BR() &amp; BR() &amp; "Thank You,  "  &amp; BR() &amp; BR() &amp; $User.FirstName &amp; " " &amp;  $User.LastName &amp; " " &amp; $User.Email</defaultValue>
+    <deprecated>false</deprecated>
+    <description>DocuSign Email Message</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient.</inlineHelpText>
+    <label>DocuSign Email Message</label>
+    <length>2000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

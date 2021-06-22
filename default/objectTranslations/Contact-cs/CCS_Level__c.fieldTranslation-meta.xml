@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Úroveň</label>
+    <name>CCS_Level__c</name>
+    <picklistValues>
+        <masterLabel>B-1</masterLabel>
+        <translation><!-- B-1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B-2</masterLabel>
+        <translation><!-- B-2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>B-3</masterLabel>
+        <translation><!-- B-3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Board/Člen představenstva</masterLabel>
+        <translation><!-- Board/Člen představenstva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CEO/Generální ředitel</masterLabel>
+        <translation><!-- CEO/Generální ředitel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Člen dozorčí rady</masterLabel>
+        <translation><!-- Člen dozorčí rady --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

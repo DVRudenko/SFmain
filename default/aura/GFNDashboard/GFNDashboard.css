@@ -1,0 +1,17 @@
+/* .THIS {
+} */
+.THIS .gray-on-white-icon svg {
+    fill : #666666;
+}
+.THIS .gray-on-white-icon {
+    background-color:white !important;
+ }
+.THIS .gray-on-white-icon-disabled svg {
+    fill : #666666;
+}
+.THIS .gray-on-white-icon-disabled {
+    background-color: #dddddd !important;
+ }
+ .THIS ul li { 
+    display : block; 
+}

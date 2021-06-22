@@ -1,0 +1,121 @@
+<!--
+ - Created by Nikita.Dayanov on 02.07.2018. -
+ -->
+
+<apex:page id="DashboardPersonalNetStartsPPR" controller="DashboardPersonalNetStartsPPRCtrl" action="{!init}"
+           sideBar="false" showHeader="false">
+
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+
+    <apex:pageBlock >
+        <apex:pageMessages />
+        <apex:outputPanel id="chart-heading">
+            <h1>{!$Label.RU_0085_PersonalNetsHeader}</h1>
+        </apex:outputPanel>
+
+        <apex:outputPanel layout="block" style="text-align: right; height: 14pt">
+
+        </apex:outputPanel>
+
+        <div>
+            <apex:outputPanel >
+                <div id="salesnetstartspersonal" style="width: 100%; float: left; height: 550px"></div>
+            </apex:outputPanel>
+            <div style="clear: both;"></div>
+        </div>
+    </apex:pageBlock>
+
+    <script>
+
+        j$ = jQuery.noConflict();
+        var planList = JSON.parse('{!monthPlanData}');
+        var startsList = JSON.parse('{!monthNetStartsData}');
+        var categoriesList = JSON.parse('{!weekNumbersLabels}');
+        var er = '{!errorMesg}';
+
+        function getPlanData() {
+            var data = [];
+            for (var i = 0; i < planList.length; i++) {
+                data.push(planList[i]);
+            }
+            return data;
+        };
+        function getStartsData() {
+            var data = [];
+            for (var i = 0; i < startsList.length; i++) {
+                data.push(Math.ceil((startsList[i])*100)/100);
+            }
+            return data;
+        };
+        function getCategories() {
+            var data = [];
+            for (var i = 0; i < categoriesList.length; i++) {
+                data.push(categoriesList[i]);
+            }
+            return data;
+        };
+
+        j$(function() {
+            if(er != '1'){
+                j$('#chart-heading').append('<p id="err">{!errorMesg}</p>');
+                j$( "#err" ).css({
+                    "color": "#FF0000",
+                    "font-size": "18px"
+                });
+            }
+
+            j$("#salesnetstartspersonal").highcharts({
+                chart:{
+                    type: 'line'
+                },
+                title:{
+                    text: ''
+                },
+                exporting:{
+                    enabled: false
+                },
+                credits: {
+                    enabled: false
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.y}</b>'
+                },
+                xAxis: {
+                    title: {
+                        text: '{!$Label.RU_0082_PersonalNetsWeek}'
+                    },
+                    categories: getCategories()
+                },
+                yAxis: {
+                    title: {
+                        text: '{!$Label.RU_0086_PersonalNetsNetStarts}',
+                        style: {
+                            fontSize: '18px',
+                            fontFamily: 'Verdana, sans-serif'
+                        }
+                    }
+                },
+                plotOptions:{
+
+                    line: {
+                        dataLabels: {
+                            enabled: true
+                        },
+                        enableMouseTracking: false
+                    }
+                },
+                series:[{
+                    name: '{!$Label.RU_0083_PersonalNetsPlan}',
+                    color: 'rgba(197,16,88,1)',
+                    data: getPlanData() ,
+                }, {
+                    name: '{!$Label.RU_0084_PersonalNetsActual}',
+                    color: 'rgba(105,0,108,.9)',
+                    data: getStartsData(),
+                }]
+            });
+        });
+    </script>
+</apex:page>

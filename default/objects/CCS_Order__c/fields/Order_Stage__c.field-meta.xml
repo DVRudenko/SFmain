@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Order Stage</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Nová</fullName>
+                <default>false</default>
+                <label>Nová</label>
+            </value>
+            <value>
+                <fullName>Schváleno</fullName>
+                <default>false</default>
+                <label>Schváleno</label>
+            </value>
+            <value>
+                <fullName>Schváleno nové</fullName>
+                <default>false</default>
+                <label>Schváleno nové</label>
+            </value>
+            <value>
+                <fullName>Předáno na K.O.</fullName>
+                <default>false</default>
+                <label>Předáno na K.O.</label>
+            </value>
+            <value>
+                <fullName>Předáno na Sales</fullName>
+                <default>false</default>
+                <label>Předáno na Sales</label>
+            </value>
+            <value>
+                <fullName>Čekáme na zadání karet</fullName>
+                <default>false</default>
+                <label>Čekáme na zadání karet</label>
+            </value>
+            <value>
+                <fullName>Čekáme na komponenty</fullName>
+                <default>false</default>
+                <label>Čekáme na komponenty</label>
+            </value>
+            <value>
+                <fullName>Čekáme na dodatek</fullName>
+                <default>false</default>
+                <label>Čekáme na dodatek</label>
+            </value>
+            <value>
+                <fullName>Čekáme na PM</fullName>
+                <default>false</default>
+                <label>Čekáme na PM</label>
+            </value>
+            <value>
+                <fullName>Čekáme na výkazy</fullName>
+                <default>false</default>
+                <label>Čekáme na výkazy</label>
+            </value>
+            <value>
+                <fullName>Čekáme na potvrzení o inkasu</fullName>
+                <default>false</default>
+                <label>Čekáme na potvrzení o inkasu</label>
+            </value>
+            <value>
+                <fullName>Čekáme na podpis objednávky</fullName>
+                <default>false</default>
+                <label>Čekáme na podpis objednávky</label>
+            </value>
+            <value>
+                <fullName>Čekáme na mandát</fullName>
+                <default>false</default>
+                <label>Čekáme na mandát</label>
+            </value>
+            <value>
+                <fullName>Neschváleno-častější inkaso</fullName>
+                <default>false</default>
+                <label>Neschváleno-častější inkaso</label>
+            </value>
+            <value>
+                <fullName>Neschváleno-depozit-nepotvrdí</fullName>
+                <default>false</default>
+                <label>Neschváleno-depozit-nepotvrdí</label>
+            </value>
+            <value>
+                <fullName>Neschváleno-depozit-nedá</fullName>
+                <default>false</default>
+                <label>Neschváleno-depozit-nedá</label>
+            </value>
+            <value>
+                <fullName>Neschváleno-depozit</fullName>
+                <default>false</default>
+                <label>Neschváleno-depozit</label>
+            </value>
+            <value>
+                <fullName>Neschváleno</fullName>
+                <default>false</default>
+                <label>Neschváleno</label>
+            </value>
+            <value>
+                <fullName>Nepotvrzeno</fullName>
+                <default>false</default>
+                <label>Nepotvrzeno</label>
+            </value>
+            <value>
+                <fullName>Zadáno do systému</fullName>
+                <default>false</default>
+                <label>Zadáno do systému</label>
+            </value>
+            <value>
+                <fullName>Zadaná přiobjednávka</fullName>
+                <default>false</default>
+                <label>Zadaná přiobjednávka</label>
+            </value>
+            <value>
+                <fullName>Balíček Carnet-záměna karet</fullName>
+                <default>false</default>
+                <label>Balíček Carnet-záměna karet</label>
+            </value>
+            <value>
+                <fullName>Stornováno</fullName>
+                <default>false</default>
+                <label>Stornováno</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Nová</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <valueName>Schváleno</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Předáno na K.O.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Předáno na Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Čekáme na PM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <valueName>Čekáme na výkazy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Čekáme na potvrzení o inkasu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <valueName>Čekáme na podpis objednávky</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <valueName>Neschváleno-častější inkaso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <valueName>Neschváleno-depozit-nepotvrdí</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <valueName>Neschváleno-depozit-nedá</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <valueName>Neschváleno-depozit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Zadáno do systému</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Zadaná přiobjednávka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Stornováno</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <valueName>Čekáme na mandát</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Limit+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Limit+</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus Fleet</controllingFieldValue>
+            <valueName>Balíček Carnet-záměna karet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Schváleno nové</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Čekáme na zadání karet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Čekáme na komponenty</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Čekáme na dodatek</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Bonus SK</controllingFieldValue>
+            <controllingFieldValue>CCS Bonus+ SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2</controllingFieldValue>
+            <valueName>Nepotvrzeno</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CCS Carnet SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet OBD2 SK</controllingFieldValue>
+            <controllingFieldValue>CCS Carnet Služba SK</controllingFieldValue>
+            <valueName>Neschváleno</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If checked, it indicates that this record was generated via a base behaviour in testing status --></help>
+    <label><!-- Test Record --></label>
+    <name>success__Test_Record__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Specify which related object&apos;s record ID should be populated on Insight records. --></help>
+    <label><!-- Related Record --></label>
+    <name>success__Related_Record_Field__c</name>
+</CustomFieldTranslation>

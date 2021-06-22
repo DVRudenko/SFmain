@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieldSalesTerritoryTeam</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>X0_7_PSO__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Number_of_Vehicles__c</columns>
+    <columns>ALL_Cards__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>X0_7_PSO__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>contains</operation>
+        <value>Bull,Ivchenko,Vodovozov</value>
+    </filters>
+    <label>Территориальный Менеджмент Team</label>
+    <language>ru</language>
+    <sharedTo>
+        <role>PPR_Call_Center_Team_Leader</role>
+        <role>PPR_Field_Sales_Team_Leaders</role>
+    </sharedTo>
+</ListView>

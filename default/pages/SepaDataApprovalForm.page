@@ -1,0 +1,414 @@
+<apex:page controller="SepaDataApprovalFormController" action="{! init }" standardStylesheets="false" sidebar="false" showHeader="false">    
+    <apex:stylesheet value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/jquery-ui.css') }"/>
+    <apex:stylesheet value="{!URLFOR($Resource.bootstrap_3_3_7,'bootstrap-3.3.7/css/desktop_bootstrap.min.css')}"/>
+    <apex:stylesheet value="{!$Resource.e2e_style_de_desktop}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.E2ESpinner, 'spinner.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.bootstrap_3_3_7,'bootstrap-3.3.7/css/non-responsive.css')}"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"/>
+
+    <link rel="shortcut icon" href="{!$Resource.FleetcorFavicon}" type="image/x-icon; charset=binary"/>
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!$Resource.SepaApprovalScripts}"/>
+    <apex:includeScript value="{!URLFOR($Resource.bootstrap_3_3_7,'bootstrap-3.3.7/js/bootstrap.min.js')}"/>
+
+    <style>
+        .i-error {
+            display: inline-block;
+            margin-right: 5px;
+            vertical-align: top;
+            font-family: 'Montserrat';
+            font-weight: 500;
+            width: 16px;
+            height: 16px;
+            font-weight: bold;
+            line-height: 15px;
+            text-align: center;
+            border-radius: 100%;
+            cursor: default;
+            font-size: 10px;
+            border: 1px solid #EE3A43;
+            color: #EE3A43;
+            opacity: 0.8;
+            text-decoration: none;
+        }    
+        .checkbox label::after {
+            display: inline-block;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            left: 0;
+            top: 3px;
+            margin-left: -20px;
+            color: #555555;
+            -webkit-transform: unset;
+            -ms-transform: unset;
+            transform: unset;
+        }
+        .checkbox input[type="checkbox"]:checked + label::after {
+            content: "";
+            background: url({!URLFOR($Resource.e2e_images, 'check.png')});
+        }
+        .message {
+            padding: 35px 0 0 0;
+        }
+        .message .messageTable {
+            margin: 0 auto !important;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .confirmM3,
+        .confirmMessage {
+            color: green;
+            text-align: center;
+            font-size: 18px;
+        }
+        .errorM3,
+        .errorMessage {
+            color: red;
+            text-align: center;
+            font-size: 18px;
+        }
+        .errorM3 h4 {
+            display: none;
+        }
+        .confirmM3 h4 {
+            display: none;
+        } 
+
+        .error-page .wrapper {
+            width: 100%;
+        }
+    </style>
+    <apex:form id="formId">
+        <title>{! stepPagesMap['HEADER'].elements['SEPA APPROVE HEADER']['VALUE'].value }</title>      
+        <body class="modal-open" style="overflow: auto">
+            <span id="top"></span>
+            <main>
+                <apex:actionStatus id="splashStatus" onstart="startSplash();" onstop="endSplash();"/>
+                <div class="splashStatus" id="splashDiv">
+                    <div class="circle"><img src="{!URLFOR($Resource.e2e_images, 'preloader-loop.gif')}"/></div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="b-page-logo">
+                            <apex:image url="{!URLFOR($Resource.e2e_images, 'm-logo.png')}"/>
+                        </div>
+                    </div>
+                    <apex:outputPanel id="pageHeader" layout="block" styleClass="row">
+                        <apex:outputPanel layout="block" styleClass="b-page-header" style="margin-bottom: 20px;">
+                            {! stepPagesMap['HEADER'].elements['SEPA APPROVE HEADER']['VALUE'].value }
+                        </apex:outputPanel>                                    
+                    </apex:outputPanel>    
+                    <apex:outputPanel id="formBlock" styleClass="sepa-content" rendered="{! NOT(isApproved) }">   
+                        <div class="b-block-form">
+                            <div class="row">
+                                <div class="col-lg-12">                                                             
+                                    <div class="wrapper">
+                                        <div class="message">
+                                            <div class="errorMessage">{! errorMessage }</div>
+                                        </div> 
+                                        <div class="row form-group">
+                                            <div class="account-holder block" style="margin-top: 30px;">
+                                                <div class="col-lg-3">
+                                                    <apex:outputLabel value="{! stepPagesMap['PAYMENT OPTIONS'].fields['ACCOUNT HOLDER'].elementItemsMap['LABEL'].value }" 
+                                                        styleClass="f-label">
+                                                        <span class="f-required">{! stepPagesMap['PAYMENT OPTIONS'].fields['ACCOUNT HOLDER'].elementItemsMap['ASTERISK'].value }</span>
+                                                    </apex:outputLabel>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <apex:inputText id="accountHolder" 
+                                                        value="{! accountHolderName }" 
+                                                        required="false" 
+                                                        styleClass="inline-block form-control required input"
+                                                        label="Account holder" 
+                                                        onkeyup="updateSepaDocument(); return false;" 
+                                                        maxLength="40" style="width: 95%"/>
+                                                    <span class="glyphicon glyphicon-ok" style="display:none"></span>
+                                                    <apex:outputPanel layout="block" styleClass="invalid-feedback invalid-feedback-account-holder"><div class="i-error">!</div>{! stepPagesMap['PAYMENT OPTIONS'].fields['ACCOUNT HOLDER'].elementItemsMap['WARN MESSAGE'].value }</apex:outputPanel>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group iban-group">
+                                            <div class="iban block">
+                                                <div class="col-lg-3">
+                                                    <apex:outputLabel value="{! stepPagesMap['PAYMENT OPTIONS'].fields['IBAN'].elementItemsMap['LABEL'].value }" 
+                                                        styleClass="f-label">
+                                                        <span class="f-required">{! stepPagesMap['PAYMENT OPTIONS'].fields['IBAN'].elementItemsMap['ASTERISK'].value }</span>
+                                                    </apex:outputLabel>
+                                                    <div class="i-helper inline-block" data-content="{! stepPagesMap['PAYMENT OPTIONS'].fields['IBAN'].elementItemsMap['HELP'].value }" data-trigger="hover" style="vertical-align: text-top"
+                                                         data-container="body" data-toggle="popover" data-placement="bottom">?</div>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <apex:inputText id="IBAN" 
+                                                        value="{! iban }" 
+                                                        required="false" 
+                                                        style="width: 95%"
+                                                        styleClass="inline-block form-control required input"
+                                                        label="{! stepPagesMap['PAYMENT OPTIONS'].fields['IBAN'].elementItemsMap['LABEL'].value }"
+                                                        onkeyup="updateSepaDocument(); return false;"/>
+                                                    <span class="glyphicon glyphicon-ok" style="display:none"></span>
+                                                    <apex:outputPanel layout="block" styleClass="invalid-feedback invalid-feedback-iban"><div class="i-error">!</div>{! stepPagesMap['PAYMENT OPTIONS'].fields['IBAN'].elementItemsMap['WARN MESSAGE'].value }</apex:outputPanel>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="swift block">
+                                                <div class="col-lg-3">
+                                                    <apex:outputLabel value="{! stepPagesMap['PAYMENT OPTIONS'].fields['SWIFT'].elementItemsMap['LABEL'].value }" 
+                                                        styleClass="f-label">
+                                                        <span class="f-required">{! stepPagesMap['PAYMENT OPTIONS'].fields['SWIFT'].elementItemsMap['ASTERISK'].value }</span>
+                                                    </apex:outputLabel>
+                                                    <div class="i-helper inline-block" data-content="{! stepPagesMap['PAYMENT OPTIONS'].fields['SWIFT'].elementItemsMap['HELP'].value }" data-trigger="hover" style="vertical-align: text-top"
+                                                         data-container="body" data-toggle="popover" data-placement="bottom">?</div>
+                                                </div>
+                                                <div class="col-lg-9">
+                                                    <apex:inputText id="SWIFT" 
+                                                        value="{! swift }" 
+                                                        required="false" 
+                                                        style="width: 95%"
+                                                        styleClass="inline-block form-control required input"
+                                                        label="{! stepPagesMap['PAYMENT OPTIONS'].fields['SWIFT'].elementItemsMap['LABEL'].value }"
+                                                        onkeyup="updateSepaDocument(); return false;"/>
+                                                    <span class="glyphicon glyphicon-ok" style="display:none"></span>
+                                                    <apex:outputPanel layout="block" styleClass="invalid-feedback invalid-feedback-swift"><div class="i-error">!</div>{! stepPagesMap['PAYMENT OPTIONS'].fields['SWIFT'].elementItemsMap['WARN MESSAGE'].value }</apex:outputPanel>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="b-grey-block" style="margin-top: 10px">
+                                            <div class="b-block-header row" style="margin: 15px 0px 12px 15px;">
+                                                <div style="width: 75%; float: left;">
+                                                    <apex:outputPanel rendered="{! convertOpp.Direct_Debit_Mandate_Type__c = 'Core' }">
+                                                        {! stepPagesMap['PAYMENT OPTIONS'].elements['DD SEPA']['HEADING'].value }
+                                                        <div class="i-helper inline-block" 
+                                                            data-content="{! stepPagesMap['PAYMENT OPTIONS'].elements['DD SEPA']['HELP'].value }" 
+                                                            data-trigger="hover" 
+                                                            style="vertical-align: middle"
+                                                            data-container="body" 
+                                                            data-toggle="popover" 
+                                                            data-placement="bottom">?</div>
+                                                    </apex:outputPanel>
+                                                    <apex:outputPanel rendered="{! convertOpp.Direct_Debit_Mandate_Type__c = 'B2B' }">
+                                                        {! stepPagesMap['PAYMENT OPTIONS'].elements['DD SEPA']['HEADING B2B'].value }
+                                                        <div class="i-helper inline-block" 
+                                                            data-content="{! stepPagesMap['PAYMENT OPTIONS'].elements['DD SEPA']['HELP B2B'].value }" 
+                                                            data-trigger="hover" 
+                                                            style="vertical-align: middle; margin-left: 0;"
+                                                            data-container="body" 
+                                                            data-toggle="popover" 
+                                                            data-placement="bottom">?</div>
+                                                    </apex:outputPanel>
+                                                </div>
+                                                <div style="width: 25%; float: left;">
+                                                    <div class="pull-right" style="margin-right: 20px;">
+                                                        <a class="btn btn-xs payment-modal" 
+                                                           onclick="printDocument('frameSepaMandate');">
+                                                            <apex:image url="{!URLFOR($Resource.e2e_images, "print.png" )}" height="20px" width="20px"/>
+                                                        </a>
+                                                    </div>
+                                                    <div class="pull-right" style="margin-right: 10px;">
+                                                        <a class="btn btn-xs payment-modal" onclick="prepareDownloadSepaBlock();return false;" >
+                                                            <apex:image url="{!URLFOR($Resource.e2e_images, "download.png" )}" height="20px" width="20px"/>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <apex:outputPanel rendered="{! convertOpp.Direct_Debit_Mandate_Type__c = 'B2B' }">
+                                                <div style="margin: 0px 15px 12px 15px;">
+                                                    {! stepPagesMap['PAYMENT OPTIONS'].elements['DD SEPA']['DESCRIPTION B2B MANUAL'].value }
+                                                </div>
+                                            </apex:outputPanel>
+                                            <div class="payment-agreement-block">
+                                                <div style="margin-left: 15px; height:400px;">
+                                                    <apex:iframe id="frameSepaMandate" scrolling="true"
+                                                                src="{! stepPagesMap['PAYMENT OPTIONS'].elements['DD SEPA']['IFRAME URL'].value }" width="100%" height="99.9%">
+                                                    </apex:iframe>
+                                                </div>
+                                            </div>
+                                            <div class="form-check" style="margin: 20px 20px 0 0;">
+                                                <div class="checkbox checkbox-red"  style="margin: 12px 40px 20px 42px;">
+                                                    <apex:inputCheckbox value="{! stepPagesMap['PAYMENT OPTIONS'].fields['ACCEPT SEPA'].elementItemsMap['VALUE'].value }"
+                                                        styleClass="form-check-input" 
+                                                        id="checkboxDirectDebit1"/>
+                                                    <apex:outputLabel value="{! IF(convertOpp.Direct_Debit_Mandate_Type__c = 'Core', stepPagesMap['PAYMENT OPTIONS'].fields['ACCEPT SEPA'].elementItemsMap['LABEL'].value, stepPagesMap['PAYMENT OPTIONS'].fields['ACCEPT SEPA'].elementItemsMap['LABEL B2B'].value) }" 
+                                                        styleClass="form-check-label" for="checkboxDirectDebit1"/>
+                                                </div>
+                                                <div class="checkbox checkbox-red" style="margin: 12px 40px 20px 42px;">
+                                                    <apex:inputCheckbox value="{! stepPagesMap['PAYMENT OPTIONS'].fields['DECISION'].elementItemsMap['VALUE'].value }"
+                                                                        styleClass="form-check-input" id="checkboxDirectDebit2"/>
+                                                    <apex:outputLabel value="{! stepPagesMap['PAYMENT OPTIONS'].fields['DECISION'].elementItemsMap['LABEL PART 1'].value } {! convertOpp.Account.Name } {! stepPagesMap['PAYMENT OPTIONS'].fields['DECISION'].elementItemsMap['LABEL PART 2'].value }"
+                                                                      styleClass="form-check-label" for="checkboxDirectDebit2"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="text-align: center;">
+                                            <div class="buttons center-block" 
+                                                style="width: 91%; margin-top: 30px;">  
+                                                <apex:commandLink value="{! IF(convertOpp.Account.BillingCountry = 'Germany', 'Bestätigen',
+                                                                IF(OR(convertOpp.Account.BillingCountry = 'Netherlands', convertOpp.Account.BillingCountry = 'Belgium-NL'), 'Bevestigen',
+                                                                    IF(OR(convertOpp.Account.BillingCountry = 'France', convertOpp.Account.BillingCountry = 'Belgium-FR'), 'Soumettre',
+                                                                        'Bestätigen')))}" 
+                                                    action="{! doDataApproval }" 
+                                                    styleClass="btn btn-red continue"
+                                                    style="float: none;"
+                                                    reRender="formId"
+                                                    oncomplete="scrollToTop('top'); runValidation(); onPageRender();"
+                                                    status="splashStatus"/> 
+                                            </div>
+                                        </div>                                
+                                    </div>                      
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel layout="block" styleClass="error-page" rendered="{! isApproved }">
+                        <div class="wrapper">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <apex:outputPanel layout="block" styleClass="b-block-header">
+                                        {! stepPagesMap['SEPA APPROVE SUCCESS'].elements['TOP HEADING']['HEADING'].value }
+                                    </apex:outputPanel>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="error-text">
+                                        <apex:outputPanel layout="block">
+                                            {! stepPagesMap['SEPA APPROVE SUCCESS'].elements['DESCRIPTION']['VALUE'].value }
+                                        </apex:outputPanel>
+                                    </div>
+                                </div>
+                            </div><br/>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="error-text">
+                                        <apex:outputPanel layout="block">
+                                        {! stepPagesMap['SEPA APPROVE SUCCESS'].elements['FEEDBACK HEADING']['HEADING'].value }<br/>
+                                                    {! stepPagesMap['SEPA APPROVE SUCCESS'].elements['PHONE']['VALUE'].value }<br/>
+                                                    {! stepPagesMap['SEPA APPROVE SUCCESS'].elements['EMAIL']['VALUE'].value }<br/>
+                                                    {! stepPagesMap['SEPA APPROVE SUCCESS'].elements['WORK TIME']['VALUE'].value }
+                                        </apex:outputPanel>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="b-splitter"></div>
+                            <div class="row">
+                                <div class="buttons return">
+                                    <div class="col-lg-12">
+                                        <a href="{! stepPagesMap['SEPA APPROVE SUCCESS'].elements['RETURN TO SITE BUTTON']['URL'].value }" class="btn btn-gray" style="min-width: 130px">
+                                                {! stepPagesMap['SEPA APPROVE SUCCESS'].elements['RETURN TO SITE BUTTON']['BUTTON NAME'].value }
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>                    
+                </div>
+                <div class="lightbox"></div>
+            </main>         
+        </body>  
+        <apex:actionFunction id="prepareDownloadSepaBlock" name="prepareDownloadSepaBlock" action="{! updateSepaDownloadURL }" onComplete="downloadSepaBlock('{! sepaDownloadURL }');"/>
+        <apex:actionFunction id="updateSepaDocument" name="updateSepaDocument" reRender="updateSepaDocument" oncomplete="changeFieldsInSepa($('[id$=accountHolder]').val(), $('[id$=IBAN]').val(), $('[id$=SWIFT]').val(), 'frameSepaMandate'); return false;" />        
+        <script>
+            $(function() {
+                $('[data-toggle="popover"]').popover();
+            });
+            function onPageRender() {
+                $('[data-toggle="popover"]').popover();
+            }
+
+            function printDocument(frameId, docId, frameWrap) {
+                var contentFullSize = $('#' + frameId).contents().find('#' + docId).height();
+                var originalContentSize = $('#' + frameId).contents().height();
+                // set full iframe size
+                $('#' + frameId).contents().find('.mainform').attr('style','height: ' + contentFullSize);
+                $('.' + frameWrap).attr('style','height: ' + contentFullSize);
+                // set scroll top
+                $('#' + frameId).contents().find('.mCSB_container').attr('style', 'position: relative; top: 0px; left: 0px;');
+                // printing
+                document.getElementById(frameId).contentWindow.print();
+                // back to original iframe size
+                $('#' + frameId).contents().find('.mainform').attr('style','height: ' + originalContentSize + 'px');
+                $('.' + frameWrap).attr('style','height: ' + originalContentSize + 'px');
+            }            
+
+            function downloadSepaBlock(url) {
+                console.log('=== ' + url);
+                document.location.href=url;
+            }
+
+            function changeFieldsInSepa(accHolder, iban, swift, frameID) {
+                var sepaFrame = document.getElementById(frameID);
+                var sepaFrameDocument = (sepaFrame.contentWindow || sepaFrame.contentDocument);
+                if (sepaFrameDocument.document) {
+                    sepaFrameDocument = sepaFrameDocument.document;
+                    var dynamicAccountHolder = sepaFrameDocument.getElementById('frameAccountHolder');
+                    dynamicAccountHolder.innerHTML = accHolder;
+                    var dynamicIBAN = sepaFrameDocument.getElementById('frameSepaIBAN');
+                    dynamicIBAN.innerHTML = iban;
+                    var dynamicSWIFT = sepaFrameDocument.getElementById('frameSepaSWIFT');
+                    dynamicSWIFT.innerHTML = swift;
+                }
+            }        
+            //Function is used to get splash status bar when server side call is going on
+            function startSplash() {
+                document.getElementById('splashDiv').style.display='table-cell';
+                jQuery('.lightbox').fadeIn(50);
+            }
+
+            //Function will make the splash status to be stopped.
+            function endSplash() {
+                document.getElementById('splashDiv').style.display='none';
+                jQuery('.lightbox').fadeOut(50);
+            }
+
+            function getCookie(name) {
+                var value = "; " + document.cookie;
+                var parts = value.split("; " + name + "=");
+                if (parts.length == 2) return parts.pop().split(";").shift();
+            }
+            function scrollToTop(id) {
+                document.querySelector('#'+id).scrollIntoView();
+            }
+        </script>
+        <apex:outputPanel rendered="{! country = 'Germany' }">
+            <script>
+                var regs = {
+                    letters: /^[a-zA-ZÀ-ž\x7f-\xff\s'-]+$/,
+                    swiftFormat: /^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$/,
+                    ibanFormat: /(^[Dd]{1}[Ee]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{2}?$|^[Aa]{1}[Tt]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}?$|^[Ll]{1}[Uu]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}?$|^[Nn]{1}[Ll]{1}[0-9]{2}[A-Za-z]{4}[0-9]{10}?$|^[Bb]{1}[Ee]{1}[0-9]{14}?$|^[Ff]{1}[Rr]{1}[0-9]{12}[A-Za-z0-9]{11}[0-9]{2}?$)/
+                };                                  
+            </script>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{! country = 'Netherlands' }">
+            <script>
+                var regs = {
+                    letters: /^[a-zA-ZÀ-ž\x7f-\xff\s'-]+$/,
+                    swiftFormat: /^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$/,
+                    ibanFormat: /(^[Dd]{1}[Ee]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{2}?$|^[Aa]{1}[Tt]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}?$|^[Ll]{1}[Uu]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}?$|^[Nn]{1}[Ll]{1}[0-9]{2}[A-Za-z]{4}[0-9]{10}?$|^[Bb]{1}[Ee]{1}[0-9]{14}?$|^[Ff]{1}[Rr]{1}[0-9]{12}[A-Za-z0-9]{11}[0-9]{2}?$)/
+                };                                  
+            </script>
+        </apex:outputPanel>  
+        <apex:outputPanel rendered="{! OR(country = 'Belgium-FR', country = 'Belgium-NL') }">
+            <script>
+                var regs = {
+                    letters: /^[a-zA-ZÀ-ž\x7f-\xff\s'-]+$/,
+                    swiftFormat: /^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$/,
+                    ibanFormat: /(^[Dd]{1}[Ee]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{2}?$|^[Aa]{1}[Tt]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}?$|^[Ll]{1}[Uu]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}?$|^[Nn]{1}[Ll]{1}[0-9]{2}[A-Za-z]{4}[0-9]{10}?$|^[Bb]{1}[Ee]{1}[0-9]{14}?$|^[Ff]{1}[Rr]{1}[0-9]{12}[A-Za-z0-9]{11}[0-9]{2}?$)/
+                };                                  
+            </script>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{! country = 'France' }">
+            <script>
+                var regs = {
+                    letters: /^[a-zA-ZÀ-ž\x7f-\xff\s'-]+$/,
+                    swiftFormat: /^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$/,
+                    ibanFormat: /(^[Dd]{1}[Ee]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{2}?$|^[Aa]{1}[Tt]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}?$|^[Ll]{1}[Uu]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}?$|^[Nn]{1}[Ll]{1}[0-9]{2}[A-Za-z]{4}[0-9]{10}?$|^[Bb]{1}[Ee]{1}[0-9]{14}?$|^[Ff]{1}[Rr]{1}[0-9]{12}[A-Za-z0-9]{11}[0-9]{2}?$)/
+                };                                  
+            </script>
+        </apex:outputPanel>                     
+        <script>
+            runValidation();
+        </script>
+    </apex:form>
+</apex:page>

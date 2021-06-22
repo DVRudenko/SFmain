@@ -1,0 +1,72 @@
+<aura:component controller="GFNI_DashboardCtrl" extends="c:BaseComponent">
+
+    <aura:attribute name="isSelectAll" type="Boolean" default="false"/>
+    <aura:attribute name="isIndeterminate" type="Boolean" default="false"/>
+    <aura:attribute name="currency" type="String" default="EUR"/>
+    <aura:attribute name="hasSelected" type="Boolean"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:registerEvent name="ResendInvoiceButtonEvent" type="c:ResendInvoiceButtonEvent"/>
+
+    <lightning:card iconName="doctype:gdoc" class="slds-card_boundary slds-m-around_large">
+        <aura:set attribute="title">
+            <a href="{!v.landingPageLink}" target="_blank">Billing Documents (GFN)</a>
+        </aura:set>
+        <aura:set attribute="actions">
+            <lightning:button onclick="{! c.handleResendButton }" disabled="{!!v.hasSelected}">Resend</lightning:button>
+        </aura:set>
+
+        <div class="slds-card__body_inner">
+            <aura:if isTrue="{!empty(v.itemList)}">
+                <span class="slds-text-title_caps slds-align_absolute-center">{!v.errorMessage}</span>
+                <aura:set attribute="else">
+                    <div class="slds-scrollable slds-card_boundary slds-table_bordered">
+                        <table class="slds-table slds-table_striped">
+                            <thead>
+                                <tr class="slds-text-title_caps">
+                                    <th class="slds-text-body_small slds-p-right_none">
+                                        <div class="slds-form-element">
+                                            <div class="slds-form-element__control">
+                                                <span class="slds-checkbox" >
+                                                    <input id="{!globalId + '_select-all-checkbox'}" type="checkbox" name="options" aura:id="checkbox-indeterminate-01" checked="{!v.isSelectAll}" indeterminate="{!v.isIndeterminate}" onchange="{!c.handleClickCheckbox}"/>
+                                                    <label class="slds-checkbox__label" for="{!globalId + '_select-all-checkbox'}">
+                                                        <span class="slds-checkbox_faux"></span>
+                                                        <span class="slds-form-element__label"></span>
+                                                    </label>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <aura:iteration items="{!v.tableHead}" var="columnName">
+                                        <th>
+                                            <div class="slds-truncate">{!columnName}</div>
+                                        </th>
+                                    </aura:iteration>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.itemList}" var="info">
+                                    <tr>
+                                        <td><lightning:input aura:id="checkbox" onchange="{!c.handleSimpleCheckboxClick}" type="checkbox" checked="{!info.Checked}" name="{!info.DocumentNumber}"></lightning:input></td>
+                                        <td><a class="slds-text-title slds-text-color_default" target="_blank" name="{!info.DocumentNumber}" onclick="{!c.openDocument}" >{!info.DocumentNumber}</a></td>
+                                        <td><div class="slds-text-title slds-text-color_default">{!info.DocumentType}</div></td>
+                                        <td><div class="slds-text-title slds-text-color_default">{!info.DocumentDate}</div></td>
+                                        <td><div class="slds-text-title slds-text-color_default">{!info.TotalGross}</div></td>
+                                        <td><div class="slds-text-title slds-text-color_default">{!info.AmountAllocated}</div></td>
+                                        <!-- <td><div class="slds-text-title slds-text-color_default">N/A</div></td> -->
+                                        <td><div class="slds-text-title slds-text-color_default">{!info.PaymentDueDate}</div></td>
+                                        <td><div class="slds-text-title slds-text-color_default">{!info.Delco}</div></td>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+        <aura:set attribute="footer">
+            <a  class="slds-button slds-button_neutral slds-size_1-of-1" href="{!v.landingPageLink}" target="_blank">See more - go to GFN</a>
+        </aura:set>
+    </lightning:card>
+</aura:component>

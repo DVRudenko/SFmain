@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMContactWorld__NvmNodeUrl__c</fullName>
+    <deprecated>false</deprecated>
+    <description>URL of NewVoiceMedia node. Must start with https:// and must not end with forward slash.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>URL of NewVoiceMedia node. Must start with https:// and must not end with forward slash.</inlineHelpText>
+    <label>NvmNodeUrl</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

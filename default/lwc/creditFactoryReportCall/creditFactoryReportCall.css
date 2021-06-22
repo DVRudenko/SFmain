@@ -1,0 +1,23 @@
+.call__title {
+    background: #16325c;
+    padding: 0.5rem;
+    display: block;
+}
+
+.call__button-wrapper {
+    margin: 1rem 1.75rem;
+}
+
+.call__spinner-wrap {
+    position: relative;
+    min-height: 150px;
+}
+
+.call__wrapper {
+    display: flex;
+}
+
+.call__choose-button {
+    margin-left: 1rem;
+    flex-shrink: 0;
+}

@@ -1,0 +1,30 @@
+<apex:page docType="html-5.0"
+           sideBar="false"
+           showHeader="false"
+           standardStylesheets="false"
+           cache="false">
+
+    <style>
+        body {
+            font-family: Courier, serif;
+            font-size: 12pt;
+        }
+
+        p {
+            margin-bottom: 4px;
+            margin-top: 4px;
+        }
+    </style>
+
+    <apex:outputPanel >
+        <p>Возможность с E2E формы стала неактивна (клиент остановил заполнение формы)</p>
+        <p>Статус возможности =  "{!$CurrentPage.parameters.E2E_Sub_Status__c}"</p>
+        <apex:outputPanel rendered="{!$CurrentPage.parameters.isManual == 'yes'}">
+            <p>Клиент выполнил ручную корректировку данных на форме</p>
+        </apex:outputPanel>
+        <p>
+            <span>Пожалуйста посмотрите информацию об это возможности по ссылке: </span>
+            <apex:outputLink value="{!$CurrentPage.parameters.domain + $CurrentPage.parameters.id}" target="_blank">{!$CurrentPage.parameters.Name}</apex:outputLink>
+        </p>
+    </apex:outputPanel>
+</apex:page>

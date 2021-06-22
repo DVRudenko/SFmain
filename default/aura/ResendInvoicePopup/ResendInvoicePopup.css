@@ -1,0 +1,36 @@
+.THIS .new-case-icon svg{
+    fill: #1B5297;
+}
+.THIS .slds-modal__container{
+    max-width: 60rem !important;
+}
+
+.THIS .spinner-container{
+    position: relative;
+    min-height: 32px;
+}
+
+.THIS .spinner{
+    position: absolute;    
+}
+
+.THIS .document-row{
+    display: inline;
+}
+
+.THIS .document-loading-error{
+    color: red;
+    padding-left: 32px;;
+}
+
+.THIS .disabled-doc-link{
+    cursor: not-allowed;
+    pointer-events: none;
+    color: rgb(144, 144, 144);
+}
+
+.THIS .toggle-button-label{
+    display: inline-block;
+    padding-left: 8px;
+    vertical-align: top;
+}

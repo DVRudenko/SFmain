@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMConnect__Priority_Less_Than_Zero</fullName>
+    <active>true</active>
+    <description>Priority cannot be less than zero.</description>
+    <errorConditionFormula>NVMConnect__Priority__c &lt; 0</errorConditionFormula>
+    <errorMessage>Priority cannot be less than zero.</errorMessage>
+</ValidationRule>

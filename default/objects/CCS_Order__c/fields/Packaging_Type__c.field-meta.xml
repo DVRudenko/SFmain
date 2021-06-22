@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Packaging_Type__c</fullName>
+    <description>&quot;Dárkové balení&quot; on CCS forms.</description>
+    <externalId>false</externalId>
+    <label>Packaging Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Without gift packaging</fullName>
+                <default>false</default>
+                <label>Without gift packaging</label>
+            </value>
+            <value>
+                <fullName>Christmas gift packaging</fullName>
+                <default>false</default>
+                <label>Christmas gift packaging</label>
+            </value>
+            <value>
+                <fullName>Birthday gift packaging</fullName>
+                <default>false</default>
+                <label>Birthday gift packaging</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

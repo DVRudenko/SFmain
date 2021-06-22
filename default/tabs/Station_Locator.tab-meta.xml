@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <frameHeight>650</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>Station Locator</label>
+    <motif>Custom3: Sun</motif>
+    <url>https://map.fuelcardsites.co.uk/eu/map.html?lang=de</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

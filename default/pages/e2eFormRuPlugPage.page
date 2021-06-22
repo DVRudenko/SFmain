@@ -1,0 +1,92 @@
+<apex:page id="e2eFormRuPlugPage" name="E2E Plug Page" docType="html-5.0" sideBar="false" showHeader="false"
+           standardStylesheets="false" cache="false">
+    <apex:form id="form" html-autocomplete="off">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}"/>
+            <apex:includeScript value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/jquery-ui.js') }"/>
+            <apex:stylesheet value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/jquery-ui.css') }"/>
+
+            <apex:includeScript value="{!URLFOR($Resource.bootstrap_3_3_7,'bootstrap-3.3.7/js/bootstrap.min.js')}"/>
+            <apex:stylesheet value="{!URLFOR($Resource.bootstrap_3_3_7,'bootstrap-3.3.7/css/bootstrap.min.css')}"/>
+
+            <apex:stylesheet value="{! $Resource.e2eRu_font_style }"/>
+            <apex:stylesheet value="{! $Resource.e2eRu_libs_min_css }"/>
+            <apex:stylesheet value="{! $Resource.e2eRu_style_dev }"/>
+            <apex:stylesheet value="{! $Resource.e2eRu_styles }"/>
+            <apex:stylesheet value="{! $Resource.e2eRu_style_main }"/>
+            <apex:includeScript value="{!$Resource.e2eRu_libs_min}"/>
+
+            <link rel="icon" type="image/png; charset=binary" href="{!$Resource.PPRFavicon}"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+            <style>
+                @font-face {
+                    font-family: Proxima Nova light;
+                    src: url({!URLFOR($Resource.e2eRu_online_fonts,'proximanova-light-webfont.eot')});
+                    src: url({!URLFOR($Resource.e2eRu_online_fonts,'proximanova-light-webfont.eot?#iefix')}) format('embedded-opentype'),
+                        url({!URLFOR($Resource.e2eRu_online_fonts,'proximanova-light-webfont.woff2')}) format('woff2'),
+                        url({!URLFOR($Resource.e2eRu_online_fonts,'proximanova-light-webfont.woff')}) format('woff'),
+                        url({!URLFOR($Resource.e2eRu_online_fonts,'proximanova-light-webfont.ttf')}) format('truetype'),
+                        url({!URLFOR($Resource.e2eRu_online_fonts,'proximanova-light-webfont.svg#icon')}) format('svg');
+                    font-weight: 300;
+                    font-style: normal
+                }
+
+                body {
+                    position: relative;
+                    margin: 0;
+                    padding-bottom: 6rem;
+                    min-height: 100%;
+                }
+
+                footer {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+            </style>
+        </head>
+        <body>
+            <apex:outputPanel layout="block" styleClass="ppr-header">
+                <apex:outputPanel layout="block" styleClass="default" style="padding: 30px 0px 30px 0px;">
+                    <div>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.petrolplus.ru/">
+                            <img src="{!URLFOR($Resource.e2eRu_images, 'ppr-logo.png')}" height="73px"/>
+                        </a>
+                    </div>
+                </apex:outputPanel>
+                <apex:outputPanel layout="block" styleClass="ppr-header-line"/>
+                <apex:outputPanel layout="block" styleClass="default">Заявка на карты компании Передовые Платежные Решения</apex:outputPanel>
+            </apex:outputPanel>
+
+            <div class="default" style="margin-top: 18px;">
+                <apex:outputPanel layout="block" id="errorProcessing">
+                    <apex:outputPanel layout="block"  styleClass="b-error">
+                        <apex:outputPanel layout="block" styleClass="error-header">Сообщение</apex:outputPanel>
+                        <apex:outputPanel layout="block" styleClass="error-text">
+                            <apex:outputPanel layout="block" styleClass="error-content">
+                                Произошла ошибка. К сожалению, в данный момент мы не можем обработать Вашу заявку. Пожалуйста, обратитесь к нашим консультантам: 8 (800) 333-33-41
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" styleClass="error-footer">
+
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </div>
+
+            <apex:outputPanel layout="block">
+                <footer class="ppr-footer">
+                    <div class="default">
+                        <div>© 2020, «Передовые Платежные Решения»</div>
+                        <div style="padding-top:10px;">Вся представленная информация на данном сайте носит информационный
+                            характер, и ни при каких условиях не является публичной или иной офертой,
+                            определяемой положениями Гражданского кодекса РФ.
+                        </div>
+                    </div>
+                </footer>
+            </apex:outputPanel>
+        </body>
+    </apex:form>
+</apex:page>

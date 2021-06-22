@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InboundLeads</fullName>
+    <booleanFilter>1</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.COUNTRY_CODE</columns>
+    <columns>LEAD.RECORDTYPE</columns>
+    <columns>Lead_Chat_History__c</columns>
+    <columns>Quali_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>UPDATEDBY_USER.ALIAS</field>
+        <operation>equals</operation>
+        <value>asand</value>
+    </filters>
+    <label>Inbound Leads to transfer</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>Teamleiters</group>
+    </sharedTo>
+</ListView>

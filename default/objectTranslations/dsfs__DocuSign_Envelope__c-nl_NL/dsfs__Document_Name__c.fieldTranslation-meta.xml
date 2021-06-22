@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Dit is een lijst van PDF-documenten die zich op het tabblad Documenten van Salesforce van uw organisatie bevinden. Voeg een PDF toe aan een van de mappen op het tabblad Documenten in Salesfore om te verzenden met DocuSign. Om andere indelingen te verzenden, klikt u op Meer informatie.</help>
+    <label><!-- Document Name --></label>
+    <name>dsfs__Document_Name__c</name>
+</CustomFieldTranslation>

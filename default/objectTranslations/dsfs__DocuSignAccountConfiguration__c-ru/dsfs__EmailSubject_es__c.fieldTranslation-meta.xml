@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Этот используемый по умолчанию текст темы сообщения электронной почты с учетом внесенных здесь изменений будет отображаться в строке темы уведомления для получателей DocuSign о необходимости поставить подпись.</help>
+    <label><!-- EmailSubject_es --></label>
+    <name>dsfs__EmailSubject_es__c</name>
+</CustomFieldTranslation>

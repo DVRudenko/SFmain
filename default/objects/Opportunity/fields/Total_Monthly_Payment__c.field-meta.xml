@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Monthly_Payment__c</fullName>
+    <externalId>false</externalId>
+    <label>Total Monthly Payment</label>
+    <summarizedField>Carnet_Unit__c.Total_Monthly_Payment__c</summarizedField>
+    <summaryForeignKey>Carnet_Unit__c.Opportunity__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

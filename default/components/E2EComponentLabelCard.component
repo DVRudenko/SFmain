@@ -1,0 +1,26 @@
+<!--
+ - Created by Yury on 28.04.2020.
+ -->
+
+<apex:component id="E2EComponentLabelCard">
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map" />
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="value of outputPanel" />
+
+    <apex:attribute name="labelClass"
+                    type="String"
+                    description="class for label" />
+
+    <apex:attribute name="forElement"
+                    type="String"
+                    description="elements id" />
+
+    <apex:outputLabel for="{!IF(forElement == null, '', forElement)}"
+                      value="{!pageMap[field].elementItemsMap['LABEL_COST'].value}"
+                      styleClass="{!IF(labelClass == null, '', labelClass)}"
+    />
+</apex:component>

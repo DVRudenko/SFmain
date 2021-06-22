@@ -1,0 +1,247 @@
+<!--
+ - Created by Nikita.Mikhailov on 08.05.2018.
+ -->
+
+<apex:page id="DashboardTopDealsPPR" controller="DashboardTopDealsPPRCtrl" action="{!init}" sideBar="false" showHeader="false" >
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+
+    <apex:form >
+        <style>
+            .greenLink {
+                color: green !important;
+                font-weight: bold;
+            }
+
+            .orangeLink {
+                color: orange !important;
+                font-weight: bold;
+            }
+
+            .redLink {
+                color: red !important;
+                font-weight: bold;
+            }
+
+            .link {
+                color: black !important;
+                font-weight: bold;
+            }
+
+            .legendbox {
+                display: inline-block;
+                height: 12px;
+                width: 12px;
+                margin: 0 3px 0 5px;
+            }
+        </style>
+        <apex:pageBlock >
+            <apex:outputPanel layout="block" style="display: inline-block; width: 100%">
+                <apex:outputPanel layout="block" style="display: inline-block; width: 95%; text-align: left; font-size: 15px;">
+                    <apex:outputPanel layout="block" style="display: inline-block">
+                        <h1>Топ {!recordsLimit} возможностей за</h1>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" style="display: inline-block; margin-left: 5px;">
+                        <apex:selectList value="{! selectedPeriod }" size="1" multiselect="false">
+                            <apex:selectOptions value="{! periodsList }"/>
+                            <apex:actionSupport action="{! changePeriod }" event="onchange" onSubmit="smthgChanged()"/>
+                        </apex:selectList>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" style="display: inline-block; margin-left: 5px;">
+                        <apex:selectList value="{! selectedYear }" size="1" multiselect="false">
+                            <apex:selectOptions value="{! yearsList }"/>
+                            <apex:actionSupport action="{! changeYear }" event="onchange" onSubmit="smthgChanged()"/>
+                        </apex:selectList>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" style="display: inline-block; margin-left: 5px;">
+                        <h1>({! startDateOfMonthString } - {! endDateOfMonthString }).</h1>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" style="display: inline-block;">
+                        <apex:outputPanel layout="block" style="display: inline-block; margin-left: 5px;">
+                            <h1>Роль</h1>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" style="display: inline-block; margin-left: 5px;">
+                            <apex:selectList value="{!selectedRole}" size="1" multiSelect="false">
+                                <apex:selectOptions value="{!rolesList}"/>
+                                <apex:actionSupport action="{!changeRole}" event="onchange" onSubmit="smthgChanged()"/>
+                            </apex:selectList>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" style="display: inline-block;">
+                        <apex:outputPanel layout="block" style="display: inline-block; margin-left: 5px;">
+                            <h1>Пользователь</h1>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" style="display: inline-block; margin-left: 5px;">
+                            <apex:selectList value="{!lookInUser}" size="1" multiSelect="false">
+                                <apex:selectOptions value="{!lookInUserList}"/>
+                                <apex:actionSupport action="{!changeLookInUser}" event="onchange" onSubmit="smthgChanged()"/>
+                            </apex:selectList>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block" style="display: inline-block;">
+                        <apex:outputPanel layout="block" style="display: inline-block; margin-left: 5px;">
+                            <h1>Условие</h1>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" style="display: inline-block; vertical-align: middle;">
+                            <apex:selectRadio value="{!topCondition}" layout="lineDirection" border="0" borderVisible="false">
+                                <apex:selectOptions value="{!topConditions}"/>
+                                <apex:actionSupport event="onchange" action="{!changeTopCondition}" onSubmit="smthgChanged()"/>
+                            </apex:selectRadio>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+                <apex:outputPanel layout="block" style="display: inline-block; width: 5%; text-align: right; vertical-align: top;">
+                    <apex:outputLink value="/articles/Knowledge/DashboardTop10HelpPPR" target="_blank" id="theLink">Справка</apex:outputLink>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            <apex:pageMessages />
+            <div>
+                <apex:outputPanel >
+                    <div id="salesteamleader" style="width: 100%; float: left;"></div>
+                </apex:outputPanel>
+                <div style="clear: both;"></div>
+            </div>
+            <div style="display: inline-block; width: 100%; text-align: center;">
+                <apex:outputPanel layout="block" style="display: inline-block; text-align: left; width: 33%">
+                    <apex:outputPanel layout="block" style="display: inline-block;">
+                        Отобразить топ
+                        <apex:selectList value="{!recordsLimit}" size="1" multiSelect="false" style="margin: 0 5px;">
+                            <apex:selectOptions value="{!limitsList}"/>
+                            <apex:actionSupport action="{!changeLimit}" onComplete="sizeChanged()" event="onchange" onSubmit="smthgChanged()"/>
+                        </apex:selectList> возможностей
+                    </apex:outputPanel>
+                </apex:outputPanel>
+                <apex:outputPanel layout="block" style="display: inline-block; text-align: center; width: 33%">
+                    <apex:outputPanel layout="block" style="display: inline-block;">
+                        Последний контакт
+                        <span style="background: green;" class="legendbox"/> -
+                        <span style="color: green;">менее 15 дней</span>,
+                        <span style="background: orange;" class="legendbox"/> -
+                        <span style="color: orange;">16-30 дней</span>,
+                        <span style="background: red;" class="legendbox"/> -
+                        <span style="color: red;">более 30 дней</span>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+                <apex:outputPanel layout="block" style="display: inline-block; text-align: left; width: 33%">
+                </apex:outputPanel>
+            </div>
+        </apex:pageBlock>
+        <script>
+
+            $(document).ready(function() {
+                //console.log('loaded from ready');
+                var event = new CustomEvent('loaded', {detail:'topDeals'});
+                window.parent.document.dispatchEvent(event);
+            });
+
+            function smthgChanged() {
+                //console.log('smthngChanged');
+                var event = new CustomEvent('smthngChanged', {detail:'topDeals'});
+                window.parent.document.dispatchEvent(event);
+            };
+
+            function sizeChanged(newHeight) {
+                var event = new CustomEvent('topSizeChanged', {detail:newHeight});
+                window.parent.document.dispatchEvent(event);
+            };
+
+            $(function () {
+                $div = $('#salesteamleader');
+                var newHeight = {!sortingList.size} * 35;
+                if(newHeight < 550)
+                {
+                    newHeight = 550;
+                }
+                sizeChanged(newHeight);
+                $div.css('height', newHeight);
+            });
+
+            function getSeriesName() {
+                if({!topCondition == 'Liters'}) {
+                    return 'Общий ожидаемый залив (л/месяц)'
+                }
+
+                if({!topCondition == 'Vehicles'}) {
+                    return 'Общее количество автотранспорта'
+                }
+            }
+
+            $(function () {
+                $('#salesteamleader').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                        <apex:repeat value="{! sortingList }" var="key">
+                '<a href="/{! key.Id }" class="{! IF(linkColorsMap[key.Id] = '1-15', "greenLink" , IF(linkColorsMap[key.Id] = '16-30', "orangeLink", IF(linkColorsMap[key.Id] = '30+', "redLink", "link"))) }" target="_blank"> {!JSENCODE(namesOfTopDealsMap[key.Id].Name) + ' (' + namesOfTopDealsMap[key.Id].Owner.Name + ')'}</a>',
+            </apex:repeat>
+            ],
+                labels: {
+                    useHTML: true
+                }
+            },
+                yAxis: [{
+                    min: 0,
+                    title: {
+                        text: ''
+                    },
+                    stackLabels: {
+                        enabled: true,
+                        style: {
+                            fontWeight: 'bold',
+                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                        }
+                    }
+                }],
+                        legend: {
+                    shadow: false,
+                            labelFormatter: function() {
+                        var total = 0;
+                        for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+                        return this.name + ': ' + total;
+                    }
+                },
+                exporting: { enabled: false },
+                credits: {
+                    enabled: false
+                },
+                tooltip: {
+                    enabled: false
+                },
+                plotOptions: {
+                    column: {
+                        grouping: false,
+                                shadow: false,
+                                borderWidth: 0
+                    },
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                                    formatter: function () {
+                                return this.y;
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: getSeriesName(),
+                    color: 'rgba(126,86,134,.9)',
+                    data: [<apex:repeat value="{! sortingList }" var="key">
+                        {! finalTopDealsMap[key.Id] },
+            </apex:repeat>],
+                pointPadding: -0.1,
+                        pointPlacement: 0.0
+            }]
+            });
+            });
+        </script>
+    </apex:form>
+</apex:page>

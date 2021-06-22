@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Этот флажок следует установить в том случае, если пользователю требуется добавить самого себя в качестве дополнительного получателя/отправителя данного документа. Пользователи, не установившие флажок, получат уведомление о подписании документа контактным лицом с помощью DocuSign, но сами не смогут подписать его.</help>
+    <label><!-- I will also Sign --></label>
+    <name>dsfs__I_will_Sign__c</name>
+</CustomFieldTranslation>

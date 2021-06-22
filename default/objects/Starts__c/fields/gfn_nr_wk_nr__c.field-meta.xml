@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gfn_nr_wk_nr__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Concatenated key containing GFN Number and Client Week Number to uniquely identify each row of Starts per customer per week</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Concatenated key containing GFN Number and Client Week Number to uniquely identify each row of Starts per customer per week</inlineHelpText>
+    <label>GFN_Nr_Wk_Nr</label>
+    <length>15</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

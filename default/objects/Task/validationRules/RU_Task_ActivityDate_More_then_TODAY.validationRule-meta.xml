@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RU_Task_ActivityDate_More_then_TODAY</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(   (CONTAINS(   Owner:User.UserRole.DeveloperName , &#39;PPR&#39;)  ||
+CONTAINS(   Owner:User.UserRole.DeveloperName , &#39;GPC&#39;) ) ,
+ActivityDate  &gt;  TODAY(),
+OR( ISPICKVAL( Status , &#39;Completed&#39;) ,
+ISPICKVAL( Status , &#39;Escalated&#39;),
+ISPICKVAL( Status , &#39;Unreached&#39;)))</errorConditionFormula>
+    <errorDisplayField>ActivityDate</errorDisplayField>
+    <errorMessage>Due date must meet or precede the present day.</errorMessage>
+</ValidationRule>

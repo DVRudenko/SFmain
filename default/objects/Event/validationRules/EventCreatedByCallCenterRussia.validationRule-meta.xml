@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EventCreatedByCallCenterRussia</fullName>
+    <active>true</active>
+    <description>SFG-40/ field territory call center manager can create events assigned on sales manager from field sales</description>
+    <errorConditionFormula>AND(
+ISNEW(),
+$UserRole.DeveloperName  = &#39;PPR_FieldTerritory_Call_Center&#39;,
+NOT(Owner:User.FieldSales_Territory__c) 
+)</errorConditionFormula>
+    <errorMessage>Please choose correct assignee of the event.</errorMessage>
+</ValidationRule>

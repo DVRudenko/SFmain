@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>PLZ (Registrierte Adresse)</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <name>billing_zip_account</name>
+</CustomFieldTranslation>

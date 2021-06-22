@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Permission_to_change_E2E_LeadSource</fullName>
+    <active>true</active>
+    <description>Only System Administrator and E2E Site Guest User are granted with permission to change Opportunity
+        Lead Source.
+    </description>
+    <errorConditionFormula>ISCHANGED( LeadSource) &amp;&amp;
+        E2E__c = true &amp;&amp;
+        NOT(ISNEW()) &amp;&amp;
+        $User.Alias != 'guest' &amp;&amp;
+        $Profile.Name != 'System Administrator' &amp;&amp;
+        $Profile.Name != 'API Only' &amp;&amp;
+        $Profile.Id != '00e20000001nSOB'
+    </errorConditionFormula>
+    <errorDisplayField>LeadSource</errorDisplayField>
+    <errorMessage>You don't have permission to change lead source</errorMessage>
+</ValidationRule>

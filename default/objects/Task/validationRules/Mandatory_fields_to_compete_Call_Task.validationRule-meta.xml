@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_fields_to_compete_Call_Task</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+RecordType.Name = &#39;Call&#39;,
+ISCHANGED( Status ),
+ISPICKVAL(Status, &#39;Completed&#39;),
+(
+ISBLANK(TEXT( Topic__c )) || ISBLANK(TEXT( Sub_topic__c ))||
+(ISBLANK( Account__r.Id ) &amp;&amp; $Profile.Name != &quot;Service Manager&quot;)
+)
+)</errorConditionFormula>
+    <errorMessage>In order to mark any Task as “Complete”, please fill in all mandatory fields: Topic, Sub topic, Due Date, Phone, Account.</errorMessage>
+</ValidationRule>

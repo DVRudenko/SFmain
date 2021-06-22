@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- LED diode for Acoustic signaling. --></help>
+    <label><!-- Acoustic signaling with LED --></label>
+    <name>Acoustic_signaling_with_LED_Amount__c</name>
+</CustomFieldTranslation>

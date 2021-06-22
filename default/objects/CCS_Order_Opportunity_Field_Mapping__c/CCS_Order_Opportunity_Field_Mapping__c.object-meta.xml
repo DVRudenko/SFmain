@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Field mapping from CCS Order Custom Object to Opportunity. Identify fields.</description>
+    <enableFeeds>false</enableFeeds>
+    <label>CCS Order and Opportunity Field Mapping</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMConnect__Feeder_List__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Feeder List</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Feeder list must be active and cannot be this list.</errorMessage>
+        <filterItems>
+            <field>NVMConnect__DialList__c.NVMConnect__Active__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </filterItems>
+        <filterItems>
+            <field>NVMConnect__DialList__c.Id</field>
+            <operation>notEqual</operation>
+            <valueField>$Source.NVMConnect__Blended_List__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>NVMConnect__DialList__c</referenceTo>
+    <relationshipLabel>Lists fed from this List</relationshipLabel>
+    <relationshipName>Feeder_List</relationshipName>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

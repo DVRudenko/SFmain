@@ -1,0 +1,31 @@
+<apex:page action="{! init}" Controller="LeadSetToContactedController">
+	<style>
+       	.homeTab .tertiaryPalette, 
+       	.individualPalette .homeBlock .tertiaryPalette,
+       	.layoutEdit .individualPalette .homeBlock .tertiaryPalette {
+       		background-color: black;
+       	}
+	</style>
+	<apex:form >
+		<apex:pageBlock >
+			<apex:pageMessages />
+			<apex:pageBlockSection title="Lead Status">
+				<apex:outputText label="Status" value="{! lead.Status}"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection title="New Task">
+				<apex:inputField label="Subject" value="{! task.Subject}" required="true"/>
+				<apex:inputField label="Due Date" value="{! task.ActivityDate}" required="true"/>
+				<apex:inputField label="Priority" value="{! task.Priority}" required="true"/>
+				<apex:inputField label="Description" value="{! task.Description}" required="true"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection title="Reminder">
+				<apex:inputField label="IsReminderSet" value="{! task.IsReminderSet}"/> 
+				<apex:inputField label="Reminder Due Date" value="{! task.ReminderDateTime}"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{! save}" value="Save"/>
+				<apex:commandButton action="{! cancel}" value="Cancel"/>
+			</apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

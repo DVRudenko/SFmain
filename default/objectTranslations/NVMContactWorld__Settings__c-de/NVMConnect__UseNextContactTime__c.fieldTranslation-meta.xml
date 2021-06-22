@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enabling usage of Next Contact Time field deciding when the focus object should be populated in a Dial List --></help>
+    <label><!-- Use Next Contact Time --></label>
+    <name>NVMConnect__UseNextContactTime__c</name>
+</CustomFieldTranslation>

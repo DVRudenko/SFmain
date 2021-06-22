@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WinBack_13_04_17</fullName>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Blocked_Cards__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>WinBack</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>bgonz</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,offen</value>
+    </filters>
+    <label>WinBack 13.04.17</label>
+    <language>de</language>
+    <sharedTo>
+        <role>Teamleiter_Outbound_1</role>
+        <role>Teamleiter_Outbound_2</role>
+        <role>Teamleiter_Outbound_3</role>
+        <role>Teamleiter_Outbound_4</role>
+        <role>Teamleiter_Outbound_5</role>
+    </sharedTo>
+</ListView>

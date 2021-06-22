@@ -1,0 +1,206 @@
+<apex:page controller="DashboardNewActivitiesCCSctrl" action="{! init }" sidebar="false" showHeader="false">
+	<apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+	<apex:form >
+		<apex:pageBlock >
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                    	<h1 style="margin-bottom: 10px; font-size: 15px; display: block;">New activities Report for 
+                    		<apex:selectList value="{! selectedPeriod }" size="1" multiselect="false" style="margin-left: 5px;">
+        	                    <apex:selectOptions value="{! periodsList }"/>
+        	                    <apex:actionSupport action="{! init }" event="onchange"/>
+                            </apex:selectList>
+                         	<apex:selectList value="{! selectedYear }" size="1" multiselect="false" style="margin: 0 5px;">
+                                <apex:selectOptions value="{! yearsList }"/>
+                                <apex:actionSupport action="{! changeYear }" event="onchange"/>
+                            </apex:selectList>({! startDateOfMonthString } - {! endDateOfMonthString })
+                        </h1>
+                    </td>
+                    <!-- <td style="text-align: right;">
+                        <apex:outputLink value="/articles/Knowledge/Help-page-for-Top-10-deals-in-progress-dashboard" target="_blank" id="theLink">Help</apex:outputLink>
+                    </td> -->
+                </tr>
+            </table>
+            <apex:pageMessages />
+            <div>
+	            <apex:outputPanel rendered="{! OR(currentUser.UserRole.Name == 'CCS Telesales Team Lead',
+	            								  currentUser.UserRole.Name == 'CCS SME Team Lead',
+                                                  currentUser.UserRole.Name == 'CCS CZ KAM Team Lead',
+                                                  currentUser.UserRole.Name == 'CCS CZ LAM Team Lead') }">
+	                <div id="salesteamleiter" style="width: 100%; float: left; height: 550px;"></div>
+	            </apex:outputPanel>
+	            <apex:outputPanel rendered="{! OR(currentUser.UserRole.Name == 'CCS CZ Telesales',  
+                                                  currentUser.UserRole.Name == 'CCS CZ SME',
+                                                  currentUser.UserRole.Name == 'CCS SK SME',
+                                                  currentUser.UserRole.Name == 'CCS CZ KAM',
+                                                  currentUser.UserRole.Name == 'CCS CZ LAM') }">
+                    <div id="sales" style="width: 100%; float: right; height: 150px;"></div>
+                </apex:outputPanel>
+            	<div style="clear: both;"></div>
+        	</div> 
+        </apex:pageBlock>
+        <script>
+            $(function () {
+                var todaysActivitiesMapJS = {};
+                <apex:repeat value="{! finalList }" var="key">
+                    todaysActivitiesMapJS['<a href="/apex/DashboardNewActivitiesCCSreport?userid={! salesTeamMap[key.Id].Id }&period={! selectedPeriod }&year={! selectedYear }" target="_blank">{! salesTeamMap[key.Id].Name }</a>'] = "{! todayActivitiesMap[key.Id] }";
+                </apex:repeat>
+                $('#salesteamleiter').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                            <apex:repeat value="{! finalList }" var="key">
+                                '<a href="/apex/DashboardNewActivitiesCCSreport?userid={! salesTeamMap[key.Id].Id }&period={! selectedPeriod }&year={! selectedYear }" target="_blank">{! salesTeamMap[key.Id].Name }</a>',
+                            </apex:repeat>
+                        ],
+                        labels: {
+                            useHTML: true
+                        }
+                    },
+                    yAxis: [{
+                        min: 0,
+                        title: {
+                            text: ''
+                        }
+                    }, {
+                        title: {
+                            text: 'Number of activities'
+                        },
+                        opposite: true
+                    }],
+                    legend: {
+                        shadow: false,
+                        labelFormatter: function() {
+                          var total = 0;
+                          for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+                          return this.name + ' - Total: ' + total;
+                        }
+                    },
+                    exporting: { enabled: false },
+                    credits: {
+                          enabled: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    },
+                    plotOptions: {
+                        column: {
+                            grouping: false,
+                            shadow: false,
+                            borderWidth: 0
+                        },
+                        bar: {
+                            dataLabels: {
+                                enabled: true,
+                                formatter: function () {
+                                    if (this.series.name == 'Number of activities') {
+                                        return this.y + ' (' + todaysActivitiesMapJS[this.x] + ')';    
+                                    } else {
+                                        return this.y;  
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'Plan',
+                        color: 'rgba(165,170,217,1)',
+                        data: [<apex:repeat value="{! finalList }" var="key">{! monthActivitiesPlan },</apex:repeat>],
+                        color: '#ccc',
+                        pointPadding: -0.5,
+                        pointPlacement: -0.15
+                    }, {
+                        name: 'Number of activities',
+                        color: 'rgba(126,86,134,.9)',
+                        data: [<apex:repeat value="{! finalList }" var="key">{! finalActivitiesMap[key.Id] },</apex:repeat>],
+                        pointPadding: -0.5,
+                        pointPlacement: 0.15
+                    }]
+                });
+                $('#sales').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                            '<a href="/apex/DashboardNewActivitiesCCSreport?userid={! currentUser.Id }&period={! selectedPeriod }&year={! selectedYear }" target="_blank">{! currentUser.FirstName } {! currentUser.LastName }</a>'
+                        ],
+                        labels: {
+                            useHTML: true
+                        }
+                    },
+                    yAxis: [{
+                        min: 0,
+                        title: {
+                            text: ''
+                        }
+                    }, {
+                        title: {
+                            text: 'Number of activities'
+                        },
+                        opposite: true
+                    }],
+                    legend: {
+                        shadow: false
+                    },
+                    exporting: { enabled: false },
+                    credits: {
+                          enabled: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    },
+                    plotOptions: {
+                        column: {
+                            grouping: false,
+                            shadow: false,
+                            borderWidth: 0
+                        },
+                        bar: {
+                            dataLabels: {
+                                enabled: true,
+                                formatter: function () {
+                                    if (this.series.name == 'Number of activities') {
+                                        return this.y + ' (' + {! todayActivitiesMap[currentUser.Id] } + ')';   
+                                    } else {
+                                        return this.y;  
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'Plan',
+                        color: 'rgba(165,170,217,1)',
+                        data: [{! monthActivitiesPlan }],
+                        color: '#ccc',
+                        pointPadding: -0.5,
+                        pointPlacement: -0.15
+                    }, {
+                        name: 'Number of activities',
+                        color: 'rgba(126,86,134,.9)',
+                        data: [{! finalActivitiesMap[currentUser.Id] }],
+                        pointPadding: -0.5,
+                        pointPlacement: 0.15
+                    }]
+                });     
+            });
+        </script>
+	</apex:form>
+</apex:page>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Product fit my vary depending on whether drivers follow a regular route or have random routes --></help>
+    <label><!-- Travel Pattern --></label>
+    <name>Travel_Pattern__c</name>
+    <picklistValues>
+        <masterLabel>Random Route</masterLabel>
+        <translation><!-- Random Route --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regular &amp; Random</masterLabel>
+        <translation><!-- Regular &amp; Random --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regular Route</masterLabel>
+        <translation><!-- Regular Route --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

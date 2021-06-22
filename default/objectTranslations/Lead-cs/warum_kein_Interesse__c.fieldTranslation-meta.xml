@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Důvod žádného zájmu</label>
+    <name>warum_kein_Interesse__c</name>
+    <picklistValues>
+        <masterLabel>1.1 Finanziell: Rabatt</masterLabel>
+        <translation>Finance/Kredit: Nízká sleva</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1.2 Finanziell: Kartengebuehre</masterLabel>
+        <translation>Finance/Kredit: Poplatek za kartu</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1.3 Finanziell: Transaktiongebuehre</masterLabel>
+        <translation>Finance/Kredit: Transakční poplatek</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1.4 Finanziell: Andere Gebuehre</masterLabel>
+        <translation>Finance/Kredit: Ostatní poplatky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2.1 Netzwerk: Tankstellnetzwerk</masterLabel>
+        <translation>Akceptace/Pokrytí: V zahraničí</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2.2 Netzwerk: Nicht-Kraftstoff-Netzwerk</masterLabel>
+        <translation>Akceptace/Pokrytí: V tuzemsku</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3.1 Brand: FleetCor</masterLabel>
+        <translation>Značka: Fleetcor</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3.2 Brand: Shell</masterLabel>
+        <translation>Značka: Shell</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3.3 Brand: Allstar Mondo</masterLabel>
+        <translation><!-- 3.3 Brand: Allstar Mondo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4.1 Service: Kontrolle</masterLabel>
+        <translation>Vlastnosti produktu: Online Portál</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4.2 Service: Wunsch-PIN</masterLabel>
+        <translation>Vlastnosti produktu: Vlastní PIN</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4.3 Service: Sonstiges</masterLabel>
+        <translation>Vlastnosti produktu: Ostatní</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AGB nicht akzeptiert</masterLabel>
+        <translation>Neakceptují T&amp;Cs</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>APP zu aufwendig</masterLabel>
+        <translation>APP moc drahý</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ablehnung Shell (Brand / Service)</masterLabel>
+        <translation>Nelíbí se jim Shell (značka/služba)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere</masterLabel>
+        <translation>Jiné</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Bezahlmethode - Cash</masterLabel>
+        <translation>Způsob tankování - hotovost</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Bezahlmethode - EC/Kreditkarte</masterLabel>
+        <translation>Způsob tankování - EC/kreditní karta</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Bezahlmethode - Tankkarte</masterLabel>
+        <translation>Způsob tankování - tankovací karta</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Bezahlmethode - VISA</masterLabel>
+        <translation>Způsob tankování - VISA</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere/n Anbieter</masterLabel>
+        <translation>Jiný poskytovatel služeb</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - Zahlungsbedingungen</masterLabel>
+        <translation>Ostatní produkt - lepší platební podmínky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - geringere Kosten</masterLabel>
+        <translation>Ostatní produkt - nižší náklady</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - höheres Kreditlimit</masterLabel>
+        <translation>Ostatní produkt - vyšší kreditní limit</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - keine Garantien</masterLabel>
+        <translation>Ostatní produkt - záruka nepotřebná</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - mehr Features</masterLabel>
+        <translation>Ostatní produkt - více funkcí</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Angabenkorrektur nicht möglich</masterLabel>
+        <translation><!-- Angabenkorrektur nicht möglich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bereits Kreditkarte vorhanden</masterLabel>
+        <translation>Již vlastní kreditní kartu</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bestellprozess zu lange</masterLabel>
+        <translation>Aplikační proces moc zdlouhavý</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brand: CCS</masterLabel>
+        <translation>Brand: CCS</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dublette</masterLabel>
+        <translation>Duplicita</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eigene Tankstelle</masterLabel>
+        <translation>Akceptace/Pokrytí: Vlastní čerpací stanice</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial: Limit</masterLabel>
+        <translation>Finanční důvod: limit na kartě</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Firma zu jung</masterLabel>
+        <translation><!-- Firma zu jung --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gebühren</masterLabel>
+        <translation>Poplatky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gebühren/Kosten</masterLabel>
+        <translation>Poplatky/Náklady</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grundgebühr</masterLabel>
+        <translation>Základní poplatky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hausbank bietet bessere Konditionen</masterLabel>
+        <translation>Banka nabízí lepší podmínky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Je klient CCS</masterLabel>
+        <translation><!-- Je klient CCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kartenantrag zu umfrangreich</masterLabel>
+        <translation>Karetní systém moc rozsálhý</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine Kaution als Sicherheit</masterLabel>
+        <translation><!-- Keine Kaution als Sicherheit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine Kontrolle auf Produktebene</masterLabel>
+        <translation><!-- Keine Kontrolle auf Produktebene --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine MwSt.-fähige Rechnung</masterLabel>
+        <translation><!-- Keine MwSt.-fähige Rechnung --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine Rabatte</masterLabel>
+        <translation><!-- Keine Rabatte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine Rabatte / zu geringe Rabatte</masterLabel>
+        <translation><!-- Keine Rabatte / zu geringe Rabatte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine Shell Tankstelle in der Naehe</masterLabel>
+        <translation><!-- Keine Shell Tankstelle in der Naehe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine detaillierten Tankdaten</masterLabel>
+        <translation><!-- Keine detaillierten Tankdaten --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine steuerbare Rechnung</masterLabel>
+        <translation><!-- Keine steuerbare Rechnung --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kleinkunde hat keine Vorteile von TK</masterLabel>
+        <translation><!-- Kleinkunde hat keine Vorteile von TK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Konditionen/Ersparnis</masterLabel>
+        <translation><!-- Konditionen/Ersparnis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kreditlimit zu gering</masterLabel>
+        <translation><!-- Kreditlimit zu gering --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leasingfahrzeuge</masterLabel>
+        <translation><!-- Leasingfahrzeuge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Long term contract</masterLabel>
+        <translation>Zavázán dlouhodobou smlouvou</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lump sum payments</masterLabel>
+        <translation>Platba paušálem</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mindestbestellwert nicht erreicht</masterLabel>
+        <translation><!-- Mindestbestellwert nicht erreicht --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mit aktueller Lösung zufrieden</masterLabel>
+        <translation><!-- Mit aktueller Lösung zufrieden --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Má asistenci, pojištění a další benefity jinde</masterLabel>
+        <translation><!-- Má asistenci, pojištění a další benefity jinde --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nechce sdělit důvod</masterLabel>
+        <translation><!-- Nechce sdělit důvod --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nelíbí se mu poplatek</masterLabel>
+        <translation><!-- Nelíbí se mu poplatek --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nemají vozový park</masterLabel>
+        <translation>Nemají vozový park</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nepotřebuje, nevyužije</masterLabel>
+        <translation><!-- Nepotřebuje, nevyužije --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network: using abroad</masterLabel>
+        <translation>Nedostatečná síť: čerpání v zahraničí</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not specified</masterLabel>
+        <translation>Nesdělil důvod</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nutzen nur EC</masterLabel>
+        <translation><!-- Nutzen nur EC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nízký limit</masterLabel>
+        <translation><!-- Nízký limit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platba paušálem</masterLabel>
+        <translation><!-- Platba paušálem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product: benefits</masterLabel>
+        <translation>Vlastnosti produktu</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sicherheit nicht bereitgestellt</masterLabel>
+        <translation><!-- Sicherheit nicht bereitgestellt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sonstige</masterLabel>
+        <translation><!-- Sonstige --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sonstiges</masterLabel>
+        <translation><!-- Sonstiges --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C - Kartengebühr</masterLabel>
+        <translation><!-- T&amp;C - Kartengebühr --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C - andere Gebühren</masterLabel>
+        <translation><!-- T&amp;C - andere Gebühren --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ukončená činnost</masterLabel>
+        <translation><!-- Ukončená činnost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unterlagen zu umfangreich</masterLabel>
+        <translation><!-- Unterlagen zu umfangreich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vereinbarung zu umfangreich</masterLabel>
+        <translation><!-- Vereinbarung zu umfangreich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Versorgung nicht gegeben</masterLabel>
+        <translation><!-- Versorgung nicht gegeben --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verwaltungsaufwand zu aufwändig </masterLabel>
+        <translation><!-- Verwaltungsaufwand zu aufwändig  --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wartezeit zu lange</masterLabel>
+        <translation><!-- Wartezeit zu lange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zahlungsbedingungen zu kurz</masterLabel>
+        <translation><!-- Zahlungsbedingungen zu kurz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zentralentscheid</masterLabel>
+        <translation><!-- Zentralentscheid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zu unbekannt/keine Reputation</masterLabel>
+        <translation><!-- Zu unbekannt/keine Reputation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>zu wenig Autos/Verbrauch – Kleinkunde</masterLabel>
+        <translation><!-- zu wenig Autos/Verbrauch – Kleinkunde --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Špatná zkušenost s CCS</masterLabel>
+        <translation><!-- Špatná zkušenost s CCS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

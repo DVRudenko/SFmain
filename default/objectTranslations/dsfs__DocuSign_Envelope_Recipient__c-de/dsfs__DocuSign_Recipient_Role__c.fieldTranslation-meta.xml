@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>DOCUSIGN-EMPFÄNGERROLLE</help>
+    <label><!-- DocuSign Signer Role --></label>
+    <name>dsfs__DocuSign_Recipient_Role__c</name>
+    <picklistValues>
+        <masterLabel>Company 1</masterLabel>
+        <translation>UNTERNEHMEN 1</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Company 2</masterLabel>
+        <translation>UNTERNEHMEN 2</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer 1</masterLabel>
+        <translation>KUNDE 1</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer 2</masterLabel>
+        <translation>KUNDE 2</translation>
+    </picklistValues>
+</CustomFieldTranslation>

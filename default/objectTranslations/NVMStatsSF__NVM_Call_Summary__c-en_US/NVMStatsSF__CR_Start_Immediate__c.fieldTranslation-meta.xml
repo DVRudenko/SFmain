@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Checked if Call Recording Applet which first turns on Call Recording starts the recording without waiting for the two parties to be connected.
+Use Workflow (on create+update) to set this flag for Calls which don&apos;t defer CR Start based on the NVM Service --></help>
+    <label><!-- CR Start Immediate --></label>
+    <name>NVMStatsSF__CR_Start_Immediate__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Must_not_exceed_998</fullName>
+    <active>true</active>
+    <errorConditionFormula>success__Maximum_number_of_rewards__c &gt; 998</errorConditionFormula>
+    <errorMessage>The maximum number of rewards that can be set is  998</errorMessage>
+</ValidationRule>

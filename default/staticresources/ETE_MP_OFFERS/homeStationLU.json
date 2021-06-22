@@ -1,0 +1,97 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "Wait until you receive your Shell cards and PIN numbers by post.",
+                "fr": "Veuillez attendre la livraison de vos cartes Shell et vos codes PIN par la poste."
+            },
+            {
+                "en": "Once received, your cards are automatically active and you can start using the cards! Enjoy a care-free refueling experience with your Shell Cards.",
+                "fr": "Dès réception de vos cartes déjà activées et codes pin, vous pouvez les utiliser immédiatement et vous ravitailler en toute tranquillité."
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "discount at Home Station on all fuels for the first 3 months",
+                    "fr": "remise à la station préférentielle pendant les 3 premiers mois "
+                },
+                "value": {
+                    "en": "4 CENT/LITRE",
+                    "fr": "4 CENTIMES/LITRE"
+                }
+            },
+            {
+                "label": {
+                    "en": "monthly card fee for the first 3 months",
+                    "fr": "frais de carte mensuels durant les 3 premiers mois"
+                },
+                "value": {
+                    "en": "FREE",
+                    "fr": "GRATUIT"
+                }
+            },
+            {
+                "label": {
+                    "en": "transaction fee for fuel transactions for the first 3 months",
+                    "fr": "frais de transaction carburant durant les 3 premiers mois"
+                },
+                "value": {
+                    "en": "FREE",
+                    "fr": "GRATUIT"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "Home Station LU"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "fr": "CARTE SHELL"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/shellkarte_eu.jpg"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "Shell fuel card for business guarantees your company stable and permanent fuel discounts, a convenient online customer portal and a dense network of stations.",
+            "fr": "La carte carburant Shell vous garantit que votre entreprise bénéficiera de réductions stables et constantes sur le carburant, d’un portail client en ligne facile à utiliser et d’un réseau étendu de stations-service."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "fr": "CARTE SHELL"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "SHELL CARDS",
+            "fr": "CARTES SHELL"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "SHELL CARD",
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "1",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "monthlyFuelConsumption_max": "5000",
+            "monthlyFuelConsumption_min": "50",
+            "showEuroLocatorTab": true,
+            "euroLocatorProductNumber": "4",
+            "order": 4
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Luxembourg": "/resource/ETE_DOCUMENTS_1/tariffSheets_homeStationLU1.jpg"
+    }
+}

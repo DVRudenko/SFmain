@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A parameter (Case Topic API name) to map Subtopic with a Topic. Using only if a record has a type Subtopic. --></help>
+    <label><!-- Parent Picklist Value --></label>
+    <name>Parent_Picklist_Value__c</name>
+</CustomFieldTranslation>

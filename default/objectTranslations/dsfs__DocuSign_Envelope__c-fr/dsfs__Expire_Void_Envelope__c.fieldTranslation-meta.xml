@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Parfois, vous devez encourager vos destinataires à valider une enveloppe plus rapidement. Lorsqu&#39;une enveloppe expire, DocuSign for Salesforce annule l&#39;enveloppe et envoie une notification à l&#39;expéditeur et au destinataire.</help>
+    <label><!-- Expire/Void Envelope --></label>
+    <name>dsfs__Expire_Void_Envelope__c</name>
+</CustomFieldTranslation>

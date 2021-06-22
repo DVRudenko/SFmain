@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- User that made API call from another system --></help>
+    <label><!-- External user --></label>
+    <name>External_user__c</name>
+</CustomFieldTranslation>

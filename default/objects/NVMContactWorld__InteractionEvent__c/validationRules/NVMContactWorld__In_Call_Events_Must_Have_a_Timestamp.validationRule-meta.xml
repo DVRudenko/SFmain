@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMContactWorld__In_Call_Events_Must_Have_a_Timestamp</fullName>
+    <active>true</active>
+    <description>Only pre call events are allowed to have null timestamps</description>
+    <errorConditionFormula>NVMContactWorld__IsPreCallEvent__c = false &amp;&amp; ISNULL(NVMContactWorld__TimeStamp__c)</errorConditionFormula>
+    <errorMessage>Event must have a timestamp, unless it&#39;s a pre-call event</errorMessage>
+</ValidationRule>

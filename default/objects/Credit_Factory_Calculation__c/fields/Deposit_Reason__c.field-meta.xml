@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deposit_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Deposit Reason</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New business</fullName>
+                <default>false</default>
+                <label>New business</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 0)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 0)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 1)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 1)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 2)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 2)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 3)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 3)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 4)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 4)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 5)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 5)</label>
+            </value>
+            <value>
+                <fullName>Low credit rating (rating 6)</fullName>
+                <default>false</default>
+                <label>Low credit rating (rating 6)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

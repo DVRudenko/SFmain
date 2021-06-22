@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Opportunity this call relates to (as indicated by a Task record whose CallObject matches the GUID from this summary) --></help>
+    <label><!-- Related Opportunity --></label>
+    <name>NVMStatsSF__Related_Opportunity__c</name>
+    <relationshipLabel><!-- Call Summaries --></relationshipLabel>
+</CustomFieldTranslation>

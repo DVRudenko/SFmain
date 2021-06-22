@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>44.0</apiVersion>
+    <description>Visualforce Component used in Visualforce Email Templates for CCS Orders from Merlin.</description>
+    <label>showCCSOrder</label>
+</ApexComponent>

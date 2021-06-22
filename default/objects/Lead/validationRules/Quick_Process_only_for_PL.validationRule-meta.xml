@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quick_Process_only_for_PL</fullName>
+    <active>true</active>
+    <description>"Quick Process" is available only for Country "Poland", "JITB" and "1 card".</description>
+    <errorConditionFormula>IF(
+Country != "Poland" &amp;&amp;
+ISPICKVAL(Status , "Quick Process"),
+true,
+IF(
+Country = "Poland" &amp;&amp;
+ISPICKVAL(Status, "Quick Process") &amp;&amp;
+NULLVALUE(CCS_number_of_cards__c,0) != 1,
+true,
+false)
+)</errorConditionFormula>
+    <errorMessage>"Quick Process" Status is only available for Poland and 1 card.</errorMessage>
+</ValidationRule>

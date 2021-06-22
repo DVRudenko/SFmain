@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Represents Russian sales indexes for each team</description>
+    <label>Russian Sales By Teams Dashboard</label>
+    <motif>Custom100: TV Widescreen</motif>
+    <page>DashboardSalesByTeamPPR</page>
+</CustomTab>

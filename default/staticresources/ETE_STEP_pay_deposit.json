@@ -1,0 +1,341 @@
+{
+    "translations": {
+        "step_title_pd": {
+            "default_impl": {
+                "en": "Pay deposit online",
+                "de": "Kaution online hinterlegen",
+                "cs": "Zaplatit kauci online",
+                "sk": "Zaplatiť kauciu online",
+                "nl": "Betaal borg online",
+                "fr": "Payer le dépôt de garantie en ligne",
+                "pl": "Zapłać kaucję teraz",
+                "hu": "Óvadék befizetése online"
+            }
+        },
+        "deposit_agreement_pd": {
+            "default_impl": {
+                "en": "I agree with the payment of the deposit",
+                "pl": "Zgadzam się na wpłatę kaucji",
+                "hu": "HU I agree with the payment of the deposit"
+            },
+            "Germany": {
+                "en": "I agree with the deposit payment in the amount of 1$",
+                "de": "Ich bin mit der Zhalung der Kaution in Höhe von 1$ einverstanden."
+            }
+        },
+        "deposit_agreement_error_pd": {
+            "default_impl": {
+                "en": "I agree with the payment of the deposit",
+                "pl": "This field is mandatory",
+                "hu": "HU I agree with the payment of the deposit"
+            },
+            "Germany": {
+                "en": "This consent is required for provision of the service.",
+                "de": "Diese Zustimmung ist für die Erbringung der Dienstleistung erforderlich."
+            }
+        },
+        "credit_cards_pd": {
+            "default_impl": {
+                "en": "Cards",
+                "de": "Karten",
+                "nl": "Betaalpassen",
+                "fr": "Cartes",
+                "pl": "Karty płatnicze"
+            },
+            "Hungary":{
+                "en": "Bank cards",
+                "hu": "Bank kártyák"
+            },
+            "Slovakia":{
+                "en": "Bank cards",
+                "sk": "Bankové karty"
+            },
+            "Czech Republic":{
+                "en": "Bank cards",
+                "sk": "Bankovní karty"
+            }
+        },
+        "online_banks_pd": {
+            "default_impl": {
+                "en": "Online banking",
+                "de": "Bezahlung per Online-Banking",
+                "nl": "Online bankieren",
+                "fr": "Services bancaires en ligne",
+                "pl": "Bankowość internetowa"
+            },
+            "Hungary":{
+                "en": "Alternative payment methods",
+                "de": "Más fizetési mód"
+            },
+            "Slovakia":{
+                "en": "Alternative payment methods",
+                "sk": "Iný spôsob platby"
+            },
+            "Czech Republic":{
+                "en": "Alternative payment methods",
+                "sk": "Jiný způsob platby"
+            }
+        },
+        "payment_description_pd": {
+            "default_impl": {
+                "en": "All payments are processed through PayU, a leading financial services provider in growing global markets. PayU is PCI DSS certified and complies with GDPR regulations.",
+                "pl": "Wszystkie płatności są przetwarzane za pośrednictwem PayU, wiodącego dostawcy usług finansowych na rosnących rynkach światowych. PayU posiada certyfikat PCI DSS i spełnia wymagania RODO.",
+                "cs": "Všechny platby jsou zpracovávány prostřednictvím PayU, předního poskytovatele finančních služeb na rostoucích globálních trzích. PayU má certifikaci PCI DSS a je v souladu s předpisy GDPR.",
+                "sk": "Všetky platby sú spracované prostredníctvom PayU, predného poskytovateľa finančných služieb na rastúcich globýálnych trhoch. PayU má certifikáciu PCI DSS a je v súlade s predpismy GDPR.",
+                "hu": "Minden fizetési a PayU szolgáltatón keresztül történik. A PayU rendelkezik PCI DSS tanusítvánnyal, valamint megfelel a GDPR követelményeinek."
+            },
+            "Germany": {
+                "en": "All payments are processed by Ingenico ePayments, the online and mobile commerce division of the Ingenico Group. Ingenico Group is committed to protecting the security of processed payments and personal data of customers.",
+                "de": "Alle Zahlungen werden von Ingenico ePayments, dem Online- und Mobile-Commerce-Geschäftsbereich der Ingenico Group,  bearbeitet. Ingenico Group verpflichtet sich, die Sicherheit bearbeiteter Zahlungen und personenbezogener Daten von Kunden zu schützen."
+            },
+            "Austria": {
+                "en": "All payments are processed by Ingenico ePayments, the online and mobile commerce division of the Ingenico Group. Ingenico Group is committed to protecting the security of processed payments and personal data of customers.",
+                "de": "Alle Zahlungen werden von Ingenico ePayments, dem Online- und Mobile-Commerce-Geschäftsbereich der Ingenico Group,  bearbeitet. Ingenico Group verpflichtet sich, die Sicherheit bearbeiteter Zahlungen und personenbezogener Daten von Kunden zu schützen."
+            },
+            "Netherlands":{
+                "en": "All payments are processed by Ingenico ePayments, the online and mobile commerce division of the Ingenico Group. Ingenico Group is committed to protecting the security of processed payments and personal data of customers.",
+                "nl": "Alle betalingen worden verwerkt door Ingenico ePayments, de online en mobiele handelsafdeling van de Ingenico Group. Ingenico Group zet zich in om de veiligheid van verwerkte betalingen en persoonlijke gegevens van klanten te beschermen."
+            },
+            "Belgium-NL":{
+                "en": "All payments are processed by Ingenico ePayments, the online and mobile commerce division of the Ingenico Group. Ingenico Group is committed to protecting the security of processed payments and personal data of customers.",
+                "nl": "Alle betalingen worden verwerkt door Ingenico ePayments, de online en mobiele handelsafdeling van de Ingenico Group. Ingenico Group zet zich in om de veiligheid van verwerkte betalingen en persoonlijke gegevens van klanten te beschermen.",
+                "fr": "Tous les paiements sont traités par Ingenico ePayments, la division de commerce en ligne et mobile du groupe Ingenico. Ingenico Group prend en charge la protection des transactions effectuées et des données personnelles des clients."
+            },
+            "Belgium-FR":{
+                "en": "All payments are processed by Ingenico ePayments, the online and mobile commerce division of the Ingenico Group. Ingenico Group is committed to protecting the security of processed payments and personal data of customers.",
+                "nl": "Alle betalingen worden verwerkt door Ingenico ePayments, de online en mobiele handelsafdeling van de Ingenico Group. Ingenico Group zet zich in om de veiligheid van verwerkte betalingen en persoonlijke gegevens van klanten te beschermen.",
+                "fr": "Tous les paiements sont traités par Ingenico ePayments, la division de commerce en ligne et mobile du groupe Ingenico. Ingenico Group prend en charge la protection des transactions effectuées et des données personnelles des clients."
+            },
+            "France":{
+                "en": "All payments are processed by Ingenico ePayments, the online and mobile commerce division of the Ingenico Group. Ingenico Group is committed to protecting the security of processed payments and personal data of customers.",
+                "fr": "Tous les paiements sont traités par Ingenico ePayments, la division de commerce en ligne et mobile du groupe Ingenico. Ingenico Group prend en charge la protection des transactions effectuées et des données personnelles des clients."
+            }
+        },
+        "deposit_amount_pd": {
+            "default_impl": {
+                "en": "Deposit amount to be paid:",
+                "de": "Höhe der zu zahlenden Kaution:",
+                "nl": "Te betalen borg bedrag:",
+                "cs": "Částka k úhradě:",
+                "sk": "Čiastka k úhrade",
+                "fr": "Montant du dépôt de garantie à verser:",
+                "pl": "Kwota kaucji do zapłaty:",
+                "hu": "Fizetendő óvadék összege:"
+            }
+        },
+        "depositAgreement_label_pd": {
+            "default_impl": {
+                "en": "I agree to pay a <a href='/etedocuments?doc=depositAgreement$1$' target='_blank'>one-time security deposit</a> in the amount of $2$ EUR.",
+                "de": "Ich bin damit einverstanden, eine <a href='/etedocuments?doc=depositAgreement$1$' target='_blank'>einmalige Kaution</a> in Höhe von $2$ EUR zu zahlen.",
+                "nl": "Ik ga akkoord met de betaling van een <a href='/etedocuments?doc=depositAgreement$1$' target='_blank'>eenmalige borgsom</a> van $2$ EUR.",
+                "fr": "J'accepte de payer un <a href='/etedocuments?doc=depositAgreement$1$' target='_blank'>dépôt de garantie unique</a> d'un montant de $2$ EUR."
+            }
+        },
+        "depositAgreement_error_pd": {
+            "default_impl": {
+                "en": "This consent is required for provision of the service.",
+                "de": "Diese Zustimmung ist für die Erbringung der Dienstleistung erforderlich.",
+                "nl": "Deze toestemming is vereist om de service te kunnen leveren",
+                "fr": "Ce consentement est requis pour fournir le service."
+            },
+            "Belgium-NL": {
+                "en": "This consent is required for provision of the service.",
+                "nl": "Deze toestemming is vereist om de diensten te kunnen leveren.",
+                "fr": "Ce consentement est requis pour fournir le service."
+            },
+            "Belgium-FR": {
+                "en": "This consent is required for provision of the service.",
+                "nl": "Deze toestemming is vereist om de diensten te kunnen leveren.",
+                "fr": "Ce consentement est requis pour fournir le service."
+            }
+        }
+    },
+    "settings": {
+        "data_object": {
+            "Current_Language__c": {
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                }
+            },
+            "Deposit_Agreement__c": {
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "depositAgreement",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "depositAgreement",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "depositAgreement",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "depositAgreement",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "depositAgreement",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "depositAgreement",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "depositAgreement",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "depositAgreement",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "depositAgreement",
+                    "required": true
+                }
+            },
+            "PM__c": {
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "pm",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "pm",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "pm",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "pm",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "pm",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "pm",
+                    "required": true
+                }
+            },
+            "Brand__c": {
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "brand",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "brand",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "brand",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "brand",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "brand",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "30",
+                    "mapto": "brand",
+                    "required": true
+                }
+            }
+        }
+    }
+}

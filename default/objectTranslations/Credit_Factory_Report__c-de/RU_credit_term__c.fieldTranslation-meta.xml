@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Credit term --></label>
+    <name>RU_credit_term__c</name>
+    <picklistValues>
+        <masterLabel>0</masterLabel>
+        <translation><!-- 0 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>14</masterLabel>
+        <translation><!-- 14 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7</masterLabel>
+        <translation><!-- 7 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PK14</masterLabel>
+        <translation><!-- PK14 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PO7</masterLabel>
+        <translation><!-- PO7 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>S/F</masterLabel>
+        <translation><!-- S/F --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

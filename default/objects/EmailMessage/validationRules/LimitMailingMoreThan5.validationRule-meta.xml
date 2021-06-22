@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LimitMailingMoreThan5</fullName>
+    <active>true</active>
+    <description>STCP1-53/STCP1-413- limit sending more than 5 emails in case not related to account</description>
+    <errorConditionFormula>AND(
+ISNEW(),
+NOT(Incoming),
+NOT(CONTAINS(ToAddress, &#39;@fleetcor&#39;)),
+Parent.MessagesSentToClient__c &gt;= 5,
+ISBLANK(Parent.AccountId),
+OR(Parent.RecordType.DeveloperName = &#39;Support&#39;,
+Parent.RecordType.DeveloperName = &#39;Support_CCS&#39;),
+$Profile.Name != &#39;System Administrator&#39;, 
+$Profile.Name != &quot;Systemadministrator&quot;,
+$Profile.Name != 'API Only',
+$User.Alias != &#39;autoproc&#39;
+)</errorConditionFormula>
+    <errorMessage>Please associate this case to an account.</errorMessage>
+</ValidationRule>

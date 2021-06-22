@@ -1,0 +1,16 @@
+<template>
+  <lightning-card variant="base" class="block">
+    <h3 slot="title" class="header exportable-header">{labels.ELECTRONIC_DOCUMENT_MANAGEMENT}</h3>
+
+    <lightning-combobox
+      name="electronicDocument"
+      class="field exportable-field"
+      label={labels.EDM_CONNECTION}
+      options={electronicDocumentOptions}
+      value={electronicDocumentData.electronicDocument}
+      placeholder={labels.CHOOSE_OPERATOR}
+      onchange={handleElectronicDocumentChange}
+    >
+    </lightning-combobox>
+  </lightning-card>
+</template>

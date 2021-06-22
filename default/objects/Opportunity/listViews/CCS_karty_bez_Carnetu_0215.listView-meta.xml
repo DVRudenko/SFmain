@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_karty_bez_Carnetu_0215</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.NEXT_STEP</columns>
+    <columns>Next_Step_Date__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>CCS_GFN_number__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>OPPORTUNITY.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>CCS karty bez Carnetu 0215</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Qualified Lead,Kvalifikovaný lead</value>
+    </filters>
+    <label>CCS karty bez Carnetu 0215</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinates>CCS_Administrator</roleAndSubordinates>
+    </sharedTo>
+</ListView>

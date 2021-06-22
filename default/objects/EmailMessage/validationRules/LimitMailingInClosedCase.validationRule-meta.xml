@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LimitMailingInClosedCase</fullName>
+    <active>true</active>
+    <description>STCP1-162/STCP1-407 -  prevent users from sending emails in cases with status &#39;closed&#39; status (&#39;support&#39; record type)</description>
+    <errorConditionFormula>AND( 
+ISNEW(), 
+NOT(Incoming),
+ISPICKVAL(Parent.Status,&#39;Closed&#39;), 
+OR(Parent.RecordType.DeveloperName = &#39;Support&#39;,
+Parent.RecordType.DeveloperName = &#39;Support_CCS&#39;),
+$Profile.Name != &#39;System Administrator&#39;,
+$Profile.Name != 'API Only',
+$Profile.Name != &quot;Systemadministrator&quot;, 
+$User.Alias != &#39;autoproc&#39; 
+)</errorConditionFormula>
+    <errorMessage>The case is closed, you cannot send emails.</errorMessage>
+</ValidationRule>

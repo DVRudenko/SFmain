@@ -1,0 +1,371 @@
+<apex:page title="Select Match" controller="CTI_callInfoPanelController" showHeader="false">
+    <apex:slds />
+    <apex:includeScript value="/support/console/47.0/integration.js" />
+    <style type="text/css">
+        .rowExpanded {
+            display: table-row
+        }
+
+        .rowCollapsed {
+            display: none
+        }
+
+        .spinner-background {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(8, 7, 7, 0.2);
+            z-index: 9000;
+            visibility: visible;
+            opacity: 1;
+            transition: opacity .4s linear;
+            position: absolute;
+        }
+    </style>
+
+    <script>
+        // Pre-select single detected items
+        window.addEventListener("DOMContentLoaded",
+            function () {
+
+                if ('{!accounts.size}' == 1) {
+
+                    var accounts = document.getElementsByClassName("account_inp");
+
+                        <apex:repeat value="{!accounts}" var="item">
+
+                            selected_acc = '{!item.Id}';
+                            var elem = document.getElementById(selected_acc);
+                            elem.checked = true;
+
+                        </apex:repeat>
+
+                        console.log('selected_acc = '+selected_acc);
+                    }
+
+                    if('{!contacts.size}' == 1){
+
+                        var contacts = document.getElementsByClassName("contact_inp");
+                        var accounts = document.getElementsByClassName("account_inp");
+
+                        <apex:repeat value="{!contacts}" var="item">
+
+                            selected_con = '{!item.Id}';
+                            var contacts = document.getElementsByClassName("contact_inp");
+                            for(var j=0; j<contacts.length; j++) {
+                                if(contacts[j].value.substring(0,18) == selected_con){
+                                    contacts[j].checked = true;
+                                    var parent_acc = contacts[j].value.substring(19,37);
+                                }
+                            }
+
+                            for(var i=0; i<accounts.length; i++) {
+                                if(accounts[i].value == parent_acc){
+                                    accounts[i].checked = true;
+                                    selected_acc = parent_acc;
+                                }
+                            }
+
+                        </apex:repeat>
+
+                    console.log('selected_con = ' + selected_con);
+                    console.log('selected_acc = ' + selected_acc);
+                }
+
+            });
+
+
+        var selected_acc = '';
+        var selected_con = '';
+
+        function handleSelect(button) {
+            createTask(selected_acc, selected_con);
+        }
+
+
+        function handleSkip(button) {
+            createTask(null, null);
+        }
+
+
+        function handleClickAcc(cb) {
+            var elem = document.getElementById(selected_acc);
+            //console.log('element - '+ elem);
+
+            if (elem != null) {
+                if (cb.getAttribute('id') != selected_acc) {
+                    elem.checked = false;
+                } else {
+                    elem.checked = true;
+                }
+            }
+
+            selected_acc = cb.getAttribute('id');
+
+            var contacts = document.getElementsByClassName("contact_inp");
+            var accounts = document.getElementsByClassName("account_inp");
+
+            selected_con = '';
+            for (var j = 0; j < contacts.length; j++) {
+                contacts[j].checked = false;
+            }
+
+            for (var j = 0; j < contacts.length; j++) {
+
+                if (contacts[j].value.substring(19, 37) != selected_acc) {
+                    //contacts[j].disabled = true;
+                    contacts[j].checked = false;
+
+                } else {
+                    //contacts[j].disabled = false;
+                }
+            }
+
+            console.log('selected_acc - ' + selected_acc);
+            console.log('selected_con - ' + selected_con);
+
+        }
+
+
+        function handleClickCon(cb) {
+
+            selected_con = cb.getAttribute('value').substring(0, 18);
+            selected_acc = cb.getAttribute('value').substring(19, 37);
+
+            var contacts = document.getElementsByClassName("contact_inp");
+            for (var j = 0; j < contacts.length; j++) {
+                if (contacts[j].value.substring(0, 18) != selected_con) {
+                    contacts[j].checked = false;
+                } else {
+                    cb.checked = true;
+                }
+            }
+
+            var accounts = document.getElementsByClassName("account_inp");
+            for (var i = 0; i < accounts.length; i++) {
+                if (accounts[i].value != selected_acc) {
+                    accounts[i].checked = false;
+                } else {
+                    accounts[i].checked = true;
+                }
+            }
+
+            console.log('selected_con - ' + selected_con);
+            console.log('selected_acc - ' + selected_acc);
+
+        }
+
+
+        function createTask(accountid, contactid) {
+            let spinner = document.getElementById("main-spinner");
+            spinner.classList.remove("slds-hide");
+
+            var phone = '{!phone}';
+            var callid = '{!callid}';
+
+            console.log('Creating Task - Phone=' + phone + ' callid=' + callid + ' accountid=' + accountid + ' contactid=' + contactid);
+
+            if (accountid) {
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.CTI_callInfoPanelController.linkHistoryItemToAccount}',
+                    accountid, callid,
+                    () => { }
+                );
+            }
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.CTI_callInfoPanelController.createNewTask}',
+                phone, callid, accountid, contactid,
+                function (result, event) {
+                    if (event.status) {
+                        console.log('Created Task', result);
+                        var taskId = result;
+
+                        // Close Account and Contact selection tab
+                        sforce.console.getEnclosingTabId(function (result) {
+                            var tabId = result.id;
+                            console.log('getEnclosingTabId', tabId);
+
+                            sforce.console.disableTabClose(false, tabId);
+                            // This is causing error
+                            sforce.console.closeTab(tabId);
+
+                            sforce.console.openPrimaryTab(null, '/lightning/r/Task/' + taskId + '/view', true, 'Call Task', null, function (result) {
+                                console.log('openSubtab result=', result);
+                            });
+
+                        });
+
+                    }
+                    let spinner = document.getElementById("main-spinner");
+                    spinner.classList.add("slds-hide");
+                });
+
+        }
+
+    </script>
+   <div class="slds-scope slds-spinner_container slds-is-relative">
+       <div id="main-spinner" class="slds-hide">
+            <div role="status" class="slds-spinner slds-spinner--large slds-spinner--brand">
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+            <div class="spinner-background"></div>
+       </div>
+        <div class="slds-card slds-card_boundary" style="background-color: rgb(233, 234, 236);">
+            <div class="slds-card__header slds-clearfix slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-grid slds-grid_vertical-align-center slds-size_3-of-4 slds-medium-size_2-of-3">
+                        <div class="slds-media__body">
+                            <h2>
+                                <a class="slds-card__header-link slds-truncate" href="javascript:void(0);">
+                                    <span class="slds-text-heading_small">Select Account and related Contact</span>
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+                </header>
+                <div class="slds-no-flex" dropzone="card actions">
+                    <div class="canvas-element" closertotopclass="canvas-element--closer-to-top">
+                        <ul class="slds-list_horizontal slds-clearfix ">
+                            <li class="slds-item" dropzone="horizontalList item">
+                                <div class="canvas-element" closertotopclass="canvas-element--closer-to-top">
+                                    <button id="skipButton" class="slds-button slds-button_dual-stateful slds-size_1-of-1 slds-button_neutral"
+                                        onclick="handleSkip(this)">
+                                        <span>Skip</span>
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="slds-item" dropzone="horizontalList item">
+                                <div class="canvas-element--inline">
+                                    <div class="canvas-element" closertotopclass="canvas-element--closer-to-top">
+                                        <button id="selectButton" class="slds-button slds-button_dual-stateful slds-button_neutral"
+                                            onclick="handleSelect(this)">
+                                            <span>Select</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="accountsCardBody" class="slds-card__body slds-clearfix slds-card__body_inner" dropzone="card body" style="width:100%; max-height:100%; overflow-y:auto;">
+
+                <table aria-multiselectable="true" class="slds-table slds-table_bordered slds-table_edit slds-table_fixed-layout slds-table_resizable-cols slds-tree slds-table_tree"
+                    role="treegrid">
+                    <tbody>
+                        <apex:variable value="{!0}" var="rowNum" />
+                        <apex:repeat id="accountsRepeat" value="{!accounts}" var="acc">
+                            <tr aria-level="1" aria-posinset="1" aria-expanded="false" aria-selected="false" aria-setsize="4" class="slds-hint-parent account_tr"
+                                tabindex="0">
+                                <td class="slds-text-align_right" role="gridcell" style="width:3.25rem">
+                                    <div class="slds-checkbox">
+                                        <input type="checkbox" class="account_inp" name="accs" id="{!acc.id}" value="{!acc.id}" onclick="handleClickAcc(this)" aria-labelledby="check-button-label-{!acc.id} column-group-header"
+                                        />
+                                        <label class="slds-checkbox__label" for="{!acc.id}" id="check-button-label-{!acc.id}">
+                                            <span class="slds-checkbox_faux"></span>
+                                            <span class="slds-form-element__label slds-assistive-text">Select {!acc.id}</span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <th class="slds-tree__item" data-label="Account Name" scope="row">
+                                    <div class="slds-truncate" title="{!acc.name}">{!acc.name}</div>
+                                </th>
+                                <td data-label="GFN Number" role="gridcell">
+                                    <div class="slds-truncate">{!acc.GFN_Nr__c}</div>
+                                </td>
+                                <td data-label="Phone Number" role="gridcell">
+                                    <div class="slds-truncate">{!acc.Phone}</div>
+                                </td>
+                                <td data-label="Account Type" role="gridcell">
+                                    <div class="slds-truncate">{!IF(acc.Subaccount__c == true ,'Sub-Account','Parent Account')}</div>
+                                </td>
+                                <td data-label="Customer Status" role="gridcell">
+                                    <div class="slds-truncate">{!acc.GFN_Customer_Status__c}</div>
+                                </td>
+
+                            </tr>
+
+                            <apex:variable var="rowNum" value="{!rowNum + 1}" />
+
+
+                            <!--Direct Contact search-->
+                            <apex:repeat id="contactsRepeat" value="{!contacts}" var="cont">
+                                <tr aria-level="2" aria-posinset="2" aria-selected="false" aria-setsize="1" class="slds-hint-parent contact_tr-{!cont.id} {!IF(cont.AccountId = acc.Id, 'rowExpanded', 'rowCollapsed')}">
+                                    <td class="slds-text-align_right" role="gridcell" style="width:3.25rem">
+                                        <div class="slds-checkbox">
+                                            <input type="checkbox" class="contact_inp" id="{!rowNum}" value="{!cont.id}_{!acc.id}" onclick="handleClickCon(this)" aria-labelledby="check-button-label-{!rowNum} column-group-header"
+                                            />
+                                            <label class="slds-checkbox__label" for="{!rowNum}" id="check-button-label-{!rowNum}">
+                                                <span class="slds-checkbox_faux"></span>
+                                                <!--<span class="slds-form-element__label slds-assistive-text">Select {!cont.id}</span>-->
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <th class="slds-tree__item" data-label="Contact Name" scope="row">
+                                        <div class="slds-truncate" title="{!cont.Name}">
+                                            <a target="_self" class="slds-text-link" href="/{!cont.Id}">{!cont.Name}</a>
+                                        </div>
+                                    </th>
+                                    <td data-label="Contact Email" role="gridcell">
+                                        <div class="slds-truncate">{!cont.Email}</div>
+                                    </td>
+                                    <td data-label="Phone Number" role="gridcell">
+                                        <div class="slds-truncate">{!cont.Phone}</div>
+                                    </td>
+                                    <td data-label="Dummy4" role="gridcell"></td>
+                                    <td data-label="Dummy5" role="gridcell"></td>
+                                </tr>
+
+                                <apex:variable var="rowNum" value="{!rowNum + 1}" />
+                                <apex:repeat id="relationsRepeat" value="{!relations}" var="rel">
+                                    <tr aria-level="2" aria-posinset="2" aria-selected="false" aria-setsize="1" class="slds-hint-parent contact_tr-{!cont.id} {!IF(AND(rel.AccountId = acc.Id, rel.ContactId = cont.Id, cont.AccountId != acc.Id), 'rowExpanded', 'rowCollapsed')}">
+                                        <td class="slds-text-align_right" role="gridcell" style="width:3.25rem">
+                                            <div class="slds-checkbox">
+                                                <input type="checkbox" class="contact_inp" name="options" id="{!rowNum}" value="{!cont.id}_{!acc.id}" onclick="handleClickCon(this)"
+                                                    aria-labelledby="check-button-label-{!rowNum} column-group-header" />
+                                                <label class="slds-checkbox__label" for="{!rowNum}" id="check-button-label-{!rowNum}">
+                                                    <span class="slds-checkbox_faux"></span>
+
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <th class="slds-tree__item" data-label="Contact Name" scope="row">
+                                            <div class="slds-truncate" title="{!cont.Name}">
+                                                <a target="_self" class="slds-text-link" href="/{!cont.Id}">{!cont.Name}</a>
+                                            </div>
+                                        </th>
+                                        <td data-label="Contact Email" role="gridcell">
+                                            <div class="slds-truncate">{!cont.Email}</div>
+                                        </td>
+                                        <td data-label="Phone Number" role="gridcell">
+                                            <div class="slds-truncate">{!cont.Phone}</div>
+                                        </td>
+                                        <td data-label="Dummy4" role="gridcell"></td>
+                                        <td data-label="Dummy5" role="gridcell"></td>
+                                    </tr>
+                                    <apex:variable var="rowNum" value="{!rowNum + 1}" />
+                                </apex:repeat>
+                            </apex:repeat>
+
+                        </apex:repeat>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+   </div>
+
+    <script>
+        console.log('start');
+        sforce.console.getFocusedPrimaryTabId((result) => {
+            console.log('asd', result);
+            sforce.console.disableTabClose(true, result.Id, (r) => {
+                console.log('qwe', r.Id)
+            });
+        })
+    </script>
+
+</apex:page>

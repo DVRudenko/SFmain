@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Mapping params for parsing incomming emails in Case Management (Using in Apex class)</description>
+    <label>Support Topic &amp; Subtopic Mapping</label>
+    <pluralLabel>Support Topic &amp; Subtopic Mapping</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

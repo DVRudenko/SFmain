@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Промо Код (список)</label>
+    <name>Promo_Code1__c</name>
+    <picklistValues>
+        <masterLabel>1Ч01</masterLabel>
+        <translation><!-- 1Ч01 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2И01</masterLabel>
+        <translation><!-- 2И01 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2И02</masterLabel>
+        <translation><!-- 2И02 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5БК6</masterLabel>
+        <translation><!-- 5БК6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5БК7</masterLabel>
+        <translation><!-- 5БК7 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5БК9</masterLabel>
+        <translation><!-- 5БК9 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5РД1</masterLabel>
+        <translation><!-- 5РД1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7312</masterLabel>
+        <translation><!-- 7312 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7ВЗ1</masterLabel>
+        <translation><!-- 7ВЗ1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7З00</masterLabel>
+        <translation><!-- 7З00 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7З03</masterLabel>
+        <translation><!-- 7З03 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7З06</masterLabel>
+        <translation><!-- 7З06 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7З09</masterLabel>
+        <translation><!-- 7З09 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7З11</masterLabel>
+        <translation><!-- 7З11 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7Р01</masterLabel>
+        <translation><!-- 7Р01 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9ВЗ1</masterLabel>
+        <translation><!-- 9ВЗ1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9ВСТ</masterLabel>
+        <translation><!-- 9ВСТ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9ИРК</masterLabel>
+        <translation><!-- 9ИРК --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CARW</masterLabel>
+        <translation><!-- CARW --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

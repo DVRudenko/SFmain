@@ -1,0 +1,13 @@
+<apex:page controller="HealthCheckHistoryCtrl" action="{! init }">
+	<apex:pageMessages escape="false"/>
+	<apex:pageBlock title="Load Time Tracking">
+		<apex:pageBlockTable value="{! healthChecksList }" var="healthCheck" >
+			<apex:column headerValue="Created Date" value="{! healthCheck.Start_Action__c }"/>
+			<apex:column headerValue="From Step" value="{! healthCheck.From_Step__c }"/>
+			<apex:column headerValue="To Step" value="{! healthCheck.To_Step__c }"/>
+			<apex:column headerValue="Time execution, ms" value="{! healthCheck.Time_execution__c }"/>
+			<apex:column headerValue="Description" value="{! healthCheck.Description__c }"/>
+			<apex:column headerValue="Device" value="{! healthCheck.Device__c }"/>
+	</apex:pageBlockTable>
+	</apex:pageBlock>
+</apex:page>

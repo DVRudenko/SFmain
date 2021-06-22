@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recycling</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 and 6 and 7</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>LEAD.INDUSTRY</columns>
+    <columns>Branche_NACE__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Quali_Status__c</field>
+        <operation>notContain</operation>
+        <value>Bereits Kunde - FleetCor,Bereits Kunde - Shell,Dublette,Keine Fahrzeuge,Kont,Already Lotos Customer</value>
+    </filters>
+    <filters>
+        <field>Branche_NACE__c</field>
+        <operation>contains</operation>
+        <value>,transport,güter,liefer,kurier</value>
+    </filters>
+    <filters>
+        <field>LEAD.LAST_UPDATE</field>
+        <operation>lessThan</operation>
+        <value>10/1/2017 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Qualified,Disqualified,Дисквалификация</value>
+    </filters>
+    <filters>
+        <field>LEAD.COUNTRY_CODE</field>
+        <operation>equals</operation>
+        <value>DE</value>
+    </filters>
+    <filters>
+        <field>LEAD.COMPANY</field>
+        <operation>notContain</operation>
+        <value>,apotheke,maler,lackier,schiffsfahrt</value>
+    </filters>
+    <filters>
+        <field>Sec_Channel__c</field>
+        <operation>equals</operation>
+        <value>Outbound</value>
+    </filters>
+    <label>Recycling</label>
+    <language>de</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Role_Up</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

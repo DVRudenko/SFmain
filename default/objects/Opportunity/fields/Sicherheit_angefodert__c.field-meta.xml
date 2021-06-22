@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sicherheit_angefodert__c</fullName>
+    <externalId>false</externalId>
+    <label>Sicherheit angefodert</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Kredit_Entscheidung__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Kaution</fullName>
+                <default>false</default>
+                <label>Kaution</label>
+            </value>
+            <value>
+                <fullName>Bankbürgschaft</fullName>
+                <default>false</default>
+                <label>Bankbürgschaft</label>
+            </value>
+            <value>
+                <fullName>Parent/Cross-Corporate Bürgschaft</fullName>
+                <default>false</default>
+                <label>Parent/Cross-Corporate Bürgschaft</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Sicherheit verlangt</controllingFieldValue>
+            <valueName>Kaution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sicherheit verlangt</controllingFieldValue>
+            <valueName>Bankbürgschaft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sicherheit verlangt</controllingFieldValue>
+            <valueName>Parent/Cross-Corporate Bürgschaft</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

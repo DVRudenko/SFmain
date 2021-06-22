@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_GPS_units__c</fullName>
+    <description>Number of Carnet Units - updated by Sales people as forecasted number &amp; when they create order and order units (Shell) or when Merlin adds ordered units (CCS) it is updated with correct number according to the custom objects.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of Carnet Units (Telematics)</inlineHelpText>
+    <label>Number of GPS units</label>
+    <precision>4</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>true</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Куда и на какие расстояния ездит транспорт потенциального клиента</help>
+    <label>География поездок</label>
+    <name>Area_Traveled__c</name>
+    <picklistValues>
+        <masterLabel>International</masterLabel>
+        <translation><!-- International --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Local</masterLabel>
+        <translation>Локальный</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>National</masterLabel>
+        <translation>Межрегиональный</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional</masterLabel>
+        <translation>Региональный</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Statewide</masterLabel>
+        <translation>Международный</translation>
+    </picklistValues>
+</CustomFieldTranslation>

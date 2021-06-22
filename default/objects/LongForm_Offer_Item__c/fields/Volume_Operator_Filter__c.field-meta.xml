@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volume_Operator_Filter__c</fullName>
+    <externalId>false</externalId>
+    <label>Volume Operator Filter</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unlimited</fullName>
+                <default>false</default>
+                <label>Unlimited</label>
+            </value>
+            <value>
+                <fullName>more than [X] liters</fullName>
+                <default>false</default>
+                <label>more than [X] liters</label>
+            </value>
+            <value>
+                <fullName>more than [X] liters per 1 month</fullName>
+                <default>false</default>
+                <label>more than [X] liters per 1 month</label>
+            </value>
+            <value>
+                <fullName>more than [X] liters per 1 card</fullName>
+                <default>false</default>
+                <label>more than [X] liters per 1 card</label>
+            </value>
+            <value>
+                <fullName>more than [X] liters per account company</fullName>
+                <default>false</default>
+                <label>more than [X] liters per account\company</label>
+            </value>
+            <value>
+                <fullName>not more than [X] liters</fullName>
+                <default>false</default>
+                <label>not more than [X] liters</label>
+            </value>
+            <value>
+                <fullName>not more than [X] liters per 1 month</fullName>
+                <default>false</default>
+                <label>not more than [X] liters per 1 month</label>
+            </value>
+            <value>
+                <fullName>not more than [X] liters per 1 card</fullName>
+                <default>false</default>
+                <label>not more than [X] liters per 1 card</label>
+            </value>
+            <value>
+                <fullName>not more than [X] liters per account company</fullName>
+                <default>false</default>
+                <label>not more than [X] liters per account\company</label>
+            </value>
+            <value>
+                <fullName>only for [X] liters</fullName>
+                <default>false</default>
+                <label>only for [X] liters</label>
+            </value>
+            <value>
+                <fullName>only for [X] liters per 1 month</fullName>
+                <default>false</default>
+                <label>only for [X] liters per 1 month</label>
+            </value>
+            <value>
+                <fullName>only for [X] liters per 1 card</fullName>
+                <default>false</default>
+                <label>only for [X] liters per 1 card</label>
+            </value>
+            <value>
+                <fullName>only for [X] liters per account company</fullName>
+                <default>false</default>
+                <label>only for [X] liters per account\company</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,1088 @@
+<apex:page controller="GenerateAllStarPDFControlller" action="{! init }" standardStylesheets="false" showHeader="false" sidebar="false" 
+    applyBodyTag="false" renderAs="pdf">
+    <head>
+        <style>
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                font-family: Arial Unicode MS, sans-serif;
+                size: a4;
+            }
+
+            @page {
+                size: letter;
+                margin: 0;
+                padding: 0;
+            }
+            .page-break {
+                display:block;
+                page-break-after:always;
+            }
+            .pdffooter {
+                position: fixed;
+                bottom: 20px;
+                width: 100%;
+            }
+            .pagenumber:before {
+                content: counter(page);
+            }
+            .pagecount:before {
+                content: counter(pages);
+            }
+        </style>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <apex:form styleClass="content">
+        <div class="page-break">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 50px;">
+                <tr>
+                    <td style="width: 36%;">
+                        <apex:image style="margin: 0 0 0 50px; padding: 0; height: 65px;" url="{!URLFOR($Resource.AllstarFiles, 'img/alstar_mondo_pl.png')}"/>
+                    </td>
+                    <td style="background-color: #fbca0e">
+                        <table border="0" width="100%">
+                        <tr style="color: #7a7676;">
+                            <td>
+                                <div style="font-size: 20px; padding-left: 12px; color: #5b5b5b;">Formularz zamówienia</div>
+                            </td>
+                            <td style="text-align: right; padding-right: 50px; font-size: 13px;">
+                                <span>Czy mają Państwo pytania?</span><br/>
+                                <span style="color: #5b5b5b;">+48 12 334 97 69</span>
+                            </td>
+                        </tr>
+                    </table>
+                    </td>
+                </tr>
+                <tr style="color: #5b5b5b; height: 45px;">
+                    <td colspan="2" style="text-align: right; vertical-align: top; padding: 10px 50px 0 0; font-size: 11px;">
+                        Produkt jest obecnie dostępny jedynie dla klientów z Polski / dla firm zarejestrowanych w Polsce
+                    </td>
+                </tr>
+            </table>
+
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 12px;">
+                <tr style="background-color: #7a7676; height: 23px;">
+                    <td colspan="2">
+                        <span style="color: white; margin: 0 0 0 50px; font-size: 13px;">
+                            Ważne informacje - 
+                        </span>
+                        <span style="color: white; font-size: 11px;">
+                            prosimy o dokładne przeczytanie przed przystąpieniem do wypełnienia formularza
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0 50px; font-size: 10.4px;">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="text-align: justify; line-height: 1.3; height: 275px; margin-bottom: 20px;">
+                            <tr style="height: 65px;">
+                                <td colspan="2">Formularz można wypełnić online. Prosimy o wypełnienie informacji w podanych polach. Pola oznaczone gwiazdką (*) są wymagane i muszą zostać wypełnione, aby przejść do dalszej części formularza. Jeżeli wypełniony formularz nie będzie zawierał wszystkich wymaganych informacji, może to opóźnić proces zakładania konta. Szczegółowe wyjaśnienia terminów, zawarte w podpowiedziach, ułatwią Państwu wypełnienie formularza.</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Przed wypełnieniem formularza prosimy o przygotowanie następujących informacji:</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 10px;">1.</td>
+                                <td>NIP, REGON i KRS (w stosownych przypadkach)</td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>Szczegóły dotyczące Państwa firmy oraz jej dochodów z ostatniego roku podatkowego.</td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: top;">3.</td>
+                                <td>Szczegółowe informacje o Benefcjentach Rzeczywistych w Państwa firmie. Benefcjentem Rzeczywistym może być osoba lub firma, która posiada ponad 25 % udziałów lub sprawuje znaczącą kontrolę w Państwa firmie. Jeżeli posiadają Państwo więcej niż dwóch Benefcjentów Rzeczywistych, niebędących osobami fzycznymi lecz firmami, proszę użyć dodatkowego miejsca na końcu formularza.</td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: top;">4.</td>
+                                <td>Szczegółowe informacje o Państwa przedstawicielach - osoba ta jest upoważniona do zawierania umów w imieniu Państwa firmy i będzie mogła wnioskować o zmianę całkowitego limitu kredytowego firmy, zamawianie lub anulowanie kart (przy wskazaniu więcej niż czterech przedstawicieli, proszę o użycie dodatkowego miejsca na końcu formularza). Dla potrzeb prawidłowej weryfkacji osób administrujących konto jest wymagane podanie szczegółowych danych osobowych pełnomocników.</td>
+                            </tr>
+                            <tr style="height: 90px;">
+                                <td colspan="2">Po wypełnieniu formularza, prosimy o sprawdzenie, czy zaznaczyli Państwo wszystkie wymagane pola obok każdej zgody. Następnie należy wydrukować i podpisać formularz. Przed wysłaniem wiadomości e-mail na adres nowyklient@allstarmondo.pl prosimy upewnić się, że wszystkie informacje i skany dokumentów zostały dołączone do wiadomości.
+                                <p style="margin: 0;">Wypełniony wniosek wraz z wymaganymi dokumentami można również wysłać pocztą na adres: FLEETCOR Poland Sp. z o.o., Al. Jerozolimskie 56C 00-803 Warszawa, Polska.</p></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="color: white; font-size: 15px; padding: 0 50px;">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr style="background-color: black; height: 27px;">
+                                <td style="padding: 0 13px; font-size: 14px;">
+                                     Twoja firma
+                                </td>
+                                <td style="text-align: right; color: gray; font-size: 10px; padding: 0 13px 0 0;">
+                                    Pola oznaczone gwiazdką (*) są wymagane
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="padding: 0 50px; vertical-align: top;">
+                <tr>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 5px 0 3px 0;">Zarejestrowana nazwa firmy*:<br/>
+                        <span style="font-size: 8px !important; color: gray !important;">O cjalna nazwa firmy zgodnie z zarejestrowaną w CEDIG / KRS.</span></p>
+                        <span style="font-size: 16px;">{! formAccount.Name }</span>
+                    </td>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 5px 0 3px 0;">Nazwa firmowa*:<br/>
+                        <span style="font-size: 8px !important; color: gray !important;">Proszę wypełnić wyłącznie jeśli nazwa handlowa firmy różni się od nazwy zarejestrowanej</span></p>
+                        <span style="font-size: 16px;">{! formAccount.Trading_Name__c }</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 5px 0 3px 0;">Główny telefon służbowy*:</p>
+                        <span style="font-size: 16px;">{! formAccount.Phone }</span>
+                    </td>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 5px 0 3px 0;">Drugi telefon służbowy:</p>
+                        <span style="font-size: 16px;">{! formAccount.Mobile_Phone__c }</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 8px; margin: 5px 0 3px 0;">NIP*:<br/>
+                        <span style="font-size: 8px !important; color: gray !important;">Number Identi kacji Podatkowej. Numer Identy kacji Podatkowej składa się z 10 znaków i zawiera wyłącznie cyfry. Można go sprawdzić na o cjalnej stronie internetowej KRS.</span></p>
+                        <span style="font-size: 16px;">{! formAccount.NIP__c }</span>
+                    </td>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 9px; margin: 5px 0 3px 0;">Numer KRS:<br/>
+                        <span style="font-size: 8px !important; color: gray !important;">Krajowy Rejestr Sądowy (KRS) Numer składa się z 10 znaków i zawiera wyłącznie cyfry. Spółki jawne, spółki partnerskie z ograniczoną odpowiedzialnością, spółki z ograniczoną odpowiedzialnością oraz spółki akcyjne mają obowiązek rejestracji w Rejestrze prowadzonym przez Ministerstwo Sprawiedliwości, które emituje KRS. Jeśli Twoja firma została włączona przed rokiem 1996, możesz nie posiadać numeru KRS.</span></p>   
+                    </td>
+                </tr>
+                <tr style="vertical-align: top;">
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 8px; margin: 5px 0 3px 0;">REGON*:<br/>
+                        <span style="font-size: 8px !important; color: gray !important;">REGON (Rejestr Gospodarki Narodowej). Jest to numer dla krajowych celów statystycznych. REGON składa się z 9 do 10 znaków i zawiera wyłącznie  cyfry. Można go sprawdzić na o cjalnej stronie internetowej KRS.
+                        </span></p>
+                        <span style="font-size: 16px;">{! formAccount.REGON__c }</span>
+                    </td>
+                    <td>
+                        <span style="font-size: 16px;">{! formAccount.KRS__c }</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="height: 55px;">
+                            <tr>
+                                <td style="width: 50%;">
+                                    <p style="font-size: 10px; color: #4c4c4c; line-height: 8px; margin: 0 0 3px 0;">Adres siedziby - ulica*:<br/>
+                                    <span style="font-size: 8px !important; color: gray !important;">Zarejestrowany adres siedziby Twojej firmy</span></p>
+                                    <span style="font-size: 16px;">{! formAccount.BillingStreet }</span>
+                                </td>
+                                <td style="width: 25%;">
+                                    <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 17px 0;">Miasto*:</p>
+                                    <span style="font-size: 16px;">{! formAccount.BillingCity }</span>
+                                </td>
+                                <td style="width: 25%;">
+                                    <p style="font-size: 10px; color: #4c4c4c; line-height: 8px; margin: 0 0 3px 0; padding-bottom: 6px;">Kod pocztowy*:<br/>
+                                    <span style="font-size: 8px !important; color: gray !important;">Proszę wpisać w formacie XXXXX</span></p>
+                                    <span style="font-size: 16px;">{! formAccount.BillingPostalCode }</span>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%; vertical-align: top;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 5px 0 3px 0;">Adres e-mail:</p>
+                    </td>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 8px; margin: 5px 0 3px 0;">Państwo*:<br/>
+                        <span style="font-size: 8px !important; color: gray !important;">Produkt jest obecnie dostępny jedynie dla klientów z Polski / dla firm zarejestrowanych w Polsce</span></p>
+                    </td>
+                </tr>
+                <tr style="height: 16px;">
+                    <td style="width: 50%;">
+                        <span style="font-size: 16px;">{! formAccount.Allstar_Email__c }</span>
+                    </td>
+                    <td style="width: 50%;">
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td>
+                                    <apex:outputText >Poland</apex:outputText>
+                                </td>
+                            </tr>
+                        </table>    
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table>
+                            <tr>
+                                <td style="width: 2%;">
+                                    <apex:image rendered="{! IF(OR(formAccount.ShippingStreet != null, formAccount.ShippingCity != null, formAccount.ShippingPostalCode != null), true, false) }" url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                                    <apex:image rendered="{! IF(AND(formAccount.ShippingStreet == null, formAccount.ShippingCity == null, formAccount.ShippingPostalCode == null), true, false) }" url="{!URLFOR($Resource.AllstarFiles, 'img/trueCheckbox.png')}"/>
+                                </td>
+                                <td>
+                                    <p style="font-size: 10px; color: #4c4c4c; line-height: 8px; margin: 5px 0 3px 0;">
+                                    Czy adres handlowy jest taki sam jak adres siedziby?<br/>
+                                    <span style="font-size: 8px !important; color: gray !important;">Proszę zaznaczyć, jeśli Twój adres handlowy (siedziba firmy, w której odbywają się codzienne czynności biznesowe) jest taki sam, jak adres siedziby (tak, jak zarejestrowano w KRS lub CEDIG)</span></p>
+                                </td>
+                            </tr>
+                        </table>                        
+                    </td>
+                </tr>
+            </table>
+            <apex:outputPanel rendered="{! IF(OR(formAccount.ShippingStreet != null, formAccount.ShippingCity != null, formAccount.ShippingPostalCode != null), true, false) }">
+                <table style="padding: 0 50px;">
+                    <tr>
+                        <td colspan="2">
+                            <span style="font-size: 10.4px;">Adres Handlowy:</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="height: 50px;">
+                                <tr>
+                                    <td style="width: 50%;">
+                                        <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 12px 0;">Adres siedziby - ulica*:</p>
+                                        <span style="font-size: 16px;">{! formAccount.ShippingStreet }</span>
+                                    </td>
+                                    <td style="width: 25%;">
+                                        <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 12px 0;">Miasto*:</p>
+                                        <span style="font-size: 16px;">{! formAccount.ShippingCity }</span>
+                                    </td>
+                                    <td style="width: 25%;">
+                                        <p style="font-size: 10px; color: #4c4c4c; line-height: 8px; margin: 0 0 3px 0;">Kod pocztowy*:<br/>
+                                        <span style="font-size: 8px !important; color: gray !important;">Proszę wpisać w formacie XXXXX</span></p>
+                                        <span style="font-size: 16px;">{! formAccount.ShippingPostalCode }</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="width: 50%;">
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Państwo*:</p>
+                            <span style="font-size: 16px;">{! formAccount.Country_Text__c }</span>
+                        </td>
+                    </tr>
+                </table>
+            </apex:outputPanel>
+        </div>
+        <div class="page-break">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 50px; padding: 0 50px;">
+                <tr style="background-color: black; height: 27px;">
+                    <td style="padding: 0 13px; font-size: 13px; color: white;">
+                        Szczegóły Twojej Działalności
+                    </td>
+                    <td style="text-align: right; color: gray; font-size: 10px; padding: 0 13px 0 0;">
+                        Pola oznaczone gwiazdką (*) są wymagane
+                    </td>
+                </tr>                               
+                <tr>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 15px 0 3px 0;">Forma prawna*:</p>
+                        <span style="font-size: 16px;">{! typeOfOrganization }</span>
+                    </td>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 15px 0 3px 0;">Rok rejestracji*:</p>
+                        <span style="font-size: 16px;"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 5px 0 3px 0;">Adres internetowy:</p>
+                        <span style="font-size: 16px;">{! formAccount.Website }</span>
+                    </td>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 5px 0 3px 0;">Rodzaj działalności*:</p>
+                        <span style="font-size: 16px;">{! industry }</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 8px; margin: 0 0 3px 0;">Obrót w ostatnich 12 miesiącach*:<br/>
+                        <span style="font-size: 8px !important; color: gray !important;">Łączny dochód Twojej firmy w ciągu ostatniego okresu rozliczeniowego w złotych</span></p>
+                    </td>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 8px; margin: 5px 0 3px 0;">Wnioskowany miesięczny limit kredytu*:<br/>
+                        <span style="font-size: 8px !important; color: gray !important;">Całkowity kredyt, jaki chciałbyś uzyskać dla swojej firmy (całkowity ze wszystkich kart, ta informacja
+                            może zostać zaktualizowana na późniejszym etapie lub podczas zamówienia większej ilości kart)</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="width: 50%;">
+                        <span style="font-size: 16px;">{! formOpportunity.Umsatz__c }</span>
+                    </td>
+                    <td style="width: 50%;">
+                        <span style="font-size: 16px;">{! formOpportunity.Anzahl_der_Karten__c }</span>
+                    </td>
+                </tr>
+                <tr style="height: 80px; vertical-align: top;">
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 5px 0 3px 0;">Liczba pracowników*:</p>
+                        <span style="font-size: 16px;">{! formAccount.Beschaeftigte__c }</span>
+                    </td>
+                    <td style="width: 50%;">
+                        <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 5px 0 3px 0;">Wymagana ilość kart łącznie*:</p>
+                        <span style="font-size: 16px;">{! formOpportunity.Requested_monthly_Company_Credit_Spend__c }</span>
+                    </td>
+                </tr>
+                <tr style="background-color: black; height: 27px;">
+                    <td style="padding: 0 13px; font-size: 13px; color: white;">
+                        Twoi przedstawiciele
+                    </td>
+                    <td style="text-align: right; color: gray; font-size: 10px; padding: 0 13px 0 0;">
+                        Pola oznaczone gwiazdką (*) są wymagane
+                    </td>
+                </tr>
+                <tr style="text-align: justify; line-height: 1.2; font-size: 10.4px; height: 120px; vertical-align: top;">
+                    <td colspan="2" style="padding-top: 20px;">
+                        Zgodnie z naszym obowiązkiem zapobiegania przestępstwom fnansowym oraz identyfkacji kluczowych interesariuszy Państwa konta, prosimy o podanie
+                        wymaganych danych osobowych Pełnomocników, Administratora konta i Benefcjenta Rzeczywistego. Prosimy zaznaczyć odpowiednie pole na górze
+                        każdego fragmentu z nazwą funkcji danej osoby. Jeżeli jedna osoba ma więcej niż jedną rolę, mogą Państwo wybrać więcej niż jeden rodzaj przedstawiciela.
+                        W przypadku, gdy jeden lub wszyscy Benefcjenci Rzeczywiści są podmiotami gospodarczymi, w celu dostarczenia odpowiednich informacji, prosimy
+                        skorzystać z sekcji „Benefcjent Rzeczywisty - firma“.
+                    </td>    
+                </tr>
+                <tr style="height: 3px;">
+                    <td colspan="2">
+                        <hr style="margin: 0;"></hr>
+                    </td>
+                </tr>
+            </table>
+            <apex:variable var="repr" value="{!1}"/>
+            <apex:repeat value="{! formContactList }" var="con">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 25px; padding: 0 50px;">
+                    <tr style="background-color: #e2e2e2;">
+                        <td colspan="6">
+                            <table border="0" style="margin: 12px 0 10px 17px;">
+                                <tr>
+                                    <td style="width: 22px; height: 22px; text-align: center; background-color: white; font-size: 17px; color: #4c4c4c;">
+                                        {! repr }
+                                    </td>
+                                    <td>
+                                        <span style="margin-left: 8px; color: #4c4c4c;">Przedstawiciel</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="height: 78px; background-color: #e2e2e2; vertical-align: top;">
+                        <td style="padding-left: 15px;">
+                            <apex:outputField value="{! con.AllStar_authorised_signatory__c }"/>
+                        </td>
+                        <td>
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 8px; margin: 0;">Pełnomocnik<br/>
+                                <span style="font-size: 8px !important; color: gray !important;">Osoba ta jest upoważniona do zawierania umów w imieniu
+                                    Twojej firmy, i będzie jednostką upoważnioną do zmian
+                                    całkowitego limitu kredytu firmy lub do zamawiania
+                                    bądź likwidowania kart
+                                </span>
+                            </p>
+                        </td>
+                        <td>
+                            <apex:outputField value="{! con.AllStar_account_administrator__c }"/>
+                        </td>
+                        <td>
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 8px; margin: 0;">Administrator konta<br/>
+                                <span style="font-size: 8px !important; color: gray !important;">Osobie tej wysyłać będziemy całą korespondencję oraz będzie
+                                    ona miała przegląd potwierdzeń oraz aktywności konta
+                                    używając samoobsługowego konta online. Osoba ta może
+                                    wymagać oraz zmieniać informacje dotyczące konta. 
+                                </span>
+                            </p>
+                        </td>
+                        <td>
+                            <apex:outputField value="{! con.AllStar_UBO__c }"/>
+                        </td>
+                        <td>
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 8px; margin: 0;">Benefcjent rzeczywisty<br/>
+                                <span style="font-size: 8px !important; color: gray !important;">Prosimy o podanie nazwisk wszystkich jednostek, które
+                                    posiadają kontrolę nad powyżej 25% udziałów Twojej
+                                    firmy, lub prawo głosu lub sprawują kontrolę nad
+                                    zarządem Twojej firmy.
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 15px; padding: 0 50px;">
+                    <tr>
+                        <td style="width: 15%;">
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Tytuł:</p>
+                            <span style="font-size: 16px;">{! IF(con.Salutation != null, translateTitleMap[con.Salutation], '') }</span>
+                        </td>
+                        <td style="width: 35%;">
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Data urodzenia*:
+                            <span style="font-size: 8px !important; color: gray !important;">Proszę wpisać w formacie DD/MM/RRRR</span></p>
+                            <apex:outputText value="{0, date, dd/MM/yyyy}">
+                                    <apex:param value="{! con.Birthdate }"/>
+                            </apex:outputText> 
+                        </td>
+                        <td style="width: 50%; padding-left: 15px;">
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Pozycja:</p>
+                            <span style="font-size: 16px;">{! con.Position_Funktion__c }</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 8px; margin: 0;">PESEL:<br/>
+                                <span style="font-size: 8px !important; color: gray !important;">Powszechny Elektroniczny System Ewidencji Ludności lub PESEL to 11-cyfrowy numer będący
+                                    unikatową identyfkacją specyfkującą jednostkę zarejestrowaną w bazie danych PESEL (Powszechny
+                                    Elektroniczny System Ewidencji Ludności).  
+                                </span>
+                            </p>
+                        </td>
+                        <td style="padding-left: 15px;">
+                            <span style="font-size: 16px;">{! con.PESEL_Nr__c }</span>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 5px; padding: 0 50px;">
+                    <tr>
+                        <td style="width: 33%;">
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Imię*:</p>
+                            <span style="font-size: 16px;">{! con.FirstName }</span>
+                        </td>
+                        <td>
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Drugie imię:</p>
+                            <span style="font-size: 16px;">{! con.MiddleName }</span>
+                        </td>
+                        <td>
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Nazwisko*:</p>
+                            <span style="font-size: 16px;">{! con.LastName }</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 33%;">
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Nazwisko panieńskie matki*:<br/>
+                            <span style="font-size: 8px !important; color: gray !important;">Tylko w przypadku Pełnomocnika i Administratora konta</span></p>
+                            <span style="font-size: 16px;">{! con.Mother_s_maiden_name__c }</span>
+                        </td>
+                        <td>
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 15px 0;">Adres e-mail*:</p>
+                            <span style="font-size: 16px;">{! con.Email }</span>
+                        </td>
+                        <td>
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 15px 0;">Główny numer służbowy:</p>
+                            <span style="font-size: 16px;">{! con.Phone }</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 33%;">
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 15px 0;">Adres prywatny - Ulica:</p>
+                            <span style="font-size: 16px;">{! con.MailingStreet }</span>
+                        </td>
+                        <td>
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Miasto*:<br/>
+                            <span style="font-size: 8px !important; color: gray !important;">Pole wymagane dla Benefcjenta Rzeczywistego</span></p>
+                            <span style="font-size: 16px;">{! con.MailingCity }</span>
+                        </td>
+                        <td>
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Kod pocztowy:<br/>
+                            <span style="font-size: 8px !important; color: gray !important;">Proszę wpisać w formacie XXXXX</span></p>
+                            <span style="font-size: 16px;">{! con.MailingPostalCode }</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">                        
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Państwo*:</p>
+                            <span style="font-size: 16px;">{! con.Country_Text__c }</span>                      
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <apex:outputPanel rendered="{! IF(repr == sizeContactList, true, false) }">
+                                <span style="font-size: 11px; color: gray; padding-bottom: 20px;">Dodatkowe informacje mogą być dopełnione na stronie na końcu formularza.</span>
+                            </apex:outputPanel>
+                        </td>
+                    </tr>
+                    <tr style="height: 40px;">
+                        <td colspan="3">
+                            <hr style="margin: 0;"></hr>    
+                        </td>
+                    </tr>
+                </table>
+                <apex:outputpanel rendered="{! IF(OR(repr == 1, repr == 3, repr == 5, repr == 7, repr == 9), true, false) }">
+                    <div class="page-break"/>
+                </apex:outputPanel>
+                <apex:variable var="repr" value="{! repr + 1 }"/>
+            </apex:repeat>
+
+            <apex:variable var="subAcc" value="{!1}"/>
+            <apex:repeat value="{! formSubAccountsList }" var="sa">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 30px; padding: 0 50px;">
+                    <tr style="background-color: #e2e2e2;">
+                        <td>
+                            <table border="0" style="margin: 12px 0 10px 17px;">
+                                <tr>
+                                    <td style="width: 22px; height: 22px; text-align: center; background-color: white; font-size: 17px; color: #4c4c4c;">
+                                        {! subAcc }
+                                    </td>
+                                    <td>
+                                        <span style="margin-left: 8px; color: #4c4c4c;">Beneficjent Rzeczywisty – firma</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" cellpadding="0" cellspacing="0" style="padding: 0 50px;">
+                    <tr>
+                        <td colspan="2">
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 5px 0 3px 0;">Nazwa Beneficjenta Rzeczywistego – firmy*:</p>
+                            <span style="font-size: 16px;">{! sa.Name }</span>
+                        </td>
+                        <td>
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Rok rejestracji*:</p>
+                            <span style="font-size: 16px;"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 50%;">
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 15px 0;">Ulica*:</p>
+                            <span style="font-size: 16px;">{! sa.BillingStreet }</span>
+                        </td>
+                        <td style="width: 30%;">
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 15px 0;">Miasto*:</p>
+                            <span style="font-size: 16px;">{! sa.BillingCity }</span>
+                        </td>
+                        <td style="width: 20%;">
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Kod pocztowy*:<br/>
+                            <span style="font-size: 8px !important; color: gray !important;">Proszę wpisać w formacie XXXXX</span></p>
+                            <span style="font-size: 16px;">{! sa.BillingPostalCode }</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <p style="font-size: 10px; color: #4c4c4c; line-height: 10px; margin: 0 0 3px 0;">Państwo*:</p>
+                            <span style="font-size: 16px;">{! sa.Country_Text__c }</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <apex:outputPanel rendered="{! IF(subAcc == sizeSubAccountsList, true, false) }">
+                                <span style="font-size: 11px; color: gray; padding-bottom: 20px;">Dodatkowe informacje mogą być dopełnione na stronie na końcu formularza.</span>
+                            </apex:outputPanel>
+                        </td>
+                    </tr>
+                </table>
+                <apex:outputpanel rendered="{! IF(OR(subAcc == 2, subAcc == 6, subAcc == 10, subAcc == 14, subAcc == 18) ,true,false) }">
+                    <div class="page-break"/>
+                </apex:outputPanel>
+                <apex:variable var="subAcc" value="{! subAcc + 1 }"/>
+            </apex:repeat>
+        </div>
+        <div class="page-break">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 50px;font-size: 12px;background-color: #e3e3e3; ">
+                <tr>
+                    <td style="padding: 0 50px;">
+                        <div style="color: white; font-size: 14px;background-color: #7a7676; padding: 10px;">
+                            Wymagane dokumenty
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0 50px;font-size: 11px;">
+                        <p>Prosimy o dostarczenie określonych dokumentów wraz z formularzem zgłoszeniowym, ponieważ musimy potwierdzić tożsamość osób i firm, z którymi
+                        zawieramy umowę. W związku z tym prosimy, aby wskazane osoby z Państwa firmy dostarczyły nam następujące dokumenty w celu potwierdzenia
+                        ich tożsamości i adresu.</p>
+                        <p>Firma<br/>
+                        Tożsamość – REGON, CEIDG lub KRS<br/>
+                        Potwierdzenie adresu (jeśli adres handlowy różni się od adresu siedziby) – skan ostatniego wyciągu bankowego firmy LUB rachunku za media nie starszego niż 3 miesiące<br/>
+                        Potwierdzenie dochodów<br/>
+                        • PIT z ostatnich 2 lat* w przypadku Jednoosobowej działalności gospodarczej i wszystkich Partnerów<br/>
+                        • CIT lub sprawozdanie finansowe z ostatnich 2 lat* w przypadku Spółki z ograniczoną odpowiedzialnością, Spółki akcyjnej i Spółki komandytowo-akcyjnej</p> 
+                        <p>Właściciele, Partnerzy i Dyrektorzy<br/>
+                        Tożsamość – skan dowodu osobistego lub paszportu, w przypadku gdy osoba nie posiada dowodu osobistego<br/>
+                        Potwierdzenie adresu – skan ostatniego wyciągu bankowego LUB skan rachunku za media nie starszego niż 3 miesiące</p>
+                        <p>Beneficjent Rzeczywisty (Osoba)<br/>
+                        Tożsamość – skan dowodu osobistego lub paszportu, w przypadku gdy osoba nie posiada dowodu osobistego<br/>
+                        Potwierdzenie adresu – skan ostatniego wyciągu bankowego LUB skan rachunku za media nie starszego niż 3 miesiące</p>
+                        <p>Beneficjent Rzeczywisty (Firma lub Organizacja)<br/>
+                        Tożsamość – REGON, CEIDG lub KRS<br/>
+                        Potwierdzenie adresu (jeśli adres handlowy różni się od adresu siedziby) – skan ostatniego wyciągu bankowego firmy LUB skan rachunku za media nie starszego niż 3 miesiące</p>
+                        <p>W przypadku komunikacji emailowej, prosimy o czytelny skan dokumentów lub wyraźne zdjęcia.</p>
+                        <p>*Jeśli Państwa firma istnieje na rynku krócej niż 2 lata, prosimy dostarczyć dotychczasowe dokumenty finansowe. W takiej sytuacji mogą być wymagane dodatkowe informacje.</p>
+                    </td>
+                </tr>
+            </table>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 12px;">
+                <tr>
+                    <td style="padding: 0 50px;">
+                        <div style="color: white; font-size: 14px;background-color: #7a7676; padding: 10px;">
+                            Co się dzieje później? 
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center;padding: 0 80px;">
+                        <apex:image style="width: 100%; margin-top: 5px;" url="{!URLFOR($Resource.AllstarFiles, 'img/cycleallstar.png')}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10px; padding: 0 50px;">
+                        <p>Po otrzymaniu wypełnionego i podpisanego formularza wraz ze wszystkimi wymaganymi dokumentami (zob. listę powyżej), zostanie sprawdzona wiarygodność kredytowa i przeprowadzona weryfikacja firmy, aby oszacować nasze możliwości zaoferowania Państwu konta oraz wysokości kredytu. W razie potrzeby uzyskania dodatkowych informacji, skontaktujemy się z Państwem. Powiadomimy Państwa o decyzji w ciągu 5 dni roboczych. Na tym etapie zbierzemy wszystkie szczegółowe informacje na temat Państwa pojazdu / posiadacza karty i poprosimy o dokonanie symbolicznej opłaty, aby zweryfikować Państwa dane bankowe. Uiszczona z Państwa konta firmowego, symboliczna opłata w wysokości 1 zł służy dalszej weryfikacji wymaganej przez organy nadzorcze, którą musimy przeprowadzić. Będzie ona uwzględniona w pierwszym wyciągu.</p>
+                        <p>Po wykonaniu wszystkich powyższych kroków oraz po otrzymaniu symbolicznej opłaty wyślemy Państwu zamówione karty. Czas oczekiwania na karty to 5 dni roboczych od otrzymania opłaty weryfikacyjnej i potwierdzenia numeru konta firmowego. Ze względów bezpieczeństwa, karty i kody PIN są wysłane w oddzielnych przesyłkach z różnicą dwóch dni roboczych.</p>
+                        <p>Po otrzymaniu karty i kodu PIN, należy aktywować kartę zgodnie z instrukcją, która znajduje się w przesyłce. Następnie mogą Państwo zacząć korzystać z karty. Jeśli mają Państwo jakiekolwiek pytania lub chcieliby skorzystać z naszej pomocy przy wyborze karty paliwowej / płatniczej, jesteśmy do dyspozycji pod numerem telefonu: +48 12 334 97 69 lub na adresie e-mail: nowyklient@allstarmondo.pl (w dni robocze, od poniedziałku do piątku w godzinach od 8:00 do 17:00)</p>
+                    </td>
+                </tr>               
+            </table>
+        </div>
+
+        <div class="page-break">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 11px; margin-top: 50px;">
+                <tr>
+                    <td style="padding: 0 50px;" colspan="2">
+                        <div style="color: white; font-size: 14px;background-color: #7a7676; padding: 10px;">
+                            Oświadczenia o wyrażeniu zgody
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-top: 15px;padding-left: 50px;">
+                        Marketing
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25px" style="padding-left: 50px; vertical-align: top;padding-top: 10px;">
+                        <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                    </td>
+                    <td style="padding-right: 50px;padding-top: 5px;">
+                        Możemy co pewien czas wysyłać Państwu informacje, które mogą okazać się przydatne. Państwa dane osobowe nie zostaną przekazane podmiotom trzecim. Prosimy zaznaczyć niniejsze pole, jeśli chcą Państwo abyśmy kontaktowali się z Państwem za pośrednictwem poczty elektronicznej.
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15px" style="padding-left: 50px;vertical-align: top;padding-top: 10px;">
+                        <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                    </td>
+                    <td style="padding-right: 50px;padding-top: 5px;">
+                        Możemy co pewien czas wysyłać Państwu informacje, które mogą okazać się przydatne. Państwa dane osobowe nie zostaną przekazane podmiotom trzecim. Prosimy zaznaczyć niniejsze pole, jeśli chcą Państwo abyśmy kontaktowali się z Państwem za pośrednictwem poczty elektronicznej.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-top: 15px;padding-left: 50px;">
+                        Akt Ochrony Danych Osobowych 1998*
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15px" style="padding-left: 50px; vertical-align: top;padding-top: 10px;">
+                        <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/trueCheckbox.png')}"/>
+                    </td>
+                    <td style="padding-right: 50px;padding-top: 5px;">
+                        Podane przez Ciebie informacje mogą zostać ujawnione licencjonowanej agencji informacji kredytowej, która zachowa wyniki wyszukiwania. Mogą one zostać użyte przez innych pożyczkodawców podczas szacowania Twoich wniosków oraz wniosków innych członków Twojego gospodarstwa domowego, oraz w celu przypadkowego ścigania długów oraz zapobiegania nadużyciom. 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-top: 15px;padding-left: 50px;">
+                        Regulamin*
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15px" style="padding-left: 50px; vertical-align: top;padding-top: 10px;">
+                        <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/trueCheckbox.png')}"/>
+                    </td>
+                    <td style="padding-right: 50px;padding-top: 5px;">
+                        Proszę zapoznać się z Regulaminem dostępnym na stronie http://www.allstarmondo.pl/regulamin-kart i zaznaczyć pole, aby potwierdzić, że zaakceptowali Państwo nasz Regulamin 
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-top: 15px;padding-left: 50px;">
+                        Weryfikacja Kredytowa*
+                    </td>
+                </tr>
+                <tr>
+                    <td width="15px" style="padding-left: 50px; vertical-align: top;padding-top: 10px;">
+                        <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/trueCheckbox.png')}"/>
+                    </td>
+                    <td style="padding-right: 50px;padding-top: 5px;">
+                        Oświadczenie woli osoby, której dotyczą dane gospodarcze, w przedmiocie ustanowienia wierzyciela pełnomocnikiem umocowanym do wysunięcia roszczenia o ujawnienie danych gospodarczych udostępnionych przez rejestry kredytowe może przybrać następującą formę:<br/>
+                        Nazwa, Adres, NIP, Regon<br/>
+                        „Na podstawie art. 105 ust. 4a i 4a‘ ustawy z dnia 29 sierpnia 1997 roku Prawo bankowe (t.j., Dz. U. 2002, Nr 72, poz. 665 z późn. zm.) w związku z art. 13 ustawy z dnia 9 kwietnia 2010 r. o udostępnianiu informacji gospodarczych i wymianie danych gospodarczych (Dz. U. Nr 81, poz. 530 z późn. zm.), niniejszym udzielam Fleetcor Poland Sp. z o.o., Al. Jerozolimskie 56c, 00-803, Warszawa NIP 5252584121, Regon 147190446 umocowania do złożenia w moim imieniu, za pośrednictwem Biura Informacji Gospodarczej InfoMonitor S.A. z siedzibą w Warszawie, w Biurze Informacji Kredytowej S.A. oraz Związku Banków Polskich upoważnienia do udostępnienia danych gospodarczych przetwarzanych przez te instytucje, w zakresie niezbędnym do dokonania oceny wiarygodności płatniczej i oceny ryzyka kredytowego, w tym między innymi oceny punktowej (scoring), celem ujawnienia ich przez Biuro Informacji Gospodarczej InfoMonitor S.A. z siedzibą w Warszawie WIERZYCIELOWI Fleetcor Poland Sp. z o.o., Al. Jerozolimskie 56c, 00-803, Warszawa“
+                    </td>
+                </tr>
+            </table>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 11px; margin-top: 50px;">      
+                <tr>
+                    <td style="padding: 0 50px;" colspan="2">
+                        <div style="color: white; font-size: 14px;background-color: #7a7676; padding: 10px;">
+                            Podpisy
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0 50px;" colspan="2">
+                        Prosimy o wypełnienie i podpisanie przez jednego lub kilku pełnomocników.<br/>
+                        W przypadku przedsiębiorstw dane na formularzu muszą odpowiadać danym wpisanym w odpowiednim rejestrze. 
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 50px; text-align: center; font-size: 20px;" width="50%">1</td>
+                    <td style="padding-right: 50px; text-align: center; font-size: 20px;" width="50%">2</td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 50px;" width="50%">
+                        Imię i Nazwisko:<br/>
+                        <div style="border-bottom: 1px dashed black; margin-right: 5px;"></div>
+                        <br/><br/>
+                        Stanowisko:<br/>
+                        <div style="border-bottom: 1px dashed black; margin-right: 5px;"></div>
+                        <br/><br/>
+                        Data:<br/>
+                        <div style="border-bottom: 1px dashed black; margin-right: 5px;"></div>
+                    </td>
+                    <td style="padding-right: 50px;" width="50%">
+                        Imię i Nazwisko:<br/>
+                        <div style="border-bottom: 1px dashed black;"></div>
+                        <br/><br/>
+                        Stanowisko:<br/>
+                        <div style="border-bottom: 1px dashed black;"></div>
+                        <br/><br/>
+                        Data:<br/>
+                        <div style="border-bottom: 1px dashed black;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 50px;" width="50%">
+                        <br/><br/><br/><br/><br/>
+                        <div style="border-bottom: 1px dashed black;margin-right: 5px;"></div>
+                        <div style="text-align: center;">Podpis</div>
+                    </td>
+                    <td style="padding-right: 50px;" width="50%">
+                        <br/><br/><br/><br/><br/>
+                        <div style="border-bottom: 1px dashed black;"></div>
+                        <div style="text-align: center;">Podpis</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="page-break">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 11px; margin-top: 50px;">
+                <tr>
+                    <td style="padding: 0 50px;" colspan="2">
+                        <div style="color: white; font-size: 14px;background-color: #FDC300; padding: 10px;">
+                            <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/trueCheckbox_yellow.png')}" style="margin-right: 5px;"/> <span style="color: gray; font-size: 20px;">Lista kontrolna</span>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 11px; margin-top: 20px; padding: 0 50px;">
+                <tr>
+                    <td colspan="2">
+                        Ogólne
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;background: #FEF6E2;">
+                        Czy wypełnili Państwo wszystkie obowiązkowe pola i sekcje? 
+                    </td>               
+                    <td width="15px" style="vertical-align: top;padding: 10px;background: #E3E3E3;vertical-align: middle;">
+                        <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;background: #FEF6E2;">
+                        Czy przeczytali i zaznaczyli Państwo pola obok każdej zgody?
+                    </td>               
+                    <td width="15px" style="vertical-align: top;padding: 10px;background: #E3E3E3;vertical-align: middle;">
+                        <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px;background: #FEF6E2;">
+                        Czy zostały złożone podpisy w wymaganych polach?
+                    </td>               
+                    <td width="15px" style="vertical-align: top;padding: 10px;background: #E3E3E3;vertical-align: middle;">
+                        <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                    </td>
+                </tr>               
+            </table>
+            
+            <div style="text-align: center;font-size: 12px;">Czy załączyli Państwo skany lub zdjęcia poniższych dokumentów:</div>
+
+            <br/>
+            
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 11px; padding: 0 50px;">
+                <tr>
+                    <td valign="top">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 11px;">
+                            <tr>
+                                <td colspan="2">
+                                    Firma
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;background: #FEF6E2;">
+                                    Tożsamość – REGON, CEIDG lub KRS 
+                                </td>               
+                                <td width="15px" style="vertical-align: top;padding: 10px;background: #E3E3E3;vertical-align: middle;">
+                                    <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="height: 5px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;background: #FEF6E2;">
+                                    Potwierdzenie adresu (jeśli adres handlowy różni się od adresu siedziby) – skan ostatniego wyciągu bankowego firmy LUB rachunku za media nie starszego niż 3 miesiące
+                                </td>               
+                                <td width="15px" style="vertical-align: top;padding: 10px;background: #E3E3E3;vertical-align: middle;">
+                                    <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="height: 5px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;background: #FEF6E2;">
+                                    Potwierdzenie dochodów<br/>
+                                    • PIT z ostatnich 2 lat* w przypadku Jednoosobowej działalności gospodarczej i wszystkich Partnerów<br/>
+                                    • CIT lub sprawozdanie finansowe z ostatnich 2 lat*<br/>
+                                    w przypadku Spółki z ograniczoną odpowiedzialnością, Spółki akcyjnej i Spółki komandytowo-akcyjnej 
+                                </td>               
+                                <td width="15px" style="vertical-align: top;padding: 10px;background: #E3E3E3;vertical-align: middle;">
+                                    <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                                </td>
+                            </tr>               
+                        </table>
+
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 11px;">
+                            <tr>
+                                <td colspan="2">
+                                    Właściciele, Partnerzy i Dyrektorzy
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;background: #FEF6E2;">
+                                    Tożsamość – skan dowodu osobistego lub paszportu, w przypadku gdy osoba nie posiada dowodu osobistego  
+                                </td>               
+                                <td width="15px" style="vertical-align: top;padding: 10px;background: #E3E3E3;vertical-align: middle;">
+                                    <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="height: 5px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;background: #FEF6E2;">
+                                    Potwierdzenie adresu – skan ostatniego wyciągu bankowego LUB skan rachunku za media nie starszego niż 3 miesiące
+                                </td>               
+                                <td width="15px" style="vertical-align: top;padding: 10px;background: #E3E3E3;vertical-align: middle;">
+                                    <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                                </td>
+                            </tr>           
+                        </table>
+                    </td>
+                    <td valign="top" style="padding-left: 10px;">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 11px;">
+                            <tr>
+                                <td colspan="2">
+                                    Beneficjent Rzeczywisty (Osoba)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;background: #FEF6E2;">
+                                    Tożsamość – skan dowodu osobistego lub paszportu, w przypadku gdy osoba nie posiada dowodu osobistego 
+                                </td>               
+                                <td width="15px" style="vertical-align: top;padding: 10px;background: #E3E3E3;vertical-align: middle;">
+                                    <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="height: 5px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;background: #FEF6E2;">
+                                    Potwierdzenie adresu – skan ostatniego wyciągu bankowego LUB skan rachunku za media nie starszego niż 3 miesiące 
+                                </td>               
+                                <td width="15px" style="vertical-align: top;padding: 10px;background: #E3E3E3;vertical-align: middle;">
+                                    <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                                </td>
+                            </tr>               
+                        </table>
+
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 11px;">
+                            <tr>
+                                <td colspan="2">
+                                    Beneficjent Rzeczywisty (Firma lub Organizacja)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;background: #FEF6E2;">
+                                    Tożsamość – REGON, CEIDG lub KRS   
+                                </td>               
+                                <td width="15px" style="vertical-align: top;padding: 10px;background: #E3E3E3;vertical-align: middle;">
+                                    <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="height: 5px;"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px;background: #FEF6E2;">
+                                    Potwierdzenie adresu (jeśli adres handlowy różni się od adresu siedziby) – skan ostatniego wyciągu bankowego firmy LUB skan rachunku za media nie starszego niż 3 miesiące
+                                </td>               
+                                <td width="15px" style="vertical-align: top;padding: 10px;background: #E3E3E3;vertical-align: middle;">
+                                    <apex:image url="{!URLFOR($Resource.AllstarFiles, 'img/falseCheckbox.png')}"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    W przypadku komunikacji emailowej, prosimy o czytelny skan dokumentów lub wyraźne zdjęcia.<br/><br/><br/>
+                                    *Jeśli Państwa firma istnieje na rynku krócej niż 2 lata, prosimy dostarczyć dotychczasowe dokumenty finansowe. W takiej sytuacji mogą być wymagane dodatkowe informacje.
+                                </td>
+                            </tr>           
+                        </table>                        
+                    </td>
+                </tr>
+            </table>
+            <div style="padding: 50px;">
+                <div style="border: 1px solid gray; padding: 10px;font-size: 12px;">
+                    Proszę wysłać nam czytelny skany podpisanego formularza oraz wymaganych dokumentów na adres email nowyklient@allstarmondo.pl, lub oryginał podpisanego formularza wraz z kopiami dokumentów pocztą na adres FLEETCOR Poland Sp. z o.o., Al. Jerozolimskie 56C, 00-803 Warszawa, Polska.
+                </div>
+            </div>
+        </div>
+
+        <div style="padding: 50px;">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-size: 11px;">
+                <tr>
+                    <td>
+                        <div style="color: white; font-size: 14px;background-color: #7a7676; padding: 10px;">
+                            Informacje dodatkowe
+                        </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        Na tej stronie można dopełnić informacje dotyczące dodatkowych Beneficjentów Rzeczywistych lub Przedstawicieli<br/><br/><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+                <tr>
+                    <td style="height: 5px;"></td>
+                </tr>
+                <tr>
+                    <td style="border-bottom: 1px dashed black; background: #F1F4FF;height: 40px;"></td>
+                </tr>
+            </table>                
+        </div>
+
+        <div class="pdffooter" style="padding: 0;">
+            <hr style="color: #f4f5f7; margin-bottom: 10px;"></hr>
+            <table width="86%" border="0" cellpadding="0" cellspacing="0" style="margin: auto;">
+                <tr>
+                    <td style="width: 97%; font-size: 8px; text-align: center; color: gray; line-height: 1.2;">FLEETCOR Poland Sp. z o.o., Al. Jerozolimskie 56C 00-803 Warszawa, Polska.<br/>
+                        Sąd Rejonowy dla m. st. Warszawy w Warszawie, XII Wydział Gospodarczy KRS, nr KRS 0000505365<br/>
+                        Kapitał zakładowy: 5.000 PLN | NIP: 5252584121</td>
+                    <td style="background-color: #e2e2e2; text-align: center; color: gray; font-size: 13px;"><span class="pagenumber"/></td>                
+                </tr>
+            </table>
+        </div>
+    </apex:form>
+</apex:page>

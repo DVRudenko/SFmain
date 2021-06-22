@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Read</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>GPC Teamleader Tender Department</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>GPC Teamleader Tender Department</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>PPR_Field_Teamleader_South</parentRole>
+</Role>

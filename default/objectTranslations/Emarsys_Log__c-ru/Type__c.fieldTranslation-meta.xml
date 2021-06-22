@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Clicked</masterLabel>
+        <translation>Клик</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opened</masterLabel>
+        <translation>Открыто</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reaction Open or Click</masterLabel>
+        <translation>Реакция Открыто или Клик</translation>
+    </picklistValues>
+</CustomFieldTranslation>

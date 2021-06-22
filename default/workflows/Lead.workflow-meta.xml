@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CCS_inform_Stepan</fullName>
+        <description>CCS_inform_Stepan</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>stepan.vitecek@intercodec.cz.ccs.we</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>CCS/Web_CCS</template>
+    </alerts>
+    <alerts>
+        <fullName>E2E_RU_Business_card</fullName>
+        <ccEmails>tatiana.kim@transitcard.ru</ccEmails>
+        <description>E2E RU - Business card</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>PPR_Call_Center_Team_Leader</recipient>
+            <type>roleSubordinates</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_WEB</template>
+    </alerts>
+    <alerts>
+        <fullName>E2E_RU_Email_to_Lead</fullName>
+        <ccEmails>tatiana.kim@transitcard.ru</ccEmails>
+        <ccEmails>natalia.skachko@fleetcor.ru</ccEmails>
+        <description>E2E RU - Email to Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>anastasiya.drozdova@pprcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>neonila.protchenko@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_WEB</template>
+    </alerts>
+    <alerts>
+        <fullName>E2E_RU_GPC_User_Queue</fullName>
+        <ccEmails>tatiana.kim@transitcard.ru</ccEmails>
+        <description>E2E RU - GPC (User Queue)</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>natalya.romenskaya@fleetcor.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_WEB</template>
+    </alerts>
+    <alerts>
+        <fullName>E2E_RU_New_Lead</fullName>
+        <ccEmails>tatiana.kim@transitcard.ru,</ccEmails>
+        <ccEmails>natalia.skachko@fleetcor.ru</ccEmails>
+        <description>E2E RU - New Lead</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>anastasiya.drozdova@pprcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>neonila.protchenko@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_RWL</template>
+    </alerts>
+    <alerts>
+        <fullName>E2E_RU_Partners_Call_Center</fullName>
+        <ccEmails>tatiana.kim@transitcard.ru</ccEmails>
+        <description>E2E RU - Partners (Call Center)</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>PPR_Call_Center_Team_Leader</recipient>
+            <type>roleSubordinates</type>
+        </recipients>
+        <recipients>
+            <recipient>aleksey.karev@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_WEB</template>
+    </alerts>
+    <alerts>
+        <fullName>E2E_RU_Partners_Inbound_Website</fullName>
+        <ccEmails>tatiana.kim@transitcard.ru</ccEmails>
+        <ccEmails>natalia.skachko@fleetcor.ru</ccEmails>
+        <description>E2E RU - Partners (Inbound Website)</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>aleksey.karev@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>victoria.polyakova@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>notreply@info.pprcard.ru</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_WEB</template>
+    </alerts>
+    <alerts>
+        <fullName>E2E_RU_Shell_Email_Alert</fullName>
+        <ccEmails>tatiana.kim@transitcard.ru</ccEmails>
+        <ccEmails>natalia.skachko@fleetcor.ru</ccEmails>
+        <description>E2E RU - Shell Email Alert</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>PPR_Bryansk_Call_Center</recipient>
+            <type>role</type>
+        </recipients>
+        <recipients>
+            <recipient>PPR_Call_Center_Team_Leader</recipient>
+            <type>role</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_RWL</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Web_Lead_Flexcard</fullName>
+        <ccEmails>kontakt@flexkarte.de</ccEmails>
+        <description>New Web Lead Flexcard!</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/New_Web</template>
+    </alerts>
+  <!--  <alerts>
+        <fullName>Return_funnel</fullName>
+        <description>Возврат в воронку</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>alexey.sobolev@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ilya.lopatin@pprcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>nadejda.skolkovskaya@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>natalia.semenocheva@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>neonila.protchenko@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>oksana.yarygina@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>olga.shapoval@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>pavel.beltyukov@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sergey.sobko@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tatianakim@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tatjana.savicheva@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>victoria.polyakova@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>PPR_Email_Templates/PPR_Return_funnel</template>
+    </alerts> -->
+    <alerts>
+        <fullName>Send_Thank_you_email</fullName>
+        <description>Send Thank you email</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sales_Letters_DE/Thank_you</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Thank_you_email_AT</fullName>
+        <description>Send Thank you email AT</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sales_letters_AT/Thank_you_letter_AT</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Thank_you_email_CZ</fullName>
+        <description>Send Thank you email CZ</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sales_Letter_CZ/Thank_you_letter_CZ</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Thank_you_email_HU</fullName>
+        <description>Send Thank you email HU</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sales_letters_HU/Thank_you_letter_HU</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Thank_you_email_KP_Generic</fullName>
+        <description>Send Thank you email KP Generic</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sales_letters_PL/thank_you_karta_paliwowa_generic</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Thank_you_email_KP_Shell</fullName>
+        <description>Send Thank you email KP Shell</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sales_letters_PL/thank_you_karta_paliwowa_Shell</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Thank_you_email_PL_Endkunde</fullName>
+        <description>Send Thank you email PL - Endkunde</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sales_letters_PL/Thank_you_letter_PL_Endkunde</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Thank_you_email_PL_Lotos</fullName>
+        <description>Send Thank you email PL Lotos</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>karta.lotos@fleetcor.pl</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sales_letters_PL/Thank_you_letter_PL_Lotos</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Thank_you_email_SK</fullName>
+        <description>Send Thank you email SK</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sales_Letter_SK/Thank_you_letter_SK</template>
+    </alerts>
+    <alerts>
+        <fullName>TestT</fullName>
+        <description>TestT</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ilya.ivonin@fleetcor.ru.eu</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_WEB</template>
+    </alerts>
+    <alerts>
+        <fullName>Web_Omnicomm_Citypoint</fullName>
+        <description>Web Omnicomm Citypoint</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>aleksey.karev@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ilya.ivonin@fleetcor.ru.eu</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>natalia.skachko@transitcard.ru.eu</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tatianakim@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>victoria.polyakova@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>notreply@info.pprcard.ru</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_WEB</template>
+    </alerts>
+    <alerts>
+        <fullName>thank_you_karta_paliwowa_AllstarMondo</fullName>
+        <description>thank you karta paliwowa_AllstarMondo</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Sales_letters_PL/thank_you_karta_paliwowa</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>ActionFieldUpdate</fullName>
+        <field>A_large_fleet_of_vehicles__c</field>
+        <formula>IF(
+            PRIORVALUE(Number_of_Vehicles__c) &gt;= 20 &amp;&amp; Number_of_Vehicles__c &lt; 20, 1,
+            IF(BLANKVALUE(PRIORVALUE(Number_of_Vehicles__c),0) &lt;20 &amp;&amp; Number_of_Vehicles__c &gt;= 20,1,
+            NULL)
+            )</formula>
+        <name>UpdateLargeFleetOfVehicle</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CCS_Description_Popis_Lead</fullName>
+        <description>Description to Popis.</description>
+        <field>CCS_Popis_Leadu__c</field>
+        <formula>Description</formula>
+        <name>CCS_Description_Popis_Lead</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>CCS_Lead_Source_Lead</fullName>
+        <description>Copy Lead Source to CCS_Lead_Source__c</description>
+        <field>CCS_Lead_Source__c</field>
+        <formula>TEXT(LeadSource)</formula>
+        <name>CCS_Lead_Source_Lead</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>DateAssign_on_CC</fullName>
+        <description>use for pilots CC</description>
+        <field>Date_Assign_on_CC__c</field>
+        <formula>NOW()</formula>
+        <name>Date Assign on CC</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Date_last_change_status</fullName>
+        <field>Date_of_Last_Status_Changing__c</field>
+        <formula>TODAY()</formula>
+        <name>Date last change status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>FieldSalesTerritory_buddy_count</fullName>
+        <field>FieldSalesTerritory_buddy__c</field>
+        <formula>IF( ISPICKVAL(Status,&#39;NEW - Not Yet Contacted&#39;), 0,
+            IF( ISPICKVAL(Status,&#39;IN PROCESS - 1st Attempt&#39;), 1,
+            IF( ISPICKVAL(Status,&#39;IN PROCESS - 2nd Attempt&#39;), 2,
+            IF( ISPICKVAL(Status,&#39;IN PROCESS - 3rd Attempt&#39;), 3,
+            IF( ISPICKVAL(Status,&#39;IN PROCESS - 4th Attempt&#39;), 4,
+            IF( ISPICKVAL(Status,&#39;IN PROCESS - 5th Attempt&#39;), 5,6))))))</formula>
+        <name>FieldSalesTerritory_buddy_count</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IB_transf_OB</fullName>
+        <field>Transfer_INB_to_OB_Queue__c</field>
+        <formula>TODAY()</formula>
+        <name>IB_transf_OB</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Increment_Call_Count</fullName>
+        <description>Adds 1 to the call count</description>
+        <field>NVM_Call_Count__c</field>
+        <formula>NVM_Call_Count__c + 1</formula>
+        <name>Increment Call Count</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NVM_Increment_Call_Count</fullName>
+        <field>NVM_Call_Count__c</field>
+        <formula>NVM_Call_Count__c +1</formula>
+        <name>NVM Increment Call Count</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NVM_Uncheck_Call_Logged</fullName>
+        <field>NVM_Call_Logged__c</field>
+        <literalValue>0</literalValue>
+        <name>NVM Uncheck Call Logged</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Name_User_Call_Center</fullName>
+        <description>use for pilots CC</description>
+        <field>User_Call_Center_c__c</field>
+        <formula>Owner:User.FirstName &amp;&quot; &quot;&amp; Owner:User.LastName</formula>
+        <name>Name User Call Center</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Number_of_vehicles_c_Count</fullName>
+        <description>Number_of_vehicles__c = CCS_Cars_up_to_3_5t__c + CCS_vans_up_to_3_5t__c</description>
+        <field>Number_of_Vehicles__c</field>
+        <formula>IF(ISBLANK (CCS_Cars_up_to_3_5t__c) &amp;&amp; ISBLANK (CCS_vans_up_to_3_5t__c), Number_of_Vehicles__c,
+            IF( ISBLANK(CCS_Cars_up_to_3_5t__c) ,
+            CCS_vans_up_to_3_5t__c ,
+            IF(ISBLANK(CCS_vans_up_to_3_5t__c), CCS_Cars_up_to_3_5t__c, CCS_Cars_up_to_3_5t__c + CCS_vans_up_to_3_5t__c)
+            ))</formula>
+        <name>CCS_Number_of_vehicles__c Count</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Number_of_vehicles_c_to_Anzahl_der_F</fullName>
+        <description>&quot;Number_of_vehicles__c&quot; to &quot;Anzahl_der_Fahrzeuge__c&quot;</description>
+        <field>Anzahl_der_Fahrzeuge__c</field>
+        <formula>Number_of_Vehicles__c</formula>
+        <name>CCS_Number_of_vehicles to Anzahl_der_Fah</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Open_offen</fullName>
+        <description>Изменяет статус с Offen на Open</description>
+        <field>Status</field>
+        <literalValue>Open</literalValue>
+        <name>Open-offen</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Owner_Russian_Web_Leads</fullName>
+        <field>OwnerId</field>
+        <lookupValue>RussianWebLeads</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Owner_Russian_Web_Leads</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>PPR_Email_to_Lead</fullName>
+        <field>OwnerId</field>
+        <lookupValue>PPR_Email_to_Lead</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>PPR_Email_to_Lead</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sec_Cannel_JITB</fullName>
+        <field>Sec_Channel__c</field>
+        <literalValue>JITB</literalValue>
+        <name>Sec_Cannel_JITB</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sec_Cannel_Telesales</fullName>
+        <field>Sec_Channel__c</field>
+        <literalValue>Outbound</literalValue>
+        <name>Sec_Cannel_Outbound</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Sec_Cannel_Web</fullName>
+        <field>Sec_Channel__c</field>
+        <literalValue>Inbound</literalValue>
+        <name>Sec_Cannel_Inbound</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_is_external</fullName>
+        <field>Is_External__c</field>
+        <literalValue>0</literalValue>
+        <name>Set is external</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>reset_PD_Avaliable_LastName_Update_c</fullName>
+        <field>PD_Avaliable_LastName_Update__c</field>
+        <literalValue>0</literalValue>
+        <name>reset PD_Avaliable_LastName_Update__c</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>uncheck_box</fullName>
+        <description>Uncheck the hidden box</description>
+        <field>NVM_Hidden_Call_Count__c</field>
+        <literalValue>0</literalValue>
+        <name>uncheck box</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>CCS_Number_of_vehicles_Copy_Lead</fullName>
+        <actions>
+            <name>Number_of_vehicles_c_to_Anzahl_der_F</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>contains</operation>
+            <value>CCS</value>
+        </criteriaItems>
+        <description>Copy Number_of_vehicles__c to Anzahl_der_Fahrzeuge__c (only for CCS).</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CCS_Number_of_vehicles_Lead</fullName>
+        <actions>
+            <name>Number_of_vehicles_c_Count</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Number_of_vehicles__c = CCS_Cars_up_to_3_5t__c + CCS_vans_up_to_3_5t__c</description>
+        <formula>IF(ISBLANK(CCS_Cars_up_to_3_5t__c), CCS_Cars_up_to_3_5t__c = 0, CCS_Cars_up_to_3_5t__c = CCS_Cars_up_to_3_5t__c) ||   IF(ISBLANK (CCS_vans_up_to_3_5t__c) , CCS_vans_up_to_3_5t__c = 0, CCS_vans_up_to_3_5t__c = CCS_vans_up_to_3_5t__c) ||  IF(ISBLANK (CCS_Cars_up_to_3_5t__c) &amp;&amp; ISBLANK (CCS_vans_up_to_3_5t__c), Number_of_Vehicles__c = Number_of_Vehicles__c ,  Number_of_Vehicles__c =  CCS_Cars_up_to_3_5t__c + CCS_vans_up_to_3_5t__c)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CCS_convert_Lead</fullName>
+        <actions>
+            <name>CCS_Description_Popis_Lead</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>CCS_Lead_Source_Lead</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.RecordTypeId</field>
+            <operation>contains</operation>
+            <value>CCS</value>
+        </criteriaItems>
+        <description>Take fields from Lead and convert them to other objects (Accounts/Opportunities).</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>CCS_inform_Lead</fullName>
+        <actions>
+            <name>CCS_inform_Stepan</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>contains</operation>
+            <value>Web CCS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>contains</operation>
+            <value>efektivn</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.CCS_OZ_number__c</field>
+            <operation>contains</operation>
+            <value>bonus</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Dialler Call Count</fullName>
+        <actions>
+            <name>Increment_Call_Count</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.NVM_Hidden_Call_Count__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Increments call count when a dialler call has been made with NVM</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>uncheck_box</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <timeLength>1</timeLength>
+            <workflowTimeTriggerUnit>Hours</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>E2E RU - Business card</fullName>
+        <actions>
+            <name>E2E_RU_Business_card</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Email notification for &#39;PPR Bryansk Call Center&#39; and &#39;PPR Call Center Team Leader&#39; roles where comes the new lead to the &#39;PPR Business card&#39; queue and queue name equals &#39;PPR Business card&#39;</description>
+        <formula>Owner:Queue.QueueName  = &#39;PPR Business card&#39;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>E2E RU - Email to Lead</fullName>
+        <actions>
+            <name>E2E_RU_Email_to_Lead</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.OwnerId</field>
+            <operation>equals</operation>
+            <value>PPR Email-to-Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Lead_Source_Type__c</field>
+            <operation>equals</operation>
+            <value>Chat,Phone_call</value>
+        </criteriaItems>
+        <description>Send email alert to responsible users if a lead is assigned to PPR Email-To-Lead queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>E2E RU - Partners %28Call Center%29</fullName>
+        <actions>
+            <name>E2E_RU_Partners_Call_Center</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Email notification for &#39;PPR Bryansk Call Center&#39; and &#39;PPR Call Center Team Leader&#39; roles where comes the new lead to the &#39;PPR Partners&#39; queue and queue name equals &#39;PPR Partners&#39;</description>
+        <formula>Owner:Queue.QueueName  = &#39;PPR Partners&#39;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>E2E RU - Shell New</fullName>
+        <actions>
+            <name>E2E_RU_Shell_Email_Alert</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.OwnerId</field>
+            <operation>equals</operation>
+            <value>PPR NHF Shell</value>
+        </criteriaItems>
+        <description>Send email to responsible managers if a new lead was assigned on PPR NHF Shell queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Last Change Status</fullName>
+        <actions>
+            <name>Date_last_change_status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Save the date of lead status last change</description>
+        <formula>AND( NOT(ISNEW()), ISCHANGED(Status) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Lead assignment fix</fullName>
+        <actions>
+            <name>Set_is_external</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Is_External__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>NVM Update Call Count</fullName>
+        <actions>
+            <name>NVM_Uncheck_Call_Logged</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.NVM_Call_Logged__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Increment the Call Count when the Call Logged checkbox is set to True</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PPR Email-To-Lead</fullName>
+        <actions>
+            <name>E2E_RU_Email_to_Lead</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Lead.CreatedById</field>
+            <operation>equals</operation>
+            <value>Integration Administrator,Eugene Vabishchevich,Ilya Ivonin</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.OwnerId</field>
+            <operation>equals</operation>
+            <value>PPR Email-to-Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LastModifiedById</field>
+            <operation>equals</operation>
+            <value>Integration Administrator,Eugene Vabishchevich,Ilya Ivonin</value>
+        </criteriaItems>
+        <description>Нотификация при попадании лида на очередь PPR Email-To-Lead</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PPR IB_transf_OB</fullName>
+        <actions>
+            <name>IB_transf_OB</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>date assigned on &quot;PPR Queue transfer Inbound to Outbound&quot;</description>
+        <formula>AND( NOT(ISNEW()), ISCHANGED(OwnerId), Owner:Queue.DeveloperName = &#39;PPR_Queue_transfer_Inbound_to_Outbound&#39;, RecordType.DeveloperName = &#39;Russian_Sales&#39; )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>PPR tracking Call Center</fullName>
+        <actions>
+            <name>DateAssign_on_CC</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Name_User_Call_Center</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>tracking if owner call center</description>
+        <formula>AND( ISCHANGED(    Owner_User_ID__c    ), Owner:User.Profile.Name = &#39;Russian Call Center&#39;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reset PD_Avaliable_LastName_Update</fullName>
+        <actions>
+            <name>reset_PD_Avaliable_LastName_Update_c</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.PD_Avaliable_LastName_Update__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>PPR Email-To-Lead</fullName>
+        <actions>
+            <name>E2E_RU_Email_to_Lead</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>PPR_Email_to_Lead</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.CreatedById</field>
+            <operation>equals</operation>
+            <value>Eugene Vabishchevich,Ilya Ivonin,Integration Administrator,Maksim Simonov,Integration Administrator RU</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Lead_Source_Type__c</field>
+            <operation>equals</operation>
+            <value>Phone_Call,Chat</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Source_of_Lead__c</field>
+            <operation>contains</operation>
+            <value>Shell Card.ru,petrolplus.ru,petrolcards.ru,gpc-store.ru</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>equals</operation>
+            <value>NEW - Not Yet Contacted</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.OwnerId</field>
+            <operation>equals</operation>
+            <value>Integration Administrator,Integration Administrator RU</value>
+        </criteriaItems>
+        <description>assign to the queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Russian Web Leads</fullName>
+        <actions>
+            <name>Owner_Russian_Web_Leads</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>(1 AND 2 AND 3 AND 4) OR (5 AND 6)</booleanFilter>
+        <criteriaItems>
+            <field>Lead.CreatedById</field>
+            <operation>equals</operation>
+            <value>Eugene Vabishchevich,Ilya Ivonin,Integration Administrator,Maksim Simonov</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Source_of_Lead__c</field>
+            <operation>contains</operation>
+            <value>Shell Card.ru,petrolplus.ru,petrolcards.ru,gpc-store.ru</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Lead_Source_Type__c</field>
+            <operation>equals</operation>
+            <value>Email,Popup,Webform</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Status</field>
+            <operation>equals</operation>
+            <value>NEW - Not Yet Contacted</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.OwnerId</field>
+            <operation>equals</operation>
+            <value>PPR Email-to-Lead</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Lead_Source_Type__c</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send email after inbound lead created</fullName>
+        <actions>
+            <name>Send_Thank_you_email</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Channel__c</field>
+            <operation>equals</operation>
+            <value>E-mail,Internet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Sec_Channel__c</field>
+            <operation>equals</operation>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>Web_short-form,Web_LP,Inbound Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Country</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>notEqual</operation>
+            <value>Site Agg</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send email after inbound lead created AT</fullName>
+        <actions>
+            <name>Send_Thank_you_email_AT</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Channel__c</field>
+            <operation>equals</operation>
+            <value>E-mail,Internet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Sec_Channel__c</field>
+            <operation>equals</operation>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>Web_short-form,Web_LP,Inbound Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Country</field>
+            <operation>equals</operation>
+            <value>Austria</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>notEqual</operation>
+            <value>Site Agg</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send email after inbound lead created Allstar KP</fullName>
+        <actions>
+            <name>thank_you_karta_paliwowa_AllstarMondo</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Channel__c</field>
+            <operation>equals</operation>
+            <value>Internet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Sec_Channel__c</field>
+            <operation>equals</operation>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>Site Agg</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Country</field>
+            <operation>equals</operation>
+            <value>Poland</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Datansatztyp_auto__c</field>
+            <operation>equals</operation>
+            <value>AllStar</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Site_Agg_product__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>thank you karta paliwowa_Allstar</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send email after inbound lead created Allstar KP Generic</fullName>
+        <actions>
+            <name>Send_Thank_you_email_KP_Generic</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Channel__c</field>
+            <operation>equals</operation>
+            <value>Internet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Sec_Channel__c</field>
+            <operation>equals</operation>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>Site Agg</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Country</field>
+            <operation>equals</operation>
+            <value>Poland</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Datansatztyp_auto__c</field>
+            <operation>equals</operation>
+            <value>AllStar</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Site_Agg_product__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>thank you karta paliwowa_Allstar_generic</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send email after inbound lead created CZ</fullName>
+        <actions>
+            <name>Send_Thank_you_email_CZ</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Channel__c</field>
+            <operation>equals</operation>
+            <value>E-mail,Internet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Sec_Channel__c</field>
+            <operation>equals</operation>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>Web_short-form,Web_LP,Inbound Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Country</field>
+            <operation>equals</operation>
+            <value>Czech Republic</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>notEqual</operation>
+            <value>Site Agg</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Agree_to_receive_comm_info_by_email__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send email after inbound lead created HU</fullName>
+        <actions>
+            <name>Send_Thank_you_email_HU</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Channel__c</field>
+            <operation>equals</operation>
+            <value>E-mail,Internet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Sec_Channel__c</field>
+            <operation>equals</operation>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>Web_short-form,Web_LP,Inbound Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Country</field>
+            <operation>equals</operation>
+            <value>Hungary</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>notEqual</operation>
+            <value>Site Agg</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Agree_to_receive_comm_info_by_email__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send email after inbound lead created PL - Endkunde</fullName>
+        <actions>
+            <name>Send_Thank_you_email_PL_Endkunde</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Channel__c</field>
+            <operation>equals</operation>
+            <value>E-mail,Internet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Sec_Channel__c</field>
+            <operation>equals</operation>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>Web_short-form,Web_LP,Inbound Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Country</field>
+            <operation>equals</operation>
+            <value>Poland</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>notEqual</operation>
+            <value>Site Agg</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Agree_to_receive_comm_info_by_email__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Datansatztyp_auto__c</field>
+            <operation>equals</operation>
+            <value>Endkunde</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send email after inbound lead created PL - Lotos</fullName>
+        <actions>
+            <name>Send_Thank_you_email_PL_Lotos</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Channel__c</field>
+            <operation>equals</operation>
+            <value>E-mail,Internet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Sec_Channel__c</field>
+            <operation>equals</operation>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>Web_short-form,Web_LP,Inbound Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Country</field>
+            <operation>equals</operation>
+            <value>Poland</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>notEqual</operation>
+            <value>Site Agg</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Agree_to_receive_comm_info_by_email__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Datansatztyp_auto__c</field>
+            <operation>equals</operation>
+            <value>Lotos</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send email after inbound lead created SK</fullName>
+        <actions>
+            <name>Send_Thank_you_email_SK</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6</booleanFilter>
+        <criteriaItems>
+            <field>Lead.Channel__c</field>
+            <operation>equals</operation>
+            <value>E-mail,Internet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Sec_Channel__c</field>
+            <operation>equals</operation>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>Web_short-form,Web_LP,Inbound Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Country</field>
+            <operation>equals</operation>
+            <value>Slovakia</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>notEqual</operation>
+            <value>Site Agg</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Agree_to_receive_comm_info_by_email__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send email after inbound lead created Shell KP</fullName>
+        <actions>
+            <name>Send_Thank_you_email_KP_Shell</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Channel__c</field>
+            <operation>equals</operation>
+            <value>Internet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Sec_Channel__c</field>
+            <operation>equals</operation>
+            <value>Inbound</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.LeadSource</field>
+            <operation>equals</operation>
+            <value>Site Agg</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Country</field>
+            <operation>equals</operation>
+            <value>Poland</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Lead.Datansatztyp_auto__c</field>
+            <operation>equals</operation>
+            <value>Endkunde</value>
+        </criteriaItems>
+        <description>thank you karta paliwowa_Shell</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>SetLargeNumberOfVehicles</fullName>
+        <actions>
+            <name>ActionFieldUpdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Update indicator A_large_fleet_of_vehicles__c if manager change the number of vehicles to bigger or smaller side (20 quantity)</description>
+        <formula>AND( NOT(ISNEW()), ISCHANGED(Number_of_Vehicles__c), A_large_fleet_of_vehicles__c  &lt;&gt; 1 )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

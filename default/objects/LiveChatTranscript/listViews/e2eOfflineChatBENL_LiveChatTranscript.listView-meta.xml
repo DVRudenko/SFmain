@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>e2eOfflineChatBENL_LiveChatTranscript</fullName>
+    <columns>Name</columns>
+    <columns>LiveChatVisitor</columns>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <columns>Status</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Country__c</field>
+        <operation>equals</operation>
+        <value>Belgium-NL</value>
+    </filters>
+    <filters>
+        <field>Owner</field>
+        <operation>equals</operation>
+        <value>e2eOfflineChatBENL</value>
+    </filters>
+    <label>e2eOfflineChatBENL</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Role_Up</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

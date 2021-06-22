@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outbound_SME_NL_10_NL</fullName>
+    <active>true</active>
+    <description>SME (NL 0,025 € + 10 € Account fee). This product is available for Netherlands only.</description>
+    <errorConditionFormula>AND(Free_choice_of_products__c = false, ISPICKVAL(Product__c, "SME (NL 0,025 € + 10 € Account fee)"),
+ISPICKVAL(Sec_Channel__c, "Outbound"), NOT(Account.BillingCountry = "Netherlands"))</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>This product is available for Netherlands only.</errorMessage>
+</ValidationRule>

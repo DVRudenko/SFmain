@@ -1,0 +1,4 @@
+<apex:page standardController="Goal" extensions="RefreshMetricsOnGoalController" action="{! init }">
+<div style="text-align:center;font-size:200%">Метрики обновлены!</div>
+<div style="text-align:center;padding-top:20px"><a href="/{!Goal.Id}">Вернуться к Цели: {!Goal.Name}</a></div>
+</apex:page>

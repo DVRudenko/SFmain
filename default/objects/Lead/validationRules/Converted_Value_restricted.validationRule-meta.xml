@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Converted_Value_restricted</fullName>
+    <active>true</active>
+    <description>CCS users cannot select Converted value (Konvertierte Leads) before converting Lead.</description>
+    <errorConditionFormula>AND(
+IsConverted = False,
+ISCHANGED(Status),
+ISPICKVAL(Status, "Konvertierte Leads"))</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>You cannot select "Converted lead" Status before conversion!</errorMessage>
+</ValidationRule>

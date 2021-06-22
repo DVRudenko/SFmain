@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_special_discount__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>for Yusuf</description>
+    <externalId>false</externalId>
+    <label>Has special discount</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

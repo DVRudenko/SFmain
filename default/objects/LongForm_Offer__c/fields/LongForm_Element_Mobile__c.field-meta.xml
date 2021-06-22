@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LongForm_Element_Mobile__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>LongForm Element Mobile</label>
+    <referenceTo>LongForm_Element__c</referenceTo>
+    <relationshipLabel>LongForm Offers (LongForm Element Mobile)</relationshipLabel>
+    <relationshipName>LongForm_Offers_Mobile</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

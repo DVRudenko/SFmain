@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_CZ_AccountsWGFN</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>CCS_Company_ID__c</columns>
+    <columns>CCS_GFN_number__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.ADDRESS1_STATE</field>
+        <operation>equals</operation>
+        <value>CZ</value>
+    </filters>
+    <filters>
+        <field>CCS_GFN_number__c</field>
+        <operation>notContain</operation>
+        <value>D</value>
+    </filters>
+    <filters>
+        <field>CCS_GFN_number__c</field>
+        <operation>notContain</operation>
+        <value>U</value>
+    </filters>
+    <label>CCS CZ Accounts bez GFNNumber</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>CCS_Administrator</role>
+        <role>CCS_CZ_Contact_Center</role>
+        <role>CCS_CZ_KAM</role>
+        <role>CCS_CZ_KAM_Team_Lead</role>
+        <role>CCS_CZ_LAM</role>
+        <role>CCS_CZ_SME</role>
+        <role>CCS_Contact_Center_Team_Lead</role>
+        <role>CCS_SK_Contact_Center</role>
+        <role>CCS_SK_SME</role>
+        <role>CCS_SME_Team_Lead</role>
+    </sharedTo>
+</ListView>

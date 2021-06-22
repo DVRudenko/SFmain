@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMContactWorld__ContactWorld_Number__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The contact world number relating to this call.  In the case of an inbound call this would be the number dialled by the caller.  For an outbound call this would be the number presented to the person being called.</description>
+    <externalId>false</externalId>
+    <label>ContactWorld Number</label>
+    <required>false</required>
+    <type>Phone</type>
+</CustomField>

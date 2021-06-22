@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ESI_is_required</fullName>
+    <active>true</active>
+    <description>PL: Service fee offer, EuroShell Standard RTL
+HU: Home Station offer (v.2)
+CZ, SK: EuroShell Basic_v1, EuroShell Standard_v1, EuroShell Plus_v1</description>
+    <errorConditionFormula>IF(
+((ISPICKVAL(Product__c, 'Service fee offer') || ISPICKVAL(Product__c, 'EuroShell Standard RTL')) &amp;&amp;
+Registered_Country__c = 'Poland' &amp;&amp;
+ISBLANK(ESI__c))
+||
+(ISPICKVAL(Product__c, 'Home Station offer (v.2)') &amp;&amp;
+Registered_Country__c = 'Hungary' &amp;&amp;
+ISBLANK(ESI__c))
+||
+((ISPICKVAL(Product__c, 'EuroShell Basic_v1') || ISPICKVAL(Product__c, 'EuroShell Standard_v1') || ISPICKVAL(Product__c, 'EuroShell Plus_v1')) &amp;&amp;
+(Registered_Country__c = 'Czech Republic' || Registered_Country__c = 'Slovakia') &amp;&amp;
+ISBLANK(ESI__c)),
+true,
+false)</errorConditionFormula>
+    <errorDisplayField>ESI__c</errorDisplayField>
+    <errorMessage>ESI is required for this Product *</errorMessage>
+</ValidationRule>

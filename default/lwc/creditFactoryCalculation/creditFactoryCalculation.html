@@ -1,0 +1,59 @@
+<template>
+    <div class="credit-factory-calculation" onnewcalculation={newCalculation} oneditcalculation={editCalculation}>
+        <lightning-card title="Score cards" icon-name="custom:custom63" class="calculation-card">
+            <template if:true={loading}>
+                <div class="spinner-wrapper">
+                    <lightning-spinner alternative-text="Loading"
+                                       size="large">
+                    </lightning-spinner>
+                </div>
+            </template>
+            <template if:false={loading}>
+                <div class="slds-m-bottom_medium slds-m-left_medium">
+                    <lightning-combobox
+                        name="Country"
+                        label="Country"
+                        value={country}
+                        options={options}
+                        onchange={handleCountryChange}
+                        class="combobox-country">
+                    </lightning-combobox>
+                </div>
+                <template if:true={country}>
+                    <lightning-datatable
+                        key-field="Order__c"
+                        data={calculationsForCountry}
+                        columns={columns}
+                        onrowaction={handleRowAction}
+                        hide-checkbox-column>
+                    </lightning-datatable>
+                    <div class="slds-m-top_medium">
+                        <lightning-button 
+                            variant="brand-outline" 
+                            label="Add new" 
+                            onclick={handleAddNewClick}
+                            class="slds-m-left_medium">
+                        </lightning-button>
+                        <template if:true={calculationsForAllCountriesMapCopy}>
+                            <lightning-button
+                                variant="brand"
+                                label="Save"
+                                onclick={handleSaveClick}
+                                class="slds-m-right_medium button-save">
+                            </lightning-button>
+                            <lightning-button
+                                label="Cancel"
+                                onclick={handleCancelClick}
+                                class="slds-m-right_medium button-cancel">
+                            </lightning-button>
+                        </template>
+                    </div>
+                </template>
+            </template>
+        </lightning-card> 
+        <div class="modal-window">
+            <c-add-credit-factory-calculation-modal>    
+            </c-add-credit-factory-calculation-modal>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_priobjednavka__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Jedná se o přiobjednávku?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Jedná se o přiobjednávku?</inlineHelpText>
+    <label>Přiobjednávka?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

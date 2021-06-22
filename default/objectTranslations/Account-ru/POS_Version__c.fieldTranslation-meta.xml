@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- POS Version --></label>
+    <name>POS_Version__c</name>
+    <picklistValues>
+        <masterLabel>Retail 2.0 Version 1</masterLabel>
+        <translation><!-- Retail 2.0 Version 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V.1 (4x A3 Poster, 4x Sticker (21cmx21cm, 100x A5 Flyer)</masterLabel>
+        <translation><!-- V.1 (4x A3 Poster, 4x Sticker (21cmx21cm, 100x A5 Flyer) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V.2 (1x A3 Poster QR, SMS)</masterLabel>
+        <translation><!-- V.2 (1x A3 Poster QR, SMS) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V.2 (2x A1 Poster, 6x Sticker (21cmx21cm, 100x A5 Flyer)</masterLabel>
+        <translation><!-- V.2 (2x A1 Poster, 6x Sticker (21cmx21cm, 100x A5 Flyer) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>V.3 (4x Floor stickers 40cm, 50x Postcards, 100x Flyers DIN-Lang, 2x Flyer boxes)</masterLabel>
+        <translation><!-- V.3 (4x Floor stickers 40cm, 50x Postcards, 100x Flyers DIN-Lang, 2x Flyer boxes) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

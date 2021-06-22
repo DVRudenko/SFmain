@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NOT_CHANGE_Closed_Won_opportunity</fullName>
+    <active>true</active>
+    <description>Profiles that are allowed to update Closed Won Opportunities are Credit, Sys Admin, Card Processing, Starts Team and  Starts Team Lead, Service Agent, Service Manager
+00520000005vYf3 - Y. Aden-Farah</description>
+    <errorConditionFormula>IF(
+((CONTAINS($UserRole.Name,"Salesteam Flexcard")
+|| $Profile.Name = "Salesteamleiter Inbound"
+|| $Profile.Name = "Salesteamleiter")
+&amp;&amp;
+(ISCHANGED(Starts_Aufgabe_Beschreibung__c)
+|| ISCHANGED(Starts_Fuel_Liters_Per_Mo_Target__c)
+|| ISCHANGED(GFN_number_for_starts__c)
+|| ISCHANGED(Reason_for_Termination__c)
+|| ISCHANGED(Starts_Karten_erhalten_am__c)
+|| ISCHANGED(Starts_Missing_Information__c)
+|| ISCHANGED(Starts_Number_of_Cards_Target__c)
+|| ISCHANGED(Starts_Reason_for_Not_Fueling__c)
+|| ISCHANGED(Starts_Schedule__c)
+|| ISCHANGED(Starts_Sales_Completed_Update__c)
+|| ISCHANGED(Starts_SLA_Expired__c)
+|| ISCHANGED(Starts_Status__c)
+|| ISCHANGED(Starts_Rep__c)
+|| ISCHANGED(Starts_Status_Delay__c))
+&amp;&amp; RecordType.Name ="Euroshell Starts" )
+|| $Profile.Id = "00e20000001nSOB"
+|| $Profile.Id = "00e20000001Aiij"
+|| $Profile.Name = "CardProcessing"
+|| $Profile.Name = "Service Agent"
+|| $Profile.Name = "Service Manager"
+|| $Profile.Name = "Retention Agent"
+|| $Profile.Name = "Retention Manager"
+|| $Profile.Name = "E2E Profile"
+|| RecordType.Name = "Carnet"
+|| RecordType.Name = "Lotos"
+|| $Profile.Name = "FleetcorEmea Profile"
+|| $Profile.Name = "FEETCOR DE Administartor"
+|| $Profile.Name = 'API Only'
+|| ISCHANGED( Starts_Sales_Completed_Update__c )
+|| ISCHANGED( Send_SEPA_approval_link__c )
+|| ISCHANGED( SEPA_Request_Approved__c )
+|| ISCHANGED( Emarsys_Contact_Id__c )
+|| ISCHANGED( Number_of_open_tasks__c )
+|| ISCHANGED( Primary_Contact_Phone__c )
+|| $Profile.Id = "00e0O000001VEUW"
+|| RecordType.Name = "CCS Opportunity Layout" ||
+(($Profile.Name = "Salesteamleiter Inbound"
+|| $Profile.Name = "Sales Inbound"
+|| $Profile.Name = "Salesteamleiter"
+|| $Profile.Name = "Sales")
+&amp;&amp; (ISCHANGED(Starts_Status__c)
+|| ISCHANGED(Starts_Rep__c)
+|| ISCHANGED(Starts_Schedule__c)
+|| ISCHANGED(Starts_Status_Delay__c))
+&amp;&amp; CONTAINS(RecordType.Name,"Euroshell" ))
+|| ($UserRole.Name = "Salesteam Inbound 2"
+&amp;&amp;(ISCHANGED( Starts_DD_Calls__c )
+|| ISCHANGED( Starts_Payment_method__c ))
+&amp;&amp; CONTAINS(RecordType.Name,"Euroshell" )) ||
+AND(PRIORVALUE( Closed_Won_by_CF__c ) = false,Closed_Won_by_CF__c = true) ||
+AND(PRIORVALUE( Pending_Deposit_by_CF__c ) = false, Pending_Deposit_by_CF__c = true) ||
+AND(PRIORVALUE( Credit_Factory_PDF_Report_Created__c ) = false, Credit_Factory_PDF_Report_Created__c = true) ||
+ISCHANGED (Credit_Factory_Errors__c) ||
+ISCHANGED(Reopen_Log__c)
+|| (($Profile.Name = "Sales Inbound"
+    || $Profile.Name = "Sales"
+    || $Profile.Name = "Starts Team"
+    || $Profile.Name = "Starts Team Lead"
+        || $Profile.Name = "Mellon")
+    &amp;&amp; (ISPICKVAL(PRIORVALUE(StageName), "Closed Won")) &amp;&amp;
+    ( ISCHANGED(Number_of_open_tasks__c)
+    || ISCHANGED(NextContactTime__c)
+        || ISCHANGED(Primary_Contact_Phone__c)
+        || ISCHANGED(Reopen__c)
+    || ISCHANGED(Starts_Aufgabe_Beschreibung__c)
+    || ISCHANGED(Starts_Fuel_Liters_Per_Mo_Target__c)
+    || ISCHANGED(GFN_number_for_starts__c)
+    || ISCHANGED(Reason_for_Termination__c)
+    || ISCHANGED(Starts_Karten_erhalten_am__c)
+    || ISCHANGED(Starts_Missing_Information__c)
+    || ISCHANGED(Starts_Number_of_Cards_Target__c)
+    || ISCHANGED(Starts_Reason_for_Not_Fueling__c)
+    || ISCHANGED(Starts_Schedule__c)
+    || ISCHANGED(Starts_Sales_Completed_Update__c)
+    || ISCHANGED(Starts_SLA_Expired__c)
+    || ISCHANGED(Starts_Status__c)
+    || ISCHANGED(Starts_Rep__c)
+    || ISCHANGED(Starts_Status_Delay__c))
+    &amp;&amp;
+    (RecordType.Name = "Euroshell" || RecordType.Name = "Euroshell Starts"))
+||  ($User.ID__c = "00520000005vYf3" &amp;&amp;
+( ISCHANGED(StageName)
+|| ISCHANGED(e_Invoicing_PDF__c)
+|| ISCHANGED(Papierrechnung__c)
+|| ISCHANGED(Product__c)
+|| ISCHANGED(Einwilligung_Lastschriftverfahren__c)
+)),
+false,
+AND (ISPICKVAL(StageName, "Closed Won"),
+CONTAINS(TEXT(StageName), "Closed Won")))</errorConditionFormula>
+    <errorMessage>You can't change an opportunity "Closed Won". Contact your Salesforce administrator.</errorMessage>
+</ValidationRule>

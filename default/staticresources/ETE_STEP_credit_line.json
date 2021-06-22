@@ -1,0 +1,1493 @@
+{
+    "translations": {
+        "days":{
+            "default_impl": {
+                "en" : "days",
+                "de" : "Tage",
+                "nl" : "dagen",
+                "fr" : "jours",
+                "pl" : "dni",
+                "hu" : "nap",
+                "cs" : "dní",
+                "sk" : "dní"
+            }
+        },
+        "step_title_cl": {
+            "default_impl": {
+                "en": "Select a suitable credit limit",
+                "fr": "Choisir la limite de crédit adéquate",
+                "nl": "Selecteer een passend kredietlimiet",
+                "hu": "Válassza ki a megfelelő hitelkeretet",
+                "pl": "Wybierz metodę płatności",
+                "de": "Wählen Sie ein passendes Kreditlimit aus.",
+                "cs": "Vyberte vhodný úvěrový limit",
+                "sk": "Vyberte vhodný úverový limit"
+            }
+        },
+        "header_value_cl": {
+            "default_impl": {
+                "en": "Сredit limit",
+                "fr": "Limite de crédit",
+                "nl": "Account kredietlimiet",
+                "de": "Kreditlimit",
+                "pl": "Limit kredytowy",
+                "cs": "Úvěrový limit účtu",
+                "sk": "Úverový limit účtu"
+            },
+            "Hungary":{
+                "en": "Account credit limit",
+                "hu": "Céges hitelkeret"
+            },
+            "Czech Republic CCS":{
+                "en": "Account credit limit",
+                "cs": "Kreditní limit účtu"
+            },
+            "Slovakia CCS":{
+                "en": "Account credit limit",
+                "sk": "Úverový limit účtu"
+            }
+        },
+        "header_value_tooltip_cl": {
+            "default_impl": {
+                "en": "Credit limit is a maximum allowed amount for all your payment transactions with all ordered cards during the selected billing period.",
+                "hu": "A céges hitelkeret az az összeg, amely a kiválasztott számlázási időszak alatt az összes, kiszámlázott és kiszámlázatlan tranzakciók együttes összegét fedezi",
+                "fr": "La limite de crédit représente le montant d'encours maximal accordé. La limite de crédit comprend vos factures ouvertes et vos transactions réalisées mais pas encore facturées.",
+                "nl": "Het kredietlimiet is het maximumbedrag dat er te allen tijde open mag staan. Uw kredietlimiet bestaat uit onbetaalde facturen en nog niet gefactureerde transacties.",
+                "pl": "Limit kredytowy to suma transakcji na fakturach oraz bieżącego tankowania dla wszystkich kart na określony okres rozliczeniowy.",
+                "de": "Das Kreditlimit ist ein maximal zulässiger Betrag für all Ihre Zahlungsvorgänge mit allen bestellten Karten während des gewählten Abrechnungszeitraums.",
+                "cs": "Úvěrový limit je maximální povolená částka pro všechny Vaše platební transakce se všemi objednanými kartami za zvolené fakturační období.",
+                "sk": "Úvěrový limit je maximální povolená částka pro všechny Vaše nevyfakturované transakce a vyúčtované nezaplacené faktury. "
+            },
+            "Czech Republic CCS":{
+                "en": "Credit limit is a maximum allowed amount for all your payment transactions with all ordered cards during the selected billing period.",
+                "cs": "Kreditní limit je maximální povolená částka pro všechny vaše platební transakce ze všech objednaných karet za zvolené fakturační období."
+            },
+            "Slovakia CCS":{
+                "en": "Credit limit is a maximum allowed amount for all your payment transactions with all ordered cards during the selected billing period.",
+                "sk": "Úverový limit je maximálna povolená čiastka pre všetky Vaše platobné transakcie so všetkými objednanými kartami za zvolené fakturačné obdobie."
+            }
+        },
+        "header_deposit_cl": {
+            "default_impl": {
+                "en": "Deposit amount",
+                "hu": "Óvadék összege",
+                "fr": "Montant du dépôt de garantie",
+                "nl": "Waarborgbedrag",
+                "de": "Kaution",
+                "pl": "Kwota kaucji",
+                "cs": "Výše kauce",
+                "sk": "Výška kaucie"
+            }
+        },
+        "header_frequence_cl": {
+            "default_impl": {
+                "en": "Payment frequency",
+                "hu": "Számlázás <br/> gyakorisága",
+                "fr": "Fréquence de <br/> facturation",
+                "nl": "Betalingsfrequentie",
+                "de": "Abrechnungs <br/> zeitraum",
+                "pl": "Okres <br/> rozliczeniowy",
+                "cs": "Frekvence plateb",
+                "sk": "Frekvencia platieb"
+            }
+        },
+        "header_frequence_tooltip_cl": {
+            "default_impl": {
+                "en": "Payment frequency defines how often you will receive invoices for your transactions from us.",
+                "hu": "A számlázás gyakorisága azt határozza meg, hogy milyen gyakran kap gyűjtőszámlát a tranzakciókról.",
+                "fr": "La fréquence de facturation définit la fréquence à laquelle nous établirons des factures pour vos transactions.",
+                "nl": "De betalingsfrequentie bepaalt hoe vaak u facturen voor uw transacties van ons ontvangt.",
+                "pl": "Częstotliwość fakturowania określa, jak często będziesz otrzymywać od nas faktury z transakcjami.",
+                "de": "Abrechnungszeitraum legt fest, wie oft Sie von uns Rechnungen für Ihre Transaktionen erhalten.",
+                "cs": "Frekvence plateb určuje, jak často od nás budete dostávat faktury za své transakce.",
+                "sk": "Frekvencia platieb určuje, ako často od nás budete dostávať faktúry za svoje transakcie."
+            },
+            "Czech Republic CCS":{
+                "en": "Payment frequency defines how often you will receive invoices for your transactions from us.",
+                "cs": "Frekvence plateb určuje, jak často od nás budete dostávat faktury za vaše transakce hrazené kartami CCS."
+            },
+            "Slovakia CCS":{
+                "en": "Payment frequency defines how often you will receive invoices for your transactions from us.",
+                "sk": "Frekvencia platieb určuje, ako často od nás budete dostávať faktúry za svoje transakcie."
+            }
+        },
+        "header_payment_method_cl": {
+            "default_impl": {
+                "en": "Payment method",
+                "hu": "Fizetési mód",
+                "fr": "Mode de paiement",
+                "nl": "Betaalmethode",
+                "de": "Zahlungsmethode",
+                "pl": "Metoda płatności",
+                "cs": "Způsob platby",
+                "sk": "Spôsob platby"
+            }
+        },
+        "header_payment_terms_cl": {
+            "default_impl": {
+                "en": "Payment term",
+                "fr": "Délai de paiement",
+                "nl": "Betaaltermijn",
+                "de": "Zahlungsfrist",
+                "pl": "Termin <br> płatności",
+                "cs": "Doba <br> splatnosti",
+                "hu": "Fizetési <br> feltétel",
+                "sk": "Doba <br> splatnosti"
+            }
+        },
+        "header_payment_terms_tooltip_cl": {
+            "default_impl": {
+                "en": "Payment term specifies the number of days that you have to pay your invoices from the issue date. To avoid blocking of your products all invoices must be paid within the selected payment term.",
+                "hu": "A fizetési feltétel rögzíti a számlakiállítástól számított fizetési határidőt. A kártyák felfüggesztésének elkerülése érdekében az összes számlát a fizetési feltételek szerint meghatározott időn belül kell kiegyenlíteni.",
+                "fr": "Le délai de paiement est la période au bout de laquelle les factures doivent être payées, à compter de la date d'émission. Toutes les factures doivent être réglées dans ce délai pour éviter le blocage de vos cartes. ",
+                "nl": "Het betaaltermijn geeft het aantal dagen aan tot wanneer de facturen betaalt dienen te zijn vanaf de uitgiftedatum. Om blokkering van uw producten te voorkomen, dienen alle facturen binnen de geselecteerde betalingstermijn worden betaald.",
+                "pl": "Termin płatności to liczba dni od dnia wystawienia faktury, w ciągu których faktura powinna zostać uregulowana, aby nie doszło do zablokowania Twoich produktów i usług.",
+                "de": "Das Zahlungsziel gibt die Anzahl der Tage an, in denen Sie Ihre Rechnungen, ab dem Ausstellungsdatum der Rechnung, bezahlen müssen. Um eine Sperrung Ihrer Produkte zu vermeiden, müssen alle Rechnungen innerhalb des gewählten Zahlungsziels bezahlt werden.",
+                "cs": "Doba splatnosti faktury znamená počet dní od data vystavení faktury, během kterých musí být faktury uhrazeny, aby nedošlo k zablokování vámi využívaných produktů a služeb.",
+                "sk": "Doba splatnosti faktúry je definovaná počtom dní od dátumu vystavenia faktúry, počas ktorých musia byť faktúry uhradené, aby nedošlo k zablokovaniu Vami využívaných produktov a služieb."
+            }
+        },
+        "header_payment_method_tooltip_cl": {
+            "default_impl": {
+                "en": "You can choose either direct debit or bank transfer. The preferred payment method is direct debit because it is cheaper for you, it saves your time and eliminates the risk of cards being blocked due to late payment. Direct debit means that we will be collecting the amount specified on the invoice directly from your bank account. Bank transfer must be made within a specified billing period, if not your cards will be blocked.",
+                "hu": "Kiválaszthatja, hogy beszedési megbízással vagy banki átutalással szeretné számláit kiegyenlíteni. A preferált fizetési mód a beszedési megbízás, mert olcsóbb az Ön számára, időt takaríthat meg vele, és elkerülheti, hogy a kártya felfüggesztésre kerüljenek a késedelmes fizetés miatt. A beszedési megbízás esetén mi magunk vonjuk le a számla összegét a fizetési határidő napján közvetlenül az Ön bankszámlájáról. Banki átutalás esetén Önnek kell a számla végösszegét a fizetési határidőn belül átutalni, ezzel elkerülve a kártyák felfüggesztését.",
+                "fr": "Vous pouvez choisir le prélèvement automatique ou le virement bancaire. Le mode de paiement préféré est le prélèvement automatique car il est moins cher pour vous, il vous fait gagner du temps et élimine le risque de blocage des cartes en raison d'un retard de paiement. Le prélèvement automatique signifie que nous prélevons le montant de la facture directement sur votre compte bancaire. Le virement bancaire doit être effectué avant la date d'échéance indiquée sur la facture; sinon vos cartes seront bloquées.",
+                "nl": "U kunt kiezen tussen domiciliëring of bankoverschrijving. De geprefereerde betaalmethode is domiciliëring, omdat dit goedkoper voor u is, u tijd bespaart en het risico op blokkering van kaarten door te late betaling elimineert. domiciliëring houdt in dat we het bedrag dat op de factuur staat rechtstreeks van uw bankrekening afhalen. Bankoverschrijving moet binnen een bepaalde factureringsperiode worden gedaan, anders worden uw kaarten geblokkeerd.",
+                "pl": "Możesz wybrać polecenie zapłaty lub przelew bankowy. Preferowaną metodą płatności jest polecenie zapłaty, ponieważ jest bezpłatne, oszczędza czas i eliminuje ryzyko zablokowania kart z powodu opóźnionej płatności.",
+                "de": "Sie können entweder Lastschrift oder Banküberweisung wählen. Die bevorzugte Zahlungsmethode ist das Lastschriftverfahren, da es für Sie günstiger ist, Ihre Zeit spart und das Risiko beseitigt, dass die Karten aufgrund verspäteter Zahlung gesperrt werden. Lastschrift bedeutet, dass wir den auf der Rechnung angegebenen Betrag direkt von Ihrem Bankkonto einziehen. Die Banküberweisung muss innerhalb eines bestimmten Abrechnungszeitraums erfolgen. Andernfalls werden Ihre Karten gesperrt.",
+                "cs": "Můžete zvolit buď inkaso, nebo bankovní převod. Upřednostňovanou platební metodou je inkaso, protože je pro vás levnější, šetří váš čas a eliminuje riziko zablokování karet kvůli opožděné platbě. Inkaso znamená, že částku uvedenou na faktuře budeme strhávat přímo z vašeho bankovního účtu. Bankovní převod musí být proveden během stanovené doby splatnosti, pokud ne, budou vaše karty blokovány.",
+                "sk": "Môžete zvoliť buď inkaso, alebo bankový prevod. Uprednostňovanou platobnou metódou je inkaso, pretože je pre Vás lacnejšia, šetrí Váš čas a eliminuje riziko zablokovania kariet kvôli oneskorenej platbe. Inkaso znamená, že sumu uvedenú na faktúre budeme strhávať priamo z Vášho bankového účtu. Bankový prevod musí byť vykonaný počas stanovenej doby splatnosti, ak nie, budú Vaše karty blokované."
+            },
+            "Netherlands": {
+                "en": "You can choose either direct debit or bank transfer. The preferred payment method is direct debit because it is cheaper for you, it saves your time and eliminates the risk of cards being blocked due to late payment. Direct debit means that we will be collecting the amount specified on the invoice directly from your bank account. Bank transfer must be made within a specified billing period, if not your cards will be blocked.",
+                "nl": "U kunt kiezen tussen automatische incasso of bankoverschrijving. De geprefereerde betaalmethode is automatische incasso, omdat dit goedkoper voor u is, u tijd bespaart en het risico op blokkering van kaarten door te late betaling elimineert. Automatische incasso houdt in dat we het bedrag dat op de factuur staat rechtstreeks van uw bankrekening afhalen. Bankoverschrijving moet binnen een bepaalde factureringsperiode worden gedaan, anders worden uw passen geblokkeerd."
+            }
+        },
+        "direct_debit_cl": {
+            "default_impl": {
+                "en": "Direct debit",
+                "hu": "Beszedési megbízás",
+                "fr": "Prélèvement automatique",
+                "nl": "Domiciliëring",
+                "de": "Lastschrift",
+                "pl": "Polecenie zapłaty",
+                "cs": "Inkaso",
+                "sk": "Inkaso"
+            },
+            "Netherlands": {
+                "en": "Direct debit",
+                "nl": "Automatische incasso"
+            }
+        },
+        "bank_transfer_cl": {
+            "default_impl": {
+                "en": "Bank transfer",
+                "hu": "Banki átutalás",
+                "fr": "Virement bancaire",
+                "nl": "Bankovers<br>chrijving",
+                "de": "Überweisung",
+                "pl": "Przelew bankowy",
+                "cs": "Bankovní převod",
+                "sk": "Bankový prevod"
+            }
+        },
+        "deposit_info_cl": {
+            "default_impl": {
+                "en": "One time security deposit",
+                "hu": "Egyszeri óvadék",
+                "fr": "Dépôt de garantie",
+                "nl": "Eénmalige waarborg",
+                "pl": "Kaucja do zapłaty",
+                "de": "Einmalige Kaution",
+                "cs": "Jednorázová kauce",
+                "sk": "Jadnorázová kaucia"
+            }
+        },
+        "deposit_sub_info_cl": {
+            "default_impl": {
+                "en": "Deposit secures your credit line. This is a one-time payment that remains securely on our bank account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid.",
+                "hu": "Az óvadék összege fogja fedezni az Ön hitelkeretét. Ez egy egyszer fizetendő összeg, amely az óvadéki bankszámlánkon kerül elkülönítésre. Amennyiben szerződését felmondja, az óvadék összege visszautalásra kerül az összes tartozás kiegyenlítését követően.",
+                "fr": "Le dépôt de garantie sécurise votre ligne de crédit. Il s'agit d'un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera retourné sur votre compte après le règlement de toutes les factures ouvertes.",
+                "nl": "Een waarborg stelt uw kredietlimiet veilig. Dit is een eenmalige betaling die veilig op onze bankrekening blijft staan. In geval van beëindiging van het contract wordt de waarborg teruggestort op uw bankrekening nadat alle openstaande facturen zijn betaald.",
+                "pl": "Kaucja stanowi zabezpieczenie płatności. Jest to płatność jednorazowa, z której możemy skorzystać w przypadku opóźnienia w płatności za fakturę. W takim przypadku wymagana kwota może zostać pobrana z kaucji.",
+                "de": "Die Kaution sichert Ihre Kreditrahmen. Dies ist eine einmalige Zahlung, die sicher auf unserem Bankkonto verbleibt. Im Falle einer Vertragskündigung wird die Kaution nach Zahlung aller ausstehenden Rechnungen auf Ihr Bankkonto zurückerstattet.",
+                "cs": "Kauce zajišťuje váš kreditní limit. Jedná se o jednorázovou platbu, která zůstává bezpečně na našem bankovním účtu. V případě ukončení smlouvy a po zaplacení všech zbývajících faktur bude kauce vrácena na váš bankovní účet.",
+                "sk": "Kaucia zaisťuje váš kreditný limit. Ide o jednorazovú platbu, ktorá zostáva bezpečne na našom bankovom účte. V prípade ukončenia zmluvy a po zaplatení všetkých zostávajúcich faktúr bude kaucia vrátená na váš bankový účet."
+            }
+        },
+        "frequency_time_7_cl": {
+            "default_impl": {
+                "en": "Weekly",
+                "hu": "Heti",
+                "fr": "Hebdomadaire",
+                "nl": "Wekelijks",
+                "de": "Wöchentlich",
+                "pl": "Tygodnowy",
+                "cs": "Jednou týdně",
+                "sk": "Jedenkrát týždenne"
+            }
+        },
+        "frequency_time_15_cl": {
+            "default_impl": {
+                "en": "Bi-Weekly",
+                "hu": "Kétheti",
+                "fr": "Bimensuelle",
+                "nl": "Tweewekelijks",
+                "de": "Vierzehntägig",
+                "pl": "Dwutygodniowy",
+                "cs": "Dvakrát do měsíce",
+                "sk": "Dvakrát do mesiaca"
+            }
+        },
+        "frequency_time_30_cl": {
+            "default_impl": {
+                "en": "Monthly",
+                "hu": "Havi",
+                "fr": "Mensuelle",
+                "nl": "Maandelijks",
+                "de": "Monatlich",
+                "pl": "Miesięczny",
+                "cs": "Měsíčně",
+                "sk": "Mesačne"
+            }
+        }
+    },
+    "settings": {
+        "data_object": {
+            "Credit_Limit__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "creditLimit",
+                    "required": false
+                }
+            },
+            "Max_Credit_Limit__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "maxCreditLimit",
+                    "required": false
+                }
+            },
+            "Payment_Method__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentMethod",
+                    "required": false
+                }
+            },
+            "Billing_Period__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "billingPeriod",
+                    "required": false
+                }
+            },
+            "Payment_Terms__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paymentTerms",
+                    "required": false
+                }
+            },
+            "Security_Level__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityLevel",
+                    "required": false
+                }
+            },
+            "E_Invoice__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "eInvoice",
+                    "required": false
+                }
+            },
+            "Paper_Invoice__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "paperInvoice",
+                    "required": false
+                }
+            },
+            "Security_Amount_To_Pay__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "",
+                    "mapto": "securityAmountToPay",
+                    "required": false
+                }
+            },
+            "Credit_System_Rating__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "classRating",
+                    "required": false
+                }
+            },
+            "Deposit_Reason__c": {
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "depositReason",
+                    "required": false
+                }
+            },
+            "Risk_Category__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "100",
+                    "mapto": "riskCategory",
+                    "required": true
+                }
+            },
+            "Current_Language__c": {
+                "Poland": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Poland Lotos": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Slovakia": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Czech Republic": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                }
+            }
+        }
+    }
+}

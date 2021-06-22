@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Opportunity stages which is conditions for record checking. Every new value must be on new line --></help>
+    <label><!-- Opportunity stages --></label>
+    <name>Opportunity_stages__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agree_to_receive_comm_info_by_email__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Customer agrees to receive the commercial information by email.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Customer agrees to receive the commercial information by email.</inlineHelpText>
+    <label>Agree to receive comm info by email</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

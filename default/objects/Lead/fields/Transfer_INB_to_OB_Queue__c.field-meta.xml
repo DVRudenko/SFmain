@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transfer_INB_to_OB_Queue__c</fullName>
+    <description>date assigned on "PPR Queue transfer Inbound to Outbound"</description>
+    <externalId>false</externalId>
+    <label>Transfer INB to OB Queue</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

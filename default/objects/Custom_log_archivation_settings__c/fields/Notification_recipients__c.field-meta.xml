@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notification_recipients__c</fullName>
+    <description>Emails of the users who will be notified once operation is complete. Must be separated by ;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Emails of the users who will be notified once operation is complete. Must be separated by ;</inlineHelpText>
+    <label>Notification recipients</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

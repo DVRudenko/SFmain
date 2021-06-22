@@ -1,0 +1,153 @@
+<!--
+ - Created by Nikita.Mikhailov on 22.05.2018.
+ -->
+
+<apex:page controller="DashboardIntensityOfSalesWorkPPRCtrl" action="{! init }" sidebar="false" showHeader="false" readOnly="true">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+    <apex:form >
+        <apex:pageBlock >
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <h1 style="margin-bottom: 10px; font-size: 15px; display: block;">Интенсивность продаж за
+                            <apex:selectList value="{! selectedPeriod }" size="1" multiselect="false" style="margin-left: 5px;">
+                                <apex:selectOptions value="{! periodsList }"/>
+                                <apex:actionSupport action="{! init }" event="onchange" onSubmit="smthgChanged()"/>
+                            </apex:selectList>
+                            <apex:selectList value="{! selectedYear }" size="1" multiselect="false" style="margin: 0 5px;">
+                                <apex:selectOptions value="{! yearsList }"/>
+                                <apex:actionSupport action="{! changeYear }" event="onchange" onSubmit="smthgChanged()"/>
+                            </apex:selectList>({! startDateOfMonthString } - {! endDateOfMonthString }).
+                            Роль
+                            <apex:selectList value="{!selectedRole}" size="1" multiSelect="false" style="margin-left: 5px;">
+                                <apex:selectOptions value="{!rolesList}"/>
+                                <apex:actionSupport action="{!changeRole}" event="onchange" onSubmit="smthgChanged()"/>
+                            </apex:selectList>
+                        </h1>
+                    </td>
+                    <td style="text-align: right;">
+                        <apex:outputLink value="/articles/Knowledge/DashboardIntensityOfSalesHelpPPR" target="_blank" id="theLink">Справка</apex:outputLink>
+                    </td>
+                </tr>
+            </table>
+            <apex:pageMessages />
+            <div>
+                <apex:outputPanel >
+                    <div id="salesteamleader" style="width: 100%; float: left; height: 550px;"></div>
+                </apex:outputPanel>
+                <div style="clear: both;"></div>
+            </div>
+        </apex:pageBlock>
+        <script>
+
+            $(document).ready(function() {
+                //console.log('loaded from ready');
+                var event = new CustomEvent('loaded', {detail:'intensityOfSalesWork'});
+                window.parent.document.dispatchEvent(event);
+            });
+
+            function smthgChanged() {
+                //console.log('smthngChanged');
+                var event = new CustomEvent('smthngChanged', {detail:'intensityOfSalesWork'});
+                window.parent.document.dispatchEvent(event);
+            };
+
+            $(function () {
+                $('#salesteamleader').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                        <apex:repeat value="{! finalList }" var="key">
+                '<a href="/apex/DashboardIntensityOfSalesWorkReportPPR?userid={! salesTeamMap[key.Id].Id }&period={! selectedPeriod }&year={! selectedYear }" target="_blank">{! salesTeamMap[key.Id].Name }</a>',
+            </apex:repeat>
+            ],
+                labels: {
+                    useHTML: true
+                }
+            },
+                yAxis: [{
+                    min: 0,
+                    title: {
+                        text: ''
+                    },
+                    stackLabels: {
+                        enabled: true,
+                        style: {
+                            fontWeight: 'bold',
+                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                        }
+                    }
+                }],
+                        legend: {
+                    shadow: false,
+                            labelFormatter: function() {
+                        var total = 0;
+                        for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+                        return this.name;
+                    }
+                },
+                exporting: { enabled: false },
+                credits: {
+                    enabled: false
+                },
+                tooltip: {
+                    enabled: false
+                },
+                plotOptions: {
+                    column: {
+                        grouping: false,
+                                shadow: false,
+                                borderWidth: 0
+                    },
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                                    formatter: function () {
+                                return this.y;
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Интенсивность',
+                    color: 'rgba(126,86,134,.9)',
+                    data: [<apex:repeat value="{! finalList }" var="key">
+                        {! IF(OR(finalOpportunitiesOfUserMap[key.Id] != 0, finalLeadsOfUserMap[key.Id] != 0), ROUND(finalTasksOfUserMap[key.Id]/(finalOpportunitiesOfUserMap[key.Id] + finalLeadsOfUserMap[key.Id]), 2), 0) },
+            </apex:repeat>],
+                pointPadding: -0.1,
+                        pointPlacement: 0.0
+            }]
+            });
+            });
+        </script>
+        <style>
+            .loader {
+                border: 5px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 5px solid blue;
+                border-right: 5px solid green;
+                border-bottom: 5px solid red;
+                width: 30px;
+                height: 30px;
+                -webkit-animation: spin 2s linear infinite;
+                animation: spin 2s linear infinite;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        </style>
+        <br/>
+    </apex:form>
+</apex:page>

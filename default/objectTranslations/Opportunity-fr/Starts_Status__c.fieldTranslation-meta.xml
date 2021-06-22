@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Status of Starts Process; drives the Starts: Schedule dates.  Card Processing/BackOffice can select the first values 0, 0.5 and 1 and Starts Rep can select the remaining values. --></help>
+    <label><!-- Starts: Status --></label>
+    <name>Starts_Status__c</name>
+    <picklistValues>
+        <masterLabel>0. Request received</masterLabel>
+        <translation><!-- 0. Request received --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.1 Information needed</masterLabel>
+        <translation><!-- 0.1 Information needed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.4 Registration in GFN: Winback</masterLabel>
+        <translation><!-- 0.4 Registration in GFN: Winback --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.5 Missing information</masterLabel>
+        <translation><!-- 0.5 Missing information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.6 Missing information provided</masterLabel>
+        <translation><!-- 0.6 Missing information provided --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.9 Ready for GFN</masterLabel>
+        <translation><!-- 0.9 Ready for GFN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.9a Ready for Manual Setup</masterLabel>
+        <translation><!-- 0.9a Ready for Manual Setup --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.9b Ready for Robot Setup</masterLabel>
+        <translation><!-- 0.9b Ready for Robot Setup --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1. Customer registered in GFN (card issued &amp; delivered)</masterLabel>
+        <translation><!-- 1. Customer registered in GFN (card issued &amp; delivered) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1.0a GFN Setup done Manually</masterLabel>
+        <translation><!-- 1.0a GFN Setup done Manually --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1.0b GFN Setup done by Robot</masterLabel>
+        <translation><!-- 1.0b GFN Setup done by Robot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2.1 First Check: Cards/PINs Received</masterLabel>
+        <translation><!-- 2.1 First Check: Cards/PINs Received --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2.2 First Check: Not Reached</masterLabel>
+        <translation><!-- 2.2 First Check: Not Reached --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2.3 First Check: Delay</masterLabel>
+        <translation><!-- 2.3 First Check: Delay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2.4 First Check: Winback</masterLabel>
+        <translation><!-- 2.4 First Check: Winback --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3.1 Volume Check 1: Customer Pumping</masterLabel>
+        <translation><!-- 3.1 Volume Check 1: Customer Pumping --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3.2 Volume Check 1: Not Reached</masterLabel>
+        <translation><!-- 3.2 Volume Check 1: Not Reached --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3.3 Volume Check 1: Delay</masterLabel>
+        <translation><!-- 3.3 Volume Check 1: Delay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3.4 Volume Check 1: Winback</masterLabel>
+        <translation><!-- 3.4 Volume Check 1: Winback --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4.1.1 Volume Check 2: Pumping Enough</masterLabel>
+        <translation><!-- 4.1.1 Volume Check 2: Pumping Enough --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4.1.2 Volume Check 2: Pumping NOT Enough</masterLabel>
+        <translation><!-- 4.1.2 Volume Check 2: Pumping NOT Enough --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4.2 Volume Check 2: Not Reached</masterLabel>
+        <translation><!-- 4.2 Volume Check 2: Not Reached --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4.3 Volume Check 2: Delay</masterLabel>
+        <translation><!-- 4.3 Volume Check 2: Delay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4.4 Volume Check 2: Winback</masterLabel>
+        <translation><!-- 4.4 Volume Check 2: Winback --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5.1.1 Final Check: Pumping Enough</masterLabel>
+        <translation><!-- 5.1.1 Final Check: Pumping Enough --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5.1.2 Final Check: Pumping NOT Enough</masterLabel>
+        <translation><!-- 5.1.2 Final Check: Pumping NOT Enough --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5.2 Final Check:Not Pumping</masterLabel>
+        <translation><!-- 5.2 Final Check:Not Pumping --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5.3 Final Check: Delay</masterLabel>
+        <translation><!-- 5.3 Final Check: Delay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5.4 Final Check: Winback</masterLabel>
+        <translation><!-- 5.4 Final Check: Winback --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5.5 Winback Failed</masterLabel>
+        <translation><!-- 5.5 Winback Failed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5.6 Fraud</masterLabel>
+        <translation><!-- 5.6 Fraud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CS - Completed</masterLabel>
+        <translation><!-- CS - Completed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CS - Invoice Call</masterLabel>
+        <translation><!-- CS - Invoice Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CS - No Interest</masterLabel>
+        <translation><!-- CS - No Interest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CS - Not Pumping</masterLabel>
+        <translation><!-- CS - Not Pumping --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CS - Susp. Fraud</masterLabel>
+        <translation><!-- CS - Susp. Fraud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CS - Terminated</masterLabel>
+        <translation><!-- CS - Terminated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CS - Unreachable</masterLabel>
+        <translation><!-- CS - Unreachable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CS – Reorder Cards</masterLabel>
+        <translation><!-- CS – Reorder Cards --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

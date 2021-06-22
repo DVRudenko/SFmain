@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Merlin_Stage__c</fullName>
+    <description>updated by Merlin app</description>
+    <externalId>false</externalId>
+    <label>CCS Merlin Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Closed won</fullName>
+                <default>false</default>
+                <label>Closed won</label>
+            </value>
+            <value>
+                <fullName>Order entered</fullName>
+                <default>false</default>
+                <label>Order entered</label>
+            </value>
+            <value>
+                <fullName>Order entered - more often DD</fullName>
+                <default>false</default>
+                <label>Order entered - more often DD</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Waiting for power of attorney</fullName>
+                <default>false</default>
+                <label>Waiting for power of attorney</label>
+            </value>
+            <value>
+                <fullName>Waiting for Credit decision</fullName>
+                <default>false</default>
+                <label>Waiting for Credit decision</label>
+            </value>
+            <value>
+                <fullName>Waiting for MANDAT</fullName>
+                <default>false</default>
+                <label>Waiting for MANDAT</label>
+            </value>
+            <value>
+                <fullName>Waiting for card issuance</fullName>
+                <default>false</default>
+                <label>Waiting for card issuance</label>
+            </value>
+            <value>
+                <fullName>Order entered - deposit</fullName>
+                <default>false</default>
+                <label>Order entered - deposit</label>
+            </value>
+            <value>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+                <label>Closed Lost</label>
+            </value>
+            <value>
+                <fullName>Waiting for PIT/CIT</fullName>
+                <default>false</default>
+                <label>Waiting for PIT/CIT</label>
+            </value>
+            <value>
+                <fullName>Waiting for DD confirmation</fullName>
+                <default>false</default>
+                <label>Waiting for DD confirmation</label>
+            </value>
+            <value>
+                <fullName>Waiting for deposit</fullName>
+                <default>false</default>
+                <label>Waiting for deposit</label>
+            </value>
+            <value>
+                <fullName>Pending Sales</fullName>
+                <default>false</default>
+                <label>Pending Sales</label>
+            </value>
+            <value>
+                <fullName>Waiting for amendment</fullName>
+                <default>false</default>
+                <label>Waiting for amendment</label>
+            </value>
+            <value>
+                <fullName>Waitiing for components</fullName>
+                <default>false</default>
+                <label>Waitiing for components</label>
+            </value>
+            <value>
+                <fullName>Waiting for order signature</fullName>
+                <default>false</default>
+                <label>Waiting for order signature</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

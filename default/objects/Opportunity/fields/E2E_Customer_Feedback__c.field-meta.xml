@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Customer_Feedback__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Reason why Customer dropped off the E2E form.</inlineHelpText>
+    <label>E2E Customer Feedback (English)</label>
+    <length>2000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

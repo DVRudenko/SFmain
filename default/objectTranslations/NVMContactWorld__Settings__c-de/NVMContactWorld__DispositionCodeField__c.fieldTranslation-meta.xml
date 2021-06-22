@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The field should be also added to &apos;Log A Call Additional Fields&apos; --></help>
+    <label><!-- Log A Call Disposition Code Field --></label>
+    <name>NVMContactWorld__DispositionCodeField__c</name>
+</CustomFieldTranslation>

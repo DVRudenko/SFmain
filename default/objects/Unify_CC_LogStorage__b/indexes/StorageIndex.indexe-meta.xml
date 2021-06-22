@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Index xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StorageIndex</fullName>
+        <fields>
+            <name>Entity_ID__c</name>
+            <sortDirection>DESC</sortDirection>
+        </fields>
+        <fields>
+            <name>RecordDateTime__c</name>
+            <sortDirection>DESC</sortDirection>
+        </fields>
+    <label>StorageIndex</label>
+</Index>

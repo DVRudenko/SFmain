@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Vyberte si akci. --></help>
+    <label><!-- Vyberte si akci --></label>
+    <name>Vyberte_si_akci__c</name>
+    <picklistValues>
+        <masterLabel>1 + 1 Zdarma</masterLabel>
+        <translation><!-- 1 + 1 Zdarma --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 + 1 Zdarma</masterLabel>
+        <translation><!-- 2 + 1 Zdarma --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AKCE PLUS: CCS Carnet s DZ!</masterLabel>
+        <translation><!-- AKCE PLUS: CCS Carnet s DZ! --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Akce PLUS: Carnet s kartou Bonus+ zdarma!</masterLabel>
+        <translation><!-- Akce PLUS: Carnet s kartou Bonus+ zdarma! --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Akcia PLUS: Carnet s kartou Bonus + nabitú na 40 EUR zadarmo!</masterLabel>
+        <translation><!-- Akcia PLUS: Carnet s kartou Bonus + nabitú na 40 EUR zadarmo! --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Carnet s dálniční známkou 2017!</masterLabel>
+        <translation><!-- CCS Carnet s dálniční známkou 2017! --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

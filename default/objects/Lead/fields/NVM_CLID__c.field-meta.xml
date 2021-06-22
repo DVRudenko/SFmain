@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVM_CLID__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND( Contains(Country, "Hungary"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"Inbound")), 1,
+IF(AND( Contains(Country, "Belgium"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"Inbound")), 3,
+IF(AND( Contains(Country, "France"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"Inbound")), 5,
+IF(AND( Contains(Country, "Netherlands"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"Inbound")), 6,
+IF(AND( Contains(Country, "Poland"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"Inbound")), 8,
+IF(AND( Contains(Country, "Switzerland"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"Inbound")), 10,
+IF(AND( Contains(Country, "Luxembourg"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"Inbound")), 12,
+IF(AND( Contains(Country, "Czech"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"Inbound")), 13,
+IF(AND( Contains(Country, "Czech"),  RecordType.Name = "CCS Sales process", ISPICKVAL(Sec_Channel__c,"Inbound")), 15,
+IF(AND( Contains(Country, "Slovakia"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"Inbound")), 16,
+IF(AND( Contains(Country, "Slovakia"),  RecordType.Name = "CCS Sales process", ISPICKVAL(Sec_Channel__c,"Inbound")), 18,
+IF(AND( Contains(Country, "Austria"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"Inbound")), 19,
+IF(AND( Contains(Country, "Germany"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"Inbound")), 21,
+IF(AND( Contains(Country, "Hungary"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"JITB")), 2,
+IF(AND( Contains(Country, "Belgium"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"JITB")), 4,
+IF(AND( Contains(Country, "Netherlands"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"JITB")), 7,
+IF(AND( Contains(Country, "Poland"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"JITB")), 9,
+IF(AND( Contains(Country, "Switzerland"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"JITB")), 11,
+IF(AND( Contains(Country, "Czech"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"JITB")), 14,
+IF(AND( Contains(Country, "Slovakia"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"JITB")), 17,
+IF(AND( Contains(Country, "Austria"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"JITB")), 20,
+
+IF(AND( Contains(Country, "DE"),  RecordType.Name = "Endkunde", ISPICKVAL(Sec_Channel__c,"JITB")), 22
+,0))))))))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NVM CLID</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Пользователь, на которого переводятся неактивные организации для их блокировки --></help>
+    <label><!-- Blocked companies owner ID --></label>
+    <name>Blocked_companies_owner_ID__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Не должно быть равно '0'</help>
+    <label>Количество грузовых автомобилей</label>
+    <name>Anzahl_LKW__c</name>
+</CustomFieldTranslation>

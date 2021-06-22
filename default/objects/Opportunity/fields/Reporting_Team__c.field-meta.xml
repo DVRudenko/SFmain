@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reporting_Team__c</fullName>
+    <description>Names of CEE teams for reporting purposes</description>
+    <externalId>false</externalId>
+    <formula>IF(AND(CONTAINS(Owner.UserRole.Name,"Altevida"),RecordType.Name="CCS Opportunity Layout"),
+CASE(Account.BillingCountry,"Czech Republic","CCS Altevida Inb CZ","Slovakia","CCS Altevida Inb SK",NULL),
+IF(AND(CONTAINS(Owner.UserRole.Name,"Altevida"),OR(RecordType.Name="Euroshell",RecordType.Name="Euroshell Starts")),
+CASE(Account.BillingCountry,"Czech Republic","Shell Altevida CZ","Slovakia","Shell Altevida SK",NULL),
+IF(Owner.Alias="ggreg","CCS Altevida Outbound",
+IF(AND(OR(Owner.UserRole.Name="CCS CZ Telesales",Owner.UserRole.Name="CCS Telesales Team Lead")),
+CASE(Account.BillingCountry,"Czech Republic","CCS SME Retention CZ","Slovakia","CCS SME Retention SK",NULL),
+IF(AND(CONTAINS(Owner.UserRole.Name,"KAM"),Owner.Alias!="nhynk"),"CCS KAM CZ",
+IF(CONTAINS(Owner.UserRole.Name,"LAM"),"CCS LAM CZ",
+IF(AND(CONTAINS(Owner.UserRole.Name,"SME")),
+CASE(Account.BillingCountry,"Czech Republic","CCS Acquisition CZ","Slovakia","CCS Acquisition SK",NULL),
+IF(Owner.FirstName="E2E",
+CASE(Account.BillingCountry,"Poland","Shell e2e PL","Hungary","Shell e2e HU","Slovakia","Shell e2e SK",NULL),
+IF(Owner.FirstName="APICCS",
+CASE(Account.BillingCountry,"Czech Republic","CCS e2e CZ","Slovakia","CCS e2e SK",NULL),
+IF(AND(CONTAINS(Owner.UserRole.Name,"Inbound 2"),RecordType.Name="CCS Opportunity Layout"),
+CASE(Account.BillingCountry,"Czech Republic","CCS Inside Sales CZ","Slovakia","CCS Inside Sales SK",NULL),
+IF(AND(CONTAINS(Owner.UserRole.Name,"Inbound 2"),OR(RecordType.Name="Euroshell",RecordType.Name="Euroshell Starts")),
+CASE(Account.BillingCountry,"Czech Republic","Shell Inside Sales CZ","Slovakia","Shell Inside Sales SK",
+"Netherlands","Shell Inside Sales NL","Belgium-NL","Shell Inside Sales NL","Poland","Shell Inside Sales PL","Hungary","Shell Inside Sales HU",NULL),
+IF(AND(CONTAINS(Owner.UserRole.Name,"Inbound 2"),RecordType.Name="Lotos"),"Lotos Inside Sales PL",
+IF(CONTAINS(Owner.UserRole.Name,"Mellon"),"Shell Mellon CC PL",
+IF(CONTAINS(Owner.UserRole.Name,"CCIG"),"Shell CCIG PL",
+"Other"))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Reporting Team</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

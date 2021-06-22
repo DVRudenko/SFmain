@@ -1,0 +1,111 @@
+<template>
+  <lightning-card variant="base" class="block">
+    <h3 slot="title" class="header exportable-header">{labels.BANK_INFORMATION}</h3>
+
+    <lightning-input
+      name="bankName"
+      class="field exportable-field"
+      label={labels.BANK_NAME}
+      required
+      max-length="50"
+      type="text"
+      value={bankData.bankName}
+      onchange={handleBankNameChange}
+      onfocusout={handleListOut}
+    >
+    </lightning-input>
+
+    <ul class="bank-list">
+      <template if:true={showDadataSuggestions}>
+        <template for:each={bankList} for:item="bank">
+          <li
+            role="presentation"
+            class="slds-listbox__item"
+            key={bank.data.bic}
+            onmousedown={handleOptionSelect}
+            data-id={bank.data.bic}
+          >
+            <div class={bank.styleClass}>
+              <div
+                aria-selected="true"
+                id={bank.data.bic}
+                class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta bank–list-item"
+                role="option"
+                tabindex="0"
+              >
+                <span class="slds-media__body">
+                  <span
+                    class="slds-listbox__option-text slds-listbox__option-text_entity slds_optiontxt"
+                  >
+                    {bank.value}
+                  </span>
+                  <span
+                    class="slds-listbox__option-text slds-listbox__option-text_entity slds_optiontxt bank-small–text"
+                  >
+                    {bank.data.bic}
+                  </span>
+                  <span
+                    class="slds-listbox__option-text slds-listbox__option-text_entity slds_optiontxt bank-small–text"
+                  >
+                    {bank.data.address.value}
+                  </span>
+                </span>
+              </div>
+            </div>
+          </li>
+        </template>
+        <template if:true={bankListEmpty}>
+          <li
+            role="presentation"
+            class="slds-listbox__item"
+            onmousedown={handleUnknownBankClick}
+          >
+            <div
+              class="slds-listbox__item bank–list-item bank-list-item-disabled"
+              onmousedown={handleUnknownBankClick}
+            >
+              {labels.UNKNOWN_BANK}
+            </div>
+          </li>
+        </template>
+      </template>
+    </ul>
+
+    <lightning-input
+      name="bankBic"
+      class="field exportable-field"
+      label={labels.BANK_BIC}
+      required
+      max-length="9"
+      type="text"
+      value={bankData.bankBic}
+      pattern={pattern.bicPattern}
+      disabled
+    >
+    </lightning-input>
+    <lightning-input
+      name="checkingAccount"
+      class="field exportable-field"
+      label={labels.CHAKING_ACCOUNT}
+      required
+      max-length="20"
+      type="text"
+      value={bankData.checkingAccount}
+      onchange={handleСheckingAccountChange}
+      pattern={pattern.checkingPattern}
+    >
+    </lightning-input>
+    <lightning-input
+      name="corBankAccount"
+      class="field exportable-field"
+      label={labels.COR_BANK_ACCOUNT}
+      required
+      max-length="20"
+      type="text"
+      value={bankData.corBankAccount}
+      pattern={pattern.checkingPattern}
+      disabled
+    >
+    </lightning-input>
+  </lightning-card>
+</template>

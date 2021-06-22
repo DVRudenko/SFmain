@@ -1,0 +1,95 @@
+<apex:page name="SharingLead" standardController="Lead" extensions="SharingLeadController" readOnly="false">
+
+    <apex:form >
+        <apex:sectionHeader title="{!$ObjectType.Lead.Label} " subtitle="{!if(Lead.Id==null,'Lead',Lead.Name)}"></apex:sectionHeader>
+        <apex:pageBlock mode="detail" id="leadPB">
+            <apex:pageBlockSection id="LeadInformationPBS" title="{!$ObjectType.Lead.Label}">
+                <apex:outputField value="{!lead.OwnerId}"></apex:outputField>
+                <apex:PageblockSectionItem >
+                    <apex:outputlabel value="{!$ObjectType.Lead.Fields.FirstName.label}"></apex:outputlabel>
+                    <apex:outputpanel >
+                        <apex:outputField value="{!Lead.Salutation}"></apex:outputField>
+                        <apex:outputField value="{!Lead.FirstName}"></apex:outputField>
+                    </apex:outputpanel>
+                </apex:PageblockSectionItem>
+
+
+                <apex:outputField value="{!lead.Company}"></apex:outputField>
+                <apex:outputField value="{!lead.Department__c}"></apex:outputField>
+                <apex:outputField value="{!lead.MobilePhone}"></apex:outputField>
+                <apex:outputField value="{!lead.Phone}"></apex:outputField>
+                <apex:outputField value="{!lead.Email}"></apex:outputField>
+                <apex:outputField value="{!lead.PPR_Contact_Phone__c}"></apex:outputField>
+                <apex:outputField value="{!lead.Fax}"></apex:outputField>
+                <apex:outputField value="{!lead.Industry}"></apex:outputField>
+                <apex:outputField value="{!lead.INN__c}"></apex:outputField>
+                <apex:outputField value="{!lead.KPP__c}"></apex:outputField>
+                <apex:outputField value="{!lead.OGRN__c}"></apex:outputField>
+                <apex:outputField value="{!lead.End_Of_Subscription__c}"></apex:outputField>
+
+
+                <apex:outputField value="{!lead.Status}"></apex:outputField>
+                <apex:outputField value="{!lead.Other_Reason_Disqualified__c}"></apex:outputField>
+                <apex:outputField value="{!lead.Partner_card__c}"></apex:outputField>
+                <apex:outputField value="{!lead.Comment_on_Partner_card__c}"></apex:outputField>
+                <apex:outputField value="{!lead.First_Contact_Inbound_Outbound__c}"></apex:outputField>
+                <apex:outputField value="{!lead.Date_of_First_Contact_Inbound_Outbound__c	}"></apex:outputField>
+                <apex:outputField value="{!lead.Rating}"></apex:outputField>
+                <apex:outputField value="{!lead.First_Contact_Inbound_Outbound__c}"></apex:outputField>
+                <apex:outputField value="{!lead.Description}"></apex:outputField>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection id="AddressInformationPBS" title="Адрес">
+                <apex:outputField value="{!lead.Street}"></apex:outputField>
+                <apex:outputField value="{!lead.City}"></apex:outputField>
+                <apex:outputField value="{!lead.State}"></apex:outputField>
+                <apex:outputField value="{!lead.PostalCode}"></apex:outputField>
+                <apex:outputField value="{!lead.Country}"></apex:outputField>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection id="AgentInfo" title="Источник информации о контрагенте">
+                <apex:outputField value="{!lead.LeadSource}"></apex:outputField>
+                <apex:outputField value="{!lead.Source_PP__c}"></apex:outputField>
+                <apex:outputField value="{!lead.Promo_Code1__c}"></apex:outputField>
+                <apex:outputField value="{!lead.Lead_Source_Type__c}"></apex:outputField>
+                <apex:outputField value="{!lead.Source_of_Lead__c}"></apex:outputField>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+
+    <apex:pageBlock title="{!$ObjectType.OpenActivity.Label}">
+        <apex:pageBlockTable value="{!lead.OpenActivities}" var="openActive">
+            <apex:column value="{!openActive.Subject}"/>
+            <apex:column value="{!openActive.Who.Name}"/>
+            <apex:column value="{!openActive.IsTask}"/>
+            <apex:column value="{!openActive.ActivityDate}"/>
+            <apex:column value="{!openActive.Status}"/>
+            <apex:column value="{!openActive.Priority}"/>
+            <apex:column value="{!openActive.OwnerId}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="{!$ObjectType.ActivityHistory.Label}">
+        <apex:pageBlockTable value="{!lead.ActivityHistories}" var="historyActive">
+            <apex:column value="{!historyActive.Subject}"/>
+            <apex:column value="{!historyActive.Who.Name}"/>
+            <apex:column value="{!historyActive.Description}"/>
+            <apex:column value="{!historyActive.IsTask}"/>
+            <apex:column value="{!historyActive.ActivityDate}"/>
+            <apex:column value="{!historyActive.Status}"/>
+            <apex:column value="{!historyActive.Priority}"/>
+            <apex:column value="{!historyActive.OwnerId}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="{!$ObjectType.LeadHistory.Label}">
+        <apex:pageBlockTable value="{!leadHistory}" var="history">
+            <apex:column headerValue="Дата" value="{!history.theDate}"/>
+            <apex:column headerValue="Пользователь">
+                <apex:outputLink value="/{!history.userId}"> {!history.who} </apex:outputLink>
+            </apex:column>
+            <apex:column headerValue="Действие">
+                <apex:outputText escape="false" value="{!history.action}"/>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+
+</apex:page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Lorsque les paramètres de rappel et d&#39;expiration sont activés, vous pouvez définir les valeurs par défaut pour les rappels et expirations dans DocuSign for Salesforce. Ces paramètres remplacent les paramètres par défaut de votre compte DocuSign pour les rappels et expirations.</help>
+    <label><!-- Use Account Notification Defaults --></label>
+    <name>dsfs__UseAccountNotificationDefaults__c</name>
+</CustomFieldTranslation>

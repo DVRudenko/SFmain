@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ability_to_change_OwnerId</fullName>
+    <active>true</active>
+    <description>Only System Administrator, Sales Director, CCS Salesteamleiter Inbound, CCS System Administrator, Harte Hank Teamleiter, Salesteamleiter Inbound, Salesteamleiter, Starts Team Lead, AllStar Sales, AllStar Teamleader has ability to change Owner Opportunity.</description>
+    <errorConditionFormula>AND(
+$Profile.Name != "TR Callcenter",
+$Profile.Name != "System Administrator",
+$Profile.Name != "Systemadministrator",
+$Profile.Name != 'API Only',
+$Profile.Name != "Sales Director",
+$Profile.Name != "CCS Salesteamleiter Inbound",
+$Profile.Name != "E2E Profile",
+$Profile.Name != "Altevida Telesales",
+$Profile.Name != "Altevida CCS Telesales",
+$Profile.Name != "Altevida Shell Telesales",
+$Profile.Name != "CCS Sales Inbound",
+$Profile.Name != "CCS System Administrator",
+$Profile.Name != "CCS Sales Manager",
+$Profile.Name != "CCS API System Admin",
+$Profile.Name != "CCS KAM",
+$Profile.Name != "CCS KAM Team Lead",
+$Profile.Name != "CCS LAM",
+$Profile.Name != "CCS LAM Team Lead",
+$Profile.Name != "CCS SME",
+$Profile.Name != "CCS SME Team Lead",
+$Profile.Name != "CCS Sales Lead",
+$Profile.Name != "CCS Unassigned",
+$Profile.Name != "Harte Hank Teamleiter",
+$Profile.Name != "Mellon",
+$Profile.Name != "Salesteamleiter Inbound",
+$Profile.Name != "Sales Inbound",
+$Profile.Name != "Salesteamleiter",
+$Profile.Name != "Starts Team Lead",
+$Profile.Name != "AllStar Sales",
+$Profile.Name != "AllStar Teamleader",
+$Profile.Name != "Retention Agent",
+$Profile.Name != "Retention Manager",
+RecordType.Name != "Russian Sales",
+$User.Id != "0050O000006RrKX",
+NOT(AND($Profile.Name = "Key Account Manager", RecordType.Name = 'Endkunde')),
+NOT(AND($Profile.Name = "FEETCOR DE Administartor", RecordType.Name = 'Endkunde')),
+NOT(AND($Profile.Name = "Sales_Flexcard", RecordType.Name = 'Flexcard')),
+ISCHANGED(OwnerId)
+)</errorConditionFormula>
+    <errorMessage>You don't have ability to change Owner of Lead</errorMessage>
+</ValidationRule>

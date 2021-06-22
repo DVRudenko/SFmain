@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_FS_Subject</fullName>
+    <active>true</active>
+    <description>Restricts FS + GPC to select list Subject</description>
+    <errorConditionFormula>AND( 
+OR( 
+CONTAINS( $UserRole.Name , &quot;GPC Sales&quot;), 
+CONTAINS( $UserRole.Name , &quot;GPC Teamleader&quot;), 
+CONTAINS( $UserRole.Name , &quot;PPR Field Sales&quot;)), 
+Subject != &quot;Встреча (самостоятельно назначенная менеджером)&quot;/*&quot;Meeting (self-appointed by the Manager)&quot;*/, 
+Subject != &quot;Встреча по рекомендации&quot;/*&quot;Recommendation meeting&quot;*/, 
+Subject != &quot;Выставка&quot;/*&quot;Exhibition&quot;*/, 
+Subject != &quot;Повторная Встреча&quot;/*&quot;Repeated meeting&quot;*/, 
+Subject != &quot;Встреча КЦ&quot; 
+)</errorConditionFormula>
+    <errorDisplayField>Subject</errorDisplayField>
+    <errorMessage>Choose a Subject from the list!</errorMessage>
+</ValidationRule>

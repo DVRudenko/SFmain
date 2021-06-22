@@ -1,0 +1,4 @@
+.THIS .label-container {
+    display: flex; 
+    flex-wrap: wrap;
+}

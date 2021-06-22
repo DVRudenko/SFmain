@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kraftstoff_Verbrauch__c</fullName>
+    <externalId>false</externalId>
+    <label>Kraftstoff-Verbrauch</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>&lt; 300</fullName>
+                <default>false</default>
+                <label>&lt; 300</label>
+            </value>
+            <value>
+                <fullName>300-999</fullName>
+                <default>false</default>
+                <label>300-999</label>
+            </value>
+            <value>
+                <fullName>1.000-1.999</fullName>
+                <default>false</default>
+                <label>1.000-1.999</label>
+            </value>
+            <value>
+                <fullName>2.000-2.999</fullName>
+                <default>false</default>
+                <label>2.000-2.999</label>
+            </value>
+            <value>
+                <fullName>3.000-3.999</fullName>
+                <default>false</default>
+                <label>3.000-3.999</label>
+            </value>
+            <value>
+                <fullName>4.000-4.999</fullName>
+                <default>false</default>
+                <label>4.000-4.999</label>
+            </value>
+            <value>
+                <fullName>5.000-7.999</fullName>
+                <default>false</default>
+                <label>5.000-7.999</label>
+            </value>
+            <value>
+                <fullName>8.000-9.999</fullName>
+                <default>false</default>
+                <label>8.000-9.999</label>
+            </value>
+            <value>
+                <fullName>10.000-14.999</fullName>
+                <default>false</default>
+                <label>10.000-14.999</label>
+            </value>
+            <value>
+                <fullName>15.000 und mehr</fullName>
+                <default>false</default>
+                <label>15.000 und mehr</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

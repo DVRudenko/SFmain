@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status Pending Sales --></label>
+    <name>Status_Pending_Sales__c</name>
+    <picklistValues>
+        <masterLabel>ASP nicht erreicht – Kautionsmail gesendet</masterLabel>
+        <translation>Contact person not reached – Deposit mail sent</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kontakt aufgenommen – Kunde unschlüssig</masterLabel>
+        <translation>Contacted - customer not decided</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kontakt aufgenommen – warten auf Bürgschaft</masterLabel>
+        <translation>Contacted - waiting for guarantee</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kontakt aufgenommen – warten auf Kaution</masterLabel>
+        <translation>Contacted - waiting for deposit</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warten auf fehlende Daten</masterLabel>
+        <translation>Contacted - waiting for missing data</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__A_user_must_be_assigned</fullName>
+    <active>true</active>
+    <errorConditionFormula>success__User__c == null</errorConditionFormula>
+    <errorMessage>The user field must be populated</errorMessage>
+</ValidationRule>

@@ -1,0 +1,106 @@
+<apex:page controller="NewAdditionalHardware" action="{!init}">
+    <apex:form >
+    <apex:pageMessages escape="false"/>
+        <apex:commandButton action="{!Cancel}" value="Go Back" immediate="true" rendered="{!hide}"/>
+        <apex:outputpanel rendered="{!isntValid}">
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="2">
+                <apex:outputField value="{!AHW.Opportunity__c}"/>
+                <apex:outputField value="{!AHW.Account_Price_Book__c}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="2" title="Alarm and Guarding services">
+                <apex:inputField value="{!AHW.Guarding_the_vehicle_one_switch_Amount__c}"/>
+                <apex:inputField value="{!AHW.Guarding_the_vehicle_one_switch_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Guarding_the_vehicle_reader_Amount__c}"/>
+                <apex:inputField value="{!AHW.Guarding_the_vehicle_reader_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Button_Panic_Amount__c}"/>
+                <apex:inputField value="{!AHW.Button_Panic_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Guarding_cargo_space_Amount__c}"/>
+                <apex:inputField value="{!AHW.Guarding_cargo_space_Price__c}" html-disabled="true"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="2" title="Drivers Identification">
+                <apex:inputField value="{!AHW.Reader_Dalas_Amount__c}"/>
+                <apex:inputField value="{!AHW.Reader_Dalas_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Reader_RFID_Slim_Amount__c}"/>
+                <apex:inputField value="{!AHW.Reader_RFID_Slim_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Reader_Inditag_Amount__c}"/>
+                <apex:inputField value="{!AHW.Reader_Inditag_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Reader_Mifare_Amount__c}"/>
+                <apex:inputField value="{!AHW.Reader_Mifare_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Reader_Multi_125_Amount__c}"/>
+                <apex:inputField value="{!AHW.Reader_Multi_125_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Reader_HIDProx_Amount__c}"/>
+                <apex:inputField value="{!AHW.Reader_HIDProx_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Reader_Multi_ISO_Amount__c}"/>
+                <apex:inputField value="{!AHW.Reader_Multi_ISO_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Reader_Legic_Amount__c}"/>
+                <apex:inputField value="{!AHW.Reader_Legic_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Dalas_chip_Amount__c}"/>
+                <apex:inputField value="{!AHW.Dalas_chip_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.RFID_fobs_Amount__c}"/>
+                <apex:inputField value="{!AHW.RFID_fobs_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.RFID_adhesive_chip_Amount__c}"/>
+                <apex:inputField value="{!AHW.RFID_adhesive_chip_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Piezoelectric_siren_Amount__c}"/>
+                <apex:inputField value="{!AHW.Piezoelectric_siren_Price__c}" html-disabled="true"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="2" title="Temperature measurement">
+                <apex:inputField value="{!AHW.Temperature_measurementCargoSpace_Amount__c}"/>
+                <apex:inputField value="{!AHW.Temperature_measurementCargoSpace_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Calibrating_transducer_PT100_Amount__c}"/>
+                <apex:inputField value="{!AHW.Calibrating_transducer_PT100_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Temperature_sensor_Pt100B_Amount__c}"/>
+                <apex:inputField value="{!AHW.Temperature_sensor_Pt100B_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Temperature_sensor_Pt100A_Amount__c}"/>
+                <apex:inputField value="{!AHW.Temperature_sensor_Pt100A_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Temperature_sensor_Dalas_Amount__c}"/>
+                <apex:inputField value="{!AHW.Temperature_sensor_Dalas_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.X1_m_cable_to_the_temperature_Amount__c}"/>
+                <apex:inputField value="{!AHW.X1_m_cable_to_the_temperature_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.X1_m_silicone_cable_temp_sensor_Amount__c}"/>
+                <apex:inputField value="{!AHW.X1_m_silicone_cable_temp_sensor_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Plastic_temperature_sensor_holder_Amount__c}"/>
+                <apex:inputField value="{!AHW.Plastic_temperature_sensor_holder_Price__c}" html-disabled="true"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="2" title="Additional HW">
+                <apex:inputField value="{!AHW.Basic_switch_Amount__c}"/>
+                <apex:inputField value="{!AHW.Basic_switch_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Adhesive_switch_P_S_Amount__c}"/>
+                <apex:inputField value="{!AHW.Adhesive_switch_P_S_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Adhesive_switch_P_S_withDiode_LED_Amoun__c}"/>
+                <apex:inputField value="{!AHW.Adhesive_switch_P_S_with_diode_LED_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Cable_CAN_Amount__c}"/>
+                <apex:inputField value="{!AHW.Cable_CAN_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.CAN_GO_CLICK_Amount__c}"/>
+                <apex:inputField value="{!AHW.CAN_GO_CLICK_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Power_supplyPower_cable_harnesses_Amount__c}"/>
+                <apex:inputField value="{!AHW.Power_supply_power_cable_harnesses_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Antenna_GPS_FLAT_Amount__c}"/>
+                <apex:inputField value="{!AHW.Antenna_GPS_FLAT_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Antenna_GPS_Shark_Amount__c}"/>
+                <apex:inputField value="{!AHW.Antenna_GPS_Shark_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Spare_battery_for_CN85_1_4_Amount__c}"/>
+                <apex:inputField value="{!AHW.Spare_battery_for_CN85_1_4_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Can_Bus_transducer_MCB_02_Amount__c}"/>
+                <apex:inputField value="{!AHW.Can_Bus_transducer_MCB_02_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Microwave_sensor_Amount__c}"/>
+                <apex:inputField value="{!AHW.Microwave_sensor_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Acoustic_signaling_with_LED_Amount__c}"/>
+                <apex:inputField value="{!AHW.Acoustic_signaling_with_LED_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Button_Panic2_Amount__c}"/>
+                <apex:inputField value="{!AHW.Button_Panic2_Price__c}" html-disabled="true"/>
+                <apex:inputField value="{!AHW.Siren_Alarm_Amount__c}"/>
+                <apex:inputField value="{!AHW.Siren_Alarm_Price__c}" html-disabled="true"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+                <apex:commandButton action="{!Cancel}" value="Cancel" immediate="true"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        </apex:outputpanel>
+    </apex:form>
+</apex:page>

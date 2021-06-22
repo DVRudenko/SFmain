@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>At times, you may need to encourage your recipients to complete an envelope more rapidly. After an envelope expires, DocuSign for Salesforce voids the envelope and sends a notification to both sender and recipient.</help>
+    <label><!-- Expire/Void Envelope --></label>
+    <name>dsfs__Expire_Void_Envelope__c</name>
+</CustomFieldTranslation>

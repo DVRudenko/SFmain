@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Account_Changed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Custom field to track if initial related account was changed or not (STCP1-636) - for email-to-case cases created only/updated in WFR 'Checked Is account changed checkbox'</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checked if initial related Account was changed</inlineHelpText>
+    <label>Is Account Changed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,381 @@
+<apex:page controller="Naumen_SoftphoneController" showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+  <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <apex:slds />
+    
+    <apex:includeScript value="{!URLFOR($Resource.NauphoneJS, 'jquery213.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.NauphoneJS, 'EventEmitter.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.NauphoneJS, 'heir.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.NauphoneJS, 'Promise.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.NauphoneJS, 'nauphone.js')}"/>
+
+    <apex:includeScript value="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js" />
+    <apex:includeScript value="{!URLFOR($Resource.NaumenSources, 'NaumenSoftphoneJS.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.NaumenSources, 'NaumenSoftphoneCSS.css')}"/>
+
+    <apex:includeScript value="{!URLFOR($Resource.moment_with_locales)}"/>
+
+    <script type="text/javascript">
+    /* INIT NAUMEN SOFTPHONE */
+      // get labels
+        var $label_Naumen_notifMsg_SoftphoneDisconnected = "{!$Label.Naumen_notifMsg_SoftphoneDisconnected}";
+        var $label_Naumen_notifheader_CantOpenTheCall = "{!$Label.Naumen_notifHeader_CantOpenTheCall}";
+        var $label_Naumen_notifMsg_ThereIsAnActiveCall = "{!$Label.Naumen_notifMsg_ThereIsAnActiveCall}";
+        var $label_Naumen_notifHeader_RecordWasntFound = "{!$Label.Naumen_notifHeader_RecordWasntFound}";
+        var $label_Naumen_notifHeader_UnknownError = "{!$Label.Naumen_notifHeader_UnknownError}";
+        var $label_Naumen_notifHeader_RecordWasntSaved = "{!$Label.Naumen_notifHeader_RecordWasntSaved}";
+        var $label_Naumen_notifMsg_UnableToUpdatePhoneInfo = "{!$Label.Naumen_notifMsg_UnableToUpdatePhoneInfo}";
+        var $label_Naumen_OpenNaumenForm = "{!$Label.Naumen_OpenNaumenForm}";
+
+        var userStatesLabels = {};
+        userStatesLabels['normal'] = "{!$Label.Naumen_UserState_normal}";
+        userStatesLabels['dnd'] = "{!$Label.Naumen_UserState_dnd}";
+        userStatesLabels['away_Dinner'] = "{!$Label.Naumen_UserState_away_Dinner}";
+        userStatesLabels['away_TechnicalBreak'] = "{!$Label.Naumen_UserState_away_TechnicalBreak}";
+        userStatesLabels['away'] = "{!$Label.Naumen_UserState_wrapup}"; // use away state for wrapup (processing record after finishing call)
+        userStatesLabels['ringing'] = "{!$Label.Naumen_UserState_ringing}"; // set automatically by naumen
+        userStatesLabels['speaking'] = "{!$Label.Naumen_UserState_speaking}"; // set automatically by naumen
+        
+        function getUserStateLabel (state, reason) {
+            var stateAndReasonStr = reason == null || reason == '' ? state 
+                                                                   : state + '_' + reason;
+            var labelText = userStatesLabels[stateAndReasonStr];
+            if (labelText == null || labelText == '') {
+              labelText = reason == null || reason == '' ? state 
+                                                         : state + ': ' + reason ;
+            } 
+            return labelText;
+        }
+      // process document ready
+        $(document).ready(function() {
+          console.log('document ready');
+        });
+    </script>
+</head>
+
+<body>
+    <div id="overlay" style="display:none;"/> 
+    
+
+
+<!-- ------------------------------------------------------ SOFTPHONE UI ------------------------------------------------------ -->
+<div ng-app="SoftphoneApp">
+<div ng-controller="SoftphoneController" ng-init="init('{!$CurrentPage.URL}', '{!$Setup.Naumen_Settings__c.Websocket_URL__c}');">
+
+<!-- SOFTPHONE PANEL -->
+ <div id="Softphone" class="slds-scope">
+ <div class="panel scrollable slds-utility-panel slds-grid slds-grid--vertical oneUtilityBarPanel DOCKED slds-is-open ">
+
+<!-- SOFTPHONE PANEL HEADER -->
+  <a class="headerLink" href="javascript:void(0);">
+    <div class="panel-header slds-utility-panel__header slds-grid slds-shrink-none">
+      <div class="slds-media slds-media--center slds-has-flexi-truncate">
+        <div class="slds-media__figure slds-m-right--x-small">
+          <span class="slds-icon_container">
+            <svg ng-show="NaumenReady == true" class="slds-icon slds-icon_x-small icon-naumen">
+              <use href="/_slds/icons/custom-sprite/svg/symbols.svg?cache=9.31.2-1#custom22"></use>
+            </svg>
+            <svg ng-show="NaumenReady == null || NaumenReady == false" class="icon-disconnected slds-icon slds-icon_x-small">
+              <use href="/_slds/icons/standard-sprite/svg/symbols.svg?cache=9.31.2-1#first_non_empty"></use>
+            </svg>
+          </span>
+        </div>
+        <div class="slds-media__body">
+          <h2 class="panelTitle slds-truncate" title="naumenDialer">{!$Label.Naumen_NaumenSoftphone}</h2>
+        </div>
+      </div>
+      <div class="slds-col--bump-left">
+        <span>
+          <button ng-click="hideSoftphone();" class="slds-button slds-button_icon minButton slds-p-around_xx-small slds-button_icon-bare" type="button" title="Minimize">
+            <svg focusable="false" data-key="minimize_window" class="slds-button__icon">
+              <use href="/_slds/icons/utility-sprite/svg/symbols.svg?cache=9.31.2-1#minimize_window"></use>
+            </svg>
+            <span class="slds-assistive-text">{!$Label.Naumen_Minimize}</span>
+          </button>
+        </span>
+      </div>
+    </div>
+  </a><!-- end -- SOFTPHONE PANEL HEADER -->
+
+
+<!-- SOFTPHONE PANEL BODY -->
+  <div class="slds-utility-panel__body" style="height: 700px;"><div class="body_container">
+    <!-- STATUS DROPDOWN -->
+      <div id="statusPanel">
+        <span>
+          <svg class="slds-icon slds-icon_xx-small {{userState.state}}">
+            <use href="/_slds/icons/utility-sprite/svg/symbols.svg?cache=9.31.2-1#record"></use>
+          </svg>
+          &nbsp;<b>{{userState.stateLabel}}</b>
+        </span>
+        <div id="changeStatusDropdown" ng-show="NaumenReady == true" class="slds-dropdown-trigger slds-dropdown-trigger_click">
+          <button ng-click="openStatusesList();" class="slds-button slds-button_icon slds-button_icon-border slds-button_icon-x-small">
+            <svg class="slds-button__icon">
+              <use href="/_slds/icons/utility-sprite/svg/symbols.svg?cache=9.31.2-1#down"></use>
+            </svg>
+          </button>
+          <div class="slds-dropdown slds-dropdown_left">
+            <ul class="slds-dropdown__list" role="menu">
+              <li class="slds-dropdown__item" role="presentation">
+                <a ng-click="onClickSetUserState('normal');" href="javascript:void(0);" role="menuitem" tabindex="0">
+                  <span class="slds-truncate">
+                    <svg class="slds-icon slds-icon_xx-small normal">
+                      <use href="/_slds/icons/utility-sprite/svg/symbols.svg?cache=9.31.2-1#record"></use>
+                    </svg>
+                    &nbsp;<b>{!$Label.Naumen_UserState_normal}</b>
+                  </span>
+                </a>
+              </li>
+              <li class="slds-dropdown__item" role="presentation">
+                <a ng-click="onClickSetUserState('dnd');" href="javascript:void(0);" role="menuitem" tabindex="-1">
+                  <span class="slds-truncate">
+                    <svg class="slds-icon slds-icon_xx-small dnd">
+                      <use href="/_slds/icons/utility-sprite/svg/symbols.svg?cache=9.31.2-1#record"></use>
+                    </svg>
+                    &nbsp;<b>{!$Label.Naumen_UserState_dnd}</b>
+                  </span>
+                </a>
+              </li>
+              <li class="slds-dropdown__item" role="presentation">
+                <a ng-click="onClickSetUserState('away', 'Dinner');" href="javascript:void(0);" role="menuitem" tabindex="-1">
+                  <span class="slds-truncate">
+                    <svg class="slds-icon slds-icon_xx-small away">
+                      <use href="/_slds/icons/utility-sprite/svg/symbols.svg?cache=9.31.2-1#record"></use>
+                    </svg>
+                    &nbsp;<b>{!$Label.Naumen_UserState_away_Dinner}</b>
+                  </span>
+                </a>
+              </li>
+              <li class="slds-dropdown__item" role="presentation">
+                <a ng-click="onClickSetUserState('away', 'TechnicalBreak');" href="javascript:void(0);" role="menuitem" tabindex="-1">
+                  <span class="slds-truncate">
+                    <svg class="slds-icon slds-icon_xx-small away">
+                      <use href="/_slds/icons/utility-sprite/svg/symbols.svg?cache=9.31.2-1#record"></use>
+                    </svg>
+                    &nbsp;<b>{!$Label.Naumen_UserState_away_TechnicalBreak}</b>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- end -- STATUS DROPDOWN  -->
+      <br/> 
+      
+    <div id="StartPage" ng-show="softphoneMode == 'START'">
+      <div id="startPanelBody">
+        <div>{!$Label.Naumen_WaitingForACall}</div>
+        <div id="outboundCallPanel">
+          <input id="outboundCallNumber" type="text" class="slds-input" style="width: 50%;"></input>
+          <button ng-click="makeOutboundCall()" class="slds-button slds-button_neutral outbound-call-btn">{!$Label.Naumen_MakeCall}</button>
+        </div>
+      </div>
+    </div>
+  <!-- RECORD CARD -->
+    <div id="RecordCard" ng-show="softphoneMode == 'CALL'">    
+      <article class="slds-card">
+            <header class="slds-grid call-header">
+              <div class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="call-type-icon">
+                  <svg ng-show="call.type == 'autocall'" class="slds-icon  slds-icon_medium icon-autocall">
+                    <use href="/_slds/icons/standard-sprite/svg/symbols.svg#call_history"></use>
+                  </svg>
+                  <svg ng-show="call.type == 'callback'" class="slds-icon slds-icon_large icon-callback">
+                    <use href="/_slds/icons/standard-sprite/svg/symbols.svg#date_time"></use>
+                  </svg>
+                  <svg ng-show="call.type == 'inbound'" class="slds-icon slds-icon_small icon-inbound">
+                    <use href="/_slds/icons/utility-sprite/svg/symbols.svg#incoming_call"></use>
+                  </svg>
+                  <svg ng-show="call.type == 'outbound'" class="slds-icon slds-icon_small icon-outbound">
+                    <use href="/_slds/icons/utility-sprite/svg/symbols.svg#outbound_call"></use>
+                  </svg>
+                </div>
+                <div class="slds-media__body slds-truncate call-type">
+                  <h2>
+                    <span ng-show="call.type == 'autocall'" class="slds-text-heading_small">{!$Label.Naumen_Autocall}</span>
+                    <span ng-show="call.type == 'callback'" class="slds-text-heading_small">{!$Label.Naumen_Callback}</span>
+                    <span ng-show="call.type == 'inbound'" class="slds-text-heading_small">{!$Label.Naumen_InboundCall}</span>
+                    <span ng-show="call.type == 'outbound'" class="slds-text-heading_small">{!$Label.Naumen_OutboundCall}</span>
+                  </h2>
+                </div>
+              </div>
+              <div class="slds-media slds-media_center slds-no-flex">
+                <slot name="actions"> {!$Label.Naumen_Talking}: {{call.talkDuration}} {!$Label.Naumen_sec}</slot>
+                &nbsp;&nbsp;&nbsp;
+                <span>
+                  <a href="#" ng-show="call.stateMode == 'PROCESSING' && call.customer==null" ng-click="closeRecordInSoftphone()" title="{!$Label.btn_Close}">
+                    <svg class="slds-icon slds-icon_x-small icon-close">
+                      <use href="/_slds/icons/utility-sprite/svg/symbols.svg#close"></use>
+                    </svg>
+                  </a>
+                </span>
+              </div>
+            </header>
+
+            <div class="slds-card__body">
+              <slot>
+                <div class="slds-panel">
+                  <div class="slds-panel__section">
+
+            <!-- AVATAR --> 
+                    <div class="avatar slds-align--absolute-center">
+                      <div class="slds-avatar slds-avatar--circle slds-avatar--large">
+                    <!-- lead avatar --> 
+                        <img ng-show="call.customer.sObjType=='Lead'" src="{!URLFOR($Asset.SLDS, 'assets/images/avatar1.jpg')}" title="{{call.customer.sObjType}}"/>
+                    <!-- opportunity avatar -->
+                        <span ng-show="call.customer.sObjType=='Opportunity'" class="slds-icon_container" title="{{call.customer.sObjType}}">
+                          <svg class="slds-icon icon-opportunity">
+                            <use href="{!URLFOR($Asset.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#opportunity')}"></use>
+                          </svg>
+                        </span>
+                        <span ng-show="call.customer==null" class="slds-icon_container" title="unknown call">
+                          <svg class="slds-icon icon-unknown">
+                            <use href="{!URLFOR($Asset.SLDS, '/assets/icons/action-sprite/svg/symbols.svg#question_post_action')}"></use>
+                          </svg>
+                        </span>
+
+                      </div><!-- end -- slds-avatar -->
+                    </div><!-- end -- avatar -->
+
+          <!-- CUSTOMER INFO -->  
+                    <div class="record-id slds-text-color--weak slds-text-align--center">{{call.customer.recordId}}</div>
+                    <div class="slds-text-color--weak slds-text-align--center">
+                          <span class="name slds-text-heading--medium">{{call.customer.name}}</span>
+                    </div>
+                    <div ng-show="call.customer.sObjType=='Opportunity'" class="slds-text-heading--medium slds-text-color--weak slds-text-align--center contact-details">
+                        <span ng-show="call.customer.allContacts[call.customer.callCustomerId] != null" class="purple">
+                            {{call.customer.allContacts[call.customer.callCustomerId].name}}
+                        </span>
+                        <span ng-show="call.customer.allContacts[call.customer.callCustomerId] == null" class="orange bold">
+                            {!$Label.Naumen_ContactWasntFound}
+                        </span>
+                    </div>
+                    <div class="slds-text-heading--large slds-text-color--weak slds-text-align--center company-details"><label>{{call.customer.companyName}}</label></div>
+                    
+          <!-- CALL INFO -->  
+              <!-- call state -->      
+                    <div class="slds-text-heading--x-small slds-text-color--weak slds-text-align--center call-status">
+                        <span ng-show="call.stateMode == 'RINGING'">{!$Label.Naumen_Ringing}</span>
+                        <span ng-show="call.stateMode == 'TALKING'">{!$Label.Naumen_TalkingTo}</span>
+                        <span ng-show="call.stateMode == 'PROCESSING'">{!$Label.Naumen_Processing}</span>
+                        <b><span>&nbsp;&nbsp;{{call.phoneNumber}}</span></b>
+                        <span>...</span>
+                    </div>
+                <!-- phone number -->
+                    <div class="slds-text-heading--x-small slds-text-color--weak slds-text-align--center phone-extension">
+                      <span>{{call.customer.extensionNumber}}</span>
+                    </div>
+                    <!-- don't use naumen form now - all info we fill in in record card in SF
+                    <div>
+                        <a href="javascript:void(0);" ng-click="openNaumenForm()" ng-show="call.type != 'outbound'">{!$Label.Naumen_OpenNaumenForm}</a>
+                    </div>
+                  -->
+                <!-- speaking time counter -->
+                    <div class="slds-text-heading--small slds-text-color--weak slds-text-align--center call-time-output">{{call.timeOutput}}</div>
+                  
+          <!-- TRANSFER CALL BLOCK -->
+                    <div ng-show="transferCallAvailable == true && call.stateMode == 'TALKING' && call.type != 'internal'" class="transfer-section">
+                        <div ng-show="call.transfered != true">
+                          <input id="transferNumber" type="text" class="slds-input" style="width: 50%;"></input>
+                          <button ng-click="transferCall()" class="slds-button slds-button_neutral transfer-btn">{!$Label.Naumen_Transfer}</button>
+                        </div>
+                        <div ng-show="call.transfered == true">
+                          <button ng-click="breakTransfer()" class="slds-button slds-button_neutral">{!$Label.Naumen_BreakTransfer}</button>
+                        </div>
+                    </div>
+          <!-- IMMEDIATE CALL -->
+                    <div id="immediateCallPanel" ng-show="call.stateMode == 'PROCESSING' && (call.type == 'autocall' || call.type == 'callback')">
+                        <input id="immediateCallNumber" type="text" class="slds-input" style="width: 50%;"></input>
+                        <button ng-click="makeImmediateCall()" class="slds-button slds-button_neutral outbound-call-btn">{!$Label.Naumen_MakeCall}</button>
+                    </div>
+
+                  </div><!-- end -- slds-panel__section -->
+
+          <!-- CALL BUTTONS -->  
+                  <div class="bottom-panel slds-panel__section slds-align-bottom slds-grid slds-align--absolute-center">
+                    <button ng-click="hangupCall()" ng-show="call.stateMode == 'RINGING' || call.stateMode == 'TALKING'" class="call-button slds-button slds-button_destructive">
+                        <span ng-show="call.stateMode == 'RINGING' && call.type != 'outbound'">{!$Label.Naumen_Decline}</span>
+                        <span ng-show="call.stateMode == 'RINGING' && call.type == 'outbound'">{!$Label.Naumen_End}</span>
+                        <span ng-show="call.stateMode == 'TALKING'">{!$Label.Naumen_End}</span>
+                    </button>
+                    <button ng-click="answerCall()" ng-show="call.stateMode == 'RINGING' && call.type != 'outbound'" class="call-button slds-button slds-button_success">
+                        <span>{!$Label.Naumen_Answer}</span>
+                    </button>
+                  </div>
+                </div><!-- end -- slds-panel -->
+              </slot>
+
+            </div><!-- end -- slds-card__body -->
+      </article>
+    </div><!-- end -- RECORD CARD -->
+
+  </div></div><!-- end -- SOFTPHONE PANEL BODY -->
+</div> <!-- end -- SOFTPHONE PANEL -->
+</div><!-- end -- #Softphone -->
+
+<!-- UTILITY BUTTON -->
+<div id="UtilityBar" class="slds-scope">
+  <div class="flexipagePage">
+    <div class="oneUtilityBarContainer oneUtilityBar">
+      <div class="oneUtilityBar slds-utility-bar_container" style="z-index: 5">
+        <ul class="utilitybar slds-utility-bar utility-bar-speedup">
+          <li class="slds-utility-bar__item">
+            <div  class="flexipageComponent">
+              <div class="slds-utility-bar__item oneUtilityBarItem">
+                <button ng-click="showSoftphone();" class="slds-button utility-btn slds-utility-bar__item">
+                  <div class="slds-media__figure">
+                    <svg ng-show="NaumenReady == true" class="icon-naumen slds-icon slds-icon_small">
+                      <use href="/_slds/icons/custom-sprite/svg/symbols.svg?cache=9.31.2-1#custom22"></use>
+                    </svg>
+                    <svg ng-show="NaumenReady == null || NaumenReady == false" class="icon-disconnected slds-icon slds-icon_small">
+                      <use href="/_slds/icons/standard-sprite/svg/symbols.svg?cache=9.31.2-1#first_non_empty"></use>
+                    </svg>
+                  </div>
+                  <div class="slds-media__body slds-truncate">
+                    <span class="itemTitle">{!$Label.Naumen_NaumenSoftphone}</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div><!-- end -- #UtilityBar -->
+
+<div id="notification" class="modal_popup" ng-show="notification != null">
+  <section class="slds-modal slds-fade-in-open slds-modal_large">
+    <div class="slds-modal__container">
+      <header class="slds-modal__header">
+        <label class="slds-modal__title slds-hyphenate">
+          <svg ng-show="notification.type == 'error'" class="icon-disconnected slds-icon slds-icon_small" style="margin-right:10px">
+            <use href="/_slds/icons/standard-sprite/svg/symbols.svg?cache=9.31.2-1#first_non_empty"></use>
+          </svg>
+          <svg ng-show="notification.type == 'warning'" class="icon-warning slds-icon slds-icon_small" style="margin-right:10px">
+            <use href="/_slds/icons/utility-sprite/svg/symbols.svg#warning"></use>
+          </svg>
+          <span>{{notification.headerText}}</span>
+        </label>
+      </header>
+      <div class="slds-modal__content slds-p-around_medium">
+        <p>{{notification.bodyText}}</p>
+      </div>
+      <footer class="slds-modal__footer">
+        <button ng-click="closeModal()" class="slds-button slds-button_brand">{!$Label.Naumen_CloseModal}</button>
+      </footer>
+    </div>
+  </section>
+  <div class="slds-backdrop slds-backdrop_open"></div>
+</div> 
+
+
+</div>
+</div>
+
+</body>
+</html>    
+</apex:page>

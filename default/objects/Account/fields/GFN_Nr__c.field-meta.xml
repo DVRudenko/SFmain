@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GFN_Nr__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Unique account identifier generated in GFN (Global FleetNet) system</description>
+    <externalId>true</externalId>
+    <inlineHelpText>Unique account identifier generated in GFN (Global FleetNet) system</inlineHelpText>
+    <label>GFN Nr.</label>
+    <length>15</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

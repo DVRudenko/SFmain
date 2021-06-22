@@ -1,0 +1,16 @@
+<apex:page id="ReassignFromE2E" controller="ReassignFromE2ECtrl" action="{! init }">
+    <apex:form>
+        <apex:pageBlock >
+            <apex:pageMessages/>
+
+            <apex:pageBlockSection rendered="{! isValid }">
+                <apex:inputField value="{! opp.Owner_Change_Reason__c }"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{! save }" value="Save" rendered="{! isValid }"/>
+                <apex:commandButton action="{! cancel }" value="Cancel"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Handling_Time__c</fullName>
+    <description>STCP1-251/to display time from owner first change date time till case was resolved - Gross Handling Time
+UPD: STCP1-367 - formula changed into hours</description>
+    <externalId>false</externalId>
+    <formula>IF( 
+IsClosed &amp;&amp; NOT(ISBLANK(First_Owner_Change_Date__c)), 
+(ClosedDate - First_Owner_Change_Date__c)*24,
+Null 
+)</formula>
+    <inlineHelpText>The total number of hours between date/time closed and the date/time when the owner was changed first time.</inlineHelpText>
+    <label>Handling Time</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

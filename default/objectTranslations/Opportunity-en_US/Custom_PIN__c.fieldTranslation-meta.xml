@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Check this check box if a Customer wants to have a custom PIN. Such Customers should order their Cards themselves in Self Serve portal. --></help>
+    <label><!-- Custom PIN --></label>
+    <name>Custom_PIN__c</name>
+</CustomFieldTranslation>

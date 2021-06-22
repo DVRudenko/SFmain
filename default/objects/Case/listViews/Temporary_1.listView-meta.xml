@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Temporary_1</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Case_Status_Icon__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Topic__c</columns>
+    <columns>Sub_topic__c</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.EMAIL</columns>
+    <filterScope>Queue</filterScope>
+    <label>Temporary 1</label>
+    <queue>Temporary_1</queue>
+    <sharedTo>
+        <group>CCS_Support_CaseManagement</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attachments_Exist__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If Activity had attachment this field should be TRUE, else FALSE</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If Activity had attachment this field should be TRUE, else FALSE</inlineHelpText>
+    <label>Attachments Exist</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Andere</fullName>
+        <default>false</default>
+        <label>Andere</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Angebot</fullName>
+        <default>false</default>
+        <label>Angebot</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Anruf</fullName>
+        <default>true</default>
+        <label>Anruf</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call</fullName>
+        <default>false</default>
+        <label>Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Welcome Call</fullName>
+        <default>false</default>
+        <label>Welcome Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Case Activity</fullName>
+        <default>false</default>
+        <label>Case Activity</label>
+    </standardValue>
+    <standardValue>
+        <fullName>E-Mail</fullName>
+        <default>false</default>
+        <label>E-Mail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FAX</fullName>
+        <default>false</default>
+        <label>FAX</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting</fullName>
+        <default>false</default>
+        <label>Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Online transfer call</fullName>
+        <default>false</default>
+        <label>Online transfer call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ostatní</fullName>
+        <default>false</default>
+        <label>Ostatní</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Post</fullName>
+        <default>false</default>
+        <label>Post</label>
+    </standardValue>
+</StandardValueSet>

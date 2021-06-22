@@ -1,0 +1,80 @@
+<aura:component controller="GFNI_DashboardCtrl" extends="c:BaseComponent">
+    <aura:attribute name="tableHead" type="List" />
+    <aura:attribute name="selectedCheckboxes" type="List"/>
+    <aura:attribute name="itemList" type="List"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.gfnParams}" action="{!c.getAccounts}"/>
+    
+    <aura:registerEvent name="ReloadResetPasswordHistoryTableEvent" type="c:ReloadResetPasswordHistoryTableEvent"/>
+
+    <lightning:card iconName="standard:avatar" class="slds-card_boundary slds-m-around_large">
+        <aura:set attribute="title">
+            <a href="{!v.landingPageLink}" target="_blank"> Self Service (GFN)</a>
+        </aura:set>
+        <aura:set attribute="actions">
+            <lightning:button class="slds-theme_neutral slds-size_1-of-1" variant="neutral" label="Password Reset" onclick="{!c.resetPasswords}"></lightning:button>
+        </aura:set>
+            <aura:if isTrue="{!and(empty(v.itemList), v.loaded)}">
+                <span class="slds-text-title_caps slds-align_absolute-center">{!v.errorMessage}</span>
+                <aura:set attribute="else">
+                    <div class="slds-card__body_inner slds-scrollable">
+                        <table class="slds-table slds-table_bordered slds-table_striped slds-card_boundary">
+                            <thead>
+                                <tr class="slds-text-title_caps">
+                                    <aura:iteration items="{!v.tableHead}" var="columnName">
+                                        <th>
+                                            <div class="slds-truncate">{!columnName}</div>
+                                        </th>
+                                    </aura:iteration>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.itemList}" var="account">
+                                    <tr class="slds-hint-parent">
+                                        <td>
+                                            <lightning:input class="slds-align_absolute-center" aura:id="checkbox" name="{!account.LoginName}" type="checkbox"></lightning:input>
+                                        </td>
+                                        <td>
+                                            <div class="slds-text-title slds-text-color_default">{!account.LoginName}</div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-text-title slds-text-color_default">{!account.Title}</div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-text-title slds-text-color_default">{!account.FirstName}</div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-text-title slds-text-color_default">{!account.LastName}</div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-text-title slds-text-color_default">{!account.EmailAddress}</div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-text-title slds-text-color_default">{!account.LastActivity}</div>
+                                        </td>
+                                        <td>
+                                            <div class="slds-text-title slds-text-color_default">{!account.LoginAttempts}</div>
+                                        </td>
+                                        <td>
+                                            <aura:if isTrue="{!account.isLocked}">
+                                                <div class="slds-text-title slds-text-color_default">Yes</div>
+                                                <aura:set attribute="else">
+                                                        <div class="slds-text-title slds-text-color_default">No</div>
+                                                </aura:set>
+                                            </aura:if>
+                                        </td>
+                                        <aura:if isTrue="{!v.lineOfBusiness == 'SME'}">
+                                            <td>
+                                                <div class="slds-text-title slds-text-color_default">{!account.UIType}</div>
+                                            </td>
+                                        </aura:if>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </div>                
+                </aura:set>
+            </aura:if>
+    </lightning:card>
+</aura:component>

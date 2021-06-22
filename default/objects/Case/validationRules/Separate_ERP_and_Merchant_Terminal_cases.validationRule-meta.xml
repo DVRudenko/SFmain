@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Separate_ERP_and_Merchant_Terminal_cases</fullName>
+    <active>true</active>
+    <description>STCP1-768</description>
+    <errorConditionFormula>AND(
+OR ( (ISCHANGED( ERP__c)), ISNEW() ),
+NOT(ISBLANK(ERP__c )),
+NOT(ISBLANK( Merchant__c)) || NOT (ISBLANK( Terminal__c )),
+RecordType.DeveloperName = 'Support_CCS'  || RecordType.DeveloperName = 'Support'
+)</errorConditionFormula>
+    <errorMessage>Not possible to save both ERP and Merchant/Terminal</errorMessage>
+</ValidationRule>

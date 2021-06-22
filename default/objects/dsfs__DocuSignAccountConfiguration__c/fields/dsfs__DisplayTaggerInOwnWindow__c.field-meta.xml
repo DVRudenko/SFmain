@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__DisplayTaggerInOwnWindow__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Checking this box means that when sending a document through DocuSign, the Tagger will display in its own window, as opposed to being embedded inside Salesforce header/sidebar.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Set the DocuSign tagger to display in its own window rather than embedded inside of the Salesforce header and/or sidebar.</inlineHelpText>
+    <label>Display Tagger In Own Window</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

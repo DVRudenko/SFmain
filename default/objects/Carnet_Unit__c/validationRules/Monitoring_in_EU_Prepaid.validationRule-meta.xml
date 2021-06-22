@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monitoring_in_EU_Prepaid</fullName>
+    <active>true</active>
+    <description>Monitoring in EU can be used only in Prepaid Carnet Units.</description>
+    <errorConditionFormula>IF(
+AND(
+Monitoring_in_EU__c = TRUE,
+Prepaid__c = FALSE),
+true,
+false)</errorConditionFormula>
+    <errorDisplayField>Monitoring_in_EU__c</errorDisplayField>
+    <errorMessage>Monitoring in EU can be used only for Prepaid Carnet Units, because for Standard it is charged dynamically, when crossing the borders.</errorMessage>
+</ValidationRule>

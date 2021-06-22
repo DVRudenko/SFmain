@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS Call status --></label>
+    <name>CCS_Call_status__c</name>
+    <picklistValues>
+        <masterLabel>definitivně nezastižen</masterLabel>
+        <translation><!-- definitivně nezastižen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>domluveno následné volání</masterLabel>
+        <translation><!-- domluveno následné volání --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>dovoláno</masterLabel>
+        <translation><!-- dovoláno --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>nevoláno</masterLabel>
+        <translation><!-- nevoláno --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>nevoláno - ve volání jinde</masterLabel>
+        <translation><!-- nevoláno - ve volání jinde --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>nezvedá, obsazeno</masterLabel>
+        <translation><!-- nezvedá, obsazeno --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>odmítnutý hovor</masterLabel>
+        <translation><!-- odmítnutý hovor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>odmítnutý hovor - monitoring</masterLabel>
+        <translation><!-- odmítnutý hovor - monitoring --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>omyl</masterLabel>
+        <translation><!-- omyl --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>zavolat jindy, nemá čas</masterLabel>
+        <translation><!-- zavolat jindy, nemá čas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>záznamník, fax</masterLabel>
+        <translation><!-- záznamník, fax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>číslo neexistuje</masterLabel>
+        <translation><!-- číslo neexistuje --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

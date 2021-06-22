@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_ML_04_2017</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Note__c</columns>
+    <columns>CCS_Description__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CCS_Note__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>NEW - Not Yet Contacted,Nekontaktovaný,NEW – Not Yet Contacted,Open</value>
+    </filters>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>CCS ML 04/2017</value>
+    </filters>
+    <label>CCS ML 04/2017</label>
+    <language>cs</language>
+    <sharedTo>
+        <roleAndSubordinates>CCS_Administrator</roleAndSubordinates>
+        <roleAndSubordinates>CCS_CZ_Contact_Center</roleAndSubordinates>
+        <roleAndSubordinates>CCS_Contact_Center_Team_Lead</roleAndSubordinates>
+    </sharedTo>
+</ListView>

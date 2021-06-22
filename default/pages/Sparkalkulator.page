@@ -1,0 +1,206 @@
+<apex:page standardController="Opportunity" Title="Tankkarten Sparkalkulator" extensions="SparkalkulatorController">
+  <apex:includeScript value="{!$Resource.jQuery}"/>
+  <apex:includeScript value="{!$Resource.TooltipJS}"/>
+  <style>
+    .tooltipsy
+    {
+        padding: 10px;
+        max-width: 200px;
+        color: #303030;
+        background-color: #f5f5b5;
+        border: 1px solid #deca7e;
+    }
+
+    .hastip {
+        cursor: help;
+        text-decoration: underline;
+    }
+
+    .colorbox {
+      display: inline-block;
+      padding: 2px;
+      color: white;
+    }
+    .color1 {
+      background: #37BC9B;
+    }
+
+    .color2 {
+      background: #D770AD;
+    }
+
+    .color3 {
+      background: #4A89DC;
+    }
+
+    .color4 {
+        background: #FFCE64;
+    }
+
+    .color5 {
+        background: #FC6E51;
+    }
+
+    .color6 {
+        background: #4DCBD2;
+    }
+
+    .resultTable td {
+        border-bottom: 1px solid #ccc;
+        padding: 5px;
+    }
+
+    .resultTable tr:hover {
+        background: #e3f3ff;
+    }
+  </style>
+
+  <apex:form >
+    <apex:pageBlock Title="Tankkarten Sparkalkulator Parameters">
+
+  <table border="0" style="font-color:#FF9966;">
+      <tr>
+          <th> <!-- parameter --></th>
+          <th> <!-- value --></th>
+      </tr>
+      <tr>
+  <!-- <apex:InputText value="{!Opportunity.Name}"/> -->
+  <th>
+  <apex:outputLabel value="{!$ObjectType['Opportunity'].fields['Name'].Label}"/>:</th><th>{!Opportunity.Name}
+  </th>
+  </tr><tr>
+  <p/>
+  <th>
+  <span class="colorbox color1">&nbsp;&nbsp;&nbsp;</span>&nbsp;<apex:outputLabel value="{!$ObjectType['Opportunity'].fields['Anzahl_der_Karten__c'].Label}"/>:</th><th>
+      <apex:InputField value="{!Opportunity.Anzahl_der_Karten__c}" required="false" id="karten">
+          <apex:actionSupport event="onkeyup" reRender="results"/>
+      </apex:InputField>
+  </th>
+  </tr><tr>
+  <p/>
+  <!-- 
+  Volume (annual):
+      <apex:InputText value="{!Opportunity.Estimated_Start_Volume__c}" required="false"/>
+      <p/>
+  -->
+  <th>
+  <span class="colorbox color2">&nbsp;&nbsp;&nbsp;</span>&nbsp;<apex:outputLabel value="{!$ObjectType['Opportunity'].fields['Kraftstoffverbrauch_Liter_Monat__c'].Label}"/>:</th><th>
+      <apex:InputField value="{!Opportunity.Kraftstoffverbrauch_Liter_Monat__c}" required="false">
+          <apex:actionSupport event="onkeyup" reRender="results"/>
+      </apex:InputField>
+  </th>
+  </tr>
+    <p/>
+    <tr>
+    <th>
+  <span class="colorbox color3">&nbsp;&nbsp;&nbsp;</span>&nbsp;Angebotsdauer in Monate:</th><th> 
+      <apex:InputText value="{! angebotsdauer }" required="false">
+          <apex:actionSupport event="onkeyup" reRender="results"/>
+      </apex:InputText>
+      </th>
+      </tr>
+    <p/>
+    <tr>
+    <th>
+    <apex:outputLabel value="{!$ObjectType['Opportunity'].fields['Derzeitige_Zahlungsmethode__c'].Label}"/>:</th><th>
+    <!-- <apex:selectList id="fuelpaymentmethod" multiselect="false" value="{!Opportunity.Derzeitige_Zahlungsmethode__c}"/> -->
+    <apex:inputField id="fuelpaymentmethod" value="{!Opportunity.Derzeitige_Zahlungsmethode__c}">
+          <apex:actionSupport event="onchange" reRender="results"/>
+      </apex:inputField>
+          </th>
+      </tr>
+    <p/>
+    </table>
+    </apex:pageBlock>
+    
+    <apex:pageBlock title="Results" id="results">
+    <table border="0" width="100%" class="resultTable" cellpadding="0" cellspacing="0">
+    <tr>
+        <td width="300px">
+            <span class="colorbox color4">&nbsp;&nbsp;&nbsp;</span>&nbsp;Erwarteter Gewinn durch Kontrolle:
+        </td>
+        <td>
+            <apex:outputText id="controleffect" value="{! IF(Opportunity.Derzeitige_Zahlungsmethode__c != "Tankkarte", ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0), 0) }"/> Euro / Monat
+        </td>
+        <td>
+            <span class="colorbox color2"><apex:outputLabel value="{! Opportunity.Kraftstoffverbrauch_Liter_Monat__c }"/></span> * 0.05 * 1.2 [Derzeitige Zahlungsmethode NOT Tankkarte]
+        </td>
+      </tr>
+    <tr>
+        <td>
+            <span class="colorbox color5">&nbsp;&nbsp;&nbsp;</span>&nbsp;Erwarteter Gewinn durch Rabatt:
+        </td>
+        <td>
+            <apex:outputText id="discounteffect" value="{! ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0) }"/> Euro / Monat
+        </td>
+        <td>
+            <span class="colorbox color2"><apex:outputLabel value="{! Opportunity.Kraftstoffverbrauch_Liter_Monat__c }"/></span> * 0.05 * 1.2
+        </td>
+    </tr>
+    
+    <tr>
+        <td>
+            <span class="colorbox color6">&nbsp;&nbsp;&nbsp;</span>&nbsp;Kartengebühr NACH Angebotsphase:
+        </td>
+        <td>
+            <apex:outputText id="total" value="{0, number, 0.00}">
+                <apex:param value="{! Opportunity.Anzahl_der_Karten__c * 3.95 }"/>
+            </apex:outputText> Euro / Monat
+        </td>
+        <td>
+          <span class="colorbox color1">{! Opportunity.Anzahl_der_Karten__c }</span> * 3.95
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Erwarteter Gewinn Angebotsdauer:</strong>
+        </td>
+        <td>
+            <apex:outputText id="total_angebot" value="{0, number, 0.00}">
+            <apex:param value="{! IF(Opportunity.Derzeitige_Zahlungsmethode__c != "Tankkarte", ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0), 0) + 
+            ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0) }"/>
+            </apex:outputText> Euro / Monat
+        </td>
+        <td>
+          <span class="colorbox color4" style="color: black;"><apex:outputText value="{! IF(Opportunity.Derzeitige_Zahlungsmethode__c != "Tankkarte", ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0), 0) }"/></span> + <span class="colorbox color5"><apex:outputText value="{! ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0) }"/></span>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <strong>Erwarteter Gewinn insgesamt:</strong>
+        </td>
+        <td>
+            <apex:outputText id="total_angebot_annual" value="{0, number, 0.00}">
+            <apex:param value="{! IF(Opportunity.Derzeitige_Zahlungsmethode__c != "Tankkarte", ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0), 0) * 12 + 
+            ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0) * angebotsdauer- 
+            Opportunity.Anzahl_der_Karten__c * 3.95 * (12 - angebotsdauer) }"/>
+            </apex:outputText>
+            Brutto Euro / Jahr
+        </td>
+        <td>
+          <span class="colorbox color4" style="color: black;"><apex:outputText value="{! IF(Opportunity.Derzeitige_Zahlungsmethode__c != "Tankkarte", ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0), 0) }"/></span> * 12 + <span class="colorbox color5"><apex:outputText value="{! ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0) }"/></span> * <span class="colorbox color1">{! Opportunity.Anzahl_der_Karten__c }</span> - <span class="colorbox color6"><apex:outputText value="{0, number, 0.00}"><apex:param value="{! Opportunity.Anzahl_der_Karten__c * 3.95 }"/></apex:outputText></span> * (12 - <span class="colorbox color3">{! angebotsdauer }</span>)
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <strong>Erwarteter Gewinn insgesamt (Netto):</strong>
+        </td>
+        <td>
+          <apex:outputText id="total_angebot_annual_net" value="{0, number, 0.00}">
+              <apex:param value="{! (IF(Opportunity.Derzeitige_Zahlungsmethode__c != "Tankkarte", ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0), 0) * 12 + 
+              ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0) * angebotsdauer- 
+              Opportunity.Anzahl_der_Karten__c * 3.95 * (12 - angebotsdauer))/1.19 }"/>
+          </apex:outputText>
+        Netto Euro / Jahr
+        </td>
+        <td>
+          (<span class="colorbox color4" style="color: black;"><apex:outputText value="{! IF(Opportunity.Derzeitige_Zahlungsmethode__c != "Tankkarte", ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0), 0) }"/></span> * 12 + <span class="colorbox color5"><apex:outputText value="{! ROUND(Opportunity.Kraftstoffverbrauch_Liter_Monat__c * 0.05 * 1.20, 0) }"/></span> * <span class="colorbox color1">{! Opportunity.Anzahl_der_Karten__c }</span> - <span class="colorbox color6"><apex:outputText value="{0, number, 0.00}"><apex:param value="{! Opportunity.Anzahl_der_Karten__c * 3.95 }"/></apex:outputText></span> * (12 - <span class="colorbox color3">{! angebotsdauer }</span>))/1.19
+        </td>
+      </tr>
+    </table>
+    </apex:pageBlock>
+  </apex:form>
+
+ 
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

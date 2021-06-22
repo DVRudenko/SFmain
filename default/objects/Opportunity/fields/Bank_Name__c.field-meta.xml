@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank_Name__c</fullName>
+    <description>Connected to Bank Country and Bank Code.</description>
+    <externalId>false</externalId>
+    <label>Bank Name</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Bank_Code__c</controllingField>
+        <restricted>false</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Komerční banka, a.s.</fullName>
+                <default>false</default>
+                <label>Komerční banka, a.s.</label>
+            </value>
+            <value>
+                <fullName>Československá obchodní banka, a. s.</fullName>
+                <default>false</default>
+                <label>Československá obchodní banka, a. s.</label>
+            </value>
+            <value>
+                <fullName>MONETA Money Bank, a.s.</fullName>
+                <default>false</default>
+                <label>MONETA Money Bank, a.s.</label>
+            </value>
+            <value>
+                <fullName>ČESKÁ NÁRODNÍ BANKA</fullName>
+                <default>false</default>
+                <label>ČESKÁ NÁRODNÍ BANKA</label>
+            </value>
+            <value>
+                <fullName>Česká spořitelna</fullName>
+                <default>false</default>
+                <label>Česká spořitelna</label>
+            </value>
+            <value>
+                <fullName>Fio banka</fullName>
+                <default>false</default>
+                <label>Fio banka</label>
+            </value>
+            <value>
+                <fullName>MUFG Bank (Europe) N.V. Prague Branch</fullName>
+                <default>false</default>
+                <label>MUFG Bank (Europe) N.V. Prague Branch</label>
+            </value>
+            <value>
+                <fullName>Československé úvěrní družstvo</fullName>
+                <default>false</default>
+                <label>Československé úvěrní družstvo</label>
+            </value>
+            <value>
+                <fullName>Citfin</fullName>
+                <default>false</default>
+                <label>Citfin</label>
+            </value>
+            <value>
+                <fullName>TRINITY BANK a.s.</fullName>
+                <default>false</default>
+                <label>TRINITY BANK a.s.</label>
+            </value>
+            <value>
+                <fullName>Hypoteční banka</fullName>
+                <default>false</default>
+                <label>Hypoteční banka</label>
+            </value>
+            <value>
+                <fullName>Peněžní dům</fullName>
+                <default>false</default>
+                <label>Peněžní dům</label>
+            </value>
+            <value>
+                <fullName>Artesa</fullName>
+                <default>false</default>
+                <label>Artesa</label>
+            </value>
+            <value>
+                <fullName>Poštová banka</fullName>
+                <default>false</default>
+                <label>Poštová banka</label>
+            </value>
+            <value>
+                <fullName>Banka CREDITAS a.s.</fullName>
+                <default>false</default>
+                <label>Banka CREDITAS a.s.</label>
+            </value>
+            <value>
+                <fullName>NEY spořitelní družstvo</fullName>
+                <default>false</default>
+                <label>NEY spořitelní družstvo</label>
+            </value>
+            <value>
+                <fullName>Podnikatelská družstevní záložna</fullName>
+                <default>false</default>
+                <label>Podnikatelská družstevní záložna</label>
+            </value>
+            <value>
+                <fullName>Citibank Europe plc</fullName>
+                <default>false</default>
+                <label>Citibank Europe plc</label>
+            </value>
+            <value>
+                <fullName>UniCredit Bank Czech Republic and Slovakia</fullName>
+                <default>false</default>
+                <label>UniCredit Bank Czech Republic and Slovakia</label>
+            </value>
+            <value>
+                <fullName>Air Bank a.s.</fullName>
+                <default>false</default>
+                <label>Air Bank a.s.</label>
+            </value>
+            <value>
+                <fullName>BNP Paribas Personal Finance SA</fullName>
+                <default>false</default>
+                <label>BNP Paribas Personal Finance SA</label>
+            </value>
+            <value>
+                <fullName>PKO BP S.A.</fullName>
+                <default>false</default>
+                <label>PKO BP S.A.</label>
+            </value>
+            <value>
+                <fullName>ING Bank N.V.</fullName>
+                <default>false</default>
+                <label>ING Bank N.V.</label>
+            </value>
+            <value>
+                <fullName>Expobank CZ a.s.</fullName>
+                <default>false</default>
+                <label>Expobank CZ a.s.</label>
+            </value>
+            <value>
+                <fullName>Českomoravská záruční a rozvojová banka</fullName>
+                <default>false</default>
+                <label>Českomoravská záruční a rozvojová banka</label>
+            </value>
+            <value>
+                <fullName>Raiffeisenbank a.s.</fullName>
+                <default>false</default>
+                <label>Raiffeisenbank a.s.</label>
+            </value>
+            <value>
+                <fullName>J &amp; T BANKA</fullName>
+                <default>false</default>
+                <label>J &amp; T BANKA</label>
+            </value>
+            <value>
+                <fullName>PPF banka a.s.</fullName>
+                <default>false</default>
+                <label>PPF banka a.s.</label>
+            </value>
+            <value>
+                <fullName>Equa bank a.s.</fullName>
+                <default>false</default>
+                <label>Equa bank a.s.</label>
+            </value>
+            <value>
+                <fullName>COMMERZBANK Aktiengesellschaft</fullName>
+                <default>false</default>
+                <label>COMMERZBANK Aktiengesellschaft</label>
+            </value>
+            <value>
+                <fullName>mBank S.A.</fullName>
+                <default>false</default>
+                <label>mBank S.A.</label>
+            </value>
+            <value>
+                <fullName>BNP Paribas S.A.</fullName>
+                <default>false</default>
+                <label>BNP Paribas S.A.</label>
+            </value>
+            <value>
+                <fullName>Všeobecná úverová banka a.s.</fullName>
+                <default>false</default>
+                <label>Všeobecná úverová banka a.s.</label>
+            </value>
+            <value>
+                <fullName>Sberbank CZ</fullName>
+                <default>false</default>
+                <label>Sberbank CZ</label>
+            </value>
+            <value>
+                <fullName>Deutsche Bank Aktiengesellschaft Filiale Prag</fullName>
+                <default>false</default>
+                <label>Deutsche Bank Aktiengesellschaft Filiale Prag</label>
+            </value>
+            <value>
+                <fullName>Waldviertler Sparkasse Bank AG</fullName>
+                <default>false</default>
+                <label>Waldviertler Sparkasse Bank AG</label>
+            </value>
+            <value>
+                <fullName>Raiffeisen stavební spořitelna a.s.</fullName>
+                <default>false</default>
+                <label>Raiffeisen stavební spořitelna a.s.</label>
+            </value>
+            <value>
+                <fullName>ČSOB Stavební spořitelna</fullName>
+                <default>false</default>
+                <label>ČSOB Stavební spořitelna</label>
+            </value>
+            <value>
+                <fullName>MONETA Stavební Spořitelna</fullName>
+                <default>false</default>
+                <label>MONETA Stavební Spořitelna</label>
+            </value>
+            <value>
+                <fullName>MONETA Money Bank</fullName>
+                <default>false</default>
+                <label>MONETA Money Bank</label>
+            </value>
+            <value>
+                <fullName>Modrá pyramida stavební spořitelna</fullName>
+                <default>false</default>
+                <label>Modrá pyramida stavební spořitelna</label>
+            </value>
+            <value>
+                <fullName>Volksbank Raiffeisenbank Nordoberpfalz eG pobočka Cheb</fullName>
+                <default>false</default>
+                <label>Volksbank Raiffeisenbank Nordoberpfalz eG pobočka Cheb</label>
+            </value>
+            <value>
+                <fullName>Oberbank AG pobočka Česká republika</fullName>
+                <default>false</default>
+                <label>Oberbank AG pobočka Česká republika</label>
+            </value>
+            <value>
+                <fullName>Stavební spořitelna České spořitelny</fullName>
+                <default>false</default>
+                <label>Stavební spořitelna České spořitelny</label>
+            </value>
+            <value>
+                <fullName>Česká exportní banka</fullName>
+                <default>false</default>
+                <label>Česká exportní banka</label>
+            </value>
+            <value>
+                <fullName>HSBC Continental Europe</fullName>
+                <default>false</default>
+                <label>HSBC Continental Europe</label>
+            </value>
+            <value>
+                <fullName>Sparkasse Oberlausitz-Niederschlesien</fullName>
+                <default>false</default>
+                <label>Sparkasse Oberlausitz-Niederschlesien</label>
+            </value>
+            <value>
+                <fullName>FAS finance company s.r.o.</fullName>
+                <default>false</default>
+                <label>FAS finance company s.r.o.</label>
+            </value>
+            <value>
+                <fullName>MoneyPolo Europe s.r.o.</fullName>
+                <default>false</default>
+                <label>MoneyPolo Europe s.r.o.</label>
+            </value>
+            <value>
+                <fullName>PRIVAT BANK der Raiffeisenlandesbank Oberösterreich Aktiengesellschaft</fullName>
+                <default>false</default>
+                <label>PRIVAT BANK der Raiffeisenlandesbank Oberösterreich Aktiengesellschaft</label>
+            </value>
+            <value>
+                <fullName>ALTERNATIVE PAYMENT SOLUTIONS</fullName>
+                <default>false</default>
+                <label>ALTERNATIVE PAYMENT SOLUTIONS</label>
+            </value>
+            <value>
+                <fullName>Payment execution s.r.o.</fullName>
+                <default>false</default>
+                <label>Payment execution s.r.o.</label>
+            </value>
+            <value>
+                <fullName>ABAPAY s.r.o.</fullName>
+                <default>false</default>
+                <label>ABAPAY s.r.o.</label>
+            </value>
+            <value>
+                <fullName>Družstevní záložna Kredit</fullName>
+                <default>false</default>
+                <label>Družstevní záložna Kredit</label>
+            </value>
+            <value>
+                <fullName>Bank of China (CEE) Ltd. Prague Branch</fullName>
+                <default>false</default>
+                <label>Bank of China (CEE) Ltd. Prague Branch</label>
+            </value>
+            <value>
+                <fullName>Bank of Communications Co.</fullName>
+                <default>false</default>
+                <label>Bank of Communications Co.</label>
+            </value>
+            <value>
+                <fullName>Industrial and Commercial Bank of China Limited</fullName>
+                <default>false</default>
+                <label>Industrial and Commercial Bank of China Limited</label>
+            </value>
+            <value>
+                <fullName>Fairplay Pay s.r.o.</fullName>
+                <default>false</default>
+                <label>Fairplay Pay s.r.o.</label>
+            </value>
+            <value>
+                <fullName>VIVA PAYMENT SERVICES S.A. odštěpný závod</fullName>
+                <default>false</default>
+                <label>VIVA PAYMENT SERVICES S.A. odštěpný závod</label>
+            </value>
+            <value>
+                <fullName>B-Efekt a.s.</fullName>
+                <default>false</default>
+                <label>B-Efekt a.s.</label>
+            </value>
+            <value>
+                <fullName>Qpay s.r.o.</fullName>
+                <default>false</default>
+                <label>Qpay s.r.o.</label>
+            </value>
+            <value>
+                <fullName>Mercurius partners s.r.o.</fullName>
+                <default>false</default>
+                <label>Mercurius partners s.r.o.</label>
+            </value>
+            <value>
+                <fullName>GrisPayUnion s.r.o.</fullName>
+                <default>false</default>
+                <label>GrisPayUnion s.r.o.</label>
+            </value>
+            <value>
+                <fullName>Slovenská sporiteľňa</fullName>
+                <default>false</default>
+                <label>Slovenská sporiteľňa</label>
+            </value>
+            <value>
+                <fullName>Národná banka Slovenska</fullName>
+                <default>false</default>
+                <label>Národná banka Slovenska</label>
+            </value>
+            <value>
+                <fullName>Tatra banka</fullName>
+                <default>false</default>
+                <label>Tatra banka</label>
+            </value>
+            <value>
+                <fullName>Slovenská záručná a rozvojová banka</fullName>
+                <default>false</default>
+                <label>Slovenská záručná a rozvojová banka</label>
+            </value>
+            <value>
+                <fullName>Prima banka Slovensko</fullName>
+                <default>false</default>
+                <label>Prima banka Slovensko</label>
+            </value>
+            <value>
+                <fullName>OTP Banka Slovensko</fullName>
+                <default>false</default>
+                <label>OTP Banka Slovensko</label>
+            </value>
+            <value>
+                <fullName>Prvá stavebná sporiteľňa</fullName>
+                <default>false</default>
+                <label>Prvá stavebná sporiteľňa</label>
+            </value>
+            <value>
+                <fullName>Československá obchodná banka</fullName>
+                <default>false</default>
+                <label>Československá obchodná banka</label>
+            </value>
+            <value>
+                <fullName>Wustenrot stavebná sporiteľňa</fullName>
+                <default>false</default>
+                <label>Wustenrot stavebná sporiteľňa</label>
+            </value>
+            <value>
+                <fullName>Privatbanka</fullName>
+                <default>false</default>
+                <label>Privatbanka</label>
+            </value>
+            <value>
+                <fullName>ČSOB stavebná sporiteľňa</fullName>
+                <default>false</default>
+                <label>ČSOB stavebná sporiteľňa</label>
+            </value>
+            <value>
+                <fullName>EXIMBANKA SR</fullName>
+                <default>false</default>
+                <label>EXIMBANKA SR</label>
+            </value>
+            <value>
+                <fullName>Štátna pokladnica</fullName>
+                <default>false</default>
+                <label>Štátna pokladnica</label>
+            </value>
+            <value>
+                <fullName>Centrálny depozitár cenných papierov SR</fullName>
+                <default>false</default>
+                <label>Centrálny depozitár cenných papierov SR</label>
+            </value>
+            <value>
+                <fullName>COFIDIS SA</fullName>
+                <default>false</default>
+                <label>COFIDIS SA</label>
+            </value>
+            <value>
+                <fullName>Oberbank AG  pobočka zahraničnej banky v Slovenskej republike</fullName>
+                <default>false</default>
+                <label>Oberbank AG  pobočka zahraničnej banky v Slovenskej republike</label>
+            </value>
+            <value>
+                <fullName>BKS Bank AG</fullName>
+                <default>false</default>
+                <label>BKS Bank AG</label>
+            </value>
+            <value>
+                <fullName>KDB Bank Europe Ltd.</fullName>
+                <default>false</default>
+                <label>KDB Bank Europe Ltd.</label>
+            </value>
+            <value>
+                <fullName>SIA Central Europe</fullName>
+                <default>false</default>
+                <label>SIA Central Europe</label>
+            </value>
+            <value>
+                <fullName>Trust Pay</fullName>
+                <default>false</default>
+                <label>Trust Pay</label>
+            </value>
+            <value>
+                <fullName>Payment Institution NFD a.s.</fullName>
+                <default>false</default>
+                <label>Payment Institution NFD a.s.</label>
+            </value>
+            <value>
+                <fullName>K-PAY a.s.</fullName>
+                <default>false</default>
+                <label>K-PAY a.s.</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>8330</controllingFieldValue>
+            <controllingFieldValue>2010</controllingFieldValue>
+            <valueName>Fio banka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8360</controllingFieldValue>
+            <controllingFieldValue>6210</controllingFieldValue>
+            <valueName>mBank S.A.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8370</controllingFieldValue>
+            <valueName>Oberbank AG  pobočka zahraničnej banky v Slovenskej republike</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8390</controllingFieldValue>
+            <controllingFieldValue>2030</controllingFieldValue>
+            <valueName>Československé úvěrní družstvo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8420</controllingFieldValue>
+            <valueName>BKS Bank AG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8430</controllingFieldValue>
+            <valueName>KDB Bank Europe Ltd.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>9950</controllingFieldValue>
+            <valueName>SIA Central Europe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>9952</controllingFieldValue>
+            <valueName>Trust Pay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>9953</controllingFieldValue>
+            <valueName>Payment Institution NFD a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8440</controllingFieldValue>
+            <controllingFieldValue>3050</controllingFieldValue>
+            <valueName>BNP Paribas Personal Finance SA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2070</controllingFieldValue>
+            <valueName>TRINITY BANK a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8450</controllingFieldValue>
+            <controllingFieldValue>3060</controllingFieldValue>
+            <valueName>PKO BP S.A.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2100</controllingFieldValue>
+            <valueName>Hypoteční banka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>9954</controllingFieldValue>
+            <valueName>K-PAY a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2200</controllingFieldValue>
+            <valueName>Peněžní dům</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2220</controllingFieldValue>
+            <valueName>Artesa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2240</controllingFieldValue>
+            <controllingFieldValue>6500</controllingFieldValue>
+            <valueName>Poštová banka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2250</controllingFieldValue>
+            <valueName>Banka CREDITAS a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2260</controllingFieldValue>
+            <valueName>NEY spořitelní družstvo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2275</controllingFieldValue>
+            <valueName>Podnikatelská družstevní záložna</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2600</controllingFieldValue>
+            <controllingFieldValue>8130</controllingFieldValue>
+            <valueName>Citibank Europe plc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2700</controllingFieldValue>
+            <controllingFieldValue>1111</controllingFieldValue>
+            <valueName>UniCredit Bank Czech Republic and Slovakia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0100</controllingFieldValue>
+            <controllingFieldValue>8100</controllingFieldValue>
+            <valueName>Komerční banka, a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0300</controllingFieldValue>
+            <valueName>Československá obchodní banka, a. s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0600</controllingFieldValue>
+            <valueName>MONETA Money Bank, a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0710</controllingFieldValue>
+            <valueName>ČESKÁ NÁRODNÍ BANKA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0800</controllingFieldValue>
+            <valueName>Česká spořitelna</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2020</controllingFieldValue>
+            <valueName>MUFG Bank (Europe) N.V. Prague Branch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2060</controllingFieldValue>
+            <valueName>Citfin</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3030</controllingFieldValue>
+            <valueName>Air Bank a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3500</controllingFieldValue>
+            <controllingFieldValue>7300</controllingFieldValue>
+            <valueName>ING Bank N.V.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>4000</controllingFieldValue>
+            <valueName>Expobank CZ a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>4300</controllingFieldValue>
+            <valueName>Českomoravská záruční a rozvojová banka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>5500</controllingFieldValue>
+            <valueName>Raiffeisenbank a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>5800</controllingFieldValue>
+            <controllingFieldValue>8320</controllingFieldValue>
+            <valueName>J &amp; T BANKA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>6000</controllingFieldValue>
+            <valueName>PPF banka a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>6100</controllingFieldValue>
+            <valueName>Equa bank a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>6200</controllingFieldValue>
+            <controllingFieldValue>8050</controllingFieldValue>
+            <valueName>COMMERZBANK Aktiengesellschaft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>6300</controllingFieldValue>
+            <valueName>BNP Paribas S.A.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>6700</controllingFieldValue>
+            <controllingFieldValue>200</controllingFieldValue>
+            <valueName>Všeobecná úverová banka a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>6800</controllingFieldValue>
+            <valueName>Sberbank CZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7910</controllingFieldValue>
+            <valueName>Deutsche Bank Aktiengesellschaft Filiale Prag</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7940</controllingFieldValue>
+            <valueName>Waldviertler Sparkasse Bank AG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7950</controllingFieldValue>
+            <valueName>Raiffeisen stavební spořitelna a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7960</controllingFieldValue>
+            <valueName>ČSOB Stavební spořitelna</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7970</controllingFieldValue>
+            <valueName>MONETA Stavební Spořitelna</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7980</controllingFieldValue>
+            <valueName>MONETA Money Bank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7990</controllingFieldValue>
+            <valueName>Modrá pyramida stavební spořitelna</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8030</controllingFieldValue>
+            <valueName>Volksbank Raiffeisenbank Nordoberpfalz eG pobočka Cheb</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8040</controllingFieldValue>
+            <valueName>Oberbank AG pobočka Česká republika</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8060</controllingFieldValue>
+            <valueName>Stavební spořitelna České spořitelny</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8090</controllingFieldValue>
+            <valueName>Česká exportní banka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8150</controllingFieldValue>
+            <valueName>HSBC Continental Europe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8190</controllingFieldValue>
+            <valueName>Sparkasse Oberlausitz-Niederschlesien</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8198</controllingFieldValue>
+            <valueName>FAS finance company s.r.o.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8199</controllingFieldValue>
+            <valueName>MoneyPolo Europe s.r.o.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8200</controllingFieldValue>
+            <valueName>PRIVAT BANK der Raiffeisenlandesbank Oberösterreich Aktiengesellschaft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8215</controllingFieldValue>
+            <valueName>ALTERNATIVE PAYMENT SOLUTIONS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8220</controllingFieldValue>
+            <valueName>Payment execution s.r.o.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8230</controllingFieldValue>
+            <valueName>ABAPAY s.r.o.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8240</controllingFieldValue>
+            <valueName>Družstevní záložna Kredit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8250</controllingFieldValue>
+            <valueName>Bank of China (CEE) Ltd. Prague Branch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8255</controllingFieldValue>
+            <valueName>Bank of Communications Co.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8265</controllingFieldValue>
+            <valueName>Industrial and Commercial Bank of China Limited</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8270</controllingFieldValue>
+            <valueName>Fairplay Pay s.r.o.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8272</controllingFieldValue>
+            <valueName>VIVA PAYMENT SERVICES S.A. odštěpný závod</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8280</controllingFieldValue>
+            <valueName>B-Efekt a.s.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8283</controllingFieldValue>
+            <valueName>Qpay s.r.o.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8293</controllingFieldValue>
+            <valueName>Mercurius partners s.r.o.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8294</controllingFieldValue>
+            <valueName>GrisPayUnion s.r.o.</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>900</controllingFieldValue>
+            <valueName>Slovenská sporiteľňa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>720</controllingFieldValue>
+            <valueName>Národná banka Slovenska</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>1100</controllingFieldValue>
+            <valueName>Tatra banka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3000</controllingFieldValue>
+            <valueName>Slovenská záručná a rozvojová banka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>3100</controllingFieldValue>
+            <controllingFieldValue>5600</controllingFieldValue>
+            <valueName>Prima banka Slovensko</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>5200</controllingFieldValue>
+            <valueName>OTP Banka Slovensko</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>5900</controllingFieldValue>
+            <valueName>Prvá stavebná sporiteľňa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7500</controllingFieldValue>
+            <valueName>Československá obchodná banka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>7930</controllingFieldValue>
+            <valueName>Wustenrot stavebná sporiteľňa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8120</controllingFieldValue>
+            <valueName>Privatbanka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8170</controllingFieldValue>
+            <valueName>ČSOB stavebná sporiteľňa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8160</controllingFieldValue>
+            <valueName>EXIMBANKA SR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8180</controllingFieldValue>
+            <valueName>Štátna pokladnica</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8191</controllingFieldValue>
+            <valueName>Centrálny depozitár cenných papierov SR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>8400</controllingFieldValue>
+            <valueName>COFIDIS SA</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

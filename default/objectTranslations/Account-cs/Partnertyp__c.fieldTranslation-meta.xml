@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Partnertyp --></label>
+    <name>Partnertyp__c</name>
+    <picklistValues>
+        <masterLabel>Dealer</masterLabel>
+        <translation><!-- Dealer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lotos partner</masterLabel>
+        <translation><!-- Lotos partner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Markenpartner</masterLabel>
+        <translation><!-- Markenpartner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing Partner</masterLabel>
+        <translation><!-- Marketing Partner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retailer</masterLabel>
+        <translation><!-- Retailer --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

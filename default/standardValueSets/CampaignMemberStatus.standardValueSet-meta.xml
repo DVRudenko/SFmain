@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Geantwortet</fullName>
+        <default>false</default>
+        <label>Geantwortet</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Gesendet</fullName>
+        <default>false</default>
+        <label>Gesendet</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Keine Antwort</fullName>
+        <default>false</default>
+        <label>Keine Antwort</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Responded</fullName>
+        <default>false</default>
+        <label>Responded</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sent</fullName>
+        <default>false</default>
+        <label>Sent</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Отправлено</fullName>
+        <default>false</default>
+        <label>Отправлено</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Получен ответ</fullName>
+        <default>false</default>
+        <label>Получен ответ</label>
+    </standardValue>
+</StandardValueSet>

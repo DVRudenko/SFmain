@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Longest time in seconds the agent spent in a single state --></help>
+    <label><!-- Longest State Time --></label>
+    <name>NVMStatsSF__Longest_State__c</name>
+</CustomFieldTranslation>

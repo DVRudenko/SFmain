@@ -1,0 +1,29 @@
+<apex:page standardController="Account" extensions="DuplicatesAccountsController" action="{! init }" lightningStylesheets="true">
+	<apex:pageBlock title="{! currentAccount.Name }">
+		<apex:pageMessages />
+		<apex:pageBlockButtons location="bottom">
+			<apex:outputLink style="color: black; text-decoration: none;" styleClass="btn" value="/{! currentAccount.Id }">Back to Account</apex:outputLink>
+		</apex:pageBlockButtons>
+		<apex:pageBlockSection >
+			<apex:pageBlockSectionItem >
+				<apex:outputLabel value="Name"/>
+				<div>
+					{! currentAccount.Name }
+				</div>
+			</apex:pageBlockSectionItem>
+			<apex:outputField value="{! currentAccount.Steuernummer__c }"/>
+			<apex:outputField value="{! currentAccount.Umsatzsteuer_ID__c }"/>
+		</apex:pageBlockSection>
+		<h2>Duplicates</h2>
+		<apex:outputPanel layout="block" rendered="{! finalDupesAccountsList.size == 0 }">
+			No duplicates in Accounts.
+		</apex:outputPanel>
+		<apex:pageBlockTable value="{! finalDupesAccountsList }" var="dup" rendered="{! finalDupesAccountsList.size > 0 }">
+			<apex:column headerValue="Name">
+				<a href="/{! dup.Id }" target="_blank">{! dup.Name }</a>
+			</apex:column>
+			<apex:column value="{! dup.Steuernummer__c }"/>
+			<apex:column value="{! dup.Umsatzsteuer_ID__c }"/>
+		</apex:pageBlockTable>
+	</apex:pageBlock>
+</apex:page>

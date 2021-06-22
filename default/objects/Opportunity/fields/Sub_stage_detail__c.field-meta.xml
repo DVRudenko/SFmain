@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_stage_detail__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub-stage detail</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Gruende_verloren__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Already Customer</fullName>
+                <default>false</default>
+                <label>Already Customer</label>
+            </value>
+            <value>
+                <fullName>Already in Pipeline</fullName>
+                <default>false</default>
+                <label>Already in Pipeline</label>
+            </value>
+            <value>
+                <fullName>Cash withdrawals</fullName>
+                <default>false</default>
+                <label>Cash withdrawals</label>
+            </value>
+            <value>
+                <fullName>CCS</fullName>
+                <default>false</default>
+                <label>CCS</label>
+            </value>
+            <value>
+                <fullName>Company ceased to exist</fullName>
+                <default>false</default>
+                <label>Company ceased to exist</label>
+            </value>
+            <value>
+                <fullName>Coverage/Acceptance international</fullName>
+                <default>false</default>
+                <label>Coverage/Acceptance international</label>
+            </value>
+            <value>
+                <fullName>Blacklist</fullName>
+                <default>false</default>
+                <label>Blacklist</label>
+            </value>
+            <value>
+                <fullName>Customer not reached</fullName>
+                <default>false</default>
+                <label>Customer not reached</label>
+            </value>
+            <value>
+                <fullName>Brand</fullName>
+                <default>false</default>
+                <label>Brand</label>
+            </value>
+            <value>
+                <fullName>High fees</fullName>
+                <default>false</default>
+                <label>High fees</label>
+            </value>
+            <value>
+                <fullName>Insufficient limit</fullName>
+                <default>false</default>
+                <label>Insufficient limit</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>Lodging/Accomodation</fullName>
+                <default>false</default>
+                <label>Lodging/Accomodation</label>
+            </value>
+            <value>
+                <fullName>Long term contract</fullName>
+                <default>false</default>
+                <label>Long term contract</label>
+            </value>
+            <value>
+                <fullName>Low discount</fullName>
+                <default>false</default>
+                <label>Low discount</label>
+            </value>
+            <value>
+                <fullName>Lost to competiton</fullName>
+                <default>false</default>
+                <label>Lost to competiton</label>
+            </value>
+            <value>
+                <fullName>Loyalty program</fullName>
+                <default>false</default>
+                <label>Loyalty program</label>
+            </value>
+            <value>
+                <fullName>Network</fullName>
+                <default>false</default>
+                <label>Network</label>
+            </value>
+            <value>
+                <fullName>National</fullName>
+                <default>false</default>
+                <label>National</label>
+            </value>
+            <value>
+                <fullName>Payment terms</fullName>
+                <default>false</default>
+                <label>Payment terms</label>
+            </value>
+            <value>
+                <fullName>Potential fraud</fullName>
+                <default>false</default>
+                <label>Potential fraud</label>
+            </value>
+            <value>
+                <fullName>Refused Credit</fullName>
+                <default>false</default>
+                <label>Refused Credit</label>
+            </value>
+            <value>
+                <fullName>Refused DD</fullName>
+                <default>false</default>
+                <label>Refused DD</label>
+            </value>
+            <value>
+                <fullName>Rejection of T&amp;Cs</fullName>
+                <default>false</default>
+                <label>Rejection of T&amp;Cs</label>
+            </value>
+            <value>
+                <fullName>Restaurants</fullName>
+                <default>false</default>
+                <label>Restaurants</label>
+            </value>
+            <value>
+                <fullName>Retail/Wholesale</fullName>
+                <default>false</default>
+                <label>Retail/Wholesale</label>
+            </value>
+            <value>
+                <fullName>Security/Deposit</fullName>
+                <default>false</default>
+                <label>Security/Deposit</label>
+            </value>
+            <value>
+                <fullName>Shell</fullName>
+                <default>false</default>
+                <label>Shell</label>
+            </value>
+            <value>
+                <fullName>Tickets (Air,Train,Ferry)</fullName>
+                <default>false</default>
+                <label>Tickets (Air,Train,Ferry)</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Not a priority</fullName>
+                <default>false</default>
+                <label>Not a priority</label>
+            </value>
+            <value>
+                <fullName>Product features</fullName>
+                <default>false</default>
+                <label>Product features</label>
+            </value>
+            <value>
+                <fullName>Didn´t confirm card order</fullName>
+                <default>false</default>
+                <label>Didn´t confirm card order</label>
+            </value>
+            <value>
+                <fullName>No vehicles</fullName>
+                <default>false</default>
+                <label>No vehicles</label>
+            </value>
+            <value>
+                <fullName>Not a legal entity</fullName>
+                <default>false</default>
+                <label>Not a legal entity</label>
+            </value>
+            <value>
+                <fullName>Refused to talk</fullName>
+                <default>false</default>
+                <label>Refused to talk</label>
+            </value>
+            <value>
+                <fullName>Sent to Customer Service</fullName>
+                <default>false</default>
+                <label>Sent to Customer Service</label>
+            </value>
+            <value>
+                <fullName>Spam</fullName>
+                <default>false</default>
+                <label>Spam</label>
+            </value>
+            <value>
+                <fullName>Wrong contact details</fullName>
+                <default>false</default>
+                <label>Wrong contact details</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Duplicate</controllingFieldValue>
+            <valueName>Already Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Duplicate</controllingFieldValue>
+            <valueName>Already in Pipeline</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brand</controllingFieldValue>
+            <valueName>CCS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Brand</controllingFieldValue>
+            <valueName>Shell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Coverage/Acceptance</controllingFieldValue>
+            <valueName>International</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Coverage/Acceptance</controllingFieldValue>
+            <valueName>National</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial/Credit</controllingFieldValue>
+            <valueName>Insufficient limit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial/Credit</controllingFieldValue>
+            <valueName>Payment terms</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial/Credit</controllingFieldValue>
+            <valueName>Refused Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial/Credit</controllingFieldValue>
+            <valueName>Refused DD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial/Credit</controllingFieldValue>
+            <valueName>Rejection of T&amp;Cs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial/Credit</controllingFieldValue>
+            <valueName>Security/Deposit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial/Credit</controllingFieldValue>
+            <valueName>Potential fraud</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to competition</controllingFieldValue>
+            <valueName>High fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to competition</controllingFieldValue>
+            <valueName>Long term contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to competition</controllingFieldValue>
+            <valueName>Low discount</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to competition</controllingFieldValue>
+            <controllingFieldValue>Product features</controllingFieldValue>
+            <valueName>Loyalty program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to competition</controllingFieldValue>
+            <valueName>Brand</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to competition</controllingFieldValue>
+            <valueName>Network</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to competition</controllingFieldValue>
+            <valueName>Not a priority</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to competition</controllingFieldValue>
+            <valueName>Product features</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product features</controllingFieldValue>
+            <valueName>Cash withdrawals</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product features</controllingFieldValue>
+            <valueName>Lodging/Accomodation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product features</controllingFieldValue>
+            <valueName>Restaurants</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product features</controllingFieldValue>
+            <valueName>Retail/Wholesale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product features</controllingFieldValue>
+            <valueName>Tickets (Air,Train,Ferry)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not a Lead/Opportunity</controllingFieldValue>
+            <valueName>Customer not reached</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not a Lead/Opportunity</controllingFieldValue>
+            <valueName>Blacklist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not a Lead/Opportunity</controllingFieldValue>
+            <valueName>No vehicles</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not a Lead/Opportunity</controllingFieldValue>
+            <valueName>Not a legal entity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not a Lead/Opportunity</controllingFieldValue>
+            <valueName>Refused to talk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not a Lead/Opportunity</controllingFieldValue>
+            <valueName>Spam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not a Lead/Opportunity</controllingFieldValue>
+            <valueName>Wrong contact details</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not a Lead/Opportunity</controllingFieldValue>
+            <valueName>Sent to Customer Service</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

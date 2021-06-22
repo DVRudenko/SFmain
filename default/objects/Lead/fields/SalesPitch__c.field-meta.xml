@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SalesPitch__c</fullName>
+    <externalId>false</externalId>
+    <label>SalesPitch - Level2: Features</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Aktionen oder Rabatte - Alle</fullName>
+                <default>false</default>
+                <label>Aktionen oder Rabatte - Alle</label>
+            </value>
+            <value>
+                <fullName>Aktionen oder Rabatte - Hotel</fullName>
+                <default>false</default>
+                <label>Aktionen oder Rabatte - Hotel</label>
+            </value>
+            <value>
+                <fullName>Aktionen oder Rabatte - Priority Pass</fullName>
+                <default>false</default>
+                <label>Aktionen oder Rabatte - Priority Pass</label>
+            </value>
+            <value>
+                <fullName>Flexibilität - über vorhandenes Konto</fullName>
+                <default>false</default>
+                <label>Flexibilität - über vorhandenes Konto</label>
+            </value>
+            <value>
+                <fullName>Flexibilität - universelle Akzeptanz</fullName>
+                <default>false</default>
+                <label>Flexibilität - universelle Akzeptanz</label>
+            </value>
+            <value>
+                <fullName>Kosten - billiger aktuelles Zahlungsart</fullName>
+                <default>false</default>
+                <label>Kosten - billiger aktuelles Zahlungsart</label>
+            </value>
+            <value>
+                <fullName>Liquidität - gute Zahlungsbedingungen</fullName>
+                <default>false</default>
+                <label>Liquidität - gute Zahlungsbedingungen</label>
+            </value>
+            <value>
+                <fullName>Liquidität - Planungssicherheit</fullName>
+                <default>false</default>
+                <label>Liquidität - Planungssicherheit</label>
+            </value>
+            <value>
+                <fullName>Sicherheit - Online-Shopping Sicherheit</fullName>
+                <default>false</default>
+                <label>Sicherheit - Online-Shopping Sicherheit</label>
+            </value>
+            <value>
+                <fullName>Sicherheit - Schutz vor Betrug</fullName>
+                <default>false</default>
+                <label>Sicherheit - Schutz vor Betrug</label>
+            </value>
+            <value>
+                <fullName>Sicherheit - Sicherer als Bargeld</fullName>
+                <default>false</default>
+                <label>Sicherheit - Sicherer als Bargeld</label>
+            </value>
+            <value>
+                <fullName>Sonstige (bitte angeben!)</fullName>
+                <default>false</default>
+                <label>Sonstige (bitte angeben!)</label>
+            </value>
+            <value>
+                <fullName>T&amp;C - einfache Buchführung/weniger Admin</fullName>
+                <default>false</default>
+                <label>T&amp;C - einfache Buchführung/weniger Admin</label>
+            </value>
+            <value>
+                <fullName>T&amp;C - einstellbare Warengruppen</fullName>
+                <default>false</default>
+                <label>T&amp;C - einstellbare Warengruppen</label>
+            </value>
+            <value>
+                <fullName>T&amp;C - Kartenlimit</fullName>
+                <default>false</default>
+                <label>T&amp;C - Kartenlimit</label>
+            </value>
+            <value>
+                <fullName>T&amp;C - Kontrolle über Ausgaben</fullName>
+                <default>false</default>
+                <label>T&amp;C - Kontrolle über Ausgaben</label>
+            </value>
+            <value>
+                <fullName>zusätzliche Funktion - Versicherung</fullName>
+                <default>false</default>
+                <label>zusätzliche Funktion - Versicherung</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

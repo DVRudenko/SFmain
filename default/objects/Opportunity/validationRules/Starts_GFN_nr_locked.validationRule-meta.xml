@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Starts_GFN_nr_locked</fullName>
+    <active>true</active>
+    <description>When Type = "New GFN", Starts GFN Nr. is locked for certain Profiles on Carnet Record Type.</description>
+    <errorConditionFormula>IF(
+AND(
+RecordType.DeveloperName = "Carnet",
+ISPICKVAL(PRIORVALUE(Type),'New GFN'),
+ISCHANGED(GFN_number_for_starts__c),
+NOT(ISPICKVAL(PRIORVALUE(StageName),'Closed Won')),
+NOT(OR($Profile.Name = "CardProcessing",
+$Profile.Name = "System Administrator",
+$Profile.Name = 'API Only',
+$Profile.Name = "CCS API System Admin",
+$Profile.Name = "CCS System Administrator"))),
+true,
+false)</errorConditionFormula>
+    <errorDisplayField>GFN_number_for_starts__c</errorDisplayField>
+    <errorMessage>If Opp. Type = New GFN, Opportunity Starts: GFN Nr. field must be empty. Card Operations will add it after it is setup in GFN.</errorMessage>
+</ValidationRule>

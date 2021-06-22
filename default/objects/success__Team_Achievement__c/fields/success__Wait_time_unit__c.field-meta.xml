@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Wait_time_unit__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>The unit of time applied to the value entered in &#39;Wait Time&#39;</inlineHelpText>
+    <label>Wait Time Unit</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>seconds</fullName>
+                <default>false</default>
+                <label>seconds</label>
+            </value>
+            <value>
+                <fullName>minutes</fullName>
+                <default>false</default>
+                <label>minutes</label>
+            </value>
+            <value>
+                <fullName>hours</fullName>
+                <default>false</default>
+                <label>hours</label>
+            </value>
+            <value>
+                <fullName>days</fullName>
+                <default>false</default>
+                <label>days</label>
+            </value>
+            <value>
+                <fullName>months</fullName>
+                <default>false</default>
+                <label>months</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

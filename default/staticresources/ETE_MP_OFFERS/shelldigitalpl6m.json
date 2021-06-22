@@ -1,0 +1,101 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "Wait until you receive your Shell cards and PIN numbers by post.",
+                "pl": "Poczekaj, aż pocztą otrzymasz karty Shell i numery PIN."
+            },
+            {
+                "en": "You can now use your card(s) for the first time while refueling at a Shell Station.",
+                "pl": "Teraz możesz skorzystać po raz pierwszy ze swojej karty podczas tankowania na stacji Shell."
+            },
+            {
+                "en": "Your card has now been activated! Enjoy a care-free refueling experience with your Shell fuel cards.",
+                "pl": "Poprzez pierwsze użycie Twoja karta została aktywowana. Ciesz się tankowaniem dzięki kartom paliwowym Shell."
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Discount at Shell sites in PL for the first 6 months",
+                    "pl": "Zniżka na stacjach Shell w Polsce przez 6 miesięcy"
+                },
+                "value": {
+                    "en": "10 GR brutto/liter",
+                    "pl": "10 gr brutto/litr"
+                }
+            },
+            {
+                "label": {
+                    "en": "Carwash discount at Shell stations in Poland",
+                    "pl": "Zniżka na myjnie na stacjach Shell w Polsce"
+                },
+                "value": {
+                    "en": "10%",
+                    "pl": "10%"
+                }
+            },
+            {
+                "label": {
+                    "en": "Monthly card fee",
+                    "pl": "Miesięczna opłata za kartę"
+                },
+                "value": {
+                    "en": "FREE",
+                    "pl": "NIEPOBIERANA"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "Shell Digital PL (6 month)"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "SHELL FUEL CARD",
+            "pl": "Karta paliwowa Shell"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/shell_promo.png"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "Fuel card with 10 gr discount per liter at all Shell stations in Poland available exclusively for online orders. Discover even more benefits: effective fuel management for your fleet, simple and clear administration and a wide range of services.",
+            "pl": "Dostępna przy zamówieniu online, karta paliwowa ze zniżką 10 gr na paliwo na wszystkich stacjach Shell w Polsce.  Odkryj jeszcze więcej korzyści: efektywne zarządzanie flotą, proste zasady oraz  szeroki wachlarz usług."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "SHELL CARD - Limited online offer",
+            "pl": "SHELL CARD - Ograniczona w czasie oferta online"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "SHELL CARD - Limited online offer",
+            "pl": "SHELL CARD - Ograniczona w czasie oferta online"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "Karta Shell",
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "1",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "monthlyFuelConsumption_max": "5000",
+            "monthlyFuelConsumption_min": "50",
+            "showEuroLocatorTab": false,
+            "euroLocatorProductNumber": "4",
+            "order": 2
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Poland": "/resource/ETE_DOCUMENTS_1/tariffSheets_shelldigitalpl6m.jpg"
+    }
+}

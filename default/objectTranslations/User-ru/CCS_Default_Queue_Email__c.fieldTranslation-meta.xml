@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Displays default queue email address which is usually CCS Service Agents worked with. --></help>
+    <label><!-- CCS Default Queue Email --></label>
+    <name>CCS_Default_Queue_Email__c</name>
+    <picklistValues>
+        <masterLabel>bonus@ccs.cz</masterLabel>
+        <translation><!-- bonus@ccs.cz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>eurotoll@ccs.cz</masterLabel>
+        <translation><!-- eurotoll@ccs.cz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>kredit@ccs.cz</masterLabel>
+        <translation><!-- kredit@ccs.cz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>kredit@ccs.sk</masterLabel>
+        <translation><!-- kredit@ccs.sk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>market@ccs.cz</masterLabel>
+        <translation><!-- market@ccs.cz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>myto@ccs.cz</masterLabel>
+        <translation><!-- myto@ccs.cz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>obchod@ccs.cz</masterLabel>
+        <translation><!-- obchod@ccs.cz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>premiumservis@ccs.cz</masterLabel>
+        <translation><!-- premiumservis@ccs.cz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>provoz@ccs.cz</masterLabel>
+        <translation><!-- provoz@ccs.cz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>reklamace@ccs.cz</masterLabel>
+        <translation><!-- reklamace@ccs.cz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>uta@ccs.cz</masterLabel>
+        <translation><!-- uta@ccs.cz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>zakaznicka.podpora@ccs.cz</masterLabel>
+        <translation><!-- zakaznicka.podpora@ccs.cz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>zakaznicke@ccs.sk</masterLabel>
+        <translation><!-- zakaznicke@ccs.sk --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

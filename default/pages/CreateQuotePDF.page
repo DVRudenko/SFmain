@@ -1,0 +1,174 @@
+<apex:page id="CreateQuotePDF" showHeader="false" standardStylesheets="false" sidebar="false" applyBodyTag="false"
+    applyHtmlTag="false" controller="CreateQuotePDFController" renderAs="PDF">
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <style type="text/css">
+            @page { size: A4; }
+
+            body {
+                font-family: Arial Unicode MS;
+                line-height: 1.4;
+                font-size: 12px;
+            }
+
+            .header-image {
+                width: 200px;
+                object-fit: contain;
+                display: block;
+                margin-bottom: 32px
+            }
+
+            .company-info-table td {width: 28%;}
+            .bank-table td {width: 33.333%;}
+            .products-table td {width: 25%;}
+            .fees-table td {width: 25%;}
+            .total-table td {width: 20%;}
+            
+            td{padding: 4px 8px;}
+
+            .bg-red {background-color: rgb(209, 54, 56);}
+            .bg-gray-1 {background-color: rgb(116, 116, 116);}
+            .bg-gray-2 {background-color: rgb(245, 244, 244);}
+            .bg-gray-3 {background-color: #fff;}
+            .c-white {color: #fff;}
+            .tt-u{text-transform: uppercase;}
+            .f-18{font-size: 18px;}
+            .f-16{font-size: 16px;}
+            .f-14{font-size: 14px;}
+            .ta-c{text-align: center;}
+            .py-2{padding: 2px 0;}
+            .py-4{padding: 4px 0;}
+            .mb-0{margin-bottom: 0;}
+            .mb-24{margin-bottom: 24px;}
+        </style>
+    </head>
+    <body>
+        <img class="header-image" src="/resource/ete_images/fleetcor_logo.jpg" alt="Logo" />
+        <h3 class="f-16 tt-u ta-c bg-red c-white py-4 mb-0">Podsumowanie zamówienia monitoringu pojazdów FLEETCOR Carnet OBD</h3>
+        <table cellspacing="0" cellpadding="0" border="0" class="company-info-table" width="100%">
+            <thead>
+                <tr class="bg-gray-1 c-white">
+                    <td style="width: 44%;">Nazwa firmy</td>
+                    <td>Adres rejestracji firmy</td>
+                    <td>Adres do doręczeń</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="width: 44%;">{! qoute.Account.Name }</td>
+                    <td>{! qoute.BillingStreet }</td>
+                    <td>{! qoute.ShippingStreet }</td>
+                </tr>
+                <tr class="bg-gray-2">
+                    <td style="width: 44%;">{! qoute.Contact.Name }</td>
+                    <td>{! qoute.BillingCity }</td>
+                    <td>{! qoute.ShippingCity }</td>
+                </tr>
+                <tr>
+                    <td style="width: 44%;">{! qoute.Email }</td>
+                    <td>{! qoute.BillingPostalCode } </td>
+                    <td>{! qoute.ShippingPostalCode }</td>
+                </tr>
+                <tr class="bg-gray-2">
+                    <td style="width: 44%;">{! qoute.Phone }</td>
+                    <td>{! qoute.BillingCountry }</td>
+                    <td>{! qoute.ShippingCountry }</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            Zamówienie z FLEETCOR Poland sp. z o.o. z siedzibą w Warszawie przy Generation Park Z, ul. Towarowa 28, 00-839 Warszawa, Polska, usługa FLEETCOR Carnet zgodnie z załącznikami do niniejszego zamówienia, oraz z warunkami określonymi w Ogólnych Warunkach korzystania z Usługi firmy FLEETCOR Carnet, których Klient zobowiązuje się przestrzegać. Integralną częścią tego zamówienia są jego załączniki, którymi są zamówienia na towary i usługi FLEETCOR Carnet.
+        </p>
+        <h4 class="mb-0 bg-red c-white tt-u ta-c py-2 f-14">Cenowe podsumowanie</h4>
+        <table cellspacing="0" cellpadding="0" border="0" class="bank-table" width="100%">
+            <tr class="bg-gray-2">
+                <td>Nr rachunku bankowego: IBAN:</td>
+                <td>31 1240 1040 1111 0010 6484 1107</td>
+            </tr>
+            <tr>
+                <td>IBAN:</td>
+                <td>PL31 1240 1040 1111 0010 6484 1107 </td>
+            </tr>
+            <tr class="bg-gray-2">
+                <td>BIC:</td>
+                <td>PKOPPLPWXXX</td>
+            </tr>
+            <tr>
+                <td>Bank:</td>
+                <td>Bank Polska Kasa Opieki Spóka Akcyjna</td>
+            </tr>
+            <tr class="bg-gray-2">
+                <td>Tytu patnoci:</td>
+                <td>NIP</td>
+            </tr>
+        </table>
+        <p>
+            Uprzejmie prosimy o uregulowanie kwoty za urządzenia i komponenty dodatkowe na wyżej podane konto bankowe. Po uregulowaniu kwoty urządzenie zostanie dostarczone na adres kontaktowy. Faktura zostanie przesłana e-mailowo po otrzymaniu potwierdzenia o dostarczeniu przesyłki. Prosimy już nie opłacać tej faktury.
+        </p>
+
+        <h4 class="bg-red c-white tt-u ta-c py-2 f-14 mb-0">Produkty</h4>
+        <table cellspacing="0" cellpadding="0" border="0" class="products-table" width="100%">
+            <tr class="bg-gray-1 c-white">
+                <td>Pozycja cennika</td>
+                <td>Liczba szt.</td>
+                <td>Cena/szt.</td>
+                <td>Cena</td>
+            </tr>
+            <apex:variable var="index" value="{!1}"/>
+            <apex:repeat value="{! qouteLineItems }" var="qouteLineItem">
+                <tr class="bg-gray-{! MOD(index,2) + 2}">
+                    <td>{! qouteLineItem.Product2.Name }</td>
+                    <td>{! qouteLineItem.Quantity }</td>
+                    <td>{! qouteLineItem.UnitPrice } PLN</td>
+                    <td>{! qouteLineItem.TotalPrice } PLN</td>
+                </tr>
+                <apex:variable var="index" value="{! index + 1 }"/> 
+            </apex:repeat>
+        </table>
+
+        <h4 class="bg-red c-white tt-u ta-c py-2 f-14 mb-0">Opłaty jednorazowe - Usługi</h4>
+        <table cellspacing="0" cellpadding="0" border="0" class="fees-table" width="100%">
+            <tr class="bg-gray-1 c-white">
+                <td>Pozycja cennika</td>
+                <td>Liczba szt.</td>
+                <td>Cena/szt.</td>
+                <td>Cena</td>
+            </tr>
+            <apex:variable var="index" value="{!1}"/>
+            <apex:repeat value="{! feeItems }" var="fee">
+                <tr class="bg-gray-{! MOD(index,2) + 2}">
+                    <td>{! fee['name'] }</td>
+                    <td>{! fee['quontity'] }</td>
+                    <td>{! fee['amountByOne'] } PLN</td>
+                    <td>{! fee['amount'] } PLN</td>
+                </tr>
+                <apex:variable var="index" value="{! index + 1 }"/> 
+            </apex:repeat>
+        </table>
+        
+        <div style="padding: 12px 0;">Kwota za usługi zostanie uwzględniona w następnym fakturowaniu standardowym.</div>
+        <h4 class="mb-0 bg-red c-white tt-u ta-c py-2 f-14" style="margin-top:0; padding-top: 0;">KWOTA JEDNORAZOWEJ OPŁATY - URZĄDZENIA</h4>
+        <table cellspacing="0" cellpadding="0" border="0" class="total-table" width="100%">
+            <tr class="bg-gray-2">
+                <td>Cena:</td>
+                <td>{! ROUND(qoute.TotalPrice, 2) } PLN</td>
+            </tr>
+            <tr>
+                <td>VAT:</td>
+                <td>{! qoute.Vat__c }% ( {! ROUND((qoute.TotalPrice/100)*qoute.Vat__c, 2) } PLN)</td>
+            </tr>
+            <tr class="bg-gray-2">
+                <td>Cena (z VAT):</td>
+                <td>
+                    {! ROUND(qoute.Grand_Total__c, 2) } PLN
+                </td>
+            </tr>
+        </table>
+        <p>
+            Uwaga: Nie chodzi o fakturę, to tylko cenowe podsumowanie zamówionych komponentów usługi FLEETCOR Carnet. Pełny przegląd wszystkich dostępnych komponentów w tym aktualne ceny, można znaleźć w aktualnym cenniku, który otrzymali Państwo poprzez e-mail.
+        </p>
+    </body>
+    </html>
+</apex:page>

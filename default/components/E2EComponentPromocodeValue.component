@@ -1,0 +1,56 @@
+<!--
+ - Created by Andrei.Katunin on 16.08.2018.
+ -->
+
+<apex:component id="E2EComponentPromocodeValue">
+
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map"
+                    required="false"/>
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="name of field in parent page"
+                    required="false"/>
+
+    <apex:attribute name="firstClassLabel"
+                    type="String"
+                    description="class name of label and input div" />
+
+    <apex:attribute name="secondClassLabel"
+                    type="String"
+                    description="class name of input div" />
+
+    <apex:attribute name="firstClass"
+                    type="String"
+                    description="class name of label and input div" />
+
+    <apex:attribute name="secondClass"
+                    type="String"
+                    description="class name of input div" />
+
+    <apex:outputPanel layout="block" styleClass="{! firstClassLabel }">
+        <apex:outputPanel layout="block" styleClass="{! secondClassLabel }">
+
+            <apex:outputPanel layout="block" styleClass="promocodeComplete">
+                <apex:outputPanel layout="block" styleClass="{! firstClassLabel }">
+                    <label for="" class="promocode-label-result">{!pageMap[field].elementItemsMap['PROMOCODE LABEL'].value}</label>
+                    <apex:outputPanel layout="block" styleClass="{! secondClassLabel }">
+                        <apex:outputText escape="false" value="{!IF ((len(pageMap[field].elementItemsMap['PROMOCODE DESCRIPTION TITLE'].value) < 1), pageMap[field].elementItemsMap['PROMOCODE INVALID'].value, pageMap[field].elementItemsMap['PROMOCODE DESCRIPTION TITLE'].value )}"/>
+                        <apex:outputText escape="false" value="{!IF ((pageMap[field].elementItemsMap['PROMOCODE DESCRIPTION BODY'].value == ''), '', pageMap[field].elementItemsMap['PROMOCODE DESCRIPTION BODY'].value )}"/>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+
+                <apex:outputPanel layout="block" styleClass="{! firstClass }">
+                    <label for="">{!pageMap[field].elementItemsMap['PROMOCODE CHOOSEN LABEL'].value}</label>
+                    <apex:outputPanel layout="block" styleClass="{! secondClass }">
+                        {! pageMap[field].elementItemsMap['PROMOCODE CHOOSEN FIELD'].value }
+                    </apex:outputPanel>
+                </apex:outputPanel>
+            </apex:outputPanel>
+
+        </apex:outputPanel>
+    </apex:outputPanel>
+
+</apex:component>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Insight_Source__c</fullName>
+    <deprecated>false</deprecated>
+    <description>A hyperlink to the source record that triggered the generation of the insight</description>
+    <externalId>false</externalId>
+    <formula>IF (LEN( success__Record_ID__c )&lt;1, NULL, HYPERLINK(&quot;/&quot; &amp; success__Record_ID__c, &quot;Link to Record&quot;,&quot;_parent&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Hyperlink to the source record that generated the insight</inlineHelpText>
+    <label>Insight Source</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

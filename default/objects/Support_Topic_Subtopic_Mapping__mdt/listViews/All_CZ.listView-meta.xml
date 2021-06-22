@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_CZ</fullName>
+    <columns>MasterLabel</columns>
+    <columns>Search_Word__c</columns>
+    <columns>Active__c</columns>
+    <columns>Field_Type__c</columns>
+    <columns>Parent_Picklist_Value__c</columns>
+    <columns>Picklist_Value__c</columns>
+    <columns>Priority__c</columns>
+    <columns>DeveloperName</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MasterLabel</field>
+        <operation>contains</operation>
+        <value>Czech</value>
+    </filters>
+    <label>All CZ</label>
+    <language>en_US</language>
+</ListView>

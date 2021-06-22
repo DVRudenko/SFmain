@@ -1,0 +1,17 @@
+<apex:page controller="AddFleetcorOpportunityOfferCtrl">
+
+    <head>
+        <apex:includeLightning />
+    </head>
+
+    <body>
+        <div id="app"></div>
+        <script>
+            $Lightning.use("c:AddFleetcorOpportunityOfferAuraApp", function () {
+                $Lightning.createComponent("c:AddFleetcorOpportunityOffer", {
+                    opportunityId: '{!opportunityId}'
+                }, "app");
+            });
+        </script>
+    </body>
+</apex:page>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BRC_Brand__c</fullName>
+    <externalId>false</externalId>
+    <label>BRC_Brand</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Shell</fullName>
+                <default>false</default>
+                <label>Shell</label>
+            </value>
+            <value>
+                <fullName>DEA</fullName>
+                <default>false</default>
+                <label>DEA</label>
+            </value>
+            <value>
+                <fullName>Non Branded</fullName>
+                <default>false</default>
+                <label>Non Branded</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

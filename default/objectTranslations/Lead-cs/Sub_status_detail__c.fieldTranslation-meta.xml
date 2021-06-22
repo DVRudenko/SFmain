@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Podkategorie stavu</label>
+    <name>Sub_status_detail__c</name>
+    <picklistValues>
+        <masterLabel>Already Customer</masterLabel>
+        <translation>Stávající zákazník</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Already in Pipeline</masterLabel>
+        <translation>Příležitost/Tip již existuje</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Blacklist</masterLabel>
+        <translation>Černá listina / Blacklist</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brand</masterLabel>
+        <translation>Značka</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS</masterLabel>
+        <translation><!-- CCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Bonus Card</masterLabel>
+        <translation>Zájemce o Bonus odkázán na E2E</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cash withdrawals</masterLabel>
+        <translation>Výběry hotovosti</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Company ceased to exist</masterLabel>
+        <translation>Ukončená činnost</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Coverage/Acceptance international</masterLabel>
+        <translation>Akceptace/Pokrytí v zahraničí</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer not reached</masterLabel>
+        <translation>Definitivně nezastižen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forwarded externally</masterLabel>
+        <translation>Předáno externě</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>High fees</masterLabel>
+        <translation>Vysoké poplatky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Insufficient limit</masterLabel>
+        <translation>Nedostatečný limit</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>International</masterLabel>
+        <translation>V zahraničí</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lodging/Accommodation</masterLabel>
+        <translation>Ubytování</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Long term contract</masterLabel>
+        <translation>Dlouhodobá smlouva</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low discount</masterLabel>
+        <translation>Nízká sleva</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loyalty program</masterLabel>
+        <translation>Věrnostní program</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>National</masterLabel>
+        <translation>V tuzemsku</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network</masterLabel>
+        <translation>Akceptace/Pokrytí</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No vehicles</masterLabel>
+        <translation>Nemá vozový park</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a legal entity</masterLabel>
+        <translation>Není právnická osoba</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a priority</masterLabel>
+        <translation>Nyní není prioritou</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Jiné (specifikujte)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment terms</masterLabel>
+        <translation>Doba splatnosti</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Potential fraud</masterLabel>
+        <translation>Možný podvod</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product features</masterLabel>
+        <translation>Vlastnosti produktu</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refused to talk</masterLabel>
+        <translation>Odmítnutí hovoru</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejection of T&amp;Cs</masterLabel>
+        <translation>Nesouhlasí s VOP</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Restaurants</masterLabel>
+        <translation>Pohostinství</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail/Wholesale</masterLabel>
+        <translation>Maloobchod/Velkoobchod</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Security/Deposit</masterLabel>
+        <translation>Garance/Jistina/Záruka</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sent to Customer Service</masterLabel>
+        <translation>Předáno na zákaznický servis</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sent to ext. Call centre</masterLabel>
+        <translation>Externě - Partneři</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell</masterLabel>
+        <translation><!-- Shell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spam</masterLabel>
+        <translation><!-- Spam --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tickets (Air,Train,Ferry)</masterLabel>
+        <translation>Letenky, Jízdenky a jiné cest. výdaje</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong contact details</masterLabel>
+        <translation>Chybné kontaktní údaje</translation>
+    </picklistValues>
+</CustomFieldTranslation>

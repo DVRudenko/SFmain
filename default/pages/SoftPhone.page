@@ -1,0 +1,16 @@
+<apex:page showHeader="false" showChat="false" standardStylesheets="false" sidebar="false">
+    <apex:includeLightning />
+    <script src="{!$Resource.OpenCTI +'/opencti.js'}" type="text/javascript"></script>
+    <div id="lightning"></div>
+
+    <script type="text/javascript">
+
+        $Lightning.use("c:SoftPhoneOut", function() {
+            $Lightning.createComponent("c:CTI_callInfoPanel", 
+            {},
+            "lightning",
+            function(cmp) {
+            });
+        });
+    </script>
+</apex:page>

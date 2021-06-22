@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Agreement Terms and Conditions</masterLabel>
+        <translation>Обсуждение Условий Договора</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Awaiting payment</masterLabel>
+        <translation>Ожидание платежа</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CC In Progress</masterLabel>
+        <translation><!-- CC In Progress --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Application</masterLabel>
+        <translation><!-- CCS Application --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Meetings</masterLabel>
+        <translation><!-- CCS Meetings --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Passed Credit</masterLabel>
+        <translation><!-- CCS Passed Credit --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Quote/Proposal</masterLabel>
+        <translation><!-- CCS Quote/Proposal --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Check Credit History</masterLabel>
+        <translation>Скоринг / Проверка кредитной истории</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Client Negotiations</masterLabel>
+        <translation>Коммерческие Переговоры</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Closed Lost</masterLabel>
+        <translation><!-- Closed Lost --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Closed Won</masterLabel>
+        <translation><!-- Closed Won --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Contract Under Signing</masterLabel>
+        <translation>Договор на Подписании</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Credit Report Generated</masterLabel>
+        <translation><!-- Credit Report Generated --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Credit Report not available</masterLabel>
+        <translation><!-- Credit Report not available --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Credit approved</masterLabel>
+        <translation><!-- Credit approved --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CreditCheck</masterLabel>
+        <translation><!-- CreditCheck --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CreditCheck abgelehnt</masterLabel>
+        <translation><!-- CreditCheck abgelehnt --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>DG - Kundenantrag erhalten und angelegt</masterLabel>
+        <translation><!-- DG - Kundenantrag erhalten und angelegt --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Duplicate</masterLabel>
+        <translation><!-- Duplicate --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Entscheidung anstehend</masterLabel>
+        <translation>На согласовании Сервиса</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Follow Up Termin</masterLabel>
+        <translation><!-- Follow Up Termin --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Infoversand</masterLabel>
+        <translation><!-- Infoversand --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Karten werden versendet</masterLabel>
+        <translation><!-- Karten werden versendet --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kartenantrag  PC wird bearbeitet</masterLabel>
+        <translation><!-- Kartenantrag  PC wird bearbeitet --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kartenantrag PC unvollständig</masterLabel>
+        <translation><!-- Kartenantrag PC unvollständig --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kartenantrag PC vollständig</masterLabel>
+        <translation><!-- Kartenantrag PC vollständig --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kartenantrag bei PC eingetroffen</masterLabel>
+        <translation><!-- Kartenantrag bei PC eingetroffen --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kundenantrag FC unvollständig</masterLabel>
+        <translation><!-- Kundenantrag FC unvollständig --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kundenantrag FC wird geprüft</masterLabel>
+        <translation><!-- Kundenantrag FC wird geprüft --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kundenantrag an Degussa gesendet</masterLabel>
+        <translation><!-- Kundenantrag an Degussa gesendet --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Kundenantrag vollständig erhalten</masterLabel>
+        <translation><!-- Kundenantrag vollständig erhalten --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Lost to Competition</masterLabel>
+        <translation><!-- Lost to Competition --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Moved to Start</masterLabel>
+        <translation>Принято на Старт</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Negotiate</masterLabel>
+        <translation><!-- Negotiate --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New customer</masterLabel>
+        <translation><!-- New customer --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>No Sale</masterLabel>
+        <translation><!-- No Sale --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Order entered</masterLabel>
+        <translation><!-- Order entered --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Order entered - Approved</masterLabel>
+        <translation><!-- Order entered - Approved --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Order entered - deposit</masterLabel>
+        <translation><!-- Order entered - deposit --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Order entered - more often DD</masterLabel>
+        <translation><!-- Order entered - more often DD --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Paper Contract sent</masterLabel>
+        <translation><!-- Paper Contract sent --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pending Credit</masterLabel>
+        <translation><!-- Pending Credit --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pending Credit - Contract Check</masterLabel>
+        <translation><!-- Pending Credit - Contract Check --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pending Credit - Token payment</masterLabel>
+        <translation><!-- Pending Credit - Token payment --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pending Credit AML</masterLabel>
+        <translation><!-- Pending Credit AML --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pending Credit Check</masterLabel>
+        <translation>На согласовании ОУР</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pending Credit Report</masterLabel>
+        <translation><!-- Pending Credit Report --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pending Sales</masterLabel>
+        <translation><!-- Pending Sales --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pending Sales - SEPA Confirmation</masterLabel>
+        <translation><!-- Pending Sales - SEPA Confirmation --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pending Sales - Token payment</masterLabel>
+        <translation><!-- Pending Sales - Token payment --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pending Sales – AML doc.</masterLabel>
+        <translation><!-- Pending Sales – AML doc. --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pending Sales – Deposit</masterLabel>
+        <translation><!-- Pending Sales – Deposit --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pending Sales – Information</masterLabel>
+        <translation><!-- Pending Sales – Information --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pending Sales – PIT/CIT</masterLabel>
+        <translation><!-- Pending Sales – PIT/CIT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Prequal</masterLabel>
+        <translation>В работе КЦ</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Propose</masterLabel>
+        <translation><!-- Propose --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Prospecting</masterLabel>
+        <translation><!-- Prospecting --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Qualified Lead</masterLabel>
+        <translation>Квалифицированный</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Qualify</masterLabel>
+        <translation><!-- Qualify --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sales - Follow UP Call Kartenantrag</masterLabel>
+        <translation><!-- Sales - Follow UP Call Kartenantrag --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sales - Karten erhalten Anruf</masterLabel>
+        <translation><!-- Sales - Karten erhalten Anruf --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sales - Karten erhalten pending</masterLabel>
+        <translation><!-- Sales - Karten erhalten pending --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sales - Kartenantrag versendet</masterLabel>
+        <translation><!-- Sales - Kartenantrag versendet --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sales - Kundenantrag in Bearbeitung</masterLabel>
+        <translation>На согласовании АдминаСФ</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Sales - verloren nach Credit Check</masterLabel>
+        <translation><!-- Sales - verloren nach Credit Check --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Signing of a Contract</masterLabel>
+        <translation>Подписан договор</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Spam</masterLabel>
+        <translation><!-- Spam --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Suspended Opportunity</masterLabel>
+        <translation>Возможность отложена</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Unprocessed</masterLabel>
+        <translation>Необработанный</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waitiing for components</masterLabel>
+        <translation><!-- Waitiing for components --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting for Card order form</masterLabel>
+        <translation><!-- Waiting for Card order form --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting for Credit decision</masterLabel>
+        <translation><!-- Waiting for Credit decision --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting for DD confirmation</masterLabel>
+        <translation><!-- Waiting for DD confirmation --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting for MANDAT</masterLabel>
+        <translation><!-- Waiting for MANDAT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting for PIT/CIT</masterLabel>
+        <translation><!-- Waiting for PIT/CIT --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting for amendment</masterLabel>
+        <translation><!-- Waiting for amendment --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting for card issuance</masterLabel>
+        <translation><!-- Waiting for card issuance --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting for cash security</masterLabel>
+        <translation><!-- Waiting for cash security --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting for deposit</masterLabel>
+        <translation><!-- Waiting for deposit --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting for order signature</masterLabel>
+        <translation><!-- Waiting for order signature --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting for power of attorney</masterLabel>
+        <translation><!-- Waiting for power of attorney --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting for signed pdf</masterLabel>
+        <translation><!-- Waiting for signed pdf --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Zusatzkarte</masterLabel>
+        <translation><!-- Zusatzkarte --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>qualifizierter Termin</masterLabel>
+        <translation><!-- qualifizierter Termin --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Договор на проверке</masterLabel>
+        <translation>Договор на проверке</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Отказ</masterLabel>
+        <translation>Отказ</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Потерян в конкуренции</masterLabel>
+        <translation>Потерян в конкуренции</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

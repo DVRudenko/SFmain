@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SME_BNF_0_025_fixed_for_BE_and_NL_only</fullName>
+    <active>true</active>
+    <description>Product__c = "SME (BNF 0,025 € + fixed fee)" is available only for Registered_Country__c = "Belgium-NL", "Belgium-FR" and "Netherlands".</description>
+    <errorConditionFormula>AND(ISPICKVAL(Product__c, "SME (BNF 0,025 € + fixed fee)"), Registered_Country__c != "Belgium-NL",
+Registered_Country__c != "Belgium-FR",
+Registered_Country__c != "Netherlands")</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Offer "SME (BNF 0,025 € + fixed fee)" is available only for Belgium and Netherlands.</errorMessage>
+</ValidationRule>

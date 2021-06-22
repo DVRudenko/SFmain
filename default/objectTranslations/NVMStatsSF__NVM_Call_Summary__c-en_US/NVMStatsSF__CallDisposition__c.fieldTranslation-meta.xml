@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Call Result value copied from the Call Task if one was found --></help>
+    <label><!-- Call Result --></label>
+    <name>NVMStatsSF__CallDisposition__c</name>
+</CustomFieldTranslation>

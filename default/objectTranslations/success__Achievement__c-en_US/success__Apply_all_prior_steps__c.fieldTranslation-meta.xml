@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- When used in Insight and Predict, this Behaviour can be completed in any Stage up until and including the Stage that is defined on the Winning Way Step --></help>
+    <label><!-- Multi-Stage Behaviour --></label>
+    <name>success__Apply_all_prior_steps__c</name>
+</CustomFieldTranslation>

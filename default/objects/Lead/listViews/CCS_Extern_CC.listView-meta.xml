@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Extern_CC</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.MOBILE_PHONE</columns>
+    <columns>LEAD.CITY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>CCS_Cribis__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>CCS QB SME,CCS Waftcom SME,CCS Unicall SME,CCS Altevida SME,CCS Altevida E2E</value>
+    </filters>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.CCS_Sales_process</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Uzavřeno,Disqualified</value>
+    </filters>
+    <label>CCS Externí CC</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinates>CCS_Administrator</roleAndSubordinates>
+    </sharedTo>
+</ListView>

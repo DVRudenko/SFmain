@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>List of emails users, which get emails for order in Work.com</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Ru Work.com Order Admin</label>
+    <visibility>Public</visibility>
+</CustomObject>

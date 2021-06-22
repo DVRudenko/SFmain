@@ -1,0 +1,75 @@
+<!--
+ - Created by Nikita.Dayanov on 02.07.2018. -
+ -->
+
+<apex:page id="DashboardPersonalSalesPPR" controller="DashboardPersonalSalesPPRCtrl" sideBar="false">
+
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <div id="personalOpptysArea" style="width: 50%; height: 100%; float: right">
+
+        <div id="personalOpptysPage">
+
+            <apex:iframe src="/apex/DashboardPersonalOpptysPPR?userId={!userId}&userroleid={!connectedUserRole}"
+                         scrolling="false" frameBorder="0" id="personalOpptys"/>
+        </div>
+        <div id="personalOpptysLoader" class="loader"/>
+    </div>
+
+    <div id="personalLeadsArea" style="width: 50%; height: 100%; float: right">
+
+        <div id="personalLeadsPage">
+
+            <apex:iframe src="/apex/DashboardPersonalLeadsPPR?userId={!userId}&userroleid={!connectedUserRole}"
+                         scrolling="false" frameBorder="0" id="personalLeads"/>
+        </div>
+        <div id="personalLeadsLoader" class="loader"/>
+    </div>
+
+    <div id="personalNetStartsArea" style="width: 50%; height: 100%; float: left">
+
+        <div id="personalNetStartsPage">
+
+            <apex:iframe src="/apex/DashboardPersonalNetStartsPPR?userId={!userId}&userroleid={!connectedUserRole}"
+                         scrolling="false" frameBorder="0" id="personalNetStarts"/>
+        </div>
+        <div id="personalNetStartsLoader" class="loader"/>
+    </div>
+
+    <div id="personalIntensityOfWorkArea" style="width: 50%; height: 100%; float: left">
+
+        <div id="personalIntensityOfWorkPage">
+
+            <apex:iframe src="/apex/DashboardPersonalIntensityOfWorkPPR?userId={!userId}&userroleid={!connectedUserRole}"
+                         scrolling="false" frameBorder="0" id="personalIntensityOfWork"/>
+        </div>
+        <div id="personalIntensityOfWorkLoader" class="loader"/>
+    </div>
+
+    <script>
+        j$ = jQuery.noConflict();
+
+        j$(document).ready(function () {
+            //enableLoader("personalNetStarts");
+            //enableLoader("personalOpptys");
+            //enableLoader("personalLeads");
+        });
+
+        function enableLoader(val) {
+            var pageId = val + 'Page';
+            var loaderId = val + 'Loader';
+
+            var page = document.getElementById(pageId);
+            page.style.opacity = "1.0";
+            page.style.pointerEvents = "none";
+
+            //var loader = document.getElementById(loaderId);
+            //loader.style.opacity = "1.0";
+
+            var elementRect = document.getElementById(val + 'Area').getBoundingClientRect();
+
+            //loader.style.top = getPos(page).y + elementRect.height/4 + "px";
+            //loader.style.left = getPos(page).x + elementRect.width/2 + "px";
+        };
+
+    </script>
+</apex:page>

@@ -1,0 +1,177 @@
+<apex:page controller="AllStarMondoFormController" action="{! initCheckPassword }" sidebar="false" showHeader="false" standardStylesheets="false">
+    <apex:form >
+            <apex:stylesheet value="{!URLFOR($Resource.AllstarFiles,'css/webtype.css')}"/>
+            <apex:stylesheet value="{!URLFOR($Resource.AllstarFiles,'css/developers.css')}"/>
+            <apex:stylesheet value="{!URLFOR($Resource.AllstarFiles,'css/style.css')}"/>
+        <head>
+            <title>Zamów teraz | Allstar Mondo</title>
+        </head>
+        <body class="node-type-subpage node-template-subpage html not-front not-logged-in no-sidebars page-node page-node- page-node-6 node-type-apply-now">
+            <style>
+                #logo .showLogo {
+                    height: 83px;
+                    width: 202px;
+                    background: url("{!URLFOR($Resource.AllstarFiles,'img/alstar_mondo_pl.png')}") 0 0 no-repeat;
+                }
+
+                #mega-footer {
+                    background: url("{!URLFOR($Resource.AllstarFiles,'img/allstar_carbon_extended.png')}") #000;
+                    background-repeat: repeat-y;
+                    color: #fff;
+                    min-height: 80px;
+                    overflow: hidden;
+                    padding: 0 50px 50px 10%;
+                    position: relative;
+                    font-size: 11px;
+                    background-size: cover;
+                }
+
+
+                .node-type-apply-now #tabs .tabs li a.completed-step + span.step-number {
+                    text-indent: -9999px;
+                    white-space: nowrap;
+                    width: 26px;
+                    height: 26px;
+                    background: #fff url("{!URLFOR($Resource.AllstarFiles,'img/step-ok.png')}") 50% 50% no-repeat;
+                    border: 2px solid #ffc725;
+                    border-radius: 26px;
+                    font-family: Antenna RE Bd;
+                    font-weight: bold;
+                    font-size: 16px;
+                    display: inline-block;
+                    z-index: 10;
+                    position: relative;
+                    top: -15px;
+                }
+
+                #content .main-content p {
+                    text-align: center;
+                }
+
+                a:hover {
+                    color: gray !important;
+                }
+
+                .node-type-apply-now .headerimage {background: rgba(0, 0, 0, 0) url("{!URLFOR($Resource.AllstarFiles,'img/header-box-without.png')}") no-repeat scroll 0 0 / cover ;  height: 370px; z-index: 1;overflow:hidden;}
+                @media screen and (max-width:1500px) {
+                .node-type-apply-now .headerimage {background: rgba(0, 0, 0, 0) url("{!URLFOR($Resource.AllstarFiles,'img/header-box-without.png')}") no-repeat scroll 0 0 / cover ;  height: 340px; z-index: 1;overflow:hidden;}
+                }
+                @media screen and (max-width:1200px) {
+                .node-type-apply-now .headerimage {background: rgba(0, 0, 0, 0) url("{!URLFOR($Resource.AllstarFiles,'img/header-box-without.png')}") no-repeat scroll 0 0 / cover ;  height: 300px; z-index: 1;overflow:hidden;}
+            </style>
+            <div id="page" class="container">
+                 <div id="header">
+                    <div id="logo-container">
+                        <a id="logo" href="#" >
+                            <div class="showLogo" alt="Allstar fuel card services"></div>
+                        </a>
+                    </div>
+                    <div class="header-top-account scrollhide">
+                        <div class="account-box">
+                            Infolinia dla nowych klientów
+                            <a href="tel:+48 12 334 97 69" class="header-phone">+48 12 334 97 69</a>
+                            <a href="mailto:nowyklient@allstarmondo.pl" class="header-mail">nowyklient@allstarmondo.pl</a>
+                        </div>
+                        <!-- left -->
+                        <div class="account-box left-header-side">
+                            Dział Obsługi Klienta
+                            <a href="mailto:obslugaklienta@allstarmondo.pl" class="header-mail">obslugaklienta@allstarmondo.pl</a>
+                            <a href="https://selfserve.fleetcor.pl/GFNSMEPLWWW/Pages/Public/Login.aspx?ReturnUrl=%2fGFNSMEPLWWW%2fPages%2fcommon%2fhome.aspx" class="account-btn">Zaloguj się do Self-Serve</a>
+                        </div> 
+                    </div>
+                    <div class="clear"></div>
+                    <ul id="main-menu"> 
+                        <li class="scrollhide">
+                            <a href="http://www.allstarmondo.pl/wybierz-karte">Wybierz kartę</a>
+                        </li>
+                        <li class="scrollhide">
+                            <a href="http://www.allstarmondo.pl/o-nas">O nas</a>
+                        </li>
+                        <li class="scrollhide">
+                            <a href="http://www.allstarmondo.pl/najczesciej-zadawane-pytania">FAQ</a>
+                        </li>
+                        <li class="scrollhide">
+                            <a href="http://www.allstarmondo.pl/kontakt-z-nami">Kontakt z nami</a>
+                        </li>
+                    </ul><!-- /main-menu -->
+                    <div class="clear"></div>       
+                </div>
+                <div class="headerimage">
+                    <h1 class="page-title">Zamów teraz</h1>
+                    <div class="mondocard"><img class="img-responsive" src="{!URLFOR($Resource.AllstarFiles,'img/card-mondo.png')}" alt="Allstar Mondo card"/></div>
+                </div>
+            </div>
+            <apex:pageMessages />
+                
+            <div id="content">     
+                <p class="sub-title"></p>
+                <div class="main-content">
+                    <div id="tabs">     
+                        <ul class="tabs">       
+                            <li>  
+                                <a class="completed-step">Twoja firma</a>
+                                <span class="step-number">1</span>  
+                            </li>       
+                            <li>  
+                                <a class="completed-step">O Tobie</a>
+                                <span class="step-number">2</span>  
+                            </li>
+                            <li>  
+                                <a class="completed-step">Twoi przedstawiciele</a>
+                                <span class="step-number">3</span>  
+                            </li>           
+                        </ul>           
+                        <div class="content active">                     
+                            <div class="main-content form-content" id="application-form">    
+                                <div id="contact-form" class="about-you">                         
+                                    <div class="row">
+                                        <h2 class="thankpage">Dziękujemy za złożenie wniosku o kartę Allstar Mondo</h2>   
+                                        <p>
+                                            Prosimy teraz o kliknięcie w poniższy link by  pobrać i wydrukować:<br/>
+                                            <apex:commandLink id="link" style="color: #ffc725; font-weight: bold; text-decoration: underline;" action="{! generatePdf }" value="wniosek i zgodę na weryfikację"/><br/> 
+                                            Następnie należy go podpisać na ostatniej stronie.<br/> 
+                                        </p>
+                                        <p style="color:black; text-align:center; ">
+                                        Prosimy o przesłanie skanu drogą e-mail oraz następujące dokumenty na nasz adres lub na adres<br/> 
+                                        <a href="mailto:nowyklient@allstarmondo.pl" style="color: #ffc725; font-weight: bold; text-decoration: underline;">nowyklient@allstarmondo.pl</a><br/>
+                                        1. Zeskanowana kopia awersu oraz rewersu Twojego dowodu osobistego oraz<br/>
+                                        2. Wyciąg z konta bankowego LUB rachunek za media (datowany do 3 miesięcy wstecz) LUB PIT (konta poświadczone) <br/>
+                                        3. Świadectwo zarejestrowania spółki (jeśli stosowne w przypadku Twojej firmy)<br/><br/><br/><br/><br/></p>
+                                    </div>
+                                 </div>              
+                            </div>           
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /content -->
+
+            <div id="footer" class="container">
+                <div id="mega-footer">
+                    <div class="list">
+                        <h3>
+                            <a href="http://www.allstarmondo.pl/wybierz-karte">Wybierz kartę</a>
+                        </h3>
+                    </div>
+                    <div class="list">
+                        <h3><a href="http://www.allstarmondo.pl/najczesciej-zadawane-pytania">FAQ</a></h3>
+                    </div>
+                    <div class="list">
+                        <h3><a href="http://www.allstarmondo.pl/regulamin-kart">Regulamin Kart</a></h3>
+                    </div>
+                    <div id="mini-footer">
+                        <ul id="footer-menu">
+                            <li><a href="http://www.fleetcor.com" target="_blank">&copy; Copyright FLEETCOR 2017</a></li>
+                            <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/zasady-dotyczace-plikow-cookies">Zasady dotyczące plików cookies</a></li>
+                            <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/zasady-korzystania-z-witryny-internetowej">Zasady korzystania z witryny internetowej</a></li>
+                            <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/polityka-prywatnosci">Polityka prywatności</a></li>
+                            <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/prawa-autorskie-i-nota-prawna">Prawa autorskie i Nota prawna</a></li>
+                            <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/zasady-dopuszczalnego-uzytkowania">Zasady dopuszczalnego użytkowania</a></li>
+                        </ul>
+                        <p>&nbsp;</p>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </body>
+    </apex:form>
+</apex:page>

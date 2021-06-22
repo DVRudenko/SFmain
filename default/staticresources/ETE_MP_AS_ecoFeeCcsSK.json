@@ -1,0 +1,22 @@
+{
+	"translations": {
+		"price_value": {
+			"en": "0.0075 EUR per liter of fuel pumped in Czech Republic and Slovakia",
+			"sk": "0,0075 € bez DPH za liter PHM natankovaných na území ČR a SR"
+		},
+		"title": {
+			"en": "Clean Advantage program",
+			"sk": "Program Clean Advantage"
+		},
+		"description": {
+			"en": "<p>Contribute to reduction of CO2 emissions together with CCS! We offer you the Clean Advantage program for climate-neutral driving. Become a part of this project and actively protect our planet with every kilometer driven!</p><p>By participating in this program, you automatically donate 0.0075 EUR per pumped liter of fuel to environmental protection projects - such as reforestation, tree planting, revitalization projects and many others. This way you actively help to prevent climate changes and offset greenhouse gas emissions.</p>",
+			"sk": "<p>Prispejte k zníženiu emisií CO2 spoločne so spoločnosťou CCS! Ponúkame Vám program Clean Advantage pre ekologicky zodpovednú jazdu. Staňte sa súčasťou tohto projektu a každým najazdeným metrom aktívne chráňte našu planétu!</p><p>Účasťou v tomto programe automaticky darujete za každý natankovaný liter paliva 0,0075 € na ochranu životného prostredia. Týmto spôsobom môžete aktívne pomáhať k predchádzaniu klimatickým katastrofám.</p>"
+		}
+	},
+	"settings": {
+		"bgImage": "/resource/ete_images/bgInfoCardFirst.png",
+		"show_more": "false",
+		"show_checkbox_1": "false",
+		"show_checkbox_2": "false"
+	}
+}

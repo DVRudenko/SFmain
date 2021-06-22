@@ -1,0 +1,183 @@
+<template id="page_break">
+    <div style="page-break-before: always;"></div>
+</template>
+
+<template id="ccs_deposit">
+    <!-- depositAgreement -->
+    <div style="font-size: 12px;">
+        <p style="font-size:20px;text-align:center;">Dohoda o zložení hotovostnej zábezpeky</p>
+        <p style="text-align:center;">uzatvorená podľa ust. § 269 ods. 2 zákona č. 513/1991 Zb. Obchodného zákonníka v
+            znení neskorších predpisov ďalej aj ako „Dohoda“</p>
+        <h4 style="text-decoration: underline;">Zmluvné strany:</h4>
+        <h4 style="text-decoration: underline;">Prijímateľ hotovostnej zábezpeky:</h4>
+        <div><span style="width:130px;display:inline-block; margin-top:2px;">Obchodné meno:</span><span>FLEETCOR
+                Slovakia s.r.o.</span></div>
+        <div><span style="width:130px;display:inline-block; margin-top:2px;">Sídlo:</span><span>Galvaniho 15/C, 821 04,
+                Bratislava </span></div>
+        <div><span style="width:130px;display:inline-block; margin-top:2px;">Identifikačné
+                číslo:</span><span>48054348</span></div>
+        <div><span style="width:130px;display:inline-block; margin-top:2px;">Bankové spojenie:</span><span>IBAN:
+                SK7581300000002014450204, BIC: CITISKBA</span></div>
+        <div><span style="width:130px;display:inline-block; margin-top:2px;">v mene kt. koná:</span><span>Jan
+                Polívka</span></div>
+        <p>ďalej aj ako „Prijímateľ hotovostnej zábezpeky“</p>
+        <p>a</p>
+        <h4 style="text-decoration: underline;">Poskytovateľ hotovostnej zábezpeky:</h4>
+        <div><span style="width:130px;display:inline-block; margin-top:2px;">Obchodné
+                meno:</span><span>{currentOpportunity.Account.Name}</span></div>
+        <div><span
+                style="width:130px;display:inline-block; margin-top:2px;">Sídlo:</span><span>{currentOpportunity.Account.BillingStreet},
+                {currentOpportunity.Account.BillingCity}</span></div>
+        <div><span style="width:130px;display:inline-block; margin-top:2px;">Identifikačné
+                číslo:</span><span>{currentOpportunity.Account.Steuernummer__c}</span></div>
+        <div><span style="width:130px;display:inline-block; margin-top:2px;">v mene kt.
+                koná:</span><span>{fullName}</span></div>
+        <p>ďalej aj ako „Poskytovateľ hotovostnej zábezpeky“</p>
+        <p>Prijímateľ hotovostnej zábezpeky a Poskytovateľ hotovostnej zábezpeky ďalej spolu aj ako „Zmluvné strany“</p>
+        <h3 style="text-align:center;">Článok I.<br>Predmet Dohody</h3>
+        <table width="100%" style="margin-top: 20px;">
+            <tr valign="top">
+                <td width="30px">1.</td>
+                <td>
+                    Predmetom tejto Dohody je záväzok Poskytovateľa hotovostnej zábezpeky poskytnúť Prijímateľovi
+                    hotovostnej zábezpeky sumu vo výške {securityAmountToPay} EUR (ďalej aj „Zábezpeka“).
+                </td>
+            </tr>
+            <tr valign="top">
+                <td width="30px">2.</td>
+                <td>
+                    Suma špecifikovaná v bode 1 tohto článku Dohody predstavuje zábezpeku všetkých pohľadávok
+                    Prijímateľa hotovostnej zábezpeky voči Prijímateľovi hotovostnej zábezpeky, ktoré vznikli a/alebo
+                    vzniknú v súvislosti s obchodnými dohodami uzavretými medzi Prijímateľom hotovostnej zábezpeky a
+                    Poskytovateľom hotovostnej zábezpeky.
+                </td>
+            </tr>
+        </table>
+        <h3 style="text-align:center;">Článok II.</h3>
+        <table width="100%" style="margin-top: 20px;">
+            <tr valign="top">
+                <td width="30px">1.</td>
+                <td>
+                    Zmluvné strany sa dohodli, že Zábezpeka bude uložená do depozitu a Prijímateľ hotovostnej zábezpeky
+                    so Zábezpekou nebude nakladať až do času, kedy nastane skutočnosť uvedená v čl. III tejto Dohody.
+                </td>
+            </tr>
+            <tr valign="top">
+                <td width="30px">2.</td>
+                <td>
+                    Zmluvné strany sa dohodli, že Poskytovateľ hotovostnej zábezpeky je oprávnený nahradiť poskytnutú
+                    zábezpeku iným zabezpečením v rovnakej hodnote za predpokladu, že na takýto postup udelí Prijímateľ
+                    hotovostnej zábezpeky písomný súhlas.
+                </td>
+            </tr>
+        </table>
+        <h3 style="text-align:center;">Článok III.</h3>
+        <table width="100%" style="margin-top: 20px;">
+            <tr valign="top">
+                <td width="30px">1.</td>
+                <td>
+                    Prijímateľ hotovostnej zábezpeky je oprávnený so Zábezpekou nakladať v prípade, ak je Poskytovateľ
+                    hotovostnej zábezpeky v omeškaní s úhradou splatných záväzkov voči Prijímateľovi hotovostnej
+                    zábezpeky vzniknutých z akéhokoľvek titulu.
+                </td>
+            </tr>
+            <tr valign="top">
+                <td width="30px">2.</td>
+                <td>
+                    V prípade, ak nastane skutočnosť podľa bodu 1 tohto článku Dohody, je Prijímateľ hotovostnej
+                    zábezpeky oprávnený jednostranne započítať svoju splatnú pohľadávku proti Zábezpeke, prípadne proti
+                    časti Zábezpeky, pričom pri takomto spôsobe splnenia peňažného záväzku Poskytovateľa hotovostnej
+                    zábezpeky sa plnenie započíta najprv na istinu, potom na úroky a poplatky súvisiace s upomínaním a
+                    až následne na trovy konania vrátane trov právneho zastupovania.
+                </td>
+            </tr>
+        </table>
+        <h3 style="text-align:center;">Článok IV.<br> Ukončenie Dohody</h3>
+        <table width="100%" style="margin-top: 20px;">
+            <tr valign="top">
+                <td width="30px">1.</td>
+                <td>
+                    Zmluvné strany sa dohodli, že v prípade ukončenia obchodných zmlúv uzavretých medzi Prijímateľom
+                    hotovostnej zábezpeky a Poskytovateľom hotovostnej zábezpeky, dochádza súčasne k ukončeniu tejto
+                    Dohody.
+                </td>
+            </tr>
+            <tr valign="top">
+                <td width="30px">2.</td>
+                <td>
+                    V prípade ukončenia tejto Dohody je Prijímateľ hotovostnej zábezpeky povinný vrátiť Poskytovateľovi
+                    hotovostnej zábezpeky Zábezpeku, prípadne jej časť v prípade, že bol uplatnený postup podľa čl. III.
+                    bod 2 tejto Dohody, a to najneskôr do 3 mesiacov.
+                </td>
+            </tr>
+        </table>
+        <h3 style="text-align:center;">Článok V.<br> Záverečné ustanovenia</h3>
+        <table width="100%" style="margin-top: 20px;">
+            <tr valign="top">
+                <td width="30px">1.</td>
+                <td>
+                    Zmluvné strany zhodne vyhlasujú, že túto Dohodu uzatvorili na základe ich slobodnej, vážnej a
+                    neomylnej vôle, pričom táto Dohoda nebola uzavretá v tiesni ani za nápadne nevýhodných podmienok,
+                    Dohodu si prečítali, jej obsahu rozumejú a na znak súhlasu osoby oprávnené konať v mene Zmluvných
+                    strán túto Dohodu podpisujú.
+                </td>
+            </tr>
+            <tr valign="top">
+                <td width="30px">2.</td>
+                <td>
+                    Obsah tejto Dohody je možné meniť len po vzájomnej dohode vo forme očíslovaných písomných dodatkov.
+                </td>
+            </tr>
+            <tr valign="top">
+                <td width="30px">3.</td>
+                <td>
+                    Táto Dohoda bola vyhotovená v dvoch (2) rovnopisoch, z ktorých jeden (1) obdŕža Prijímateľ
+                    hotovostnej zábezpeky a jeden (1) obdŕža Poskytovateľ hotovostnej zábezpeky.
+                </td>
+            </tr>
+            <tr valign="top">
+                <td width="30px">4.</td>
+                <td>
+                    Táto Dohoda nadobúda platnosť a účinnosť dňom jej podpisu oboma Zmluvnými stranami.
+                </td>
+            </tr>
+        </table>
+
+
+        <table width="100%" style="margin-top: 20px; ">
+            <tr>
+                <td style="padding-bottom:32px;" width="50%">Prijímateľ hotovostnej zábezpeky</td>
+                <td style="padding-bottom:32px;" width="50%">Poskytovateľ hotovostnej zábezpeky</td>
+            </tr>
+            <tr>
+                <td style="padding-bottom:32px;" width="50%">FLEETCOR Slovakia s.r.o.</td>
+                <td style="padding-bottom:32px;" width="50%">názov firmy: {currentOpportunity.Account.Name}</td>
+            </tr>
+            <tr>
+                <td style="padding-bottom:32px;" width="50%">v mene kt. koná: Jan Polívka</td>
+                <td style="padding-bottom:32px;" width="50%">v mene kt. koná: {fullName}</td>
+            </tr>
+            <tr style="height:80px">
+                <td width="50%"><img src="/resource/ete_images/docusignHU.png" height="80" /></td>
+                <td width="50%"></td>
+            </tr>
+            <tr>
+                <td style="padding-top:56px;" width="50%">
+                    <div style="border-bottom: 1px solid #ccc;width:260px;">Bratislava, {today}</div>
+                </td>
+                <td style="padding-top:56px;" width="50%">
+                    <div style="border-bottom: 1px solid #ccc;width:260px;">{currentOpportunity.Account.BillingCity},
+                        {today}</div>
+                </td>
+            </tr>
+            <tr>
+                <td width="50%">Miesto, dátum, podpis</td>
+                <td width="50%">Miesto, dátum, podpis</td>
+            </tr>
+        </table>
+        <div style="color:#999;font-size:12px; text-align:center; margin-top:32px;">
+            FLEETCOR Slovakia s.r.o. | Galvaniho 15/C | Bratislava - Ružinov 821 04 | Slovensko
+            <br>Obchodný register: Okresný súd Bratislava I (IČO: 48 054 348) | IČ DPH: SK2120086694
+        </div>
+    </div>
+</template>

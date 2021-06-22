@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Digital_Channel__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(NOT(ISBLANK(Facebook_Lead_ID__c)),
+      UPPER(Utm_source__c) = 'FACEBOOK'), 'Facebook',
+IF(UPPER(Utm_source__c) = 'BING' &amp;&amp; (CONTAINS(Utm_campaign__c, 'gdn') || CONTAINS(Utm_campaign__c, 'gsp')), 'Bing Display',
+IF(UPPER(Utm_source__c) = 'BING' &amp;&amp; CONTAINS(Utm_campaign__c, 'remarketing'), 'Bing Remarketing',
+IF(UPPER(Utm_source__c) = 'BING', 'Bing Search',
+IF(UPPER(Utm_source__c) = 'GOOGLE' &amp;&amp; (CONTAINS(Utm_campaign__c, 'gdn') || CONTAINS(Utm_campaign__c, 'gsp')), 'Google Display',
+IF(UPPER(Utm_source__c) = 'GOOGLE' &amp;&amp; CONTAINS(Utm_campaign__c, 'remarketing'), 'Google Remarketing',
+IF(UPPER(Utm_source__c) = 'GOOGLE', 'Google Search',
+IF(CONTAINS(UPPER(Utm_source__c), 'SHELL'), 'Referral',
+IF(UPPER(Utm_source__c) = 'TYPE-IN', 'Direct',
+IF(AND(NOT(ISBLANK(Utm_source__c)),
+       UPPER(Utm_source__c) != 'BING',
+       UPPER(Utm_source__c) != 'GOOGLE',
+       NOT(CONTAINS(UPPER(Utm_source__c), 'SHELL')),
+       UPPER(Utm_source__c) != 'TYPE-IN',
+       ISBLANK(Facebook_Lead_ID__c)), 'Other',
+IF(ISPICKVAL(LeadSource, 'Inbound Call'), 'Calls',
+IF(ISPICKVAL(LeadSource, 'Shell Email'), 'Referral',
+IF(ISPICKVAL(LeadSource, 'Inbound Email'), 'Email', 'SEO')))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Digital Channel</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

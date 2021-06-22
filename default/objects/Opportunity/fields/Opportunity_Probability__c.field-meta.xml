@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Probability__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(
+ISPICKVAL(StageName, "Prospecting"),
+ISPICKVAL(StageName, "Qualified Lead"),
+ISPICKVAL(StageName, "CCS Meetings")),
+"1:5",
+
+IF(OR(
+ISPICKVAL(StageName, "Order entered"),
+ISPICKVAL(StageName, "Order entered - Approved"),
+ISPICKVAL(StageName, "Order entered - deposit"),
+ISPICKVAL(StageName, "Order entered - more often DD"),
+ISPICKVAL(StageName, "CCS Quote/Proposal"),
+ISPICKVAL(StageName, "Follow Up Termin")
+),"1:3",
+
+IF(OR(
+ISPICKVAL(StageName, "Waiting for power of attorney"),
+ISPICKVAL(StageName, "Waiting for deposit"),
+ISPICKVAL(StageName, "Waiting for PIT/CIT"),
+ISPICKVAL(StageName, "Waiting for MANDAT"),
+ISPICKVAL(StageName, "Waiting for Credit decision"),
+ISPICKVAL(StageName, "Waiting for DD confirmation"),
+ISPICKVAL(StageName, "CCS Application"),
+ISPICKVAL(StageName, "Waitiing for components"),
+ISPICKVAL(StageName, "Waitiing for components"),
+ISPICKVAL(StageName, "CreditCheck"),
+ISPICKVAL(StageName, "CC In Progress"),
+ISPICKVAL(StageName, "Pending Sales – Deposit"),
+ISPICKVAL(StageName, "Pending Sales – Information"),
+ISPICKVAL(StageName, "Pending Credit"),
+ISPICKVAL(StageName, "Credit approved"),
+ISPICKVAL(StageName, "Pending Sales – AML doc."),
+ISPICKVAL(StageName, "Pending Credit Report"),
+ISPICKVAL(StageName, "Pending Credit AML"),
+ISPICKVAL(StageName, "Pending Credit Check"),
+ISPICKVAL(StageName, "Pending Sales - Token payment"),
+ISPICKVAL(StageName, "Pending Credit - Token payment"),
+ISPICKVAL(StageName, "Pending Sales - SEPA Confirmation"),
+ISPICKVAL(StageName, "Waiting for cash security"),
+ISPICKVAL(StageName, "Entscheidung anstehend"),
+ISPICKVAL(StageName, "Credit Report Generated"),
+ISPICKVAL(StageName, "Credit Check - Pending Credit"),
+ISPICKVAL(StageName, "Pending Sales - Deposit"),
+ISPICKVAL(StageName, "Waiting for Card order form")
+),"1:2",
+
+IF(OR(
+ISPICKVAL(StageName, "Waiting for card issuance"),
+ISPICKVAL(StageName, "Closed Won")
+),"1:1",
+
+"0:0"))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Opportunity Probability</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

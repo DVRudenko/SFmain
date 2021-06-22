@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The query statement defines the scope of the object records that are returned for evaluation --></help>
+    <label><!-- Query --></label>
+    <name>success__Query__c</name>
+</CustomFieldTranslation>

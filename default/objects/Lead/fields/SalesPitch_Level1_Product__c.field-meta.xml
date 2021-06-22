@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SalesPitch_Level1_Product__c</fullName>
+    <externalId>false</externalId>
+    <label>SalesPitch - Level1: Product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Flexible Kreditkarte</fullName>
+                <default>false</default>
+                <label>Flexible Kreditkarte</label>
+            </value>
+            <value>
+                <fullName>Universelle Flottenkarte</fullName>
+                <default>false</default>
+                <label>Universelle Flottenkarte</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

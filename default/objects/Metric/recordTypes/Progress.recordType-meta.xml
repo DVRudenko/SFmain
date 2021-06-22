@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Progress</fullName>
+    <active>true</active>
+    <description>Progress. Measure your goals by comparing current progress on tasks with a target value. Ideal for tracking specific numbers and percentages. Example: Convert 50 leads or achieve 100% customer satisfaction.</description>
+    <label>Fortschritt</label>
+</RecordType>

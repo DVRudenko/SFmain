@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- PPR Special conditions --></label>
+    <name>PPR_Special_conditions__c</name>
+    <picklistValues>
+        <masterLabel>100-200</masterLabel>
+        <translation><!-- 100-200 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100-200A</masterLabel>
+        <translation><!-- 100-200A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>200</masterLabel>
+        <translation><!-- 200 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>200A</masterLabel>
+        <translation><!-- 200A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30-50</masterLabel>
+        <translation><!-- 30-50 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>30-50A</masterLabel>
+        <translation><!-- 30-50A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>50-100</masterLabel>
+        <translation><!-- 50-100 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>50-100A</masterLabel>
+        <translation><!-- 50-100A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yes</masterLabel>
+        <translation><!-- Yes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Индивидуальный 2019</masterLabel>
+        <translation><!-- Индивидуальный 2019 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Индивидуальный 2019А</masterLabel>
+        <translation><!-- Индивидуальный 2019А --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>НЕТ</masterLabel>
+        <translation><!-- НЕТ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Субсеть по АГЗС</masterLabel>
+        <translation><!-- Субсеть по АГЗС --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Allows for further categorisation of Base Behaviours for Insight and Reporting purposes --></help>
+    <label><!-- Category --></label>
+    <name>success__Category__c</name>
+</CustomFieldTranslation>

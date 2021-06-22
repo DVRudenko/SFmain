@@ -1,0 +1,131 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container {
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.button-place {
+    width: fit-content;
+    align-self: center;
+    margin: 8px;
+}
+
+.lightning-button-brand.lightning-button {
+    padding-left: var(--sds-c-button-brand-spacing-inline-start,1rem);
+    padding-right: var(--sds-c-button-brand-spacing-inline-end,1rem);
+    text-align: center;
+    vertical-align: middle;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: border .15s linear;
+    transition: border .15s linear;
+    background-color: var(--sds-c-button-brand-color-background,#0070d2);
+    border-color: var(--sds-c-button-brand-color-border,#0070d2);
+    color: var(--sds-c-button-brand-text-color,#fff);
+}
+.lightning-button {
+    position: relative;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: var(--sds-c-button-spacing-block-start,0);
+    padding-right: var(--sds-c-button-spacing-inline-end,0);
+    padding-bottom: var(--sds-c-button-spacing-block-end,0);
+    padding-left: var(--sds-c-button-spacing-inline-start,0);
+    background: 0 0;
+    background-color: var(--sds-c-button-color-background,transparent);
+    background-clip: border-box;
+    border-color: var(--sds-c-button-color-border,transparent);
+    border-style: solid;
+    border-width: var(--sds-c-button-sizing-border,1px);
+    border-radius: var(--sds-c-button-radius-border,.25rem);
+    -webkit-box-shadow: var(--sds-c-button-shadow);
+    box-shadow: var(--sds-c-button-shadow);
+    line-height: var(--sds-c-button-line-height,1.875rem);
+    text-decoration: none;
+    color: var(--sds-c-button-text-color,#0070d2);
+    -webkit-appearance: none;
+    white-space: normal;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.lightning-button:hover {
+    background-color: var(--sds-c-button-brand-color-background-hover,#005fb2);
+    border-color: var(--sds-c-button-brand-color-border-hover,#005fb2);
+    color: var(--sds-c-button-brand-text-color-hover,#fff);
+}
+
+.contact-field {
+    color: var(--lwc-colorTextDefault,#333333);
+    font-family: var(--lwc-fontFamily,"Arial"),sans-serif;
+    display: inline-block;
+    line-height: 30px;
+    box-sizing: border-box;
+    box-shadow: none;
+    background-color: var(--lwc-esColorBackgroundInverse,#fff);
+    border: 1px solid var(--lwc-esColorBorderSeparator,#949494);
+    border-radius: 4px;
+    width: 100%;
+    height: 44px;
+    padding: 0 12px;
+    font-size: var(--lwc-esFontSizeSmall,0.875em);
+    appearance: none;
+
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    border-style: inset;
+    border-image: initial;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+
+}
+
+.input-label {
+    color: var(--lwc-colorTextDefault,#333333);
+    position: relative;
+    font-size: var(--lwc-esFontSizeTextXSmall,0.75em);
+    line-height: 1.5;
+    margin-right: .75em;
+    margin-left: .5em;
+    margin-bottom: 2px;
+    cursor: default;
+    text-align: left;
+    list-style: none;
+}
+
+
+.lightning-input-container {
+    text-align: left;
+    margin-bottom: 6px;
+    display: block;
+    list-style: none;
+    font-size: inherit;
+}
+.input-span-label {
+    color: var(--lwc-colorTextDefault,#333333);
+    position: relative;
+    line-height: 1.5;
+    margin-right: .75em;
+    margin-left: .5em;
+    margin-bottom: 2px;
+}

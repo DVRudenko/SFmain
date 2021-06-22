@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Starts_Status__c</fullName>
+    <description>Status of Starts Process after the Close of the Opportunity as a Win.  Card Processing/BackOffice can select the first values 0, 0.5 and 1 and Starts Rep can select the remaining values.  When 1 is selected, process flows switch the record type, etc to the Starts Team.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Status of Starts Process; drives the Starts: Schedule dates.  Card Processing/BackOffice can select the first values 0, 0.5 and 1 and Starts Rep can select the remaining values.</inlineHelpText>
+    <label>Starts: Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0. Request received</fullName>
+                <default>false</default>
+                <label>0. Request received</label>
+            </value>
+            <value>
+                <fullName>0.4 Registration in GFN: Winback</fullName>
+                <default>false</default>
+                <label>0.4 Registration in GFN: Winback</label>
+            </value>
+            <value>
+                <fullName>0.5 Missing information</fullName>
+                <default>false</default>
+                <label>0.5 Missing information</label>
+            </value>
+            <value>
+                <fullName>0.6 Missing information provided</fullName>
+                <default>false</default>
+                <label>0.6 Missing information provided</label>
+            </value>
+            <value>
+                <fullName>0.9 Ready for GFN</fullName>
+                <default>false</default>
+                <label>0.9 Ready for GFN</label>
+            </value>
+            <value>
+                <fullName>1. Customer registered in GFN (card issued &amp; delivered)</fullName>
+                <default>false</default>
+                <label>1. Customer registered in GFN (card issued &amp; delivered)</label>
+            </value>
+            <value>
+                <fullName>2.1 First Check: Cards/PINs Received</fullName>
+                <default>false</default>
+                <label>2.1 First Check: Cards/PINs Received</label>
+            </value>
+            <value>
+                <fullName>2.2 First Check: Not Reached</fullName>
+                <default>false</default>
+                <label>2.2 First Check: Not Reached</label>
+            </value>
+            <value>
+                <fullName>2.3 First Check: Delay</fullName>
+                <default>false</default>
+                <label>2.3 First Check: Delay</label>
+            </value>
+            <value>
+                <fullName>2.4 First Check: Winback</fullName>
+                <default>false</default>
+                <label>2.4 First Check: Winback</label>
+            </value>
+            <value>
+                <fullName>3.1 Volume Check 1: Customer Pumping</fullName>
+                <default>false</default>
+                <label>3.1 Volume Check 1: Customer Pumping</label>
+            </value>
+            <value>
+                <fullName>3.2 Volume Check 1: Not Reached</fullName>
+                <default>false</default>
+                <label>3.2 Volume Check 1: Not Reached</label>
+            </value>
+            <value>
+                <fullName>3.3 Volume Check 1: Delay</fullName>
+                <default>false</default>
+                <label>3.3 Volume Check 1: Delay</label>
+            </value>
+            <value>
+                <fullName>3.4 Volume Check 1: Winback</fullName>
+                <default>false</default>
+                <label>3.4 Volume Check 1: Winback</label>
+            </value>
+            <value>
+                <fullName>4.1.1 Volume Check 2: Pumping Enough</fullName>
+                <default>false</default>
+                <label>4.1.1 Volume Check 2: Pumping Enough</label>
+            </value>
+            <value>
+                <fullName>4.1.2 Volume Check 2: Pumping NOT Enough</fullName>
+                <default>false</default>
+                <label>4.1.2 Volume Check 2: Pumping NOT Enough</label>
+            </value>
+            <value>
+                <fullName>4.2 Volume Check 2: Not Reached</fullName>
+                <default>false</default>
+                <label>4.2 Volume Check 2: Not Reached</label>
+            </value>
+            <value>
+                <fullName>4.3 Volume Check 2: Delay</fullName>
+                <default>false</default>
+                <label>4.3 Volume Check 2: Delay</label>
+            </value>
+            <value>
+                <fullName>4.4 Volume Check 2: Winback</fullName>
+                <default>false</default>
+                <label>4.4 Volume Check 2: Winback</label>
+            </value>
+            <value>
+                <fullName>5.1.1 Final Check: Pumping Enough</fullName>
+                <default>false</default>
+                <label>5.1.1 Final Check: Pumping Enough</label>
+            </value>
+            <value>
+                <fullName>5.1.2 Final Check: Pumping NOT Enough</fullName>
+                <default>false</default>
+                <label>5.1.2 Final Check: Pumping NOT Enough</label>
+            </value>
+            <value>
+                <fullName>5.2 Final Check:Not Pumping</fullName>
+                <default>false</default>
+                <label>5.2 Final Check:Not Pumping</label>
+            </value>
+            <value>
+                <fullName>5.3 Final Check: Delay</fullName>
+                <default>false</default>
+                <label>5.3 Final Check: Delay</label>
+            </value>
+            <value>
+                <fullName>5.4 Final Check: Winback</fullName>
+                <default>false</default>
+                <label>5.4 Final Check: Winback</label>
+            </value>
+            <value>
+                <fullName>5.5 Winback Failed</fullName>
+                <default>false</default>
+                <label>5.5 Winback Failed</label>
+            </value>
+            <value>
+                <fullName>5.6 Fraud</fullName>
+                <default>false</default>
+                <label>5.6 Fraud</label>
+            </value>
+            <value>
+                <fullName>CS - Not Pumping</fullName>
+                <default>false</default>
+                <label>CS - Not Pumping</label>
+            </value>
+            <value>
+                <fullName>CS - Invoice Call</fullName>
+                <default>false</default>
+                <label>CS - Invoice Call</label>
+            </value>
+            <value>
+                <fullName>CS - Reorder Cards</fullName>
+                <default>false</default>
+                <label>CS – Reorder Cards</label>
+            </value>
+            <value>
+                <fullName>CS - Completed</fullName>
+                <default>false</default>
+                <label>CS - Completed</label>
+            </value>
+            <value>
+                <fullName>CS - Terminated</fullName>
+                <default>false</default>
+                <label>CS - Terminated</label>
+            </value>
+            <value>
+                <fullName>CS - Unreachable</fullName>
+                <default>false</default>
+                <label>CS - Unreachable</label>
+            </value>
+            <value>
+                <fullName>CS - No Interest</fullName>
+                <default>false</default>
+                <label>CS - No Interest</label>
+            </value>
+            <value>
+                <fullName>CS - Susp. Fraud</fullName>
+                <default>false</default>
+                <label>CS - Susp. Fraud</label>
+            </value>
+            <value>
+                <fullName>0.1 Information needed</fullName>
+                <default>false</default>
+                <label>0.1 Information needed</label>
+            </value>
+            <value>
+                <fullName>0.9a Ready for Manual Setup</fullName>
+                <default>false</default>
+                <label>0.9a Ready for Manual Setup</label>
+            </value>
+            <value>
+                <fullName>0.9b Ready for Robot Setup</fullName>
+                <default>false</default>
+                <label>0.9b Ready for Robot Setup</label>
+            </value>
+            <value>
+                <fullName>1.0a GFN Setup done Manually</fullName>
+                <default>false</default>
+                <label>1.0a GFN Setup done Manually</label>
+            </value>
+            <value>
+                <fullName>1.0b GFN Setup done by Robot</fullName>
+                <default>false</default>
+                <label>1.0b GFN Setup done by Robot</label>
+            </value>
+            <value>
+                <fullName>2. Application in Shell (card issuing and delivering)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>2. Application in Shell (card issuing and delivering)</label>
+            </value>
+            <value>
+                <fullName>5. Termination</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>5. Termination</label>
+            </value>
+            <value>
+                <fullName>5.2 Sent back to sales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>5.2 Sent back to sales</label>
+            </value>
+            <value>
+                <fullName>6. Zoho</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>6. Zoho</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,46 @@
+<style>
+    .how-to-pay {
+        font-size: 11px;
+    }
+
+    .how-to-pay__table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .how-to-pay__table tr {
+        margin-top: 5px;
+    }
+
+    .how-to-pay__table tr td {
+        width: 50%;
+        padding: 4px 0 0;
+        border-bottom: 1px solid rgb(196, 196, 196);
+    }
+</style>
+
+<div class="how-to-pay">
+    <p class="doc-header">Dane dotyczące przelewu bankowego</p>
+    <table class="how-to-pay__table">
+        <tr>
+            <td>Kaucja do zapłaty:</td>
+            <td>{!securityAmountToPay} zł</td>
+        </tr>
+        <tr>
+            <td>Właściciel</td>
+            <td>FLEETCOR Poland sp. z o.o.</td>
+        </tr>
+        <tr>
+            <td>Tytuł płatności</td>
+            <td>Nazwa Twojej firmy</td>
+        </tr>
+        <tr>
+            <td>Numer konta</td>
+            <td>07 1240 1040 1111 0010 6484 1442</td>
+        </tr>
+        <tr>
+            <td>Nazwa banku</td>
+            <td>Bank Polska Kasa Opieki Spółka Akcyjna</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Dial Entry Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- CallObjectIdentifier field is no longer used. Use IndexedCallObjectIdentifier. --></errorMessage>
+        <name>NVMConnect__Call_Object_Identifier_Deprecated</name>
+    </validationRules>
+</CustomObjectTranslation>

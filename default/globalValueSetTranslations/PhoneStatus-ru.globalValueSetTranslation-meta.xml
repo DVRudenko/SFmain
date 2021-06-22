@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>CTI System Error</masterLabel>
+        <translation>Naumen - системная ошибка</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CTI Wrong number - Doesn&apos;t exist</masterLabel>
+        <translation>Naumen - номер не существует</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Dial out</masterLabel>
+        <translation>Недозвон</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Needs validation</masterLabel>
+        <translation>Необходима валидация</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New</masterLabel>
+        <translation>Новый номер</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Successful dialing</masterLabel>
+        <translation>Успешный дозвон</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Successful dialing - Public sector entity</masterLabel>
+        <translation>Тендер/Бюджетная организация</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Successful dialing - Bankrupt</masterLabel>
+        <translation>Банкрот</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Successful dialing - Existing customer</masterLabel>
+        <translation>Существующий клиент</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Successful dialing - Own gas station</masterLabel>
+        <translation>Топливо оптом/Собственная АЗС</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Successful dialing - No car</masterLabel>
+        <translation>Нет авто</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Successful dialing - Refused to speak</masterLabel>
+        <translation>Отказ от разговора</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Successful dialing - Want a better offer</masterLabel>
+        <translation>Хотят более выгодной цены/скидки/условий</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Successful dialing - Contact is unreachable</masterLabel>
+        <translation>Контактное лицо недостижимо</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Wrong number - Doesn&#39;t exist</masterLabel>
+        <translation>Номер не существует</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Wrong number - Irrelevant phone</masterLabel>
+        <translation>Неактуальный номер</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Wrong number - Irrelevant phone for Account</masterLabel>
+        <translation>Нерелевантный контакт для записи Организации</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Wrong number - Not a company</masterLabel>
+        <translation>Не является организацией</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Wrong number - Incorrect contact info</masterLabel>
+        <translation>Некорректная контактная информация</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

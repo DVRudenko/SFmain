@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_Forecast_cards__c</fullName>
+    <description>A forecast based on a field "Expected volume (cards)" (number of cards * avg monthly pumping; per card type; source data from GFN, PCMS from period 2017-18)</description>
+    <externalId>false</externalId>
+    <formula>Expected_Volume_cards__c*Probability*12</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NS Forecast (cards)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

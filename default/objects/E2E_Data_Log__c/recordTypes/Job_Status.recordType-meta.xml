@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Status</fullName>
+    <active>true</active>
+    <label>Job Status</label>
+    <picklistValues>
+        <picklist>Exception_Type__c</picklist>
+        <values>
+            <fullName>System Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Process Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Logic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CF System Error</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Company search</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

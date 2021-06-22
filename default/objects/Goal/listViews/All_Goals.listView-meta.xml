@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Goals</fullName>
+    <columns>Name</columns>
+    <columns>Owner</columns>
+    <columns>Progress</columns>
+    <columns>Status</columns>
+    <columns>DueDate</columns>
+    <filterScope>Everything</filterScope>
+    <label>Все</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>Russian_Admins</group>
+        <roleAndSubordinates>PPR_Fleetcor</roleAndSubordinates>
+    </sharedTo>
+</ListView>

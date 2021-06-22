@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_GFN_Contact_type__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS GFN Contact type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Additional Contact</fullName>
+                <default>false</default>
+                <label>Additional Contact</label>
+            </value>
+            <value>
+                <fullName>Invoice Recipient</fullName>
+                <default>false</default>
+                <label>Invoice Recipient</label>
+            </value>
+            <value>
+                <fullName>Responsible person 2</fullName>
+                <default>false</default>
+                <label>Responsible person 2</label>
+            </value>
+            <value>
+                <fullName>Office</fullName>
+                <default>false</default>
+                <label>Office</label>
+            </value>
+            <value>
+                <fullName>iMonitor contact</fullName>
+                <default>false</default>
+                <label>iMonitor contact</label>
+            </value>
+            <value>
+                <fullName>CCS Plus</fullName>
+                <default>false</default>
+                <label>CCS Plus</label>
+            </value>
+            <value>
+                <fullName>Authorization</fullName>
+                <default>false</default>
+                <label>Authorization</label>
+            </value>
+            <value>
+                <fullName>Card Delivery</fullName>
+                <default>false</default>
+                <label>Card Delivery</label>
+            </value>
+            <value>
+                <fullName>Pin Delivery</fullName>
+                <default>false</default>
+                <label>Pin Delivery</label>
+            </value>
+            <value>
+                <fullName>Debt Contact</fullName>
+                <default>false</default>
+                <label>Debt Contact</label>
+            </value>
+            <value>
+                <fullName>Jen v SF</fullName>
+                <default>false</default>
+                <label>Jen v SF</label>
+            </value>
+            <value>
+                <fullName>Primary</fullName>
+                <default>false</default>
+                <label>Primary</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

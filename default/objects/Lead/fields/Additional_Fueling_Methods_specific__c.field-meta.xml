@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Additional_Fueling_Methods_specific__c</fullName>
+    <externalId>false</externalId>
+    <label>Additional Fueling Methods (specific)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Amex</fullName>
+                <default>false</default>
+                <label>Amex</label>
+            </value>
+            <value>
+                <fullName>Discover</fullName>
+                <default>false</default>
+                <label>Discover</label>
+            </value>
+            <value>
+                <fullName>Mastercard</fullName>
+                <default>false</default>
+                <label>Mastercard</label>
+            </value>
+            <value>
+                <fullName>Visa</fullName>
+                <default>false</default>
+                <label>Visa</label>
+            </value>
+            <value>
+                <fullName>Expense reimbursement</fullName>
+                <default>false</default>
+                <label>Expense reimbursement</label>
+            </value>
+            <value>
+                <fullName>Petty cash</fullName>
+                <default>false</default>
+                <label>Petty cash</label>
+            </value>
+            <value>
+                <fullName>Comdata</fullName>
+                <default>false</default>
+                <label>Comdata</label>
+            </value>
+            <value>
+                <fullName>FleetOne</fullName>
+                <default>false</default>
+                <label>FleetOne</label>
+            </value>
+            <value>
+                <fullName>Fuelman</fullName>
+                <default>false</default>
+                <label>Fuelman</label>
+            </value>
+            <value>
+                <fullName>OTR Trucking</fullName>
+                <default>false</default>
+                <label>OTR Trucking</label>
+            </value>
+            <value>
+                <fullName>Regional company</fullName>
+                <default>false</default>
+                <label>Regional company</label>
+            </value>
+            <value>
+                <fullName>Voyager</fullName>
+                <default>false</default>
+                <label>Voyager</label>
+            </value>
+            <value>
+                <fullName>WEX</fullName>
+                <default>false</default>
+                <label>WEX</label>
+            </value>
+            <value>
+                <fullName>ARCO</fullName>
+                <default>false</default>
+                <label>ARCO</label>
+            </value>
+            <value>
+                <fullName>BP</fullName>
+                <default>false</default>
+                <label>BP</label>
+            </value>
+            <value>
+                <fullName>Chevron/Texaco</fullName>
+                <default>false</default>
+                <label>Chevron/Texaco</label>
+            </value>
+            <value>
+                <fullName>Citgo</fullName>
+                <default>false</default>
+                <label>Citgo</label>
+            </value>
+            <value>
+                <fullName>Conoco/Phillips 66/76</fullName>
+                <default>false</default>
+                <label>Conoco/Phillips 66/76</label>
+            </value>
+            <value>
+                <fullName>Exxon/Mobil</fullName>
+                <default>false</default>
+                <label>Exxon/Mobil</label>
+            </value>
+            <value>
+                <fullName>Shell</fullName>
+                <default>false</default>
+                <label>Shell</label>
+            </value>
+            <value>
+                <fullName>Local Mobile Refueler</fullName>
+                <default>false</default>
+                <label>Local Mobile Refueler</label>
+            </value>
+            <value>
+                <fullName>U.S. Fleet (Quick Fuel)</fullName>
+                <default>false</default>
+                <label>U.S. Fleet (Quick Fuel)</label>
+            </value>
+            <value>
+                <fullName>Co-branded card</fullName>
+                <default>false</default>
+                <label>Co-branded card</label>
+            </value>
+            <value>
+                <fullName>Fully managed</fullName>
+                <default>false</default>
+                <label>Fully managed</label>
+            </value>
+            <value>
+                <fullName>CFN (Commercial Fueling Network)</fullName>
+                <default>false</default>
+                <label>CFN (Commercial Fueling Network)</label>
+            </value>
+            <value>
+                <fullName>Local Cardlocks</fullName>
+                <default>false</default>
+                <label>Local Cardlocks</label>
+            </value>
+            <value>
+                <fullName>Pacific Pride</fullName>
+                <default>false</default>
+                <label>Pacific Pride</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Rosneft</fullName>
+                <default>false</default>
+                <label>Rosneft</label>
+            </value>
+            <value>
+                <fullName>Licard</fullName>
+                <default>false</default>
+                <label>Licard</label>
+            </value>
+            <value>
+                <fullName>Magystral</fullName>
+                <default>false</default>
+                <label>Magystral</label>
+            </value>
+            <value>
+                <fullName>Gazpromneft'</fullName>
+                <default>false</default>
+                <label>Gazpromneft'</label>
+            </value>
+            <value>
+                <fullName>Shell Russia</fullName>
+                <default>false</default>
+                <label>Shell Russia</label>
+            </value>
+            <value>
+                <fullName>Tatneft</fullName>
+                <default>false</default>
+                <label>Tatneft</label>
+            </value>
+            <value>
+                <fullName>Surgutneftegas</fullName>
+                <default>false</default>
+                <label>Surgutneftegas</label>
+            </value>
+            <value>
+                <fullName>MTK</fullName>
+                <default>false</default>
+                <label>MTK</label>
+            </value>
+            <value>
+                <fullName>Inforkom</fullName>
+                <default>false</default>
+                <label>Inforkom</label>
+            </value>
+            <value>
+                <fullName>EKA-Processing</fullName>
+                <default>false</default>
+                <label>EKA-Processing</label>
+            </value>
+            <value>
+                <fullName>Novatorrus-Invest</fullName>
+                <default>false</default>
+                <label>Novatorrus-Invest</label>
+            </value>
+            <value>
+                <fullName>SKON</fullName>
+                <default>false</default>
+                <label>SKON</label>
+            </value>
+            <value>
+                <fullName>Computer LTD-1</fullName>
+                <default>false</default>
+                <label>Computer LTD-1</label>
+            </value>
+            <value>
+                <fullName>Avtocard-Voronezh</fullName>
+                <default>false</default>
+                <label>Avtocard-Voronezh</label>
+            </value>
+            <value>
+                <fullName>Regional operator</fullName>
+                <default>false</default>
+                <label>Regional operator</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

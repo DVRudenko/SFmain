@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DocuSign_Used__c</fullName>
+    <externalId>false</externalId>
+    <formula>NOT(ISBLANK( DocuSign_Status__c ))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>DocuSign Used</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

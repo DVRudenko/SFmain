@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Additional Hardware</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Additional Hardware</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>Additional Hardware Layout</layout>
+        <sections>
+            <label><!-- Additional HW --></label>
+            <section>Additional HW</section>
+        </sections>
+        <sections>
+            <label><!-- Alarm and Guarding services --></label>
+            <section>Alarm and Guarding services</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Drivers Identification --></label>
+            <section>Drivers Identification</section>
+        </sections>
+        <sections>
+            <label><!-- Temperature measurement --></label>
+            <section>Temperature measurement</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- You need to select at least 1 Additional Hardware. --></errorMessage>
+        <name>Additional_Hardware_1</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Number of Units must be positive. --></errorMessage>
+        <name>Additional_Hardware_positive</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t edit Additional Hardware when Approval Process is In Progress. --></errorMessage>
+        <name>Approval_Sent</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change Account Price Book on Additional Hardware once it has been assigned. --></errorMessage>
+        <name>Lock_Account_Price_Book</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Record is Closed, you cannot modify it. Please contact your manager. --></errorMessage>
+        <name>Lock_Carnet_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change Opportunity on Additional Hardware once it has been assigned. --></errorMessage>
+        <name>Lock_Opportunity</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New_Additional_Hardware --></label>
+        <name>New_Additional_Hardware</name>
+    </webLinks>
+</CustomObjectTranslation>

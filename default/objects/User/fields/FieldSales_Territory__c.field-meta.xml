@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieldSales_Territory__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>marking of project participants of the territory</description>
+    <externalId>false</externalId>
+    <label>FieldSales_Territory</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Criteria_Logic__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Use the criteria numbers along with boolean operators &#39;AND&#39; and &#39;OR&#39; to define the statement, e.g. 1 AND (2 OR 3)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use the criteria numbers along with boolean operators &#39;AND&#39; and &#39;OR&#39; to define the statement, e.g. 1 AND (2 OR 3)</inlineHelpText>
+    <label>Criteria Logic</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

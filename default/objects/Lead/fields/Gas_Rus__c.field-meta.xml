@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gas_Rus__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check if customer uses Gas</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Check if customer uses Gas</inlineHelpText>
+    <label>Gas</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

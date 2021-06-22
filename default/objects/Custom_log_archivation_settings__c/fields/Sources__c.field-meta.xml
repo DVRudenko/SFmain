@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sources__c</fullName>
+    <description>List of sources. Must be separated by ;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>List of sources. Must be separated by ;</inlineHelpText>
+    <label>Sources</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

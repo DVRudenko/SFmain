@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMContactWorld__NVMCaseOrigin__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The content of this field is presented on the contact pad when a case is assigned to an agent. For example: Email</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The content of this field is presented on the contact pad when a case is assigned to an agent. For example: Email</inlineHelpText>
+    <label>NVM Case Origin</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

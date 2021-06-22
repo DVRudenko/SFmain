@@ -1,0 +1,451 @@
+<apex:page controller="ETELongFormJITBController"
+           action="{! init }"
+           sidebar="false"
+           showHeader="false"
+           applyBodyTag="false"
+           applyHtmlTag="false"
+           standardStylesheets="false"
+           docType="html-5.0"
+           cache="false">
+    <html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="shortcut icon"
+              href="{!$Resource.FleetcorFavicon}"
+              type="image/x-icon; charset=binary" />
+        <title>{! content['title']}</title>
+        <!-- STYLESHEET START -->
+        <style>
+            @font-face {
+                font-family: Montserrat;
+                src: url("{!URLFOR($Resource.e2eFonts, '/Montserrat-Regular.ttf')}");
+            }
+
+            @font-face {
+                font-family: Montserrat bold;
+                src: url("{!URLFOR($Resource.e2eFonts, '/Montserrat-Bold.ttf')}");
+            }
+
+            /*@font-face {
+                font-family: Montserrat light;
+                src: url("{!URLFOR($Resource.e2eFonts, '/Montserrat-Light.ttf')}");
+            }*/
+
+            @font-face {
+                font-family: Montserrat semibold;
+                src: url("{!URLFOR($Resource.e2eFonts, '/Montserrat-SemiBold.ttf')}");
+            }
+
+            @font-face {
+                font-family: Montserrat medium;
+                src: url("{!URLFOR($Resource.e2eFonts, '/Montserrat-Medium.ttf')}");
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                height: 100%;
+                color: #333;
+            }
+
+            body {
+                font-family: Montserrat;
+                background: url("{!URLFOR($Resource.ete_images, 'bg.jpg')}") no-repeat;
+                background-size: 100%;
+            }
+
+            .container {
+                padding: 0 .75rem;
+                position: relative;
+                width: 100%;
+            }
+
+            .app {
+                position: relative;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .app__header,
+            .app_footer {
+                flex-shrink: 0;
+            }
+
+            .app__main {
+                flex-grow: 1;
+            }
+
+            .card {
+                margin-left: -.75rem;
+                margin-right: -.75rem;
+                max-width: initial;
+                padding: 2rem .75rem;
+                background-color: #fff;
+                box-shadow: 30px 30px 90px rgba(46, 83, 104, .25);
+            }
+
+            .app__logo {
+                width: 160px;
+                height: 17px;
+            }
+
+            .app__header {
+                padding: 2rem 0;
+            }
+
+            .app__main-title {
+                font-family: Montserrat bold;
+                font-size: 36px;
+                color: #1A1A1A;
+                letter-spacing: -0.8px;
+                margin-bottom: 2rem;
+            }
+
+            .app_footer {
+                position: relative;
+                background-color: #fff;
+                padding: 2rem 0;
+                margin-top: 4rem;
+            }
+
+            .card__title {
+                font-family: Montserrat bold;
+                line-height: 28px;
+                font-size: 24px;
+                letter-spacing: -0.3px;
+                color: #1A1A1A;
+                margin-bottom: 2rem;
+            }
+
+            .card__locator {
+                height: 300px;
+            }
+
+            .app__footer-copyright {
+                text-align: center;
+            }
+
+            .app__footer-copyright-link {
+                color: #777;
+                display: inline-block;
+                text-decoration: none;
+                font-size: 13px;
+                transition: color .4s;
+            }
+
+            .app__footer-copyright-link:hover {
+                color: #3782c8;
+            }
+
+
+            .app__footer-description {
+                margin: 1.5rem 0;
+                line-height: 15px;
+                font-size: 13px;
+                color: #777;
+            }
+
+            .controller {
+                margin-top: 1.5rem;
+                text-align: center;
+            }
+
+            .controller__button {
+                border-radius: 50px;
+                text-align: center;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #212E35;
+                outline: none;
+                user-select: none;
+                font-family: Montserrat semibold;
+                background-color: #80D3DD;
+                transition: background-color 0.3s, color 0.3s;
+                padding: 18px 40px;
+                display: inline-block;
+            }
+
+            .controller__button:hover {
+                background-color: #A5DDE4;
+            }
+
+            .controller__button_disabled {
+                background-color: #EEEEEE;
+            }
+
+            .controller__button_disabled:hover {
+                background-color: #E6E6E6;
+                cursor: not-allowed;
+            }
+
+            .card__footer-title {
+                display: none;
+                margin: 1.5rem 0 0;
+                font-family: Montserrat medium;
+                line-height: 23px;
+                font-size: 18px;
+            }
+
+            .card__footer-address {
+                line-height: 18px;
+                font-size: 15px;
+                color: #333;
+            }
+
+            .card__footer-title:empty,
+            .card__footer-address:empty {
+                display: none;
+            }
+
+            .spinner,
+            .browser-block {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .browser-block__text {
+                margin-bottom: 1rem;
+            }
+
+            .spinner__text {
+                margin-top: 1rem;
+            }
+
+            .spinner__circle {
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                opacity: 0;
+                border-radius: 50%;
+                border-width: 3px;
+                border-style: solid;
+                border-color: #80828A transparent #80828A #80828A;
+                animation: rotate .8s linear infinite, fadeSpinner .3s .3s linear forwards;
+            }
+
+            @media (min-width: 768px) {
+
+                .spinner__circle {
+                    width: 48px;
+                    height: 48px;
+                    border-width: 4px;
+                }
+
+                .container {
+                    padding: 0 1.5rem;
+                }
+
+                .card {
+                    margin-left: -1.5rem;
+                    margin-right: -1.5rem;
+                    padding: 2rem 1.5rem;
+                }
+
+                .card__locator {
+                    height: 350px;
+                }
+
+                .app_footer {
+                    padding: 2rem 0;
+                    margin-top: 3rem;
+                }
+            }
+
+            @media (min-width: 1024px) {}
+
+            @media (min-width: 1280px) {
+                .container {
+                    max-width: 1000px;
+                    padding: 0 1rem;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .card {
+                    margin-left: 0;
+                    margin-right: 0;
+                    max-width: 100%;
+                    padding: 2rem 2.5rem 2rem;
+                }
+
+                .card__locator {
+                    height: 450px;
+                }
+
+                .app_footer {
+                    margin-top: 4rem;
+                }
+            }
+
+            @keyframes rotate {
+                0% {
+                    transform: rotate(0);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes fadeSpinner {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+        </style>
+        <!-- STYLESHEET END -->
+    </head>
+
+    <body>
+        <div class="app">
+            <header class="app__header">
+                <div class="container">
+                    <img src="{!URLFOR($Resource.ete_images, 'm-logo.png')}"
+                         alt="Fleetcor"
+                         class="app__logo" />
+                </div>
+            </header>
+            <main class="app__main">
+                <div class="container">
+                    <h1 class="app__main-title">{! content['headerTitle']}</h1>
+                    <div class="card">
+                        <h2 class="card__title">{! content['cardTitle']}</h2>
+                        <iframe allow="geolocation *;"
+                                class="card__locator"
+                                frameborder="0"
+                                src="{! content['frameLink']}"
+                                width="100%"></iframe>
+                        <footer class="card__footer">
+                            <h4 class="card__footer-title">{! content['addressTitle']}</h4>
+                            <p class="card__footer-address"></p>
+                            <div class="controller">
+                                <a href="javascript:void(0)"
+                                   class="controller__button controller__button_disabled">{!
+                                    content['buttonTitle']}</a>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </main>
+            <footer class="app_footer">
+                <div class="container">
+                    <img src="{!URLFOR($Resource.ete_images, 'm-logo.png')}"
+                         alt="Fleetcor"
+                         class="app__logo" />
+                    <p class="app__footer-description">{! content['footerDescription']}</p>
+                    <p class="app__footer-copyright">
+                        <a href="{! content['footerCopyRightLink']}"
+                           class="app__footer-copyright-link">&copy; Copyright. {!
+                            content['footerCopyRight']}</a>
+                    </p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- JAVA SCRIPT START-->
+        <script>
+            (function () {
+                const link = "{! content['longFormLink']}";
+                const country = "{! content['country']}";
+                const countryCode = "{! content['countryCode']}";
+                const recordType = "{! content['recordType']}";
+                const waitingTitle = "{! content['waitingForRedirection']}";
+                const popupBlocked = "{! content['popupBlocked']}";
+                let esi, stationAddress;
+
+                const button = document.querySelector('.controller__button');
+                button.onclick = clickEventHandler;
+
+                async function clickEventHandler() {
+                    if (esi) {
+                        showSpinner();
+                        const response = await fetch('/services/apexrest/e2e', {
+                            method: 'post',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                method: 'locatorJitbSource',
+                                country: country,
+                                countryCode: countryCode,
+                                esi: esi,
+                                homeStation: stationAddress,
+                                recordType: recordType
+                            })
+                        })
+                            .then(response => response.json())
+                            .catch(error => {
+                                console.log('Error', error);
+                            });
+
+                        if (response && response.statusCode === 100) {
+                            const linkSource = `${link}?source=${response.source}`;
+                            if (!window.open(linkSource)) {
+                                showButtonForRedirect(linkSource);
+                            }
+                        }
+
+                    }
+                }
+
+                function showSpinner() {
+                    document.querySelector('.app').innerHTML = `
+                        <div class="spinner">
+                            <div class="spinner__circle"></div>
+                            <div class="spinner__text">
+                                ${waitingTitle}
+                            </div>
+                        </div>
+                    `;
+                }
+
+                function showButtonForRedirect(linkSource) {
+                    document.querySelector('.app').innerHTML = `
+                    <div class="browser-block">
+                        <div class="browser-block__text">
+                            ${popupBlocked}
+                        </div>
+                        <a href="${linkSource}"
+                        class="controller__button">{!
+                         content['buttonTitleGoToForm']}</a>
+                    </div>
+                `;
+                }
+
+                function showAddress(address) {
+                    document.querySelector('.card__footer-title').style.display = address ? 'block' : 'none';
+                    document.querySelector('.card__footer-address').innerHTML = address;
+                    document.querySelector('.controller__button').className = address ? 'controller__button' : 'controller__button controller__button_disabled';
+                }
+
+                window.addEventListener('message', function (event) {
+                    if (event.data && event.data.address) {
+                        esi = event.data.stationId;
+                        stationAddress = `${event.data.townName}, ${event.data.address}`;
+                        showAddress(`${event.data.brand} ${event.data.stationId}, ${event.data.townName}, ${event.data.address}`);
+                    }
+                });
+
+            })();
+        </script>
+        <!-- JAVA SCRIPT END-->
+    </body>
+
+    </html>
+</apex:page>

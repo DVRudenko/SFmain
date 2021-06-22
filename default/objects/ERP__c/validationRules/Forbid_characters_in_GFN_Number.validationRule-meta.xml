@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Forbid_characters_in_GFN_Number</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+                NOT( $Permission.PO_Custom_Permission ),
+				OR(
+				$Profile.Name = &apos;Service Manager&apos;,
+				$Profile.Name = &apos;CCS Service Manager&apos;,
+				$Profile.Name = &apos;Service Agent&apos;,
+				$Profile.Name = &apos;CCS Service Agent&apos;,
+				$Profile.Name = &apos;Retention Agent&apos;,
+				$Profile.Name = &apos;Retention Manager&apos;),
+    OR(NOT(REGEX( GFN_Number__c , &quot;^[a-zA-Z0-9_]*$&quot;)),
+       NOT(REGEX( GFN_Nr__c , &quot;^[a-zA-Z0-9_]*$&quot;))
+				)
+)</errorConditionFormula>
+    <errorMessage>This is not a GFN Number format, please insert GFN number!</errorMessage>
+</ValidationRule>

@@ -1,0 +1,68 @@
+<!--
+ - Created by Andrei.Katunin on 31.08.2018.
+ -->
+
+<apex:component id="E2EComponentInputTooltip">
+
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map"
+                    required="true"/>
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="name of field in parent page"
+                    required="true"/>
+
+    <apex:attribute name="firstClass"
+                    type="String"
+                    description="class name of label and input div" />
+
+    <apex:attribute name="secondClass"
+                    type="String"
+                    description="class name of input div" />
+
+    <apex:attribute name="inputClass"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="errorClass"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="maxLength"
+                    type="String"
+                    description="maximum length of input" />
+
+    <apex:attribute name="inputType"
+                    type="String"
+                    description="input type" />
+
+    <apex:attribute name="position"
+                    type="String"
+                    description="position type" />
+
+    <div class="{! firstClass }">
+        <div class="df">
+            <label>{!pageMap[field].elementItemsMap['LABEL'].value}<sup>{! pageMap[field].elementItemsMap['ASTERISK'].value }</sup></label>
+            <div class="tooltip-image tooltip-input" data-toggle="tooltip" data-placement="{! position }" data-html="true" title="{! pageMap[field].elementItemsMap['POPUP'].value }">
+            </div>
+        </div>
+
+        <apex:outputPanel layout="block" styleClass="mobile__tooltips">
+            <apex:outputText escape="false" value="{! pageMap[field].elementItemsMap['POPUP'].value }"/>
+        </apex:outputPanel>
+
+        <div class="{!secondClass}">
+            <apex:input id="inputID"
+                        styleClass="{! inputClass }"
+                        value="{!pageMap[field].elementItemsMap['DEFAULT VALUE'].value}"
+                        type="{!IF(inputType == null, 'text', inputType)}"
+                        html-maxlength="{! maxLength }"
+                        html-placeholder="{! pageMap[field].elementItemsMap['PLACEHOLDER'].value }"/>
+            <div class="close none"></div>
+        </div>
+        <div class="{!errorClass}">{!IF(errorClass == null, '', pageMap[field].elementItemsMap['WARN MESSAGE'].value )}</div>
+        <!--</div>-->
+    </div>
+</apex:component>

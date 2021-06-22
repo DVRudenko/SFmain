@@ -1,0 +1,85 @@
+<apex:page controller="ConversionReportPPRCtrl" action="{!init}">
+    <apex:includeScript value="{!$Resource.download_files_js }"/>
+
+    <script>
+        function shapingValue() {
+            var dataTable = document.getElementById("dataTable").outerHTML;
+            var body = "<html><head><meta charset=\"utf-8\"></head><body>" +  dataTable + "</body></html>";
+            return body;
+        }
+
+        function saveCurrentPage() {
+           var body = shapingValue();
+           download(body, 'conversion_report.xls', 'application/vnd.ms-excel');
+        }
+    </script>
+    <style>
+            .totalRow .total {
+                background-color:#BBE3DF;
+                color: #FF00AE;
+            }
+    </style>
+
+    <apex:form >
+        <apex:outputPanel layout="block" id="filterbar">
+            <table class="detailList" border="0" cellpadding="1" cellspacing="1">
+                <tr>
+                    <td class="labelCol">Select FC Period</td>
+                    <td>
+                        <apex:selectList value="{!periodFC}" size="1" label="Select Period">
+                            <apex:selectOptions value="{!FCPeriodItems}" id="field1"/>
+                            <apex:actionSupport action="{!uploadData}" event="onchange"  status="FilterStatus" reRender="filterbar, theList"/>
+                        </apex:selectList>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">Select Start Month</td>
+                    <td>
+                        <apex:selectList value="{!monthReport}" size="1" label="Select Start Month">
+                            <apex:selectOptions value="{!ReportMonth}" id="field2"/>
+                            <apex:actionSupport action="{!uploadData}" event="onchange"  status="FilterStatus" reRender="filterbar, theList"/>
+                        </apex:selectList>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">Select Sales Group</td>
+                    <td>
+                        <apex:selectList value="{!salesGroup}" size="1" label="Select Sales Group">
+                            <apex:selectOptions value="{!SalesGroupItems}" id="field3"/>
+                            <apex:actionSupport action="{!uploadData}" event="onchange"  status="FilterStatus" reRender="filterbar, theList"/>
+                        </apex:selectList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <apex:actionStatus id="FilterStatus">
+                            <apex:facet name="start"><img src="/img/loading.gif" alt="" /></apex:facet>
+                            <apex:facet name="stop"></apex:facet>
+                        </apex:actionStatus>
+                    </td>
+                </tr>
+            </table>
+        </apex:outputPanel>
+        <apex:pageBlock >
+            <div id="dataTable">
+                <apex:pageBlockTable value="{!outputListText}" var="outList" id="theList">
+                    <apex:column value="{!outList.managerName}" headerValue="Manager" footerClass="total"/>
+                    <apex:column value="{!outList.leadsCount}" headerValue="Lead" footerClass="total"/>
+                    <apex:column value="{!outList.opportunitiesCount}" headerValue="Opportunity" footerClass="total"/>
+                    <apex:column value="{!outList.agreementsCount}" headerValue="Agreement" footerClass="total"/>
+                    <apex:column value="{!outList.leadOpportunityPercent}" headerValue="Lead/Opportunity" footerClass="total"/>
+                    <apex:column value="{!outList.leadAgreementPrecent}" headerValue="Lead/Agreement" footerClass="total"/>
+                    <apex:column value="{!outList.middleDealCicle}" headerValue="Middle Deal Cicle" footerClass="total"/>
+                </apex:pageBlockTable>
+            </div>
+        </apex:pageBlock>
+
+        <table style="margin-top: 20px;">
+            <tr>
+                <td>
+                    <input type="button" value="Выгрузить в Excel" onclick="saveCurrentPage(); return false;"/>
+                </td>
+            </tr>
+        </table>
+    </apex:form>
+</apex:page>

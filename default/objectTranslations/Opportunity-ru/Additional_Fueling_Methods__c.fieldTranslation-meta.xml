@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Дополнительные способы заправки</label>
+    <name>Additional_Fueling_Methods__c</name>
+    <picklistValues>
+        <masterLabel>Bank Card</masterLabel>
+        <translation>Банковская карта</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cash</masterLabel>
+        <translation>Наличные</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>House Account</masterLabel>
+        <translation>Ведомости</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leasing Company Card</masterLabel>
+        <translation>Карта лизинговой компании</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oil Company Card</masterLabel>
+        <translation>Карта нефтяной компании</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On-Site Tanks</masterLabel>
+        <translation>Собственная АЗС</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Другой</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Issuer Card</masterLabel>
+        <translation>Карта другого эмитента</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unattended Commercial Fueling</masterLabel>
+        <translation><!-- Unattended Commercial Fueling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Universal Fleet Card</masterLabel>
+        <translation>Универсальная топливная карта</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wet Hosing</masterLabel>
+        <translation><!-- Wet Hosing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

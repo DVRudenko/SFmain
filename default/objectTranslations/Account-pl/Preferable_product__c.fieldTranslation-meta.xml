@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Preferable product --></label>
+    <name>Preferable_product__c</name>
+    <picklistValues>
+        <masterLabel>Allstar mondo</masterLabel>
+        <translation><!-- Allstar mondo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS cards</masterLabel>
+        <translation><!-- CCS cards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>euroShell card</masterLabel>
+        <translation><!-- euroShell card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>euroShell card and Allstar mondo</masterLabel>
+        <translation><!-- euroShell card and Allstar mondo --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Team_PPR</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Russian_Sales</value>
+    </filters>
+    <filters>
+        <field>LEAD.CONVERTED</field>
+        <operation>notEqual</operation>
+        <value>1</value>
+    </filters>
+    <label>Моя группа</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>PPRCommercialSales</role>
+        <role>PPR_Bryansk</role>
+        <role>PPR_Bryansk_Teamleader_PSO_1</role>
+        <role>PPR_Bryansk_Teamleader_PSO_2</role>
+        <role>PPR_Bryansk_Teamleader_Partner_1</role>
+        <role>PPR_Bryansk_Teamleader_Partner_2</role>
+        <role>PPR_Teamleader_Telesales_PSI</role>
+        <role>PPR_Field_Sales_Team_Leaders</role>
+        <role>PPR_Field_Teamleader_Central</role>
+        <role>PPR_Field_Teamleader_Moscow</role>
+        <role>PPR_Teamleader_Fieldsales_Saint_Petersburg</role>
+        <role>PPR_Field_Teamleader_South</role>
+        <role>PPR_Fleetcor</role>
+        <role>PPR_KAM_Teamleader</role>
+        <role>PPR_Marketing</role>
+        <role>PPR_SME</role>
+        <role>PPR_Telesales_mentor</role>
+    </sharedTo>
+</ListView>

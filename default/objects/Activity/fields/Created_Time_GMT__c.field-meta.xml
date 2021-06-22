@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_Time_GMT__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+  OR(
+    VALUE( MID( TEXT( CreatedDate - 0 ), 12, 2 ) ) = 0,
+    VALUE( MID( TEXT( CreatedDate - 0 ), 12, 2 ) ) = 12
+  ),
+  &quot;12&quot;,
+  TEXT( VALUE( MID( TEXT( CreatedDate - 0 ), 12, 2 ) ) 
+   -
+   IF( 
+     VALUE( MID( TEXT( CreatedDate - 0 ), 12, 2 ) ) &lt; 12, 
+     0, 
+     12 
+   ) 
+  )
+)
+&amp; &quot;:&quot; &amp;
+MID( TEXT( CreatedDate - 0 ), 15, 2 )
+&amp; &quot;:&quot; &amp;
+MID( TEXT( CreatedDate - 0 ), 18, 2 )
+&amp; &quot; &quot; &amp;
+IF(
+  VALUE( MID( TEXT( CreatedDate - 0 ), 12, 2 ) ) &lt; 12,
+  &quot;AM&quot;,
+  &quot;PM&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Created Time GMT</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

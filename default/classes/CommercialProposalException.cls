@@ -1,0 +1,1 @@
+public class CommercialProposalException extends Exception {}

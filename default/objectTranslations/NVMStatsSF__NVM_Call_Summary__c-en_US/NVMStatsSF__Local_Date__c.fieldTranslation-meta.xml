@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Date from the perspective of the last agent&apos;s or the Company&apos;s Default TimeZone adjusted for DST if DST applied --></help>
+    <label><!-- Local Date --></label>
+    <name>NVMStatsSF__Local_Date__c</name>
+</CustomFieldTranslation>

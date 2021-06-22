@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alert_new_system_admin</fullName>
+        <description>Alert: new system admin</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>marcello.amato@fleetcor.eu</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sergey.ermolaev@fleetcor.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/New_SystemAdmin</template>
+    </alerts>
+    <alerts>
+        <fullName>Change_user_data</fullName>
+        <description>Если меняю ИФО пользователя</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>tatianakim@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Change_User_data</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_notification_of_a_new_user</fullName>
+        <description>Send notification of a new user</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>ilya.ivonin@fleetcor.ru.eu</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>System_email_templates/Notification_of_creating_a_new_user</template>
+    </alerts>
+    <rules>
+        <fullName>New_SystemAdministrator</fullName>
+        <actions>
+            <name>Alert_new_system_admin</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>OR(ISNEW() &amp;&amp; Profile.Name = &apos;System Administrator&apos;,
+            Ischanged( ProfileId ) &amp;&amp;  Profile.Name = &apos;System Administrator&apos;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Send notification of a new user</fullName>
+        <actions>
+            <name>Send_notification_of_a_new_user</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.CreatedDate</field>
+            <operation>equals</operation>
+            <value>TODAY</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

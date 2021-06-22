@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Prohibition_of_editing_after_QA</fullName>
+    <active>false</active>
+    <description>prohibition of editing after quality control</description>
+    <errorConditionFormula>AND( 
+RecordType.Name = &#39;Russian Sales&#39;, 
+($Profile.Name = &quot;Russian Sales Manager&quot; || 
+$Profile.Name = &quot;Russian Field Sales&quot; || 
+$Profile.Name = &quot;Russian Inbound&quot; || 
+$Profile.Name = &quot;Russian KAM&quot; || 
+$Profile.Name = &quot;Russian Telesales&quot; ||  
+$Profile.Name = &quot;Russian Team Leader&quot;), 
+NOT(ISBLANK( TEXT(QA_task__c) ) ), 
+NOT(ISBLANK( QA_Comment__c )), 
+NOT(ISBLANK( PRIORVALUE(Date_Meeting_FS_been_completed__c ))), 
+ISCHANGED(Date_Meeting_FS_been_completed__c))</errorConditionFormula>
+    <errorMessage>&quot;Встреча FS проведена&quot; недоступно для редактирования после проверки QA.</errorMessage>
+</ValidationRule>

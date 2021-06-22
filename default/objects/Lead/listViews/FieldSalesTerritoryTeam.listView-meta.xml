@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieldSalesTerritoryTeam</fullName>
+    <columns>SummaryScoringRu__c</columns>
+    <columns>Territory__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Number_of_Vehicles__c</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Territory__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Disqualified,Дисквалификация</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>equals</operation>
+        <value>Bull,Ivchenko,Vodovozov,Grishkina</value>
+    </filters>
+    <label>Территориальный Менеджмент Team</label>
+    <language>ru</language>
+    <sharedTo>
+        <role>PPR_Call_Center_Team_Leader</role>
+        <role>PPR_Field_Sales_Team_Leaders</role>
+    </sharedTo>
+</ListView>

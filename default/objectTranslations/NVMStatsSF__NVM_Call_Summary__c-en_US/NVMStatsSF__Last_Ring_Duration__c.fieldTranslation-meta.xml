@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The duration of the last ring event --></help>
+    <label><!-- Last Ring Duration --></label>
+    <name>NVMStatsSF__Last_Ring_Duration__c</name>
+</CustomFieldTranslation>

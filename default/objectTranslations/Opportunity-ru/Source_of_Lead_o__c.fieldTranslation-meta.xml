@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Источник Интереса</label>
+    <name>Source_of_Lead_o__c</name>
+    <picklistValues>
+        <masterLabel>Business card</masterLabel>
+        <translation><!-- Business card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>E2E Form RU</masterLabel>
+        <translation><!-- E2E Form RU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email Рассылка</masterLabel>
+        <translation><!-- Email Рассылка --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Petrolcards.ru - АГГРЕГАТОР</masterLabel>
+        <translation><!-- Petrolcards.ru - АГГРЕГАТОР --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>АЗС Заявка Shell</masterLabel>
+        <translation><!-- АЗС Заявка Shell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Актуализированная БД</masterLabel>
+        <translation><!-- Актуализированная БД --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Выставка</masterLabel>
+        <translation><!-- Выставка --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Интернет Источники</masterLabel>
+        <translation><!-- Интернет Источники --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Найден в Интернете</masterLabel>
+        <translation><!-- Найден в Интернете --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Партнерская Программа</masterLabel>
+        <translation><!-- Партнерская Программа --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Поисковая Система</masterLabel>
+        <translation><!-- Поисковая Система --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Полевой канал</masterLabel>
+        <translation><!-- Полевой канал --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Почтовая Рассылка</masterLabel>
+        <translation><!-- Почтовая Рассылка --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Прочая БД</masterLabel>
+        <translation><!-- Прочая БД --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Реклама Клиента</masterLabel>
+        <translation><!-- Реклама Клиента --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Реклама в СМИ</masterLabel>
+        <translation><!-- Реклама в СМИ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Реклама на АЗС</masterLabel>
+        <translation><!-- Реклама на АЗС --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Рекомендация</masterLabel>
+        <translation><!-- Рекомендация --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Сайт Petrolplus.kz</masterLabel>
+        <translation><!-- Сайт Petrolplus.kz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Сайт Petrolplus.ru</masterLabel>
+        <translation><!-- Сайт Petrolplus.ru --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Сайт fuel.veb-leasing.ru</masterLabel>
+        <translation><!-- Сайт fuel.veb-leasing.ru --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Сайт gpc-store.ru</masterLabel>
+        <translation><!-- Сайт gpc-store.ru --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

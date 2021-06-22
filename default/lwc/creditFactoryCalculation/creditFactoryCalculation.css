@@ -1,0 +1,21 @@
+.spinner-wrapper {
+    position: relative;
+    min-height: 250px;
+}
+
+.button-cancel {
+    float: right;
+}
+
+.button-save {
+    float: right;
+}
+
+.combobox-country {
+    width: 300px;
+}
+
+
+.calculation-card {
+    background-color:rgb(126, 179, 226)
+}

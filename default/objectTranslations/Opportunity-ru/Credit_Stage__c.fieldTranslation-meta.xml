@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Credit Stage --></label>
+    <name>Credit_Stage__c</name>
+    <picklistValues>
+        <masterLabel>Credit Check - Pending Credit</masterLabel>
+        <translation><!-- Credit Check - Pending Credit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CreditCheck</masterLabel>
+        <translation><!-- CreditCheck --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CreditCheck rejected</masterLabel>
+        <translation><!-- CreditCheck rejected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Credit - Contract Check</masterLabel>
+        <translation><!-- Pending Credit - Contract Check --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Credit Report</masterLabel>
+        <translation><!-- Pending Credit Report --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Sales – Deposit</masterLabel>
+        <translation><!-- Pending Sales – Deposit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Sales – Information</masterLabel>
+        <translation><!-- Pending Sales – Information --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

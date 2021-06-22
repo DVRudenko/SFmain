@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VAT_payer__c</fullName>
+    <externalId>false</externalId>
+    <label>VAT payer</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Да</fullName>
+                <default>false</default>
+                <label>Да</label>
+            </value>
+            <value>
+                <fullName>Нет</fullName>
+                <default>false</default>
+                <label>Нет</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

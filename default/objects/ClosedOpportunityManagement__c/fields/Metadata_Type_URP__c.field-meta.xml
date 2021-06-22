@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Metadata_Type_URP__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Provide info which metadata type is being excluded - User or Role or Profile.</inlineHelpText>
+    <label>Metadata Type (User/Role/Profile)</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

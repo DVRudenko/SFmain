@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>isdc_dialer_list_name__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>If it was a list (Seek or Domino), the name of the list.</inlineHelpText>
+    <label>List Name</label>
+    <length>100</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

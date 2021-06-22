@@ -1,0 +1,663 @@
+<apex:page id="E2ETestDataCleaner" controller="E2ETestDataCleanerCtrl" sidebar="false" showHeader="false">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.E2ESpinner_2_0, 'spinner.css')}"/>
+    <script>
+        function startSplash() {
+            jQuery('.spinner-lightbox').fadeIn(50);
+        }
+        function endSplash() {
+            jQuery('.spinner-lightbox').fadeOut(50);
+        }
+    </script>
+    <apex:form id="fomrId">
+        <style>
+            .headerimage {margin: 20px 0 20px 30px;}
+            .sign-class{
+                font-size: 12px;
+                font-weight: 700;
+                padding: 0px 5px;
+                margin-right: 10px;
+                border: 1px solid black;
+                background: black;
+                color: whitesmoke;
+                margin-bottom:10px;
+                cursor:pointer;
+            }
+            .pbBody table.list tr.dataRow td {
+                font-family: verdana;
+                font-weight: normal;
+            }
+            .errorConsole .x-grid3-row-over, body, .pbBody
+            table.list tr.dataRow.highlight td, body
+            .pbBody table.list tr.dataRow.highlight th {
+                background-color: white !important;
+            }
+            .delete-btn {
+                margin: 0 15px;
+                font-weight: 100;
+                color: blue !important;
+            }
+        </style>
+        <div class="headerimage">
+            <apex:image url="{!URLFOR($Resource.e2e_images, 'logo.png')}"/>
+        </div>
+        <apex:pageBlock title="Enter your test email to search for data.">
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Email"/>
+                    <apex:outputPanel >
+                        <apex:inputText style="width: 230px; height: 15px; text-transform: lowercase;" value="{! searchParam }"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton onclick="startSplash();" action="{! doSearch }" reRender="searching-result" value="Search" oncomplete="endSplash();" rerender="fomrId"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        <apex:outputPanel id="searching-result">
+            <apex:pageBlock id="pb1" title="Searching results">
+                <apex:pageMessages escape="false"/>
+                <apex:outputPanel rendered="{! errorMessage = null }">
+                    <apex:variable value="{!0}" var="dateIndex"/>
+                    <apex:pageBlockTable value="{! accountsMap }" var="accId" id="dateTable" styleClass="results-table">
+                        <apex:column style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                            <apex:facet name="header">
+                                <span style="color: #000;font-size: 11px; font-family:verdana;font-weight: bold;">
+                                    Accounts
+                                </span>
+                            </apex:facet>
+                            <span id="date-sign-{!dateIndex}" class="sign-class" onclick="toggleDateTable('{! dateIndex }');">+</span>
+                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                {! accountsMap[accId].Name }
+                                <apex:commandLink onclick="startSplash();" value="Delete Records" action="{! deleteRecords }"
+                                                  styleClass="delete-btn" oncomplete="deleteCookieE2E('apex__e2ecountry'); deleteCookieE2E('apex__e2esource'); endSplash();" reRender="searching-result">
+                                    <apex:param name="accid" value="{! accId }"/>
+                                </apex:commandLink>
+                            </span>
+                            <!--Opportunities-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['Opportunities'] != 0 }">
+                                <apex:variable value="{!0}" var="opptyIndex"/>
+                                <table id="opptyStageTable" class="oppty-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="opp-sign-{! dateIndex }-{! opptyIndex }" class="sign-class" onclick="toggleStagesTable('opp', '{! dateIndex }','{! opptyIndex }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                Opportunities ({! numberOfObjectsFoundMap[accId]['Opportunities']})
+                                            </span>
+                                            <div class="opp-table-{! dateIndex }-{! opptyIndex }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToOpportunitiesMap[accId] }" var="oppRecord" id="opp-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!oppRecord.Id}" target="_blank">{!oppRecord.Name}</apex:outputLink>
+                                                    </apex:column>    
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!oppRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! opptyIndex + 1}" var="opptyIndex"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--Contacts-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['Contacts'] != 0 }">
+                                <apex:variable value="{!0}" var="contactIndex"/>
+                                <table id="conStageTable" class="con-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="con-sign-{! dateIndex }-{! contactIndex }" class="sign-class" onclick="toggleStagesTable('con', '{! dateIndex }','{! contactIndex }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                Contacts ({! numberOfObjectsFoundMap[accId]['Contacts'] })
+                                            </span>
+                                            <div class="con-table-{! dateIndex }-{! contactIndex }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToContactsMap[accId] }" var="contactRecord" id="con-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!contactRecord.Id}" target="_blank">{!contactRecord.Name}</apex:outputLink>
+                                                    </apex:column>  
+                                                    <apex:column headerValue="Email" value="{!contactRecord.Email}" style="width: 200px;"/>
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!contactRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! contactIndex + 1}" var="contactIndex"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--ContactRoles-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['OpportunityContactRoles'] != 0 }">
+                                <apex:variable value="{!0}" var="contactRolesIndex"/>
+                                <table id="conRolesStageTable" class="con-roles-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="con-roles-sign-{! dateIndex }-{! contactRolesIndex }" class="sign-class" onclick="toggleStagesTable('con-roles', '{! dateIndex }','{! contactRolesIndex }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                Opportunity Contact Roles ({! numberOfObjectsFoundMap[accId]['OpportunityContactRoles'] })
+                                            </span>
+                                            <div class="con-roles-table-{! dateIndex }-{! contactRolesIndex }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToOppContactRolesMap[accId] }" var="contactRolesRecord" id="con-roles-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Linked Opportunity" style="width: 200px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!contactRolesRecord.Opportunity.Id}" target="_blank">{!contactRolesRecord.Opportunity.Name}</apex:outputLink>
+                                                    </apex:column>
+                                                    <apex:column headerValue="Linked Contact" style="width: 200px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!contactRolesRecord.Contact.Id}" target="_blank">{!contactRolesRecord.Contact.Name}</apex:outputLink>
+                                                    </apex:column>
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!contactRolesRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! contactRolesIndex + 1}" var="contactRolesIndex"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--Cards-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['Cards'] != 0 }">
+                                <apex:variable value="{!0}" var="cardsIndex"/>
+                                <table id="cardsStageTable" class="cards-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="cards-sign-{! dateIndex }-{! cardsIndex }" class="sign-class" onclick="toggleStagesTable('cards', '{! dateIndex }','{! cardsIndex }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                Cards ({! numberOfObjectsFoundMap[accId]['Cards'] })
+                                            </span>
+                                            <div class="cards-table-{! dateIndex }-{! cardsIndex }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToCardsMap[accId] }" var="cardsRecord" id="cards-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!cardsRecord.Id}" target="_blank">{!cardsRecord.Name}</apex:outputLink>
+                                                    </apex:column>     
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!cardsRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! cardsIndex + 1}" var="cardsIndex"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--Health check-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['HealthChecks'] != 0 }">
+                                <apex:variable value="{!0}" var="healthCheckIndex"/>
+                                <table id="healthCheckStageTable" class="health-check-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="health-check-sign-{! dateIndex }-{! healthCheckIndex }" class="sign-class" onclick="toggleStagesTable('health-check', '{! dateIndex }','{! healthCheckIndex }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                Health check ({! numberOfObjectsFoundMap[accId]['HealthChecks'] })
+                                            </span>
+                                            <div class="health-check-table-{! dateIndex }-{! healthCheckIndex }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToHealthChecksMap[accId] }" var="healthCheckRecord" id="health-check-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!healthCheckRecord.Id}" target="_blank">{!healthCheckRecord.Name}</apex:outputLink>
+                                                    </apex:column>       
+                                                    <apex:column headerValue="Device" value="{!healthCheckRecord.Device__c}" style="width: 200px;"/>
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!healthCheckRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! healthCheckIndex + 1}" var="healthCheckIndex"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--Payment Transactions-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['PaymentTransactions'] != 0 }">
+                                <apex:variable value="{!0}" var="paymentTransactionIndex"/>
+                                <table id="paymentTransactionStageTable" class="payment-transaction-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="payment-transaction-sign-{! dateIndex }-{! paymentTransactionIndex }" class="sign-class" onclick="toggleStagesTable('payment-transaction', '{! dateIndex }','{! paymentTransactionIndex }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                Payment Transactions ({! numberOfObjectsFoundMap[accId]['PaymentTransactions'] })
+                                            </span>
+                                            <div class="payment-transaction-table-{! dateIndex }-{! paymentTransactionIndex }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToPaymentTransactionsMap[accId] }" var="paymentTransactionRecord" id="payment-transaction-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!paymentTransactionRecord.Id}" target="_blank">{!paymentTransactionRecord.Name}</apex:outputLink>
+                                                    </apex:column>
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!paymentTransactionRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! paymentTransactionIndex + 1}" var="paymentTransactionIndex"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--Credit Factory Reports-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['CFreports'] != 0 }">
+                                <apex:variable value="{!0}" var="cfReportsIndex"/>
+                                <table id="cfReportsStageTable" class="cf-reports-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="cf-reports-sign-{! dateIndex }-{! cfReportsIndex }" class="sign-class" onclick="toggleStagesTable('cf-reports', '{! dateIndex }','{! cfReportsIndex }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                Credit Factory Reports ({! numberOfObjectsFoundMap[accId]['CFreports'] })
+                                            </span>
+                                            <div class="cf-reports-table-{! dateIndex }-{! cfReportsIndex }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToCFreportsMap[accId] }" var="cfReportsRecord" id="cf-reports-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!cfReportsRecord.Id}" target="_blank">{!cfReportsRecord.Name}</apex:outputLink>
+                                                    </apex:column>
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!cfReportsRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! cfReportsIndex + 1}" var="cfReportsIndex"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--Attachments-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['Attachments'] != 0 }">
+                                <apex:variable value="{!0}" var="attachIndex"/>
+                                <table id="attachStageTable" class="attach-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="attach-sign-{! dateIndex }-{! attachIndex }" class="sign-class" onclick="toggleStagesTable('attach', '{! dateIndex }','{! attachIndex }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                Attachments ({! numberOfObjectsFoundMap[accId]['Attachments'] })
+                                            </span>
+                                            <div class="attach-table-{! dateIndex }-{! attachIndex }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToAttachmentsMap[accId] }" var="attachRecord" id="attach-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!attachRecord.Id}" target="_blank">{!attachRecord.Name}</apex:outputLink>
+                                                    </apex:column>
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!attachRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! attachIndex + 1}" var="attachIndex"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--Products-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['Products'] != 0 }">
+                                <apex:variable value="{!0}" var="productIndex"/>
+                                <table id="productStageTable" class="attach-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="product-sign-{! dateIndex }-{! productIndex }" class="sign-class" onclick="toggleStagesTable('product', '{! dateIndex }','{! productIndex }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                Products ({! numberOfObjectsFoundMap[accId]['Products'] })
+                                            </span>
+                                            <div class="product-table-{! dateIndex }-{! productIndex }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToOppLineItem[accId] }" var="productRecord" id="product-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name"  style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!productRecord.Id}" target="_blank">{!productRecord.Product2.Name}</apex:outputLink>
+                                                    </apex:column>
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!productRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! productIndex + 1}" var="productIndex"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--ProductItems-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['ProductItems'] != 0 }">
+                                <apex:variable value="{!0}" var="itemIndex"/>
+                                <table id="itemStageTable" class="item-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="item-sign-{! dateIndex }-{! itemIndex }" class="sign-class" onclick="toggleStagesTable('item', '{! dateIndex }','{! itemIndex }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                Cards ({! numberOfObjectsFoundMap[accId]['ProductItems'] })
+                                            </span>
+                                            <div class="item-table-{! dateIndex }-{! itemIndex }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToOfferItem[accId] }" var="itemRecord" id="item-item-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!itemRecord.Id}" target="_blank">{!itemRecord.Name}</apex:outputLink>
+                                                    </apex:column>    
+                                                    <apex:column headerValue="DriverName" value="{!itemRecord.Driver_Name__c}" style="width: 80px;"/>
+                                                    <apex:column headerValue="CategoryOdProduct" value="{!itemRecord.Category_of_products__c}" style="width: 80px;"/>
+                                                    <apex:column headerValue="TypeOfCard" value="{!itemRecord.Type_of_Card__c}" style="width: 80px;"/>
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!itemRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! itemIndex + 1}" var="itemIndex"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--E2E Data Object-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['DataObject'] != 0 }">
+                                <apex:variable value="{!0}" var="dataObject"/>
+                                <table id="objectStageTable" class="dataObject-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="dataObject-sign-{! dateIndex }-{! dataObject }" class="sign-class" onclick="toggleStagesTable('dataObject', '{! dateIndex }','{! dataObject }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                E2E Data Object ({! numberOfObjectsFoundMap[accId]['DataObject'] })
+                                            </span>
+                                            <div class="dataObject-table-{! dateIndex }-{! dataObject }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToDataObject[accId] }" var="dataObjectRecord" id="object-item-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!dataObjectRecord.Id}" target="_blank">{!dataObjectRecord.Name}</apex:outputLink>
+                                                    </apex:column> 
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!dataObjectRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! dataObject + 1}" var="dataObject"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--E2E Data Log-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['DataLog'] != 0 }">
+                                <apex:variable value="{!0}" var="dataLog"/>
+                                <table id="dataLogStageTable" class="dataLog-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="dataLog-sign-{! dateIndex }-{! dataLog }" class="sign-class" onclick="toggleStagesTable('dataLog', '{! dateIndex }','{! dataLog }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                E2E Data Logs ({! numberOfObjectsFoundMap[accId]['DataLog'] })
+                                            </span>
+                                            <div class="dataLog-table-{! dateIndex }-{! dataLog }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToDataLog[accId] }" var="dataLogRecord" id="dataLog-item-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!dataLogRecord.Id}" target="_blank">{!dataLogRecord.Name}</apex:outputLink>
+                                                    </apex:column> 
+                                                    <apex:column headerValue="Job Status" value="{!dataLogRecord.Job_Status__c}" style="width: 80px;"/>
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!dataLogRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! dataLog + 1}" var="dataLog"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--E2E Data Offer Item-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['DataOfferItem'] != 0 }">
+                                <apex:variable value="{!0}" var="dataOfferItem"/>
+                                <table id="dataOfferItemStageTable" class="dataOfferItem-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="dataOfferItem-sign-{! dateIndex }-{! dataOfferItem }" class="sign-class" onclick="toggleStagesTable('dataOfferItem', '{! dateIndex }','{! dataOfferItem }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                E2E Data Offer Items ({! numberOfObjectsFoundMap[accId]['DataOfferItem'] })
+                                            </span>
+                                            <div class="dataOfferItem-table-{! dateIndex }-{! dataOfferItem }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToDataOfferItem[accId] }" var="dataOfferItemRecord" id="dataOfferItem-item-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!dataOfferItemRecord.Id}" target="_blank">{!dataOfferItemRecord.Offer_Name__c}</apex:outputLink>
+                                                    </apex:column> 
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!dataOfferItemRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! dataOfferItem + 1}" var="dataOfferItem"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--E2E Data Additional Service-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['DataAdditionalService'] != 0 }">
+                                <apex:variable value="{!0}" var="dataAdditionalService"/>
+                                <table id="dataAdditionalServiceStageTable" class="dataAdditionalService-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="dataAdditionalService-sign-{! dateIndex }-{! dataAdditionalService }" class="sign-class" onclick="toggleStagesTable('dataAdditionalService', '{! dateIndex }','{! dataAdditionalService }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                E2E Data Additional Services ({! numberOfObjectsFoundMap[accId]['DataAdditionalService'] })
+                                            </span>
+                                            <div class="dataAdditionalService-table-{! dateIndex }-{! dataAdditionalService }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToDataAdditionalService[accId] }" var="dataAdditionalServiceRecord" id="dataAdditionalService-item-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!dataAdditionalServiceRecord.Id}" target="_blank">{!dataAdditionalServiceRecord.Name}</apex:outputLink>
+                                                    </apex:column>     
+                                                    <apex:column headerValue="Selected" value="{!dataAdditionalServiceRecord.Selected__c}" style="width: 80px;"/>
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!dataAdditionalServiceRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! dataAdditionalService + 1}" var="dataAdditionalService"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--Docusign Status-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['DocusignStatus'] != 0 }">
+                                <apex:variable value="{!0}" var="docusignStatus"/>
+                                <table id="docusignStatusStageTable" class="docusignStatus-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="docusignStatus-sign-{! dateIndex }-{! docusignStatus }" class="sign-class" onclick="toggleStagesTable('docusignStatus', '{! dateIndex }','{! docusignStatus }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                DocuSign Status ({! numberOfObjectsFoundMap[accId]['DocusignStatus'] })
+                                            </span>
+                                            <div class="docusignStatus-table-{! dateIndex }-{! docusignStatus }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToDocusignStatus[accId] }" var="docusignStatusRecord" id="docusignStatus-item-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!docusignStatusRecord.Id}" target="_blank">{!docusignStatusRecord.Name}</apex:outputLink>
+                                                    </apex:column>      
+                                                    <apex:column headerValue="Document Name" value="{!docusignStatusRecord.Document_name__c}" style="width: 80px;"/>
+                                                    <apex:column headerValue="Envelope Status" value="{!docusignStatusRecord.dsfs__Envelope_Status__c}" style="width: 80px;"/>
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!docusignStatusRecord.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! docusignStatus + 1}" var="docusignStatus"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--Files-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['Files'] != 0 }">
+                                <apex:variable value="{!0}" var="files"/>
+                                <table id="filesStageTable" class="files-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="files-sign-{! dateIndex }-{! files }" class="sign-class" onclick="toggleStagesTable('files', '{! dateIndex }','{! files }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                Files ({! numberOfObjectsFoundMap[accId]['Files'] })
+                                            </span>
+                                            <div class="files-table-{! dateIndex }-{! files }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToContentDoc[accId] }" var="filesRecord" id="files-item-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!filesRecord.ContentDocument.Id}" target="_blank">{!filesRecord.ContentDocument.Title}</apex:outputLink>
+                                                    </apex:column>     
+                                                    <apex:column headerValue="Created Date" style="width:80px">
+                                                        <apex:outputText value="{0, date, dd.MM.yyyy}">
+                                                            <apex:param value="{!filesRecord.ContentDocument.CreatedDate}"/>
+                                                        </apex:outputText>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! files + 1}" var="files"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <!--Quotes-->
+                            <apex:outputPanel rendered="{! numberOfObjectsFoundMap[accId]['Quotes'] != 0 }">
+                                <apex:variable value="{!0}" var="quotes"/>
+                                <table id="quotesStageTable" class="quotes-stage-table-{! dateIndex }" style="display:none;margin-top:10px;margin-left:20px;width:98%;">
+                                    <tr>
+                                        <td style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                            <span id="quotes-sign-{! dateIndex }-{! quotes }" class="sign-class" onclick="toggleStagesTable('quotes', '{! dateIndex }','{! quotes }');">+</span>
+                                            <span style="color: #000;font-size: 11px;font-family:verdana;font-weight: bold;">
+                                                Quotes ({! numberOfObjectsFoundMap[accId]['Quotes'] })
+                                            </span>
+                                            <div class="quotes-table-{! dateIndex }-{! quotes }" style="display:none;">
+                                                <apex:pageBlockTable value="{! accountToQuote[accId] }" var="quoteRecord" id="quotes-item-table" style="margin-top:10px;margin-left:20px;width:98%;">
+                                                    <apex:column headerValue="Name" style="width: 80px;">
+                                                        <apex:outputLink value="{! BASEURL }/{!quoteRecord.Id}" target="_blank">{!quoteRecord.Name}</apex:outputLink>
+                                                    </apex:column>
+                                                </apex:pageBlockTable>
+                                            </div>
+                                            <apex:variable value="{! quotes + 1}" var="quotes"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </apex:outputPanel>
+
+                            <apex:variable value="{! dateIndex + 1 }" var="dateIndex"/>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:outputPanel>
+            </apex:pageBlock>
+            <div class="spinner-lightbox">
+                <apex:actionStatus id="splashStatus" onstart="turnOffBackButtonClick(); startSplash();" onstop="turnOnBackButtonClick(); endSplash();"/>
+                <div class="splashStatus" id="splashDiv">
+                    <img class="spinner-icon" src="{!URLFOR($Resource.e2e_images, 'preloader-loop.gif')}"/>
+                </div>
+            </div>
+        </apex:outputPanel>
+
+        <script>
+            function toggleDateTable(index){
+                var signtext = $("#date-sign-" + index).text();
+                if(signtext == '+') {
+                    $("#date-sign-"+index).text('-').css("padding", " 0px 7px");
+                    $('.oppty-stage-table-' + index).show();
+                    $('.con-stage-table-' + index).show();
+                    $('.con-roles-stage-table-' + index).show();
+                    $('.health-check-stage-table-' + index).show();
+                    $('.payment-transaction-stage-table-' + index).show();
+                    $('.cf-reports-stage-table-' + index).show();
+                    $('.cards-stage-table-' + index).show();
+                    $('.attach-stage-table-' + index).show();
+                    $('.product-stage-table-' + index).show();
+                    $('.item-stage-table-' + index).show();
+                    $('.dataObject-stage-table-' + index).show();
+                    $('.dataLog-stage-table-' + index).show();
+                    $('.dataOfferItem-stage-table-' + index).show();
+                    $('.dataAdditionalService-stage-table-' + index).show();
+                    $('.docusignStatus-stage-table-' + index).show();
+                    $('.files-stage-table-' + index).show();
+                    $('.quotes-stage-table-' + index).show();
+                }
+                else{
+                    $("#date-sign-"+index).text('+').css("padding", " 0px 5px");
+                    $('.oppty-stage-table-' + index).hide();
+                    $('.con-stage-table-' + index).hide();
+                    $('.con-roles-stage-table-' + index).hide();
+                    $('.health-check-stage-table-' + index).hide();
+                    $('.payment-transaction-stage-table-' + index).hide();
+                    $('.cf-reports-stage-table-' + index).hide();
+                    $('.cards-stage-table-' + index).hide();
+                    $('.attach-stage-table-' + index).hide();
+                    $('.product-stage-table-' + index).hide();
+                    $('.item-stage-table-' + index).hide();
+                    $('.dataObject-stage-table-' + index).hide();
+                    $('.dataLog-stage-table-' + index).hide();
+                    $('.dataOfferItem-stage-table-' + index).hide();
+                    $('.dataAdditionalService-stage-table-' + index).hide();
+                    $('.docusignStatus-stage-table-' + index).hide();
+                    $('.files-stage-table-' + index).hide();
+                    $('.quotes-stage-table-' + index).hide();
+                }
+            }
+
+            function toggleStagesTable(objectKey, rootindex, childindex){
+                var signtext = $("#" + objectKey + "-sign-"+rootindex+"-"+childindex).text(); //address-sign-index-addIndex
+                if(signtext == '+'){
+                    $("#" + objectKey + "-sign-"+rootindex+"-"+childindex).text('-').css("padding", " 0px 7px");
+                    $("." + objectKey + "-table-" + rootindex + "-" + childindex).show();
+                }
+                else{
+                    $("#" + objectKey + "-sign-"+rootindex+"-"+childindex).text('+').css("padding", " 0px 5px");
+                    $("." + objectKey + "-table-" + rootindex + "-" + childindex).hide();
+                }
+            }
+            function esc(myid) {
+                return '#' + myid.replace(/(:|\.)/g,'\\\$1');
+            }
+
+            function setCookieE2E(name, value, options = {}) {
+                options = {
+                    path: '/',
+                    ...options
+                };
+
+                if (options.expires instanceof Date) {
+                    options.expires = options.expires.toUTCString();
+                }
+
+                var updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+                for (var optionKey in options) {
+                    updatedCookie += "; " + optionKey;
+                    var optionValue = options[optionKey];
+                    if (optionValue !== true) {
+                        updatedCookie += "=" + optionValue;
+                    }
+                }
+
+                document.cookie = updatedCookie;
+            }
+
+            function deleteCookieE2E(name) {
+                setCookieE2E(name, "", {
+                    'max-age': -1, path: '/apex'
+                })
+            }
+        </script>
+    </apex:form>
+</apex:page>

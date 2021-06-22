@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Starts_SLA_Expired__c</fullName>
+    <description>Automatically checked when Starts: Schedule Date is in the past</description>
+    <externalId>false</externalId>
+    <formula>if(AND(Starts_Schedule__c &lt; TODAY(), NOT(ISPICKVAL(Starts_Status__c, '5.1.1 Final Check: Pumping Enough')), NOT(ISPICKVAL(Starts_Status__c, '5.1.2 Final Check: Pumping NOT Enough')), NOT(ISPICKVAL(Starts_Status__c, '5.2 Final Check:Not Pumping')), NOT(ISPICKVAL(Starts_Status__c, '5.3 Final Check: Delay')), NOT(ISPICKVAL(Starts_Status__c, '5.5 Winback Failed')), NOT(ISPICKVAL(Starts_Status__c, '5.6 Fraud'))), true, false)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Automatically checked when Starts: Schedule Date is in the past</inlineHelpText>
+    <label>Starts: SLA Expired</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

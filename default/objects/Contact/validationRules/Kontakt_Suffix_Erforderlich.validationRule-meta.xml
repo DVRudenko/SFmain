@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kontakt_Suffix_Erforderlich</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+            LEFT( Owner.UserRole.Name  , 3) &lt;&gt; "CCS",
+            LEFT( Owner.UserRole.Name  , 4) &lt;&gt; "Role",
+            LEFT( Owner.UserRole.Name  , 3) &lt;&gt; "PPR",
+            LEFT( Owner.UserRole.Name  , 3) &lt;&gt; "GPC",
+            $User.Username != "tatianakim@transitcard.ru",
+            Lead_Quali_Status__c != 'Switched to E2E',
+            ISPICKVAL( Salutation, "" ),
+            OR(RecordType.Name = "CCS Contact Layout 2.0",
+            RecordType.Name = "Contact layout"),
+            ISNEW())</errorConditionFormula>
+    <errorMessage>Sie füllen Salutation (Herr, Frau usw.)</errorMessage>
+</ValidationRule>

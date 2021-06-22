@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Questo è un elenco dei documenti PDF presenti nella &quot;scheda Documenti&quot; Salesforce dell&#39;organizzazione.  Per inviare con DocuSign è necessario aggiungere un PDF a una cartella all&#39;interno della scheda Documenti in Salesforce.  Per inviare con altri formati, fare clic su &quot;Ulteriori informazioni&quot;.</help>
+    <label><!-- Document Name --></label>
+    <name>dsfs__Document_Name__c</name>
+</CustomFieldTranslation>

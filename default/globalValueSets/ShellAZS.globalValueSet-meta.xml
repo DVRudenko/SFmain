@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>11078</fullName>
+        <default>false</default>
+        <label>1078 KALUGA-1, ул. Грабцевское ш., 51, Калуга, Калужская обл., Россия, 248009</label>
+    </customValue>
+    <customValue>
+        <fullName>11092</fullName>
+        <default>false</default>
+        <label>1092 OKRUZHNAYA-1, ул. Мусоргского, 68 корпус 1, Рязань, Рязанская обл., Россия, 390025</label>
+    </customValue>
+    <customValue>
+        <fullName>11096</fullName>
+        <default>false</default>
+        <label>1096 STUDENOVSKAYA, ул. Студёновская, 122Г, Липецк, Липецкая обл., Россия, 398020</label>
+    </customValue>
+    <customValue>
+        <fullName>11099</fullName>
+        <default>false</default>
+        <label>1099 LAREVO, 39, Борей Снт, Московская обл., Россия, 141865</label>
+    </customValue>
+    <customValue>
+        <fullName>11098</fullName>
+        <default>false</default>
+        <label>1098 NAGORNIY, а/д Холмогоры, Ярославль, Ярославская обл., Россия, 150521</label>
+    </customValue>
+    <customValue>
+        <fullName>11165</fullName>
+        <default>false</default>
+        <label>1165 ROPSHINSKOE SHOSSE, Низинское сельское поселение, производсвенная зона Марьино, здание 2, Ленинградская обл., Россия, 198517</label>
+    </customValue>
+    <customValue>
+        <fullName>11172</fullName>
+        <default>false</default>
+        <label>1172 KRASNOSELSKOE, Красносельское ш., 1 корпус 2, Санкт-Петербург, Россия, 198323</label>
+    </customValue>
+    <customValue>
+        <fullName>11206</fullName>
+        <default>false</default>
+        <label>1206 KARLA MARKSA, пр. Карла Маркса, 163Б, Самара, Самарская обл., Россия, 443079</label>
+    </customValue>
+    <customValue>
+        <fullName>11207</fullName>
+        <default>false</default>
+        <label>1207 VOKZALNAYA, Ново-Вокзальная ул., 88Б к1, Самара, Самарская обл., Россия, 443016</label>
+    </customValue>
+    <customValue>
+        <fullName>11208</fullName>
+        <default>false</default>
+        <label>1208 URALSKAYA, Южное ш., 3Б, Самара, Самарская обл., Россия, 443085</label>
+    </customValue>
+    <customValue>
+        <fullName>11209</fullName>
+        <default>false</default>
+        <label>1209 KAMENKA, а/д &quot;Москва-Малмыж&quot;, 25 км, слева, пос.Каменка, Высогорский р-н, Республика Татарстан, Россия, 422701</label>
+    </customValue>
+    <customValue>
+        <fullName>11210</fullName>
+        <default>false</default>
+        <label>1210 VERBNAYA, ул. Юлиуса Фучика, 90Б, Казань, Респ. Татарстан, Россия, 420140</label>
+    </customValue>
+    <customValue>
+        <fullName>11211</fullName>
+        <default>false</default>
+        <label>1211 KARBYSHEVA, ул. Карбышева, 64а, Казань, Респ. Татарстан, Россия, 420101</label>
+    </customValue>
+    <customValue>
+        <fullName>11212</fullName>
+        <default>false</default>
+        <label>1212 SEMIOZERKA, а/д Волга, 159, Казань, Респ. Татарстан, Россия, 420047</label>
+    </customValue>
+    <customValue>
+        <fullName>11213</fullName>
+        <default>false</default>
+        <label>1213 SCHERBAKOVKA, 3, М7, Казань, Респ. Татарстан, Россия, 420096</label>
+    </customValue>
+    <customValue>
+        <fullName>11174</fullName>
+        <default>false</default>
+        <label>1174 KAD 3, г.Санкт-Петербург, 87 км КАД, Ленинградская обл., Россия, 193315</label>
+    </customValue>
+    <customValue>
+        <fullName>11003</fullName>
+        <default>false</default>
+        <label>1003 LENINGRADSKOYE, Ленинградское ш., 227, Москва, Россия, 141431</label>
+    </customValue>
+    <customValue>
+        <fullName>12003</fullName>
+        <default>false</default>
+        <label>2003 KASHTANOVAYA ROSCHA, Дмитровское ш., 2A, Шолохово, Московская обл., Россия, 141052</label>
+    </customValue>
+    <customValue>
+        <fullName>11166</fullName>
+        <default>false</default>
+        <label>1166 PARASHUTNAYA-2, Парашютная ул., 73, Санкт-Петербург, Россия, 197371</label>
+    </customValue>
+    <customValue>
+        <fullName>11133</fullName>
+        <default>false</default>
+        <label>1133 OLGINO, Приморское ш., 47, Санкт-Петербург, Россия, 197229</label>
+    </customValue>
+    <customValue>
+        <fullName>11104</fullName>
+        <default>false</default>
+        <label>1104 ULYANKA, просп. Народного Ополчения, 147В, Санкт-Петербург, Россия, 198217</label>
+    </customValue>
+    <customValue>
+        <fullName>12002</fullName>
+        <default>false</default>
+        <label>2002 YUBILEYNIY, Московское ш., 49а, Серпухов, Московская обл., Россия, 142204</label>
+    </customValue>
+    <customValue>
+        <fullName>11028</fullName>
+        <default>false</default>
+        <label>1028 KIRIYEVSKAYA, деревня Быковка, Криволучье, Тульская обл., Россия, 301270</label>
+    </customValue>
+    <customValue>
+        <fullName>12001</fullName>
+        <default>false</default>
+        <label>2001 OKRUZHNAYA-2, ул. Кутузова, 46 корпус 1, Рязань, Рязанская обл., Россия, 390025</label>
+    </customValue>
+    <customValue>
+        <fullName>11037</fullName>
+        <default>false</default>
+        <label>1037 STAROKUROVO 2, М4 &quot;Дон&quot;, 80 км строение 3, Ступинский муниципальный район, сельское поселение Семеновское, Московская обл., Россия, 142840</label>
+    </customValue>
+    <customValue>
+        <fullName>11075</fullName>
+        <default>false</default>
+        <label>1075 NOVORIZHSKAYA-2, с.пос Обушковское, Истринский р-он, 43 км а/маг Москва-Рига, Московская обл., Россия, 143582</label>
+    </customValue>
+    <customValue>
+        <fullName>33010</fullName>
+        <default>false</default>
+        <label>3010 VARSKIE, Поворот на п. Варские, Рязанский район, Рязанская область, а/д Рязань-Клепики, 11 км, стр.6Россия, 390525</label>
+    </customValue>
+    <customValue>
+        <fullName>11147</fullName>
+        <default>false</default>
+        <label>1147 OROVO, Колтушское ш., 124, Куйворы, Ленинградская обл., Россия, 188680</label>
+    </customValue>
+    <customValue>
+        <fullName>11057</fullName>
+        <default>false</default>
+        <label>1057 TROITSK, Калужское ш., 11, Моква@ватутинки, Московская обл., Россия, 142191</label>
+    </customValue>
+    <customValue>
+        <fullName>11006</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>11006</label>
+    </customValue>
+    <customValue>
+        <fullName>11095</fullName>
+        <default>false</default>
+        <label>1095 DOMODEDOVO, 142034, Домодедовский район, A105 38км</label>
+    </customValue>
+    <customValue>
+        <fullName>11012</fullName>
+        <default>false</default>
+        <label>1012 ZVERKOVO, Московское Большое кольцо, Московская обл., Россия, 141832</label>
+    </customValue>
+    <customValue>
+        <fullName>11013</fullName>
+        <default>false</default>
+        <label>1013 ZARECHYE, Дмитровское ш., Дмитров, Московская обл., Россия, 141800</label>
+    </customValue>
+    <customValue>
+        <fullName>11128</fullName>
+        <default>false</default>
+        <label>1128 NOVOYE, А114, 11км, Вологодская обл., Вологодский р-н, Лесковский сельсовет, д.Новая, справа от Вологды</label>
+    </customValue>
+    <customValue>
+        <fullName>11138</fullName>
+        <default>false</default>
+        <label>1138 BOTOVO, А114, 120км + 525м, Вологодская обл., Череповецкий р-н, д. Ботово, слева от Вологды</label>
+    </customValue>
+    <customValue>
+        <fullName>11169</fullName>
+        <default>false</default>
+        <label>1169 SCANDINAVIA-2, А-181, Гаврилово, Ленинградская обл., Россия, 188870</label>
+    </customValue>
+    <customValue>
+        <fullName>11170</fullName>
+        <default>false</default>
+        <label>1170 SCANDINAVIA-1, А-181, Гаврилово, Ленинградская обл., Россия, 188870</label>
+    </customValue>
+    <customValue>
+        <fullName>11085</fullName>
+        <default>false</default>
+        <label>1085 KATUKOVA, ул. Катукова, 56, Липецк, Липецкая обл., Россия, 398036</label>
+    </customValue>
+    <customValue>
+        <fullName>11086</fullName>
+        <default>false</default>
+        <label>1086 NEDELINA, Петровский мост, Липецк, Липецкая обл., Россия, 398059</label>
+    </customValue>
+    <customValue>
+        <fullName>11087</fullName>
+        <default>false</default>
+        <label>1087 OKTYABRYA, пр. Октября, 98, Ярославль, Ярославская обл., Россия, 150003</label>
+    </customValue>
+    <customValue>
+        <fullName>11088</fullName>
+        <default>false</default>
+        <label>1088 RYAZAN-1, Куйбышевское ш., 29а, Рязань, Рязанская обл., Россия, 390011</label>
+    </customValue>
+    <customValue>
+        <fullName>11090</fullName>
+        <default>false</default>
+        <label>1090 ALMAZNAYA, ул. Зои Космодемьянской, д.222а, Липецк, Липецкая обл., Россия, 398038</label>
+    </customValue>
+    <customValue>
+        <fullName>11091</fullName>
+        <default>false</default>
+        <label>1091 YUZHNAYA, Южное ш., 111, Тольятти, Самарская обл., Россия, 445031</label>
+    </customValue>
+    <customValue>
+        <fullName>11093</fullName>
+        <default>false</default>
+        <label>1093 STUPINO, ул. Пристанционная, 17, Ступино, Московская обл., Россия, 142803</label>
+    </customValue>
+    <customValue>
+        <fullName>11094</fullName>
+        <default>false</default>
+        <label>1094 BORKOVSKAYA, ул. Борковская, 91A, Тольятти, Самарская обл., Россия, 445036</label>
+    </customValue>
+    <customValue>
+        <fullName>11164</fullName>
+        <default>false</default>
+        <label>1164 ZANEVKA, Колтушское ш., 1, Санкт-Петербург, Россия, 195298</label>
+    </customValue>
+    <customValue>
+        <fullName>11173</fullName>
+        <default>false</default>
+        <label>1173 GOSTILICI, Гостилицкое ш., 9, Санкт-Петербург, Россия, 198504</label>
+    </customValue>
+    <customValue>
+        <fullName>11203</fullName>
+        <default>false</default>
+        <label>1203 KOROLEVA, ул. Академика Королева, 1з, Набережные Челны, Респ. Татарстан, Россия, 423800</label>
+    </customValue>
+    <customValue>
+        <fullName>11204</fullName>
+        <default>false</default>
+        <label>1204 VOLZHSKAYA, Казанский пр., 215в, Набережные Челны, Респ. Татарстан, Россия, 423806</label>
+    </customValue>
+    <customValue>
+        <fullName>33011</fullName>
+        <default>false</default>
+        <label>3011 STRELKA, М5, 108, Срезнево, Рязанская обл., Россия, 391105</label>
+    </customValue>
+    <customValue>
+        <fullName>11080</fullName>
+        <default>false</default>
+        <label>1080 BRYANSK-1, ул. Брянского Фронта, 9А, Брянск, Брянская обл., Россия, 241037</label>
+    </customValue>
+    <customValue>
+        <fullName>12017</fullName>
+        <default>false</default>
+        <label>2017 ANGARSKAYA, Ангарская ул., 162A, Волгоград, Волгоградская обл., Россия, 400081</label>
+    </customValue>
+    <customValue>
+        <fullName>12010</fullName>
+        <default>false</default>
+        <label>2010 ISTORICHESKAYA, P22, 177, Волгоград, Волгоградская обл., Россия, 400075</label>
+    </customValue>
+    <customValue>
+        <fullName>12013</fullName>
+        <default>false</default>
+        <label>2013 LENINA, пр. имени В.И. Ленина, 65Н, Волгоград, Волгоградская обл., Россия, 400078</label>
+    </customValue>
+    <customValue>
+        <fullName>12020</fullName>
+        <default>false</default>
+        <label>2020 LIMONOVAYA, Лимоновая ул., 16, Волгоград, Волгоградская обл., Россия, 400021</label>
+    </customValue>
+    <customValue>
+        <fullName>12016</fullName>
+        <default>false</default>
+        <label>2016 MARSHALA EREMENKO, Волгоград, пр. им, ул. Еременко, д. 7, Волгоград, Волгоградская обл., Россия, 400064</label>
+    </customValue>
+    <customValue>
+        <fullName>12018</fullName>
+        <default>false</default>
+        <label>2018 TANKISTOV, ул. Танкистов, 11, Волгоград, Волгоградская обл., Россия, 400094</label>
+    </customValue>
+    <customValue>
+        <fullName>12021</fullName>
+        <default>false</default>
+        <label>2021 ZEMLYACHKI, ул. им. Землячки, 86, Волгоград, Волгоградская обл., Россия, 400127</label>
+    </customValue>
+    <customValue>
+        <fullName>12011</fullName>
+        <default>false</default>
+        <label>2011 UNIVERSITETSKYI, Университетский Просп., 37А, Волгоград, Волгоградская обл., Россия, 400002</label>
+    </customValue>
+    <customValue>
+        <fullName>11131</fullName>
+        <default>false</default>
+        <label>1131 BYVALOVO, Пошехонское ш., 38А, Вологда, Вологодская обл., Россия, 160022</label>
+    </customValue>
+    <customValue>
+        <fullName>11125</fullName>
+        <default>false</default>
+        <label>1125 SOVETSKIY, Советский пр., 127, Вологда, Вологодская обл., Россия, 160012</label>
+    </customValue>
+    <customValue>
+        <fullName>11127</fullName>
+        <default>false</default>
+        <label>1127 GORKOGO, ул. Горького, 131, Вологда, Вологодская обл., Россия, 160029</label>
+    </customValue>
+    <customValue>
+        <fullName>11126</fullName>
+        <default>false</default>
+        <label>1126 KLUBOVO, ул. Клубова, 34, Вологда, Вологодская обл., Россия, 160010</label>
+    </customValue>
+    <customValue>
+        <fullName>11129</fullName>
+        <default>false</default>
+        <label>1129 SOKOL, ул. Советская, 125, Сокол, Вологодская обл., Россия, 162134</label>
+    </customValue>
+    <customValue>
+        <fullName>11142</fullName>
+        <default>false</default>
+        <label>1142 KIRILLOVSKOYE, Кирилловское ш., 74, Череповец, Вологодская обл., Россия, 162604</label>
+    </customValue>
+    <customValue>
+        <fullName>11137</fullName>
+        <default>false</default>
+        <label>1137 POBEDY, пр. Победы, 89, Череповец, Вологодская обл., Россия, 162612</label>
+    </customValue>
+    <customValue>
+        <fullName>11139</fullName>
+        <default>false</default>
+        <label>1139 SEVERNOYE, Северное ш., 41Б, Череповец, Вологодская обл., Россия, 162600</label>
+    </customValue>
+    <customValue>
+        <fullName>11143</fullName>
+        <default>false</default>
+        <label>1143 LYUBETSKAYA, ул. Любецкая, 24, Череповец, Вологодская обл., Россия, 162609</label>
+    </customValue>
+    <customValue>
+        <fullName>11140</fullName>
+        <default>false</default>
+        <label>1140 MAYAKOVSKAYA, ул. Маяковского, 26a, Череповец, Вологодская обл., Россия, 162614</label>
+    </customValue>
+    <customValue>
+        <fullName>11141</fullName>
+        <default>false</default>
+        <label>1141 STROYINDUSTRII, ул. Стройиндустрии, 4, Череповец, Вологодская обл., Россия, 162611</label>
+    </customValue>
+    <customValue>
+        <fullName>11134</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>11134</label>
+    </customValue>
+    <customValue>
+        <fullName>11124</fullName>
+        <default>false</default>
+        <label>1124 SYAMZHA, Речной пер., 24, Сямжа, Вологодская обл., Россия, 162220</label>
+    </customValue>
+    <customValue>
+        <fullName>11071</fullName>
+        <default>false</default>
+        <label>1071 KRUTITSKIY, 3-й Крутицкий пер., 17, Москва, Россия, 109044</label>
+    </customValue>
+    <customValue>
+        <fullName>11048</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>11048</label>
+    </customValue>
+    <customValue>
+        <fullName>11076</fullName>
+        <default>false</default>
+        <label>1076 BOROVSKOE, Боровское ш., 6A, Москва, Россия, 119618</label>
+    </customValue>
+    <customValue>
+        <fullName>11072</fullName>
+        <default>false</default>
+        <label>1072 VARSHAVSKOE, автозаправочная станция, Москва, Россия, 117623</label>
+    </customValue>
+    <customValue>
+        <fullName>11002</fullName>
+        <default>false</default>
+        <label>1002 VOLGOGRADSKIY, Волгоградский пр-т., 79, Москва, Россия, 109390</label>
+    </customValue>
+    <customValue>
+        <fullName>11032</fullName>
+        <default>false</default>
+        <label>1032 KASHIRSKOE, Каширское ш., 150, Москва, Россия, 115582</label>
+    </customValue>
+    <customValue>
+        <fullName>11067</fullName>
+        <default>false</default>
+        <label>1067 GOLOVINSKAYA, Ленинградское ш., 47А, Москва, Россия, 125565</label>
+    </customValue>
+    <customValue>
+        <fullName>11066</fullName>
+        <default>false</default>
+        <label>1066 LEVOBEREZHNAYA, Садовая Б. ул., 16 строение 5, Москва, Moscow Oblast, Россия, 125445</label>
+    </customValue>
+    <customValue>
+        <fullName>11001</fullName>
+        <default>false</default>
+        <label>1001 LERMONTOVSKIY, Лермонтовский пр., 151-157, Москва, Россия, 109153</label>
+    </customValue>
+    <customValue>
+        <fullName>11069</fullName>
+        <default>false</default>
+        <label>1069 MOZHAYSKOE SHOSSE, Можайское ш., 58, Москва, Россия, 121596</label>
+    </customValue>
+    <customValue>
+        <fullName>11079</fullName>
+        <default>false</default>
+        <label>1079 NAKHIMOVSKIY, Нахимовский пр., 21 строение 1, Москва, Moscow Oblast, Россия, 117149</label>
+    </customValue>
+    <customValue>
+        <fullName>12014</fullName>
+        <default>false</default>
+        <label>2014 DOBROLUBOVA, Огородный пр-д, владение 27А, Москва, Россия, 127254</label>
+    </customValue>
+    <customValue>
+        <fullName>11062</fullName>
+        <default>false</default>
+        <label>1062 SHOSSEYNAYA, Шоссейная ул., владение 1 строение 10, Москва, Россия, 109548</label>
+    </customValue>
+    <customValue>
+        <fullName>11068</fullName>
+        <default>false</default>
+        <label>1068 MITINO, Пятницкое ш., 20, Москва, Россия, 125464</label>
+    </customValue>
+    <customValue>
+        <fullName>11084</fullName>
+        <default>false</default>
+        <label>1084 MITINO-2, г. Москва, 6й км, Пятницкое ш., д.1, Москва, Россия, 125464</label>
+    </customValue>
+    <customValue>
+        <fullName>11009</fullName>
+        <default>false</default>
+        <label>1009 VNUKOVO, 2-я Рейсовая ул., 2G, Москва, Россия, 119027</label>
+    </customValue>
+    <customValue>
+        <fullName>11004</fullName>
+        <default>false</default>
+        <label>1004 BOLSHAYA OLENYA, Большая Оленья ул., 18, Москва, Россия, 107014</label>
+    </customValue>
+    <customValue>
+        <fullName>11060</fullName>
+        <default>false</default>
+        <label>1060 KASKADNAYA, ул. Каскадная, 21, Москва, Россия, 111625</label>
+    </customValue>
+    <customValue>
+        <fullName>11008</fullName>
+        <default>false</default>
+        <label>1008 MARINO, ул. Марьинский Парк, 12, Москва, Россия, 109469</label>
+    </customValue>
+    <customValue>
+        <fullName>11031</fullName>
+        <default>false</default>
+        <label>1031 MOLDOGULOVOY, Молдагуловой ул., 34B, Москва, Россия, 111538</label>
+    </customValue>
+    <customValue>
+        <fullName>11029</fullName>
+        <default>false</default>
+        <label>1029 PERERVA, ул. Перерва, 65 строение 1, Москва, Россия, 109451</label>
+    </customValue>
+    <customValue>
+        <fullName>11041</fullName>
+        <default>false</default>
+        <label>1041 NOVO-PRIVOLNAYA, Привольная ул., 4, Москва, Россия, 109145</label>
+    </customValue>
+    <customValue>
+        <fullName>11061</fullName>
+        <default>false</default>
+        <label>1061 OTRADNOE, ул. Сельскохозяйственная, 40 строение 1, Москва, Moscow Oblast, Россия, 129323</label>
+    </customValue>
+    <customValue>
+        <fullName>11038</fullName>
+        <default>false</default>
+        <label>1038 KRASNOGORSK-2, Волоколамское ш., 154, Москва, Россия, 143401</label>
+    </customValue>
+    <customValue>
+        <fullName>11030</fullName>
+        <default>false</default>
+        <label>1030 URIEVSKY, Юрьевский пер., 17, Москва, Россия, 111020</label>
+    </customValue>
+    <customValue>
+        <fullName>11063</fullName>
+        <default>false</default>
+        <label>1063 YAROSLAVSKOE, Ярославское ш., 47, Москва, Россия, 129337</label>
+    </customValue>
+    <customValue>
+        <fullName>11121</fullName>
+        <default>false</default>
+        <label>1121 KOMENDANTSKIY, Комендантский пр., 41, Санкт-Петербург, Россия, 197373</label>
+    </customValue>
+    <customValue>
+        <fullName>11106</fullName>
+        <default>false</default>
+        <label>1106 DACHNOYE, Кронштадтская пл., 4, Санкт-Петербург, Россия, 198207</label>
+    </customValue>
+    <customValue>
+        <fullName>11107</fullName>
+        <default>false</default>
+        <label>1107 ZHUKOVA, Ленинский пр., 102, Санкт-Петербург, Россия, 198332</label>
+    </customValue>
+    <customValue>
+        <fullName>11111</fullName>
+        <default>false</default>
+        <label>1111 VOLODARSKAYA, Октябрьская наб., 66 корпус 2, Санкт-Петербург, Россия, 193079</label>
+    </customValue>
+    <customValue>
+        <fullName>11108</fullName>
+        <default>false</default>
+        <label>1108 OKTYABRSKAYA, Октябрьская наб., 46, Санкт-Петербург, Россия, 193230</label>
+    </customValue>
+    <customValue>
+        <fullName>11118</fullName>
+        <default>false</default>
+        <label>1118 LISIYNOS, Приморское ш., 144, Санкт-Петербург, Россия, 197701</label>
+    </customValue>
+    <customValue>
+        <fullName>11110</fullName>
+        <default>false</default>
+        <label>1110 PARGOLOVO, Выборгское ш., 369, Санкт-Петербург, Россия, 194362</label>
+    </customValue>
+    <customValue>
+        <fullName>11152</fullName>
+        <default>false</default>
+        <label>1152 VITEBSKIY, Витебский пр., 157, Санкт-Петербург, Россия, 196626</label>
+    </customValue>
+    <customValue>
+        <fullName>11156</fullName>
+        <default>false</default>
+        <label>1156 MOSKOVSKAYA, E105, Санкт-Петербург, Ленинградская обл., Россия, 196634</label>
+    </customValue>
+    <customValue>
+        <fullName>11150</fullName>
+        <default>false</default>
+        <label>1150 PISKAREVSKAYA, Пискарёвский пр., 167, Санкт-Петербург, Россия, 195273</label>
+    </customValue>
+    <customValue>
+        <fullName>11162</fullName>
+        <default>false</default>
+        <label>1162 SOFIYSKAYA-2, Софийская ул., Санкт-Петербург, Россия, 192289</label>
+    </customValue>
+    <customValue>
+        <fullName>11157</fullName>
+        <default>false</default>
+        <label>1157 INDUSTRIALNIY, Индустриальный пр., 47 A, Санкт-Петербург, Россия, 195279</label>
+    </customValue>
+    <customValue>
+        <fullName>11103</fullName>
+        <default>false</default>
+        <label>1103 KULTURY, пр. Культуры, 19А, Санкт-Петербург, Россия, 195274</label>
+    </customValue>
+    <customValue>
+        <fullName>11167</fullName>
+        <default>false</default>
+        <label>1167 PISKAREVSKAYA 2, Пискарёвский пр., 146, Санкт-Петербург, Россия, 195273</label>
+    </customValue>
+    <customValue>
+        <fullName>11113</fullName>
+        <default>false</default>
+        <label>1113 KUZNETSOVSKAYA, пр. Юрия Гагарина, 2, Санкт-Петербург, Россия, 196105</label>
+    </customValue>
+    <customValue>
+        <fullName>11145</fullName>
+        <default>false</default>
+        <label>1145 TSVETY, Пулковское ш., 81, Санкт-Петербург, Россия, 196140</label>
+    </customValue>
+    <customValue>
+        <fullName>11122</fullName>
+        <default>false</default>
+        <label>1122 PULKOVSKAYA, Пулковское ш., 46/3, Санкт-Петербург, Россия, 196210</label>
+    </customValue>
+    <customValue>
+        <fullName>11114</fullName>
+        <default>false</default>
+        <label>1114 BELOOSTROVSKAYA, Белоостровская ул., 8, Санкт-Петербург, Россия, 197342</label>
+    </customValue>
+    <customValue>
+        <fullName>11161</fullName>
+        <default>false</default>
+        <label>1161 BOROVAYA, Боровая ул., 43A, Санкт-Петербург, Россия, 192007</label>
+    </customValue>
+    <customValue>
+        <fullName>11117</fullName>
+        <default>false</default>
+        <label>1117 ZHDANOVSKAYA, Ждановская ул., 2, Санкт-Петербург, Россия, 197110</label>
+    </customValue>
+    <customValue>
+        <fullName>11101</fullName>
+        <default>false</default>
+        <label>1101 KONSTITUTSII, Краснопутиловская ул., 86, Санкт-Петербург, Россия, 196247</label>
+    </customValue>
+    <customValue>
+        <fullName>11115</fullName>
+        <default>false</default>
+        <label>1115 BLYUKHERA, Маршала Блюхера пр-т, д. 2, корп. 8, лит. А, Санкт-Петербург, Россия, 195197</label>
+    </customValue>
+    <customValue>
+        <fullName>11155</fullName>
+        <default>false</default>
+        <label>1155 NOVOROSSIYSKAYA, Новороссийская ул., 15, Санкт-Петербург, Россия, 194021</label>
+    </customValue>
+    <customValue>
+        <fullName>11148</fullName>
+        <default>false</default>
+        <label>1148 PARASHUTNAYA, Парашютная ул., 88, Санкт-Петербург, Россия, 194294</label>
+    </customValue>
+    <customValue>
+        <fullName>11112</fullName>
+        <default>false</default>
+        <label>1112 RUSTAVELI, ул. Руставели, 42А, Санкт-Петербург, Россия, 195299</label>
+    </customValue>
+    <customValue>
+        <fullName>11105</fullName>
+        <default>false</default>
+        <label>1105 SEDOVA, ул. Седова, Санкт-Петербург, Россия, 192019</label>
+    </customValue>
+    <customValue>
+        <fullName>11151</fullName>
+        <default>false</default>
+        <label>1151 SOFIYSKAYA, Софийская ул., 129А, Санкт-Петербург, Ленинградская, Россия, 196642</label>
+    </customValue>
+    <customValue>
+        <fullName>11109</fullName>
+        <default>false</default>
+        <label>1109 PRIMORSKAYA, Стародеревенская ул., 1A, Санкт-Петербург, Россия, 197374</label>
+    </customValue>
+    <customValue>
+        <fullName>11153</fullName>
+        <default>false</default>
+        <label>1153 TORZHKOVSKAYA, Торжковская ул., 19A, Санкт-Петербург, Россия, 197343</label>
+    </customValue>
+    <customValue>
+        <fullName>11102</fullName>
+        <default>false</default>
+        <label>1102 FUCHIKA, ул. Фучика, 6/3, Санкт-Петербург, Россия, 192102</label>
+    </customValue>
+    <customValue>
+        <fullName>11120</fullName>
+        <default>false</default>
+        <label>1120 KHASANSKAYA, Хасанская ул., 1 к2, Санкт-Петербург, Россия, 197374</label>
+    </customValue>
+    <customValue>
+        <fullName>11116</fullName>
+        <default>false</default>
+        <label>1116 KHOSHIMINA, корп. 2, ул. Хошимина, 13, Санкт-Петербург, Россия, 194356</label>
+    </customValue>
+    <customValue>
+        <fullName>11222</fullName>
+        <default>false</default>
+        <label>1222 AMIRKHANA, ул. Фатыха Амирхана, 101Б, Казань, Респ. Татарстан, Россия, 420136</label>
+    </customValue>
+    <customValue>
+        <fullName>11218</fullName>
+        <default>false</default>
+        <label>1218 KASIMOVYKH, ул. Братьев Касимовых, 41А, Казань, Респ. Татарстан, Россия, 420110</label>
+    </customValue>
+    <customValue>
+        <fullName>11216</fullName>
+        <default>false</default>
+        <label>1216 IBRAGIMOVA, пр. Ибрагимова, 48А, Казань, Респ. Татарстан, Россия, 420066</label>
+    </customValue>
+    <customValue>
+        <fullName>11217</fullName>
+        <default>false</default>
+        <label>1217 KAZANSKAYA#1, ул. Николая Столбова, 1, Казань, Респ. Татарстан, Россия, 420021</label>
+    </customValue>
+    <customValue>
+        <fullName>11082</fullName>
+        <default>false</default>
+        <label>1082 KALUGA-2, ул. Центральная, 86, Мстихино, Калужская обл., Россия, 248915</label>
+    </customValue>
+    <customValue>
+        <fullName>11160</fullName>
+        <default>false</default>
+        <label>1160 MISTOLOVO-2, Приозерское ш., 50, Охтинское Раздолье, Ленинградская обл., Россия, 188661</label>
+    </customValue>
+    <customValue>
+        <fullName>11149</fullName>
+        <default>false</default>
+        <label>1149 MISTOLOVO, Приозерское ш., 50, Охтинское Раздолье, Ленинградская обл., Россия, 188661</label>
+    </customValue>
+    <customValue>
+        <fullName>11158</fullName>
+        <default>false</default>
+        <label>1158 MURMANSKOE-1, E105, массив Озерки, Всеволожский р-н, Ленинградская обл., Россия, 188681</label>
+    </customValue>
+    <customValue>
+        <fullName>11159</fullName>
+        <default>false</default>
+        <label>1159 MURMANSKOE-2, Мурманское ш., 25, Разметелево, Ленинградская обл., Россия, 188686</label>
+    </customValue>
+    <customValue>
+        <fullName>11171</fullName>
+        <default>false</default>
+        <label>1171 NOVOE DEVYATKINO, Новое Девяткино дер., ул. Главная, северо-восточнее д. 60, Всеволожский р-н, Ленинградская обл., Россия, 188661</label>
+    </customValue>
+    <customValue>
+        <fullName>11154</fullName>
+        <default>false</default>
+        <label>1154 PRIJUTINO, Приютинская ул., 11, Всеволожск, Ленинградская обл., Россия, 188641</label>
+    </customValue>
+    <customValue>
+        <fullName>11119</fullName>
+        <default>false</default>
+        <label>1119 VYBORG, Ленинградское ш., 42, Выборг, Ленинградская обл., Россия, 188805</label>
+    </customValue>
+    <customValue>
+        <fullName>11163</fullName>
+        <default>false</default>
+        <label>1163 BELGRADSKAYA, ул. Димитрова, 2, Санкт-Петербург, Россия, 192239</label>
+    </customValue>
+    <customValue>
+        <fullName>11175</fullName>
+        <default>false</default>
+        <label>1175 KAD 1, Пениковское сельское поселение, ЗАО &quot;Плодоягодное&quot;, в районе деревни Сойкино, 32, уч.№2, Ломоносовский муниципальный район, Ленинградская обл., Россия, 188530</label>
+    </customValue>
+    <customValue>
+        <fullName>12004</fullName>
+        <default>false</default>
+        <label>2004 KOSMOS, ул. Циолковского, 43B, Липецк, Липецкая обл., Россия, 398032</label>
+    </customValue>
+    <customValue>
+        <fullName>11022</fullName>
+        <default>false</default>
+        <label>1022 GAGARIN-1, М1, 173 км, б.н.п. п. Сверчково, справа от Смоленска, Гагаринский р-н, Смоленская обл., Россия, 215027</label>
+    </customValue>
+    <customValue>
+        <fullName>11019</fullName>
+        <default>false</default>
+        <label>1019 MINSKOYE 24 KM, Null Д. Губкино, 22, Губкино, Московская обл., Россия, 143006</label>
+    </customValue>
+    <customValue>
+        <fullName>11039</fullName>
+        <default>false</default>
+        <label>1039 SAFONOVO, М-1, 303 км+ 170 м, Смоленская обл., Сафоновский р-н, г.Сафоново, Смоленская обл., Россия, 215523</label>
+    </customValue>
+    <customValue>
+        <fullName>11015</fullName>
+        <default>false</default>
+        <label>1015 SMOLENSK-1, М-1, 449км + 800м, б.н.п. Красное, справа от Смоленска, Краснинский р-н,  Смоленская обл., Россия, 216125</label>
+    </customValue>
+    <customValue>
+        <fullName>11016</fullName>
+        <default>false</default>
+        <label>1016 SMOLENSK-2, М1, 450км + 500м, Краснинский р-н, б.н.п. - п.Красное, АЗС №11016 &quot;SMOLENSK-2&quot; слева от Смоленска Смоленская обл., Россия, 216125</label>
+    </customValue>
+    <customValue>
+        <fullName>11054</fullName>
+        <default>false</default>
+        <label>1054 TVER-2, М10, 126 км, д. Старое Мелково, Конаковский р-н, справа, Тверская обл., Россия, 171265</label>
+    </customValue>
+    <customValue>
+        <fullName>11065</fullName>
+        <default>false</default>
+        <label>1065 SOLNECHNOGORSK, 3, Ржавки, Московская обл., Россия, 124482</label>
+    </customValue>
+    <customValue>
+        <fullName>11144</fullName>
+        <default>false</default>
+        <label>1144 RYABOVO, М10, 622 км, массив &quot;Ушаки&quot;, уч. 102/2-2, д. Рябово, слева от Санкт-Петербурга, Тосненский р-н,  Ленинградская обл., Россия, 187040</label>
+    </customValue>
+    <customValue>
+        <fullName>11146</fullName>
+        <default>false</default>
+        <label>1146 RYABOVO-2, М10, 622 км,  массив &quot;Ушаки&quot;, уч. 170/3, д. Рябово, справа от Санкт-Петербурга, Тосненский р-н, Ленинградская обл., Россия, 187040</label>
+    </customValue>
+    <customValue>
+        <fullName>11055</fullName>
+        <default>false</default>
+        <label>1055 VERA, А-240, Брянская обл., Россия, 243371</label>
+    </customValue>
+    <customValue>
+        <fullName>11056</fullName>
+        <default>false</default>
+        <label>1056 LUBOV, А-240, Брянская обл., Россия, 243361</label>
+    </customValue>
+    <customValue>
+        <fullName>11132</fullName>
+        <default>false</default>
+        <label>1132 IKEA, ш. Мурманское 12 Км, 12, Кудрово, Ленинградская обл., Россия, 193315</label>
+    </customValue>
+    <customValue>
+        <fullName>11018</fullName>
+        <default>false</default>
+        <label>1018 ROZHDESTVENSKOYE, М2, 170 км, Ленинский р-н, п.Октябрьский, слева от Тулы, Тульская обл., Россия, 301137</label>
+    </customValue>
+    <customValue>
+        <fullName>11024</fullName>
+        <default>false</default>
+        <label>1024 SIMFEROPOLSKOE, Симферопольское шоссе, деревня Всходы, 100А, городской округ Серпухов, Московская обл., Россия, 142272</label>
+    </customValue>
+    <customValue>
+        <fullName>11043</fullName>
+        <default>false</default>
+        <label>1043 KIEVSKAYA, М3, 86км + 700м, Калужская обл., Боровский р-н, д. Ивакино, км. Киевское шоссе, справа от Калуги Россия, 249022</label>
+    </customValue>
+    <customValue>
+        <fullName>11058</fullName>
+        <default>false</default>
+        <label>1058 KIEVSKAYA-2, М3, 89км + 730м, Калужская обл., Боровский р-н, пос. Ворсино, слева от Калуги</label>
+    </customValue>
+    <customValue>
+        <fullName>11026</fullName>
+        <default>false</default>
+        <label>1026 MIRNIY, ул. Грибоедова, 28, Елец, Липецкая обл., Россия, 399787</label>
+    </customValue>
+    <customValue>
+        <fullName>11036</fullName>
+        <default>false</default>
+        <label>1036 STAROKUROVO 1, М4, 79 км, д. Старокурово, Ступинский р-н, Московская обл., Россия, 142840</label>
+    </customValue>
+    <customValue>
+        <fullName>11027</fullName>
+        <default>false</default>
+        <label>1027 BRONNITSY, М5, 57 км, г. Бронницы, слева от Москвы Московская обл., Россия, 140170</label>
+    </customValue>
+    <customValue>
+        <fullName>11052</fullName>
+        <default>false</default>
+        <label>1052 ELNYA, Ulitsa Shkolnaya Noginsky area, Ельня, Московская обл., Россия, 142434</label>
+    </customValue>
+    <customValue>
+        <fullName>11046</fullName>
+        <default>false</default>
+        <label>1046 Nizhegorodskaya, 22А, Ногинск, Московская обл., Россия, 142400</label>
+    </customValue>
+    <customValue>
+        <fullName>11050</fullName>
+        <default>false</default>
+        <label>1050 NOGINSK, М7, Ногинск, Московская обл., Россия, 142401</label>
+    </customValue>
+    <customValue>
+        <fullName>11059</fullName>
+        <default>false</default>
+        <label>1059 SERGIEV 2, М-8, 53 км, Пушкинский р-н, с. Рахманово, Ярославское шоссе, стр.1, справа от Москвы, Московская обл., Россия, 141362</label>
+    </customValue>
+    <customValue>
+        <fullName>11040</fullName>
+        <default>false</default>
+        <label>1040 SERGIEV-1, 60, Лешково, Московская обл., Россия, 141362</label>
+    </customValue>
+    <customValue>
+        <fullName>11021</fullName>
+        <default>false</default>
+        <label>1021 NOSOVO, E22, Носово, Тверская обл., Россия, 172310</label>
+    </customValue>
+    <customValue>
+        <fullName>11020</fullName>
+        <default>false</default>
+        <label>1020 ZUBTSOV, E22, Зубцов, Тверская обл., Россия, 172318</label>
+    </customValue>
+    <customValue>
+        <fullName>11070</fullName>
+        <default>false</default>
+        <label>1070 NOVORIZHSKAYA-1, М9, 43 км, Новорижское шоссе, Истринский р-н, д.Покровское, слева от Москвы, , Московская обл., Россия, 143582</label>
+    </customValue>
+    <customValue>
+        <fullName>11035</fullName>
+        <default>false</default>
+        <label>1035 NOVAYA RIGA, 168, Истра Кантри Клаб Кп, Московская обл., Россия, 143521</label>
+    </customValue>
+    <customValue>
+        <fullName>11005</fullName>
+        <default>false</default>
+        <label>1005 PRIVOLNAYA, Привольная ул., 70, Москва, Россия, 109431</label>
+    </customValue>
+    <customValue>
+        <fullName>12012</fullName>
+        <default>false</default>
+        <label>2012 SIMONOVSKAYA, Крутицкая наб., 17A, Москва, Россия, 115088</label>
+    </customValue>
+    <customValue>
+        <fullName>11081</fullName>
+        <default>false</default>
+        <label>1081 MKAD-1, МКАД 71 км (внешн.), 9, Москва, Московская обл., Россия, 143441</label>
+    </customValue>
+    <customValue>
+        <fullName>12019</fullName>
+        <default>false</default>
+        <label>2019 MKAD-5, МКАД 7 км (внутр.), 6, Москва, Россия, 111538</label>
+    </customValue>
+    <customValue>
+        <fullName>12005</fullName>
+        <default>false</default>
+        <label>2005 PROLETARSKAYA, Пролетарский пр., 30 строение 14, Москва, Россия, 115516</label>
+    </customValue>
+    <customValue>
+        <fullName>12008</fullName>
+        <default>false</default>
+        <label>2008 YAUZA, Рубцовская наб., 2А, Москва, Moscow Oblast, Россия, 105082</label>
+    </customValue>
+    <customValue>
+        <fullName>12015</fullName>
+        <default>false</default>
+        <label>2015 RYAZANSKIY PROSPEKT, Рязанский пр., 14к4, Москва, Россия, 109428</label>
+    </customValue>
+    <customValue>
+        <fullName>11047</fullName>
+        <default>false</default>
+        <label>1047 NADEZHDA, ш. Энтузиастов, 1, Балашиха, Московская обл., Россия, 143912</label>
+    </customValue>
+    <customValue>
+        <fullName>11051</fullName>
+        <default>false</default>
+        <label>1051 PARKOVAYA, ул. Советская, 33, Балашиха, Московская обл., Россия, 143902</label>
+    </customValue>
+    <customValue>
+        <fullName>11045</fullName>
+        <default>false</default>
+        <label>1045 RAZINSKAYA, ш. Энтузиастов, 44, Балашиха, Московская обл., Россия, 143907</label>
+    </customValue>
+    <customValue>
+        <fullName>11053</fullName>
+        <default>false</default>
+        <label>1053 BALASHIKHA, ш. Энтузиастов, дом 4а, Балашиха, Московская обл., Россия, 143912</label>
+    </customValue>
+    <customValue>
+        <fullName>11023</fullName>
+        <default>false</default>
+        <label>1023 KHIMKI, ул. Первомайская, 65, Химки, Московская обл., Россия, 141421</label>
+    </customValue>
+    <customValue>
+        <fullName>11034</fullName>
+        <default>false</default>
+        <label>1034 KRASNOGORSK, Волоколамское ш., 1 строение 2, Красногорск, Московская обл., Россия, 143401</label>
+    </customValue>
+    <customValue>
+        <fullName>11064</fullName>
+        <default>false</default>
+        <label>1064 TOMILINO, 3, Рязанское ш., 5, Томилино, Московская обл., Россия, 140073</label>
+    </customValue>
+    <customValue>
+        <fullName>11042</fullName>
+        <default>false</default>
+        <label>1042 VINOGRADOVO, Дмитровское ш., 36, Виноградово, Московская обл., Россия, 127204</label>
+    </customValue>
+    <customValue>
+        <fullName>11044</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>11044</label>
+    </customValue>
+    <customValue>
+        <fullName>11007</fullName>
+        <default>false</default>
+        <label>1007 OREKHOVO-ZUYEVO, Московское Большое кольцо, Московская обл., Россия, 142605</label>
+    </customValue>
+    <customValue>
+        <fullName>11014</fullName>
+        <default>false</default>
+        <label>1014 CHEKHOV, Симферопольское ш., 55, Шарапово, Московская обл., Россия, 142380</label>
+    </customValue>
+    <customValue>
+        <fullName>11083</fullName>
+        <default>false</default>
+        <label>1083 VOSKRESENSK, ул. Первостроителей, 2, Воскресенск, Московская обл., Россия, 140200</label>
+    </customValue>
+    <customValue>
+        <fullName>12007</fullName>
+        <default>false</default>
+        <label>2007 MYTISCHI, Волковское ш., 3/1, Мытищи, Московская обл., Россия, 141006</label>
+    </customValue>
+    <customValue>
+        <fullName>11097</fullName>
+        <default>false</default>
+        <label>1097 PUSHKINO, 141211, Московская область, Пушкинский р-н, г. Пушкино, Красноармейское шоссе, 96</label>
+    </customValue>
+    <customValue>
+        <fullName>33070</fullName>
+        <default>false</default>
+        <label>33070</label>
+    </customValue>
+    <customValue>
+        <fullName>12006</fullName>
+        <default>false</default>
+        <label>2006 KHIMKI-2, Совхозная ул., 2, Химки, Московская обл., Россия, 141411</label>
+    </customValue>
+    <customValue>
+        <fullName>11135</fullName>
+        <default>false</default>
+        <label>1135 LUZHSKAYA, Лужское ш., 3, Великий Новгород, Новгородская обл., Россия, 173008</label>
+    </customValue>
+    <customValue>
+        <fullName>11136</fullName>
+        <default>false</default>
+        <label>1136 BOLSHAYA S-P, Большая Санкт-Петербургская ул., 170, Великий Новгород, Новгородская обл., Россия, 173008</label>
+    </customValue>
+    <customValue>
+        <fullName>11025</fullName>
+        <default>false</default>
+        <label>1025 KAZAKI, Р-119, 95, Казаки, Липецкая обл., Россия, 399747</label>
+    </customValue>
+    <customValue>
+        <fullName>11017</fullName>
+        <default>false</default>
+        <label>1017 STAKHANOVSKIY, ул. Центральная, Тульская обл., Россия, 301275</label>
+    </customValue>
+    <customValue>
+        <fullName>11205</fullName>
+        <default>false</default>
+        <label>1205 POBEDA, просп. Победы, 214 корпус 1, Казань, Респ. Татарстан, Россия, 420088</label>
+    </customValue>
+    <customValue>
+        <fullName>11202</fullName>
+        <default>false</default>
+        <label>1202 YAMASHEVA, Меридианная ул., 26В, Казань, Респ. Татарстан, Россия, 420124</label>
+    </customValue>
+    <customValue>
+        <fullName>11201</fullName>
+        <default>false</default>
+        <label>1201 GVARDEYSKAYA, ул. Гвардейская, 52V, Казань, Респ. Татарстан, Россия, 420087</label>
+    </customValue>
+    <customValue>
+        <fullName>11220</fullName>
+        <default>false</default>
+        <label>1220 MUSINA, ул. Мусина, 10А, Казань, Респ. Татарстан, Россия, 420103</label>
+    </customValue>
+    <customValue>
+        <fullName>11219</fullName>
+        <default>false</default>
+        <label>1219 TEKHNICHESKAYA, Техническая ул., 4б, Казань, Респ. Татарстан, Россия, 420021</label>
+    </customValue>
+    <customValue>
+        <fullName>11221</fullName>
+        <default>false</default>
+        <label>1221 USADY, Дорожная ул., 1, село Усады, Респ. Татарстан, Россия, 422624</label>
+    </customValue>
+    <customValue>
+        <fullName>11089</fullName>
+        <default>false</default>
+        <label>1089 SOLOTCHINSKOE, Солотчинское ш., 2A, Рязань, Рязанская обл., Россия, 390006</label>
+    </customValue>
+    <customValue>
+        <fullName>33068</fullName>
+        <default>false</default>
+        <label>3068 MOSKOVSKOE, Московское ш., 2, Самара, Самарская обл., Россия, 443086</label>
+    </customValue>
+    <customValue>
+        <fullName>11214</fullName>
+        <default>false</default>
+        <label>1214 AVTOZAVOD, Автозаводское ш., 4, Тольятти, Самарская обл., Россия, 445004</label>
+    </customValue>
+    <customValue>
+        <fullName>11215</fullName>
+        <default>false</default>
+        <label>1215 NOVOPROMYSHLENNAYA, ул. Новопромышленная, 26, Тольятти, Самарская обл., Россия, 445009</label>
+    </customValue>
+    <customValue>
+        <fullName>11168</fullName>
+        <default>false</default>
+        <label>1168 BOGATYRSKIY, Богатырский пр., 12, Санкт-Петербург, Россия, 197348</label>
+    </customValue>
+    <customValue>
+        <fullName>11033</fullName>
+        <default>false</default>
+        <label>1033 EREMENKO, ул. Маршала Еременко, 36А, Смоленск, Смоленская обл., Россия, 214032</label>
+    </customValue>
+    <customValue>
+        <fullName>11011</fullName>
+        <default>false</default>
+        <label>1011 VYPOLZOVO-2, E105, 2, Выползово, Тверская обл., Россия, 171053</label>
+    </customValue>
+    <customValue>
+        <fullName>11010</fullName>
+        <default>false</default>
+        <label>1010 VYPOLZOVO-1, E105, 2, Выползово, Тверская обл., Россия, 171053</label>
+    </customValue>
+    <customValue>
+        <fullName>11049</fullName>
+        <default>false</default>
+        <label>1049 TVER-1, Ленинградское ш., 468, Андрейково, Тверская обл., Россия, 170540</label>
+    </customValue>
+    <customValue>
+        <fullName>12009</fullName>
+        <default>false</default>
+        <label>2009 ZVEZDNAYA, Калужское ш., 54, Москва, Московская обл., Россия, 142190</label>
+    </customValue>
+    <customValue>
+        <fullName>11077</fullName>
+        <default>false</default>
+        <label>1077 MARGELOVA, ул. Генерала Маргелова, 67, Тула, Тульская обл., Россия, 300026</label>
+    </customValue>
+    <customValue>
+        <fullName>11073</fullName>
+        <default>false</default>
+        <label>1073 KUTUZOVA, ул. Кутузова, 43, Тула, Тульская обл., Россия, 300004</label>
+    </customValue>
+    <customValue>
+        <fullName>11074</fullName>
+        <default>false</default>
+        <label>1074 RYAZANSKAYA, Р-132, 6, Тула, Тульская обл., Россия, 300045</label>
+    </customValue>
+    <customValue>
+        <fullName>33020</fullName>
+        <default>false</default>
+        <label>3020 ROSTOV-1, ул. Вишневского, 76, Ростов, Ярославская обл., Россия, 152151</label>
+    </customValue>
+    <customValue>
+        <fullName>33025</fullName>
+        <default>false</default>
+        <label>3025 FRUNZE, пр. Фрунзе, 44, Ярославль, Ярославская обл., Россия, 150022</label>
+    </customValue>
+    <customValue>
+        <fullName>12022</fullName>
+        <default>false</default>
+        <label>2022 MKAD-6, МКАД 1 Км Жд, Авл2, 2А, Москва, Moscow Oblast, Россия, 111531</label>
+    </customValue>
+    <customValue>
+        <fullName>11178</fullName>
+        <default>false</default>
+        <label>1178 TOLMACHEVSKAYA, ул. Толмачёвская, 1/3, Новосибирск, Новосибирская обл., Россия, 630052</label>
+    </customValue>
+    <customValue>
+        <fullName>11177</fullName>
+        <default>false</default>
+        <label>1177 PERVOMAISKAYA, ул. Первомайская, 222, Новосибирск, Новосибирская обл., Россия, 630030</label>
+    </customValue>
+    <customValue>
+        <fullName>11176</fullName>
+        <default>false</default>
+        <label>1176 SIBIRYAKOV-GVARDEYTSEV, ул. Сибиряков-Гвардейцев, 47A, Новосибирск, Новосибирская обл., Россия, 630024</label>
+    </customValue>
+    <customValue>
+        <fullName>1179</fullName>
+        <default>false</default>
+        <label>1179 KAD 4, КАД(74 км внешн.), Санкт-Петербург, Россия, 196158</label>
+    </customValue>
+    <customValue>
+        <fullName>1181</fullName>
+        <default>false</default>
+        <label>1181 OBVODNIY, Глиняная ул., 23/1, Санкт-Петербург, Россия, 192019</label>
+    </customValue>
+    <customValue>
+        <fullName>1182</fullName>
+        <default>false</default>
+        <label>1182 DUNAYSKIY, Дунайский пр., 62, Санкт-Петербург, Россия, 192288</label>
+    </customValue>
+    <customValue>
+        <fullName>1183</fullName>
+        <default>false</default>
+        <label>1183 KIROVSK, Марьинская ул., д.46, Кировск, Ленинградская обл., Россия, 187342</label>
+    </customValue>
+    <customValue>
+        <fullName>3001</fullName>
+        <default>false</default>
+        <label>3001 VENEVSKOE, Веневское ш., 4Б, Тула, Тульская обл., Россия, 300002</label>
+    </customValue>
+    <customValue>
+        <fullName>3002</fullName>
+        <default>false</default>
+        <label>3002 PROLETARSKOE, ул. Пролетарская, 1Б, Тула, Тульская обл., Россия, 300001</label>
+    </customValue>
+    <customValue>
+        <fullName>3003</fullName>
+        <default>false</default>
+        <label>3003 Aleksin - 1, Городская дор., 11, Алексин, Тульская обл., Россия, 301455</label>
+    </customValue>
+    <customValue>
+        <fullName>3004</fullName>
+        <default>false</default>
+        <label>3004 ALEKSIN-2, ул. Генерала Короткова, 2, Алексин, Тульская обл., Россия, 301367</label>
+    </customValue>
+    <customValue>
+        <fullName>3005</fullName>
+        <default>false</default>
+        <label>3005 NOVOMOSKOVSK-1, ул. Куйбышева, 13, Новомосковск, Тульская обл., Россия, 301650</label>
+    </customValue>
+    <customValue>
+        <fullName>3006</fullName>
+        <default>false</default>
+        <label>3006 NOVOMOSKOVSK-2, ул. Комсомольское ш., 3, Новомосковск, Тульская обл., Россия, 301661</label>
+    </customValue>
+    <customValue>
+        <fullName>3007</fullName>
+        <default>false</default>
+        <label>3007 BARSUKI, ул. Октябрьская, 2, Барсуки, Тульская обл., Россия, 301122</label>
+    </customValue>
+    <customValue>
+        <fullName>3008</fullName>
+        <default>false</default>
+        <label>3008 SUVOROV, ул. Черепетская, 2, Суворов, Тульская обл., Россия, 301433</label>
+    </customValue>
+    <customValue>
+        <fullName>3015</fullName>
+        <default>false</default>
+        <label>3015 ILYINSKOE, Новомосковское ш., 60, Тула, Тульская обл., Россия, 300045</label>
+    </customValue>
+    <customValue>
+        <fullName>3016</fullName>
+        <default>false</default>
+        <label>3016 KUPAVNA, Автовокзал &quot;Старая Купавна&quot;, Старая Купавна, Московская обл., Россия, 142450</label>
+    </customValue>
+    <customValue>
+        <fullName>3017</fullName>
+        <default>false</default>
+        <label>3017 SOVETSKAYA, Кинешемское ш., Кострома, Костромская обл., Россия, 156019</label>
+    </customValue>
+    <customValue>
+        <fullName>3018</fullName>
+        <default>false</default>
+        <label>3018 MAGISTRALNAYA, Магистральная ул., 40А корпус 1, Кострома, Костромская обл., Россия, 156010</label>
+    </customValue>
+    <customValue>
+        <fullName>3019</fullName>
+        <default>false</default>
+        <label>3019 GALICHSKAYA, Галичская ул., 120, Кострома, Костромская обл., Россия, 156008</label>
+    </customValue>
+    <customValue>
+        <fullName>3021</fullName>
+        <default>false</default>
+        <label>3021 VOLZHSKAYA, ул. 2-я Волжская, 4Б, Кострома, Костромская обл., Россия, 156009</label>
+    </customValue>
+    <customValue>
+        <fullName>3022</fullName>
+        <default>false</default>
+        <label>3022 MKAD-2, МКАД, 105, Москва, Россия, 143911</label>
+    </customValue>
+    <customValue>
+        <fullName>3023</fullName>
+        <default>false</default>
+        <label>3023 M4 DON, Путейская ул., 24, Ям, Московская обл., Россия, 142030</label>
+    </customValue>
+    <customValue>
+        <fullName>3024</fullName>
+        <default>false</default>
+        <label>3024 KERAMICHESKAYA, ул. Керамическая, 3, Балашиха, Московская обл., Россия, 141241</label>
+    </customValue>
+    <customValue>
+        <fullName>3029</fullName>
+        <default>false</default>
+        <label>3029 PERESLAVL ZALESSKIY, ул. Московская, 140, Переславль-Залесский, Ярославская обл., Россия, 152024</label>
+    </customValue>
+    <customValue>
+        <fullName>3030</fullName>
+        <default>false</default>
+        <label>3030 KORGASHINO, Пироговское ш., 2, Мытищи, Московская обл., Россия, 141033</label>
+    </customValue>
+    <customValue>
+        <fullName>3031</fullName>
+        <default>false</default>
+        <label>3031 BOLSHAYA TARASOVSKAYA, По Требованию, Челюскинский, Московская обл., Россия, 141220</label>
+    </customValue>
+    <customValue>
+        <fullName>3061</fullName>
+        <default>false</default>
+        <label>3061 PIONERSKAYA, Пионерская ул., 49А, Королёв, Московская обл., Россия, 141074</label>
+    </customValue>
+    <customValue>
+        <fullName>3063</fullName>
+        <default>false</default>
+        <label>3063 KHASANOVA, ул. Карла Маркса, 107, Йошкар-Ола, Респ. Марий Эл, Россия, 424006</label>
+    </customValue>
+    <customValue>
+        <fullName>3064</fullName>
+        <default>false</default>
+        <label>3064 VOSTOCHNAYA, Восточная ул., 1a, Новочебоксарск, Чувашская Респ., Россия, 429965</label>
+    </customValue>
+    <customValue>
+        <fullName>3065</fullName>
+        <default>false</default>
+        <label>3065 AVRORA, просп. Ленинградский, 1в, Кемерово, Кемеровская обл., Россия, 650065</label>
+    </customValue>
+    <customValue>
+        <fullName>3066</fullName>
+        <default>false</default>
+        <label>3066 Ob, ул. Станционная, 88/1, Новосибирск, Новосибирская обл., Россия, 633100</label>
+    </customValue>
+    <customValue>
+        <fullName>3067</fullName>
+        <default>false</default>
+        <label>3067 Premier, ТРЦ Премьер, Московское ш., 21, Рязань, Рязанская обл., Россия, 390013</label>
+    </customValue>
+    <customValue>
+        <fullName>3073</fullName>
+        <default>false</default>
+        <label>3073 Tikhonravova, ул. М.К.Тихонравова, 14, Королёв, Московская обл., Россия, 141071</label>
+    </customValue>
+    <customValue>
+        <fullName>3074</fullName>
+        <default>false</default>
+        <label>3074 Lomonosova, ул. Карла Маркса, 150, Йошкар-Ола, Респ. Марий Эл, Россия, 424006</label>
+    </customValue>
+    <customValue>
+        <fullName>3075</fullName>
+        <default>false</default>
+        <label>3075 Ojkasy, Восточная ул., 30, деревня Ойкасы, Чебоксарский район, Чувашская Республика, Россия, 429500</label>
+    </customValue>
+    <customValue>
+        <fullName>3077</fullName>
+        <default>false</default>
+        <label>3077 Klary Tsetkin, ул. Клары Цеткин, 10 корпус 1, Кемерово, Кемеровская обл., Россия, 650010</label>
+    </customValue>
+    <customValue>
+        <fullName>3079</fullName>
+        <default>false</default>
+        <label>3079 Kuznetskiy, ул. Красноармейская, 54, Кемерово, Кемеровская обл., Россия, 650010</label>
+    </customValue>
+    <customValue>
+        <fullName>3083</fullName>
+        <default>false</default>
+        <label>3083 Gorkogo, ул. Горького, 115, Королёв, Московская обл., Россия, 141073</label>
+    </customValue>
+    <customValue>
+        <fullName>3084</fullName>
+        <default>false</default>
+        <label>3084 Tukhachevskogo, ул. Тухачевского, 64к1, Кемерово, Кемеровская обл., Россия, 650070</label>
+    </customValue>
+    <customValue>
+        <fullName>3086</fullName>
+        <default>false</default>
+        <label>3086 Volchanskaya, ул. Волчанская, 292, Белгород, Белгородская обл., Россия, 308013</label>
+    </customValue>
+    <customValue>
+        <fullName>3090</fullName>
+        <default>false</default>
+        <label>3090 Zhdanov, а/д Крым, 20, Жданов, Белгородская обл., Россия, 308527</label>
+    </customValue>
+    <customValue>
+        <fullName>3094</fullName>
+        <default>false</default>
+        <label>3094 Taiga, Советское ш., 1Б, Элитный, Новосибирская обл., Россия, 630541</label>
+    </customValue>
+    <customValue>
+        <fullName>3098</fullName>
+        <default>false</default>
+        <label>3098 Novo-sadovaya 2, ул. Ново-Садовая, 187г, Самара, Самарская обл., Россия, 443086</label>
+    </customValue>
+    <customValue>
+        <fullName>3099</fullName>
+        <default>false</default>
+        <label>3099 Vakhrusheva, ул. Вахрушева, 6A, Кемерово, Кемеровская обл., Россия, 650014</label>
+    </customValue>
+    <customValue>
+        <fullName>3101</fullName>
+        <default>false</default>
+        <label>3101 Narimanova, ул. Циолковского, Ульяновск, Ульяновская обл., Россия, 432030</label>
+    </customValue>
+    <customValue>
+        <fullName>3102</fullName>
+        <default>false</default>
+        <label>3102 Energetikov, Дорожная ул., 40, Новосадовый, Белгородская обл., Россия, 308018</label>
+    </customValue>
+    <customValue>
+        <fullName>3104</fullName>
+        <default>false</default>
+        <label>3104 Dimitrova, ул. Димитрова, 14, Ульяновск, Ульяновская обл., Россия, 432010</label>
+    </customValue>
+    <customValue>
+        <fullName>3106</fullName>
+        <default>false</default>
+        <label>3106 Demidovskaya plotina, ул. Демидовская плотина, 33а, Тула, Тульская обл., Россия, 300001</label>
+    </customValue>
+    <customValue>
+        <fullName>3107</fullName>
+        <default>false</default>
+        <label>3107 Dmitrovgradskaya, Р178, Ульяновск, Ульяновская обл., Россия, 432072</label>
+    </customValue>
+    <customValue>
+        <fullName>3114</fullName>
+        <default>false</default>
+        <label>3114 Khruschevo, Победы, Алешня, Тульская обл., Россия, 301126</label>
+    </customValue>
+    <customValue>
+        <fullName>3117</fullName>
+        <default>false</default>
+        <label>3117 Studencheskaya, Студенческая ул., 2G, Белгород, Белгородская обл., Россия, 308018</label>
+    </customValue>
+    <customValue>
+        <fullName>3118</fullName>
+        <default>false</default>
+        <label>3118 Shorsa, ул. Щорса, 39д, Белгород, Белгородская обл., Россия, 308033</label>
+    </customValue>
+    <customValue>
+        <fullName>3121</fullName>
+        <default>false</default>
+        <label>3121 Kaliningradskaya, Калининградская ул., 11, Королёв, Московская обл., Россия, 141076</label>
+    </customValue>
+    <customValue>
+        <fullName>3122</fullName>
+        <default>false</default>
+        <label>3122 Tekstilschik, Болшевское ш., 39, Королёв, Московская обл., Россия, 141071</label>
+    </customValue>
+    <customValue>
+        <fullName>3124</fullName>
+        <default>false</default>
+        <label>3124 Grecheskaya, ул. Греческая деревня, 304, Кемерово, Кемеровская обл., Россия, 650903</label>
+    </customValue>
+    <customValue>
+        <fullName>3125</fullName>
+        <default>false</default>
+        <label>3125 Zaslonova, ул. Константина Заслонова, 50б, Белгород, Белгородская обл., Россия, 308017</label>
+    </customValue>
+    <customValue>
+        <fullName>3133</fullName>
+        <default>false</default>
+        <label>3133 Smirnova, ул. Юрия Смирнова, 20Б, Кострома, Костромская обл., Россия, 156008</label>
+    </customValue>
+    <customValue>
+        <fullName>3138</fullName>
+        <default>false</default>
+        <label>3138 Tavrovo, 9-й Пригородная мкр., 2, Таврово, Белгородская обл., Россия, 308504</label>
+    </customValue>
+    <customValue>
+        <fullName>3143</fullName>
+        <default>false</default>
+        <label>3143 Aleksandrov, Красный пер., 20, Александров, Владимирская обл., Россия, 601655</label>
+    </customValue>
+    <customValue>
+        <fullName>3097</fullName>
+        <default>false</default>
+        <label>3097 Novo-sadovaya 1, ул. Ново-Садовая, 154Г, Самара, Самарская обл., Россия, 443068</label>
+    </customValue>
+    <description>description</description>
+    <masterLabel>ShellAZS</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

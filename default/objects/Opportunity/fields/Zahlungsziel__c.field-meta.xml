@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zahlungsziel__c</fullName>
+    <externalId>false</externalId>
+    <label>Zahlungsziel *</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>7</fullName>
+                <default>false</default>
+                <label>7</label>
+            </value>
+            <value>
+                <fullName>10</fullName>
+                <default>false</default>
+                <label>10</label>
+            </value>
+            <value>
+                <fullName>14</fullName>
+                <default>false</default>
+                <label>14</label>
+            </value>
+            <value>
+                <fullName>30</fullName>
+                <default>true</default>
+                <label>30</label>
+            </value>
+            <value>
+                <fullName>keines</fullName>
+                <default>false</default>
+                <label>keines</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

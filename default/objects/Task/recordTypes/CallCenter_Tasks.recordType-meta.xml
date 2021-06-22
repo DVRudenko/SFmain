@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CallCenter_Tasks</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>CallCanter_Layout</compactLayoutAssignment>
+    <label>CallCenter Tasks</label>
+    <picklistValues>
+        <picklist>Appointment_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rescheduled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ELM_Training_Status__c</picklist>
+        <values>
+            <fullName>Trained on Welcome Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trainined on Billing Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Rescheduled</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Event_Status__c</picklist>
+        <values>
+            <fullName>Cancellation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NVMConnect__Next_Action__c</picklist>
+        <values>
+            <fullName>Bad Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Busy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call in 7 days</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call tomorrow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t call again</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left Live Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left Voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Answer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent Documentation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Set Callback</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update contact details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong Number</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NVM_Call_Outcome__c</picklist>
+        <values>
+            <fullName>Additional info requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Black list</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer thinking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deposit Paid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deposit requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Didn%E2%80%99t talk to DM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disqualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No answer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Offer sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Starts process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted to Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technical problem</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>NVM_Call_Quality__c</picklist>
+        <values>
+            <fullName>Call breaking up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call disconnected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Can%27t hear customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Can%27t hear operator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NVM not connected%2C old system ok</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Noise during call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not able to connect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>QA_reason_for_refusal__c</picklist>
+        <values>
+            <fullName>Error CallCenter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not identified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refusal on the client%27s initiative</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Bearbeitung</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_topic__c</picklist>
+        <values>
+            <fullName>Address Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bank Details Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Block my card%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Card Other Questions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carnet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change Method of invoice Distribution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Change of Payment Method</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ClubSmart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Company Name Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Person Change</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ECO Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forgotten PIN code</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General Inquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Guarantee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice Dispute</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice Resend</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My Online portal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Customer Credentials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order new card%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment confirmation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Question about my Invoice</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subaccount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Termination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VAT Recovery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WPO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Anruf - Entscheider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>quali%2E Termin vereinbart</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Topic__c</picklist>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoices %26 Payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My Card%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Products %26 Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Update my account details</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Andere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angebot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anruf</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>E-Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FAX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>isdc_dialer_call_type__c</picklist>
+        <values>
+            <fullName>Click-to-Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Domino</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seek</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

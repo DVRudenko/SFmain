@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- RFID Reader used to warn the owner of an unauthorized vehicle being set in motion, sending an SMS to any two phone numbers in case that the driver can not be identified by using any or selected chips (max. 25 pcs). --></help>
+    <label><!-- Guarding the vehicle - reader --></label>
+    <name>Guarding_the_vehicle_reader_Amount__c</name>
+</CustomFieldTranslation>

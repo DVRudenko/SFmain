@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Aktuelle Bezahlmethode --></label>
+    <name>Aktuelle_Bezahlmethode__c</name>
+    <picklistValues>
+        <masterLabel>Andere</masterLabel>
+        <translation><!-- Andere --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Kreditkarte - American Express</masterLabel>
+        <translation><!-- Andere Kreditkarte - American Express --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Kreditkarte - Andere</masterLabel>
+        <translation><!-- Andere Kreditkarte - Andere --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Kreditkarte - Master Card</masterLabel>
+        <translation><!-- Andere Kreditkarte - Master Card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Kreditkarte - Visa</masterLabel>
+        <translation><!-- Andere Kreditkarte - Visa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bargeld</masterLabel>
+        <translation><!-- Bargeld --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diverse Tankkarten</masterLabel>
+        <translation><!-- Diverse Tankkarten --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EC-Karte</masterLabel>
+        <translation><!-- EC-Karte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tankkarte</masterLabel>
+        <translation><!-- Tankkarte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verschiedene Bezahlmethoden</masterLabel>
+        <translation><!-- Verschiedene Bezahlmethoden --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

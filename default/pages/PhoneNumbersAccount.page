@@ -1,0 +1,218 @@
+<apex:page standardController="Account" extensions="PhoneNumbersController" docType="html-5.0" showChat="false" showHeader="false" showQuickActionVfHeader="false">
+   <style type="text/css">
+    #overlay{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        background-color: gray;
+        opacity: .15;
+        z-index: 1001;
+    }
+    option[value="Needs validation"] { 
+        display:none;
+    }
+    </style>
+    
+    <apex:form id="pdRecordForm">
+        <script>
+            function savePDContact (data, ajaxSaveAction) {
+                if ('{!PD_IsActive}' == 'true') {
+                    sendPDDataAndSave(data, ajaxSaveAction);
+                } else {
+                    if (ajaxSaveAction != null) ajaxSaveAction();
+                }
+            }
+            function sendPDDataAndSave(data, ajaxSaveAction) {
+                // === tmp === //pd tmp switched off
+                //if (ajaxSaveAction != null) ajaxSaveAction(); //uncomment the line to switch off PD logic
+                // === tmp ===
+                // comment from here to switch PD logic off
+
+                console.log('sendPDDataAndSave', data)
+                var dataJSON = JSON.stringify(data);
+
+                var xhr = new XMLHttpRequest();
+                var body = {};
+                body['token'] = '{!PD_Token}';
+                body['data'] = data;
+                body['id'] = data['PD_ExternalId__c'] == null ? '' : data['PD_ExternalId__c'];
+                
+                xhr.open("POST", '{!PD_URL}/save-data', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                //xhr.overrideMimeType("application/json");
+                xhr.onreadystatechange = function () {
+                    console.log(xhr.readyState);
+                    if(xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            var responseJSON = JSON.parse(xhr.responseText);
+                            if (responseJSON.status == 'error') {
+                                alert('{!$Label.pd_server_error}' + ' ' + responseJSON.error.message);
+                                return false;
+                            } else {
+                                if (ajaxSaveAction != null) ajaxSaveAction();
+                                return true;
+                            }
+                        } else {
+                            alert('{!$Label.pd_server_error}');
+                            return false;
+                        }
+                    };
+                };
+                console.log('xhr send : ' + JSON.stringify(body));
+                xhr.send(JSON.stringify(body));
+                //comment until here to switch off PD logic
+            }
+        </script>
+    
+        <apex:actionFunction name="refreshPhones " action="{!refreshPhones}" reRender="PhonesLayoutBlock, IrrelevantList" status="phonesStatus"/>
+ 
+        <apex:actionFunction name="toEdit" action="{!toEdit}" rerender="PhonesLayoutBlock"/>
+        <apex:actionFunction name="toView" action="{!toView}" rerender="PhonesLayoutBlock"/>
+           
+      <apex:pageBlock id="PageBlock">
+
+          <apex:outputPanel id="PageMsgs">
+              <apex:pageMessages />
+          </apex:outputPanel>
+
+        <!-- don't use phones on accounts 
+          <apex:pageBlockSection title="{!$Label.title_Phones}" columns="1" id="PhonesLayoutBlock">
+             <apex:outputPanel >
+                 <apex:actionStatus id="phoneFieldsStatus">
+                    <apex:facet name="start">
+                        <apex:outputPanel >
+                            <apex:commandButton value="{!$Label.btn_savePhones}" disabled="true"/>
+                            &nbsp;
+                            <img src="/img/loading32.gif" width="16" height="16" />
+                            <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                            &nbsp;
+                            <div id="overlay"/>
+                        </apex:outputPanel> 
+                     </apex:facet>
+                     <apex:facet name="stop">
+                        <apex:outputPanel >
+                        <apex:commandButton value="{!$Label.btn_savePhones}" styleClass="green-btn" action="{!save_PhoneFields}" oncomplete="refreshPhones()" reRender="PageMsgs" status="phoneFieldsStatus"/>
+                        </apex:outputPanel>            
+                    </apex:facet>
+                 </apex:actionStatus>
+             </apex:outputPanel>
+             <apex:pageBlockTable value="{!phoneRowWrappers}" var="phoneRow">
+                <apex:column >
+                    <apex:commandLink value="{!$Label.link_Edit}" action="{!phoneRow.editRow}" oncomplete="toEdit()" rendered="{!NOT(phoneRow.editView)}"/>
+                    <apex:commandLink value="{!$Label.link_Cancel}" action="{!phoneRow.cancelEditRow}" oncomplete="toView()" rendered="{!phoneRow.editView}"/>
+                </apex:column>
+                <apex:column value="{!phoneRow.phoneFieldLabel}" >
+                    <apex:facet name="header">{!$Label.header_PhoneLabel}</apex:facet>
+                </apex:column>    
+                <apex:column >
+                    <apex:facet name="header">{!$ObjectType.Account.fields.Phone.Label}</apex:facet>
+                    <a href="{!phoneRow.clickToCallLink}" target="_blank"><apex:outputLabel value="{!phoneRow.phoneFieldVal}" rendered="{!NOT(phoneRow.editView)}"/></a>
+                    <apex:input value="{!phoneRow.phoneFieldVal}" rendered="{!phoneRow.editView}" onkeyup="onChangeInputPhoneField(this)" styleClass="input-phone-field data-{!phoneRow.phoneFieldAPI}"/>
+                    <span style="display: none;" id="original-val-{!phoneRow.phoneFieldAPI}">{!phoneRow.phoneFieldValOriginal}</span>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">{!$ObjectType.Account.fields.Phone_Status__c.Label}</apex:facet>
+                    <apex:selectList value="{!phoneRow.statusFieldVal}" size="1" rendered="{!OR(NOT(ISBLANK(phoneRow.phoneFieldVal)), phoneRow.editView)}" styleClass="{!phoneRow.phoneFieldAPI}-statuses">
+                        <apex:selectOptions value="{!phoneRow.statusesValues}"/>
+                    </apex:selectList>
+                </apex:column> 
+                <apex:column >
+                    <apex:facet name="header">{!$ObjectType.Account.fields.Phone_StatusModifiedDate__c.Label}</apex:facet>
+                    <apex:outputLabel value="{!phoneRow.statusModifiedDateFieldVal}" rendered="{!NOT(phoneRow.editView)}"/>
+                </apex:column> 
+             </apex:pageBlockTable>
+           </apex:pageBlockSection>
+        -->  
+           
+           
+        <apex:pageblockSection columns="1">
+
+         <apex:outputPanel >
+                <h5>{!$ObjectType.Account.fields.Irrelevant_Phones__c.Label}</h5>
+                <apex:pageBlockTable value="{!irrelevantPhonesList}" var="item" id="IrrelevantList">
+                    <apex:column >
+                        <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null}">
+                           <apex:commandLink rendered="{!AND(item.canDelete)}" value="{!$Label.link_Del}" action="{!item.deleteIrrelevantPhoneNumber}" oncomplete="refreshPhones()" status="irrelevantDelStatus"/>
+                           &nbsp;
+                             <apex:actionStatus id="irrelevantDelStatus">
+                                <apex:facet name="start">
+                                    <apex:outputPanel >
+                                        <img src="/img/loading32.gif" width="16" height="16" />
+                                        <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                        &nbsp;
+                                        <div id="overlay"/>
+                                    </apex:outputPanel>            
+                                </apex:facet>
+                             </apex:actionStatus>
+                        </apex:outputPanel>
+                        <apex:outputLabel value="{!item.PhoneNumber}"/>
+                   </apex:column>
+                   <apex:column >
+                       <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null}">
+                            <apex:outputLabel value="{!item.statusModifiedDate}"/>
+                            &nbsp;
+                            <apex:outputLabel value="{!item.statusReason}"/>
+                       </apex:outputPanel>
+                   </apex:column>
+                   <apex:column >
+                      <apex:outputPanel rendered="{!item.canDelete}"> <!-- select phone to move irrelevant number -->
+                        <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null}">
+                            <apex:outputLabel value="{!$Label.label_phonesList_Moveto}"/>
+                            &nbsp;
+                            <apex:selectList value="{!item.currentPhoneFieldAPI}" size="1">
+                                <apex:selectOptions value="{!phoneFieldAPIs_ToMoveIrrelevantItem}"/>
+                                <apex:actionSupport event="onchange" action="{!item.moveToPhoneField}" reRender="IrrelevantList, PageMsgs" oncomplete="if ('{!item.isMoved}' == 'true'){ refreshPhones(); } return false;" status="irrelevantPhonesMoveToField"/>
+                            </apex:selectList>
+                            &nbsp;
+                             <apex:actionStatus id="irrelevantPhonesMoveToField">
+                                <apex:facet name="start">
+                                    <apex:outputPanel >
+                                        <img src="/img/loading32.gif" width="16" height="16" />
+                                        <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                        &nbsp;
+                                        <div id="overlay"/>
+                                    </apex:outputPanel>            
+                                </apex:facet>
+                             </apex:actionStatus>
+                        </apex:outputPanel>
+                      </apex:outputPanel> <!-- end : select phone to move irrelevant number -->
+                        
+                        <apex:outputPanel rendered="{!item.currentPhoneFieldAPI != null && item.currentPhoneFieldValue == null && NOT(BEGINS(item.currentPhoneFieldAPI, 'Contact.')) }">
+                            {!item.msgText}
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!item.currentPhoneFieldAPI != null && (item.currentPhoneFieldValue != null || BEGINS(item.currentPhoneFieldAPI, 'Contact.')) }">
+                            {!item.msgText}
+                            <br/>
+                            <apex:outputPanel rendered="{!item.isMoved != true}">
+                                <apex:commandButton value="{!$Label.btn_Cancel}" action="{!item.cancelMoveToField}"/>
+                                &nbsp;
+                                <apex:commandButton style="{!IF(BEGINS(item.currentPhoneFieldAPI, 'Contact.'), '', 'display:none;')}"
+                                        value="{!$Label.btn_Continue}" onclick="var conPDdata = JSON.parse('{!item.pdDataContact}'); console.log('got personal data!', conPDdata); var fieldAPI='{!item.currentPhoneFieldAPI}'.split('.')[2]; conPDdata[fieldAPI]='{!item.PhoneNumber}'; savePDContact(conPDdata, null); document.getElementById('{!$Component.testid}').click(); return false;" />
+                                
+                                <apex:outputPanel style="{!IF(BEGINS(item.currentPhoneFieldAPI, 'Contact.'), 'display:none;','')} padding: 4px 3px;" styleClass="btn continueSavingBtn" id="testid">
+                                    {!$Label.btn_Continue}
+                                    <apex:actionSupport event="onclick" action="{!item.continueMoveToField}" reRender="PageMsgs" oncomplete="if ('{!item.isMoved}' == 'true'){ console.log('succesfully moved!'); refreshPhones(); } else { var conPDdata = JSON.parse('{!item.pdDataContact}'); if(conPDdata['Id'] != null) {console.log('save failed! return pdData!', conPDdata); savePDContact(conPDdata, null); } } return false;" status="irrelevantMoveToStatus"/>
+                                </apex:outputPanel>
+                                &nbsp;
+                                <apex:actionStatus id="irrelevantMoveToStatus">
+                                    <apex:facet name="start">
+                                        <apex:outputPanel >
+                                            <img src="/img/loading32.gif" width="16" height="16" />
+                                            <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                            &nbsp;
+                                            <div id="overlay"/>
+                                        </apex:outputPanel>            
+                                    </apex:facet>
+                                </apex:actionStatus>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                    </apex:column>
+                </apex:pageBlockTable>
+          </apex:outputPanel>  
+            
+          </apex:pageblockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

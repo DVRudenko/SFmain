@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_Country__c</fullName>
+    <description>List of Countries for filtering values in depended Lost_To_Competitor__c field</description>
+    <externalId>false</externalId>
+    <label>Competitor's Country</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Quali_Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Country</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Lost to Competition</controllingFieldValue>
+            <valueName>Austria</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to Competition</controllingFieldValue>
+            <valueName>Belgium-FR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to Competition</controllingFieldValue>
+            <valueName>Belgium-NL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to Competition</controllingFieldValue>
+            <valueName>Czech Republic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to Competition</controllingFieldValue>
+            <valueName>France</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to Competition</controllingFieldValue>
+            <valueName>Germany</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to Competition</controllingFieldValue>
+            <valueName>Hungary</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to Competition</controllingFieldValue>
+            <valueName>Luxembourg</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to Competition</controllingFieldValue>
+            <valueName>Netherlands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to Competition</controllingFieldValue>
+            <valueName>Poland</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to Competition</controllingFieldValue>
+            <valueName>Slovakia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to Competition</controllingFieldValue>
+            <valueName>Switzerland-DE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lost to Competition</controllingFieldValue>
+            <valueName>Switzerland-FR</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

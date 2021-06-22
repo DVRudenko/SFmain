@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- &quot;Möchten Sie von FleetCor über Neuheiten,
+            Angebote und Wissenswertes rund um ihre
+            Tankkarte per E-Mail Informiert werden?&quot; --></help>
+    <label><!-- Marketing activities Opt-in --></label>
+    <name>OPT_IN__c</name>
+</CustomFieldTranslation>

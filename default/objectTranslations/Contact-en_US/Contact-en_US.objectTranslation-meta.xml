@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- All Phone Fields --></label>
+        <name>All_Phone_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- All Phone Fields EU --></label>
+        <name>All_Phone_Fields_EU</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- ClickToCall --></label>
+        <name>ClickToCall</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- PD_Fields --></label>
+        <name>PD_Fields</name>
+    </fieldSets>
+    <layouts>
+        <layout>CCS Contact Layout</layout>
+        <sections>
+            <label><!-- Click-to-Call --></label>
+            <section>Click-to-Call</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Source --></label>
+            <section>Contact Source</section>
+        </sections>
+        <sections>
+            <label><!-- Doplňující informace --></label>
+            <section>Doplňující informace</section>
+        </sections>
+        <sections>
+            <label><!-- GFN --></label>
+            <section>GFN</section>
+        </sections>
+        <sections>
+            <label><!-- Poznámka --></label>
+            <section>Poznámka</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>AllStar-ShellUC Contact Layout</layout>
+        <sections>
+            <label><!-- AllStar --></label>
+            <section>AllStar</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact Layout</layout>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label>Classification</label>
+            <section>Klassifizierung</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Customer Service Europe</layout>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Russian Contact Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- AllStar --></label>
+        <name>AllStar</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- CCS Contact layout --></label>
+        <name>CCS_Contact_layout</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contact layout --></label>
+        <name>Contact_layout</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Russian --></label>
+        <name>Russian</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Shell Universal Card --></label>
+        <name>Shell_Universal_Card</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Чтобы изменить Фамилию воспользуйтесь специальной кнопкой --></errorMessage>
+        <name>Contact_last_name_updating</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Use new button for creating a record: &quot;New Lead (New)&quot;. --></errorMessage>
+        <name>Dont_Use_Standard_Create_Button</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Sie füllen Salutation (Herr, Frau usw.) --></errorMessage>
+        <name>Kontakt_Suffix_Erforderlich</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Wrong phone number format. Only &apos;+&apos;, &apos;0-9&apos; and spaces are allowed. Use &apos;#&apos; for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: &apos;+49 5545555#045&apos; --></errorMessage>
+        <name>Valid_AssistantPhone_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Wrong phone number format. Only &apos;+&apos;, &apos;0-9&apos; and spaces are allowed. Use &apos;#&apos; for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: &apos;+49 5545555#045&apos; --></errorMessage>
+        <name>Valid_HomePhone_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Wrong phone number format. Only &apos;+&apos;, &apos;0-9&apos; and spaces are allowed. Use &apos;#&apos; for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: &apos;+49 5545555#045&apos; --></errorMessage>
+        <name>Valid_MobilePhone_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Wrong phone number format. Only &apos;+&apos;, &apos;0-9&apos; and spaces are allowed. Use &apos;#&apos; for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: &apos;+49 5545555#045&apos; --></errorMessage>
+        <name>Valid_OtherPhone_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Wrong phone number format. Only &apos;+&apos;, &apos;0-9&apos; and spaces are allowed. Use &apos;#&apos; for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: &apos;+49 5545555#045&apos; --></errorMessage>
+        <name>Valid_PPRPhone_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Wrong phone number format. Only &apos;+&apos;, &apos;0-9&apos; and spaces are allowed. Use &apos;#&apos; for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: &apos;+49 5545555#045&apos; --></errorMessage>
+        <name>Valid_Phone_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid phone list format. Only &apos;+&apos;, 0-9&apos;, &apos;#&apos; and &apos;.&apos; are allowed. Example: &apos;+4954225585.+7544244545#045.+485555514&apos; --></errorMessage>
+        <name>Valid_Phone_Numbers_List</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Add_to_Pardot_List --></label>
+        <name>Add_to_Pardot_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Change_Owner_to_Me --></label>
+        <name>Change_Owner_to_Me</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Check_duplicates_Credit --></label>
+        <name>Check_duplicates_Credit</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Edit_Personal_Data --></label>
+        <name>Edit_Personal_Data</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Dial_List_From_Contact_List_View --></label>
+        <name>NVMConnect__Create_Dial_List_From_Contact_List_View</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PD_NewContact --></label>
+        <name>PD_NewContact</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooWeather --></label>
+        <name>YahooWeather</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+</CustomObjectTranslation>

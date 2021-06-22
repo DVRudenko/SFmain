@@ -1,0 +1,85 @@
+<apex:page controller="SepaActivationCtrl" action="{! init }" standardStylesheets="false" sidebar="false" showHeader="false">
+    <apex:stylesheet value="{!URLFOR($Resource.bootstrap_3_3_7,'bootstrap-3.3.7/css/desktop_bootstrap.min.css')}"/>
+    <apex:stylesheet value="{!$Resource.e2e_style_de_desktop}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.E2ESpinner, 'spinner.css')}"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"/>
+
+    <style>
+        .error-page .wrapper {
+            width: 100%;
+        }
+    </style>
+
+    <apex:form id="formId">
+        <body>
+            <main>
+                <div class="container">
+                    <div class="row">
+                        <div class="b-page-logo">
+                            <apex:image url="{!URLFOR($Resource.e2e_images, 'm-logo.png')}"/>
+                        </div>
+                    </div>
+                    <apex:outputPanel layout="block" styleClass="error-page">
+                        <div class="wrapper">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <apex:outputPanel layout="block" styleClass="b-block-header">
+                                        {! generalContentsMap['salutation'] }
+                                    </apex:outputPanel>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="error-text">
+                                        <apex:outputPanel layout="block">
+                                            {! statusContentsMap[status] }
+                                        </apex:outputPanel>
+                                    </div>
+                                </div>
+                            </div><br/>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="error-text">
+                                        <apex:outputPanel layout="block">
+                                            {! generalContentsMap['regards'] }
+                                        </apex:outputPanel>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="error-text">
+                                        <apex:outputPanel layout="block">
+                                            {! generalContentsMap['signature'] }
+                                        </apex:outputPanel>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="error-text">
+                                        <apex:outputPanel layout="block">
+                                            {! contactContentsMap['phone'] }<br/>
+                                            {! contactContentsMap['email'] }<br/>
+                                            {! contactContentsMap['time'] }<br/>
+                                        </apex:outputPanel>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="b-splitter"></div>
+                            <div class="row">
+                                <div class="buttons return">
+                                    <div class="col-lg-12">
+                                        <a href="{! generalContentsMap['site']}" class="btn btn-gray" style="min-width: 130px">
+                                            {! generalContentsMap['button'] }
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+                </div>
+            </main>
+        </body>
+    </apex:form>
+</apex:page>

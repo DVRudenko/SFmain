@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- E2E Abandonment Status --></label>
+    <name>E2E_Abandonment_Status__c</name>
+    <picklistValues>
+        <masterLabel>E2E Abandoned</masterLabel>
+        <translation><!-- E2E Abandoned --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>E2E Returned</masterLabel>
+        <translation><!-- E2E Returned --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

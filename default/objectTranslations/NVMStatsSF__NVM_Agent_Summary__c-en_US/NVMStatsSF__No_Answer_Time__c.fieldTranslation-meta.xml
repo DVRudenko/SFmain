@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total time in seconds that the Agent spent in No Answer state --></help>
+    <label><!-- No Answer Time --></label>
+    <name>NVMStatsSF__No_Answer_Time__c</name>
+</CustomFieldTranslation>

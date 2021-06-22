@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Активация настроек параметров напоминаний и истечения срока действия позволит вам установить соответствующие параметры в DocuSign для Salesforce. Эти настройки перезаписывают настройки параметров напоминаний и истечения срока действия, установленные по умолчанию для вашей учетной записи DocuSign.</help>
+    <label><!-- Use Account Notification Defaults --></label>
+    <name>dsfs__UseAccountNotificationDefaults__c</name>
+</CustomFieldTranslation>

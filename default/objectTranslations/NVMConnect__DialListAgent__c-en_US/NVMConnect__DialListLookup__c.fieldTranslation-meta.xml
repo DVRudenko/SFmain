@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Dial List --></label>
+    <name>NVMConnect__DialListLookup__c</name>
+    <relationshipLabel><!-- Dial List Agents --></relationshipLabel>
+</CustomFieldTranslation>

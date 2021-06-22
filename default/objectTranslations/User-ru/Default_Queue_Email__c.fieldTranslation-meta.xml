@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Displays default queue email address which is usually Service Agents worked with. --></help>
+    <label><!-- Default Queue Email --></label>
+    <name>Default_Queue_Email__c</name>
+    <picklistValues>
+        <masterLabel>klantendienst@fleetcorcards.be</masterLabel>
+        <translation><!-- klantendienst@fleetcorcards.be --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>klantenservice@fleetcor.nl</masterLabel>
+        <translation><!-- klantenservice@fleetcor.nl --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>kundenservice@fleetcor.at</masterLabel>
+        <translation><!-- kundenservice@fleetcor.at --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>kundenservice@fleetcor.ch</masterLabel>
+        <translation><!-- kundenservice@fleetcor.ch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>kundenservice@fleetcor.de</masterLabel>
+        <translation><!-- kundenservice@fleetcor.de --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>obslugaklienta@fleetcor.pl</masterLabel>
+        <translation><!-- obslugaklienta@fleetcor.pl --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>premiumservice@fleetcor.eu</masterLabel>
+        <translation><!-- premiumservice@fleetcor.eu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>serviceclients@fleetcor.ch</masterLabel>
+        <translation><!-- serviceclients@fleetcor.ch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>serviceclients@fleetcor.fr</masterLabel>
+        <translation><!-- serviceclients@fleetcor.fr --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>serviceclients@fleetcor.lu</masterLabel>
+        <translation><!-- serviceclients@fleetcor.lu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>serviceclients@fleetcorcards.be</masterLabel>
+        <translation><!-- serviceclients@fleetcorcards.be --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>servizioclienti@fleetcor.ch</masterLabel>
+        <translation><!-- servizioclienti@fleetcor.ch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ugyfelszolgalat@fleetcor.hu</masterLabel>
+        <translation><!-- ugyfelszolgalat@fleetcor.hu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>zakaznickyservis@fleetcor.cz</masterLabel>
+        <translation><!-- zakaznickyservis@fleetcor.cz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>zakaznickyservis@fleetcor.sk</masterLabel>
+        <translation><!-- zakaznickyservis@fleetcor.sk --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

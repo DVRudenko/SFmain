@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Product</label>
+    <name>Produkt__c</name>
+    <picklistValues>
+        <masterLabel>-</masterLabel>
+        <translation><!-- - --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Driver Card</masterLabel>
+        <translation><!-- Driver Card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Driver and Vehicle Card</masterLabel>
+        <translation><!-- Driver and Vehicle Card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vehicle Card</masterLabel>
+        <translation><!-- Vehicle Card --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

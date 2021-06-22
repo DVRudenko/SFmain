@@ -1,0 +1,224 @@
+<apex:page controller="NetStartsVolumeReportCtrl" readOnly="true" id="myPage">
+    <apex:includeScript value="{! $Resource.jQuery }"/>
+    <apex:includeScript value="{! URLFOR($Resource.jQueryUI,'jquery-ui.min.js') }"/>
+    <apex:includeScript value="{! URLFOR($Resource.Tablesorter,'jquery.tablesorter.min.js') }"/>
+
+    <apex:form id="myForm">
+        <apex:outputPanel layout="block" id="filterbar">
+            <table class="detailList" border="0" cellpadding="1" cellspacing="1">
+                <tr>
+                    <td class="labelCol">Select Country</td>
+                    <td>
+                        <apex:selectList value="{!countries}" size="1" label="Select Country">
+                            <apex:selectOptions value="{!CountryItems}" id="field"/>
+                            <!--<apex:actionSupport action="{!changeCountries}" event="onchange"  status="FilterStatus" reRender="filterbar"/>-->
+                        </apex:selectList>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">Select SecChannel</td>
+                    <td>
+                        <apex:selectList value="{!secChannel}" size="1" label="Select SecChannel">
+                            <apex:selectOptions value="{!SecChannelItems}" id="field1"/>
+                            <!--<apex:actionSupport action="{!changeSecChannel}" event="onchange"  status="FilterStatus" reRender="filterbar"/>-->
+                        </apex:selectList>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">Select Account Owner</td>
+                    <td>
+                        <apex:selectList value="{!accountOwner}" size="1" label="Select Account Owner">
+                            <apex:selectOptions value="{!AccountOwnerItems}" id="field2"/>
+                            <!--<apex:actionSupport action="{!changeAccountOwner}" event="onchange"  status="FilterStatus" reRender="filterbar"/>-->
+                        </apex:selectList>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">Select Role</td>
+                    <td>
+                        <apex:selectList value="{!role}" size="1" label="Select Role">
+                            <apex:selectOptions value="{!RolesItems}" id="field3"/>
+                            <!--<apex:actionSupport action="{!changeRole}" event="onchange"  status="FilterStatus" reRender="filterbar"/>-->
+                        </apex:selectList>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">Select Starts Manager</td>
+                    <td>
+                        <apex:selectList value="{!startsManager}" size="1" label="Select Starts Manager" style="align : left">
+                            <apex:selectOptions value="{!StartsManagerItems}" id="field4"/>
+                            <!--<apex:actionSupport action="{!changeStartsManager}" event="onchange"  status="FilterStatus" reRender="filterbar"/>-->
+                        </apex:selectList>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">Select Offer</td>
+                    <td>
+                        <apex:selectList value="{!offer}" size="1" label="Select Offer">
+                            <apex:selectOptions value="{!OfferItems}" id="field5"/>
+                            <!--<apex:actionSupport action="{!changeOffer}" event="onchange" status="FilterStatus" reRender="filterbar"/>-->
+                        </apex:selectList>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">Select Close Date</td>
+                    <td>
+                        <apex:outputPanel id="dateFrom">
+                            <apex:inputField id="from" label="From:" value="{!dateFromOpp.CloseDate}" required="false"/>
+                            <!--<apex:actionSupport event="onchange" action="{!changeDate}" reRender="filterbar" status="FilterStatus"/>-->
+                        </apex:outputPanel>
+                        <apex:outputPanel id="dateTo">
+                            <apex:inputField id="to" label="To:" value="{!dateToOpp.CloseDate}" required="false"/>
+                            <!--<apex:actionSupport event="onchange" action="{!changeDate}" reRender="filterbar" status="FilterStatus"/>-->
+                        </apex:outputPanel>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">Select First Pump Date</td>
+                    <td>
+                        <apex:selectList value="{!firstPumpDate}" size="1" label="Select First Pump Date">
+                            <apex:selectOptions value="{!FirstPumpDateItems}" id="field6"/>
+                            <!--<apex:actionSupport action="{!changeOffer}" event="onchange" status="FilterStatus" reRender="filterbar"/>-->
+                        </apex:selectList>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <apex:commandButton action="{!okButton}" reRender="outtable" status="FilterStatus" value="Apply filters" style="size : 20"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <apex:actionStatus id="FilterStatus">
+                            <apex:facet name="start"><img src="/img/loading.gif" alt="" /></apex:facet>
+                            <apex:facet name="stop"></apex:facet>
+                        </apex:actionStatus>
+                    </td>
+                </tr>
+            </table>
+
+        </apex:outputPanel>
+
+        <apex:outputPanel id="outtable">
+
+            <script type="text/javascript">
+                j$ = jQuery.noConflict();
+
+                j$.tablesorter.addParser({
+                // set a unique id
+                id: 'grades',
+                is: function(s) {
+                // return false so this parser is not auto detected
+                return false;
+                },
+                format: function(s, table, cell, cellIndex) {
+                // format your data for normalization
+                return s.toString().replace(/true/, /a/).replace(/false/, /b/);
+                },
+                // set type, either numeric or text
+                type: 'text'
+                });
+
+                j$(document).ready(function () {
+                    j$("[id$=theaddrs]").tablesorter({
+                                                    headers: {
+                                                                8: {
+                                                                sorter:'grades'
+                                                                }
+                                                    }
+                });
+                });
+            </script>
+            <style>
+                .totalRow .total{
+                background-color:#BBE3DF;
+                }
+
+                body .pbBody .sorterStyle.list tr.headerRow th {
+                background-image: url({! URLFOR($Resource.Tablesorter,'blue/bg.gif') });
+                background-repeat: no-repeat;
+                background-position: center right;
+                cursor: pointer;
+                padding-right: 20px;
+                }
+
+                body .pbBody table.list tr.headerRow th.headerSortUp {
+                background: url({! URLFOR($Resource.Tablesorter,'blue/asc.gif') }) grey no-repeat center right;
+                color: white;
+                font-weight: bold;
+                }
+
+                body .pbBody table.list tr.headerRow th.headerSortDown {
+                background: url({! URLFOR($Resource.Tablesorter,'blue/desc.gif') }) grey no-repeat center right;
+                color: white;
+                font-weight: bold;
+                }
+            </style>
+            <apex:panelGrid columns="7">
+                <apex:commandButton action="{!first}" status="PaginationStatus" reRender="outtable" value="|<" disabled="{!!hasPrevious}" title="First Page"/>
+                <apex:commandButton action="{!previous}" status="PaginationStatus" reRender="outtable" value="<" disabled="{!!hasPrevious}" title="Previous Page"/>
+                <apex:commandButton action="{!next}" status="PaginationStatus" reRender="outtable" value=">" disabled="{!!hasNext}" title="Next Page"/>
+                <apex:commandButton action="{!last}" status="PaginationStatus" reRender="outtable" value=">|" disabled="{!!hasNext}" title="Last Page"/>
+                <apex:outputText >{!(pageNumber * size)+1-size}-{!IF((pageNumber * size)>noOfRecords, noOfRecords,(pageNumber * size))} of {!noOfRecords} </apex:outputText>
+                <apex:actionStatus id="PaginationStatus">
+                    <apex:facet name="start"><img src="/img/loading.gif" alt="" /></apex:facet>
+                    <apex:facet name="stop"></apex:facet>
+                </apex:actionStatus>
+            </apex:panelGrid>
+
+            <apex:pageBlock >
+                <apex:pageBlockSection >
+
+                    <apex:pageBlockTable value="{!Opportunities}" var="opps" styleClass="sorterStyle" headerClass="header" id="theaddrs">
+                        <apex:column value="{!opps['Account.BillingCountry']}" headerValue="Country"/>
+                        <apex:column value="{!opps.Account.GFN_Nr__c}" headerValue="{! $ObjectType.Account.fields.GFN_Nr__c.label}"/>
+                        <apex:column headerValue="{! $ObjectType.Account.fields.Name.label}">
+                            <apex:outputLink value="/{!opps.AccountId}" target="_blank">{!opps.Account.Name}</apex:outputLink>
+                        </apex:column>
+                        <apex:column value="{!opps.Sec_Channel__c}" headerValue="{! $ObjectType.Opportunity.fields.Sec_Channel__c.label}"/>
+                        <apex:column value="{!opps.Account.OwnerId}" headerValue="{! $ObjectType.Account.fields.OwnerId.label}"/>
+                        <apex:column value="{!userMap[opps.Account.OwnerId].UserRole.Name}" headerValue="Role"/>
+                        <apex:column value="{!opps.Starts_Rep__c}" headerValue="{! $ObjectType.Opportunity.fields.Starts_Rep__c.label}"/>
+                        <apex:column value="{!opps.Starts_Status__c}" headerValue="{! $ObjectType.Opportunity.fields.Starts_Status__c.label}"/>
+                        <apex:column value="{!opps.Starts_SLA_Expired__c}" headerValue="{! $ObjectType.Opportunity.fields.Starts_SLA_Expired__c.label}"/>
+                        <apex:column value="{!opps.CloseDate}" headerValue="{! $ObjectType.Opportunity.fields.CloseDate.label}"/>
+                        <apex:column value="{!opps.Starts_Close_Date__c}" headerValue="{! $ObjectType.Opportunity.fields.Starts_Close_Date__c.label}"/>
+                        <apex:column headerValue="{! $ObjectType.Starts__c.fields.First_Pump_Date__c.label}">
+                            <apex:outputPanel rendered="{!startsList3[opps.Account.Id]<> DATE(1899,01,01)}">
+                                {!startsList3[opps.Account.Id]}
+                            </apex:outputPanel>
+                        </apex:column>
+                        <apex:column value="{!opps.Anzahl_der_Karten__c}" headerValue="{! $ObjectType.Opportunity.fields.Anzahl_der_Karten__c.label}"/>
+                        <apex:column value="{!opps.Starts_Number_of_Cards_Target__c}" headerValue="{! $ObjectType.Opportunity.fields.Starts_Number_of_Cards_Target__c.label}"/>
+                        <apex:column value="{!opps.Total_consumption_l_month__c}" headerValue="{! $ObjectType.Opportunity.fields.Total_consumption_l_month__c.label}"/>
+                        <apex:column value="{!opps.Starts_Fuel_Liters_Per_Mo_Target__c}" headerValue="{! $ObjectType.Opportunity.fields.Starts_Fuel_Liters_Per_Mo_Target__c.label}"/>
+                        <apex:column value="{!opps.Product__c}" headerValue="{! $ObjectType.Opportunity.fields.Product__c.label}"/>
+                        <apex:column value="{!opps.Angebotsdauer__c}" headerValue="{! $ObjectType.Opportunity.fields.Angebotsdauer__c.label}"/>
+                        <apex:column value="{!opps.Clubsmart__c}" headerValue="{! $ObjectType.Opportunity.fields.Clubsmart__c.label}"/>
+                        <apex:column value="{!startsList1[opps.Account.Id][1]}" headerValue="Volume 1" footerValue="{!startsList5[1]}"/>
+                        <apex:column value="{!startsList1[opps.Account.Id][2]}" headerValue="Volume 2" footerValue="{!startsList5[2]}"/>
+                        <apex:column value="{!startsList1[opps.Account.Id][3]}" headerValue="Volume 3" footerValue="{!startsList5[3]}"/>
+                        <apex:column value="{!startsList1[opps.Account.Id][4]}" headerValue="Volume 4" footerValue="{!startsList5[4]}"/>
+                        <apex:column value="{!startsList1[opps.Account.Id][5]}" headerValue="Volume 5" footerValue="{!startsList5[5]}"/>
+                        <apex:column value="{!startsList1[opps.Account.Id][6]}" headerValue="Volume 6" footerValue="{!startsList5[6]}"/>
+                        <apex:column value="{!startsList1[opps.Account.Id][7]}" headerValue="Volume 7" footerValue="{!startsList5[7]}"/>
+                        <apex:column value="{!startsList1[opps.Account.Id][8]}" headerValue="Volume 8" footerValue="{!startsList5[8]}"/>
+                        <apex:column value="{!startsList1[opps.Account.Id][9]}" headerValue="Volume 9" footerValue="{!startsList5[9]}"/>
+                        <apex:column value="{!startsList1[opps.Account.Id][10]}" headerValue="Volume 10" footerValue="{!startsList5[10]}"/>
+                        <apex:column value="{!startsList2[opps.Account.Id][1]}" headerValue="NetStarts 1" footerValue="{!startsList6[1]}"/>
+                        <apex:column value="{!startsList2[opps.Account.Id][2]}" headerValue="NetStarts 2" footerValue="{!startsList6[2]}"/>
+                        <apex:column value="{!startsList2[opps.Account.Id][3]}" headerValue="NetStarts 3" footerValue="{!startsList6[3]}"/>
+                        <apex:column value="{!startsList2[opps.Account.Id][4]}" headerValue="NetStarts 4" footerValue="{!startsList6[4]}"/>
+                        <apex:column value="{!startsList2[opps.Account.Id][5]}" headerValue="NetStarts 5" footerValue="{!startsList6[5]}"/>
+                        <apex:column value="{!startsList2[opps.Account.Id][6]}" headerValue="NetStarts 6" footerValue="{!startsList6[6]}"/>
+                        <apex:column value="{!startsList2[opps.Account.Id][7]}" headerValue="NetStarts 7" footerValue="{!startsList6[7]}"/>
+                        <apex:column value="{!startsList2[opps.Account.Id][8]}" headerValue="NetStarts 8" footerValue="{!startsList6[8]}"/>
+                        <apex:column value="{!startsList2[opps.Account.Id][9]}" headerValue="NetStarts 9" footerValue="{!startsList6[9]}"/>
+                        <apex:column value="{!startsList2[opps.Account.Id][10]}" headerValue="NetStarts 10" footerValue="{!startsList6[10]}"/>
+                        <apex:column value="{!startsList4[opps.Account.Id]}" headerValue="Sum NetStarts" footerValue="{!totalNetStarts}" footerClass="total"/>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

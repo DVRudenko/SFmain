@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conversion_Button__c</fullName>
+    <description>TESTING DYNAMIC BUTTON</description>
+    <externalId>false</externalId>
+    <formula>IF(
+OR(
+RecordTypeId = "0120O000000MiTu",
+AND(
+RecordTypeId = "012200000006oVT",
+Country = 'Poland')),
+"LeadConversionCarnet2",
+"LeadConversion")</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>TESTING DYNAMIC BUTTON</inlineHelpText>
+    <label>Conversion Button</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_SK_V_echny_moje_p_le_itosti</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Product_Solicited__c</columns>
+    <columns>Number_of_Vehicles__c</columns>
+    <columns>Number_of_GPS_units__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Qualified Lead,Kvalifikovaný lead</value>
+    </filters>
+    <label>CCS SK - Všechny moje příležitosti</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>Salesteam_Inbound</group>
+        <group>Teamleiters</group>
+        <role>CCS_Administrator</role>
+        <role>CCS_CZ_Contact_Center</role>
+        <role>CCS_CZ_KAM</role>
+        <role>CCS_CZ_KAM_Team_Lead</role>
+        <role>CCS_CZ_LAM</role>
+        <role>CCS_CZ_SME</role>
+        <role>CCS_Contact_Center_Team_Lead</role>
+        <role>CCS_SK_Contact_Center</role>
+        <role>CCS_SK_SME</role>
+        <role>CCS_SME_Team_Lead</role>
+    </sharedTo>
+</ListView>

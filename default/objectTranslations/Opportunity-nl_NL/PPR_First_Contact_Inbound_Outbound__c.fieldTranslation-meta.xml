@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Was first contact inbound from the Lead, or outbound by the sales team? This is particularly helpful to know when the Lead was included in a marketing campaign. --></help>
+    <label><!-- PPR First Contact: Inbound/Outbound --></label>
+    <name>PPR_First_Contact_Inbound_Outbound__c</name>
+    <picklistValues>
+        <masterLabel>Chat</masterLabel>
+        <translation><!-- Chat --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Call</masterLabel>
+        <translation><!-- Inbound Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Mail</masterLabel>
+        <translation><!-- Inbound Mail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Website</masterLabel>
+        <translation><!-- Inbound Website --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onsite Visit</masterLabel>
+        <translation><!-- Onsite Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound call</masterLabel>
+        <translation><!-- Outbound call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Не контактировали</masterLabel>
+        <translation><!-- Не контактировали --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>API_Key__c</columns>
+    <columns>Production_Dataset__c</columns>
+    <columns>Production_Endpoint__c</columns>
+    <columns>Sandbox_Dataset__c</columns>
+    <columns>Sandbox_Endpoint__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

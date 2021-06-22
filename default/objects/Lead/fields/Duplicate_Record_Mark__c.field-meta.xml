@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duplicate_Record_Mark__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Флаг того что запись помечена как "Дубликат" (есть более актуальный аналог)</description>
+    <externalId>false</externalId>
+    <label>Duplicate Record Mark</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

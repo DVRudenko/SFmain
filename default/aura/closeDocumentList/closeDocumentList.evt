@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT" description="close document list modal window with selected documents">
+    <aura:attribute name="eventData" type="List" />
+</aura:event>

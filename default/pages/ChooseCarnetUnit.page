@@ -1,0 +1,13 @@
+<apex:page controller="ChooseCarnetUnitctrl" action="{!init}">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageMessages escape="false"/>
+            <!--<apex:pageBlockSection columns="1">
+                <apex:inputField value="{!opportunity.Sec_Channel__c}" html-disabled="true"/>
+                <apex:inputField value="{!opportunity.Product__c}" html-disabled="true"/>
+            </apex:pageBlockSection>-->
+            <apex:commandButton action="{!next}" value="Next"/>
+            <apex:commandButton action="{!cancel}" value="Cancel" immediate="true"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

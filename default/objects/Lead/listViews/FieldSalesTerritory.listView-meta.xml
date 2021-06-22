@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieldSalesTerritory</fullName>
+    <columns>SummaryScoringRu__c</columns>
+    <columns>Territory__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Number_of_Vehicles__c</columns>
+    <columns>LEAD.EMPLOYEES</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Territory__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Disqualified,Дисквалификация</value>
+    </filters>
+    <label>Территориальный Менеджмент</label>
+    <language>ru</language>
+    <sharedTo>
+        <group>PPR_FieldSalesTerritory</group>
+    </sharedTo>
+</ListView>

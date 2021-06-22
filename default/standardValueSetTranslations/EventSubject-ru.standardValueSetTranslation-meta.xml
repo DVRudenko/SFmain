@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>CCS Care</masterLabel>
+        <translation><!-- CCS Care --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Development</masterLabel>
+        <translation><!-- CCS Development --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Retention</masterLabel>
+        <translation><!-- CCS Retention --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Call</masterLabel>
+        <translation>Исходящий звонок</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Driver/Online Training</masterLabel>
+        <translation><!-- Driver/Online Training --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Exhibition</masterLabel>
+        <translation>Выставка</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Follow-up Appointment</masterLabel>
+        <translation><!-- Follow-up Appointment --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Meeting</masterLabel>
+        <translation>Встреча</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Meeting (self-appointed by the Manager)</masterLabel>
+        <translation>Встреча (самостоятельно назначенная менеджером)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Net New Appointment</masterLabel>
+        <translation><!-- Net New Appointment --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Recommendation meeting</masterLabel>
+        <translation>Встреча по рекомендации</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Repeated meeting</masterLabel>
+        <translation>Повторная Встреча</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Send Letter/Quote</masterLabel>
+        <translation>Отправить письмо</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Training Follow-up</masterLabel>
+        <translation>Обучение</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>quali. Termin vereinbart</masterLabel>
+        <translation><!-- quali. Termin vereinbart --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Topic or Subtopic --></help>
+    <label><!-- Field Type --></label>
+    <name>Field_Type__c</name>
+    <picklistValues>
+        <masterLabel>Subtopic</masterLabel>
+        <translation><!-- Subtopic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Topic</masterLabel>
+        <translation><!-- Topic --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

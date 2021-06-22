@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The week number that the reward was awarded --></help>
+    <label><!-- Week --></label>
+    <name>success__Week__c</name>
+</CustomFieldTranslation>

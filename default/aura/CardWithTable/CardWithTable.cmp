@@ -1,0 +1,51 @@
+<aura:component>
+    <aura:attribute name="tableHead" type="List"/>
+    <aura:attribute name="itemList" type="List"/>
+    <aura:attribute name="iconName" type="String"/>
+    <aura:attribute name="name" type="String"/>
+    <aura:attribute name="link" type="String"/>
+    <aura:attribute name="footer" type="Object"/>
+    <aura:attribute name="errorMessage" type="String" default="No Data"/>
+
+    <lightning:card iconName="{!v.iconName}" class="slds-card_boundary slds-m-around_large" footer="{!v.footer}">
+        <aura:set attribute="title">
+            <a href="{!v.link}" target="_blank">{!v.name}</a>
+        </aura:set>
+        <div class="slds-card__body_inner">
+            <aura:if isTrue="{!empty(v.itemList)}">
+                <span class="slds-text-title_caps slds-align_absolute-center">{!v.errorMessage}</span>
+                <aura:set attribute="else">
+                    <div class="slds-scrollable slds-card_boundary slds-table_bordered">
+                        <table class="slds-table slds-table_striped">
+                            <thead>
+                                <tr class="slds-text-title_caps">
+                                    <aura:iteration items="{!v.tableHead}" var="columnName">
+                                        <th>
+                                            <div class="slds-truncate">{!columnName}</div>
+                                        </th>
+                                    </aura:iteration>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.itemList}" var="row">
+                                    <tr>
+                                        <aura:iteration items="{!row}" var="item">
+                                            <td class="table-cell-size">
+                                                <div class="slds-text-title slds-text-color_default">
+                                                    <div class="{!item.className}">
+                                                        {!item.Value}
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </aura:iteration>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+    </lightning:card>
+
+</aura:component>

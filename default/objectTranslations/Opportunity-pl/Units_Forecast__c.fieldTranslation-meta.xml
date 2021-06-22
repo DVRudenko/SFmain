@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Carnet GPS Units multiplies by Probability % of Sales Stage --></help>
+    <label><!-- Units Forecast --></label>
+    <name>Units_Forecast__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,255 @@
+<apex:page controller="SalesDashboardLiters" action="{! init }" sidebar="false" showheader="false">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+    <apex:form >
+    <apex:pageBlock >
+        <input type="hidden" name="val" value="" id="hidid"/>
+        <h1 style="margin-bottom: 10px; font-size: 15px; display: block;">Liters for Closed Won Opportunities for 
+            <apex:selectList value="{! selectedPeriod }" size="1" multiselect="false" style="margin-left: 5px;">
+                <apex:selectOptions value="{! currentWeeks }"/>
+                <apex:actionSupport action="{! init }" event="onchange"/>
+            </apex:selectList> <apex:selectList value="{! selectedYear }" size="1" multiselect="false" style="margin: 0 5px;">
+                <apex:selectOptions value="{! years }"/>
+                <apex:actionSupport action="{! changeYear }" event="onchange"/>
+            </apex:selectList>({! startDateOfMonthString } - {! endDateOfMonthString })</h1>
+        <apex:pageMessages />
+
+        <div>
+            <apex:outputPanel rendered="{! OR(currentUser.Profile.Name == 'Salesteamleiter',currentUser.Profile.Name == 'Harte Hank Teamleiter', currentUser.Profile.Name == 'Salesteamleiter Inbound') }">
+                <div id="salesteamleader" style="width: 100%; float: left; height: 520px;"></div>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! IF(OR(currentUser.Profile.Name == 'Harte Hanke (Sales)',currentUser.Profile.Name == 'Sales', currentUser.Profile.Name == 'Sales Inbound', currentUser.Profile.Name == 'CCS Sales Inbound'), TRUE, FALSE) }">
+                <div id="sales" style="width: 100%; float: left; height: 150px;"></div>
+                <apex:pageBlock mode="maindetail" rendered="{! OR(contains(currentUser.UserRole.Name,'Outbound'), contains(currentUser.UserRole.Name,'outbound')) }">
+                    <apex:pageBlockSection collapsible="false" columns="4">
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Current Value"/>
+                            <apex:outputPanel id="cvalue">
+                                <apex:outputText value="{! myNumberOfLiters }"/>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="Liters Forecast"/>
+                            <apex:inputText value="{! litersForecast }">
+                                <apex:actionSupport event="onkeyup" reRender="calc, bonusRate, cvalue"/>
+                            </apex:inputText>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="% started"/>
+                            <apex:inputText value="{! percentStarted }" style="width: 30px;">
+                                <apex:actionSupport event="onkeyup" reRender="calc, bonusRate, cvalue"/>
+                            </apex:inputText>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >                            
+                            <apex:outputLabel value="Bonus Forecast" style="min-width: 150px; display: inline-block"/>
+                            <apex:outputPanel id="calc">
+                                <apex:outputText style="min-width: 100px; display: block" value="{0, number, 0.00}">
+                                    <apex:param value="{! IF (currentPlan.numberOfLiters != 0, IF(AND((percentStarted/100) * ((myNumberOfLiters + litersForecast) / currentPlan.numberOfLiters) >= 0, (percentStarted/100) * ((myNumberOfLiters + litersForecast) / currentPlan.numberOfLiters) <= 0.5), (percentStarted/100) * (myNumberOfLiters + litersForecast)*0.6/100, IF(AND((percentStarted/100) * ((myNumberOfLiters + litersForecast) / currentPlan.numberOfLiters) > 0.5, (percentStarted/100) * ((myNumberOfLiters + litersForecast) / currentPlan.numberOfLiters) <= 0.9), (percentStarted/100) * (myNumberOfLiters + litersForecast)*0.75/100, IF(AND((percentStarted/100) * ((myNumberOfLiters + litersForecast) / currentPlan.numberOfLiters) > 0.9, (percentStarted/100) * ((myNumberOfLiters + litersForecast) / currentPlan.numberOfLiters) <= 1.1), (percentStarted/100) * (myNumberOfLiters + litersForecast)*0.9/100, (percentStarted/100) * (myNumberOfLiters + litersForecast)*1.05/100))), 0) }"/>
+                                </apex:outputText>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    <p><apex:outputPanel id="bonusRate"><strong>Formula: </strong>Percent Started * (Current Liters + Liters Forecast) * Bonus Rate / 100 | Your current Bonus Rate is {! IF (currentPlan.numberOfLiters != 0, IF(AND((percentStarted/100) * ((myNumberOfLiters + litersForecast) / currentPlan.numberOfLiters) >= 0, (percentStarted/100) * ((myNumberOfLiters + litersForecast) / currentPlan.numberOfLiters) <= 0.5), 0.6, IF(AND((percentStarted/100) * ((myNumberOfLiters + litersForecast) / currentPlan.numberOfLiters) > 0.5, (percentStarted/100) * ((myNumberOfLiters + litersForecast) / currentPlan.numberOfLiters) <= 0.9), 0.75, IF(AND((percentStarted/100) * ((myNumberOfLiters + litersForecast) / currentPlan.numberOfLiters) > 0.9, (percentStarted/100) * ((myNumberOfLiters + litersForecast) / currentPlan.numberOfLiters) <= 1.1), 0.9, 1.05))), 0) }</apex:outputPanel></p>
+                    <div style="width: 100%; height: 2px; background: grey; margin: 10px 0;"></div>
+                    <apex:pageBlockSection collapsible="false" columns="3">
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="NET Starts Actuals"/>
+                            <apex:outputPanel >
+                                <apex:inputText value="{! myNumberOfLitersNET }">
+                                    <apex:actionSupport event="onkeyup" reRender="calcNET, bonusRateRET"/>
+                                </apex:inputText>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >
+                            <apex:outputLabel value="NET Starts Plan"/>
+                            <apex:outputPanel >
+                                <apex:inputText value="{! startsPlanNET }">
+                                    <apex:actionSupport event="onkeyup" reRender="calcNET, bonusRateRET"/>
+                                </apex:inputText>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageBlockSectionItem >                            
+                            <apex:outputLabel value="Bonus Forecast" style="min-width: 150px; display: inline-block"/>
+                            <apex:outputPanel id="calcNET">
+                                <apex:outputText style="min-width: 100px; display: block" value="{0, number, 0.00}">
+                                    <apex:param value="{! IF (startsPlanNET != 0, IF(AND((myNumberOfLitersNET / startsPlanNET) >= 0, (myNumberOfLitersNET / startsPlanNET) <= 0.5), myNumberOfLitersNET*0.6/100, IF(AND((myNumberOfLitersNET / startsPlanNET) > 0.5, (myNumberOfLitersNET / startsPlanNET) <= 0.9), myNumberOfLitersNET*0.75/100, IF(AND((myNumberOfLitersNET / startsPlanNET) > 0.9, (myNumberOfLitersNET / startsPlanNET) <= 1.1), myNumberOfLitersNET*0.9/100, myNumberOfLitersNET*1.05/100))), 0) }"/>
+                                </apex:outputText>
+                            </apex:outputPanel>
+                        </apex:pageBlockSectionItem>
+                    </apex:pageBlockSection>
+                    <p><apex:outputPanel id="bonusRateRET"><strong>Formula: </strong>NET Starts Actuals * Bonus Rate / 100 | Bonus Rate: {! IF (startsPlanNET != 0, IF(AND((myNumberOfLitersNET / startsPlanNET) >= 0, (myNumberOfLitersNET / startsPlanNET) <= 0.5), 0.6, IF(AND((myNumberOfLitersNET / startsPlanNET) > 0.5, (myNumberOfLitersNET / startsPlanNET) <= 0.9), 0.75, IF(AND((myNumberOfLitersNET / startsPlanNET) > 0.9, (myNumberOfLitersNET / startsPlanNET) <= 1.1), 0.9, 1.05))), 0) }
+                    </apex:outputPanel></p>
+                </apex:pageBlock>
+            </apex:outputPanel>
+            <div style="clear: both"></div>
+        </div>
+    </apex:pageBlock>
+
+    <script>
+        window.onload=function() {
+            document.getElementById('hidid').focus();
+        }
+
+        $(function () {
+            var todaysSalesOppsMapJS = {};
+            <apex:repeat value="{! todaysSalesOppsMap }" var="key">
+                todaysSalesOppsMapJS["{! key }"] = "{! todaysSalesOppsMap[key] }";
+            </apex:repeat>
+            $('#salesteamleader').highcharts({
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: '',
+                    style: {
+                        display: 'none'
+                    }
+                },
+                xAxis: {
+                    categories: [
+                    <apex:repeat value="{! finalList }" var="key">
+                        '{! teamOppsPlanMap[key.Id].Name }',
+                    </apex:repeat>
+                    ]
+                },
+                yAxis: [{
+                    min: 0,
+                    title: {
+                        text: ''
+                    }
+                }, {
+                    title: {
+                        text: 'Liters'
+                    },
+                    opposite: true
+                }],
+                legend: {
+                    shadow: false,
+                    labelFormatter: function() {
+                      var total = 0;
+                      for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+                      return this.name + ' - Total: ' + total;
+                    }
+                },
+                exporting: { enabled: false },
+                credits: {
+                      enabled: false
+                },
+                tooltip: {
+                    enabled: false
+                },
+                plotOptions: {
+                    column: {
+                        grouping: false,
+                        shadow: false,
+                        borderWidth: 0
+                    },
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                            formatter: function () {
+                                if (this.series.name == 'Current Value') {
+                                    return Math.round(this.y/1000) + 'k' + ' (' + todaysSalesOppsMapJS[this.x] + ' today)';    
+                                } else {
+                                    return Math.round(this.y/1000) + 'k';  
+                                }
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Plan',
+                    color: '#ccc',
+                    data: [<apex:repeat value="{! finalList }" var="key">
+                    {! teamOppsPlanMap[key.Id].numberOfLiters },
+                </apex:repeat>],
+                    pointPadding: -0.5,
+                    pointPlacement: -0.15
+                }, {
+                    name: 'Current Value',
+                    color: 'rgba(126,86,134,.9)',
+                    data: [<apex:repeat value="{! finalList }" var="key">
+                    {! teamOppsCardsMap[key.Id] },
+                </apex:repeat>],
+                    pointPadding: -0.5,
+                    pointPlacement: 0.15
+                }]
+            });
+
+            $('#sales').highcharts({
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: '',
+                    style: {
+                        display: 'none'
+                    }
+                },
+                xAxis: {
+                    categories: [
+                    ''
+                    ]
+                },
+                yAxis: [{
+                    min: 0,
+                    title: {
+                        text: ''
+                    }, 
+                    style: {
+                        display: 'none'
+                    }
+                }, {
+                    title: {
+                        text: 'Number of liters'
+                    },
+                    opposite: true
+                }],
+                legend: {
+                    shadow: false
+                },
+                exporting: { enabled: false },
+                credits: {
+                      enabled: false
+                },
+                tooltip: {
+                    enabled: false
+                },
+                plotOptions: {
+                    column: {
+                        grouping: false,
+                        shadow: false,
+                        borderWidth: 0
+                    },
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                            formatter: function () {
+                                if (this.series.name == 'Current Value') {
+                                    return Math.round(this.y/1000) + 'k' + ' (' + {! todaysOpps } + ' today)'; 
+                                } else {
+                                    return Math.round(this.y/1000) + 'k';  
+                                }
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Plan',
+                    color: '#ccc',
+                    data: [{! currentPlan.numberOfLiters }],
+                    pointPadding: -0.5,
+                    pointPlacement: -0.15
+                }, {
+                    name: 'Current Value',
+                    color: 'rgba(126,86,134,.9)',
+                    data: [{! myNumberOfLiters }],
+                    pointPadding: -0.5,
+                    pointPlacement: 0.15
+                }]
+            });
+        });
+    </script>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retailer_Short_Form_DE</fullName>
+    <columns>Number_of_days__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>Partner_OBN__c</columns>
+    <columns>Partner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sec_Channel__c</field>
+        <operation>equals</operation>
+        <value>JITB</value>
+    </filters>
+    <filters>
+        <field>LEAD.COUNTRY_CODE</field>
+        <operation>equals</operation>
+        <value>DE</value>
+    </filters>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>Tablet Short Form</value>
+    </filters>
+    <label>Retailer Short Form (DE)</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Salesmanager</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

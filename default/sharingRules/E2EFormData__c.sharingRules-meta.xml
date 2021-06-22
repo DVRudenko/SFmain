@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>E2E_Form_Ru_Data_forSME</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>E2E Form Ru Data_forSME</label>
+        <sharedTo>
+            <group>PPR_SME</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000008GFdp</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>E2E_Form_Ru_Data_for_SME</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>E2E Form Ru Data for SME</label>
+        <sharedTo>
+            <group>RU_SME</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000008GFdp</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>E2E_RU_Form_Data</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Расшарить записи, которые принадлежать E2E RU Guest User для менеджеров группы</description>
+        <label>E2E RU Form Data</label>
+        <sharedTo>
+            <group>PPR_E2E_Form_Managers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000008GFdp</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PPR_Marketing_RU</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>PPR Marketing_RU</label>
+        <sharedTo>
+            <group>PPR_Marketing_E2E</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000008GFdp</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>E2E_RU_User_Form_Data</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>E2E RU User Form Data</label>
+        <sharedTo>
+            <group>PPR_E2E_Guest_User</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>PPR_Fleetcor</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

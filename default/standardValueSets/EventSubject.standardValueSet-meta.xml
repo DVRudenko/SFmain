@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Call</fullName>
+        <default>false</default>
+        <label>Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting</fullName>
+        <default>false</default>
+        <label>Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Send Letter/Quote</fullName>
+        <default>false</default>
+        <label>Send Letter/Quote</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>quali. Termin vereinbart</fullName>
+        <default>false</default>
+        <label>quali. Termin vereinbart</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Net New Appointment</fullName>
+        <default>false</default>
+        <label>Net New Appointment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow-up Appointment</fullName>
+        <default>false</default>
+        <label>Follow-up Appointment</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Driver/Online Training</fullName>
+        <default>false</default>
+        <label>Driver/Online Training</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Training Follow-up</fullName>
+        <default>false</default>
+        <label>Training Follow-up</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Care</fullName>
+        <default>false</default>
+        <label>CCS Care</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Retention</fullName>
+        <default>false</default>
+        <label>CCS Retention</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Development</fullName>
+        <default>false</default>
+        <label>CCS Development</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting (self-appointed by the Manager)</fullName>
+        <default>false</default>
+        <label>Meeting (self-appointed by the Manager)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Recommendation meeting</fullName>
+        <default>false</default>
+        <label>Recommendation meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Exhibition</fullName>
+        <default>false</default>
+        <label>Exhibition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Repeated meeting</fullName>
+        <default>false</default>
+        <label>Repeated meeting</label>
+    </standardValue>
+</StandardValueSet>

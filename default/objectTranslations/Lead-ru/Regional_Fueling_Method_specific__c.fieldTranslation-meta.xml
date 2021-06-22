@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Укажите региональных операторов</help>
+    <label>Региональный оператор</label>
+    <name>Regional_Fueling_Method_specific__c</name>
+    <picklistValues>
+        <masterLabel>7-Eleven</masterLabel>
+        <translation><!-- 7-Eleven --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ARI Fleet</masterLabel>
+        <translation><!-- ARI Fleet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ASP Kholding</masterLabel>
+        <translation>АСП-Холдинг</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ASPEK-Nefteprodukt</masterLabel>
+        <translation>АСПЭК-Нефтепродукт</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AZS-Servis</masterLabel>
+        <translation>АЗС-Сервис</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arkhipelag</masterLabel>
+        <translation>Архипелаг</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Assotsiatsiya GRAND</masterLabel>
+        <translation>Ассоциация ГРАНД</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Avtodorstroy</masterLabel>
+        <translation>Автодорстрой</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Banamex</masterLabel>
+        <translation><!-- Banamex --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bancomer</masterLabel>
+        <translation><!-- Bancomer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Banorte</masterLabel>
+        <translation><!-- Banorte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Donlen</masterLabel>
+        <translation><!-- Donlen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EFS (First Data)</masterLabel>
+        <translation><!-- EFS (First Data) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ekoyl-Protsessing</masterLabel>
+        <translation>Екойл-Процессинг</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Emkay</masterLabel>
+        <translation><!-- Emkay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enterprise/WEX</masterLabel>
+        <translation><!-- Enterprise/WEX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FTS (Fleet-Tech Transp)</masterLabel>
+        <translation><!-- FTS (Fleet-Tech Transp) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GE Fleet</masterLabel>
+        <translation><!-- GE Fleet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gelios</masterLabel>
+        <translation>Гелиос</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grilen</masterLabel>
+        <translation>Грилен</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>HSBC</masterLabel>
+        <translation><!-- HSBC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hess</masterLabel>
+        <translation><!-- Hess --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MNGK-AVTOKARD</masterLabel>
+        <translation>МНГК-Автокард</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Motom</masterLabel>
+        <translation>Мотом</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NK Arsenal</masterLabel>
+        <translation>НК Арсенал</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nefko-kart</masterLabel>
+        <translation>Нефко-карт</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Neftika-Card</masterLabel>
+        <translation>Нефтика-Кард</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OPTAN-SMART</masterLabel>
+        <translation>ОПТАН-Смарт</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Regional/Local</masterLabel>
+        <translation><!-- Other Regional/Local --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PC &quot;Petrol Plyus&quot;</masterLabel>
+        <translation>ПК Петрол Плюс</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PHH Arval</masterLabel>
+        <translation><!-- PHH Arval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PORT ONE OU</masterLabel>
+        <translation>PORT ONE</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Penske/Ryder</masterLabel>
+        <translation><!-- Penske/Ryder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pilot (Flying J)</masterLabel>
+        <translation><!-- Pilot (Flying J) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Processing-Servis</masterLabel>
+        <translation>Процессинг-сервис</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Propietary Card</masterLabel>
+        <translation><!-- Propietary Card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QuikTrip</masterLabel>
+        <translation><!-- QuikTrip --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rapid Fuel (Kangaroo)</masterLabel>
+        <translation><!-- Rapid Fuel (Kangaroo) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Santander</masterLabel>
+        <translation><!-- Santander --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Scotia</masterLabel>
+        <translation><!-- Scotia --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sheetz</masterLabel>
+        <translation><!-- Sheetz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Smart Plyus</masterLabel>
+        <translation>Смарт Плюс</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Speedway</masterLabel>
+        <translation><!-- Speedway --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Statoyl Riteyl Opereyshns</masterLabel>
+        <translation>Статойл Ритейл Оперейшнс</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T-Chek</masterLabel>
+        <translation><!-- T-Chek --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trans Oyl</masterLabel>
+        <translation>Транс Ойл</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tsentral&#39;naya Processingovaya Kompaniya</masterLabel>
+        <translation>Центральная Процессинговая Компания</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tsentrnefteprodukt-servis</masterLabel>
+        <translation>Центрнефтепродукт-сервис</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Universal Card</masterLabel>
+        <translation><!-- Universal Card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Valero</masterLabel>
+        <translation><!-- Valero --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wheels</masterLabel>
+        <translation><!-- Wheels --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yunikard-Oyl</masterLabel>
+        <translation>Юникард-ойл</translation>
+    </picklistValues>
+</CustomFieldTranslation>

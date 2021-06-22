@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Starts_Missing_Information__c</fullName>
+    <externalId>false</externalId>
+    <label>Starts: Missing Information</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Starts_Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Stammtankstelle fehlt (Home station missing)</fullName>
+                <default>false</default>
+                <label>Home station missing</label>
+            </value>
+            <value>
+                <fullName>Produkt fehlt / Nicht korrekt eingegeben (Product is missing / Not entered correctly)</fullName>
+                <default>false</default>
+                <label>Product is missing / Not entered correctly</label>
+            </value>
+            <value>
+                <fullName>Emailadresse fehlt (Email is missing)</fullName>
+                <default>false</default>
+                <label>Email is missing</label>
+            </value>
+            <value>
+                <fullName>Hausnummer fehlt (House Nr. is missing)</fullName>
+                <default>false</default>
+                <label>House Nr. is missing</label>
+            </value>
+            <value>
+                <fullName>Tankkarten fehlen (Fuel cards are missing)</fullName>
+                <default>false</default>
+                <label>Fuel cards are missing</label>
+            </value>
+            <value>
+                <fullName>Die Karten stimmt mit der Anzahl nicht (Set up cards differ from entered # of cards)</fullName>
+                <default>false</default>
+                <label>Set up cards differ from entered # of cards</label>
+            </value>
+            <value>
+                <fullName>Kunde möchte kündigen (Customer wants termination)</fullName>
+                <default>false</default>
+                <label>Customer wants termination</label>
+            </value>
+            <value>
+                <fullName>Kunde ist bereits Bestandskunde (Already customer)</fullName>
+                <default>false</default>
+                <label>Already customer</label>
+            </value>
+            <value>
+                <fullName>Keine Club Smart für LKW´s (Club Smart cards n/a for trucks)</fullName>
+                <default>false</default>
+                <label>Club Smart cards n/a for trucks</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>No Driver/VRN in Card</fullName>
+                <default>false</default>
+                <label>No Driver/VRN in Card</label>
+            </value>
+            <value>
+                <fullName>Wrong Card Type</fullName>
+                <default>false</default>
+                <label>Wrong Card Type</label>
+            </value>
+            <value>
+                <fullName>VAT / Ref. Number missing</fullName>
+                <default>false</default>
+                <label>VAT / Ref. Number missing</label>
+            </value>
+            <value>
+                <fullName>SEPA wrong / insufficient</fullName>
+                <default>false</default>
+                <label>SEPA wrong / insufficient</label>
+            </value>
+            <value>
+                <fullName>Wrong address</fullName>
+                <default>false</default>
+                <label>Wrong address</label>
+            </value>
+            <value>
+                <fullName>Sonstiges (Other)</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Contract files missing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contract files missing</label>
+            </value>
+            <value>
+                <fullName>Invoice contact person missing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Invoice contact person missing</label>
+            </value>
+            <value>
+                <fullName>VAT Number missing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>VAT Number missing</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>0.5 Missing information</controllingFieldValue>
+            <valueName>Stammtankstelle fehlt (Home station missing)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0.5 Missing information</controllingFieldValue>
+            <valueName>Produkt fehlt / Nicht korrekt eingegeben (Product is missing / Not entered correctly)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0.5 Missing information</controllingFieldValue>
+            <valueName>Kunde ist bereits Bestandskunde (Already customer)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0.5 Missing information</controllingFieldValue>
+            <valueName>No Driver/VRN in Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0.5 Missing information</controllingFieldValue>
+            <valueName>Wrong Card Type</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0.5 Missing information</controllingFieldValue>
+            <valueName>VAT / Ref. Number missing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0.5 Missing information</controllingFieldValue>
+            <valueName>SEPA wrong / insufficient</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0.5 Missing information</controllingFieldValue>
+            <valueName>Wrong address</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>0.5 Missing information</controllingFieldValue>
+            <valueName>Sonstiges (Other)</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

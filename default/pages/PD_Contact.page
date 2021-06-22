@@ -1,0 +1,557 @@
+<apex:page id="PD_NewContact" standardController="Contact" extensions="PD_NewContactController" docType="html-5.0">
+    
+    <apex:stylesheet value="{!URLFOR($Resource.PDFormCSS)}"/>
+    
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.jQueryUISlider,'jquery-ui-1.12.1.custom/jquery-ui.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.inputmaskJS, 'inputmaskjs/dist/jquery.inputmask.js') }"/> 
+    <apex:includeScript value="{!URLFOR($Resource.PDFormJS)}"/>
+    
+    <apex:form id="pdRecordForm">
+        <apex:inputHidden id="PD_ExternalId" value="{!externalId}"/>
+        <apex:inputHidden id="PD_Birthdate" value="{!birthdateSTR}"/>
+        <script>
+            var pdData = {};
+            /*  don't use as it blocks save button after making changes in phones block
+            function disabledButtonSave(status) {
+                buttonOk = document.getElementsByClassName('buttonSave');
+                buttonOk[0].disabled = status;
+                buttonOk[1].disabled = status;
+            }
+            */
+            function jsSaveMe(ajaxSaveAction, extendData) {
+                // === tmp ===
+                //if (ajaxSaveAction != null) ajaxSaveAction(); //uncomment the line to switch off PD logic
+                // === tmp ===
+                // comment from here to switch PD logic off
+
+                // disabledButtonSave(true); // don't use as it blocks save button after making changes in phones block
+                document.getElementById('{!$Component.pdRecordForm.PD_Birthdate}').value = document.getElementsByClassName('data-birthdate')[0].value;
+
+                var data = {};
+                inputs = document.getElementsByClassName('pd-input');
+                for (index = 0; index < inputs.length; ++index) {
+                    var classes = inputs[index].classList.value.split(' ');
+                    for(classIndex = 0; classIndex < classes.length; ++classIndex) {
+                        if (classes[classIndex].indexOf('data-') !== -1) {
+                            var fieldName = classes[classIndex].split('-')[1];
+                            data[fieldName] = inputs[index].value != null ? inputs[index].value : inputs[index].innerText != null ? inputs[index].innerText : '';
+                        }
+                    }
+                }
+                var additionalPhonesData = createDataAdditionalPhones ();
+                if (additionalPhonesData != null) data = Object.assign(data, additionalPhonesData);
+                if (extendData != null) data = Object.assign(data, extendData);
+
+                if ('{!PD_IsActive}' == 'true') {
+                    sendPDDataAndSave(data, ajaxSaveAction);
+                } else {
+                    if (ajaxSaveAction != null) ajaxSaveAction();
+                }
+                
+            }
+            function sendPDDataAndSave(data, ajaxSaveAction) {
+                console.log('sendPDDataAndSave')
+                var dataJSON = JSON.stringify(data);
+
+                var xhr = new XMLHttpRequest();
+                var body = {};
+                body['token'] = '{!PD_Token}';
+                body['data'] = data;
+                body['id'] = document.getElementById('{!$Component.pdRecordForm.PD_ExternalId}').value;
+                
+                xhr.open("POST", '{!PD_URL}/save-data', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                //xhr.overrideMimeType("application/json");
+                xhr.onreadystatechange = function () {
+                    console.log(xhr.readyState);
+                    if(xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            var responseJSON = JSON.parse(xhr.responseText);
+                            if (responseJSON.status == 'error') {
+                                alert('{!$Label.pd_server_error}' + ' ' + responseJSON.error.message);
+                               // disabledButtonSave(''); // don't use as it blocks save button after making changes in phones block
+                                return false;
+                            } else {
+                                var idField = document.getElementById('{!$Component.pdRecordForm.PD_ExternalId}');
+                                idField.value = responseJSON.result.id;
+                                pdData = Object.assign(pdData, data);
+                                if (ajaxSaveAction != null) ajaxSaveAction();
+                                return true;
+                            }
+                        } else {
+                            alert('{!$Label.pd_server_error}');
+                            //disabledButtonSave(''); // don't use as it blocks save button after making changes in phones block
+                            return false;
+                        }
+                    };
+                };
+
+                xhr.send(JSON.stringify(body));
+              //comment until here to switch off PD logic
+            }
+            function createAdditionalPhonesVal(newPhoneVal) {
+                var arr = [];
+                var additionalPhoneElems = document.getElementsByClassName('additional-phone-item');
+                for (index = 0; index < additionalPhoneElems.length; ++index) {
+                    var curElem = additionalPhoneElems[index];
+                    var isMoved = curElem.classList.contains('movedToField') || curElem.classList.contains('movedToIrrelevant') ;
+                    if (!isMoved) {
+                        var val = curElem.value != null ? curElem.value : curElem.innerText != null ? curElem.innerText : null;
+                        if (val != null) arr.push(val);
+                    }
+                }
+                if (newPhoneVal != null && newPhoneVal != '') arr.push(newPhoneVal);
+                var ret = arr.join('.');
+                return ret;
+            }
+
+            function createDataAdditionalMoveToField () {
+                var data = {};
+                var moveToFieldData = getMoveToFieldData();
+                if (moveToFieldData == null) return null;
+                data['Additional_Phones__c'] = createAdditionalPhonesVal(),
+                data[moveToFieldData.phoneFieldAPI] = moveToFieldData.phoneVal;
+                if (pdData[moveToFieldData.phoneFieldAPI] == data[moveToFieldData.phoneFieldAPI]) return null;
+                return data;
+            }
+            function createDataAdditionalMoveToIrrelevant () {
+                var data = {};
+                var phoneMovedToIrrelevant = getAdditionalPhoneMovedToIrrelevant();
+                if (phoneMovedToIrrelevant == null) return null;
+                var additionalPhonesVal = createAdditionalPhonesVal();
+                if (pdData['Additional_Phones__c'] == additionalPhonesVal) return null; // don't send pd if the value was already sent
+                data['Additional_Phones__c'] = additionalPhonesVal;
+                return data;
+            }
+            function createDataAdditionalPhones () {
+                var data = {};
+                var additionalPhonesVal = createAdditionalPhonesVal();
+                if (pdData['Additional_Phones__c'] == additionalPhonesVal) return null; // don't send pd if the value was already sent
+                data['Additional_Phones__c'] = additionalPhonesVal;
+                return data;
+            }
+            function getAdditionalPhoneMovedToIrrelevant () {
+                var additionalPhoneElems = document.getElementsByClassName('additional-phone-item');
+                for (index = 0; index < additionalPhoneElems.length; ++index) {
+                    var curElem = additionalPhoneElems[index];
+                    var movedToIrrelevant = curElem.classList.contains('movedToIrrelevant') ;
+                    if (movedToIrrelevant) return curElem;
+                }
+                return null;
+            }
+            function getMoveToFieldData() {
+                var ret = {};
+                var moveToFieldElems = document.getElementsByClassName('current-phone-num');
+                for (index = 0; index < moveToFieldElems.length; ++index) {
+                    if (moveToFieldElems[index].classList.contains('movedToField')) {
+                        var splitRes = moveToFieldElems[index].innerText.split(':');
+                        var phoneVal = splitRes[0];;
+                        var phoneFieldAPI = splitRes[1];
+                        if(pdData[phoneFieldAPI] != phoneVal) { // value wasn't sent in pd
+                            ret.phoneVal = phoneVal;
+                            ret.phoneFieldAPI = phoneFieldAPI;
+                            return ret;
+                        }
+                    }
+                }
+                return null;
+            }
+            function isLightning() {
+                return((typeof sforce != 'undefined') && sforce && (!!sforce.one));
+            }
+        </script>
+
+        <apex:actionFunction action="{!closePage}" name="closePage" rerender="" status="saveAndCloseStatus"/>
+        <apex:actionFunction action="{!openRecord}" name="openRecord" rerender="" status="saveAndCloseStatus"/>
+        <apex:actionFunction action="{!rerenderPage}" name="rerenderPage" status="saveAndCloseStatus"/>
+        <apex:actionFunction rerender="pdSaveErrors, pdsaveresults" action="{!saveMe}" name="apexSaveMe" 
+                            oncomplete="if(!isLightning()) {  if('{!recordCreated}' == 'true' || '{!recordUpdated}' == 'true') {openRecord()} } else { if('{!recordCreated}' == 'true') {sforce.one.editRecord('{!contactId}'); setTimeout(function(){ closePage(); }, 5);} else {  if('{!recordCreated}' == 'true' || '{!recordUpdated}' == 'true') {rerenderPage()}  } }" 
+                            status="saveAndCloseStatus"/>
+        &nbsp;
+        <apex:actionStatus id="saveAndCloseStatus">
+            <apex:facet name="start">
+                <apex:outputPanel >
+                    <img src="/img/loading32.gif" width="16" height="16" />
+                    <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                    &nbsp;
+                    <div id="overlay"/> 
+                </apex:outputPanel>            
+            </apex:facet>
+        </apex:actionStatus>
+        <div class="bEditBlock">
+        <apex:pageBlock rendered="{!pdDataSaved}">
+            <apex:outputPanel id="pdsaveresults">
+              <apex:pageMessages />
+            </apex:outputPanel>
+            <p/>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton rendered="{!NOT(finishedEditing)}" value="{!$Label.btn_Next}" onclick="sforce.one.editRecord('{!contactId}');"/>
+                <apex:commandButton value="{!$Label.btn_Close}" action="{!rerenderPage}" rerender="pdsaveresults"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        <apex:pageBlock rendered="{!NOT(pdDataSaved)}">
+                <apex:pageBlockButtons >
+                    <apex:commandButton styleClass="buttonSave" rerender="none" onclick="jsSaveMe(apexSaveMe)" value="{!$Label.pd_save}"></apex:commandButton>
+                    <apex:commandButton action="{!cancel}" value="{!$Label.pd_cancel}"></apex:commandButton>
+                </apex:pageBlockButtons>
+
+                <apex:outputPanel id="pdSaveErrors">
+                    <div class="pbError">
+                        <apex:messages ></apex:messages>
+                    </div>
+                </apex:outputPanel>
+                <apex:pageBlockSection title="Сведения: Контакт" columns="2">
+                    <apex:repeat value="{!$ObjectType.Contact.FieldSets.PD_Fields}" var="f" >
+                        <apex:pageblocksectionitem rendered="{!f.fieldPath!='Birthdate'}">
+                            <apex:outputLabel value="{!f.Label}" for="personLname"></apex:outputLabel>
+                            <apex:inputText value="{!fields[f]}"  styleClass="pd-input {!'data-'+f.fieldPath} {!if(OR(f.required, f.dbrequired),'req','')}"/>
+                        </apex:pageBlockSectionItem>
+                        <apex:pageblocksectionitem rendered="{!f.fieldPath=='Birthdate'}">
+                            <apex:outputLabel value="{!f.Label}" for="personLname"></apex:outputLabel>
+                            <input type="date" class="data-birthdate pd-input" value="{!fields[f]}"/>
+                        </apex:pageBlockSectionItem>
+
+                    </apex:repeat>
+
+                </apex:pageBlockSection>
+                <!-- ---------------- PHONES FORM ---------------------------------- -->
+                <apex:actionFunction name="refreshPhones " action="{!refreshPhones}" oncomplete="init()" reRender="PhonesLayoutBlock, AdditionalList, IrrelevantList" status="phonesStatus"/>
+                
+                <apex:actionFunction name="save_PhoneFields " action="{!save_PhoneFields}" oncomplete="refreshPhones()" reRender="PhonesLayoutBlock, PageMsgs" status="phoneFieldsStatus"/>
+                <apex:actionFunction name="refreshIrrelevantPhonesList" action="{!refreshIrrelevantPhonesList}" rerender="IrrelevantList"/>
+                <apex:actionFunction name="toEdit" action="{!toEdit}"  oncomplete="initPhoneFields ();" rerender="PhonesLayoutBlock"/>
+                <apex:actionFunction name="toView" action="{!toView}" rerender="PhonesLayoutBlock"/>
+
+                <apex:actionFunction name="saveAdditionalPhones" action="{!saveAdditionalPhones}" oncomplete="refreshPhones();" reRender="PageMsgs" status="saveAdditionalPhonesStatus"/>
+                <apex:actionFunction name="addAdditionalPhone" action="{!addAdditionalPhone}" oncomplete="refreshPhones();" reRender="PageMsgs" status="AddPhoneStatus"/>
+                <apex:actionFunction name="toEditMode_AdditionalPhones" action="{!toEditMode_AdditionalPhones}" oncomplete="init();initAdditionalPhones();" reRender="AdditionalList"/>
+                <apex:actionFunction name="toViewMode_AdditionalPhones" action="{!toViewMode_AdditionalPhones}" oncomplete="init();" reRender="AdditionalList"/>
+                
+                <apex:outputPanel id="PageMsgs">
+                    <apex:pageMessages />
+                </apex:outputPanel>
+
+                <apex:pageBlockSection title="{!$Label.title_Phones}" columns="1" id="PhonesLayoutBlock">
+                    <apex:outputPanel rendered="{!NOT(isNewRecord)}">
+                        <apex:actionStatus id="phoneFieldsStatus">
+                            <apex:facet name="start">
+                                <apex:outputPanel >
+                                    <apex:commandButton value="{!$Label.btn_savePhones}" disabled="true"/>
+                                    &nbsp;
+                                    <img src="/img/loading32.gif" width="16" height="16" />
+                                    <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                    &nbsp;
+                                    <div id="overlay"/>
+                                </apex:outputPanel>
+                            </apex:facet>
+                            <apex:facet name="stop">
+                                <apex:outputPanel >
+                                    <apex:commandButton value="{!$Label.btn_savePhones}" styleClass="green-btn" onclick="jsSaveMe(save_PhoneFields); return false;" reRender="" status="phoneFieldsStatus"/>
+                                </apex:outputPanel>
+                            </apex:facet>
+                        </apex:actionStatus>
+                    </apex:outputPanel>
+                    <apex:pageBlockTable value="{!phoneRowWrappers}" var="phoneRow">
+                        <apex:column rendered="{!NOT(isNewRecord)}">
+                            <apex:commandLink value="{!$Label.link_Edit}" action="{!phoneRow.editRow}" oncomplete="toEdit()" rendered="{!NOT(phoneRow.editView)}"/>
+                            <apex:commandLink value="{!$Label.link_Cancel}" action="{!phoneRow.cancelEditRow}" oncomplete="toView()" rendered="{!phoneRow.editView}"/>
+                        </apex:column>
+                        <apex:column value="{!phoneRow.phoneFieldLabel}">
+                            <apex:facet name="header">{!$Label.header_PhoneLabel}</apex:facet>
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">{!$Label.header_PhoneNumber}</apex:facet>
+                            <a href="{!phoneRow.clickToCallLink}" target="_blank"><apex:outputLabel value="{!phoneRow.phoneFieldVal}" rendered="{!AND(NOT(phoneRow.editView), NOT(isNewRecord))}" styleClass="pd-input pd-input-phone data-{!phoneRow.phoneFieldAPI}"/></a>
+                            <apex:input value="{!phoneRow.phoneFieldVal}" rendered="{!OR(phoneRow.editView, isNewRecord)}" onkeyup="onChangeInputPhoneField(this)" 
+                                        styleClass="pd-input pd-input-phone phone-field-input-mask data-{!phoneRow.phoneFieldAPI} {!IF(phoneRow.phoneFieldAPI == 'Phone', '', '')}" 
+                                        html-data-value="{!phoneRow.phoneFieldVal}" html-data-status="{!phoneRow.statusFieldVal}"/>
+                            <span style="display: none;" id="original-val-{!phoneRow.phoneFieldAPI}">{!phoneRow.phoneFieldValOriginal}</span>
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">{!$ObjectType.Contact.fields.Phone_Status__c.Label}</apex:facet>
+                            <apex:selectList value="{!phoneRow.statusFieldVal}" size="1" rendered="{!OR(NOT(ISBLANK(phoneRow.phoneFieldVal)), phoneRow.editView, isNewRecord)}" styleClass="{!phoneRow.phoneFieldAPI}-statuses">
+                                <apex:selectOptions value="{!phoneRow.statusesValues}"/>
+                            </apex:selectList>
+                        </apex:column>
+                        <apex:column >
+                            <apex:facet name="header">{!$ObjectType.Contact.fields.Phone_Rating__c.Label}</apex:facet>
+                            <apex:outputLabel value="{!phoneRow.ratingFieldVal}" rendered="{!NOT(phoneRow.editView)}"/>
+                        </apex:column> 
+                        <apex:column rendered="{!NOT(isNewRecord)}">
+                            <apex:facet name="header">{!$ObjectType.Contact.fields.Phone_StatusModifiedDate__c.Label}</apex:facet>
+                            <apex:outputLabel value="{!phoneRow.statusModifiedDateFieldVal}" rendered="{!NOT(phoneRow.editView)}"/>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+
+
+
+                <apex:pageblockSection columns="2" rendered="{!NOT(isNewRecord)}">
+                    <apex:outputPanel id="AdditionalList">
+                        <h5>{!$ObjectType.Contact.fields.Additional_Phones__c.Label}</h5>
+                        &nbsp;
+                        <apex:actionStatus id="saveAdditionalPhonesStatus">
+                            <apex:facet name="start">
+                                <apex:outputPanel >
+                                    <apex:commandButton value="{!$Label.btn_saveAdditionalPhones}" disabled="true"/>
+                                    <img src="/img/loading32.gif" width="16" height="16" />
+                                    <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                    &nbsp;
+                                    <div id="overlay"/>
+                                </apex:outputPanel>
+                            </apex:facet>
+                            <apex:facet name="stop">
+                                <apex:outputPanel >
+                                    <apex:commandButton value="{!$Label.btn_saveAdditionalPhones}" rendered="{!editView_AdditionalPhones}"
+                                                        onclick="jsSaveMe(saveAdditionalPhones, {'Additional_Phones__c':createAdditionalPhonesVal()}); return false;"
+                                                        status="saveAdditionalPhonesStatus"
+                                                        style="background: #ffa50047; border-color: #ffa50047;"/>
+                                </apex:outputPanel>
+                            </apex:facet>
+                        </apex:actionStatus>
+                        <apex:pageBlockTable value="{!additionalPhonesList}" var="item">
+                            <apex:column >
+                              <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null}">
+                                    <apex:outputPanel rendered="{!item.makeIrrelevant == false}">
+                                        <apex:commandLink value="{!$Label.link_Edit}" action="{!item.editAdditionalPhone}" oncomplete="toEditMode_AdditionalPhones()" rendered="{!NOT(item.editView)}" reRender="AdditionalList"/>
+                                        <apex:commandLink value="{!$Label.link_Cancel}" action="{!item.cancelEditAdditionalPhone}" oncomplete="toViewMode_AdditionalPhones(); return false;" rendered="{!item.editView}" reRender="AdditionalList"/>
+                                        &nbsp;
+                                        <apex:commandLink value="{!$Label.link_Del}" action="{!item.makeIrrelevant}" reRender="AdditionalList" oncomplete="init();" rendered="{!NOT(item.editView)}"/>
+                                        &nbsp;
+                                    </apex:outputPanel>
+                                    <apex:outputPanel styleClass="{!IF(item.makeIrrelevant == true, 'hidden', '')}">
+                                        <apex:outputLabel value="{!item.phoneNumber}" rendered="{!NOT(item.editView)}" styleClass="additional-phone-item {!IF(item.isMoved, 'movedToField', '')} {!IF(item.movedToIrrelevant, 'movedToIrrelevant', '')}"/>
+                                        <apex:input value="{!item.phoneNumber}" rendered="{!item.editView}" onkeyup="onChangeInputPhoneField(this)" 
+                                                    styleClass="additional-phone-item edit-additional-phone-input-mask {!IF(item.isMoved, 'movedToField', '')} {!IF(item.movedToIrrelevant, 'movedToIrrelevant', '')}"
+                                                    html-data-value="{!item.phoneNumber}"/>
+                                        &nbsp;
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!item.currentPhoneFieldAPI != null && item.currentPhoneFieldValue == null}">
+                                    {!item.msgText}
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!item.currentPhoneFieldAPI != null && item.currentPhoneFieldValue != null}">
+                                    {!item.msgText}
+                                    <apex:outputPanel rendered="{!item.isMoved != true}">
+                                        <br/>
+                                        <apex:commandButton value="{!$Label.btn_Cancel}" action="{!item.cancelMoveToField}" oncomplete="init();" rerender="AdditionalList"/>
+                                        &nbsp;
+                                        <apex:actionStatus id="additionalMoveToStatus">
+                                            <apex:facet name="start">
+                                                <apex:outputPanel >
+                                                    <apex:commandButton value="{!$Label.btn_Continue}" disabled="true"/>
+                                                    &nbsp;
+                                                    <img src="/img/loading32.gif" width="16" height="16"/>
+                                                    <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                                    &nbsp;
+                                                    <div id="overlay"/>
+                                                </apex:outputPanel>
+                                            </apex:facet>
+                                            <apex:facet name="stop">
+                                                <apex:outputPanel >
+                                                    <apex:commandButton value="{!$Label.btn_Continue}" action="{!item.continueMoveToField}"
+                                                                        oncomplete="var data = createDataAdditionalMoveToField(); if(data != null){jsSaveMe(function(){refreshPhones()}, data);} else {console.error('couldnt save value'); init();} return false;"
+                                                                        reRender="AdditionalList, PageMsgs" status="additionalMoveToStatus"/>
+                                                </apex:outputPanel>
+                                            </apex:facet>
+                                        </apex:actionStatus>
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!item.makeIrrelevant == true}">
+                                    {!item.msgText}
+                                    <br/>
+                                    <apex:outputPanel rendered="{!item.movedToIrrelevant != true}">
+                                        <apex:outputPanel rendered="{!item.sObjType != 'Contact'}">
+                                            <apex:commandButton value="{!$Label.btn_ThisRecord}" action="{!item.moveToIrrelevant_Record}"
+                                                                oncomplete="var data = createDataAdditionalMoveToIrrelevant(); if(data != null){jsSaveMe(refreshIrrelevantPhonesList, data);} init(); return false;"
+                                                                reRender="AdditionalList, PageMsgs" status="additionalPhone_MoveToIrrelevant"/>
+                                            &nbsp;
+                                        </apex:outputPanel>
+                                        <apex:outputPanel rendered="{!item.sObjType == 'Contact'}">
+                                            <apex:commandButton value="{!$Label.btn_ThisRecordContact}" action="{!item.moveToIrrelevant_Record}"
+                                                                oncomplete="var data = createDataAdditionalMoveToIrrelevant(); if(data != null){jsSaveMe(refreshIrrelevantPhonesList, data);} init(); return false;"
+                                                                reRender="AdditionalList, PageMsgs" status="additionalPhone_MoveToIrrelevant"/>
+                                            &nbsp;
+                                            <apex:commandButton value="{!$Label.btn_ParentRecordAccount}" action="{!item.moveToIrrelevant_Parent}"
+                                                                oncomplete="var data = createDataAdditionalMoveToIrrelevant(); if(data != null){jsSaveMe(refreshIrrelevantPhonesList, data);} init(); return false;"
+                                                                reRender="AdditionalList, PageMsgs" status="additionalPhone_MoveToIrrelevant"
+                                                                rendered="{!NOT(ISBLANK(item.accountId))}"/>
+                                            &nbsp;
+                                        </apex:outputPanel>
+                                        <apex:commandButton value="{!$Label.btn_AllRecords}" action="{!item.moveToIrrelevant_Global}"
+                                                            oncomplete="var data = createDataAdditionalMoveToIrrelevant(); if(data != null){jsSaveMe(refreshIrrelevantPhonesList, data);} init(); return false;"
+                                                            reRender="AdditionalList, PageMsgs" status="additionalPhone_MoveToIrrelevant"/>
+                                        &nbsp;
+                                        <apex:actionStatus id="additionalPhone_MoveToIrrelevant">
+                                            <apex:facet name="start">
+                                                <apex:outputPanel >
+                                                    <img src="/img/loading32.gif" width="16" height="16" />
+                                                    <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                                    &nbsp;
+                                                    <div id="overlay"/>
+                                                </apex:outputPanel>
+                                            </apex:facet>
+                                        </apex:actionStatus>
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                            </apex:column>
+                            <apex:column >
+                                <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null}">
+                                    <apex:outputLabel value="{!item.phoneStatusLabel}"/>
+                                </apex:outputPanel>
+                            </apex:column>
+                            <apex:column >
+                                <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null}">
+                                    <apex:outputLabel value="{!item.phoneRating}"/>
+                                </apex:outputPanel>
+                            </apex:column>
+                            <apex:column >
+                                <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null}">
+                                    <apex:outputLabel value="{!item.phoneModifiedDateFormatted}"/>
+                                </apex:outputPanel>
+                            </apex:column>
+                            <apex:column >
+                                <apex:outputPanel rendered="{!item.isMoved}">
+                                    <apex:outputText value="{!item.phoneNumber}:{!item.currentPhoneFieldAPI}" style="display:none;" styleClass="current-phone-num {!IF(item.isMoved, 'movedToField', '')} {!IF(item.movedToIrrelevant, 'movedToIrrelevant', '')}"/>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null && item.makeIrrelevant == false}">
+
+                                    <apex:outputLabel value="{!$Label.label_phonesList_Moveto}"/>
+                                    &nbsp;
+
+                                    <apex:selectList value="{!item.currentPhoneFieldAPI}" size="1" disabled="{!editView_AdditionalPhones}">
+                                        <apex:selectOptions value="{!phoneFieldAPIs_ToMoveAdditionalPhone}"/>
+                                        <apex:actionSupport event="onchange" action="{!item.moveToPhoneField}" 
+                                                oncomplete="var data = createDataAdditionalMoveToField(); if(data != null){jsSaveMe(refreshPhones, data);} else {console.error('couldnt save value'); init();} return false;" 
+                                                reRender="AdditionalList, PageMsgs" status="additionalPhonesMoveToField"/>
+                                    </apex:selectList>
+                                    &nbsp;
+                                    <apex:actionStatus id="additionalPhonesMoveToField">
+                                        <apex:facet name="start">
+                                            <apex:outputPanel >
+                                                <img src="/img/loading32.gif" width="16" height="16" />
+                                                <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                                &nbsp;
+                                                <div id="overlay"/>
+                                            </apex:outputPanel>
+                                        </apex:facet>
+                                    </apex:actionStatus>
+                                </apex:outputPanel>
+                            </apex:column>
+                        </apex:pageBlockTable>
+                        <br/>
+                        <apex:outputPanel id="AddnewPhoneBlock">
+                            <apex:input value="{!newAdditionalPhoneNumber}" styleClass="new-additional-phone new-additional-phone-input-mask"/>
+                            &nbsp;
+                            <apex:actionStatus id="AddPhoneStatus">
+                                <apex:facet name="start">
+                                    <apex:outputPanel >
+                                        <apex:commandButton value="{!$Label.btn_Add}" disabled="true"/>
+                                        &nbsp;
+                                        <img src="/img/loading32.gif" width="16" height="16" />
+                                        <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                        &nbsp;
+                                        <div id="overlay"/>
+                                    </apex:outputPanel>
+                                </apex:facet>
+                                <apex:facet name="stop">
+                                    <apex:outputPanel >
+                                        <apex:commandButton value="{!$Label.btn_Add}"
+                                                            onclick="var data = {'Additional_Phones__c':createAdditionalPhonesVal(document.getElementsByClassName('new-additional-phone')[0].value)}; jsSaveMe(addAdditionalPhone, data); return false;"
+                                                            status="AddPhoneStatus"/>
+                                    </apex:outputPanel>
+                                </apex:facet>
+                            </apex:actionStatus>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel >
+                        <h5>{!$ObjectType.Contact.fields.Irrelevant_Phones__c.Label}</h5>
+                        <apex:pageBlockTable value="{!irrelevantPhonesList}" var="item" id="IrrelevantList">
+                            <apex:column >
+                                <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null}">
+                                    <apex:commandLink rendered="{!AND(item.canDelete)}" value="{!$Label.link_Del}" action="{!item.deleteIrrelevantPhoneNumber}"
+                                                      oncomplete="refreshIrrelevantPhonesList()" status="irrelevantDelStatus"/>
+                                    &nbsp;
+                                    <apex:actionStatus id="irrelevantDelStatus">
+                                        <apex:facet name="start">
+                                            <apex:outputPanel >
+                                                <img src="/img/loading32.gif" width="16" height="16" />
+                                                <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                                &nbsp;
+                                                <div id="overlay"/>
+                                            </apex:outputPanel>
+                                        </apex:facet>
+                                    </apex:actionStatus>
+                                </apex:outputPanel>
+                                <apex:outputLabel value="{!item.PhoneNumber}"/>
+                            </apex:column>
+                            <apex:column >
+                                <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null}">
+                                    <apex:outputLabel value="{!item.statusModifiedDate}"/>
+                                    &nbsp;&nbsp;
+                                    <apex:outputLabel value="{!item.statusReason}"/>
+                                </apex:outputPanel>
+                            </apex:column>
+                            <apex:column >
+                              <apex:outputPanel rendered="{!item.canDelete}"> <!-- select phone to move irrelevant number -->
+                                <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null}">
+                                    <apex:outputLabel value="{!$Label.label_phonesList_Moveto}"/>
+                                    &nbsp;
+                                    <apex:selectList value="{!item.currentPhoneFieldAPI}" size="1">
+                                        <apex:selectOptions value="{!phoneFieldAPIs_ToMoveIrrelevantItem}"/>
+                                        <apex:actionSupport event="onchange" action="{!item.moveToPhoneField}" reRender="IrrelevantList, PageMsgs" oncomplete="if ('{!item.isMoved}' == 'true'){ refreshPhones() } return false;" status="irrelevantPhonesMoveToField"/>
+                                    </apex:selectList>
+                                    &nbsp;
+                                    <apex:actionStatus id="irrelevantPhonesMoveToField">
+                                        <apex:facet name="start">
+                                            <apex:outputPanel >
+                                                <img src="/img/loading32.gif" width="16" height="16" />
+                                                <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                                &nbsp;
+                                                <div id="overlay"/>
+                                            </apex:outputPanel>
+                                        </apex:facet>
+                                    </apex:actionStatus>
+                                </apex:outputPanel>
+                              </apex:outputPanel> <!-- end : select phone to move irrelevant number -->
+                              
+                                <apex:outputPanel rendered="{!item.currentPhoneFieldAPI != null && item.currentPhoneFieldValue == null}">
+                                    {!item.msgText}
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!item.currentPhoneFieldAPI != null && item.currentPhoneFieldValue != null}">
+                                    {!item.msgText}
+                                    <br/>
+                                    <apex:outputPanel rendered="{!item.isMoved != true}">
+                                        <apex:commandButton value="{!$Label.btn_Cancel}" action="{!item.cancelMoveToField}"/>
+                                        &nbsp;
+                                        <apex:commandButton value="{!$Label.btn_Continue}" action="{!item.continueMoveToField}" reRender="PageMsgs" oncomplete="refreshPhones();" status="irrelevantMoveToStatus"/>
+                                        &nbsp;
+                                        <apex:actionStatus id="irrelevantMoveToStatus">
+                                            <apex:facet name="start">
+                                                <apex:outputPanel >
+                                                    <img src="/img/loading32.gif" width="16" height="16" />
+                                                    <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                                    &nbsp;
+                                                    <div id="overlay"/>
+                                                </apex:outputPanel>
+                                            </apex:facet>
+                                        </apex:actionStatus>
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                            </apex:column>
+                        </apex:pageBlockTable>
+                    </apex:outputPanel>
+
+                </apex:pageblockSection>
+                <p/>
+                <h5>{!$ObjectType.Contact.fields.Description.Label}</h5>
+                <br/>
+                <apex:inputTextarea id="descrip" value="{!descriptionText}" styleClass="w-100"/>
+                <!-- ---------------- END PHONES FORM ---------------------------------- -->
+
+            </apex:pageBlock>
+        </div>
+    </apex:form>
+</apex:page>

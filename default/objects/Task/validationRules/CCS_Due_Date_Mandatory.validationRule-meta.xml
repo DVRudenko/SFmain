@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Due_Date_Mandatory</fullName>
+    <active>true</active>
+    <description>Field Due Date is Mandatory for In Progress Tasks for CCS.</description>
+    <errorConditionFormula>AND(
+    RecordTypeId = &#39;01220000000jlNV&#39;,
+    TEXT(Status) = &quot;In Bearbeitung&quot;, 
+    ISBLANK(ActivityDate) 
+)</errorConditionFormula>
+    <errorDisplayField>ActivityDate</errorDisplayField>
+    <errorMessage>You must enter Due Date for In Progress Task!</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Why_Not_Interested</fullName>
+    <active>true</active>
+    <description>Why Not Interested should be mandatory if Quali-Status is "Kein Interesse" if Record type =! CCS Sales process</description>
+    <errorConditionFormula>AND(ISPICKVAL(Quali_Status__c,'Kein Interesse'), ISBLANK(warum_kein_Interesse__c), RecordType.Name != 'CCS Sales process')</errorConditionFormula>
+    <errorDisplayField>warum_kein_Interesse__c</errorDisplayField>
+    <errorMessage>"Why not interested?" is required</errorMessage>
+</ValidationRule>

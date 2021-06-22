@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Russian Sales</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Agreement Terms and Conditions</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Awaiting payment</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Check Credit History</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Client Negotiations</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Contract Under Signing</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Moved to Start</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Qualified Lead</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Signing of a Contract</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Suspended Opportunity</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Договор на проверке</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Отказ</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

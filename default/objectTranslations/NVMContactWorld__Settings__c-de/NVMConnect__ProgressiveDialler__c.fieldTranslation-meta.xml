@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enables progressive dialler (requires the feature to be enabled on your NewVoiceMedia account) --></help>
+    <label><!-- Progressive Dialler --></label>
+    <name>NVMConnect__ProgressiveDialler__c</name>
+</CustomFieldTranslation>

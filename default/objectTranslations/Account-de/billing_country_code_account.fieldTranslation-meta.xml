@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Ländercode (Registrierte Adresse)</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <name>billing_country_code_account</name>
+</CustomFieldTranslation>

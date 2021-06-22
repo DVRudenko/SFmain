@@ -1,0 +1,13 @@
+@import 'c/styles';
+
+.shippinglAddress {
+  max-height: 200px;
+  overflow-y: scroll;
+  margin-left: 11% !important;
+  margin-right: 60%;
+}
+
+.shippinglAddress li{
+  display: inline-block;
+  cursor: pointer;
+}

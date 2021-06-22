@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CreditCheck_PL2</fullName>
+    <booleanFilter>((1 or 2) or (3 and 4)) and 5</booleanFilter>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Total_consumption_l_month__c</columns>
+    <columns>Notes__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Credit_Stage__c</columns>
+    <columns>bearbeitet_von__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>CreditCheck,CC In Progress,Pending Credit,Credit Check - Pending Credit,Pending Credit AML</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Pending Credit - Contract Check,Pending Credit - E2E Check</value>
+    </filters>
+    <filters>
+        <field>Credit_Stage__c</field>
+        <operation>equals</operation>
+        <value>CreditCheck,Pending Credit - Contract Check,Credit Check - Pending Credit</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Closed Won,Closed Lost</value>
+    </filters>
+    <filters>
+        <field>Registered_Country__c</field>
+        <operation>equals</operation>
+        <value>Poland</value>
+    </filters>
+    <label>CreditCheck PL</label>
+    <language>de</language>
+    <sharedTo>
+        <group>Credit_Poland</group>
+        <role>Credit</role>
+    </sharedTo>
+</ListView>

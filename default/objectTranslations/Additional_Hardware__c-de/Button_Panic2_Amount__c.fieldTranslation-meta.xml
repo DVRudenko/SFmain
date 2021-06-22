@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Basic button used for send the threat message, when you press this button. --></help>
+    <label><!-- Button Panic --></label>
+    <name>Button_Panic2_Amount__c</name>
+</CustomFieldTranslation>

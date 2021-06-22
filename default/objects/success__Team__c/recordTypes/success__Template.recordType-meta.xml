@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Template</fullName>
+    <active>true</active>
+    <description>Collects together groups of Behaviours, Members and Levels that can be reused across both Experience Groups and Competitions.</description>
+    <label>Template</label>
+    <picklistValues>
+        <picklist>success__Status__c</picklist>
+        <values>
+            <fullName>Archived</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declared</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>success__Visibility__c</picklist>
+        <values>
+            <fullName>Hidden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visible</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

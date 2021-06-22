@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BE_FR_2_5_Cent_for_BE_FR_only</fullName>
+    <active>true</active>
+    <description>Product__c = "BE-FR 2,5 Cent" is available only if Registered_Country__c = "Belgium-FR".</description>
+    <errorConditionFormula>AND(ISPICKVAL(Product__c, "BE-FR 2,5 Cent"), Registered_Country__c != "Belgium-FR")</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Offer "BE-FR 2,5 Cent" is available only for Belgium-FR.</errorMessage>
+</ValidationRule>

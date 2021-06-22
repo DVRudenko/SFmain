@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Delimited list of re-labelled States and durations in the format [State]-[Duration(s)], [State]-[Duration(s)],... --></help>
+    <label><!-- State List --></label>
+    <name>NVMStatsSF__State_List__c</name>
+</CustomFieldTranslation>

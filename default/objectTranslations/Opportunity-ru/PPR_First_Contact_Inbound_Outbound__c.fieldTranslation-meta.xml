@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Укажите каким образом был осуществлен первый контакт с компанией (контактным лицом)</help>
+    <label>Первый контакт: Входящий/Исходящий</label>
+    <name>PPR_First_Contact_Inbound_Outbound__c</name>
+    <picklistValues>
+        <masterLabel>Chat</masterLabel>
+        <translation>Чат</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Call</masterLabel>
+        <translation>Входящий звонок</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Mail</masterLabel>
+        <translation>Входящая Почта</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Website</masterLabel>
+        <translation>Веб анкета</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onsite Visit</masterLabel>
+        <translation>Посещение офиса</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound call</masterLabel>
+        <translation>Исходящий звонок</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Не контактировали</masterLabel>
+        <translation><!-- Не контактировали --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

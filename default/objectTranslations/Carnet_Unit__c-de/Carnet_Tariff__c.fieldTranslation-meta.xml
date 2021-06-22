@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Monthly flat fee for services FLEETCOR Carnet in Poland, include rental SIM card, data transmission (communication fees) and background maps. --></help>
+    <label><!-- Carnet Tariff --></label>
+    <name>Carnet_Tariff__c</name>
+    <picklistValues>
+        <masterLabel>Premium 24</masterLabel>
+        <translation><!-- Premium 24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Premium 36</masterLabel>
+        <translation><!-- Premium 36 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prepaid 12</masterLabel>
+        <translation><!-- Prepaid 12 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prepaid 24</masterLabel>
+        <translation><!-- Prepaid 24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Standard 12</masterLabel>
+        <translation><!-- Standard 12 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Standard 24</masterLabel>
+        <translation><!-- Standard 24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Standard 36</masterLabel>
+        <translation><!-- Standard 36 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

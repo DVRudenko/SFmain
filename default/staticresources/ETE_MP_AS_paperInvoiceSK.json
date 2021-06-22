@@ -1,0 +1,19 @@
+
+{
+    "translations": {
+        "title": {
+            "en": "Paper invoice",
+            "sk": "Tlačená faktúra"
+        },
+        "description": {
+            "en": "<p>All invoices are delivered in electronic format per email or customer online portal for free. However, if you want to receive a paper invoice, we will deliver it to you for 4 € per invoice.</p>",
+            "sk": "<p>Všetky faktúry sú doručované v elektronickej podobe na e-mail alebo prostredníctvom zákazníckeho online portálu zadarmo. Ak si želáte dostávať tlačené faktúry poštou, budeme Vám ich zasielať za 4 € za faktúru.</p>"
+        }
+    },
+    "settings": {
+        "bgImage": "/resource/ete_images/bgInfoCardLetter.png",
+        "show_more": "false",
+        "show_checkbox_1": "false",
+        "show_checkbox_2": "false"
+    }
+}

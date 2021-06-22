@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ability_to_change_Sec_Channel_Channel</fullName>
+    <active>true</active>
+    <description>Only System Administrator has ability to cahnge Sec Channel and Channel fields</description>
+    <errorConditionFormula>AND($Profile.Name != "System Administrator",
+    $Profile.Name != 'API Only',
+    $Profile.Name != "CCS API System Admin",
+    $Profile.Name != "CCS System Administrator",
+    $Profile.Name != "CCS SME Team Lead",
+    $Profile.Name != "Salesteamleiter Inbound",
+        $Profile.Name != "Systemadministrator",
+    OR((PRIORVALUE(Channel__c) != null &amp;&amp; ISCHANGED(Channel__c)),
+        (PRIORVALUE(Sec_Channel__c) != null &amp;&amp; ISCHANGED(Sec_Channel__c))
+    )
+)</errorConditionFormula>
+    <errorMessage>You don't have ability to change Sec. Channel and Channel fields</errorMessage>
+</ValidationRule>

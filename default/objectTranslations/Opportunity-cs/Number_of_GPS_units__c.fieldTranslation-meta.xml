@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of Carnet Units (Telematics) --></help>
+    <label>Počet GPS jednotek</label>
+    <name>Number_of_GPS_units__c</name>
+</CustomFieldTranslation>

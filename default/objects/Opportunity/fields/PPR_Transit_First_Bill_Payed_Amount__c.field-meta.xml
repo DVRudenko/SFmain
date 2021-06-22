@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Transit_First_Bill_Payed_Amount__c</fullName>
+    <description>PPR First Bill Payed Amount. Representing the amount of first bill payed. Gathering from Transit3 DB by Talend job. Field created in scope of W-000044.</description>
+    <externalId>false</externalId>
+    <label>PPR_First_Bill_Payed_Amount</label>
+    <precision>17</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

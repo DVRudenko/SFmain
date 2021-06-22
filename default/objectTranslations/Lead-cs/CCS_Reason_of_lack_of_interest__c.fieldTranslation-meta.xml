@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Důvod nezájmu</label>
+    <name>CCS_Reason_of_lack_of_interest__c</name>
+    <picklistValues>
+        <masterLabel>Je klient CCS</masterLabel>
+        <translation><!-- Je klient CCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jiný důvod (v poznámce)</masterLabel>
+        <translation><!-- Jiný důvod (v poznámce) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Konkurence</masterLabel>
+        <translation><!-- Konkurence --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Má asistenci, pojištění a další benefity jinde</masterLabel>
+        <translation><!-- Má asistenci, pojištění a další benefity jinde --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nechce sdělit důvod</masterLabel>
+        <translation><!-- Nechce sdělit důvod --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nelíbí se mu poplatek</masterLabel>
+        <translation><!-- Nelíbí se mu poplatek --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nemají vozový park</masterLabel>
+        <translation><!-- Nemají vozový park --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nepotřebuje, nevyužije</masterLabel>
+        <translation><!-- Nepotřebuje, nevyužije --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nízký limit</masterLabel>
+        <translation><!-- Nízký limit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Odeslán email – ozve se sám</masterLabel>
+        <translation><!-- Odeslán email – ozve se sám --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platba paušálem</masterLabel>
+        <translation><!-- Platba paušálem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ukončená činnost</masterLabel>
+        <translation><!-- Ukončená činnost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Čerpání v zahraničí</masterLabel>
+        <translation><!-- Čerpání v zahraničí --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Špatná zkušenost s CCS</masterLabel>
+        <translation><!-- Špatná zkušenost s CCS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Decision_Reason_Other_mandatory</fullName>
+    <active>true</active>
+    <description>If Decision_Reasons__c = "Jiný důvod", then Decision_Reason_Other__c is mandatory.</description>
+    <errorConditionFormula>AND(
+$Profile.Id = "00e0O000001VEUV" ||
+$Profile.Id = "00e0O000001VEK1" ||
+$Profile.Id = "00e0O000001VEXU" ||
+$Profile.Id = "00e20000001pihq" ||
+$Profile.Id = "00e0O000001pjko" ||
+$Profile.Id = "00e0O000001VEK6" ||
+$Profile.Id = "00e0O000001VEUW",
+INCLUDES(Decision_Reasons__c,"Jiný důvod"),
+ISBLANK(Decision_Reason_Other__c))</errorConditionFormula>
+    <errorDisplayField>Decision_Reason_Other__c</errorDisplayField>
+    <errorMessage>Pole "Důvod k rozhodnutí - jiný" je povinné.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_NACE_and_Employee</fullName>
+    <active>true</active>
+    <description>the fields mandatory in process converted lead</description>
+    <errorConditionFormula>AND (
+LEFT(Owner:User.UserRole.Name , 3) &lt;&gt; "CCS",
+LEFT(Owner:User.UserRole.Name , 4) &lt;&gt; "Role",
+$Profile.Name &lt;&gt; "CCS System Administrator",
+$Profile.Name &lt;&gt; "E2E Profile",
+RecordType.Name &lt;&gt; "AllStar",
+RecordType.Name &lt;&gt; "Russian Sales",
+RecordType.Name &lt;&gt; "CCS Sales process",
+NOT(ISPICKVAL(Quali_Status__c,'Switched to E2E')),
+NOT(AND(Country = 'Germany',ISPICKVAL(Sec_Channel__c,'JITB'), ISPICKVAL(Channel__c,'Fax'))),
+ISPICKVAL( Status , "Konvertierte Leads" ),
+ISPICKVAL( Branche_NACE__c , "") &amp;&amp;
+ISPICKVAL( Beschaeftigte__c , "")
+)</errorConditionFormula>
+    <errorMessage>Industry (NACE) &amp; Employee is mandatory fields</errorMessage>
+</ValidationRule>

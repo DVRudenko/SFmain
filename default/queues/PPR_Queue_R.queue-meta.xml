@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>PPR_Queue_R</name>
+    <queueMembers>
+        <users>
+            <user>kristina.demidova@pprcard.ru</user>
+            <user>marina.badeeva@pprcard.ru</user>
+            <user>nataliya.kovylina@pprcard.ru</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Qualify</fullName>
+        <default>false</default>
+        <label>Qualify</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>20</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Propose</fullName>
+        <default>false</default>
+        <label>Propose</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>33</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Negotiate</fullName>
+        <default>false</default>
+        <label>Negotiate</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Qualified Lead</fullName>
+        <default>false</default>
+        <label>Qualified Lead</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>10</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Client Negotiations</fullName>
+        <default>false</default>
+        <label>Client Negotiations</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>30</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Check Credit History</fullName>
+        <default>false</default>
+        <label>Check Credit History</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Agreement Terms and Conditions</fullName>
+        <default>false</default>
+        <label>Agreement Terms and Conditions</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>60</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Договор на проверке</fullName>
+        <default>false</default>
+        <label>Договор на проверке</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>70</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Contract Under Signing</fullName>
+        <default>false</default>
+        <label>Contract Under Signing</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>80</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Signing of a Contract</fullName>
+        <default>false</default>
+        <label>Signing of a Contract</label>
+        <closed>false</closed>
+        <forecastCategory>Forecast</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Suspended Opportunity</fullName>
+        <default>false</default>
+        <label>Suspended Opportunity</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>5</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Awaiting payment</fullName>
+        <default>false</default>
+        <label>Awaiting payment</label>
+        <closed>false</closed>
+        <forecastCategory>Forecast</forecastCategory>
+        <probability>85</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Moved to Start</fullName>
+        <default>false</default>
+        <label>Moved to Start</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Отказ</fullName>
+        <default>false</default>
+        <label>Отказ</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Потерян в конкуренции</fullName>
+        <default>false</default>
+        <label>Потерян в конкуренции</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Infoversand</fullName>
+        <default>false</default>
+        <label>Infoversand</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>3</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospecting</fullName>
+        <default>false</default>
+        <label>Prospecting</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>20</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>qualifizierter Termin</fullName>
+        <default>false</default>
+        <label>qualifizierter Termin</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>6</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow Up Termin</fullName>
+        <default>false</default>
+        <label>Follow Up Termin</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>33</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Entscheidung anstehend</fullName>
+        <default>false</default>
+        <label>Entscheidung anstehend</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>CreditCheck</fullName>
+        <default>false</default>
+        <label>CreditCheck</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>CC In Progress</fullName>
+        <default>false</default>
+        <label>CC In Progress</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Sales – Deposit</fullName>
+        <default>false</default>
+        <label>Pending Sales – Deposit</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Sales – Information</fullName>
+        <default>false</default>
+        <label>Pending Sales – Information</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Credit</fullName>
+        <default>false</default>
+        <label>Pending Credit</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for cash security</fullName>
+        <default>false</default>
+        <label>Waiting for cash security</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Credit approved</fullName>
+        <default>false</default>
+        <label>Credit approved</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>CreditCheck abgelehnt</fullName>
+        <default>false</default>
+        <label>CreditCheck abgelehnt</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales - verloren nach Credit Check</fullName>
+        <default>false</default>
+        <label>Sales - verloren nach Credit Check</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+        <label>Closed Won</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+        <label>Closed Lost</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Paper Contract sent</fullName>
+        <default>false</default>
+        <label>Paper Contract sent</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>35</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Kundenantrag FC wird geprüft</fullName>
+        <default>false</default>
+        <label>Kundenantrag FC wird geprüft</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Kundenantrag FC unvollständig</fullName>
+        <default>false</default>
+        <label>Kundenantrag FC unvollständig</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales - Kundenantrag in Bearbeitung</fullName>
+        <default>false</default>
+        <label>Sales - Kundenantrag in Bearbeitung</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Kundenantrag vollständig erhalten</fullName>
+        <default>false</default>
+        <label>Kundenantrag vollständig erhalten</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>55</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Kundenantrag an Degussa gesendet</fullName>
+        <default>false</default>
+        <label>Kundenantrag an Degussa gesendet</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>65</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>DG - Kundenantrag erhalten und angelegt</fullName>
+        <default>false</default>
+        <label>DG - Kundenantrag erhalten und angelegt</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>63</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales - Kartenantrag versendet</fullName>
+        <default>false</default>
+        <label>Sales - Kartenantrag versendet</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>60</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales - Follow UP Call Kartenantrag</fullName>
+        <default>false</default>
+        <label>Sales - Follow UP Call Kartenantrag</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>65</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Kartenantrag bei PC eingetroffen</fullName>
+        <default>false</default>
+        <label>Kartenantrag bei PC eingetroffen</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>70</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Kartenantrag  PC wird bearbeitet</fullName>
+        <default>false</default>
+        <label>Kartenantrag  PC wird bearbeitet</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Kartenantrag PC unvollständig</fullName>
+        <default>false</default>
+        <label>Kartenantrag PC unvollständig</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Kartenantrag PC vollständig</fullName>
+        <default>false</default>
+        <label>Kartenantrag PC vollständig</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>80</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Karten werden versendet</fullName>
+        <default>false</default>
+        <label>Karten werden versendet</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>85</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales - Karten erhalten Anruf</fullName>
+        <default>false</default>
+        <label>Sales - Karten erhalten Anruf</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>95</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales - Karten erhalten pending</fullName>
+        <default>false</default>
+        <label>Sales - Karten erhalten pending</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Zusatzkarte</fullName>
+        <default>false</default>
+        <label>Zusatzkarte</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>New customer</fullName>
+        <default>false</default>
+        <label>New customer</label>
+        <closed>true</closed>
+        <forecastCategory>Closed</forecastCategory>
+        <probability>100</probability>
+        <won>true</won>
+    </standardValue>
+    <standardValue>
+        <fullName>No Sale</fullName>
+        <default>false</default>
+        <label>No Sale</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Meetings</fullName>
+        <default>false</default>
+        <label>CCS Meetings</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>30</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Quote/Proposal</fullName>
+        <default>false</default>
+        <label>CCS Quote/Proposal</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Application</fullName>
+        <default>false</default>
+        <label>CCS Application</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>80</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Passed Credit</fullName>
+        <default>false</default>
+        <label>CCS Passed Credit</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>90</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Lost to Competition</fullName>
+        <default>false</default>
+        <label>Lost to Competition</label>
+        <closed>false</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Sales – PIT/CIT</fullName>
+        <default>false</default>
+        <label>Pending Sales – PIT/CIT</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for signed pdf</fullName>
+        <default>false</default>
+        <label>Waiting for signed pdf</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for Card order form</fullName>
+        <default>false</default>
+        <label>Waiting for Card order form</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Sales – AML doc.</fullName>
+        <default>false</default>
+        <label>Pending Sales – AML doc.</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Credit AML</fullName>
+        <default>false</default>
+        <label>Pending Credit AML</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Credit Check</fullName>
+        <default>false</default>
+        <label>Pending Credit Check</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Sales - Token payment</fullName>
+        <default>false</default>
+        <label>Pending Sales - Token payment</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Credit - Token payment</fullName>
+        <default>false</default>
+        <label>Pending Credit - Token payment</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Sales - SEPA Confirmation</fullName>
+        <default>false</default>
+        <label>Pending Sales - SEPA Confirmation</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Order entered</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Order entered</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Order entered - Approved</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Order entered - Approved</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Order entered - deposit</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Order entered - deposit</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for power of attorney</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Waiting for power of attorney</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for deposit</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Waiting for deposit</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for PIT/CIT</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Waiting for PIT/CIT</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for MANDAT</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Waiting for MANDAT</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Duplicate</fullName>
+        <default>false</default>
+        <label>Duplicate</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for DD confirmation</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Waiting for DD confirmation</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for Credit decision</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Waiting for Credit decision</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Order entered - more often DD</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Order entered - more often DD</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for card issuance</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Waiting for card issuance</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for order signature</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Waiting for order signature</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waitiing for components</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Waitiing for components</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting for amendment</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Waiting for amendment</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Sales</fullName>
+        <default>false</default>
+        <description>Merlin</description>
+        <label>Pending Sales</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>75</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Credit Report</fullName>
+        <default>false</default>
+        <label>Pending Credit Report</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Credit - Contract Check</fullName>
+        <default>false</default>
+        <label>Pending Credit - Contract Check</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Credit - E2E Check</fullName>
+        <default>false</default>
+        <label>Pending Credit - E2E Check</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Credit Report Generated</fullName>
+        <default>false</default>
+        <label>Credit Report Generated</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Spam</fullName>
+        <default>false</default>
+        <label>Spam</label>
+        <closed>true</closed>
+        <forecastCategory>Omitted</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Credit Report not available</fullName>
+        <default>false</default>
+        <label>Credit Report not available</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>0</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Unprocessed</fullName>
+        <default>false</default>
+        <label>Unprocessed</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>1</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Prequal</fullName>
+        <default>false</default>
+        <label>Prequal</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>1</probability>
+        <won>false</won>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Sales - Advance payment</fullName>
+        <default>false</default>
+        <label>Pending Sales - Advance payment</label>
+        <closed>false</closed>
+        <forecastCategory>Pipeline</forecastCategory>
+        <probability>50</probability>
+        <won>false</won>
+    </standardValue>
+</StandardValueSet>

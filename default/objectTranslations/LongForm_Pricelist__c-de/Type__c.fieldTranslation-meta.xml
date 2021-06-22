@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>International Not Partners</masterLabel>
+        <translation><!-- International Not Partners --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>International Partners</masterLabel>
+        <translation><!-- International Partners --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>National Not Partners</masterLabel>
+        <translation><!-- National Not Partners --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>National Partners</masterLabel>
+        <translation><!-- National Partners --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Outbound_HH_SME_BENL_0_8_BENL</fullName>
+    <active>true</active>
+    <description>SME (BE-NL 0,025 € + 0,8% Account fee). This product is available for Belgium-NL only.</description>
+    <errorConditionFormula>AND(Free_choice_of_products__c = false, ISPICKVAL(Product__c, "SME (BE-NL 0,025 € + 0,8% Account fee)"),
+ISPICKVAL(Sec_Channel__c, "Outbound (HH)"), NOT(Account.BillingCountry = "Belgium-NL"))</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>This product is available for Belgium-NL only.</errorMessage>
+</ValidationRule>

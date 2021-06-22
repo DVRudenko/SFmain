@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Jm_na__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Jména</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bronislava Štajerová</fullName>
+                <default>false</default>
+                <label>Bronislava Štajerová</label>
+            </value>
+            <value>
+                <fullName>Iveta Baštářová</fullName>
+                <default>false</default>
+                <label>Iveta Baštářová</label>
+            </value>
+            <value>
+                <fullName>Věra Staňková</fullName>
+                <default>false</default>
+                <label>Věra Staňková</label>
+            </value>
+            <value>
+                <fullName>Vladimíra Ouřadová</fullName>
+                <default>false</default>
+                <label>Vladimíra Ouřadová</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

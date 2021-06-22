@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Bewerk de tekst voor dit e-mailbericht (maximaal 2000 tekens). Het bericht wordt weergegeven in de melding voor ondertekening voor uw DocuSign-ontvanger.</help>
+    <label><!-- EmailBody_ru --></label>
+    <name>dsfs__EmailBody_ru__c</name>
+</CustomFieldTranslation>

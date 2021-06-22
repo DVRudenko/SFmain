@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Feeder List --></label>
+    <lookupFilter>
+        <errorMessage><!-- Feeder list must be active and cannot be this list. --></errorMessage>
+    </lookupFilter>
+    <name>NVMConnect__Feeder_List__c</name>
+    <relationshipLabel><!-- Lists fed from this List --></relationshipLabel>
+</CustomFieldTranslation>

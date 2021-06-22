@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Grade --></label>
+    <name>Grade__c</name>
+    <picklistValues>
+        <masterLabel>Not a sales</masterLabel>
+        <translation><!-- Not a sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales consultant</masterLabel>
+        <translation><!-- Sales consultant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Senior consultant</masterLabel>
+        <translation><!-- Senior consultant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Top consultant</masterLabel>
+        <translation><!-- Top consultant --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

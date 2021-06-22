@@ -1,0 +1,23 @@
+<template>
+  <lightning-card variant="base">
+    <h3 slot="title" align="center" class="exportable-header">{labels.DEDUPLICATION_RESULT}</h3>
+    <lightning-input
+      name="deduplicationResult"
+      class="field exportable-field"
+      label={labels.DEDUPLICATION_RESULT_FIELD}
+      type="text"
+      disabled
+      value={deduplicationResult}
+      max-length="80"
+    >
+    </lightning-input>
+  </lightning-card>
+  <lightning-button
+    variant="brand"
+    label={labels.SEND_FOR_APPROVAL}
+    class="field"
+    disabled={disabled}
+    onclick={handleStartApprovalProcessClick}
+  >
+  </lightning-button>
+</template>

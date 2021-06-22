@@ -1,0 +1,21 @@
+<template>
+    <div class={computedComponentClass} onclick={handleClick}>
+        <div class={computedBlockClass}>
+            <p class={computedLabelClass} if:true={label}>{label}</p>
+            <textarea 
+                    class={computedInputClass}
+                    onfocus={handleFocus}
+                    onblur={handleBlur}
+                    oninput={handleInput}
+                    name={inputName}
+                    maxlength={maxLength}
+                    onclick={handleClick}
+                    placeholder={placeholder}
+            ></textarea>
+        </div>
+        <slot>
+            <span></span>
+        </slot>
+    </div>
+    <p class={computedErrorMessageClass} if:true={errorMessage}>{errorMessage}</p>
+</template>

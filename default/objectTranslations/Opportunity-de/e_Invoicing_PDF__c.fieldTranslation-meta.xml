@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Der Kunde möchte e-Invoices im PDF-Format an seine E-Mail-Adresse erhalten.</help>
+    <label><!-- e-Invoicing PDF --></label>
+    <name>e_Invoicing_PDF__c</name>
+</CustomFieldTranslation>

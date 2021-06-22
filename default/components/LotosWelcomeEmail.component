@@ -1,0 +1,48 @@
+<apex:component id="LotosWelcomeEmail" access="global" controller="LotosWelcomeEmailController">
+    <apex:attribute name="OppId" type="Id" assignTo="{!opportunityId}" description="Id of opportunity"/>
+    <style>
+        .table {
+            display: table;
+            width: 80%;
+            border: 0.2px solid #627974;
+        }
+
+        .table-row {
+            display: table-row;
+        }
+
+        .table-cell {
+            display: table-cell;
+            width: 40%;
+            border: 0.2px solid #627974;
+            padding-left: 2%;
+        }
+
+        .table-title {
+            margin-bottom: 1px;
+        }
+    </style>
+    <div class="table-title"><b>Limit miesięczny na karcie (PLN):</b></div>
+    <div class="table">
+        <div class="table-row">
+            <div class="table-cell">
+                Okaziciel albo numer rejestracyjny pojazdu
+            </div>
+            <div class="table-cell">
+                Limit miesięczny na karcie (PLN)
+            </div>
+        </div>
+        <apex:variable var="count" value="{!1}"/>
+        <apex:repeat value="{!Cards}" var="card">
+            <div class="table-row">
+                <div class="table-cell">
+                    Karta {!count}
+                </div>
+                <div class="table-cell">
+                    {!card.Monthly_card_limit_value__c}
+                </div>
+            </div>
+            <apex:variable var="count" value="{!count + 1}"/>
+        </apex:repeat>
+    </div>
+</apex:component>

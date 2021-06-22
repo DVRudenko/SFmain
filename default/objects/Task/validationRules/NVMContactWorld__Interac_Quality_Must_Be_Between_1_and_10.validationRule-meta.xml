@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMContactWorld__Interac_Quality_Must_Be_Between_1_and_10</fullName>
+    <active>true</active>
+    <errorConditionFormula>NVMContactWorld__InteractionQuality__c &lt; 1  ||  NVMContactWorld__InteractionQuality__c &gt; 10</errorConditionFormula>
+    <errorMessage>Interaction Quality must be a number between 1 and 10</errorMessage>
+</ValidationRule>

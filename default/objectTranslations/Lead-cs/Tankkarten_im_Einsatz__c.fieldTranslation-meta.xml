@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Používají karty?</label>
+    <name>Tankkarten_im_Einsatz__c</name>
+    <picklistValues>
+        <masterLabel>Ja</masterLabel>
+        <translation>Ano</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation>N/A</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nein</masterLabel>
+        <translation>Ne</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,18 @@
+{
+    "translations": {
+        "title": {
+            "en": "Paper invoice",
+            "de": "Papierrechnung"
+        },
+        "description": {
+            "en": "<p>All invoices are delivered in electronic format per email or customer online portal for free. However, if you want to receive a paper invoice, we will deliver it to you for 5.00 € per invoice.</p>",
+            "de": "<p>Alle Rechnungen werden kostenlos in elektronischer Form (per E-Mail und über Ihren Account in unserem Kundenportal) zur Verfügung gestellt. Gerne können Sie sich die Rechnungen zusätzlich in Papierform von uns zusenden lassen. Für diesen Service fallen 5.00 € pro Rechnung an.</p>"
+        }
+    },
+    "settings": {
+        "bgImage": "/resource/ete_images/bgInfoCardLetter.png",
+        "show_more": "false",
+        "show_checkbox_1": "false",
+        "show_checkbox_2": "false"
+    }
+}

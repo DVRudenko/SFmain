@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The value required to trigger a reward for the specified function --></help>
+    <label><!-- Function Target --></label>
+    <name>success__Number_of_occurrences__c</name>
+</CustomFieldTranslation>

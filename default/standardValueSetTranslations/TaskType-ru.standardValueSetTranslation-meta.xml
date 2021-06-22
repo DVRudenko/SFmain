@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Andere</masterLabel>
+        <translation><!-- Andere --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Angebot</masterLabel>
+        <translation><!-- Angebot --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Anruf</masterLabel>
+        <translation><!-- Anruf --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Call</masterLabel>
+        <translation>Звонок</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Case Activity</masterLabel>
+        <translation><!-- Case Activity --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>E-Mail</masterLabel>
+        <translation><!-- E-Mail --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>FAX</masterLabel>
+        <translation><!-- FAX --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Meeting</masterLabel>
+        <translation>Встреча</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Online transfer call</masterLabel>
+        <translation>Он-лайн перевод</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ostatní</masterLabel>
+        <translation><!-- Ostatní --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Другое</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Post</masterLabel>
+        <translation>КП</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

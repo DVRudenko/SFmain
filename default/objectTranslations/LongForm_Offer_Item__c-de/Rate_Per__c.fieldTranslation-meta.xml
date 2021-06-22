@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Rate Per --></label>
+    <name>Rate_Per__c</name>
+    <picklistValues>
+        <masterLabel>1 Liter</masterLabel>
+        <translation><!-- 1 Liter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100 Liters</masterLabel>
+        <translation><!-- 100 Liters --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

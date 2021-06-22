@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__Verify_with_DNB</fullName>
+    <availability>online</availability>
+    <description>This button will initiate DnBs Pre-Contract Risk Screening linked to the Opportunity</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Verify with D&amp;B</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT("/apex/dsfs__DocuSign_JavaScript")}
+        
+{!REQUIRESCRIPT('//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')} 
+{!REQUIRESCRIPT('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js')} 
+
+var html = '&lt;div id="dialog" style="display: none;"&gt;&lt;/div&gt;';
+
+var $g = jQuery.noConflict();
+
+var address = '&lt;iframe id="dnbContent" width="700" height="730" scrolling="no" marginheight="0" marginwidth="0" frameborder="0" src="'+DocuSign_GetVerifyWithDnb('account')+'"&gt;&lt;/iframe&gt;';
+		
+$g(function() { 
+
+	$g('head').append('&lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/redmond/jquery-ui.css"/&gt;');
+
+	if($g('#dialog').length == 0) {
+		$g('body').append(html); 
+	}
+	$g("#dialog").dialog({ 
+		autoOpen: true, 
+		modal: true, 
+		width: 700,
+		height: 783,
+		open: function(event, ui) {
+		  if($g('#myNewImage').length == 0) {
+		     $g(".ui-dialog-titlebar").append("&lt;img src='"+getDnbLogo()+"' id='myNewImage' /&gt;");
+		  }
+		  $g('.ui-widget-overlay').bind('click',function(){
+    			$g('#dialog').dialog("close");
+		  });
+		}
+	})
+	if($g('#dnbContent').length == 0) {
+		$g('#dialog').append(address); 
+	}
+
+
+	$g(".ui-dialog-title").hide();
+	$g("#dialog").css('padding', '0px');
+	$g(".ui-widget-header").attr('style', 'padding-top:5px; padding-right:5px; padding-left:10px;padding-bottom:5px; border-radius:0px; background: #005172;border:0px;margin:auto;');
+	$g(".ui-button-text").css('padding', '0');
+	$g(".ui-icon-closethick").attr('style', 'background-color:#005172; width:19px; height:19px; margin-top:-10px; margin-left:-10px;');
+	$g(".ui-dialog-titlebar-close").attr('style', 'border-radius:0px; padding:0px; width:18px; height:18px; border:0px;');
+	$g(".ui-dialog").css('z-index', '10000');
+	$g(".ui-dialog").css('border-radius', '0px');
+});</url>
+</WebLink>

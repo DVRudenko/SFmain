@@ -1,0 +1,129 @@
+<apex:page controller="DublicateLeadsForSalesController" action="{! init }">
+    <apex:form >
+    <style>
+        .labelCol {
+            text-align: right;
+            font-weight: bold;
+        }
+    </style>
+    <apex:pageMessages />   
+        <apex:pageBlock title="{! currentLead.FirstName } {! currentLead.LastName } - Search for dublicates" >
+
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Check Dublicates" action="{! searchDublicates}"/>
+                <apex:commandButton value="Back to lead" action="{! backToLead }"/>
+            </apex:pageBlockButtons>
+
+            <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td class="labelCol">{! $Label.DC_Name }</td>
+                    <td>
+                        <apex:inputCheckbox value="{! isLeadNameSelected}"/>
+                        <apex:inputText value="{! leadName }" label="Name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">{! $Label.DC_LastName }</td>
+                    <td >
+                        <apex:inputCheckbox value="{! isLeadLastNameSelected}"/>
+                        <apex:outputText value="{! leadLastName }" label="Last Name"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">{! $Label.DC_Company}</td>
+                    <td>
+                        <apex:inputCheckbox value="{! isLeadCompanySelected}"/>
+                        <apex:inputText value="{! leadCompany }" label="Company"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">{! $Label.DC_Email}</td>
+                    <td>
+                        <apex:inputCheckbox value="{! isLeadEmailSelected}"/>
+                        <apex:outputText value="{! leadEmail }" label="Email"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">{! $Label.DC_EmailDomain}</td>
+                    <td>
+                        <apex:inputCheckbox value="{! isLeadEmailDomainSelected}"/>
+                        <apex:outputText value="{! leadEmailDomain }" label="Email Domain"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="labelCol">{! $Label.DC_Phone}</td>
+                    <td>
+                        <apex:inputCheckbox value="{! isLeadPhoneSelected}"/>
+                        <apex:outputText value="{! leadPhone }" label="Phone"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="last labelCol">{! $Label.DC_ZipCode}</td>
+                    <td>
+                        <apex:inputCheckbox value="{! isZipCodeSelected }"/>
+                        <apex:outputText value="{! leadZipCode }" label="ZipCode"/>
+                    </td>
+                </tr>
+            </table>
+
+
+            <h1>Matching Leads</h1>
+            <apex:pageBlockTable value="{! matchingLeads}" var="lead" style="margin-bottom: 15px">
+                <apex:column headerValue="Name">
+                    <a href="/{! lead.Id }">{! lead.FirstName } {! lead.LastName }</a>
+                </apex:column>
+                <apex:column value="{! lead.Title}"/>
+                <apex:column value="{! lead.Phone}"/>
+                <apex:column value="{! lead.Company}"/>
+                <apex:column value="{! lead.Email}"/>
+                <apex:column value="{! lead.Status}"/>
+                <apex:column value="{! lead.OwnerId}"/>
+                <apex:column value="{! lead.CreatedDate}"/>
+                <apex:column value="{! lead.Partner_OBN__c}"/>
+                <apex:column value="{! lead.PostalCode}"/>
+            </apex:pageBlockTable>
+
+            <h1>Matching Contacts</h1>
+            <apex:pageBlockTable value="{! matchingContacts}" var="contact" style="margin-bottom: 15px">
+                <apex:column headerValue="Name">
+                    <a href="/{! contact.Id }">{! contact.FirstName } {! contact.LastName }</a>
+                </apex:column>
+                <apex:column value="{! contact.Account.Name}"/>
+                <apex:column value="{! contact.Account.Website}"/>
+                <apex:column value="{! contact.Phone}"/>
+                <apex:column value="{! contact.Email}"/>
+                <apex:column value="{! contact.OwnerId}"/>
+                <apex:column value="{! contact.CreatedDate}"/>
+                <apex:column value="{! contact.MailingPostalCode}"/>
+            </apex:pageBlockTable>
+
+            <h1>Matching Accounts</h1>
+            <apex:pageBlockTable value="{! matchingAccounts}" var="account" style="margin-bottom: 15px">
+                <apex:column headerValue="Account Name">
+                    <a href="/{! account.Id }">{! account.Name }</a>
+                </apex:column>
+                <apex:column value="{! account.Site}"/>
+                <apex:column value="{! account.Phone}"/>
+                <apex:column value="{! account.OwnerId}"/>
+                <apex:column value="{! account.Art_des_Standorts__c}" headerValue="Type a location"/>
+                <apex:column value="{! account.OBN__c}"/>
+                <apex:column value="{! account.CreatedDate}"/>
+                <apex:column value="{! account.BillingPostalCode}"/>
+            </apex:pageBlockTable>
+
+            <h1>Matching Opportunities</h1>
+            <apex:pageBlockTable value="{! matchingOpportunities}" var="opportunity" style="margin-bottom: 15px">
+                <apex:column headerValue="Opportunity Name">
+                    <a href="/{! opportunity.Id }">{! opportunity.Name }</a>
+                </apex:column>
+                <apex:column value="{! opportunity.Account.Name}"/>
+                <apex:column value="{! opportunity.Account.Site}"/>
+                <apex:column value="{! opportunity.StageName}"/>
+                <apex:column value="{! opportunity.CloseDate}"/>
+                <apex:column value="{! opportunity.OwnerId}"/>
+                <apex:column value="{! opportunity.CreatedDate}"/>
+            </apex:pageBlockTable>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

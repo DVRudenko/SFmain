@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AGB_Best_tigung_Ja_Nein_ist_immer_Ja__c</fullName>
+    <externalId>false</externalId>
+    <label>AGB Bestätigung (Ja/Nein) - ist immer Ja</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ja</fullName>
+                <default>true</default>
+                <label>Ja</label>
+            </value>
+            <value>
+                <fullName>Nein</fullName>
+                <default>false</default>
+                <label>Nein</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

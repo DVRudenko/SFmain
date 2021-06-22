@@ -1,0 +1,47 @@
+<aura:component controller="GFNI_SearchByCardController" implements="flexipage:availableForAllPageTypes,force:appHostable" access="global">
+    <aura:attribute name="accountList" type="List"/>
+    <aura:attribute name="cardNumber" type="String"/>
+    <aura:attribute name="colCo" type="String" default=""/>
+    <aura:attribute name="colCoValues" type="List"/>
+    <aura:attribute name="loaded" type="Boolean"/>
+    <aura:attribute name="errorMessage" type="String"/>
+
+    <lightning:utilityBarAPI aura:id="utilitybar"/>
+    <lightning:workspaceAPI aura:id="workspace"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <lightning:card>
+        <div>
+            <div class="slds-grid slds-gutters search-panel">
+                <lightning:input type="text" name="SearchByCard" maxlength="6" minlength="6" class="slds-col slds-size_2-of-3 search-input" value="{!v.cardNumber}"/>
+    
+                <lightning:select name="colCo" label="" required="false" value="{!v.colCo}" class="slds-p-horizontal_medium">
+                    <option value="">-- None --</option>            
+                    <aura:iteration items="{!v.colCoValues}" var="selectedColCo">
+                        <option value="{!selectedColCo.value}">{!selectedColCo.value}</option>
+                    </aura:iteration>
+                </lightning:select>
+    
+                <lightning:button variant="brand" label="Search" title="Search" onclick="{! c.searchInGFN }" class="slds-col slds-size_1-of-3 search-button"/>
+            </div>
+            <aura:if isTrue="{!not(empty(v.accountList))}">
+                <div class="slds-p-around_medium search-panel">
+                    <ul class="slds-has-dividers_bottom slds-has-block-links">
+                        <aura:iteration items="{!v.accountList}" var="acc">
+                            <li class="slds-item">
+                                <a onclick="{!c.openGFNDashboard}" name="{!acc.CustomerERP}" data-lob="{!acc.lob}" data-colco="{!acc.colCoId}">
+                                    <div class="slds-grid slds-gutters">
+                                        <div class="slds-col slds-size_1-of-2"><strong>Full Name :</strong> {!acc.FullName}</div>
+                                        <div class="slds-col slds-size_1-of-2"><strong>Customer ERP :</strong> {!acc.CustomerERP}</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </aura:iteration>
+                    </ul>
+                </div>
+            </aura:if>
+        </div>
+    </lightning:card>
+
+</aura:component>

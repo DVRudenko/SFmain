@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Guarding_cargo_space__c</fullName>
+    <description>The activation of the alarm is guided by the state of closing the vehicle cab. If the cabin is closed, the cargo space is guarded for using a microwave sensor that is connected to the GPS unit. In the case of activation of the alarm in the vehicle, a siren will sound and an SMS will be sent to two phone numbers.</description>
+    <externalId>false</externalId>
+    <label>Guarding cargo space</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kontaktni_ctecka_cipu_Dallas__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Kontaktní čtečka čipů Dallas.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Kontaktní čtečka čipů Dallas.</inlineHelpText>
+    <label>Kontaktní čtečka čipů Dallas</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

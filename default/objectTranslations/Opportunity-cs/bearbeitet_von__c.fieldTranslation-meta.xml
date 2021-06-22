@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Kým zpracováno</label>
+    <name>bearbeitet_von__c</name>
+    <picklistValues>
+        <masterLabel>Anita Eštóková</masterLabel>
+        <translation><!-- Anita Eštóková --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Autoprocessed by Sales</masterLabel>
+        <translation><!-- Autoprocessed by Sales --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Credit</masterLabel>
+        <translation><!-- CCS Credit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit UK</masterLabel>
+        <translation><!-- Credit UK --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dalma Decsiová</masterLabel>
+        <translation><!-- Dalma Decsiová --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>David Witteveen</masterLabel>
+        <translation><!-- David Witteveen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hana Ruzickova</masterLabel>
+        <translation><!-- Hana Ruzickova --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jaroslava Polaskova</masterLabel>
+        <translation><!-- Jaroslava Polaskova --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jaroslava Pribylova</masterLabel>
+        <translation><!-- Jaroslava Pribylova --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Katarzyna Sobek</masterLabel>
+        <translation><!-- Katarzyna Sobek --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Katarzyna Szuflak</masterLabel>
+        <translation><!-- Katarzyna Szuflak --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lucie Cechova</masterLabel>
+        <translation><!-- Lucie Cechova --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lucie Konvickova</masterLabel>
+        <translation><!-- Lucie Konvickova --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Martin Elstner</masterLabel>
+        <translation><!-- Martin Elstner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Michal Ulrich</masterLabel>
+        <translation><!-- Michal Ulrich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NIzam Boodoo</masterLabel>
+        <translation><!-- NIzam Boodoo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Petr Hlavac</masterLabel>
+        <translation><!-- Petr Hlavac --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Radana Benešová</masterLabel>
+        <translation><!-- Radana Benešová --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renata Dvorakova</masterLabel>
+        <translation><!-- Renata Dvorakova --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Romy Stehlinová</masterLabel>
+        <translation><!-- Romy Stehlinová --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ruben Elgersma</masterLabel>
+        <translation><!-- Ruben Elgersma --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Veronika Coffa</masterLabel>
+        <translation><!-- Veronika Coffa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Veronika Scheepmaker</masterLabel>
+        <translation><!-- Veronika Scheepmaker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vincent Coffa</masterLabel>
+        <translation><!-- Vincent Coffa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Čermák Petr</masterLabel>
+        <translation><!-- Čermák Petr --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

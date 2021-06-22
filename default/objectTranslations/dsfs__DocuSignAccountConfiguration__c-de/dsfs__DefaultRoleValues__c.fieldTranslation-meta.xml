@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Werte von Empfängerrollen, die beim Senden mit DocuSign mit den Rollennamen von Empfängern übereinstimmen.</help>
+    <label><!-- DefaultRoleValues --></label>
+    <name>dsfs__DefaultRoleValues__c</name>
+</CustomFieldTranslation>

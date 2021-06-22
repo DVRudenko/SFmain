@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Quali-Status --></label>
+    <name>Quali_Status__c</name>
+    <picklistValues>
+        <masterLabel>-</masterLabel>
+        <translation><!-- - --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Already Allstar Customer</masterLabel>
+        <translation><!-- Already Allstar Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Already CCS customer</masterLabel>
+        <translation><!-- Already CCS customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Already Lotos Customer</masterLabel>
+        <translation><!-- Already Lotos Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anwahllimit erreicht</masterLabel>
+        <translation><!-- Anwahllimit erreicht --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bereits Kunde - FleetCor</masterLabel>
+        <translation><!-- Bereits Kunde - FleetCor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bereits Kunde - Shell</masterLabel>
+        <translation><!-- Bereits Kunde - Shell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brand</masterLabel>
+        <translation><!-- Brand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Centrally decided</masterLabel>
+        <translation><!-- Centrally decided --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Company ceased to exist</masterLabel>
+        <translation><!-- Company ceased to exist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competitor - request</masterLabel>
+        <translation><!-- Competitor - request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competitors</masterLabel>
+        <translation><!-- Competitors --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competitor´s customer - CS request</masterLabel>
+        <translation><!-- Competitor´s customer - CS request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Coverage/Acceptance</masterLabel>
+        <translation><!-- Coverage/Acceptance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer reached – additional information required</masterLabel>
+        <translation><!-- Customer reached – additional information required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer reached – call later</masterLabel>
+        <translation><!-- Customer reached – call later --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer reached – didn’t talk to decision maker</masterLabel>
+        <translation><!-- Customer reached – didn’t talk to decision maker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer reached – email sent</masterLabel>
+        <translation><!-- Customer reached – email sent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer reached – first meeting</masterLabel>
+        <translation><!-- Customer reached – first meeting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer reached – follow up (seasonality)</masterLabel>
+        <translation><!-- Customer reached – follow up (seasonality) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer reached – forwarded to Field</masterLabel>
+        <translation><!-- Customer reached – forwarded to Field --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer reached – next meeting(s)</masterLabel>
+        <translation><!-- Customer reached – next meeting(s) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Do Not Contact</masterLabel>
+        <translation><!-- Do Not Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dublette</masterLabel>
+        <translation><!-- Dublette --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial/Credit</masterLabel>
+        <translation><!-- Financial/Credit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follow UP</masterLabel>
+        <translation><!-- Follow UP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follow up email #1 sent</masterLabel>
+        <translation><!-- Follow up email #1 sent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follow up email #2 sent</masterLabel>
+        <translation><!-- Follow up email #2 sent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forwarded</masterLabel>
+        <translation><!-- Forwarded --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forwarded internally</masterLabel>
+        <translation><!-- Forwarded internally --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forwarded to Market</masterLabel>
+        <translation><!-- Forwarded to Market --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forwarded to external provider</masterLabel>
+        <translation><!-- Forwarded to external provider --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gesprächsverweigerer</masterLabel>
+        <translation><!-- Gesprächsverweigerer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Info Bonus card</masterLabel>
+        <translation><!-- Info Bonus card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jiné</masterLabel>
+        <translation><!-- Jiné --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kein Interesse</masterLabel>
+        <translation><!-- Kein Interesse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine Fahrzeuge</masterLabel>
+        <translation><!-- Keine Fahrzeuge --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kontaktdaten falsch</masterLabel>
+        <translation><!-- Kontaktdaten falsch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kunde nicht erreicht</masterLabel>
+        <translation><!-- Kunde nicht erreicht --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leasing</masterLabel>
+        <translation><!-- Leasing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Loajalitní program/Slevy</masterLabel>
+        <translation><!-- Loajalitní program/Slevy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost to Competition</masterLabel>
+        <translation><!-- Lost to Competition --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low potential</masterLabel>
+        <translation><!-- Low potential --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nedosažitelný</masterLabel>
+        <translation><!-- Nedosažitelný --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Neplatný firemní záznam</masterLabel>
+        <translation><!-- Neplatný firemní záznam --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nepodniká</masterLabel>
+        <translation><!-- Nepodniká --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No reply – Quick Process</masterLabel>
+        <translation><!-- No reply – Quick Process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a Lead/Opportunity</masterLabel>
+        <translation><!-- Not a Lead/Opportunity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a legal entity</masterLabel>
+        <translation><!-- Not a legal entity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not reached</masterLabel>
+        <translation><!-- Not reached --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not reached – SMS sent</masterLabel>
+        <translation><!-- Not reached – SMS sent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not reached – dial tone</masterLabel>
+        <translation><!-- Not reached – dial tone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not reached – voicemail</masterLabel>
+        <translation><!-- Not reached – voicemail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Offer sent</masterLabel>
+        <translation><!-- Offer sent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Privatkunde</masterLabel>
+        <translation><!-- Privatkunde --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product features</masterLabel>
+        <translation><!-- Product features --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Příliš nízký potenciál</masterLabel>
+        <translation><!-- Příliš nízký potenciál --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reached</masterLabel>
+        <translation><!-- Reached --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refused to talk - monitoring</masterLabel>
+        <translation><!-- Refused to talk - monitoring --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rozhodnutí z centrály</masterLabel>
+        <translation><!-- Rozhodnutí z centrály --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sent to Acquisition - Contacted</masterLabel>
+        <translation><!-- Sent to Acquisition - Contacted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sent to Acquisition - Not contacted</masterLabel>
+        <translation><!-- Sent to Acquisition - Not contacted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sent to Lotos</masterLabel>
+        <translation><!-- Sent to Lotos --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sent to Shell</masterLabel>
+        <translation><!-- Sent to Shell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sent to support</masterLabel>
+        <translation><!-- Sent to support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Současný zákazník</masterLabel>
+        <translation><!-- Současný zákazník --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spam</masterLabel>
+        <translation><!-- Spam --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unternehmen erloschen</masterLabel>
+        <translation><!-- Unternehmen erloschen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vlastnosti produktu</masterLabel>
+        <translation><!-- Vlastnosti produktu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vlastní bencalor</masterLabel>
+        <translation><!-- Vlastní bencalor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Young company (less than 18 months)</masterLabel>
+        <translation><!-- Young company (less than 18 months) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zavázán dlouhodobým kontraktem</masterLabel>
+        <translation><!-- Zavázán dlouhodobým kontraktem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zentralentscheid</masterLabel>
+        <translation><!-- Zentralentscheid --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>zu viele Fahrzeuge</masterLabel>
+        <translation><!-- zu viele Fahrzeuge --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

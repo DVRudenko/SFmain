@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- All agent IDs and durations where e.g. 123-30, 456-60 means agent 123 for 30s followed by agent 456 for 1 minute.  Excludes hold times --></help>
+    <label><!-- Agent List --></label>
+    <name>NVMStatsSF__Agent_List__c</name>
+</CustomFieldTranslation>

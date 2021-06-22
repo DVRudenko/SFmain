@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <narrowComponents>Logo</narrowComponents>
+    <narrowComponents>standard-CreateNew</narrowComponents>
+    <narrowComponents>standard-RecentItems</narrowComponents>
+    <narrowComponents>standard-UsefulLinks</narrowComponents>
+    <narrowComponents>standard-MessagesAndAlerts</narrowComponents>
+    <narrowComponents>SEPA_Toolkit__SEPA Toolkit</narrowComponents>
+    <narrowComponents>SEPA_Toolkit__SEPA Toolkit (convert)</narrowComponents>
+    <narrowComponents>injection-box</narrowComponents>
+    <wideComponents>Sales Lead Conversion Rate</wideComponents>
+    <wideComponents>Sales Lead Approval Rate</wideComponents>
+    <wideComponents>Team Processing Time</wideComponents>
+    <wideComponents>Sales Lead Contacted Lead</wideComponents>
+    <wideComponents>Sales Lead Open Opportunities</wideComponents>
+</HomePageLayout>

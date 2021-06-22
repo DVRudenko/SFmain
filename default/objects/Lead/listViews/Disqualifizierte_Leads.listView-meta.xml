@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disqualifizierte_Leads</fullName>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>Quali_Status__c</columns>
+    <columns>warum_kein_Interesse__c</columns>
+    <columns>Monatlicher_Kraftstoffverbrauch_in_Liter__c</columns>
+    <columns>Beschaeftigte__c</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>Number_of_days__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Qualified,Disqualified</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.LAST_NAME</field>
+        <operation>contains</operation>
+        <value>raum</value>
+    </filters>
+    <filters>
+        <field>LEAD.LAST_ACTIVITY</field>
+        <operation>lessOrEqual</operation>
+        <value>1/31/2018</value>
+    </filters>
+    <filters>
+        <field>LEAD.LAST_ACTIVITY</field>
+        <operation>greaterOrEqual</operation>
+        <value>1/1/2018</value>
+    </filters>
+    <filters>
+        <field>Quali_Status__c</field>
+        <operation>contains</operation>
+        <value>Kein Interesse,Gesprächsverweigerer,Kunde erreicht</value>
+    </filters>
+    <label>Disqualifzierte Leads</label>
+    <language>de</language>
+    <sharedTo>
+        <role>Salesteam_Inbound</role>
+        <role>Salesteam_Outbound</role>
+        <role>Salesteam_Outbound_2</role>
+        <role>Salesteam_Outbound_3</role>
+        <role>Salesteam_Outbound_4</role>
+        <role>Teamleiter_Inbound</role>
+        <role>Teamleiter_Outbound_1</role>
+        <role>Teamleiter_Outbound_2</role>
+        <role>Teamleiter_Outbound_3</role>
+        <role>Teamleiter_Outbound_4</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Правка через кнопку "Редактировать перс. данные"</help>
+    <label>Позвонить на Тел.</label>
+    <name>clicktocallLead__c</name>
+</CustomFieldTranslation>

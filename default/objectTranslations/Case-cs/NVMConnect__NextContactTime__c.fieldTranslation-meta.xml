@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Until the specified time, this record won&apos;t be considered when refreshing Dial Lists. --></help>
+    <label><!-- Next Contact Time --></label>
+    <name>NVMConnect__NextContactTime__c</name>
+</CustomFieldTranslation>

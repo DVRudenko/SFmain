@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Setting one of these on the &quot;Log a Call&quot; quick action will lead to follow up actions/tasks to be created in Salesforce automatically --></help>
+    <label><!-- Call Outcome --></label>
+    <name>NVM_Call_Outcome__c</name>
+</CustomFieldTranslation>

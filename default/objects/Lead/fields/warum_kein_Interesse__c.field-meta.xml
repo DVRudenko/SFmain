@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>warum_kein_Interesse__c</fullName>
+    <externalId>false</externalId>
+    <label>warum kein Interesse?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Quali_Status__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>1.1 Finanziell: Rabatt</fullName>
+                <default>false</default>
+                <label>1.1 Finanziell: Rabatt</label>
+            </value>
+            <value>
+                <fullName>1.2 Finanziell: Kartengebuehre</fullName>
+                <default>false</default>
+                <label>1.2 Finanziell: Kartengebuehre</label>
+            </value>
+            <value>
+                <fullName>1.3 Finanziell: Transaktiongebuehre</fullName>
+                <default>false</default>
+                <label>1.3 Finanziell: Transaktiongebuehre</label>
+            </value>
+            <value>
+                <fullName>1.4 Finanziell: Andere Gebuehre</fullName>
+                <default>false</default>
+                <label>1.4 Finanziell: Andere Gebuehre</label>
+            </value>
+            <value>
+                <fullName>2.1 Netzwerk: Tankstellnetzwerk</fullName>
+                <default>false</default>
+                <label>2.1 Netzwerk: Tankstellnetzwerk</label>
+            </value>
+            <value>
+                <fullName>2.2 Netzwerk: Nicht-Kraftstoff-Netzwerk</fullName>
+                <default>false</default>
+                <label>2.2 Netzwerk: Nicht-Kraftstoff-Netzwerk</label>
+            </value>
+            <value>
+                <fullName>3.1 Brand: FleetCor</fullName>
+                <default>false</default>
+                <label>3.1 Brand: FleetCor</label>
+            </value>
+            <value>
+                <fullName>3.2 Brand: Shell</fullName>
+                <default>false</default>
+                <label>3.2 Brand: Shell</label>
+            </value>
+            <value>
+                <fullName>3.3 Brand: Allstar Mondo</fullName>
+                <default>false</default>
+                <label>3.3 Brand: Allstar Mondo</label>
+            </value>
+            <value>
+                <fullName>4.1 Service: Kontrolle</fullName>
+                <default>false</default>
+                <label>4.1 Service: Kontrolle</label>
+            </value>
+            <value>
+                <fullName>4.2 Service: Wunsch-PIN</fullName>
+                <default>false</default>
+                <label>4.2 Service: Wunsch-PIN</label>
+            </value>
+            <value>
+                <fullName>4.3 Service: Sonstiges</fullName>
+                <default>false</default>
+                <label>4.3 Service: Sonstiges</label>
+            </value>
+            <value>
+                <fullName>Ablehnung Shell (Brand / Service)</fullName>
+                <default>false</default>
+                <label>Ablehnung Shell (Brand / Service)</label>
+            </value>
+            <value>
+                <fullName>AGB nicht akzeptiert</fullName>
+                <default>false</default>
+                <label>AGB nicht akzeptiert</label>
+            </value>
+            <value>
+                <fullName>Andere</fullName>
+                <default>false</default>
+                <label>Andere</label>
+            </value>
+            <value>
+                <fullName>Andere/n Anbieter</fullName>
+                <default>false</default>
+                <label>Andere/n Anbieter</label>
+            </value>
+            <value>
+                <fullName>Andere Bezahlmethode - Cash</fullName>
+                <default>false</default>
+                <label>Andere Bezahlmethode - Cash</label>
+            </value>
+            <value>
+                <fullName>Andere Bezahlmethode - EC/Kreditkarte</fullName>
+                <default>false</default>
+                <label>Andere Bezahlmethode - EC/Kreditkarte</label>
+            </value>
+            <value>
+                <fullName>Andere Bezahlmethode - Tankkarte</fullName>
+                <default>false</default>
+                <label>Andere Bezahlmethode - Tankkarte</label>
+            </value>
+            <value>
+                <fullName>Andere Bezahlmethode - VISA</fullName>
+                <default>false</default>
+                <label>Andere Bezahlmethode - VISA</label>
+            </value>
+            <value>
+                <fullName>Anderes Produkt - geringere Kosten</fullName>
+                <default>false</default>
+                <label>Anderes Produkt - geringere Kosten</label>
+            </value>
+            <value>
+                <fullName>Anderes Produkt - höheres Kreditlimit</fullName>
+                <default>false</default>
+                <label>Anderes Produkt - höheres Kreditlimit</label>
+            </value>
+            <value>
+                <fullName>Anderes Produkt - keine Garantien</fullName>
+                <default>false</default>
+                <label>Anderes Produkt - keine Garantien</label>
+            </value>
+            <value>
+                <fullName>Anderes Produkt - mehr Features</fullName>
+                <default>false</default>
+                <label>Anderes Produkt - mehr Features</label>
+            </value>
+            <value>
+                <fullName>Anderes Produkt - Zahlungsbedingungen</fullName>
+                <default>false</default>
+                <label>Anderes Produkt - Zahlungsbedingungen</label>
+            </value>
+            <value>
+                <fullName>Angabenkorrektur nicht möglich</fullName>
+                <default>false</default>
+                <label>Angabenkorrektur nicht möglich</label>
+            </value>
+            <value>
+                <fullName>APP zu aufwendig</fullName>
+                <default>false</default>
+                <label>APP zu aufwendig</label>
+            </value>
+            <value>
+                <fullName>Bereits Kreditkarte vorhanden</fullName>
+                <default>false</default>
+                <label>Bereits Kreditkarte vorhanden</label>
+            </value>
+            <value>
+                <fullName>Bestellprozess zu lange</fullName>
+                <default>false</default>
+                <label>Bestellprozess zu lange</label>
+            </value>
+            <value>
+                <fullName>Brand: CCS</fullName>
+                <default>false</default>
+                <label>Brand: CCS</label>
+            </value>
+            <value>
+                <fullName>Dublette</fullName>
+                <default>false</default>
+                <label>Dublette</label>
+            </value>
+            <value>
+                <fullName>Eigene Tankstelle</fullName>
+                <default>false</default>
+                <label>Eigene Tankstelle</label>
+            </value>
+            <value>
+                <fullName>Financial: Limit</fullName>
+                <default>false</default>
+                <label>Financial: Limit</label>
+            </value>
+            <value>
+                <fullName>Firma zu jung</fullName>
+                <default>false</default>
+                <label>Firma zu jung</label>
+            </value>
+            <value>
+                <fullName>Gebühren</fullName>
+                <default>false</default>
+                <label>Gebühren</label>
+            </value>
+            <value>
+                <fullName>Gebühren/Kosten</fullName>
+                <default>false</default>
+                <label>Gebühren/Kosten</label>
+            </value>
+            <value>
+                <fullName>Grundgebühr</fullName>
+                <default>false</default>
+                <label>Grundgebühr</label>
+            </value>
+            <value>
+                <fullName>Hausbank bietet bessere Konditionen</fullName>
+                <default>false</default>
+                <label>Hausbank bietet bessere Konditionen</label>
+            </value>
+            <value>
+                <fullName>Je klient CCS</fullName>
+                <default>false</default>
+                <label>Je klient CCS</label>
+            </value>
+            <value>
+                <fullName>Kartenantrag zu umfrangreich</fullName>
+                <default>false</default>
+                <label>Kartenantrag zu umfrangreich</label>
+            </value>
+            <value>
+                <fullName>Keine detaillierten Tankdaten</fullName>
+                <default>false</default>
+                <label>Keine detaillierten Tankdaten</label>
+            </value>
+            <value>
+                <fullName>Keine Kaution als Sicherheit</fullName>
+                <default>false</default>
+                <label>Keine Kaution als Sicherheit</label>
+            </value>
+            <value>
+                <fullName>Keine Kontrolle auf Produktebene</fullName>
+                <default>false</default>
+                <label>Keine Kontrolle auf Produktebene</label>
+            </value>
+            <value>
+                <fullName>Keine MwSt.-fähige Rechnung</fullName>
+                <default>false</default>
+                <label>Keine MwSt.-fähige Rechnung</label>
+            </value>
+            <value>
+                <fullName>Keine Rabatte</fullName>
+                <default>false</default>
+                <label>Keine Rabatte</label>
+            </value>
+            <value>
+                <fullName>Keine Rabatte / zu geringe Rabatte</fullName>
+                <default>false</default>
+                <label>Keine Rabatte / zu geringe Rabatte</label>
+            </value>
+            <value>
+                <fullName>Keine Shell Tankstelle in der Naehe</fullName>
+                <default>false</default>
+                <label>Keine Shell Tankstelle in der Naehe</label>
+            </value>
+            <value>
+                <fullName>Keine steuerbare Rechnung</fullName>
+                <default>false</default>
+                <label>Keine steuerbare Rechnung</label>
+            </value>
+            <value>
+                <fullName>Kleinkunde hat keine Vorteile von TK</fullName>
+                <default>false</default>
+                <label>Kleinkunde hat keine Vorteile von TK</label>
+            </value>
+            <value>
+                <fullName>Konditionen/Ersparnis</fullName>
+                <default>false</default>
+                <label>Konditionen/Ersparnis</label>
+            </value>
+            <value>
+                <fullName>Kreditlimit zu gering</fullName>
+                <default>false</default>
+                <label>Kreditlimit zu gering</label>
+            </value>
+            <value>
+                <fullName>Leasingfahrzeuge</fullName>
+                <default>false</default>
+                <label>Leasingfahrzeuge</label>
+            </value>
+            <value>
+                <fullName>Long term contract</fullName>
+                <default>false</default>
+                <label>Long term contract</label>
+            </value>
+            <value>
+                <fullName>Lump sum payments</fullName>
+                <default>false</default>
+                <label>Lump sum payments</label>
+            </value>
+            <value>
+                <fullName>Má asistenci, pojištění a další benefity jinde</fullName>
+                <default>false</default>
+                <label>Má asistenci, pojištění a další benefity jinde</label>
+            </value>
+            <value>
+                <fullName>Mindestbestellwert nicht erreicht</fullName>
+                <default>false</default>
+                <label>Mindestbestellwert nicht erreicht</label>
+            </value>
+            <value>
+                <fullName>Mit aktueller Lösung zufrieden</fullName>
+                <default>false</default>
+                <label>Mit aktueller Lösung zufrieden</label>
+            </value>
+            <value>
+                <fullName>Nechce sdělit důvod</fullName>
+                <default>false</default>
+                <label>Nechce sdělit důvod</label>
+            </value>
+            <value>
+                <fullName>Nelíbí se mu poplatek</fullName>
+                <default>false</default>
+                <label>Nelíbí se mu poplatek</label>
+            </value>
+            <value>
+                <fullName>Nemají vozový park</fullName>
+                <default>false</default>
+                <label>Nemají vozový park</label>
+            </value>
+            <value>
+                <fullName>Nepotřebuje, nevyužije</fullName>
+                <default>false</default>
+                <label>Nepotřebuje, nevyužije</label>
+            </value>
+            <value>
+                <fullName>Network: using abroad</fullName>
+                <default>false</default>
+                <label>Network: using abroad</label>
+            </value>
+            <value>
+                <fullName>Nízký limit</fullName>
+                <default>false</default>
+                <label>Nízký limit</label>
+            </value>
+            <value>
+                <fullName>Not specified</fullName>
+                <default>false</default>
+                <label>Not specified</label>
+            </value>
+            <value>
+                <fullName>Nutzen nur EC</fullName>
+                <default>false</default>
+                <label>Nutzen nur EC</label>
+            </value>
+            <value>
+                <fullName>Platba paušálem</fullName>
+                <default>false</default>
+                <label>Platba paušálem</label>
+            </value>
+            <value>
+                <fullName>Product: benefits</fullName>
+                <default>false</default>
+                <label>Product: benefits</label>
+            </value>
+            <value>
+                <fullName>Sicherheit nicht bereitgestellt</fullName>
+                <default>false</default>
+                <label>Sicherheit nicht bereitgestellt</label>
+            </value>
+            <value>
+                <fullName>Sonstige</fullName>
+                <default>false</default>
+                <label>Sonstige</label>
+            </value>
+            <value>
+                <fullName>Sonstiges</fullName>
+                <default>false</default>
+                <label>Sonstiges</label>
+            </value>
+            <value>
+                <fullName>Špatná zkušenost s CCS</fullName>
+                <default>false</default>
+                <label>Špatná zkušenost s CCS</label>
+            </value>
+            <value>
+                <fullName>T&amp;C - andere Gebühren</fullName>
+                <default>false</default>
+                <label>T&amp;C - andere Gebühren</label>
+            </value>
+            <value>
+                <fullName>T&amp;C - Kartengebühr</fullName>
+                <default>false</default>
+                <label>T&amp;C - Kartengebühr</label>
+            </value>
+            <value>
+                <fullName>Ukončená činnost</fullName>
+                <default>false</default>
+                <label>Ukončená činnost</label>
+            </value>
+            <value>
+                <fullName>Unterlagen zu umfangreich</fullName>
+                <default>false</default>
+                <label>Unterlagen zu umfangreich</label>
+            </value>
+            <value>
+                <fullName>Vereinbarung zu umfangreich</fullName>
+                <default>false</default>
+                <label>Vereinbarung zu umfangreich</label>
+            </value>
+            <value>
+                <fullName>Versorgung nicht gegeben</fullName>
+                <default>false</default>
+                <label>Versorgung nicht gegeben</label>
+            </value>
+            <value>
+                <fullName>Verwaltungsaufwand zu aufwändig </fullName>
+                <default>false</default>
+                <label>Verwaltungsaufwand zu aufwändig </label>
+            </value>
+            <value>
+                <fullName>Wartezeit zu lange</fullName>
+                <default>false</default>
+                <label>Wartezeit zu lange</label>
+            </value>
+            <value>
+                <fullName>Zahlungsbedingungen zu kurz</fullName>
+                <default>false</default>
+                <label>Zahlungsbedingungen zu kurz</label>
+            </value>
+            <value>
+                <fullName>Zentralentscheid</fullName>
+                <default>false</default>
+                <label>Zentralentscheid</label>
+            </value>
+            <value>
+                <fullName>Zu unbekannt/keine Reputation</fullName>
+                <default>false</default>
+                <label>Zu unbekannt/keine Reputation</label>
+            </value>
+            <value>
+                <fullName>zu wenig Autos/Verbrauch – Kleinkunde</fullName>
+                <default>false</default>
+                <label>zu wenig Autos/Verbrauch – Kleinkunde</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>3.3 Brand: Allstar Mondo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Verwaltungsaufwand zu aufwändig </valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Bereits Kreditkarte vorhanden</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Bestellprozess zu lange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Grundgebühr</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Brand: CCS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>3.1 Brand: FleetCor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>3.2 Brand: Shell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Zu unbekannt/keine Reputation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Zentralentscheid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Hausbank bietet bessere Konditionen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Unterlagen zu umfangreich</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Dublette</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Gebühren</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>1.2 Finanziell: Kartengebuehre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>1.1 Finanziell: Rabatt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Financial: Limit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>1.4 Finanziell: Andere Gebuehre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>1.3 Finanziell: Transaktiongebuehre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Firma zu jung</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Long term contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Lump sum payments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Mindestbestellwert nicht erreicht</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>2.1 Netzwerk: Tankstellnetzwerk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>2.2 Netzwerk: Nicht-Kraftstoff-Netzwerk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Network: using abroad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Keine MwSt.-fähige Rechnung</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Keine Kontrolle auf Produktebene</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Keine steuerbare Rechnung</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Keine Rabatte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Keine Rabatte / zu geringe Rabatte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Not specified</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Andere</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Sonstige</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Andere Bezahlmethode - EC/Kreditkarte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Anderes Produkt - Zahlungsbedingungen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Eigene Tankstelle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Product: benefits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Mit aktueller Lösung zufrieden</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>4.1 Service: Kontrolle</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>4.2 Service: Wunsch-PIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>4.3 Service: Sonstiges</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>T&amp;C - Kartengebühr</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>zu wenig Autos/Verbrauch – Kleinkunde</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kein Interesse</controllingFieldValue>
+            <valueName>Wartezeit zu lange</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

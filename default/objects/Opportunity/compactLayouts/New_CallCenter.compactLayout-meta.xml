@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_CallCenter</fullName>
+    <fields>Name</fields>
+    <fields>AccountId</fields>
+    <fields>CloseDate</fields>
+    <fields>Primary_Contact_Phone__c</fields>
+    <fields>Number_of_electric_vehicles__c</fields>
+    <fields>Anzahl_der_Karten__c</fields>
+    <fields>GFN_Nr__c</fields>
+    <fields>UMR__c</fields>
+    <fields>Total_consumption_l_month__c</fields>
+    <fields>E2E_Active_Substep__c</fields>
+    <label>New CallCenter</label>
+</CompactLayout>

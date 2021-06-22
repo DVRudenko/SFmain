@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of times an agent transferred the interaction to an applet/queue --></help>
+    <label><!-- Number of Transfers to Applet --></label>
+    <name>NVMStatsSF__Number_of_Transfers_to_Applet__c</name>
+</CustomFieldTranslation>

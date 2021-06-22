@@ -1,0 +1,114 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "You will receive your Travelcard charging solution shortly by post.",
+                "fr": "Vous recevrez vos cartes de recharge Travelcard sous peu par courrier.",
+                "nl": "U ontvangt uw Travelcard-laadkaart binnenkort per post."
+            },
+            {
+                "en": "You can now start charging easily and conveniently. Because your charging chip is automatically activated.",
+                "fr": "Dès réception de vos portes-clé de recharge déjà activés, vous pouvez en faire l’usage immédiat et recharger en toute tranquillité.",
+                "nl": "U kunt nu eenvoudig en gemakkelijk beginnen met opladen, omdat uw laadkaart automatisch wordt geactiveerd."
+            },
+            {
+                "en": "Find all suitable charging stations in our Travelcard EV app.",
+                "fr": "Utilisez l'application Travelcard EV pour trouver facilement une borne de recharge adaptée.",
+                "nl": "Vind alle geschikte laadpalen in onze Travelcard EV app."
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Charging stations in Europe",
+                    "fr": "stations de recharge en Europe",
+                    "nl": "oplaadpunten in Europa"
+                },
+                "value": {
+                    "en": "MORE THAN 150 000",
+                    "fr": "PLUS DE 150 000",
+                    "nl": "MEER DAN 150 000"
+                }
+            },
+            {
+                "label": {
+                    "en": "for all transactions",
+                    "fr": "pour toutes les transactions",
+                    "nl": "voor alle transacties"
+                },
+                "value": {
+                    "en": "Single invoice",
+                    "fr": "FACTURE UNIQUE",
+                    "nl": "ÉÉN FACTUUR"
+                }
+            },
+            {
+                "label": {
+                    "en": "Card issuing and delivery",
+                    "fr": "Émission et livraison de carte",
+                    "nl": "Kaart productie en verzending"
+                },
+                "value": {
+                    "en": "FREE",
+                    "fr": "GRATUIT",
+                    "nl": "GRATIS"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "EV BE"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "CHARGING CARD",
+            "fr": "CARTE DE RECHARGE",
+            "nl": "LAADKAART"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/ev_fob.png"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "Charge your electric fleet quickly and easily with the charging key fob from Travelcard.",
+            "fr": "Le porte-clé de Travelcard vous permet de recharger votre flotte électrique en toute facilité.",
+            "nl": "Laadt uw elektrische auto's snel and gemakkelijk op met de laadkaart van Travelcard."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "CHARGING CARD",
+            "fr": "CARTE DE RECHARGE",
+            "nl": "LAADKAART"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "CHARGING CARDS",
+            "fr": "CARTES DE RECHARGE",
+            "nl": "LAADPASSEN"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": {
+                "Belgium-NL": "LAADKAART",
+                "Belgium-FR": "CARTE DE RECHARGE"
+            },
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "0",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "order": 5
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Belgium-NL": "/resource/ETE_DOCUMENTS_1/tariffSheets_benl_evbe.jpg",
+        "Belgium-FR": "/resource/ETE_DOCUMENTS_1/tariffSheets_befr_evbe.jpg"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "typeOfVehicle": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Car", 
+                    "pl": "Samochód osobowy"
+                }, 
+                "value": "PKW"
+            }, 
+            {
+                "label": {
+                    "en": "Truck", 
+                    "pl": "Ciężarówka"
+                }, 
+                "value": "LKW"
+            }
+        ]
+    }, 
+    "typeOfCard": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Lotos Biznes", 
+                    "pl": "Lotos Biznes"
+                }, 
+                "value": "Lotos Biznes"
+            }
+        ]
+    }
+}

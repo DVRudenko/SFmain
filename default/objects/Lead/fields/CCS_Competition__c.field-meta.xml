@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Competition__c</fullName>
+    <externalId>false</externalId>
+    <label>Competition</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Competitor_Country__c</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Aral</fullName>
+                <default>false</default>
+                <label>Aral</label>
+            </value>
+            <value>
+                <fullName>Avia</fullName>
+                <default>false</default>
+                <label>Avia</label>
+            </value>
+            <value>
+                <fullName>Axigon</fullName>
+                <default>false</default>
+                <label>Axigon</label>
+            </value>
+            <value>
+                <fullName>Bank Card</fullName>
+                <default>false</default>
+                <label>Bank Card</label>
+            </value>
+            <value>
+                <fullName>Baywa</fullName>
+                <default>false</default>
+                <label>Baywa</label>
+            </value>
+            <value>
+                <fullName>Belgian Fuel Card (BFC)</fullName>
+                <default>false</default>
+                <label>Belgian Fuel Card (BFC)</label>
+            </value>
+            <value>
+                <fullName>Benzina</fullName>
+                <default>false</default>
+                <label>Benzina</label>
+            </value>
+            <value>
+                <fullName>BP</fullName>
+                <default>false</default>
+                <label>BP</label>
+            </value>
+            <value>
+                <fullName>Cash</fullName>
+                <default>false</default>
+                <label>Cash</label>
+            </value>
+            <value>
+                <fullName>Circle K</fullName>
+                <default>false</default>
+                <label>Circle K</label>
+            </value>
+            <value>
+                <fullName>Coop Pronto</fullName>
+                <default>false</default>
+                <label>Coop Pronto</label>
+            </value>
+            <value>
+                <fullName>Dats24</fullName>
+                <default>false</default>
+                <label>Dats24</label>
+            </value>
+            <value>
+                <fullName>DCB</fullName>
+                <default>false</default>
+                <label>DCB</label>
+            </value>
+            <value>
+                <fullName>DFC</fullName>
+                <default>false</default>
+                <label>DFC</label>
+            </value>
+            <value>
+                <fullName>DKV</fullName>
+                <default>false</default>
+                <label>DKV</label>
+            </value>
+            <value>
+                <fullName>Do not want to share</fullName>
+                <default>false</default>
+                <label>Do not want to share</label>
+            </value>
+            <value>
+                <fullName>E.L’eclerc</fullName>
+                <default>false</default>
+                <label>E.L’eclerc</label>
+            </value>
+            <value>
+                <fullName>Easyfuel Card</fullName>
+                <default>false</default>
+                <label>Easyfuel Card</label>
+            </value>
+            <value>
+                <fullName>Eni (Agip)</fullName>
+                <default>false</default>
+                <label>Eni (Agip)</label>
+            </value>
+            <value>
+                <fullName>Esso</fullName>
+                <default>false</default>
+                <label>Esso</label>
+            </value>
+            <value>
+                <fullName>EuroOil</fullName>
+                <default>false</default>
+                <label>EuroOil</label>
+            </value>
+            <value>
+                <fullName>Eurowag</fullName>
+                <default>false</default>
+                <label>Eurowag</label>
+            </value>
+            <value>
+                <fullName>Expensa (Direct Fidoo)</fullName>
+                <default>false</default>
+                <label>Expensa (Direct Fidoo)</label>
+            </value>
+            <value>
+                <fullName>Fleetcard (DCS)</fullName>
+                <default>false</default>
+                <label>Fleetcard (DCS)</label>
+            </value>
+            <value>
+                <fullName>Fleetpass+</fullName>
+                <default>false</default>
+                <label>Fleetpass+</label>
+            </value>
+            <value>
+                <fullName>Gabriels</fullName>
+                <default>false</default>
+                <label>Gabriels</label>
+            </value>
+            <value>
+                <fullName>Go Tankkaart</fullName>
+                <default>false</default>
+                <label>Go Tankkaart</label>
+            </value>
+            <value>
+                <fullName>LukOil</fullName>
+                <default>false</default>
+                <label>LukOil</label>
+            </value>
+            <value>
+                <fullName>Maes</fullName>
+                <default>false</default>
+                <label>Maes</label>
+            </value>
+            <value>
+                <fullName>Migrol</fullName>
+                <default>false</default>
+                <label>Migrol</label>
+            </value>
+            <value>
+                <fullName>MKB</fullName>
+                <default>false</default>
+                <label>MKB</label>
+            </value>
+            <value>
+                <fullName>MOL</fullName>
+                <default>false</default>
+                <label>MOL</label>
+            </value>
+            <value>
+                <fullName>Monitoring - Carcontrol (O2)</fullName>
+                <default>false</default>
+                <label>Monitoring - Carcontrol (O2)</label>
+            </value>
+            <value>
+                <fullName>Monitoring - Commander</fullName>
+                <default>false</default>
+                <label>Monitoring - Commander</label>
+            </value>
+            <value>
+                <fullName>Monitoring - GX Solutions</fullName>
+                <default>false</default>
+                <label>Monitoring - GX Solutions</label>
+            </value>
+            <value>
+                <fullName>Monitoring - Infocar</fullName>
+                <default>false</default>
+                <label>Monitoring - Infocar</label>
+            </value>
+            <value>
+                <fullName>Monitoring - Level</fullName>
+                <default>false</default>
+                <label>Monitoring - Level</label>
+            </value>
+            <value>
+                <fullName>Monitoring - oni System</fullName>
+                <default>false</default>
+                <label>Monitoring - oni System</label>
+            </value>
+            <value>
+                <fullName>Monitoring - Princip (Webdispecing)</fullName>
+                <default>false</default>
+                <label>Monitoring - Princip (Webdispecing)</label>
+            </value>
+            <value>
+                <fullName>Monitoring - T-cars</fullName>
+                <default>false</default>
+                <label>Monitoring - T-cars</label>
+            </value>
+            <value>
+                <fullName>Monitoring - T-Com</fullName>
+                <default>false</default>
+                <label>Monitoring - T-Com</label>
+            </value>
+            <value>
+                <fullName>MoveMove (MTC)</fullName>
+                <default>false</default>
+                <label>MoveMove (MTC)</label>
+            </value>
+            <value>
+                <fullName>Octa+</fullName>
+                <default>false</default>
+                <label>Octa+</label>
+            </value>
+            <value>
+                <fullName>OMV</fullName>
+                <default>false</default>
+                <label>OMV</label>
+            </value>
+            <value>
+                <fullName>Orlen</fullName>
+                <default>false</default>
+                <label>Orlen</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Own petrol site</fullName>
+                <default>false</default>
+                <label>Own petrol site</label>
+            </value>
+            <value>
+                <fullName>Q8</fullName>
+                <default>false</default>
+                <label>Q8</label>
+            </value>
+            <value>
+                <fullName>RobinOil</fullName>
+                <default>false</default>
+                <label>RobinOil</label>
+            </value>
+            <value>
+                <fullName>Routex</fullName>
+                <default>false</default>
+                <label>Routex</label>
+            </value>
+            <value>
+                <fullName>Shell</fullName>
+                <default>false</default>
+                <label>Shell</label>
+            </value>
+            <value>
+                <fullName>Skyguard</fullName>
+                <default>false</default>
+                <label>Skyguard</label>
+            </value>
+            <value>
+                <fullName>Slovnaft</fullName>
+                <default>false</default>
+                <label>Slovnaft</label>
+            </value>
+            <value>
+                <fullName>Tamoil</fullName>
+                <default>false</default>
+                <label>Tamoil</label>
+            </value>
+            <value>
+                <fullName>TankOno</fullName>
+                <default>false</default>
+                <label>TankOno</label>
+            </value>
+            <value>
+                <fullName>Texaco</fullName>
+                <default>false</default>
+                <label>Texaco</label>
+            </value>
+            <value>
+                <fullName>Tinq</fullName>
+                <default>false</default>
+                <label>Tinq</label>
+            </value>
+            <value>
+                <fullName>Total</fullName>
+                <default>false</default>
+                <label>Total</label>
+            </value>
+            <value>
+                <fullName>Travelcard</fullName>
+                <default>false</default>
+                <label>Travelcard</label>
+            </value>
+            <value>
+                <fullName>UTA</fullName>
+                <default>false</default>
+                <label>UTA</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Austria</controllingFieldValue>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <controllingFieldValue>France</controllingFieldValue>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Hungary</controllingFieldValue>
+            <controllingFieldValue>Luxembourg</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <controllingFieldValue>Poland</controllingFieldValue>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Switzerland-DE</controllingFieldValue>
+            <controllingFieldValue>Switzerland-FR</controllingFieldValue>
+            <valueName>Bank Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Austria</controllingFieldValue>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <controllingFieldValue>France</controllingFieldValue>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Hungary</controllingFieldValue>
+            <controllingFieldValue>Luxembourg</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <controllingFieldValue>Poland</controllingFieldValue>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Switzerland-DE</controllingFieldValue>
+            <controllingFieldValue>Switzerland-FR</controllingFieldValue>
+            <valueName>Cash</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Austria</controllingFieldValue>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <controllingFieldValue>France</controllingFieldValue>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Hungary</controllingFieldValue>
+            <controllingFieldValue>Luxembourg</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <controllingFieldValue>Poland</controllingFieldValue>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Switzerland-DE</controllingFieldValue>
+            <controllingFieldValue>Switzerland-FR</controllingFieldValue>
+            <valueName>Do not want to share</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Axigon</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Benzina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>DFC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <controllingFieldValue>France</controllingFieldValue>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Hungary</controllingFieldValue>
+            <controllingFieldValue>Poland</controllingFieldValue>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <valueName>DKV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>EuroOil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Eurowag</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Expensa (Direct Fidoo)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <controllingFieldValue>Hungary</controllingFieldValue>
+            <valueName>MOL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <controllingFieldValue>Hungary</controllingFieldValue>
+            <valueName>OMV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>RobinOil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>Shell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Slovnaft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>TankOno</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <controllingFieldValue>Poland</controllingFieldValue>
+            <valueName>UTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Austria</controllingFieldValue>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <controllingFieldValue>France</controllingFieldValue>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Hungary</controllingFieldValue>
+            <controllingFieldValue>Luxembourg</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <controllingFieldValue>Poland</controllingFieldValue>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Switzerland-DE</controllingFieldValue>
+            <controllingFieldValue>Switzerland-FR</controllingFieldValue>
+            <valueName>Own petrol site</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Monitoring - Carcontrol (O2)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Monitoring - Commander</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Monitoring - GX Solutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Monitoring - Infocar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Monitoring - Level</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Monitoring - oni System</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Monitoring - Princip (Webdispecing)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Monitoring - T-cars</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <valueName>Monitoring - T-Com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Austria</controllingFieldValue>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>Czech Republic</controllingFieldValue>
+            <controllingFieldValue>France</controllingFieldValue>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Hungary</controllingFieldValue>
+            <controllingFieldValue>Luxembourg</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <controllingFieldValue>Poland</controllingFieldValue>
+            <controllingFieldValue>Slovakia</controllingFieldValue>
+            <controllingFieldValue>Switzerland-DE</controllingFieldValue>
+            <controllingFieldValue>Switzerland-FR</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hungary</controllingFieldValue>
+            <valueName>Skyguard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>Hungary</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>LukOil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poland</controllingFieldValue>
+            <valueName>Orlen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Austria</controllingFieldValue>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <controllingFieldValue>Poland</controllingFieldValue>
+            <controllingFieldValue>Switzerland-DE</controllingFieldValue>
+            <controllingFieldValue>Switzerland-FR</controllingFieldValue>
+            <valueName>BP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Poland</controllingFieldValue>
+            <valueName>Circle K</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Switzerland-DE</controllingFieldValue>
+            <controllingFieldValue>Switzerland-FR</controllingFieldValue>
+            <valueName>Eni (Agip)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>Travelcard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>MKB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>France</controllingFieldValue>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Luxembourg</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>Esso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>Q8</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <valueName>Maes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>France</controllingFieldValue>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>Total</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>France</controllingFieldValue>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>Avia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>MoveMove (MTC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>Texaco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>DCB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <valueName>Dats24</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <valueName>Gabriels</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>Tinq</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Luxembourg</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>Aral</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <valueName>Fleetpass+</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <valueName>Octa+</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>Fleetcard (DCS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <controllingFieldValue>Switzerland-DE</controllingFieldValue>
+            <controllingFieldValue>Switzerland-FR</controllingFieldValue>
+            <valueName>Tamoil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <controllingFieldValue>Netherlands</controllingFieldValue>
+            <valueName>Go Tankkaart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Belgium-FR</controllingFieldValue>
+            <controllingFieldValue>Belgium-NL</controllingFieldValue>
+            <valueName>Belgian Fuel Card (BFC)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Austria</controllingFieldValue>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <controllingFieldValue>Luxembourg</controllingFieldValue>
+            <valueName>Routex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Germany</controllingFieldValue>
+            <valueName>Baywa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>France</controllingFieldValue>
+            <valueName>Easyfuel Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>France</controllingFieldValue>
+            <valueName>E.L’eclerc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Switzerland-DE</controllingFieldValue>
+            <controllingFieldValue>Switzerland-FR</controllingFieldValue>
+            <valueName>Migrol</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Switzerland-DE</controllingFieldValue>
+            <controllingFieldValue>Switzerland-FR</controllingFieldValue>
+            <valueName>Coop Pronto</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

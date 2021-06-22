@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Allows making calls in Connect using Click To Dial --></help>
+    <label><!-- Click To Dial support in Connect --></label>
+    <name>NVMConnect__EnableClickToDialSupportForConnect__c</name>
+</CustomFieldTranslation>

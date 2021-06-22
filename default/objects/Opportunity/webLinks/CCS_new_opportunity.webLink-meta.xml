@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_new_opportunity</fullName>
+    <availability>online</availability>
+    <description>Alternative button for opportunity - CCS.</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>CCS_new_opportunity</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>https://eu9.salesforce.com/006/e?retURL={!Account.Id}&amp;00N2000000ALKx8={!Account.CCS_Company_ID__c}&amp;opp4_lkid={!Account.Id}</url>
+</WebLink>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The behaviour that generated the reward --></help>
+    <label><!-- Behaviour --></label>
+    <name>success__Team_Achievement__c</name>
+    <relationshipLabel><!-- Rewards --></relationshipLabel>
+</CustomFieldTranslation>

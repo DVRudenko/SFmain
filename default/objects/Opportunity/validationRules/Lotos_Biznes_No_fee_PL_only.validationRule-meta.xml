@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lotos_Biznes_No_fee_PL_only</fullName>
+    <active>true</active>
+    <description>Product__c = "LOTOS Biznes No fee" is available only for Registered_Country__c = "Poland".</description>
+    <errorConditionFormula>AND(ISPICKVAL(Product__c, "LOTOS Biznes No fee"),
+Registered_Country__c != "Poland")</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Offer "LOTOS Biznes No fee" is available only for Poland.</errorMessage>
+</ValidationRule>

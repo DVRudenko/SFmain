@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Is first populated with Liters per month from Sales&apos; (Kraftstoffverbrauch Liter/Monat) and Starts Team can update. --></help>
+    <label><!-- Starts: Fuel Liters Per Mo Target --></label>
+    <name>Starts_Fuel_Liters_Per_Mo_Target__c</name>
+</CustomFieldTranslation>

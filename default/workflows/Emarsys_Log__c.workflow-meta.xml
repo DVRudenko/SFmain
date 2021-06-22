@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>New_Log_is_Created</fullName>
+        <description>New Log is Created</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Owner_Manager_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>notreply@info.pprcard.ru</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Emarsys/New_Log_is_Created</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Rus_Reaction_Log_resieved</fullName>
+        <description>New Rus Reaction Log resieved</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Owner_Manager_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>notreply@info.pprcard.ru</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Emarsys/New_Log_is_Created</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>DE_Business_Type</fullName>
+        <description>Set business type to DE</description>
+        <field>Business_Type__c</field>
+        <formula>&#39;DE&#39;</formula>
+        <name>DE Business Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>DE Business Type For Logs</fullName>
+        <actions>
+            <name>DE_Business_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Add DE business type for Other channel JITB logs. Used in automatic reaction getter classes.</description>
+        <formula>AND(Opportunity__r.NVM_Country__c   = &#39;Germany&#39; ,OR(Email_Id__c  = &#39;1107396&#39;,Email_Id__c  = &#39;1107425&#39;,Email_Id__c  = &#39;1107442&#39;))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Rus Emarsys Reaction Log</fullName>
+        <actions>
+            <name>New_Rus_Reaction_Log_resieved</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Rule for sending an email when Reaction Log update field on Opened or Clicked.</description>
+        <formula>AND(
+				NOT(ISNEW()), 
+				ISCHANGED( Type__c ), 
+				BEGINS(OwnerId, &#39;005&#39;), 
+				OR(
+								ISPICKVAL(Type__c, &#39;Opened&#39;), 
+								ISPICKVAL(Type__c, &#39;Clicked&#39;)
+						),
+				!CONTAINS(Email_Name__c, &#39;E2E&#39;)   
+   )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_refusal_of_insurance</fullName>
+    <active>true</active>
+    <description>If Insurance "Refusal" the text box Reason_for_refusal_of_insurance is required</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = 'Russian_Sales',
+$Profile.Name != "E2E RU Profile",
+$Profile.Name != "System Administrator",
+$Profile.Name != "RU_System_Administrator",
+$Profile.Name != 'API Only',
+NOT(ISCHANGED( OwnerId )),
+NOT(ISCHANGED( Last_Owner_Change_Date_RUS__c )),
+NOT(ISCHANGED( Number_of_open_tasks__c)),
+NOT(ISCHANGED( Open_Task__c )),
+ISPICKVAL(  Insurance__c , "Refusal" ),
+ISBLANK(  Reason_for_refusal_of_insurance__c )
+)</errorConditionFormula>
+    <errorDisplayField>Reason_for_refusal_of_insurance__c</errorDisplayField>
+    <errorMessage>Please state the reason</errorMessage>
+</ValidationRule>

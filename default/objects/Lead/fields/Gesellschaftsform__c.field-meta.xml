@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gesellschaftsform__c</fullName>
+    <externalId>false</externalId>
+    <label>Gesellschaftsform</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>AG</fullName>
+                <default>false</default>
+                <label>AG</label>
+            </value>
+            <value>
+                <fullName>Agency of an Overseas Business</fullName>
+                <default>false</default>
+                <label>Agency of an Overseas Business</label>
+            </value>
+            <value>
+                <fullName>Akciová společnost - a.s.</fullName>
+                <default>false</default>
+                <label>Akciová společnost - a.s.</label>
+            </value>
+            <value>
+                <fullName>AöR</fullName>
+                <default>false</default>
+                <label>AöR</label>
+            </value>
+            <value>
+                <fullName>Artisans</fullName>
+                <default>false</default>
+                <label>Artisans</label>
+            </value>
+            <value>
+                <fullName>ASBL</fullName>
+                <default>false</default>
+                <label>ASBL</label>
+            </value>
+            <value>
+                <fullName>Association</fullName>
+                <default>false</default>
+                <label>Association</label>
+            </value>
+            <value>
+                <fullName>Association à but lucratif</fullName>
+                <default>false</default>
+                <label>Association à but lucratif</label>
+            </value>
+            <value>
+                <fullName>Association à but non lucratif</fullName>
+                <default>false</default>
+                <label>Association à but non lucratif</label>
+            </value>
+            <value>
+                <fullName>Auto entrepreneur</fullName>
+                <default>false</default>
+                <label>Auto entrepreneur</label>
+            </value>
+            <value>
+                <fullName>Autres</fullName>
+                <default>false</default>
+                <label>Autres</label>
+            </value>
+            <value>
+                <fullName>Behörde</fullName>
+                <default>false</default>
+                <label>Behörde</label>
+            </value>
+            <value>
+                <fullName>Branch of an Overseas Business</fullName>
+                <default>false</default>
+                <label>Branch of an Overseas Business</label>
+            </value>
+            <value>
+                <fullName>BV</fullName>
+                <default>false</default>
+                <label>BV</label>
+            </value>
+            <value>
+                <fullName>BVBA</fullName>
+                <default>false</default>
+                <label>BVBA</label>
+            </value>
+            <value>
+                <fullName>Civil Law Partnership</fullName>
+                <default>false</default>
+                <label>Civil Law Partnership</label>
+            </value>
+            <value>
+                <fullName>Comm V</fullName>
+                <default>false</default>
+                <label>Comm V</label>
+            </value>
+            <value>
+                <fullName>Comm VA</fullName>
+                <default>false</default>
+                <label>Comm VA</label>
+            </value>
+            <value>
+                <fullName>Coöperatieve en onderlinge waarborgmaatschappij</fullName>
+                <default>false</default>
+                <label>Coöperatieve en onderlinge waarborgmaatschappij</label>
+            </value>
+            <value>
+                <fullName>Cooperative</fullName>
+                <default>false</default>
+                <label>Cooperative</label>
+            </value>
+            <value>
+                <fullName>CV</fullName>
+                <default>false</default>
+                <label>CV</label>
+            </value>
+            <value>
+                <fullName>CVBA</fullName>
+                <default>false</default>
+                <label>CVBA</label>
+            </value>
+            <value>
+                <fullName>CVOA</fullName>
+                <default>false</default>
+                <label>CVOA</label>
+            </value>
+            <value>
+                <fullName>e.K</fullName>
+                <default>false</default>
+                <label>e.K</label>
+            </value>
+            <value>
+                <fullName>e.U.</fullName>
+                <default>false</default>
+                <label>e.U.</label>
+            </value>
+            <value>
+                <fullName>e.V.</fullName>
+                <default>false</default>
+                <label>e.V.</label>
+            </value>
+            <value>
+                <fullName>Eenmanszaak</fullName>
+                <default>false</default>
+                <label>Eenmanszaak</label>
+            </value>
+            <value>
+                <fullName>EESV</fullName>
+                <default>false</default>
+                <label>EESV</label>
+            </value>
+            <value>
+                <fullName>eG</fullName>
+                <default>false</default>
+                <label>eG</label>
+            </value>
+            <value>
+                <fullName>EI</fullName>
+                <default>false</default>
+                <label>EI</label>
+            </value>
+            <value>
+                <fullName>Einzelfirma</fullName>
+                <default>false</default>
+                <label>Einzelfirma</label>
+            </value>
+            <value>
+                <fullName>EIRL</fullName>
+                <default>false</default>
+                <label>EIRL</label>
+            </value>
+            <value>
+                <fullName>ENTREPRISE INDIVIDUELLE</fullName>
+                <default>false</default>
+                <label>ENTREPRISE INDIVIDUELLE</label>
+            </value>
+            <value>
+                <fullName>ESV</fullName>
+                <default>false</default>
+                <label>ESV</label>
+            </value>
+            <value>
+                <fullName>EURL</fullName>
+                <default>false</default>
+                <label>EURL</label>
+            </value>
+            <value>
+                <fullName>Foundation</fullName>
+                <default>false</default>
+                <label>Foundation</label>
+            </value>
+            <value>
+                <fullName>Freier Beruf</fullName>
+                <default>false</default>
+                <label>Freier Beruf</label>
+            </value>
+            <value>
+                <fullName>GbR</fullName>
+                <default>false</default>
+                <label>GbR</label>
+            </value>
+            <value>
+                <fullName>GCV</fullName>
+                <default>false</default>
+                <label>GCV</label>
+            </value>
+            <value>
+                <fullName>GEIE</fullName>
+                <default>false</default>
+                <label>GEIE</label>
+            </value>
+            <value>
+                <fullName>General or Registered Partnership (sp. j.)</fullName>
+                <default>false</default>
+                <label>General or Registered Partnership (sp. j.)</label>
+            </value>
+            <value>
+                <fullName>Gewerbebetrieb</fullName>
+                <default>false</default>
+                <label>Gewerbebetrieb</label>
+            </value>
+            <value>
+                <fullName>gGmbH</fullName>
+                <default>false</default>
+                <label>gGmbH</label>
+            </value>
+            <value>
+                <fullName>GIE</fullName>
+                <default>false</default>
+                <label>GIE</label>
+            </value>
+            <value>
+                <fullName>GmbH</fullName>
+                <default>false</default>
+                <label>GmbH</label>
+            </value>
+            <value>
+                <fullName>GmbH &amp; co KG</fullName>
+                <default>false</default>
+                <label>GmbH &amp; co KG</label>
+            </value>
+            <value>
+                <fullName>KG</fullName>
+                <default>false</default>
+                <label>KG</label>
+            </value>
+            <value>
+                <fullName>Körperschaft Öffentlichen Rechts</fullName>
+                <default>false</default>
+                <label>Körperschaft Öffentlichen Rechts</label>
+            </value>
+            <value>
+                <fullName>Limited Joint Stock Partnership (S.K.A.)</fullName>
+                <default>false</default>
+                <label>Limited Joint Stock Partnership (S.K.A.)</label>
+            </value>
+            <value>
+                <fullName>Limited Liability Partnership (sp. p.)</fullName>
+                <default>false</default>
+                <label>Limited Liability Partnership (sp. p.)</label>
+            </value>
+            <value>
+                <fullName>Limited Partnership (sp. k.)</fullName>
+                <default>false</default>
+                <label>Limited Partnership (sp. k.)</label>
+            </value>
+            <value>
+                <fullName>Maatschap</fullName>
+                <default>false</default>
+                <label>Maatschap</label>
+            </value>
+            <value>
+                <fullName>mbB</fullName>
+                <default>false</default>
+                <label>mbB</label>
+            </value>
+            <value>
+                <fullName>mbH</fullName>
+                <default>false</default>
+                <label>mbH</label>
+            </value>
+            <value>
+                <fullName>NV</fullName>
+                <default>false</default>
+                <label>NV</label>
+            </value>
+            <value>
+                <fullName>oHG</fullName>
+                <default>false</default>
+                <label>oHG</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pobočka</fullName>
+                <default>false</default>
+                <label>Pobočka</label>
+            </value>
+            <value>
+                <fullName>Profession libérale</fullName>
+                <default>false</default>
+                <label>Profession libérale</label>
+            </value>
+            <value>
+                <fullName>SA</fullName>
+                <default>false</default>
+                <label>SA</label>
+            </value>
+            <value>
+                <fullName>SARL</fullName>
+                <default>false</default>
+                <label>SARL</label>
+            </value>
+            <value>
+                <fullName>SAS</fullName>
+                <default>false</default>
+                <label>SAS</label>
+            </value>
+            <value>
+                <fullName>SASU</fullName>
+                <default>false</default>
+                <label>SASU</label>
+            </value>
+            <value>
+                <fullName>SCA</fullName>
+                <default>false</default>
+                <label>SCA</label>
+            </value>
+            <value>
+                <fullName>SCP</fullName>
+                <default>false</default>
+                <label>SCP</label>
+            </value>
+            <value>
+                <fullName>SCRI</fullName>
+                <default>false</default>
+                <label>SCRI</label>
+            </value>
+            <value>
+                <fullName>SCRL</fullName>
+                <default>false</default>
+                <label>SCRL</label>
+            </value>
+            <value>
+                <fullName>SCS</fullName>
+                <default>false</default>
+                <label>SCS</label>
+            </value>
+            <value>
+                <fullName>SE</fullName>
+                <default>false</default>
+                <label>SE</label>
+            </value>
+            <value>
+                <fullName>Secteur Public</fullName>
+                <default>false</default>
+                <label>Secteur Public</label>
+            </value>
+            <value>
+                <fullName>SNC</fullName>
+                <default>false</default>
+                <label>SNC</label>
+            </value>
+            <value>
+                <fullName>Sole proprietorship</fullName>
+                <default>false</default>
+                <label>Sole proprietorship</label>
+            </value>
+            <value>
+                <fullName>Sonstige Kapitalgesellschaften</fullName>
+                <default>false</default>
+                <label>Sonstige Kapitalgesellschaften</label>
+            </value>
+            <value>
+                <fullName>Společnost s ručením omezeným - s.r.o.</fullName>
+                <default>false</default>
+                <label>Společnost s ručením omezeným - s.r.o.</label>
+            </value>
+            <value>
+                <fullName>SPRL</fullName>
+                <default>false</default>
+                <label>SPRL</label>
+            </value>
+            <value>
+                <fullName>Stichting</fullName>
+                <default>false</default>
+                <label>Stichting</label>
+            </value>
+            <value>
+                <fullName>Stiftung</fullName>
+                <default>false</default>
+                <label>Stiftung</label>
+            </value>
+            <value>
+                <fullName>The Polish Joint Stock Company (S.A.)</fullName>
+                <default>false</default>
+                <label>The Polish Joint Stock Company (S.A.)</label>
+            </value>
+            <value>
+                <fullName>The Polish Limited Liability Company (sp.z o.o)</fullName>
+                <default>false</default>
+                <label>The Polish Limited Liability Company (sp.z o.o)</label>
+            </value>
+            <value>
+                <fullName>UG</fullName>
+                <default>false</default>
+                <label>UG</label>
+            </value>
+            <value>
+                <fullName>UG &amp; Co. KG</fullName>
+                <default>false</default>
+                <label>UG &amp; Co. KG</label>
+            </value>
+            <value>
+                <fullName>VaG</fullName>
+                <default>false</default>
+                <label>VaG</label>
+            </value>
+            <value>
+                <fullName>Veřejná obchodní společnost - v.o.s.</fullName>
+                <default>false</default>
+                <label>Veřejná obchodní společnost - v.o.s.</label>
+            </value>
+            <value>
+                <fullName>Vereniging</fullName>
+                <default>false</default>
+                <label>Vereniging</label>
+            </value>
+            <value>
+                <fullName>VOF</fullName>
+                <default>false</default>
+                <label>VOF</label>
+            </value>
+            <value>
+                <fullName>VZW</fullName>
+                <default>false</default>
+                <label>VZW</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

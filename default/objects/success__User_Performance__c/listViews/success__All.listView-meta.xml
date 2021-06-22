@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__All</fullName>
+    <columns>NAME</columns>
+    <columns>success__Team_Member__c</columns>
+    <columns>success__User__c</columns>
+    <columns>success__Experience__c</columns>
+    <columns>success__Rank__c</columns>
+    <columns>success__Level__c</columns>
+    <columns>success__As_Of__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

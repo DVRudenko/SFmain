@@ -1,0 +1,55 @@
+<aura:component extends="c:BaseComponent" controller="GFNI_DashboardCtrl">
+    <aura:attribute name="accountDetails" type="List"/>
+    <aura:attribute name="relatedAccountList" type="List"/>
+    <aura:attribute name="colCoId" type="String"/>
+    <aura:attribute name="customerGfnNumber" type="String"/>    
+    <aura:attribute name="loaded" type="Boolean" default="false" />
+    <aura:attribute name="gfnParams" type="String" />
+    <aura:attribute name="redirectAccountLink" type="String"/>
+    <aura:attribute name="changeStatusLink" type="String" />
+    <aura:attribute name="errorMessage" type="String" default="No data"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.gfnParams}" action="{!c.getAccountData}"/>
+
+    <aura:registerEvent name="ChangeAccParamsEvent" type="c:ChangeAccParamsEvent"/>
+
+    <lightning:card iconName="standard:account" class="slds-card_boundary slds-m-around_large slds-scrollable">
+        <aura:set attribute="title">
+            <a href="{!v.redirectAccountLink}" target="_blank"> Account Details (GFN)</a>
+        </aura:set>
+        <aura:set attribute="actions">
+            <a class="slds-button slds-button_neutral" href="{!v.changeStatusLink}" target="_blank">Change Status (GFN)</a>
+        </aura:set>
+        <aura:set attribute="body">
+            <aura:if isTrue="{!v.loaded}">
+                <div class="slds-m-around_xx-small slds-p-left_small slds-align_absolute-center slds-p-bottom_x-small slds-p-right_small">
+                    <div class="slds-media__body">
+                        <div class="slds-grid slds-wrap">
+                            <aura:if isTrue="{!empty(v.accountDetails)}">
+                                <span class="slds-text-title_caps slds-align_absolute-center">{!v.errorMessage}</span>
+                                <aura:set attribute="else">
+                                    <aura:iteration items="{!v.accountDetails}" var="detail">
+                                        <div class=" slds-grid slds-col slds-size_1-of-2 slds-has-dividers_bottom column-min-size">
+                                            <div class="slds-text-title_bold slds-text-title_caps parametr-heading-size_small ">{!detail.name}</div>
+                                            <div class="{! or(  and(detail.name == 'Debtor Status', detail.value != 'GP Managed'), 
+                                                                detail.isLotosLob ) ? 'red-detail-value' : '' + 'slds-has-flexi-truncate'}">
+                                                <div class="parametr-value-size_small slds-truncate">{!detail.value}</div>
+                                            </div>
+                                        </div>
+                                    </aura:iteration>
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                    </div>
+                </div>
+                <aura:set attribute="else">
+                    <lightning:spinner alternativeText="Loading" size="small" />
+                </aura:set>
+            </aura:if>
+        </aura:set>
+        <aura:set attribute="footer">
+            <c:RelatedAccountsGFN relatedAccountList="{!v.relatedAccountList}" gfnParams="{!v.gfnParams}" isClassic="{!v.isClassic}" lineOfBusiness="{!v.lineOfBusiness}"/>
+        </aura:set>
+    </lightning:card>
+</aura:component>

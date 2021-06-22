@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AGB_Datenschutzhinweise_Richtigkeit__c</fullName>
+    <defaultValue>true</defaultValue>
+    <externalId>false</externalId>
+    <inlineHelpText>Kunde (bei Personengesellschaften aller inhaber) bestätigt, die Allgemeinen Geschäftsbedingungen inkl. der Datenschutzhinweise und der aktuellen Gebührenüberischt gelesen zu haben und erkennt diese an. Kunde bestätigt die Richtigkeit der gemachten Angaben</inlineHelpText>
+    <label>AGB/Datenschutzhinweise/Richtigkeit</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

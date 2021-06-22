@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rate_Per__c</fullName>
+    <externalId>false</externalId>
+    <label>Rate Per</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 Liter</fullName>
+                <default>false</default>
+                <label>1 Liter</label>
+            </value>
+            <value>
+                <fullName>100 Liters</fullName>
+                <default>false</default>
+                <label>100 Liters</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

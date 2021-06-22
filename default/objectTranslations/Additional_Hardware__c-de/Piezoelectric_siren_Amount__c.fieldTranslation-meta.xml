@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Acoustic sirena signaling in the absence of driver identification. --></help>
+    <label><!-- Piezoelectric siren --></label>
+    <name>Piezoelectric_siren_Amount__c</name>
+</CustomFieldTranslation>

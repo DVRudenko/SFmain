@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category_3_only_for_Switzerland</fullName>
+    <active>true</active>
+    <description>This product is available only for Switzerland.</description>
+    <errorConditionFormula>IF( 
+(Opportunity__r.Account.BillingCountry = &#39;Switzerland-DE&#39; || 
+Opportunity__r.Account.BillingCountry = &#39;Switzerland-FR&#39; || 
+Opportunity__r.Account.BillingCountry = &#39;Switzerland-IT&#39;) 
+&amp;&amp; ISPICKVAL(Produktbezugskategorie__c, &quot;3 Kategorie 2 plus alle Shopartikel&quot;), 
+false, 
+IF((Opportunity__r.Account.BillingCountry != &#39;Switzerland-DE&#39; || 
+Opportunity__r.Account.BillingCountry != &#39;Switzerland-FR&#39; || 
+Opportunity__r.Account.BillingCountry != &#39;Switzerland-IT&#39;) 
+&amp;&amp; ISPICKVAL(Produktbezugskategorie__c, &quot;3 Kategorie 2 plus alle Shopartikel&quot;), true, false) 
+)</errorConditionFormula>
+    <errorDisplayField>Produktbezugskategorie__c</errorDisplayField>
+    <errorMessage>This product is available only for Switzerland.</errorMessage>
+</ValidationRule>

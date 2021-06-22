@@ -1,0 +1,41 @@
+<!--
+ - Created by Andrei.Katunin on 09.07.2018.
+ -->
+
+<apex:component id="E2EComponentList" controller="E2EComponentsCtrl">
+
+    <apex:attribute name="labelValue"
+                    type="String"
+                    description="" />
+
+    <apex:attribute name="ulClass"
+                    type="String"
+                    description="" />
+
+    <apex:attribute name="liClass"
+                    type="String"
+                    description="" />
+
+    <apex:attribute name="split"
+                    type="String"
+                    assignTo="{!splitRegex}"
+                    description="" />
+
+    <apex:attribute name="list"
+                    type="String"
+                    assignTo="{!listValueSplitString}"
+                    description="" />
+
+    <apex:attribute name="labelClass"
+                    type="String"
+                    description="" />
+
+    <label class="{!IF(labelClass == null, '', labelClass)}" for="">{!labelValue}</label>
+    <ul class="{!IF(ulClass == null, '', ulClass)}">
+        <apex:repeat var="item" value="{!Splits}" id="listRepeat">
+            <li class="{!IF(liClass == null, '', liClass)}">
+                <apex:outputText escape="false" value="{!item}"/>
+            </li>
+        </apex:repeat>
+    </ul>
+</apex:component>

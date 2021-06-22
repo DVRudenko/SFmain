@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>clicktocallAssistantPhone__c</fullName>
+    <description>this field should be deleted when there is an integration with telephony system for Russia
+            *removes '#' and numbers after</description>
+    <externalId>false</externalId>
+    <formula>HYPERLINK("sip:"&amp; IF(CONTAINS(AssistantPhone,'#'), LEFT(AssistantPhone, FIND('#',AssistantPhone,0)-1), AssistantPhone)
+            , AssistantPhone)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>clicktocallAssistantPhone</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

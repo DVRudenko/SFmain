@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LeadAssignBE_NLJITB_Lead</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Queue</filterScope>
+    <label>LeadAssignBE_NLJITB</label>
+    <language>en_US</language>
+    <queue>LeadAssignBE_NLJITB</queue>
+    <sharedTo>
+        <roleAndSubordinates>Salesmanager</roleAndSubordinates>
+        <roleAndSubordinates>Salesmanager_2</roleAndSubordinates>
+    </sharedTo>
+</ListView>

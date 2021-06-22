@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accounts_Flexcard</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT_SOURCE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>Kreditlimit_FO_Account__c</columns>
+    <columns>Branchencode__c</columns>
+    <columns>Branchentext__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>contains</operation>
+        <value>mlole,joer,nland</value>
+    </filters>
+    <label>Accounts Flexcard</label>
+    <language>de</language>
+    <sharedTo>
+        <role>Salesteam_Flexcard</role>
+    </sharedTo>
+</ListView>

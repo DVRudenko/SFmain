@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMContactWorld__IsPreCallEvent__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>If ticked, this event was created before the call actually started, and it indicates that the call should be related to the object indicated in the &quot;relatedTo&quot; field</description>
+    <externalId>false</externalId>
+    <label>Is Pre Call Event</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

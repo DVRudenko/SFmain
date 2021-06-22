@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regions__c</fullName>
+    <externalId>false</externalId>
+    <label>Regions</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Product__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bayern–(Bayern+Baden-Württemberg)</fullName>
+                <default>false</default>
+                <label>Bayern–(Bayern+Baden-Württemberg)</label>
+            </value>
+            <value>
+                <fullName>Sachsen &amp; Brandenburg – BB+ST+SN+BE</fullName>
+                <default>false</default>
+                <label>Sachsen &amp; Brandenburg – BB+ST+SN+BE</label>
+            </value>
+            <value>
+                <fullName>Rhein &amp; Saar – NW+RP+SL</fullName>
+                <default>false</default>
+                <label>Rhein &amp; Saar – NW+RP+SL</label>
+            </value>
+            <value>
+                <fullName>Hessen &amp; Thüringen – HE+TH</fullName>
+                <default>false</default>
+                <label>Hessen &amp; Thüringen – HE+TH</label>
+            </value>
+            <value>
+                <fullName>Niedersachsen &amp; Vorpommern – NI+MV+SH+HB</fullName>
+                <default>false</default>
+                <label>Niedersachsen &amp; Vorpommern – NI+MV+SH+HB</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

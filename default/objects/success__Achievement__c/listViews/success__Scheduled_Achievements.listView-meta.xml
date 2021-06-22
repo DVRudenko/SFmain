@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Scheduled_Achievements</fullName>
+    <columns>NAME</columns>
+    <columns>success__Description__c</columns>
+    <columns>success__Experience_Formula__c</columns>
+    <columns>success__Badge_Type__c</columns>
+    <columns>success__Badge_Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>success__Achievement__c.success__Scheduled</value>
+    </filters>
+    <label>Scheduled</label>
+    <language>en_US</language>
+</ListView>

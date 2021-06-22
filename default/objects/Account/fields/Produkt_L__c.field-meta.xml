@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Produkt_L__c</fullName>
+    <externalId>false</externalId>
+    <label>Produkt</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>euroShell Card Kompakt</fullName>
+                <default>false</default>
+                <label>euroShell Card Kompakt</label>
+            </value>
+            <value>
+                <fullName>euroShell Card International</fullName>
+                <default>false</default>
+                <label>euroShell Card International</label>
+            </value>
+            <value>
+                <fullName>Limit+</fullName>
+                <default>false</default>
+                <label>Limit+</label>
+            </value>
+            <value>
+                <fullName>Limit</fullName>
+                <default>false</default>
+                <label>Limit</label>
+            </value>
+            <value>
+                <fullName>Carnet</fullName>
+                <default>false</default>
+                <label>Carnet</label>
+            </value>
+            <value>
+                <fullName>Bonus</fullName>
+                <default>false</default>
+                <label>Bonus</label>
+            </value>
+            <value>
+                <fullName>UTA</fullName>
+                <default>false</default>
+                <label>UTA</label>
+            </value>
+            <value>
+                <fullName>bundle</fullName>
+                <default>false</default>
+                <label>bundle</label>
+            </value>
+            <value>
+                <fullName>Bonus Fleet</fullName>
+                <default>false</default>
+                <label>Bonus Fleet</label>
+            </value>
+            <value>
+                <fullName>dotazy zákazníka</fullName>
+                <default>false</default>
+                <label>dotazy zákazníka</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

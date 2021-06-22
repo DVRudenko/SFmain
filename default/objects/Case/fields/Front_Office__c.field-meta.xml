@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Front_Office__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>STCP1-303/to determine if a case is related to Front or Back office, for DE support.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>If checked the case is related to front office.</inlineHelpText>
+    <label>Front Office</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Employee*</label>
+    <name>Beschaeftigte__c</name>
+    <picklistValues>
+        <masterLabel>1-4</masterLabel>
+        <translation><!-- 1-4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>10-19</masterLabel>
+        <translation><!-- 10-19 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100-149</masterLabel>
+        <translation><!-- 100-149 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>150-199</masterLabel>
+        <translation><!-- 150-199 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>20-49</masterLabel>
+        <translation><!-- 20-49 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5-9</masterLabel>
+        <translation><!-- 5-9 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>50-74</masterLabel>
+        <translation><!-- 50-74 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>75-99</masterLabel>
+        <translation><!-- 75-99 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>&gt;200</masterLabel>
+        <translation><!-- &gt;200 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>k.A.</masterLabel>
+        <translation>No information</translation>
+    </picklistValues>
+</CustomFieldTranslation>

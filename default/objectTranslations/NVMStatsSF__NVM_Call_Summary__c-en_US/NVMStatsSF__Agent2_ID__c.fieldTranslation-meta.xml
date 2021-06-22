@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Agent ID of the last known agent who worked on the Call/Case (if transferred) --></help>
+    <label><!-- Agent2 ID --></label>
+    <name>NVMStatsSF__Agent2_ID__c</name>
+</CustomFieldTranslation>

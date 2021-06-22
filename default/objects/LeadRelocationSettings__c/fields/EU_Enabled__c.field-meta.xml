@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EU_Enabled__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Enables relocation of EU Leads in LeadRelocationBatch</description>
+    <externalId>false</externalId>
+    <label>EU Enabled</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

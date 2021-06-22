@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carnet_Standard_Price_Book_Product</fullName>
+    <active>true</active>
+    <description>Is the correct Price Book selected on Opportunity? (Price Book vs. Product)</description>
+    <errorConditionFormula>IF(
+AND(
+RecordType.DeveloperName = "Carnet",
+Account_Price_Book__c &lt;&gt; null,
+ISPICKVAL(Product__c, "Carnet Standard 2019"),
+Account_Price_Book__r.Price_Book__r.RecordType.DeveloperName &lt;&gt; "Carnet_Unit"),
+true,
+false)</errorConditionFormula>
+    <errorDisplayField>Account_Price_Book__c</errorDisplayField>
+    <errorMessage>Please, select a correct Product Price Book for this Opportunity!</errorMessage>
+</ValidationRule>

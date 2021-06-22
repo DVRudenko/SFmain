@@ -1,0 +1,18 @@
+{
+	"translations": {
+		"title": {
+			"en": "Clean Advantage program",
+			"cs": "Clean Advantage program"
+		},
+		"description": {
+			"en": "<p>Contribute to reduction of CO2 emissions together with FLEETCOR! We offer you the Clean Advantage program for climate-neutral driving. Become a part of this project and actively protect our planet with every meter driven!</p><p>By participating in this program, you automatically donate 0,20 CZK per pumped liter of fuel to environmental protection projects. This way you can actively help to prevent climate catastrophes.</p>",
+			"cs": "<p>Přispějte ke snížení emisí CO2 společně se společností FLEETCOR! Nabízíme Vám program Clean Advantage, kde s každým najetým kilometrem budete moci aktivně přispívat na ochranu životního prostředí v závislosti na spotřebě paliv ve Vaší společnosti!</p><p>Účastí v tomto programu automaticky darujete za každý natankovaný litr paliva 0,20 Kč na ochranu životního prostředí. Tímto způsobem můžete aktivně pomáhat předcházet klimatickým katastrofám.</p>"
+		}
+	},
+	"settings": {
+		"bgImage": "/resource/ete_images/bgInfoCardFirst.png",
+		"show_more": "false",
+		"show_checkbox_1": "false",
+		"show_checkbox_2": "false"
+	}
+}

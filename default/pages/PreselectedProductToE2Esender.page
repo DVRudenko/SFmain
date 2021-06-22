@@ -1,0 +1,216 @@
+<apex:page controller="PreselectedProductToE2EsenderCtrl" action="{! init }" docType="html-5.0" lightningStylesheets="true">
+    <apex:form id="formId">
+        <head>
+            <apex:includeScript value="{!$Resource.jQuery}"/>
+            <apex:stylesheet value="{!URLFOR($Resource.E2ESpinner_2_0, 'spinner.css')}"/>
+            <script>
+                function startSplash() {
+                    jQuery('.spinner-lightbox').fadeIn(50);
+                }
+                function endSplash() {
+                    jQuery('.spinner-lightbox').fadeOut(50);
+                }
+            </script>
+            <style>
+                .headerimage {margin: 20px 0 10px 30px;}
+                *:focus {outline: none;}
+                
+                .contact_form h2, .contact_form label {font-family:Georgia, Times, "Times New Roman", serif;}
+                .form_hint, .required_notification {font-size: 11px; 
+                }
+                .contact_form {
+                    font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif; margin: 0px; padding: 0px;
+                }
+                .contact_form ul {
+                    width:1000px;
+                    list-style-type:none;
+                    list-style-position:outside;
+                    margin:0px;
+                    padding:0px;
+                }
+                .contact_form li{
+                    padding:12px;
+                    border-bottom:1px solid #eee;
+                    position:relative;
+                }
+                .contact_form li:first-child, .contact_form li:last-child {
+                    border-bottom:1px solid #777;
+                }
+                .contact_form h2 {
+                    margin:0;
+                    display: inline;
+                }
+                .cke_chrome {
+                    width: 650px;
+                }
+                .required_notification {
+                    color:#d45252;
+                    margin:5px 0 0 0;
+                    display:inline;
+                    float:right;
+                }
+                .contact_form label {
+                    width:150px;
+                    margin-top: 3px;
+                    display:inline-block;
+                    float:left;
+                }
+                .contact_form output {
+                    height:20px;
+                    width:220px;
+                    padding:5px 8px;
+                }
+                .contact_form textarea {padding:8px; width:300px;}
+                .contact_form button {margin-left:156px;}
+                .contact_form output, .contact_form textarea {
+                    border:1px solid #aaa;
+                    width: 70%;
+                    box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+                    border-radius:2px;
+                }
+                .contact_form output:focus, .contact_form textarea:focus {
+                    background: #fff;
+                    border:1px solid gray;
+                    box-shadow: 0 0 3px #aaa;
+                }
+                .btns-container {
+                    display: inline-flex;
+                }
+                input.btn.submit {
+                    background-color: #68b12f !important;
+                    background: -webkit-gradient(linear, left top, left bottom, from(#68b12f), to(#50911e));
+                    background: -webkit-linear-gradient(top, #68b12f, #50911e);
+                    background: -moz-linear-gradient(top, #68b12f, #50911e);
+                    background: -ms-linear-gradient(top, #68b12f, #50911e);
+                    background: -o-linear-gradient(top, #68b12f, #50911e);
+                    background: linear-gradient(top, #68b12f, #50911e);
+                    border: 1px solid #509111;
+                    border-bottom: 1px solid #5b992b;
+                    border-radius: 3px;
+                    -webkit-border-radius: 3px;
+                    -moz-border-radius: 3px;
+                    -ms-border-radius: 3px;
+                    -o-border-radius: 3px;
+                    box-shadow: inset 0 1px 0 0 #9fd574;
+                    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+                    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+                    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+                    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+                    color: white;
+                    font-weight: bold;
+                    padding: 6px 20px;
+                    margin: 0 5px;
+                    text-shadow: 0 -1px 0 #396715;
+                }
+                input.btn.submit:hover {
+                    opacity:.85;
+                    cursor: pointer;
+                }
+                input.btn.submit:active {
+                    border: 1px solid #20911e;
+                    box-shadow: 0 0 10px 5px #356b0b inset;
+                    -webkit-box-shadow:0 0 10px 5px #356b0b inset ;
+                    -moz-box-shadow: 0 0 10px 5px #356b0b inset;
+                    -ms-box-shadow: 0 0 10px 5px #356b0b inset;
+                    -o-box-shadow: 0 0 10px 5px #356b0b inset;
+                }
+                input.btn.cancel {
+                    margin: 0 5px;
+                    padding: 6px 20px;
+                }
+                input.btn.cancel:hover {
+                    opacity:.85;
+                    cursor: pointer;
+                }
+                /*add indent for the selected field*/
+                .contact_form output:focus, .contact_form textarea:focus {
+                    padding-right:40px;
+                }
+                .contact_form output, .contact_form textarea {
+                    -moz-transition: padding .25s;
+                    -webkit-transition: padding .25s;
+                    -o-transition: padding .25s;
+                    transition: padding .25s;
+                }
+                .contact_form output, .contact_form textarea {
+                    padding-right:30px;
+                }
+                ::-webkit-validation-bubble-message {
+                    padding: 1em;
+                }
+                .preview {
+                    width: 600px;
+                    margin-left: 150px;
+                    line-height: 17px;
+                }
+                .edit-link {
+                    text-decoration: none;
+                    color: #4292E7;
+                    margin: 0 7px;
+                }
+            </style>
+        </head>
+        <div class="headerimage">
+            <apex:image url="{!URLFOR($Resource.e2e_images, 'logo.png')}"/>
+        </div>
+        <apex:pageMessages escape="false"/>
+        <body>
+            <div class="contact_form">
+                <ul>
+                    <li>
+                        <h2>Email to send:</h2>
+                        <span class="required_notification">* Denotes Required Field</span>
+                    </li>
+                    <li>
+                        <label>Select product:</label>
+                        <apex:selectList value="{! selectedProduct }" size="1" multiselect="false" style="margin-left: 5px;">
+                            <apex:selectOptions value="{! productsList }"/>
+                            <apex:actionSupport action="{! setEmailBody }" onsubmit="startSplash();" event="onchange"/>
+                        </apex:selectList>
+                    </li>
+                    <apex:outputPanel rendered="{! iSBLANK(errorMessage) }">
+                        <li>
+                            <label>Email address*:</label>
+                            <apex:outputText value="{! lead.Email }" style="margin-top: 3px; display: inline-block;"/>
+                        </li>
+                        <li>
+                            <label>Body*:</label>
+                            <div class="preview">
+                                <apex:inputTextArea value="{! emailBody }" rows="70" richText="true"/>
+                            </div>
+                        </li>
+                        <li>
+                            <label>Attachments*:</label>
+                            <apex:outputText style="margin-top: 3px; display: inline-block;">
+                                <apex:repeat value="{! attachmentsMap }" var="emailTemplateId">
+                                    <apex:repeat value="{! attachmentsMap[emailTemplateId] }" var="attach">
+                                        {! attach.Name } 
+                                        <a href="/{! emailTemplateId }" target="_blank" class="edit-link">
+                                            <apex:image url="{!URLFOR($Resource.e2e_images, 'pen.png')}" style="width: 15px;"/> edit
+                                        </a>
+                                    </apex:repeat>
+                                </apex:repeat>
+                            </apex:outputText>
+                        </li>
+                        <li style="text-align: center;">
+                            <div class="btns-container">
+                                <div class="btn-cancel-block">
+                                    <apex:commandbutton onclick="startSplash();" value="Back to Lead" action="{! backToLead }" styleClass="cancel"/>
+                                </div>
+                                <div class="btn-submit-block">
+                                    <apex:commandbutton onclick="startSplash();" value="Send request" action="{! sendEmail }" styleClass="submit"/>
+                                </div>
+                            </div>
+                        </li>
+                    </apex:outputPanel>
+                </ul>
+            </div>
+            <div class="spinner-lightbox">
+                <apex:actionStatus id="splashStatus" onstart="startSplash();" onstop="endSplash();"/>
+                <div class="splashStatus" id="splashDiv">
+                    <img class="spinner-icon" src="{!URLFOR($Resource.e2e_images, 'preloader-loop.gif')}"/>
+                </div>
+            </div>
+        </body>
+    </apex:form> 
+</apex:page>

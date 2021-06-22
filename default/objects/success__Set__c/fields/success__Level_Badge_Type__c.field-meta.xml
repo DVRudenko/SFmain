@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Level_Badge_Type__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Level Badge Type</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Only Badge Types can be selected</errorMessage>
+        <filterItems>
+            <field>success__Graphic__c.success__Type__c</field>
+            <operation>equals</operation>
+            <value>Badge</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>success__Graphic__c</referenceTo>
+    <relationshipLabel>Sets</relationshipLabel>
+    <relationshipName>Sets</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

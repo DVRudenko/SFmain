@@ -1,0 +1,95 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "Wait until you receive your Shell cards and PIN numbers by post.",
+                "cs": "Počkejte, až poštou obdržíte své palivové karty Shell a PIN."
+            },
+            {
+                "en": "You can now use your card(s) for the first time while refueling at a Shell Station.",
+                "cs": "Poté můžete své karty začít ihned používat, není třeba je aktivovat. Užijte si bezstarostné tankování na čerpacích stanicích Shell!"
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "discount at Shell gas stations in the Czech Republic",
+                    "cs": "sleva na čerpacích stanicích Shell v České republice"
+                },
+                "value": {
+                    "en": "0,80 CZK/liter",
+                    "cs": "0,80 Kč/litr"
+                }
+            },
+            {
+                "label": {
+                    "en": "discount on a car wash at Shell petrol stations in the Czech Republic",
+                    "cs": "sleva na automyčku na čerpacích stanicích Shell v České republice"
+                },
+                "value": {
+                    "en": "10%",
+                    "cs": "10%"
+                }
+            },
+            {
+                "label": {
+                    "en": "card issuing and delivery",
+                    "cs": "vystavení a doručení karty"
+                },
+                "value": {
+                    "en": "FREE",
+                    "cs": "ZDARMA"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "Shell Basic 2020 CZ"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "cs": "SHELL KARTA"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/shellkarte_eu.jpg"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "Shell fuel card for business guarantees your company stable and permanent fuel discounts, a convenient online customer portal and a dense network of stations.",
+            "cs": "Firemní palivová karta Shell zaručuje Vaší společnosti stabilní a trvalé slevy na pohonné hmoty, snadný a praktický zákaznický on-line portál a hustou síť čerpacích stanic."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "cs": "SHELL KARTA"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "SHELL CARDS",
+            "cs": "SHELL KARTY"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "SHELL KARTA",
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "1",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "monthlyFuelConsumption_max": "5000",
+            "monthlyFuelConsumption_min": "50",
+            "order": 4
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Czech Republic": "/resource/ETE_DOCUMENTS_1/tariffSheets_shellbasic2020cz.jpg"
+    }
+}

@@ -1,0 +1,37 @@
+<apex:page controller="LeadConversionCarnetctrl" action="{!init}">
+    <apex:form >
+        <apex:pageMessages escape="false"/>
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="1" title="Account info">
+                <apex:inputField value="{!lead.Company}" required="true"/>
+                <!--<apex:inputField value="{!lead.Account_Status__c}" required="true"/>-->
+                <apex:inputField value="{!lead.Street}" required="true"/>
+                <apex:inputField value="{!lead.City}" required="true"/>
+                <apex:inputField value="{!lead.PostalCode}" required="true"/>
+                <apex:inputField value="{!lead.StateCode}" required="true"/>
+                <apex:inputField value="{!lead.CountryCode}" required="true"/>
+                <apex:inputField value="{!lead.Steuernummer__c}" required="true"/>
+                <apex:inputField value="{!lead.Branche_NACE__c}" required="true"/>
+                <apex:inputField value="{!lead.Beschaeftigte__c}" required="true"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1" title="Contact info">
+                <apex:inputField value="{!lead.Salutation}" required="true"/>
+                <apex:inputField value="{!lead.FirstName}" required="true"/>
+                <apex:inputField value="{!lead.LastName}" required="true"/>
+                <apex:inputField value="{!lead.Phone}" required="true"/>
+                <apex:inputField value="{!lead.Email}" required="true"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1" title="Opportunity info">
+                <apex:inputField value="{!lead.Product__c}" required="true" rendered="{!if(lead.CCS_Opportunity_Record_Type__c = 'Carnet',true,false)}"/>
+                <apex:inputField value="{!lead.CCS_Close_Date__c}" required="true"/>
+                <apex:inputField value="{!lead.Opportunity_Type__c}" required="true"/>
+                <apex:inputField value="{!lead.CCS_Number_of_GPS_units__c}" required="true" rendered="{!if(lead.CCS_Opportunity_Record_Type__c = 'Carnet',true,false)}"/>
+                <apex:inputField value="{!lead.Anzahl_der_Fahrzeuge__c}" required="true"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!cancel}" value="Cancel" immediate="true"/>
+                <apex:commandButton action="{!convertLead}" value="Proceed with Conversion"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DD_interested_locked</fullName>
+    <active>true</active>
+    <description>Checkbox DD interested is mandatory when Type != "New GFN".</description>
+    <errorConditionFormula>AND(
+RecordTypeId = "0120O000000XMWa",
+$Profile.Name = "Sales Inbound",
+NOT(ISPICKVAL(PRIORVALUE(Type),'New GFN')),
+ISCHANGED(DD_Interested__c)
+)</errorConditionFormula>
+    <errorDisplayField>DD_Interested__c</errorDisplayField>
+    <errorMessage>You cannot check DD Interested.</errorMessage>
+</ValidationRule>

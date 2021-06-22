@@ -1,0 +1,157 @@
+/* Naumen SoftPhone CSS */
+#overlay{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: gray;
+  opacity: .15;
+  z-index: 1001;
+}
+.modal_popup {
+  z-index: 1002;
+}
+.red {color: red !important; fill: red !important;}
+.orange {color: orange !important; fill: red !important;}
+.green {color: green !important; fill: green !important;}
+.purple {color: #c908de !important; fill: #c908de !important;}
+.hidden {display: none;}
+/* -- text -- */
+.bold {
+  font-weight: bold;
+}
+/* -- icons -- */
+.icon-naumen {
+  background-color: #0dc42879;
+  fill: white !important;
+  border-radius: 0.25rem;
+}
+.icon-disconnected {
+  background-color: #e9696e;
+  fill: white !important;
+  border-radius: 0.5rem;
+}
+.icon-warning {
+  background-color: white;
+  fill: orange !important;
+}
+.icon-close {
+  fill: #323284eb !important;
+}
+.icon-autocall {
+  background-color: #1589eead;
+  fill: white !important;
+  border-radius: 0.25rem;
+}
+.icon-callback {
+  fill: #fe00fe87 !important;
+  border-radius: 0.25rem;
+}
+.icon-inbound {
+  fill: orange !important;
+  margin-right: 5px;
+}
+.icon-outbound {
+  fill: #0cc036c4 !important;
+  margin-right: 5px;
+}
+.icon-opportunity {
+  background-color: #fcb95b;
+}
+.icon-unknown {
+  background-color: #5722e587;
+  padding: 0.4em;
+}
+/* -- softphone panel -- */
+#Softphone .slds-utility-panel {
+  bottom: 0px;
+  left: 15px;
+  margin-bottom: 0px;
+  height: 420px; 
+  width: 250px; 
+  z-index: 2;
+  font-size: 1rem;
+}
+/* start panel */ 
+#startPanelBody {
+  padding: 5px;
+}
+#outboundCallPanel {
+  margin-top: 15px;
+}
+.outbound-call-btn {
+  margin-left: 7px;
+}
+/* user statuses */
+#statusPanel {
+  padding: 5px;
+}
+#changeStatusDropdown {
+  margin-left: 7px;
+}
+.redirect {color: red !important; fill: red !important;} /* offline */
+.dnd {color: yellow !important; fill: yellow !important;} /* notavailable */
+.away {color: yellow !important; fill: yellow !important;} /* notavailable */
+.wrapup {color:#0070d2 !important; fill: #0070d2 !important;} /* notavailable */
+.normal {color: green !important; fill: green !important;} /* available */
+.ringing {color: #0070d2 !important; fill: #0070d2 !important;} /* available, notavailable */
+.speaking {color: #0070d2 !important; fill: #0070d2 !important;} /* available, notavailable */
+
+/* calls */
+/* --call info-- */
+.call-header {
+  padding: 5px;
+}
+.call-type-icon {
+  margin-right: 5px !important;
+}
+.call-type {
+  margin-left: 5px;
+}      
+.call-status {
+  margin-top: 5px;
+}
+.call-time-output {
+  margin-top: 7px;
+}
+.transfer-btn {
+  margin-left: 7px;
+}
+.transfer-section {
+  margin-top: 12px;
+}
+#immediateCallPanel {
+  margin-top: 12px;
+}
+/* --user info-- */
+.record-id {
+ margin-top: 7px;
+ margin-bottom: 5px;
+}
+.contact-details {
+  margin-top: 5px;
+}
+.company-details {
+  margin-top: 5px;
+}
+.phone-extension{
+margin-top: 5px;
+margin-bottom: 7px;
+}
+
+/* -- utility bar -- */
+.utility-bar-speedup {
+  width: auto !important;
+}
+.utility-bar-speedup>.slds-utility-bar__item {
+  margin-right: 0;
+}
+.utility-btn {
+  position: relative !important;
+  display: inline-flex !important;
+  padding: 0 .75rem !important;
+}
+.call-button {
+  width: 100%;
+}

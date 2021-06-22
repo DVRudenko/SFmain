@@ -1,0 +1,24 @@
+<aura:component abstract="true" extensible="true">
+    <aura:attribute name="gfnParams" type="String" default=""/>
+    <aura:attribute name="loaded" type="Boolean"/>
+    <aura:attribute name="itemList" type="List"/>
+    <aura:attribute name="landingPageLink" type="String" />
+    <aura:attribute name="tableHead" type="List"/>
+    <aura:attribute name="errorMessage" type="String" default="No Data"/>
+    <aura:attribute name="lineOfBusiness" type="String"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="isClassic" type="Boolean"/>
+
+    <aura:html tag="style">
+        .toastMessage.forceActionsText{
+            white-space : pre-line !important;
+        }
+    </aura:html>
+
+        <div style="position: relative;">
+            <aura:if isTrue="{!not(v.loaded)}">
+                <lightning:spinner alternativeText="Loading" size="small" />
+            </aura:if>
+            {!v.body}
+        </div>
+</aura:component>

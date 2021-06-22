@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- E2E Errors --></label>
+    <name>E2E_Errors__c</name>
+    <picklistValues>
+        <masterLabel>Already a customer</masterLabel>
+        <translation><!-- Already a customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Already in process</masterLabel>
+        <translation><!-- Already in process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Authorization not granted</masterLabel>
+        <translation><!-- Authorization not granted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Black list error</masterLabel>
+        <translation><!-- Black list error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Company not found</masterLabel>
+        <translation><!-- Company not found --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Private entity</masterLabel>
+        <translation><!-- Private entity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Report does not exist</masterLabel>
+        <translation><!-- Report does not exist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>System Error</masterLabel>
+        <translation><!-- System Error --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Too high limit</masterLabel>
+        <translation><!-- Too high limit --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

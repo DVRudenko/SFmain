@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Development</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Approved for development</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>In development</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Ready on sandbox</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Waiting for information</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

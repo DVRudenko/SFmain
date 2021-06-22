@@ -1,0 +1,18 @@
+<apex:page standardController="Account" extensions="NumberClosedWonOpportunitiesCtrl" action="{! init }">
+	<div class="bPageBlock brandSecondaryBrd bDetailBlock secondaryPalette" style="border:0px; margin-left:-10px; heigth:16px;">
+    	<div class="pbSubsection" style="border:0px;">
+            <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td class="labelCol">
+                        	<apex:outputLabel value="# Won Opportunities" style="color: #4a4a56;"/>
+                        </td>
+                        <td class="dataCol">
+                            <apex:outputText value="{! numberOfClosedWonOppties }"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</apex:page>

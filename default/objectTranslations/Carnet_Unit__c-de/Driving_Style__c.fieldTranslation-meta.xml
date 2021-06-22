@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Analysis and recommendations on driving styles and local receiving speed limits. --></help>
+    <label><!-- Driving Style --></label>
+    <name>Driving_Style__c</name>
+</CustomFieldTranslation>

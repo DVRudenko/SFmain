@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Currency__c</fullName>
+    <externalId>false</externalId>
+    <label>Currency</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Tariff__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>$</fullName>
+                <default>false</default>
+                <label>$</label>
+            </value>
+            <value>
+                <fullName>€</fullName>
+                <default>false</default>
+                <label>€</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Amount</controllingFieldValue>
+            <valueName>$</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amount</controllingFieldValue>
+            <valueName>€</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

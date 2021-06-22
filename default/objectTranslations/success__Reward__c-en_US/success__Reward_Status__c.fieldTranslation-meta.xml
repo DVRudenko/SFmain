@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Aggregate Behaviours will initially generate Rewards that are &apos;In Progress&apos;. Rewards for behaviours that are not completed within the required time period will be flagged as &apos;Failed&apos;. Successfully completed Behaviours will have an &apos;Awarded&apos; status. --></help>
+    <label><!-- DEPRECATE - Status --></label>
+    <name>success__Reward_Status__c</name>
+    <picklistValues>
+        <masterLabel>Awarded</masterLabel>
+        <translation><!-- Awarded --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Failed</masterLabel>
+        <translation><!-- Failed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In Progress</masterLabel>
+        <translation><!-- In Progress --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

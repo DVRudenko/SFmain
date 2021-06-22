@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Primary_Fueling_Method_specific__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Primary Fueling Method (specific)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Jiné</fullName>
+                <default>false</default>
+                <label>Jiné</label>
+            </value>
+            <value>
+                <fullName>Shell</fullName>
+                <default>false</default>
+                <label>Shell</label>
+            </value>
+            <value>
+                <fullName>OMV</fullName>
+                <default>false</default>
+                <label>OMV</label>
+            </value>
+            <value>
+                <fullName>Benzina</fullName>
+                <default>false</default>
+                <label>Benzina</label>
+            </value>
+            <value>
+                <fullName>Eni (Agip)</fullName>
+                <default>false</default>
+                <label>Eni (Agip)</label>
+            </value>
+            <value>
+                <fullName>PapOil</fullName>
+                <default>false</default>
+                <label>PapOil</label>
+            </value>
+            <value>
+                <fullName>LukOil</fullName>
+                <default>false</default>
+                <label>LukOil</label>
+            </value>
+            <value>
+                <fullName>RobinOil</fullName>
+                <default>false</default>
+                <label>RobinOil</label>
+            </value>
+            <value>
+                <fullName>TankONO</fullName>
+                <default>false</default>
+                <label>TankONO</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_moje_neuzav_en_leady</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Open,Konvertierte Leads,Converted lead,Disqualified,Uzavřeno</value>
+    </filters>
+    <label>CCS - moje neuzavřené leady</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>CCS_Administrator</role>
+        <role>CCS_CZ_Contact_Center</role>
+        <role>CCS_CZ_SME</role>
+        <role>CCS_CZ_Telesales</role>
+        <role>CCS_Contact_Center_Team_Lead</role>
+        <role>CCS_SK_SME</role>
+        <role>CCS_SME_Team_Lead</role>
+        <role>CCS_Telesales_Team_Lead</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Вставьте сюда id Интереса или Возможности, из-за которой эта запись уходит в дисквал.</help>
+    <label>Идентификатор записи</label>
+    <name>Lead_and_Opp_For_Dedublication__c</name>
+</CustomFieldTranslation>

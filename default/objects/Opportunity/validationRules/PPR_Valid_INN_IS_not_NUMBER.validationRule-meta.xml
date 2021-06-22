@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Valid_INN_IS_not_NUMBER</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+AND(
+RecordType.Name = "Russian Sales" ,
+CONTAINS( $Profile.Name , "Russian"),
+NOT(ISBLANK(INN_Opp__c )),
+NOT(ISCHANGED(Number_of_open_tasks__c)),
+NOT(ISCHANGED(Open_Task__c)),
+OR(
+CONTAINS(INN_Opp__c , "."),
+CONTAINS(INN_Opp__c , "+"),
+CONTAINS(INN_Opp__c , "-"),
+NOT(ISNUMBER(INN_Opp__c )))),
+true ,false)</errorConditionFormula>
+    <errorMessage>INN must contain only figures!</errorMessage>
+</ValidationRule>

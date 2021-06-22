@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyContacts</fullName>
+    <columns>CONTACT.LAST_NAME</columns>
+    <columns>CONTACT.FIRST_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.TITLE</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Mine</filterScope>
+    <label>Meine Kontakte</label>
+    <language>de</language>
+    <sharedTo>
+        <role>START</role>
+        <role>Salesteam_Inbound</role>
+        <role>Salesteam_Inbound_2</role>
+        <role>Salesteam_Outbound</role>
+        <role>Salesteam_Outbound_2</role>
+        <role>Salesteam_Outbound_3</role>
+        <role>Salesteam_Outbound_4</role>
+        <role>Salesteam_Outbound_5</role>
+        <role>Starts_Team_Manager</role>
+        <role>Starts_Team_Rep</role>
+        <role>Teamleiter</role>
+        <role>Teamleiter_Inbound</role>
+        <role>Teamleiter_Inbound_2</role>
+        <role>Teamleiter_Outbound_1</role>
+        <role>Teamleiter_Outbound_2</role>
+        <role>Teamleiter_Outbound_3</role>
+        <role>Teamleiter_Outbound_4</role>
+        <role>Teamleiter_Outbound_5</role>
+    </sharedTo>
+</ListView>

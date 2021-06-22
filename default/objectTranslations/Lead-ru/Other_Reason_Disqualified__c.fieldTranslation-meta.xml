@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Пожалуйста, укажи причину дисквалификации, если выбран вариант &quot;Другое&quot; в списке причин дисквалификации.</help>
+    <label>Другое (детали)</label>
+    <name>Other_Reason_Disqualified__c</name>
+</CustomFieldTranslation>

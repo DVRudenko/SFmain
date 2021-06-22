@@ -1,0 +1,997 @@
+{
+    "translations": {
+        "th_single_card":{
+            "default_impl": {
+                "en": "CARD",
+                "cs": "KARTA",
+                "sk": "KARTA"
+            }
+        },
+        "th_plural_card":{
+            "default_impl": {
+                "en": "CARDS",
+                "cs": "KARTY",
+                "sk": "KARTY"
+            }
+        },
+        "th_page_back_to_home_button": {
+            "default_impl": {
+                "en": "BACK TO HOMEPAGE",
+                "fr": "RETOUR À LA PAGE D'ACCUEIL",
+                "cs": "ZPĚT NA HLAVNÍ STRÁNKU",
+                "sk": "Späť na hlavnú stránku",
+                "hu": "VISSZA A FŐOLDALRA",
+                "nl": "TERUG NAAR HOMEPAGE",
+                "de": "ZURÜCK ZUR HOMEPAGE",
+                "pl": "STRONA GŁÓWNA"
+            }
+        },
+        "th_page_document_deposit_instruction_title": {
+            "default_impl": {
+                "en": "DEPOSIT PAYMENT INSTRUCTIONS",
+                "hu": "ÓVADÉK FIZETÉSÉNEK MENETE:",
+                "cs": "POKYNY PRO PLATBU KAUCE",
+                "sk": "POKYNY PRE PLATBU KAUCIE",
+                "fr": "INSTRUCTIONS DE PAIEMENT DU DÉPÔT DE GARANTIE",
+                "nl": "INSTRUCTIES VOOR AANBETALING",
+                "de": "ANWEISUNGEN ZUR EINZAHLUNG DER KAUTION",
+                "pl": "INSTRUKCJE PŁATNOŚCI KAUCJI"
+            }
+        },
+        "th_page_document_deposit_instruction_file_name": {
+            "default_impl": {
+                "en": "DEPOSIT PAYMENT INSTRUCTIONS",
+                "hu": "ÓVADÉK FIZETÉSÉNEK MENETE",
+                "cs": "POKYNY PRO PLATBU KAUCE",
+                "sk": "POKYNY PRE PLATBU KAUCIE",
+                "fr": "INSTRUCTIONS DE PAIEMENT DU DÉPÔT DE GARANTIE",
+                "nl": "INSTRUCTIES VOOR AANBETALING",
+                "de": "ANWEISUNGEN ZUR EINZAHLUNG DER KAUTION",
+                "pl": "INSTRUKCJE PŁATNOŚCI KAUCJI"
+            }
+        },
+        "th_page_document_deposit_instruction_description_direct_debit": {
+            "default_impl": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. If invoices are not paid on time, we can collect the required amount from the deposit. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "pl": "<ol><li>Prosimy korzystać z załączonych danych bankowych, aby zapłacić określoną kwotę kaucji.</li><li>Kaucja jest wpłacana tylko raz i pozostaje nienaruszona na naszym koncie.  W przypadku, że faktury nie zostaną zapłacone w odpowiednim czasie, możemy pobrać wymaganą kwotę z kaucji. Karty zostaną wydane dopiero po wpłacie kaucji.</li></ol>",
+                "de": "<ol><li>Bitte verwenden Sie die beigefügten Bankdaten, um die angeforderte Kaution zu bezahlen.</li><li>Die Kaution ist eine einmalige Zahlung, die sicher auf unserem Bankkonto verbleibt. Im Falle einer Vertragskündigung wird die Kaution nach Zahlung aller ausstehenden Rechnungen auf Ihr Bankkonto zurückerstattet. Ihre Tank- und Ladekarten werden erst nach Zahlung der Kaution ausgestellt.</li></ol>"
+            },
+            "Hungary": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li> The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "hu": "<ol><li>Fizesse be az óvadék összegét a lenti óvadéki bankszámlaszámra.</li><li>Az óvadék összege fogja fedezni az Ön hitelkeretét. Ez egy egyszer fizetendő összeg, amely az óvadéki bankszámlánkon kerül elkülönítésre. Amennyiben szerződését felmondja, az óvadék összege visszautalásra kerül az összes tartozás kiegyenlítését követően. A kártyák az óvadéki összeg beérkezését követően kerülnek kiállításra.</li></ol>"
+            },
+            "Slovakia": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li> The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "sk": "<ol><li>Použite prosím priložené bankové údaje k úhrade stanovenej sumy za kauciu.</li><li>Kaucia sa platí len raz a na našom účte zostáva nedotknutá. V prípade ukončenia zmluvy bude záloha vrátená na Váš bankový účet po zaplatení všetkých zostávajúcich faktúr. Karty budú vydané až po zaplatení zálohy.</li></ol>"
+            },
+            "Czech Republic": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li> The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "cs": "<ol><li>Použijte prosím přiložené bankovní údaje k úhradě stanovené částky za kauci.</li><li>Kauce se platí pouze jednou a na našem účtu zůstává nedotčena. V případě ukončení smlouvy bude záloha vrácena na Váš bankovní účet po zaplacení všech zbývajících faktur. Karty budou vydány až po zaplacení zálohy.</li></ol>"
+            },
+            "Germany": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, after all outstanding invoices will be paid, deposit will be returned to your bank account. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "de": "<ol><li>Bitte verwenden Sie die beigefügten Bankdaten, um die angeforderte Kaution zu bezahlen.</li><li>Die Kaution ist eine einmalige Zahlung, die sicher auf unserem Bankkonto verbleibt. Im Falle einer Vertragskündigung wird die Kaution nach Zahlung aller ausstehenden Rechnungen auf Ihr Bankkonto zurückerstattet. Ihre Tank- und Ladekarten werden erst nach Zahlung der Kaution ausgestellt.</li></ol>"
+            },
+            "Netherlands": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>",
+                "nl": "<ol><li>Gebruik de bijgevoegde bankgegevens om de gespecificeerde waarborg te betalen.</li><li>De waarborg wordt slechts één keer betaald en blijft op onze rekening. In geval van beëindiging van het contract wordt de waarborg teruggestort op uw bankrekening nadat alle openstaande facturen zijn betaald. Kaarten worden pas uitgegeven nadat de waarborg is betaald.</li></ol>"
+            },
+            "Belgium-FR": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>",
+                "nl": "<ol><li>Gebruik de bijgevoegde bankgegevens om de gespecificeerde waarborg te betalen.</li><li>De waarborg wordt slechts één keer betaald en blijft op onze rekening. In geval van beëindiging van het contract wordt de waarborg teruggestort op uw bankrekening nadat alle openstaande facturen zijn betaald. Kaarten worden pas uitgegeven nadat de waarborg is betaald.</li></ol>"
+            },
+            "Belgium-NL": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>",
+                "nl": "<ol><li>Gebruik de bijgevoegde bankgegevens om de gespecificeerde waarborg te betalen.</li><li>De waarborg wordt slechts één keer betaald en blijft op onze rekening. In geval van beëindiging van het contract wordt de waarborg teruggestort op uw bankrekening nadat alle openstaande facturen zijn betaald. Kaarten worden pas uitgegeven nadat de waarborg is betaald.</li></ol>"
+            },
+            "France": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>"
+            },
+            "Luxembourg": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>"
+            },
+            "Switzerland-DE": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>",
+                "de": "<ol><li>Bitte verwenden Sie die beigefügten Bankdaten, um die angeforderte Kaution zu bezahlen.</li><li>Die Kaution ist eine einmalige Zahlung, die sicher auf unserem Bankkonto verbleibt. Im Falle einer Vertragskündigung wird die Kaution nach Zahlung aller ausstehenden Rechnungen auf Ihr Bankkonto zurückerstattet. Ihre Tank- und Ladekarten werden erst nach Zahlung der Kaution ausgestellt.</li></ol>"
+            },
+            "Switzerland-FR": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>",
+                "de": "<ol><li>Bitte verwenden Sie die beigefügten Bankdaten, um die angeforderte Kaution zu bezahlen.</li><li>Die Kaution ist eine einmalige Zahlung, die sicher auf unserem Bankkonto verbleibt. Im Falle einer Vertragskündigung wird die Kaution nach Zahlung aller ausstehenden Rechnungen auf Ihr Bankkonto zurückerstattet. Ihre Tank- und Ladekarten werden erst nach Zahlung der Kaution ausgestellt.</li></ol>"
+            },
+            "Czech Republic CCS": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "cs": "<ol><li>Použijte prosím přiložené bankovní údaje k úhradě stanovené částky za kauci.</li><li>Kauce se platí pouze jednou a na našem účtu zůstává nedotčena. V případě ukončení smlouvy bude záloha vrácena na Váš bankovní účet po zaplacení všech zbývajících faktur. Karty budou vydány až po zaplacení zálohy.</li></ol>"
+            },
+            "Slovakia CCS": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "sk": "<ol><li>Použite prosím priložené bankové údaje k úhrade stanovenej sumy za kauciu.</li><li>Kaucia sa platí len raz a na našom účte zostáva nedotknutá. V prípade ukončenia zmluvy bude záloha vrátená na Váš bankový účet po zaplatení všetkých zostávajúcich faktúr. Karty budú vydané až po zaplatení zálohy.</li></ol>"
+            }
+        },
+        "th_page_document_deposit_instruction_description_bank_transfer": {
+            "default_impl": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. If invoices are not paid on time, we can collect the required amount from the deposit. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "pl": "<ol><li>Prosimy korzystać z załączonych danych bankowych, aby zapłacić określoną kwotę kaucji.</li><li>Kaucja jest wypłacany tylko raz i pozostaje nienaruszony na naszym koncie.  W przypadku, że faktury nie zostaną zapłacone w odpowiednim czasie, możemy pobrać wymaganą kwotę z kaucji. Karty zostaną wydane dopiero po wpłacie kaucji.</li></ol>",
+                "de": "<ol><li>Bitte verwenden Sie die beigefügten Bankdaten, um die angeforderte Kaution zu bezahlen.</li><li>Die Kaution ist eine einmalige Zahlung, die sicher auf unserem Bankkonto verbleibt. Im Falle einer Vertragskündigung wird die Kaution nach Zahlung aller ausstehenden Rechnungen auf Ihr Bankkonto zurückerstattet. Ihre Tank- und Ladekarten werden erst nach Zahlung der Kaution ausgestellt.</li></ol>"
+            },
+            "Hungary": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li> The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "hu": "<ol><li>Fizesse be az óvadék összegét a lenti óvadéki bankszámlaszámra.</li><li>Az óvadék összege fogja fedezni az Ön hitelkeretét. Ez egy egyszer fizetendő összeg, amely az óvadéki bankszámlánkon kerül elkülönítésre. Amennyiben szerződését felmondja, az óvadék összege visszautalásra kerül az összes tartozás kiegyenlítését követően. A kártyák az óvadéki összeg beérkezését követően kerülnek kiállításra.</li></ol>"
+            },
+            "Slovakia": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li> The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "sk": "<ol><li>Použite prosím priložené bankové údaje k úhrade stanovenej sumy za kauciu.</li><li>Kaucia sa platí len raz a na našom účte zostáva nedotknutá. V prípade ukončenia zmluvy bude záloha vrátená na Váš bankový účet po zaplatení všetkých zostávajúcich faktúr. Karty budú vydané až po zaplatení zálohy.</li></ol>"
+            },
+            "Czech Republic": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li> The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "cs": "<ol><li>Použijte prosím přiložené bankovní údaje k úhradě stanovené částky za kauci.</li><li>Kauce se platí pouze jednou a na našem účtu zůstává nedotčena. V případě ukončení smlouvy bude záloha vrácena na Váš bankovní účet po zaplacení všech zbývajících faktur. Karty budou vydány až po zaplacení zálohy.</li></ol>"
+            },
+            "Netherlands": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>",
+                "nl": "<ol><li>Gebruik de bijgevoegde bankgegevens om de gespecificeerde waarborg te betalen.</li><li>De waarborg wordt slechts één keer betaald en blijft op onze rekening. In geval van beëindiging van het contract wordt de waarborg teruggestort op uw bankrekening nadat alle openstaande facturen zijn betaald. Kaarten worden pas uitgegeven nadat de waarborg is betaald.</li></ol>"
+            },
+            "Belgium-FR": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>",
+                "nl": "<ol><li>Gebruik de bijgevoegde bankgegevens om de gespecificeerde waarborg te betalen.</li><li>De waarborg wordt slechts één keer betaald en blijft op onze rekening. In geval van beëindiging van het contract wordt de waarborg teruggestort op uw bankrekening nadat alle openstaande facturen zijn betaald. Kaarten worden pas uitgegeven nadat de waarborg is betaald.</li></ol>"
+            },
+            "Belgium-NL": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>",
+                "nl": "<ol><li>Gebruik de bijgevoegde bankgegevens om de gespecificeerde waarborg te betalen.</li><li>De waarborg wordt slechts één keer betaald en blijft op onze rekening. In geval van beëindiging van het contract wordt de waarborg teruggestort op uw bankrekening nadat alle openstaande facturen zijn betaald. Kaarten worden pas uitgegeven nadat de waarborg is betaald.</li></ol>"
+            },
+            "France": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>"
+            },
+            "Luxembourg": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>"
+            },
+            "Switzerland-DE": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>",
+                "de": "<ol><li>Bitte verwenden Sie die beigefügten Bankdaten, um die angeforderte Kaution zu bezahlen.</li><li>Die Kaution ist eine einmalige Zahlung, die sicher auf unserem Bankkonto verbleibt. Im Falle einer Vertragskündigung wird die Kaution nach Zahlung aller ausstehenden Rechnungen auf Ihr Bankkonto zurückerstattet. Ihre Tank- und Ladekarten werden erst nach Zahlung der Kaution ausgestellt.</li></ol>"
+            },
+            "Switzerland-FR": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li>The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "fr": "<ol><li>Veuillez utiliser les coordonnées bancaires ci-jointes pour payer le montant du dépôt.</li><li>Le dépôt de garantie est un paiement en une fois qui reste en toute sécurité sur notre compte bancaire. En cas de résiliation du contrat, le dépôt sera restitué sur votre compte après le règlement de toutes les factures ouvertes. Les cartes ne seront émises qu'à la réception du dépôt.</li></ol>",
+                "de": "<ol><li>Bitte verwenden Sie die beigefügten Bankdaten, um die angeforderte Kaution zu bezahlen.</li><li>Die Kaution ist eine einmalige Zahlung, die sicher auf unserem Bankkonto verbleibt. Im Falle einer Vertragskündigung wird die Kaution nach Zahlung aller ausstehenden Rechnungen auf Ihr Bankkonto zurückerstattet. Ihre Tank- und Ladekarten werden erst nach Zahlung der Kaution ausgestellt.</li></ol>"
+            },
+            "Slovakia CCS": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li> The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "sk": "<ol><li>Použite prosím priložené bankové údaje k úhrade stanovenej sumy za kauciu.</li><li>Kaucia sa platí len raz a na našom účte zostáva nedotknutá. V prípade ukončenia zmluvy bude záloha vrátená na Váš bankový účet po zaplatení všetkých zostávajúcich faktúr. Karty budú vydané až po zaplatení zálohy.</li></ol>"
+            },
+            "Czech Republic CCS": {
+                "en": "<ol><li>Please use the attached banking details to pay specified deposit amount.</li><li> The deposit is paid only once and remains intact on our account. In the event of contract termination, deposit will be returned to your bank account after all outstanding invoices are paid. Cards will be issued only after the deposit has been paid.</li></ol>",
+                "cs": "<ol><li>Použijte prosím přiložené bankovní údaje k úhradě stanovené částky za kauci.</li><li>Kauce se platí pouze jednou a na našem účtu zůstává nedotčena. V případě ukončení smlouvy bude záloha vrácena na Váš bankovní účet po zaplacení všech zbývajících faktur. Karty budou vydány až po zaplacení zálohy.</li></ol>"
+            }
+        },
+        "th_page_document_direct_debit_mandate_title": {
+            "default_impl": {
+                "en": "DIRECT DEBIT ACTIVATION INSTRUCTIONS",
+                "hu": "BESZEDÉSI MEGBÍZÁS BEÁLLÍTÁSÁNAK MENETE:",
+                "cs": "POKYNY K AKTIVACI INKASA",
+                "sk": "POKYNY K AKTIVÁCII INKASA",
+                "fr": "INSTRUCTIONS POUR L'ACTIVATION DU MANDAT DE DOMICILIATION",
+                "nl": "INSTRUCTIES VOOR ACTIVERING DOMICILIËRING",
+                "de": "SEPA-MANDAT AKTIVIERUNGSANWEISUNGEN",
+                "pl": "INSTRUKCJE DO ZGODY NA OBCIĄŻENIE RACHUNKU"
+            },
+            "Netherlands": {
+                "en": "DIRECT DEBIT ACTIVATION INSTRUCTIONS",
+                "nl": "INSTRUCTIES VOOR ACTIVERING AUTOMATISCHE INCASSO"
+            },
+            "Switzerland-DE": {
+                "en": "DIRECT DEBIT ACTIVATION INSTRUCTIONS",
+                "fr": "INSTRUCTIONS POUR L'ACTIVATION DU PRÉLÈVEMENT",
+                "de": "BDD-MANDAT AKTIVIERUNGSANWEISUNGEN"
+            },
+            "Switzerland-FR": {
+                "en": "DIRECT DEBIT ACTIVATION INSTRUCTIONS",
+                "fr": "INSTRUCTIONS POUR L'ACTIVATION DU PRÉLÈVEMENT",
+                "de": "BDD-MANDAT AKTIVIERUNGSANWEISUNGEN"
+            }
+        },
+        "th_page_document_direct_debit_mandate_file_name": {
+            "default_impl": {
+                "en": "Direct debit mandate",
+                "hu": "BESZEDÉSI MEGBÍZÁS BEÁLLÍTÁSÁNAK MENETE",
+                "fr": "INSTRUCTIONS POUR L'ACTIVATION DU MANDAT DE DOMICILIATION",
+                "nl": "INSTRUCTIES VOOR ACTIVERING DOMICILIËRING",
+                "cs": "POKYNY K AKTIVACI INKASA",
+                "sk": "POKYNY K AKTIVÁCII INKASA",
+                "pl": "Zgoda na obciążenie rachunku"
+            },
+            "Hungary": {
+                "en": "DIRECT DEBIT ACTIVATION INSTRUCTIONS",
+                "hu": "BESZEDÉSI MEGBÍZÁS BEÁLLÍTÁSÁNAK MENETE"
+            },
+            "Netherlands": {
+                "en": "Direct debit mandate",
+                "nl": "INSTRUCTIES VOOR ACTIVERING AUTOMATISCHE INCASSO"
+            },
+            "Germany": {
+                "en": "SEPA B2B Mandate",
+                "de": "SEPA-Firmenlastschrift-Mandat"
+            },
+            "Switzerland-DE": {
+                "en": "DIRECT DEBIT ACTIVATION INSTRUCTIONS",
+                "de": "BDD-MANDAT AKTIVIERUNGSANWEISUNGEN",
+                "fr": "Formulaire du prélèvement BDD (Business Direct Debit)"
+            },
+            "Switzerland-FR": {
+                "en": "DIRECT DEBIT ACTIVATION INSTRUCTIONS",
+                "de": "BDD-MANDAT AKTIVIERUNGSANWEISUNGEN",
+                "fr": "Formulaire du prélèvement BDD (Business Direct Debit)"
+            }
+        },
+        "th_page_document_direct_debit_mandate_description_completed": {
+            "default_impl": {
+                "en": "<ol><li>Please enter all missing bank details in both direct debit mandate forms.</li><li>Please sign both and present them to your bank to activate direct debit on your bank account. Until you receive confirmation from FLEETCOR that you have started direct debit, please pay by bank transfer.</li><li>Please send a scanned confirmation of the direct debit activation with your bank's signature and stamp in electronic form to the email address obslugaklienta@fleetcor.pl</li></ol>",
+                "de": "<ol><li>Bitte geben Sie alle fehlenden Informationen in beide Lastschriftmandatsformulare ein.</li><li>Bitte unterschreiben Sie beide und legen Sie sie Ihrer Bank vor, um die Lastschrift von Ihrem Bankkonto zu aktivieren. Bis Sie von FLEETCOR eine Bestätigung erhalten, dass Sie mit der Lastschrift begonnen haben, zahlen Sie bitte per Banküberweisung.</li><li>Bitte senden Sie eine gescannte Bestätigung der Lastschriftaktivierung mit der Unterschrift und dem Stempel Ihrer Bank in elektronischer Form an die E-Mail-Adresse kundenservice@fleetcor.de</li></ol>",
+                "pl": "<ol><li>Prosimy wpisać wszystkie brakujące dane dotyczące banku w obu formularzach Zgody na obciążenie rachunku.</li><li>Prosimy podpisać oba formularze Zgody na obciążenie rachunku oraz przedstawić formularze w Państwa banku w celu aktywacji polecenia zapłaty na Państwa rachunku bankowym. Do momentu otrzymania od FLEETCOR potwierdzenia o uruchomieniu polecenia zapłaty, prosimy regulować płatności przelewem bankowym.</li><li>Prosimy odesłać skan potwierdzenia aktywacji polecenia zapłaty z podpisem i pieczątką banku w postaci elektronicznej na adres e-mail obslugaklienta@fleetcor.pl</li></ol>"
+            },
+            "Hungary": {
+                "en": "<ol><li>Please enter all missing bank details in both direct debit mandate forms.</li><li> Please sign both and present them to your bank to activate direct debit on your bank account. Until you receive confirmation from FLEETCOR that you have started direct debit, please pay by bank transfer.</li><li>Please send a scanned confirmation of the direct debit activation with your bank's signature and stamp in electronic form to the email address ugyfelszolgalat@fleetcor.hu</li></ol>",
+                "hu": "<ol><li>Kérjük, a felhatalmazó levelet a beszedési megbízáshoz három példányban kinyomtatni, kitölteni, végül aláírásával ellátni és a bankja által hitelesíttetni szíveskedjen.</li><li>Ezek közül egy példányt a FleetCor Hungary Kft. (1062 Budapest, Andrássy út 100) részére postai úton küldjön meg, egyet pedig hagyjon az Ön bankjánál.</li><li>A felhatalmazó levél beérkezését e-mail formájában igazoljuk majd vissza.</li></ol>"
+            },
+            "Netherlands": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to credit@fleetcor.nl.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address credit@fleetcor.nl</li></ol>",
+                "nl": "<ol><li>Vul alle onbrekende bankgegevens in op de machtigingsformulier voor automatische incasso.</li><li>Onderteken de machtigingsformulier en stuur een scan naar credit@fleetcor.nl.</li><li>Meld FLEETCOR aan als B2B-crediteur bij uw bank via uw internetbankieren of door contact op te nemen met uw bank.</li><li>Stuur een bevestiging dat de machting bij uw bank is aangemeld naar credit@fleetcor.nl.</li></ol>"
+            },
+            "Belgium-FR": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to credit@fleetcor.nl.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address credit@fleetcor.nl</li></ol>",
+                "fr": "<ol><li>Veuillez saisir tous les champs obligatoires dans le formulaire de mise en place de domiciliation.</li><li>Veuillez signer puis retourner le formulaire scanné à l'adresse e-mail : credit@fleetcorcards.be.</li><li>Veuillez autoriser FLEETCOR en tant que créancier B2B et activer la mandat via votre banque en ligne ou en contactant votre banque.</li><li>Veuillez nous envoyer le document certifiant l’activation de votre prélèvement automatique auprès de votre banque à l'adresse e-mail : credit@fleetcorcards.be.</li></ol>",
+                "nl": "<ol><li>Vul alle onbrekende bankgegevens in op de machtigingsformulier voor domiciliëring.</li><li>Onderteken de machtigingsformulier en stuur een scan naar credit@fleetcorcards.be.</li><li>Meld FLEETCOR aan als B2B-crediteur bij uw bank via uw internetbankieren of door contact op te nemen met uw bank.</li><li>Stuur een bevestiging dat de machting bij uw bank is aangemeld naar credit@fleetcorcards.be.</li></ol>"
+            },
+            "Belgium-NL": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to credit@fleetcor.nl.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address credit@fleetcor.nl</li></ol>",
+                "fr": "<ol><li>Veuillez saisir tous les champs obligatoires dans le formulaire de mise en place de domiciliation.</li><li>Veuillez signer puis retourner le formulaire scanné à l'adresse e-mail : credit@fleetcorcards.be.</li><li>Veuillez autoriser FLEETCOR en tant que créancier B2B et activer la mandat via votre banque en ligne ou en contactant votre banque.</li><li>Veuillez nous envoyer le document certifiant l’activation de votre prélèvement automatique auprès de votre banque à l'adresse e-mail : credit@fleetcorcards.be.</li></ol>",
+                "nl": "<ol><li>Vul alle onbrekende bankgegevens in op de machtigingsformulier voor domiciliëring.</li><li>Onderteken de machtigingsformulier en stuur een scan naar credit@fleetcorcards.be.</li><li>Meld FLEETCOR aan als B2B-crediteur bij uw bank via uw internetbankieren of door contact op te nemen met uw bank.</li><li>Stuur een bevestiging dat de machting bij uw bank is aangemeld naar credit@fleetcorcards.be.</li></ol>"
+            },
+            "Slovakia": {
+                "en": "<ol><li>Please enter all missing bank details in both direct debit mandate forms.</li><li> Please sign both and present them to your bank to activate direct debit on your bank account. Until you receive confirmation from FLEETCOR that you have started direct debit, please pay by bank transfer.</li><li>Please send a scanned confirmation of the direct debit activation with your bank's signature and stamp in electronic form to the email address credit@fleetcor.cz</li></ol>",
+                "sk": "<ol><li>Zadajte všetky chýbajúce bankové údaje do obidvoch formulárov na inkaso.</li><li>Ak chcete na svojom bankovom účte aktivovať inkaso, podpíšte ich a predložte ich svojej banke. Kým neobdržíte potvrdenie od spoločnosti FleetCor, že platba inkasom bola nastavená, plaťte prosím bankovým prevodom.</li><li>Zašlite prosím naskenované potvrdenie aktivácie inkasa s podpisom a pečiatkou Vašej banky v elektronickej podobe na e-mailovú adresu zakaznickyservis@fleetcor.cz</li></ol>"
+            },
+            "Czech Republic": {
+                "en": "<ol><li>Please enter all missing bank details in both direct debit mandate forms.</li><li> Please sign both and present them to your bank to activate direct debit on your bank account. Until you receive confirmation from FLEETCOR that you have started direct debit, please pay by bank transfer.</li><li>Please send a scanned confirmation of the direct debit activation with your bank's signature and stamp in electronic form to the email address credit@fleetcor.cz</li></ol>",
+                "cs": "<ol><li> Zadejte všechny chybějící bankovní údaje do formuláře k inkasu.</li><li>Podepište ho a zašlete prosím naskenovaný formulář na e-mailovou adresu credit@fleetcor.cz</li><li>Proveďte autorizaci a aktivujte inkaso ve svém internetovém bankovnictví nebo ve Vaší bance.</li><li>Zašlete potvrzení o aktivaci inkasa na credit@fleetcor.cz.</li></ol>"
+            },
+            "France": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to credit@fleetcor.fr.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address credit@fleetcor.fr</li></ol>",
+                "fr": "<ol><li>Veuillez saisir tous les champs obligatoires dans le formulaire de mise en place de domiciliation.</li><li>Veuillez signer puis retourner le formulaire scanné à l'adresse e-mail : credit@fleetcor.fr.</li><li>Veuillez autoriser FLEETCOR en tant que créancier B2B et activer la mandat via votre banque en ligne ou en contactant votre banque.</li><li>Veuillez nous envoyer le document certifiant l’activation de votre prélèvement automatique auprès de votre banque à l'adresse e-mail : credit@fleetcor.fr.</li></ol>"            
+            },
+            "Luxembourg": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to credit@fleetcor.fr.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address credit@fleetcor.fr</li></ol>",
+                "fr": "<ol><li>Veuillez saisir tous les champs obligatoires dans le formulaire de mise en place de domiciliation.</li><li>Veuillez signer puis retourner le formulaire scanné à l'adresse e-mail : credit@fleetcor.fr.</li><li>Veuillez autoriser FLEETCOR en tant que créancier B2B et activer la mandat via votre banque en ligne ou en contactant votre banque.</li><li>Veuillez nous envoyer le document certifiant l’activation de votre prélèvement automatique auprès de votre banque à l'adresse e-mail : credit@fleetcor.fr.</li></ol>"            
+            },
+            "Switzerland-DE": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to serviceclients@fleetcor.ch.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address serviceclients@fleetcor.ch</li></ol>",
+                "fr": "<ol><li>Veuillez saisir tous les champs obligatoires dans le formulaire de mise en place de prélèvement.</li><li>Veuillez signer le formulaire et présentez-le à votre banque.</li><li>Veuillez nous renvoyer l’exemplaire pour le bénéficiaire, dûment complété et signé avec timbre de la banque à l'adresse e-mail : serviceclients@fleetcor.ch.</li></ol>",
+                "de": "<ol><li>Bitte geben Sie alle fehlenden Informationen in beide Lastschriftmandatsformulare ein.</li><li>Bitte unterschreiben Sie beide und legen Sie sie Ihrer Bank vor, um die Lastschrift von Ihrem Bankkonto zu aktivieren. Bis Sie von FLEETCOR eine Bestätigung erhalten, dass Sie mit der Lastschrift begonnen haben, zahlen Sie bitte per Banküberweisung.</li><li>Bitte senden Sie eine gescannte Bestätigung der Lastschriftaktivierung mit der Unterschrift und dem Stempel Ihrer Bank in elektronischer Form an die E-Mail-Adresse serviceclients@fleetcor.ch</li></ol>"
+            },
+            "Switzerland-FR": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to serviceclients@fleetcor.ch.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address serviceclients@fleetcor.ch</li></ol>",
+                "fr": "<ol><li>Veuillez saisir tous les champs obligatoires dans le formulaire de mise en place de prélèvement.</li><li>Veuillez signer le formulaire et présentez-le à votre banque.</li><li>Veuillez nous renvoyer l’exemplaire pour le bénéficiaire, dûment complété et signé avec timbre de la banque à l'adresse e-mail : serviceclients@fleetcor.ch.</li></ol>",
+                "de": "<ol><li>Bitte geben Sie alle fehlenden Informationen in beide Lastschriftmandatsformulare ein.</li><li>Bitte unterschreiben Sie beide und legen Sie sie Ihrer Bank vor, um die Lastschrift von Ihrem Bankkonto zu aktivieren. Bis Sie von FLEETCOR eine Bestätigung erhalten, dass Sie mit der Lastschrift begonnen haben, zahlen Sie bitte per Banküberweisung.</li><li>Bitte senden Sie eine gescannte Bestätigung der Lastschriftaktivierung mit der Unterschrift und dem Stempel Ihrer Bank in elektronischer Form an die E-Mail-Adresse serviceclients@fleetcor.ch</li></ol>"
+            },
+            "Slovakia CCS": {
+                "en": "<ol><li>Enter all missing information on the direct debit mandate form.</li><li>Sign the direct debit mandate and send a scanned confirmation to kredit@ccs.sk</li><li>Authorize CCS as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address kredit@ccs.sk. Please pay by bank transfer until you receive confirmation from CCS that direct debit has been set up.</li></ol>",
+                "sk": "<ol><li>Enter all missing information on the direct debit mandate form.</li><li>Sign the direct debit mandate and send a scanned confirmation to kredit@ccs.sk</li><li>Authorize CCS as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address kredit@ccs.sk. Please pay by bank transfer until you receive confirmation from CCS that direct debit has been set up.</li></ol>"
+            },
+            "Czech Republic CCS": {
+                "en": "<ol><li>Enter all missing information on the direct debit mandate form.</li><li>Sign the direct debit mandate and send a scanned confirmation to kredit@ccs.cz</li><li>Authorize CCS as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address kredit@ccs.cz. Please pay by bank transfer until you receive confirmation from CCS that direct debit has been set up.</li></ol>",
+                "cs": "<ol><li>Zadejte všechny chybějící bankovní údaje do formuláře k inkasu.</li><li>Podepište ho a zašlete prosím naskenovaný formulář na e-mailovou adresu  kredit@ccs.cz.</li><li>Proveďte autorizaci a aktivujte inkaso ve svém internetovém bankovnictví nebo ve Vaší bance.</li><li>Zašlete potvrzení o aktivaci inkasa na  kredit@ccs.cz.</li></ol>"
+            }
+        },
+        "th_page_document_direct_debit_mandate_description_awaiting": {
+            "default_impl": {
+                "en": "<ol><li>Please enter all missing bank details in both direct debit mandate forms.</li><li>Please sign both and present them to your bank to activate direct debit on your bank account. Until you receive confirmation from FLEETCOR that you have started direct debit, please pay by bank transfer.</li><li>Please send a scanned confirmation of the direct debit activation with your bank's signature and stamp in electronic form to the email address obslugaklienta@fleetcor.pl</li></ol>",
+                "de": "<ol><li>Bitte geben Sie alle fehlenden Informationen in beide Lastschriftmandatsformulare ein.</li><li>Bitte unterschreiben Sie beide und legen Sie sie Ihrer Bank vor, um die Lastschrift von Ihrem Bankkonto zu aktivieren. Bis Sie von FLEETCOR eine Bestätigung erhalten, dass Sie mit der Lastschrift begonnen haben, zahlen Sie bitte per Banküberweisung.</li><li>Bitte senden Sie eine gescannte Bestätigung der Lastschriftaktivierung mit der Unterschrift und dem Stempel Ihrer Bank in elektronischer Form an die E-Mail-Adresse kundenservice@fleetcor.de</li></ol>",
+                "pl": "<ol><li>Prosimy wpisać wszystkie brakujące dane dotyczące banku w obu formularzach Zgody na obciążenie rachunku.</li><li>Prosimy podpisać oba formularze Zgody na obciążenie rachunku oraz przedstawić formularze w Państwa banku w celu aktywacji polecenia zapłaty na Państwa rachunku bankowym. Do momentu otrzymania od FLEETCOR potwierdzenia o uruchomieniu polecenia zapłaty, prosimy regulować płatności przelewem bankowym.</li><li>Prosimy odesłać skan potwierdzenia aktywacji polecenia zapłaty z podpisem i pieczątką banku w postaci elektronicznej na adres e-mail obslugaklienta@fleetcor.pl</li></ol>"
+            },
+            "Hungary": {
+                "en": "<ol><li>Please enter all missing bank details in both direct debit mandate forms.</li><li> Please sign both and present them to your bank to activate direct debit on your bank account. Until you receive confirmation from FLEETCOR that you have started direct debit, please pay by bank transfer.</li><li>Please send a scanned confirmation of the direct debit activation with your bank's signature and stamp in electronic form to the email address ugyfelszolgalat@fleetcor.hu</li></ol>",
+                "hu": "<ol><li>Kérjük, a felhatalmazó levelet a beszedési megbízáshoz három példányban kinyomtatni, kitölteni, végül aláírásával ellátni és a bankja által hitelesíttetni szíveskedjen.</li><li>Ezek közül egy példányt a FleetCor Hungary Kft. (1062 Budapest, Andrássy út 100) részére postai úton küldjön meg, egyet pedig hagyjon az Ön bankjánál.</li><li>A felhatalmazó levél beérkezését e-mail formájában igazoljuk majd vissza.</li></ol>"
+            },
+            "Slovakia": {
+                "en": "<ol><li>Please enter all missing bank details in both direct debit mandate forms.</li><li> Please sign both and present them to your bank to activate direct debit on your bank account. Until you receive confirmation from FLEETCOR that you have started direct debit, please pay by bank transfer.</li><li>Please send a scanned confirmation of the direct debit activation with your bank's signature and stamp in electronic form to the email address credit@fleetcor.cz</li></ol>",
+                "sk": "<ol><li>Zadajte všetky chýbajúce bankové údaje do obidvoch formulárov na inkaso.</li><li>Ak chcete na svojom bankovom účte aktivovať inkaso, podpíšte ich a predložte ich svojej banke. Kým neobdržíte potvrdenie od spoločnosti FleetCor, že platba inkasom bola nastavená, plaťte prosím bankovým prevodom.</li><li>Zašlite prosím naskenované potvrdenie aktivácie inkasa s podpisom a pečiatkou Vašej banky v elektronickej podobe na e-mailovú adresu zakaznickyservis@fleetcor.cz</li></ol>"
+            },
+            "Czech Republic": {
+                "en": "<ol><li>Please enter all missing bank details in both direct debit mandate forms.</li><li> Please sign both and present them to your bank to activate direct debit on your bank account. Until you receive confirmation from FLEETCOR that you have started direct debit, please pay by bank transfer.</li><li>Please send a scanned confirmation of the direct debit activation with your bank's signature and stamp in electronic form to the email address credit@fleetcor.cz</li></ol>",
+                "cs": "<ol><li> Zadejte všechny chybějící bankovní údaje do formuláře k inkasu.</li><li>Podepište ho a zašlete prosím naskenovaný formulář na e-mailovou adresu credit@fleetcor.cz</li><li>Proveďte autorizaci a aktivujte inkaso ve svém internetovém bankovnictví nebo ve Vaší bance.</li><li>Zašlete potvrzení o aktivaci inkasa na credit@fleetcor.cz.</li></ol>"
+            },
+            "Netherlands": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to credit@fleetcor.nl.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address credit@fleetcor.nl</li></ol>",
+                "nl": "<ol><li>Vul alle onbrekende bankgegevens in op de machtigingsformulier voor automatische incasso.</li><li>Onderteken de machtigingsformulier en stuur een scan naar credit@fleetcor.nl.</li><li>Meld FLEETCOR aan als B2B-crediteur bij uw bank via uw internetbankieren of door contact op te nemen met uw bank.</li><li>Stuur een bevestiging dat de machting bij uw bank is aangemeld naar credit@fleetcor.nl.</li></ol>"
+            },
+            "Belgium-FR": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to credit@fleetcorcards.be.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address credit@fleetcorcards.be</li></ol>",
+                "fr": "<ol><li>Veuillez saisir tous les champs obligatoires dans le formulaire de mise en place de domiciliation.</li><li>Veuillez signer puis retourner le formulaire scanné à l'adresse e-mail : credit@fleetcorcards.be.</li><li>Veuillez autoriser FLEETCOR en tant que créancier B2B et activer la mandat via votre banque en ligne ou en contactant votre banque.</li><li>Veuillez nous envoyer le document certifiant l’activation de votre prélèvement automatique auprès de votre banque à l'adresse e-mail : credit@fleetcorcards.be.</li></ol>",
+                "nl": "<ol><li>Vul alle onbrekende bankgegevens in op de machtigingsformulier voor domiciliëring.</li><li>Onderteken de machtigingsformulier en stuur een scan naar credit@fleetcorcards.be.</li><li>Meld FLEETCOR aan als B2B-crediteur bij uw bank via uw internetbankieren of door contact op te nemen met uw bank.</li><li>Stuur een bevestiging dat de machting bij uw bank is aangemeld naar credit@fleetcorcards.be.</li></ol>"
+            },
+            "Belgium-NL": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to credit@fleetcorcards.be.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address credit@fleetcorcards.be</li></ol>",
+                "fr": "<ol><li>Veuillez saisir tous les champs obligatoires dans le formulaire de mise en place de domiciliation.</li><li>Veuillez signer puis retourner le formulaire scanné à l'adresse e-mail : credit@fleetcorcards.be.</li><li>Veuillez autoriser FLEETCOR en tant que créancier B2B et activer la mandat via votre banque en ligne ou en contactant votre banque.</li><li>Veuillez nous envoyer le document certifiant l’activation de votre prélèvement automatique auprès de votre banque à l'adresse e-mail : credit@fleetcorcards.be.</li></ol>",
+                "nl": "<ol><li>Vul alle onbrekende bankgegevens in op de machtigingsformulier voor domiciliëring.</li><li>Onderteken de machtigingsformulier en stuur een scan naar credit@fleetcorcards.be.</li><li>Meld FLEETCOR aan als B2B-crediteur bij uw bank via uw internetbankieren of door contact op te nemen met uw bank.</li><li>Stuur een bevestiging dat de machting bij uw bank is aangemeld naar credit@fleetcorcards.be.</li></ol>"
+            },
+            "France": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to credit@fleetcor.fr.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address credit@fleetcor.fr</li></ol>",
+                "fr": "<ol><li>Veuillez saisir tous les champs obligatoires dans le formulaire de mise en place de domiciliation.</li><li>Veuillez signer puis retourner le formulaire scanné à l'adresse e-mail : credit@fleetcor.fr.</li><li>Veuillez autoriser FLEETCOR en tant que créancier B2B et activer la mandat via votre banque en ligne ou en contactant votre banque.</li><li>Veuillez nous envoyer le document certifiant l’activation de votre prélèvement automatique auprès de votre banque à l'adresse e-mail : credit@fleetcor.fr.</li></ol>"            
+            },
+            "Luxembourg": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to credit@fleetcor.fr.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address credit@fleetcor.fr</li></ol>",
+                "fr": "<ol><li>Veuillez saisir tous les champs obligatoires dans le formulaire de mise en place de domiciliation.</li><li>Veuillez signer puis retourner le formulaire scanné à l'adresse e-mail : credit@fleetcor.fr.</li><li>Veuillez autoriser FLEETCOR en tant que créancier B2B et activer la mandat via votre banque en ligne ou en contactant votre banque.</li><li>Veuillez nous envoyer le document certifiant l’activation de votre prélèvement automatique auprès de votre banque à l'adresse e-mail : credit@fleetcor.fr.</li></ol>"            
+            },
+            "Switzerland-DE": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to serviceclients@fleetcor.ch.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address serviceclients@fleetcor.ch</li></ol>",
+                "fr": "<ol><li>Veuillez saisir tous les champs obligatoires dans le formulaire de mise en place de prélèvement.</li><li>Veuillez signer le formulaire et présentez-le à votre banque.</li><li>Veuillez nous renvoyer l’exemplaire pour le bénéficiaire, dûment complété et signé avec timbre de la banque à l'adresse e-mail : serviceclients@fleetcor.ch.</li></ol>",
+                "de": "<ol><li>Bitte geben Sie alle fehlenden Informationen in beide Lastschriftmandatsformulare ein.</li><li>Bitte unterschreiben Sie beide und legen Sie sie Ihrer Bank vor, um die Lastschrift von Ihrem Bankkonto zu aktivieren. Bis Sie von FLEETCOR eine Bestätigung erhalten, dass Sie mit der Lastschrift begonnen haben, zahlen Sie bitte per Banküberweisung.</li><li>Bitte senden Sie eine gescannte Bestätigung der Lastschriftaktivierung mit der Unterschrift und dem Stempel Ihrer Bank in elektronischer Form an die E-Mail-Adresse serviceclients@fleetcor.ch</li></ol>"
+            },
+            "Switzerland-FR": {
+                "en": "<ol><li>Enter all missing bank details on the direct debit mandate form.</li><li>Sign the Direct Debit form and send a scanned confirmation to serviceclients@fleetcor.ch.</li><li>Authorize FLEETCOR as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address serviceclients@fleetcor.ch</li></ol>",
+                "fr": "<ol><li>Veuillez saisir tous les champs obligatoires dans le formulaire de mise en place de prélèvement.</li><li>Veuillez signer le formulaire et présentez-le à votre banque.</li><li>Veuillez nous renvoyer l’exemplaire pour le bénéficiaire, dûment complété et signé avec timbre de la banque à l'adresse e-mail : serviceclients@fleetcor.ch.</li></ol>",
+                "de": "<ol><li>Bitte geben Sie alle fehlenden Informationen in beide Lastschriftmandatsformulare ein.</li><li>Bitte unterschreiben Sie beide und legen Sie sie Ihrer Bank vor, um die Lastschrift von Ihrem Bankkonto zu aktivieren. Bis Sie von FLEETCOR eine Bestätigung erhalten, dass Sie mit der Lastschrift begonnen haben, zahlen Sie bitte per Banküberweisung.</li><li>Bitte senden Sie eine gescannte Bestätigung der Lastschriftaktivierung mit der Unterschrift und dem Stempel Ihrer Bank in elektronischer Form an die E-Mail-Adresse serviceclients@fleetcor.ch</li></ol>"
+            },
+            "Slovakia CCS": {
+                "en": "<ol><li>Enter all missing information on the direct debit mandate form.</li><li>Sign the direct debit mandate and send a scanned confirmation to kredit@ccs.sk</li><li>Authorize CCS as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address kredit@ccs.sk. Please pay by bank transfer until you receive confirmation from CCS that direct debit has been set up.</li></ol>",
+                "sk": "<ol><li>Enter all missing information on the direct debit mandate form.</li><li>Sign the direct debit mandate and send a scanned confirmation to kredit@ccs.sk</li><li>Authorize CCS as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address kredit@ccs.sk. Please pay by bank transfer until you receive confirmation from CCS that direct debit has been set up.</li></ol>"
+            },
+            "Czech Republic CCS": {
+                "en": "<ol><li>Enter all missing information on the direct debit mandate form.</li><li>Sign the direct debit mandate and send a scanned confirmation to kredit@ccs.cz</li><li>Authorize CCS as a B2B creditor and activate the madate using your internet banking or by contacting your bank.</li><li>Send a confirmation of the direct debit activation to the email address kredit@ccs.cz. Please pay by bank transfer until you receive confirmation from CCS that direct debit has been set up.</li></ol>",
+                "cs": "<ol><li>Zadejte všechny chybějící bankovní údaje do formuláře k inkasu.</li><li>Podepište ho a zašlete prosím naskenovaný formulář na e-mailovou adresu  kredit@ccs.cz.</li><li>Proveďte autorizaci a aktivujte inkaso ve svém internetovém bankovnictví nebo ve Vaší bance.</li><li>Zašlete potvrzení o aktivaci inkasa na  kredit@ccs.cz.</li></ol>"
+            }
+        },
+        "th_page_contacts_title_fn": {
+            "default_impl": {
+                "en": "EASY MANAGEMENT OF CARDS AND SERVICES",
+                "hu": "KEZELJE EGYSZERŰEN KÁRTYÁIT ÉS SZOLGÁLTATÁSAIT!",
+                "fr": "GESTION FACILE DES CARTES ET SERVICES",
+                "cs": "SNADNÁ SPRÁVA KARET A SLUŽEB",
+                "sk": "JEDNODUCHÁ SPRÁVA KARIET A SLUŽIEB",
+                "nl": "EENVOUDIG BEHEER VAN PASSEN EN DIENSTEN",
+                "de": "EINFACHES KARTEN- UND SERVICEMANAGEMENT",
+                "pl": "ŁATWE ZARZĄDZANIE KARTAMI I USŁUGAMI"
+            }
+        },
+        "th_page_contacts_description_fn": {
+            "default_impl": {
+                "en": "Whether you want to check the current settings or make changes, you can always do so at any time.",
+                "hu": "Ellenőrízze le kártyáit és tranzakcióit, amikor csak akarja.",
+                "cs": "Ať už chcete zkontrolovat aktuální nastavení nebo provést změny, můžete tak učinit kdykoli.",
+                "sk": "Či už chcete skontrolovať aktuálne nastavenia alebo vykonať zmeny, môžete tak urobiť kedykoľvek.",
+                "fr": "Que vous souhaitiez vérifier vos paramètres actuels ou apporter des modifications, vous pouvez le faire à tout moment.",
+                "nl": "Of u nu de huidige instellingen wilt controleren of wijzigingen wilt aanbrengen, u kunt dit altijd op elk moment doen.",
+                "de": "Sie können jederzeit die aktuellen Einstellungen überprüfen oder Änderungen vornehmen.",
+                "pl": "Niezależnie od tego, czy chcesz sprawdzić aktualne ustawienia czy wprowadzić zmiany, zawsze możesz to zrobić w dowolnym momencie."
+            }
+        },
+        "th_page_contacts_first_col_title_fn": {
+            "default_impl": {
+                "en": "24/7 CUSTOMER ONLINE PORTAL",
+                "hu": "ONLINE PORTÁL ÉJJEL-NAPPAL",
+                "cs": "24/7 ZÁKAZNICKÝ ONLINE PORTÁL",
+                "sk": "24/7 zákaznícky online portál",
+                "fr": "PORTAIL CLIENT EN LIGNE 24/7",
+                "nl": "24/7 online klantenportaal",
+                "de": "RUND UM DIE UHR KUNDEN-ONLINE-PORTAL",
+                "pl": "CAŁODOBOWY, SAMOOBSŁUGOWY PORTAL KLIENTA"
+            }
+        },
+        "th_page_contacts_first_col_description_fn": {
+            "default_impl": {
+                "en": "You can check your current account settings or make changes at any time.",
+                "pl": "W dowolnym momencie możesz sprawdzić aktualne ustawienia Twojego konta albo wprowadzić zmiany."
+            },
+            "Poland": {
+                "en": "You can check your current account settings or make changes at any time.",
+                "pl": "W dowolnym momencie możesz sprawdzić aktualne ustawienia Twojego konta albo wprowadzić zmiany. <br> <a href='https://sme.myfleetcor.com/pl/login/'>MyFLEETCOR- samoobsługowy portal online</a>"
+            },
+            "Poland Lotos": {
+                "en": "You can check your current account settings or make changes at any time.",
+                "pl": "W dowolnym momencie możesz sprawdzić aktualne ustawienia Twojego konta albo wprowadzić zmiany. <br> <a href='https://sme.myfleetcor.com/pl/login/'>MyFLEETCOR- samoobsługowy portal online</a>"
+            },
+            "Hungary": {
+                "en": "Access to your card settings, transaction details and statistics. You have complete control over finance and card management. You will receive your access data shortly.",
+                "hu": "Hozzáférés a kártyákhoz, tranzakciókhoz és azok részleteihez, követheti a költségeit. A bejelenti adatokat hamarosan megkapja."
+            },
+            "Germany": {
+                "en": "Access to your card settings, transaction details and statistics. You have complete control over finance and card management. You will receive your access data shortly.",
+                "de": "Zugriff zu Ihren Karteneinstellungen, Transaktionsdetails und Statistiken. Sie haben die vollständige Kontrolle über Finanzen und Kartenverwaltung. Ihre Zugangsdaten erhalten Sie in Kürze."
+            },
+            "Netherlands": {
+                "en": "Access to your card settings, transaction details and statistics. You have complete control over finance and card management. You will receive your access data shortly.",
+                "nl": "Toegang tot uw pasinstellingen, transactiegegevens en statistieken. U heeft volledige controle over financiën en pasbeheer. U ontvangt uw toegangsgegevens binnenkort."
+            },
+            "Czech Republic": {
+                "en": "Access to your card settings, transaction details and statistics. You have complete control over finance and card management. You will receive your access data shortly.",
+                "cs": "Přístup k nastavení Vašich karet, transakčním reportům a statistikám. Máte úplnou kontrolu nad financemi a správou karet. Brzy obdržíte své přístupové údaje."
+            },
+            "Slovakia": {
+                "en": "Access to your card settings, transaction details and statistics. You have complete control over finance and card management. You will receive your access data shortly.",
+                "sk": "Prístup k nastaveniu Vašich kariet, transakčným reportom a štatistikám. Máte úplnú kontrolu nad financiami a správou kariet. Čoskoro obdržíte svoje prístupové údaje."
+            },
+            "Belgium-FR": {
+                "en": "Access to your card settings, transaction details and statistics. You have complete control over finance and card management. You will receive your access data shortly.",
+                "fr": "Accès aux paramètres de vos cartes, aux détails des transactions et aux statistiques. Vous avez un contrôle complet sur la gestion de vos cartes et de vos dépenses. Vous recevrez vos accès pour le portail en ligne sous peu.",
+                "nl": "Toegang tot uw kaartinstellingen, transactiegegevens en statistieken. U heeft volledige controle over financiën en kaartbeheer. U ontvangt uw toegangsgegevens binnenkort."
+            },
+            "Belgium-NL": {
+                "en": "Access to your card settings, transaction details and statistics. You have complete control over finance and card management. You will receive your access data shortly.",
+                "fr": "Accès aux paramètres de vos cartes, aux détails des transactions et aux statistiques. Vous avez un contrôle complet sur la gestion de vos cartes et de vos dépenses. Vous recevrez vos accès pour le portail en ligne sous peu.",
+                "nl": "Toegang tot uw kaartinstellingen, transactiegegevens en statistieken. U heeft volledige controle over financiën en kaartbeheer. U ontvangt uw toegangsgegevens binnenkort."
+            },
+            "France": {
+                "en": "Access to your card settings, transaction details and statistics. You have complete control over finance and card management. You will receive your access data shortly.",
+                "fr": "Accès aux paramètres de vos cartes, aux détails des transactions et aux statistiques. Vous avez un contrôle complet sur la gestion de vos cartes et de vos dépenses. Vous recevrez vos accès pour le portail en ligne sous peu."
+            },
+            "Luxembourg": {
+                "en": "Access to your card settings, transaction details and statistics. You have complete control over finance and card management. You will receive your access data shortly.",
+                "fr": "Accès aux paramètres de vos cartes, aux détails des transactions et aux statistiques. Vous avez un contrôle complet sur la gestion de vos cartes et de vos dépenses. Vous recevrez vos accès pour le portail en ligne sous peu."
+            },
+            "Switzerland-FR": {
+                "en": "Access to your card settings, transaction details and statistics. You have complete control over finance and card management. You will receive your access data shortly.",
+                "fr": "Accès aux paramètres de vos cartes, aux détails des transactions et aux statistiques. Vous avez un contrôle complet sur la gestion de vos cartes et de vos dépenses. Vous recevrez vos accès pour le portail en ligne sous peu.",
+                "de": "Zugriff zu Ihren Karteneinstellungen, Transaktionsdetails und Statistiken. Sie haben die vollständige Kontrolle über Finanzen und Kartenverwaltung. Ihre Zugangsdaten erhalten Sie in Kürze."
+            },
+            "Switzerland-DE": {
+                "en": "Access to your card settings, transaction details and statistics. You have complete control over finance and card management. You will receive your access data shortly.",
+                "fr": "Accès aux paramètres de vos cartes, aux détails des transactions et aux statistiques. Vous avez un contrôle complet sur la gestion de vos cartes et de vos dépenses. Vous recevrez vos accès pour le portail en ligne sous peu.",
+                "de": "Zugriff zu Ihren Karteneinstellungen, Transaktionsdetails und Statistiken. Sie haben die vollständige Kontrolle über Finanzen und Kartenverwaltung. Ihre Zugangsdaten erhalten Sie in Kürze."
+            },
+            "Czech Republic CCS": {
+                "en": "Access to your card settings, transaction details and statistics. You have complete control over finance and card management. You will receive your access data shortly.",
+                "cs": "Přístup k nastavení Vašich karet, transakčním reportům a statistikám. Máte úplnou kontrolu nad financemi a správou karet. Brzy obdržíte své přístupové údaje."
+            },
+            "Slovakia CCS": {
+                "en": "Access to your card settings, transaction details and statistics. You have complete control over finance and card management. You will receive your access data shortly.",
+                "sk": "Prístup k nastaveniu Vašich kariet, transakčným reportom a štatistikám. Máte úplnú kontrolu nad financiami a správou kariet. Čoskoro obdržíte svoje prístupové údaje."
+            }
+        },
+        "th_page_contacts_second_col_title_fn": {
+            "default_impl": {
+                "en": "NEW CUSTOMER HOTLINE",
+                "fr": "NOUVELLE HOTLINE",
+                "hu": "ÉRTÉKESÍTÉS",
+                "cs": "LINKA PRO NOVÉ ZÁKAZNÍKY",
+                "sk": "LINKA PRE NOVÉ ZÁKAZNÍKY",
+                "nl": "NIEUWE KLANTEN-HOTLINE",
+                "de": "NEUKUNDEN-HOTLINE",
+                "pl": "INFOLINIA DLA NOWYCH KLIENTÓW"
+            }
+        },
+        "th_page_contacts_second_col_description_fn": {
+            "default_impl": {
+                "en": "+48 22 244 1256 <br><a href='mailto:nowyklient@fleetcor.pl'>nowyklient@fleetcor.pl</a> <br>8:00 - 17:00 (Monday to Friday)",
+                "pl": "+48 22 244 1256 <br><a href='mailto:nowyklient@fleetcor.pl'>nowyklient@fleetcor.pl</a> <br>8:00 - 17:00 (od poniedziałku do piątku)"
+            },
+            "Luxembourg": {
+                "en": "+352 28 261 456 <br><a href='mailto:info@fleetcor.lu'>info@fleetcor.lu</a> <br>8:00 - 17:00 (Monday to Friday)",
+                "fr": "+352 28 261 456 <br><a href='mailto:info@fleetcor.lu'>info@fleetcor.lu</a> <br>8:00 - 17:00 (du lundi au vendredi)"
+            },
+            "Austria": {
+                "en": "+43 138 50269 <br><a href='mailto:kontakt@fleetcor.at'>kontakt@fleetcor.at</a> <br>8:00 - 17:00 (Monday to Friday)",
+                "pl": "+43 138 50269 <br><a href='mailto:kontakt@fleetcor.at'>kontakt@fleetcor.at</a> <br>8:00 - 17:00 (od poniedziałku do piątku)"
+            },
+            "Poland Lotos": {
+                "en": "+48 123 349 770 <br><a href='mailto:karta.lotos@fleetcor.pl'>karta.lotos@fleetcor.pl</a> <br>8:00 - 17:00 (Monday to Friday)",
+                "pl": "+48 123 349 770 <br><a href='mailto:karta.lotos@fleetcor.pl'>karta.lotos@fleetcor.pl</a> <br>8:00 - 17:00 (od poniedziałku do piątku)"
+            },
+            "Germany": {
+                "en": "+49 911 14955287 <br><a href='mailto:kundenwerden@fleetcor.de'>kundenwerden@fleetcor.de</a> <br>8:00 - 17:00 (Monday to Friday)",
+                "de": "+49 911 14955287 <br><a href='mailto:kundenwerden@fleetcor.de'>kundenwerden@fleetcor.de</a> <br>8:00 – 17:00 (Montag bis Freitag)"
+            },
+            "Netherlands": {
+                "en": "+31 204 990895 <br><a href='mailto:contact@fleetcor.nl'>contact@fleetcor.nl</a> <br>8:00 - 17:00 (Monday to Friday)",
+                "nl": "+31 204 990895 <br><a href='mailto:contact@fleetcor.nl'>contact@fleetcor.nl</a> <br>8:00 - 17:00 (maandag t/m vrijdag)"
+            },
+            "Czech Republic": {
+                "en": "+420 296 181204 <br><a href='mailto:kontakt@fleetcor.cz'>kontakt@fleetcor.cz</a> <br>Po-Čt 8-17h, Pá 8-14.30h",
+                "cs": "+420 296 181204 <br><a href='mailto:kontakt@fleetcor.cz'>kontakt@fleetcor.cz</a> <br>Po-Čt 8-17h, Pá 8-14.30h"
+            },
+            "Slovakia": {
+                "en": "+421 233 527 874  <br><a href='mailto:kontakt@fleetcor.sk'>kontakt@fleetcor.sk</a> <br>Po-Št 8-17h, Pi 8-14.30h",
+                "sk": "+421 233 527 874  <br><a href='mailto:kontakt@fleetcor.sk'>kontakt@fleetcor.sk</a> <br>Po-Št 8-17h, Pi 8-14.30h"
+            },
+            "Belgium-FR": {
+                "en": "+32 236 48965 <br><a href='contact.fr@fleetcorcards.be'>contact.fr@fleetcorcards.be</a> <br>8:00 - 17:00 (Monday to Friday)",
+                "fr": "+32 236 48965 <br><a href='contact.fr@fleetcorcards.be'>contact.fr@fleetcorcards.be</a> <br>8:00 - 17:00 (du lundi au vendredi)",
+                "nl": "+32 236 48965 <br><a href='contact.fr@fleetcorcards.be'>contact.fr@fleetcorcards.be</a> <br>8:00 - 17:00 (maandag t/m vrijdag)"
+            },
+            "Belgium-NL": {
+                "en": "+32 236 48965 <br><a href='contact@fleetcorcards.be'>contact@fleetcorcards.be</a> <br>8:00 - 17:00 (Monday to Friday)",
+                "fr": "+32 236 48965 <br><a href='contact@fleetcorcards.be'>contact@fleetcorcards.be</a> <br>8:00 - 17:00 (du lundi au vendredi)",
+                "nl": "+32 236 48965 <br><a href='contact@fleetcorcards.be'>contact@fleetcorcards.be</a> <br>8:00 - 17:00 (maandag t/m vrijdag)"
+            },
+            "Hungary": {
+                "en": "+36 199 93403 <br><a href='ujugyfel@fleetcor.hu'>ujugyfel@fleetcor.hu</a> <br>Monday to Thursday from 08:00 to 17:00.<br>Friday from 8 a.m. to 2:30 p.m.",
+                "hu": "+36 199 93403 <br><a href='ujugyfel@fleetcor.hu'>ujugyfel@fleetcor.hu</a> <br>hétfőtől  csütörtökig: 08:00 – 17:00, pénteken:  08:00 – 14:30"
+            },
+            "France": {
+                "en": "+33 185 851896 <br><a href='contact@fleetcor.fr'>contact@fleetcor.fr</a> <br>8:00 - 17:00 (Monday to Friday)",
+                "fr": "+33 185 851896 <br><a href='contact@fleetcor.fr'>contact@fleetcor.fr</a> <br>8:00 - 17:00 (du lundi au vendredi)"
+            },
+            "Switzerland-DE": {
+                "en": "+41 445 223796 <br><a href='contact@fleetcor.ch'>contact@fleetcor.ch</a> <br>8:00 - 17:00 (Monday to Friday)",
+                "fr": "+41 445 223796 <br><a href='contact@fleetcor.ch'>contact@fleetcor.ch</a> <br>8:00 - 17:00 (du lundi au vendredi)",
+                "de": "+41 445 223796 <br><a href='contact@fleetcor.ch'>contact@fleetcor.ch</a> <br>8:00 – 17:00 (Montag bis Freitag)"
+            },
+            "Switzerland-FR": {
+                "en": "+41 445 223796 <br><a href='contact-fr@fleetcor.ch'>contact-fr@fleetcor.ch</a> <br>8:00 - 17:00 (Monday to Friday)",
+                "fr": "+41 445 223796 <br><a href='contact-fr@fleetcor.ch'>contact-fr@fleetcor.ch</a> <br>8:00 - 17:00 (du lundi au vendredi)",
+                "de": "+41 445 223796 <br><a href='contact-fr@fleetcor.ch'>contact-fr@fleetcor.ch</a> <br>8:00 – 17:00 (Montag bis Freitag)"
+            },
+            "Czech Republic CCS": {
+                "en": "+420 266 108 108 <br>Mon-Thu 08:00 - 17:00, Fri 08:00-14:30",
+                "cs": "+420 266 108 108  <br>Po-Čt 8-17h, Pá 8-14.30h"
+            },
+            "Slovakia CCS": {
+                "en": "+421 2 582 80 600 <br>Mon-Thu 08:00 - 17:00, Fri 08:00-14:30",
+                "sk": "+421 2 582 80 600  <br>Po-Št 8-17h, Pi 8-14.30h"
+            }
+        },
+        "th_page_header_completed_title": {
+            "default_impl": {
+                "en": "ORDER COMPLETED",
+                "hu": "SIKERES MEGRENDELÉS",
+                "cs": "OBJEDNÁVKA DOKONČENA",
+                "sk": "OBJEDNÁVKA DOKONČENÁ",
+                "fr": "COMMANDE ACHEVÉE",
+                "nl": "BESTELLING COMPLEET",
+                "de": "BESTELLUNG ABGESCHLOSSEN",
+                "pl": "ZAMÓWIENIE ZAKOŃCZONE"
+            }
+        },
+        "th_page_header_completed_direct_debit_description": {
+            "default_impl": {
+                "en": "",
+                "fr": "",
+                "sk": "",
+                "cs": "",
+                "nl": "",
+                "de": "",
+                "pl": ""
+            }
+        },
+        "th_page_header_completed_bank_transfer_description": {
+            "default_impl": {
+                "en": "",
+                "fr": "",
+                "nl": "",
+                "sk": "",
+                "cs": "",
+                "de": "",
+                "pl": ""
+            }
+        },
+        "th_page_header_awaiting_payment_title": {
+            "default_impl": {
+                "en": "AWAITING PAYMENT",
+                "hu": "FIZETÉSRE VÁR",
+                "cs": "ČEKÁNÍ NA PLATBU",
+                "sk": "ČAKANIE NA PLATBU",
+                "fr": "EN ATTENTE DU PAIEMENT",
+                "nl": "IN AFWACHTING VAN BETALING",
+                "de": "WARTEN AUF ZAHLUNGSEINGANG",
+                "pl": "OCZEKIWANIE NA PŁATNOŚĆ"
+            }
+        },
+        "th_page_header_awaiting_payment_direct_debit_description": {
+            "default_impl": {
+                "en": "",
+                "fr": "",
+                "nl": "",
+                "sk": "",
+                "cs": "",
+                "de": "",
+                "pl": ""
+            }
+        },
+        "th_page_header_awaiting_payment_bank_transfer_description": {
+            "default_impl": {
+                "en": "",
+                "fr": "",
+                "nl": "",
+                "sk": "",
+                "cs": "",
+                "de": "",
+                "pl": ""
+            }
+        },
+        "th_page_header_order_submitted_title": {
+            "default_impl": {
+                "en": "ORDER SUBMITTED",
+                "hu": "BENYÚJTOTT MEGBÍZÁS",
+                "fr": "COMMANDE TRANSMISE",
+                "cs": "OBJEDNÁVKA ODESLÁNA",
+                "sk": "OBJEDNÁVKA ODOSLANÁ",
+                "nl": "BESTELLING VERZONDEN",
+                "de": "BESTELLUNG ERHALTEN",
+                "pl": "ZŁOŻONE ZAMÓWIENIE"
+            }
+        },
+        "th_page_header_report_ordering_submitted_title": {
+            "default_impl": {
+                "en": "CREDIT REPORT ORDERED",
+                "hu": "PÉNZÜGYI JELENTÉS MEGRENDELVE",
+                "fr": "RAPPORT DE SOLVABILITÉ",
+                "cs": "ZAŽÁDÁNO O KREDITNÍ REPORT",
+                "sk": "Zažiadané o kreditný report",
+                "nl": "KREDIETRAPPORT AANGEVRAAGD",
+                "de": "Bonitätsauskunft beantragt",
+                "pl": "WNIOSEK O RAPORT KREDYTOWY ZOSTAŁ WYSŁANY"
+            }
+        },
+        "th_page_header_order_submitted_description": {
+            "default_impl": {
+                "en": "",
+                "fr": "",
+                "sk": "",
+                "cs": "",
+                "nl": "",
+                "de": "",
+                "pl": ""
+            }
+        },
+        "th_page_first_time_use_title": {
+            "default_impl": {
+                "en": "FIRST TIME USE",
+                "hu": "ELSŐ HASZNÁLAT",
+                "fr": "PREMIÈRE UTILISATION",
+                "cs": "PRVNÍ POUŽITÍ",
+                "sk": "PRVÉ POUŽITIE",
+                "nl": "EERSTE GEBRUIK",
+                "de": "PRODUKTAKTIVIERUNG ANWEISUNGEN",
+                "pl": "PIERWSZE UŻYCIE"
+            }
+        },
+        "th_page_next_steps_title": {
+            "default_impl": {
+                "en": "NEXT STEPS",
+                "hu": "KÖVETKEZŐ LÉPÉSEK",
+                "sk": "ĎALŠIE KROKY",
+                "cs": "DALŠÍ KROKY",
+                "fr": "PROCHAINES ÉTAPES",
+                "nl": "VOLGENDE STAPPEN",
+                "de": "Nächste Schritte",
+                "pl": "NASTĘPNE KROKI"
+            }
+        },
+        "th_page_next_steps_order_submitted_content": {
+            "default_impl": {
+                "en": "<li>Your order was succesfully submitted.</li><li>Our sales team will reach out to you soon to confirm the entered details and finalize your order.</li>",
+                "hu": "<li>Megrendelési sikeresen elküldve.</li><li>Az értékesítési osztályunk hamarosan felveszi Önnel a kapcsolatot a további részletekkel és megrendelése véglegesítésével kapcsolatban.</li>",
+                "pl": "<li>Twoje zamówienie zostało pomyślnie przesłane.</li><li>Nasz zespół sprzedaży skontaktuje się z Tobą wkrótce, aby potwierdzieć wprowadzone dane i sfinalizować zamówienie.</li>",
+                "sk": "<li>Vaša objednávka bola úspešne odoslaná.</li><li>Náš predajný tím Vás čoskoro kontaktuje, aby potvrdil zadané údaje a dokončil Vašu objednávku.</li>",
+                "cs": "<li>Vaše objednávka byla úspěšně odeslána.</li><li>Náš obchodní tým Vás brzy kontaktuje, aby potvrdil zadané údaje a dokončil Vaši objednávku.</li>",
+                "fr": "<li>Votre commande a été transmise avec succès.</li><li>Notre équipe commerciale vous contactera sous peu pour confirmer les informations saisies et finaliser votre commande.</li>",
+                "nl": "<li>Uw bestelling is succesvol geplaatst.</li><li>Ons verkoopteam zal spoedig contact met u opnemen om de ingevoerde gegevens te bevestigen en uw bestelling af te ronden.</li>",
+                "de": "<li>Ihre Bestellung wurde erfolgreich zugestellt.</li><li>Unser Verkaufsteam wird sich in Kürze mit Ihnen in Verbindung setzen, um die eingegebenen Daten zu bestätigen und Ihre Bestellung abzuschließen.</li>"
+            }
+        },
+        "th_page_next_steps_report_ordering_submitted_content": {
+            "default_impl": {
+                "en": "<li>An order for a credit report has been placed for your company.</li><li>Wait until the report is generated for you - it normally takes up to 1 business day.</li><li>As soon as the report is ready, an email notification will be sent to $email$. You will be able to continue with your order.</li><li>If the report cannot be produced, our Sales team will reach out to you.</li>",
+                "hu": "<li>Pénzügyi jelentése megrendelésre került</li><li>Kérjük, várja meg, míg pénzügyi jelentése rendelkezésünkre áll, amely általában egy munkanapon belül megtörténik.</li><li>Amint a pénzügyi jelentés elkészült, e-mail értesítést küldünk az alábbi címre: $email$. Ezt követően a megrendelését be tudja fejezni.</li><li>Amennyiben valamilyen oknál fogva a pénzügyi jelentés nem készül el, értékesítési osztályunk kapcsolatba lép Önnel.</li>",
+                "pl": "<li>Wniosek o raport kredytowy dla Twojej firmy został wysłany.</li><li>Prosimy poczekać na wygenerowanie raportu. Zazwyczaj zajmuje to do 1 dnia roboczego.</li><li>Od razu po wygenerowaniu raportu otrzymasz wiadomość na adres e-mail $email$, po czym możesz kontynuować zamówienie.</li><li>Jeśli raport nie zostanie wygenerowany, nasz dział sprzedaży skontaktuje się z Tobą.</li>",
+                "sk": "<li>Bolo požiadané o vystavenie kreditného reportu pre Vašu spoločnosť.</li><li>Počkajte prosím, kým sa report vygeneruje. Report je vystavený spravidla do jedného pracovného dňa.</li><li>Keď bude report k dispozícii, na adresu $email$ Vám bude zaslané upozornenie a budete môcť v objednávke pokračovať.</li><li>V prípade, že by nebolo možné report vystaviť, budete kontaktovaný naším obchodným oddelením.</li>",
+                "cs": "<li>Bylo zažádáno o vystavení kreditního reportu pro Vaši společnost.</li><li>Vyčkejte prosím, než se report vygeneruje. Report je vystaven zpravidla do jednoho pracovního dne.</li><li>Jakmile bude report k dispozci, na adresu $email$ Vám bude zasláno upozornění a budete moci v objednávce pokračovat.</li><li>V případě, že by nebylo možné report vystavit, budete kontaktováni naším obchodním oddělením.</li>",
+                "fr": "<li>Le rapport de solvabilité a été commandé pour votre entreprise.</li><li>Veuillez attendre que le rapport pour votre société soit généré. Cela devrait durer un jour ouvrable.</li><li>Dès que le rapport est prêt, une notification vous sera envoyée par e-mail à $email$ et vous pourrez continuer votre commande.</li><li> Si le rapport ne peut pas être fournit, notre équipe commerciale prendra contact avec vous.</li>",
+                "nl": "<li>Er is een aanvraag voor een kredietrapport voor uw bedrijf geplaatst.</li><li>Wacht tot het rapport voor u is gegenereerd. Normaal gesproken duurt dit maximaal 1 werkdag.</li><li>Zodra het rapport gereed is, wordt er een e-mailbericht gestuurd naar $email$. Vanaf dat moment kunt u doorgaan met uw bestelling.</li><li>Als het rapport niet kan worden geleverd, neemt ons verkoopteam contact met u op.</li>",
+                "de": "<li>Eine Bonitätsauskunft wurde beantragt.</li><li>Warten Sie bitte bis ein Bericht für Ihre Firma vorbereitet wird - dies dauert normalerweise bis zu 3 Werktage.</li><li>Sobald der Bericht fertig ist, wird eine E-Mail-Benachrichtigung an $email$ gesendet. Sie können dann mit Ihrer Bestellung fortfahren.</li><li>Wenn der Bericht nicht erstellt werden kann, wird sich ein Mitarbeiter bei Ihnen melden.</li>"
+            }
+        },
+        "th_page_next_steps_awaiting_core_content": {
+            "default_impl": {
+                "en": "<li>please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$</li>",
+                "de": "<li>Bitte beachten Sie die Anweisungen zur Einzahlung der Kaution um Ihre Kreditrahmen zu sichern.</li><li>Sobald Ihre Einzahlung bei uns eingegangen ist, wird Ihre Bestellung per Post an folgende Adresse geliefert: $address$.</li><li>Wenn Sie Ihre Bestellung bekommen, folgen Sie bitte den Anweisungen zur Produktaktivierung auf dem beiliegenden Schreiben.</li><li>Die Zusammenfassung Ihrer Bestellung senden wird an Ihre E-Mail Addresse $email$</li>"
+            },
+            "Netherlands": {
+                "en": "<li>Please follow the deposit payment instructions below to trasnfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>When you receive your order it's ready for immediate use.</li>",
+                "nl": "<li>Volg de onderstaande instructies om een eenmalige aanbetaling over te maken om uw kredietlimiet veilig te stellen.</li><li>Een samenvatting van uw bestelling wordt naar $email$ gestuurd.</li><li>Zodra de aanbetaling is ontvangen, wordt uw bestelling per post bezorgd op het volgende adres: $address$</li><li>Bij ontvangst van uw bestelling is deze direct klaar voor gebruik.</li>"
+            },
+            "Belgium-FR": {
+                "en": "<li>Please follow the deposit payment instructions below to trasnfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour le versement du dépôt de garantie, paiement en une fois, sécurisant le montant de votre ligne de crédit.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$</li><li>Dès réception du montant de la garantie, votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "nl": "<li>Volg de onderstaande instructies om een eenmalige aanbetaling over te maken om uw kredietlimiet veilig te stellen.</li><li>Een samenvatting van uw bestelling wordt naar $email$ gestuurd.</li><li>Zodra de aanbetaling is ontvangen, wordt uw bestelling per post bezorgd op het volgende adres: $address$</li><li>Bij ontvangst van uw bestelling is deze direct klaar voor gebruik.</li>"
+            },
+            "France": {
+                "en": "<li>Please follow the deposit payment instructions below to trasnfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour le versement du dépôt de garantie, paiement en une fois, sécurisant le montant de votre ligne de crédit.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$</li><li>Dès réception du montant de la garantie, votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>"
+            },
+            "Luxembourg": {
+                "en": "<li>Please follow the deposit payment instructions below to trasnfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour le versement du dépôt de garantie, paiement en une fois, sécurisant le montant de votre ligne de crédit.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$</li><li>Dès réception du montant de la garantie, votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>"
+            },
+            "Belgium-NL": {
+                "en": "<li>Please follow the deposit payment instructions below to trasnfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour le versement du dépôt de garantie, paiement en une fois, sécurisant le montant de votre ligne de crédit.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$</li><li>Dès réception du montant de la garantie, votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "nl": "<li>Volg de onderstaande instructies om een eenmalige aanbetaling over te maken om uw kredietlimiet veilig te stellen.</li><li>Een samenvatting van uw bestelling wordt naar $email$ gestuurd.</li><li>Zodra de aanbetaling is ontvangen, wordt uw bestelling per post bezorgd op het volgende adres: $address$</li><li>Bij ontvangst van uw bestelling is deze direct klaar voor gebruik.</li>"
+            }
+        },
+        "th_page_next_steps_awaiting_b2b_content": {
+            "default_impl": {
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$</li>",
+                "de": "<li>Bitte beachten Sie die Anweisungen zur Einzahlung der Kaution um Ihre Kreditrahmen zu sichern.</li><li>Sobald Ihre Einzahlung bei uns eingegangen ist, wird Ihre Bestellung per Post an folgende Adresse geliefert: $address$.</li><li>Bitte beachten Sie die SEPA-Mandat Aktivierungsanweisungen, um Ihre bevorzugte Zahlungsmethode bei Ihrer Bank einzurichten.</li><li>Wenn Sie Ihre Bestellung bekommen, folgen Sie bitte den Anweisungen zur Produktaktivierung auf dem beiliegenden Schreiben.</li><li>Die Zusammenfassung Ihrer Bestellung senden wird an Ihre E-Mail Addresse $email$</li>"
+            },
+            "Netherlands": {
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "nl": "<li>Volg de onderstaande instructies om een eenmalige aanbetaling over te maken om uw kredietlimiet veilig te stellen.</li><li>Een samenvatting van uw bestelling wordt naar $email$ gestuurd.</li><li>Zodra de aanbetaling is ontvangen, wordt uw bestelling per post bezorgd op het volgende adres: $address$</li><li>Volg onderstaande B2B automatische incasso aanmeldings instructies op om uw betaalmethode te activeren.</li><li>Bij ontvangst van uw bestelling is deze direct klaar voor gebruik.</li>"
+            },
+            "Belgium-FR": {
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour le versement du dépôt de garantie, paiement en une fois, sécurisant le montant de votre ligne de crédit.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$</li><li>Dès réception du montant de la garantie, votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Veuillez suivre les instructions ci-dessous pour activer le mandat de domiciliation SEPA B2B auprès de votre banque.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "nl": "<li>Volg de onderstaande instructies om een eenmalige aanbetaling over te maken om uw kredietlimiet veilig te stellen.</li><li>Een samenvatting van uw bestelling wordt naar $email$ gestuurd.</li><li>Zodra de aanbetaling is ontvangen, wordt uw bestelling per post bezorgd op het volgende adres: $address$.</li><li>Volg onderstaande B2B domiciliëring aanmeldings instructies op om uw betaalmethode te activeren.</li><li>Bij ontvangst van uw bestelling is deze direct klaar voor gebruik.</li>"
+            },
+            "France": {
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour le versement du dépôt de garantie, paiement en une fois, sécurisant le montant de votre ligne de crédit.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$</li><li>Dès réception du montant de la garantie, votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Veuillez suivre les instructions ci-dessous pour activer le mandat de domiciliation SEPA B2B auprès de votre banque.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>"
+            },
+            "Luxembourg": {
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour le versement du dépôt de garantie, paiement en une fois, sécurisant le montant de votre ligne de crédit.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$</li><li>Dès réception du montant de la garantie, votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Veuillez suivre les instructions ci-dessous pour activer le mandat de domiciliation SEPA B2B auprès de votre banque.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>"
+            },
+            "Belgium-NL": {
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour le versement du dépôt de garantie, paiement en une fois, sécurisant le montant de votre ligne de crédit.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$</li><li>Dès réception du montant de la garantie, votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Veuillez suivre les instructions ci-dessous pour activer le mandat de domiciliation SEPA B2B auprès de votre banque.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "nl": "<li>Volg de onderstaande instructies om een eenmalige aanbetaling over te maken om uw kredietlimiet veilig te stellen.</li><li>Een samenvatting van uw bestelling wordt naar $email$ gestuurd.</li><li>Zodra de aanbetaling is ontvangen, wordt uw bestelling per post bezorgd op het volgende adres: $address$.</li><li>Volg onderstaande B2B domiciliëring aanmeldings instructies op om uw betaalmethode te activeren.</li><li>Bij ontvangst van uw bestelling is deze direct klaar voor gebruik.</li>"
+            }
+        },
+        "th_page_next_steps_completed_b2b_content": {
+            "default_impl": {
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>Your order will be delivered by post to the following address: $address$</li><li> When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$</li>",
+                "de": "<li>Bitte beachten Sie die Aktivierungsanweisungen für das SEPA-Mandat, um Ihre bevorzugte Zahlungsmethode bei Ihrer Bank einzurichten.</li><li> Ihre Bestellung wird per Post an folgende Adresse geliefert: $address$.</li><li>Wenn Sie Ihre Bestellung bekommen, folgen Sie bitte den Anweisungen zur Produktaktivierung auf dem beiliegenden Schreiben.</li><li>Die Zusammenfassung Ihrer Bestellung senden wird an Ihre E-Mail Addresse $email$</li>"
+            },
+            "Netherlands": {
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>A summary of your order will be sent to $email$.</li><li> Your order will be delivered by post to the following address: $address$.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "nl": "<li>Volg onderstaande stappen om de SEPA B2B automatische incasso machtiging aan te melden bij uw bank.</li><li>Een overzicht van uw bestelling ontvangt u op: $email$.</li><li>Uw bestelling word per post bezorgd op: $address$.</li><li>Na ontvangst van uw bestelling kunt u deze direct in gebruik nemen.</li>"
+            },
+            "Belgium-FR": {
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>A summary of your order will be sent to $email$.</li><li> Your order will be delivered by post to the following address: $address$.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour activer le mandat de domiciliation SEPA B2B auprès de votre banque.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$.</li><li>Votre commande sera livrée par courrier à l'adresse suivante: $address$.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "nl": "<li>Volg onderstaande stappen om de SEPA B2B domiciliëring aan te melden bij uw bank.</li><li>Een overzicht van uw bestelling ontvangt u op: $email$.</li><li>Uw bestelling word per post bezorgd op: $address$.</li><li>Na ontvangst van uw bestelling kunt u deze direct in gebruik nemen.</li>"
+            },
+            "France": {
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>A summary of your order will be sent to $email$.</li><li> Your order will be delivered by post to the following address: $address$.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour activer le mandat de domiciliation SEPA B2B auprès de votre banque.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$.</li><li>Votre commande sera livrée par courrier à l'adresse suivante: $address$.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>"
+            },
+            "Luxembourg": {
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>A summary of your order will be sent to $email$.</li><li> Your order will be delivered by post to the following address: $address$.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour activer le mandat de domiciliation SEPA B2B auprès de votre banque.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$.</li><li>Votre commande sera livrée par courrier à l'adresse suivante: $address$.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>"
+            },
+            "Belgium-NL": {
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>A summary of your order will be sent to $email$.</li><li> Your order will be delivered by post to the following address: $address$.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour activer le mandat de domiciliation SEPA B2B auprès de votre banque.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$.</li><li>Votre commande sera livrée par courrier à l'adresse suivante: $address$.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "nl": "<li>Volg onderstaande stappen om de SEPA B2B domiciliëring aan te melden bij uw bank.</li><li>Een overzicht van uw bestelling ontvangt u op: $email$.</li><li>Uw bestelling word per post bezorgd op: $address$.</li><li>Na ontvangst van uw bestelling kunt u deze direct in gebruik nemen.</li>"
+            }
+        },
+        "th_page_next_steps_completed_core_content": {
+            "default_impl": {
+                "en": "<li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$</li>",
+                "de": "<li>Ihre Bestellung wird per Post an folgende Adresse geliefert: $address$.</li><li> Wenn Sie Ihre Bestellung bekommen, folgen Sie bitte den Anweisungen zur Produktaktivierung auf dem beiliegenden Schreiben.</li><li>Die Zusammenfassung Ihrer Bestellung senden wird an Ihre E-Mail Addresse $email$</li>"
+            },
+            "Netherlands": {
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>A summary of your order will be sent to $email$.</li><li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order it's ready for immediate use.</li>",
+                "nl": "<li>Een overzicht van uw bestelling ontvangt u op: $email$.</li><li>Uw bestelling word per post bezorgd op: $address$.</li><li>Na ontvangst van uw bestelling kunt u deze direct in gebruik nemen.</li>"
+            },
+            "Belgium-FR": {
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>A summary of your order will be sent to $email$.</li><li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$.</li><li>Votre commande sera livrée par courrier à l'adresse suivante: $address$.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "nl": "<li>Een overzicht van uw bestelling ontvangt u op: $email$.</li><li>Uw bestelling word per post bezorgd op: $address$.</li><li>Na ontvangst van uw bestelling kunt u deze direct in gebruik nemen.</li>"
+            },
+            "France": {
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>A summary of your order will be sent to $email$.</li><li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$.</li><li>Votre commande sera livrée par courrier à l'adresse suivante: $address$.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>"
+            },
+            "Luxembourg": {
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>A summary of your order will be sent to $email$.</li><li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$.</li><li>Votre commande sera livrée par courrier à l'adresse suivante: $address$.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>"
+            },
+            "Belgium-NL": {
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>A summary of your order will be sent to $email$.</li><li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$.</li><li>Votre commande sera livrée par courrier à l'adresse suivante: $address$.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "nl": "<li>Een overzicht van uw bestelling ontvangt u op: $email$.</li><li>Uw bestelling word per post bezorgd op: $address$.</li><li>Na ontvangst van uw bestelling kunt u deze direct in gebruik nemen.</li>"
+            }
+        },
+        "th_page_you_order_title": {
+            "default_impl": {
+                "en": "YOUR ORDER",
+                "hu": "AZ ÖN MEGRENDELÉSE",
+                "fr": "VOTRE COMMANDE",
+                "sk": "VAŠA OBJEDNÁVKA",
+                "cs": "VAŠE OBJEDNÁVKA",
+                "nl": "UW BESTELLING",
+                "de": "IHRE BESTELLUNG",
+                "pl": "TWOJE ZAMÓWIENIE"
+            }
+        },
+        "th_page_next_steps_completed_bank_transfer": {
+            "default_impl":{
+                "en": "<li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "pl": "<li>Twoje zamówienie zostanie dostarczone pocztą na następujący adres: $address$</li><li>Po otrzymaniu zamówienia postępuj zgodnie z instrukcjami aktywacji produktu.</li><li>Podsumowanie Twojego zamówienia zostanie wysłane na $email$.</li>"
+            },
+            "Hungary":{
+                "en": "<li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "hu": "<li>A megrendelt kártyák a következő címre kerülnek kiküldésre: $address$</li><li>Ha megkapta a kártyákat, kövesse a levélben található utasításokat.</li><li>A megrendelés összefoglalóját az alábbi e-mail címre küldtük ki: $email$.</li>"
+            },
+            "Slovakia":{
+                "en": "<li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "sk": "<li>Vaša objednávka bude doručená poštou na adresu: $address$</li><li>Až obdržíte objednávku, postupujte podľa pokynov na aktiváciu produktu.</li><li>Súhrn Vašej objednávky bude zaslaný na $email$.</li>"
+            },
+            "Czech Republic":{
+                "en": "<li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "cs": "<li>Souhrn Vaší objednávky bude zaslán na $email$</li><li>Vaše objednávka bude doručena poštou na následující adresu: $address$</li><li>Až obdržíte karty a PIN, můžete ihned začít karty používat.</li>"
+            },
+            "Switzerland-DE": {
+                "en": "<li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "fr": "<li>Votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$.</li>",
+                "de": "<li>Ihre Bestellung wird per Post an folgende Adresse geliefert: $address$</li><li>Wenn Sie Ihre Bestellung bekommen, folgen Sie bitte den Produktaktivierung Anweisungen.</li><li>Die Zusammenfassung Ihrer Bestellung senden wird an Ihre E-Mail Addresse $email$.</li>"
+            },
+            "Switzerland-FR": {
+                "en": "<li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "fr": "<li>Votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$.</li>",
+                "de": "<li>Ihre Bestellung wird per Post an folgende Adresse geliefert: $address$</li><li>Wenn Sie Ihre Bestellung bekommen, folgen Sie bitte den Produktaktivierung Anweisungen.</li><li>Die Zusammenfassung Ihrer Bestellung senden wird an Ihre E-Mail Addresse $email$.</li>"
+            },
+            "Slovakia CCS":{
+                "en": "<li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "sk": "<li>Vaša objednávka bude doručená poštou na adresu: $address$</li><li>Až obdržíte objednávku, postupujte podľa pokynov na aktiváciu produktu.</li><li>Súhrn Vašej objednávky bude zaslaný na $email$.</li>"
+            },
+            "Czech Republic CCS":{
+                "en": "<li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "cs": "<li>Souhrn Vaší objednávky bude zaslán na $email$</li><li>Vaše objednávka bude doručena poštou na následující adresu: $address$</li><li>Až obdržíte karty a PIN, můžete ihned začít karty používat.</li>"
+            }
+        },
+        "th_page_next_steps_completed_direct_debit": {
+            "default_impl":{
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "pl": "<li>Postępuj zgodnie z instrukcjami aktywacji polecenia zapłaty poniżej, aby skonfigurować preferowaną metodę płatności w swoim banku.</li><li>Twóje zamówienie zostanie dostarczone pocztą na następujący adres: $address$</li><li>Po otrzymaniu zamówienia postępuj zgodnie z instrukcjami aktywacji produktu.</li><li>Podsumowanie Twojego zamówienia zostanie wysłane na $email$.</li>"
+            },
+            "Hungary":{
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "hu": "<li>Beszedési megbízás beállításához kövesse a visszaigazolásban kiküldött instrukciókat.</li><li>A megrendelt kártyák a következő címre kerülnek kiküldésre: $address$</li><li>Ha megkapta a kártyákat, kövesse a levélben található utasításokat.</li><li>A megrendelés összefoglalóját az alábbi e-mail címre küldtük ki: $email$.</li>"    
+            },
+            "Slovakia":{
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "sk": "<li>Postupujte podľa nižšie uvedených pokynov na aktiváciu inkasa a nastavte u svojej banky preferovaný spôsob platby.</li><li>Vaša objednávka bude doručená poštou na adresu: $address$</li><li>Až obdržíte objednávku, postupujte podľa pokynov na aktiváciu produktu.</li><li>Súhrn Vašej objednávky bude zaslaný na $email$.</li>"
+            },
+            "Czech Republic":{
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "cs": "<li>Postupujte podle níže uvedených pokynů k aktivaci inkasa a nastavte u své banky preferovaný způsob platby.</li><li>Souhrn Vaší objednávky bude zaslán na $email$.</li><li>Vaše objednávka bude doručena poštou na následující adresu: $address$</li><li>Až obdržíte karty a PIN, můžete ihned začít karty používat.</li>"
+            },
+            "Switzerland-DE": {
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>A summary of your order will be sent to $email$.</li><li> Your order will be delivered by post to the following address: $address$.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour activer l'autorisation de débit BDD auprès de votre banque.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$.</li><li>Votre commande sera livrée par courrier à l'adresse suivante: $address$.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "de": "<li>Bitte beachten Sie die BDD-Mandat Aktivierungsanweisungen, um Ihre bevorzugte Zahlungsmethode bei Ihrer Bank einzurichten.</li><li>Die Zusammenfassung Ihrer Bestellung senden wird an Ihre E-Mail Addresse $email$.</li><li>Ihre Bestellung wird per Post an folgende Adresse geliefert: $address$</li><li>Wenn Sie Ihre Bestellung bekommen, folgen Sie bitte den Produktaktivierung Anweisungen.</li>"
+            },
+            "Switzerland-FR": {
+                "en": "<li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>A summary of your order will be sent to $email$.</li><li> Your order will be delivered by post to the following address: $address$.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour activer l'autorisation de débit BDD auprès de votre banque.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$.</li><li>Votre commande sera livrée par courrier à l'adresse suivante: $address$.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "de": "<li>Bitte beachten Sie die BDD-Mandat Aktivierungsanweisungen, um Ihre bevorzugte Zahlungsmethode bei Ihrer Bank einzurichten.</li><li>Die Zusammenfassung Ihrer Bestellung senden wird an Ihre E-Mail Addresse $email$.</li><li>Ihre Bestellung wird per Post an folgende Adresse geliefert: $address$</li><li>Wenn Sie Ihre Bestellung bekommen, folgen Sie bitte den Produktaktivierung Anweisungen.</li>"
+            },
+            "Slovakia CCS":{
+                "en": "<li>A summary of your order will be sent to $email$.</li><li>Please follow the Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order it's ready for immediate use.</li>",
+                "sk": "<li>Súhrn Vašej objednávky bude zaslaný na $email$.</li><li>Postupujte podľa nižšie uvedených pokynov na aktiváciu inkasa a nastavte u svojej banky preferovaný spôsob platby.</li><li>Vaša objednávka bude doručená poštou na adresu: $address$</li><li>Až obdržíte karty a PIN, môžete ihneď začať karty používať.</li>"
+            },
+            "Czech Republic CCS":{
+                "en": "<li>A summary of your order will be sent to $email$.</li><li>Please follow the Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>Your order will be delivered by post to the following address: $address$</li><li>When you receive your order it's ready for immediate use.</li>",
+                "cs": "<li>Souhrn Vaší objednávky bude zaslán na $email$.</li><li>Postupujte podle níže uvedených pokynů k aktivaci inkasa a nastavte u své banky preferovaný způsob platby.</li><li>Vaše objednávka bude doručena poštou na následující adresu: $address$</li><li>Až obdržíte karty a PIN, můžete ihned začít karty používat.</li>"
+            }
+        },
+        "th_page_next_steps_awaiting_direct_debit": {
+            "default_impl":{
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "pl": "<li>Postępuj zgodnie z poniższymi instrukcjami dotyczącymi płatności kaucję, aby przelać jednorazowy kaucja w celu zabezpieczenia linii kredytowej.</li><li>Po otrzymaniu wpłaty kaucji Twoje zamówienie zostanie dostarczone pocztą na następujący adres: $address$</li><li>Postępuj zgodznie z poniższymi instrukcjami aktywacji polecenia zapłaty, aby skonfigurować preferowaną metodę płatności w swoim banku.</li><li>Po otrzymaniu zamówienia postępuj zgodnie z instrukcjami aktywacji produktu.</li><li>Podsumowanie Twojego zamówienia zostanie wysłane na $email$.</li>"
+            },
+            "Hungary":{
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "hu": "<li>Kérjük, fizesse be az egyszeri óvadékot.</li><li>Amint az óvadék beérkezett hozzánk, a megrendelt kártyák a következő címre kerülnek kiküldésre: $address$</li><li>Beszedési megbízás beállításához kövesse a visszaigazolásban kiküldött instrukciókat.</li><li>Ha megkapta a kártyákat, kövesse a levélben található utasításokat.</li><li>A megrendelés összefoglalóját az alábbi e-mail címre küldtük ki: $email$.</li>"
+            },
+            "Slovakia":{
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "sk": "<li>Podľa nižšie uvedených pokynov k platbe preveďte prosím prevod jednorazovej kaucie, aby ste tak zaistili svoj kreditnej rámec.</li><li>Akonáhle platbu za jednorazovú kauciu obdržíme, bude Vaša objednávka doručená poštou na adresu: $address$</li><li>Postupujte podľa nižšie uvedených pokynov na aktiváciu inkasa a nastavte u svojej banky preferovaný spôsob platby.</li><li>Až obdržíte objednávku, postupujte podľa pokynov na aktiváciu produktu.</li><li>Súhrn Vašej objednávky bude zaslaný na $email$.</li>"
+            },
+            "Czech Republic":{
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "cs": "<li>Podle níže uvedených pokynů k platbě proveďte prosím převod jednorázové kauce, abyste tak zajistili svůj kreditní rámec.</li><li>Souhrn Vaší objednávky bude zaslán na $email$</li><li>Jakmile platbu za jednorázovou kauci obdržíme, bude Vaše objednávka doručena poštou na následující adresu: $address$.</li><li>Postupujte podle níže uvedených pokynů k aktivaci inkasa a nastavte u své banky preferovaný způsob platby.</li><li>Až obdržíte karty a PIN, můžete ihned začít karty používat.</li>"
+            },
+            "Switzerland-DE": {
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li> Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour le versement du dépôt de garantie, paiement en une fois, sécurisant le montant de votre ligne de crédit.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$</li><li>Dès réception du montant de la garantie, votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Veuillez suivre les instructions ci-dessous pour activer l'autorisation de débit BDD auprès de votre banque.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "de": "<li>Bitte beachten Sie die Anweisungen zur Einzahlung der Kaution um Ihre Kreditrahmen zu sichern.</li><li>Die Zusammenfassung Ihrer Bestellung senden wird an Ihre E-Mail Addresse $email$</li><li>Sobald Ihre Einzahlung bei uns eingegangen ist, wird Ihre Bestellung per Post an folgende Adresse geliefert: $address$</li><li>Bitte beachten Sie die BDD-Mandat Aktivierungsanweisungen, um Ihre bevorzugte Zahlungsmethode bei Ihrer Bank einzurichten.</li><li>Wenn Sie Ihre Bestellung bekommen, folgen Sie bitte den Produktaktivierung Anweisungen.</li>"
+            },
+            "Switzerland-FR": {
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li> Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour le versement du dépôt de garantie, paiement en une fois, sécurisant le montant de votre ligne de crédit.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$</li><li>Dès réception du montant de la garantie, votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Veuillez suivre les instructions ci-dessous pour activer l'autorisation de débit BDD auprès de votre banque.</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "de": "<li>Bitte beachten Sie die Anweisungen zur Einzahlung der Kaution um Ihre Kreditrahmen zu sichern.</li><li>Die Zusammenfassung Ihrer Bestellung senden wird an Ihre E-Mail Addresse $email$</li><li>Sobald Ihre Einzahlung bei uns eingegangen ist, wird Ihre Bestellung per Post an folgende Adresse geliefert: $address$</li><li>Bitte beachten Sie die BDD-Mandat Aktivierungsanweisungen, um Ihre bevorzugte Zahlungsmethode bei Ihrer Bank einzurichten.</li><li>Wenn Sie Ihre Bestellung bekommen, folgen Sie bitte den Produktaktivierung Anweisungen.</li>"
+            },
+            "Slovakia CCS":{
+                "en": "<li>A summary of your order will be sent to $email$.</li><li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "sk": "<li>Súhrn Vašej objednávky bude zaslaný na $email$.</li><li>Podľa nižšie uvedených pokynov k platbe preveďte prosím prevod jednorazovej kaucie, aby ste tak zaistili svoj kreditnej rámec.</li><li>Akonáhle platbu za jednorazovú kauciu obdržíme, bude Vaša objednávka doručená poštou na adresu: $address$</li><li>Postupujte podľa nižšie uvedených pokynov na aktiváciu inkasa a nastavte u svojej banky preferovaný spôsob platby.</li><li>Až obdržíte karty a PIN, môžete ihneď začať karty používať.</li>"
+            },
+            "Czech Republic CCS":{
+                "en": "<li>A summary of your order will be sent to $email$.</li><li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>Please follow the Business Direct Debit activation instructions below to set up your preferred payment method with your bank.</li><li>When you receive your order it's ready for immediate use.</li>",
+                "cs": "<li>Souhrn Vaší objednávky bude zaslán na $email$.</li><li>Podle níže uvedených pokynů k platbě proveďte prosím převod jednorázové kauce, abyste tak zajistili svůj kreditní rámec.</li><li>Jakmile platbu za jednorázovou kauci obdržíme, bude Vaše objednávka doručena poštou na následující adresu: $address$</li><li>Postupujte podle níže uvedených pokynů k aktivaci inkasa a nastavte u své banky preferovaný způsob platby.</li><li>Až obdržíte karty a PIN, můžete ihned začít karty používat.</li>"
+            }
+        },
+        "th_page_next_steps_awaiting_bank_transfer": {
+            "default_impl":{
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "pl": "<li>Postępuj zgodnie z poniższymi instrukcjami dotyczącymi płatności kaucji, aby przelać jednorazową kaucję w celu zabezpieczenia linii kredytowej.</li><li>Po otrzymaniu wpłaty kaucji Twoje zamówienie zostanie dostarczone pocztą na następujący adres: $address$</li><li>Po otrzymaniu zamówienia postępuj zgodnie z instrukcjami aktywacji produktu.</li><li>Podsumowanie Twojego zamówienia zostanie wysłane na $email$.</li>"
+            },
+            "Hungary":{
+                "en": "<li>Please follow the deposit payment instructions below to trasnfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "hu": "<li>Kérjük, fizesse be az egyszeri óvadékot.</li><li>Amint az óvadék beérkezett hozzánk, a megrendelt kártyák a következő címre kerülnek kiküldésre: $address$</li><li>Ha megkapta a kártyákat, kövesse a levélben található utasításokat.</li><li>A megrendelés összefoglalóját az alábbi e-mail címre küldtük ki: $email$.</li>"
+            },
+            "Slovakia":{
+                "en": "<li>Please follow the deposit payment instructions below to trasnfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "sk": "<li>Podľa nižšie uvedených pokynov k platbe preveďte prosím prevod jednorazovej kaucie, aby ste tak zaistili svoj kreditný rámec.</li><li>Akonáhle platbu za jednorazovú kauciu obdržíme, bude Vaša objednávka doručená poštou na adresu: $address$</li><li>Až obdržíte objednávku, postupujte podľa pokynov na aktiváciu produktu.</li><li>Súhrn Vašej objednávky bude zaslaný na $email$.</li>"
+            },
+            "Czech Republic":{
+                "en": "<li>Please follow the deposit payment instructions below to trasnfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "cs": "<li>Podle níže uvedených pokynů k platbě proveďte prosím převod jednorázové kauce, abyste tak zajistili svůj kreditní rámec.</li><li>Souhrn Vaší objednávky bude zaslán na $email$.</li><li>Jakmile platbu za jednorázovou kauci obdržíme, bude Vaše objednávka doručena poštou na následující adresu: $address$</li><li>Až obdržíte karty a PIN, můžete ihned začít karty používat.</li>"
+            },
+            "Switzerland-DE": {
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li> When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour le versement du dépôt de garantie, paiement en une fois, sécurisant le montant de votre ligne de crédit.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$</li><li>Dès réception du montant de la garantie, votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "de": "<li>Bitte beachten Sie die Anweisungen zur Einzahlung der Kaution um Ihre Kreditrahmen zu sichern.</li><li>Die Zusammenfassung Ihrer Bestellung senden wird an Ihre E-Mail Addresse $email$.</li><li>Sobald Ihre Einzahlung bei uns eingegangen ist, wird Ihre Bestellung per Post an folgende Adresse geliefert: $address$.</li><li>Wenn Sie Ihre Bestellung bekommen, folgen Sie bitte den Produktaktivierung Anweisungen.</li>"
+            },
+            "Switzerland-FR": {
+                "en": "<li>Please follow the deposit payment instructions below to transfer one-time deposit to secure your credit line.</li><li>A summary of your order will be sent to $email$.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li> When you receive your order it's ready for immediate use.</li>",
+                "fr": "<li>Veuillez suivre les instructions ci-dessous pour le versement du dépôt de garantie, paiement en une fois, sécurisant le montant de votre ligne de crédit.</li><li>Vous recevrez un récapitulatif de votre commande à l'adresse: $email$</li><li>Dès réception du montant de la garantie, votre commande sera livrée par courrier à l'adresse suivante: $address$</li><li>Dès réception de vos cartes, vous pouvez commencer à en faire usage.</li>",
+                "de": "<li>Bitte beachten Sie die Anweisungen zur Einzahlung der Kaution um Ihre Kreditrahmen zu sichern.</li><li>Die Zusammenfassung Ihrer Bestellung senden wird an Ihre E-Mail Addresse $email$.</li><li>Sobald Ihre Einzahlung bei uns eingegangen ist, wird Ihre Bestellung per Post an folgende Adresse geliefert: $address$.</li><li>Wenn Sie Ihre Bestellung bekommen, folgen Sie bitte den Produktaktivierung Anweisungen.</li>"
+            },
+            "Slovakia CCS":{
+                "en": "<li>Please follow the deposit payment instructions below to trasnfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "sk": "<li>Podľa nižšie uvedených pokynov k platbe preveďte prosím prevod jednorazovej kaucie, aby ste tak zaistili svoj kreditný rámec.</li><li>Akonáhle platbu za jednorazovú kauciu obdržíme, bude Vaša objednávka doručená poštou na adresu: $address$</li><li>Až obdržíte objednávku, postupujte podľa pokynov na aktiváciu produktu.</li><li>Súhrn Vašej objednávky bude zaslaný na $email$.</li>"
+            },
+            "Czech Republic CCS":{
+                "en": "<li>Please follow the deposit payment instructions below to trasnfer one-time deposit to secure your credit line.</li><li>As soon as the deposit payment is received your order will be delivered by post to the following address: $address$</li><li>When you receive your order, please follow the product activation instructions.</li><li>A summary of your order will be sent to $email$.</li>",
+                "cs": "<li>Podle níže uvedených pokynů k platbě proveďte prosím převod jednorázové kauce, abyste tak zajistili svůj kreditní rámec.</li><li>Souhrn Vaší objednávky bude zaslán na $email$.</li><li>Jakmile platbu za jednorázovou kauci obdržíme, bude Vaše objednávka doručena poštou na následující adresu: $address$</li><li>Až obdržíte karty a PIN, můžete ihned začít karty používat.</li>"
+            }
+        }
+    },
+    "content_settings": {
+        "th_page_document_direct_debit_link": {
+            "en": "/etedocuments?doc=mandateAcceptance",
+            "pl": "/etedocuments?doc=mandateAcceptance",
+            "sk": "/etedocuments?doc=mandateAcceptance",
+            "cz": "/etedocuments?doc=mandateAcceptance",
+            "de": "/etedocuments?doc=documentsAgreement",
+            "at": "/etedocuments?doc=documentsAgreement",
+            "lu": "/etedocuments?doc=documentsAgreement",
+            "nl": "/etedocuments?doc=documentsAgreement",
+            "fr": "/etedocuments?doc=documentsAgreement",
+            "befr": "/etedocuments?doc=documentsAgreement",
+            "benl": "/etedocuments?doc=documentsAgreement",
+            "chde": "/etedocuments?doc=mandateAcceptance",
+            "chfr": "/etedocuments?doc=mandateAcceptance",
+            "hu": "/etedocuments?doc=mandateAcceptance"
+        },
+        "th_page_document_deposit_instruction_link": {
+            "en": "/etedocuments?doc=howToPayDeposit",
+            "pl": "/etedocuments?doc=howToPayDeposit",
+            "de": "/etedocuments?doc=howToPayDeposit",
+            "at": "/etedocuments?doc=howToPayDeposit",
+            "lu": "/etedocuments?doc=howToPayDeposit",
+            "fr": "/etedocuments?doc=howToPayDeposit",
+            "nl": "/etedocuments?doc=howToPayDeposit",
+            "sk": "/etedocuments?doc=howToPayDeposit",
+            "cz": "/etedocuments?doc=howToPayDeposit",
+            "benl": "/etedocuments?doc=howToPayDeposit",
+            "befr": "/etedocuments?doc=howToPayDeposit",
+            "chde": "/etedocuments?doc=howToPayDeposit",
+            "chfr": "/etedocuments?doc=howToPayDeposit",
+            "hu": "/etedocuments?doc=howToPayDeposit"
+        }
+    },
+    "settings": {}
+}

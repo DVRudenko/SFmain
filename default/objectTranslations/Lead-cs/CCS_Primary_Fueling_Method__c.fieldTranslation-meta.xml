@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Hlavní způsob platby za tankování</label>
+    <name>CCS_Primary_Fueling_Method__c</name>
+    <picklistValues>
+        <masterLabel>Bankovní karta</masterLabel>
+        <translation><!-- Bankovní karta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dohoda s konkrétní čerpací stanicí</masterLabel>
+        <translation><!-- Dohoda s konkrétní čerpací stanicí --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hotovost</masterLabel>
+        <translation><!-- Hotovost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jiný</masterLabel>
+        <translation><!-- Jiný --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karta CCS</masterLabel>
+        <translation><!-- Karta CCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karta řetězce čerpacích stanic</masterLabel>
+        <translation><!-- Karta řetězce čerpacích stanic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kombinace bankovní karta &amp; hotovost</masterLabel>
+        <translation><!-- Kombinace bankovní karta &amp; hotovost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lokální kredit</masterLabel>
+        <translation><!-- Lokální kredit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>neznámo</masterLabel>
+        <translation><!-- neznámo --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

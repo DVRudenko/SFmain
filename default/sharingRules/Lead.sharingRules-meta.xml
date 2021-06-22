@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Russian_Sales</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Russian_Sales</label>
+        <sharedTo>
+            <group>Russian_Admins</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Russian Sales</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>PPR_SME_Call_Center_inb</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>access to records of the Role PPR call center</description>
+        <label>PPR_SME_Call_Center_inb</label>
+        <sharedTo>
+            <group>PPR_SME_Call_Center_inb</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>PPR_Bryansk_Call_Center</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingCriteriaRules>
+        <fullName>CCS_Support_CaseManagement_Lead_Access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Access to all Leads for CCS customer service, except Russian Leads.</description>
+        <label>CCS Support CaseManagement_Lead_Access</label>
+        <sharedTo>
+            <group>CCS_Support_CaseManagement</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Russian Sales</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

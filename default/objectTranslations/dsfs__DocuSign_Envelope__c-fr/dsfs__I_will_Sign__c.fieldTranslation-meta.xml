@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Cochez cette case pour être ajouté en tant que destinataire ou signataire supplémentaire sur ce document.  Si cette case reste décochée, vous recevrez une notification lorsque le contact aura effectué la signature DocuSign, mais vous ne pourrez pas signer le document vous-même.</help>
+    <label><!-- I will also Sign --></label>
+    <name>dsfs__I_will_Sign__c</name>
+</CustomFieldTranslation>

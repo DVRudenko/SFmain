@@ -1,0 +1,35 @@
+#overlay{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-color: gray;
+	opacity: .15;
+	z-index: 1001;
+}
+.pbError ul {
+	list-style-type: none;
+}
+.req {
+	border-left-color: red;
+	border-left-width: 4px;
+	padding-left: 4px;
+}
+.w-100 {
+	width: 100%;
+}
+option[value="Needs validation"],[value="CTI Wrong number:0"],[value="CTI System Error"],[value^="Successful dialing:"] {
+	display:none;
+}
+.phone-number-changed option[value^="Wrong number:"] {
+    display:none;
+}
+.green-btn {
+	background: #3693581f !important;
+	border-color: #36935824 !important
+}
+.orange-btn {
+	background: #ffa50047 !important;
+	border-color: #ffa50047 !important;
+}

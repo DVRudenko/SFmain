@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Source_lead</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+            OR($Profile.Name = "Russian Sales Manager",
+            $Profile.Name = "Russian Team Leader"),
+            NOT(ISCHANGED(Number_of_open_tasks__c)),
+            NOT(ISCHANGED(Open_Task__c)),
+            Probability &gt; 0.1,
+            ( ISBLANK( TEXT(Source_of_Lead_o__c ) ) ))</errorConditionFormula>
+    <errorDisplayField>Source_of_Lead_o__c</errorDisplayField>
+    <errorMessage>Inform the SF Administrator Source_of_Lead_o__c</errorMessage>
+</ValidationRule>

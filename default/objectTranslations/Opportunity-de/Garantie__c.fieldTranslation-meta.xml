@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Garantie --></label>
+    <name>Garantie__c</name>
+    <picklistValues>
+        <masterLabel>Bankbürgschaft</masterLabel>
+        <translation><!-- Bankbürgschaft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kaution</masterLabel>
+        <translation><!-- Kaution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Andere</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parent/Cross-Corporate Bürgschaft</masterLabel>
+        <translation><!-- Parent/Cross-Corporate Bürgschaft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personalbürgschaft</masterLabel>
+        <translation><!-- Personalbürgschaft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Promissory note/ Weksel</masterLabel>
+        <translation><!-- Promissory note/ Weksel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>keine</masterLabel>
+        <translation><!-- keine --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,35 @@
+<template>
+    <h4 class="update__title slds-text-heading_medium slds-text-color_inverse slds-text-title_bold">{fields.header}</h4>
+    <template if:false={loading}>
+        <div class="slds-grid slds-gutters slds-m-around_medium">
+            <div class="slds-col slds-size_2-of-4">
+                <lightning-radio-group label={label}
+                                       options={options}
+                                       value={value}
+                                       type="radio"
+                                       onchange={handleChange}></lightning-radio-group>
+            </div>
+            <template for:each={fields.currentData} 
+                      for:item="field">
+                <div key={field} 
+                     class="slds-col">
+                    <h3 class="slds-text-body_small slds-text-title_bold update__current-title">{field.header}</h3>
+                    <span class="update__current-value">
+                        {field.value}
+                    </span> 
+                </div>
+            </template>
+        </div>
+        <div class="update__button-wrapper">
+            <button class="slds-button slds-button_neutral"
+                    onclick={handleUpdateClick}
+                    disabled={isButtonDisabled}>Update</button>
+        </div>
+    </template>
+    <template if:true={loading}>
+        <div class="update__spinner-wrap">
+            <lightning-spinner alternative-text="Loading"
+                               size="large"></lightning-spinner>
+        </div>
+    </template>
+</template>

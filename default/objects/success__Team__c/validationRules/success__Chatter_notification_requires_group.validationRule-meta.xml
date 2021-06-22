@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Chatter_notification_requires_group</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+(success__Notify_by_Chatter__c == TRUE),
+ISBLANK( success__ChatterGroupId__c)
+)</errorConditionFormula>
+    <errorMessage>An existing Chatter Group must be linked to this Competition (or a new Group created) when Chatter notifications are enabled</errorMessage>
+</ValidationRule>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Abhängig von Crefo rating --></help>
+    <label><!-- Risk Category --></label>
+    <name>Risk_Category__c</name>
+    <picklistValues>
+        <masterLabel>High</masterLabel>
+        <translation>Vysoký</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low</masterLabel>
+        <translation>Nízký</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medium</masterLabel>
+        <translation>Střední</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Very</masterLabel>
+        <translation><!-- Very --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

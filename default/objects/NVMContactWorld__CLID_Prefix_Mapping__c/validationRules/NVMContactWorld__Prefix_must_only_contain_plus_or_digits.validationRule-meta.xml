@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMContactWorld__Prefix_must_only_contain_plus_or_digits</fullName>
+    <active>true</active>
+    <description>Prefix must only include plus or digits</description>
+    <errorConditionFormula>NOT(REGEX(NVMContactWorld__Prefix__c, &quot;^\\+?\\d*&quot;))</errorConditionFormula>
+    <errorDisplayField>NVMContactWorld__Prefix__c</errorDisplayField>
+    <errorMessage>Prefix must only contain digits, optionally preceeded by a &#39;+&#39; sign</errorMessage>
+</ValidationRule>

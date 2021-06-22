@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating_attractive__c</fullName>
+    <externalId>false</externalId>
+    <label>Rating of attraction</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>1</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <label>2</label>
+            </value>
+            <value>
+                <fullName>3</fullName>
+                <default>false</default>
+                <label>3</label>
+            </value>
+            <value>
+                <fullName>NEW - Not Yet Contacted</fullName>
+                <default>false</default>
+                <label>NEW - Not Yet Contacted</label>
+            </value>
+            <value>
+                <fullName>IN PROCESS - 1st Attempt</fullName>
+                <default>false</default>
+                <label>IN PROCESS - 1st Attempt</label>
+            </value>
+            <value>
+                <fullName>IN PROCESS - 2nd Attempt</fullName>
+                <default>false</default>
+                <label>IN PROCESS - 2nd Attempt</label>
+            </value>
+            <value>
+                <fullName>IN PROCESS - 3rd Attempt</fullName>
+                <default>false</default>
+                <label>IN PROCESS - 3rd Attempt</label>
+            </value>
+            <value>
+                <fullName>IN PROCESS - 4th Attempt</fullName>
+                <default>false</default>
+                <label>IN PROCESS - 4th Attempt</label>
+            </value>
+            <value>
+                <fullName>IN PROCESS - 5th Attempt</fullName>
+                <default>false</default>
+                <label>IN PROCESS - 5th Attempt</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

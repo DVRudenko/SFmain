@@ -1,0 +1,53 @@
+<apex:page controller="DashboardStartsSLAoverdueReportCtrl" action="{! init }" id="pageId">
+	<apex:form id="formId">
+		<style>
+            .homeTab .tertiaryPalette {
+                background: #2b84a0 !important;
+            }
+
+            .pbSubheader.brandTertiaryBgr.tertiaryPalette {
+                cursor: pointer;
+            }
+        </style>
+		<apex:pageMessages />
+		<h1 style="margin: 10px 0 10px 15px; font-size: 17px; display: block;">Starts SLA overdue report</h1>
+		<apex:pageBlock id="block">
+			<table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <h1 style="font-size: 15px; display: block; margin-bottom: 10px;">
+                            Opportunity Owner: {! userName } ({! amountOfOpportunities } record(s)), SLA overdue: {! percentAllExpiredOpps } %
+                        </h1>
+                    </td>
+                </tr>
+            </table>
+		    <apex:repeat value="{! statusToAmountOppsMap }" var="status" id="repeatId">
+                <apex:pageBlockSection title="Starts Status: {! status }, ({! statusToAmountOppsMap[status] } Record(s))" columns="1" id="section">
+                	<apex:pageBlockTable value="{! statusToAllOppsMap[status] }" var="oppty">
+                		<apex:column headerValue="Opportunity name "><apex:outputLink value="/{! oppty.id }" target="_blank">{! oppty.Name }</apex:outputLink></apex:column>
+                        <apex:column headerValue="Starts GFN Nr"><apex:outputField value="{! oppty.GFN_number_for_starts__c }"/></apex:column>
+                        <apex:column headerValue="Total consumption (l/month)"><apex:outputField value="{! oppty.Total_consumption_l_month__c }"/></apex:column>
+                        <apex:column headerValue="Prio"><apex:outputField value="{! oppty.Prio_Formula__c }"/></apex:column>
+                        <apex:column headerValue="Starts: Status" value="{! oppty.Starts_Status__c }"></apex:column>
+                        <apex:column headerValue="Close Date"><apex:outputField value="{! oppty.CloseDate }"/></apex:column>
+                        <apex:column headerValue="First transaction date"><apex:outputField value="{! oppty.Account.First_Pump_Date__c }"/></apex:column>
+                        <apex:column headerValue="Registered Country"><apex:outputField value="{! oppty.Registered_Country__c }"/></apex:column>
+                        <apex:column headerValue="Opportunity Owner"><apex:outputField value="{! oppty.OwnerId }"/></apex:column>
+                        <apex:column headerValue="Starts: Schedule"><apex:outputField value="{! oppty.Starts_Schedule__c }"/></apex:column>
+                        <apex:column headerValue="Starts: SLA expired"><apex:outputField value="{! oppty.Starts_SLA_Expired__c }"/></apex:column>
+                        <apex:column headerValue="Starts: overdue days"><apex:outputField value="{! oppty.Starts_Overdue_days__c }"/></apex:column>
+                    </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:repeat>
+		</apex:pageBlock>
+		<script>
+            for (var i = 0; i < {! numberOfStatuses }; i++) {
+                var sectionId = 'pageId:formId:block:repeatId:' + i + ':section';
+                twistSection(document.getElementById(sectionId).getElementsByTagName('img')[0]);
+                document.getElementById(sectionId).onclick = function() {
+                    twistSection(this.getElementsByTagName('img')[0]);
+                }
+            }
+        </script>
+	</apex:form>
+</apex:page>

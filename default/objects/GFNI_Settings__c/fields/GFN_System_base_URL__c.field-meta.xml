@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GFN_System_base_URL__c</fullName>
+    <description>GFN Landing pages base URL</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The person that access the landing page functionality will need to have been set up as a GFN user with access to the Company the client resides in and access, either read-write or read-only, to the page being landed on.</inlineHelpText>
+    <label>GFN System base URL</label>
+    <length>150</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

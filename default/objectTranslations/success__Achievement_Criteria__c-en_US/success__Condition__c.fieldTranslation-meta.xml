@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Condition --></label>
+    <name>success__Condition__c</name>
+    <picklistValues>
+        <masterLabel>contains</masterLabel>
+        <translation><!-- contains --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>does not contain</masterLabel>
+        <translation><!-- does not contain --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>equals</masterLabel>
+        <translation><!-- equals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>greater than</masterLabel>
+        <translation><!-- greater than --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>greater than or equal to</masterLabel>
+        <translation><!-- greater than or equal to --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>is changed</masterLabel>
+        <translation><!-- is changed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>is decreased</masterLabel>
+        <translation><!-- is decreased --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>is increased</masterLabel>
+        <translation><!-- is increased --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>less than</masterLabel>
+        <translation><!-- less than --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>less than or equal to</masterLabel>
+        <translation><!-- less than or equal to --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>not equal to</masterLabel>
+        <translation><!-- not equal to --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

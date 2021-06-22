@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Решение скоринга</help>
+    <label>Решение скоринга</label>
+    <name>RU_scoring_decision__c</name>
+    <picklistValues>
+        <masterLabel>Credit approved</masterLabel>
+        <translation>Кредит одобрен</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Denied</masterLabel>
+        <translation>Отказ</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No data</masterLabel>
+        <translation>Нет данных</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prepay</masterLabel>
+        <translation>Предоплата</translation>
+    </picklistValues>
+</CustomFieldTranslation>

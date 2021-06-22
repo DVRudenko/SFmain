@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Time Filter --></label>
+    <name>Time_Filter__c</name>
+    <picklistValues>
+        <masterLabel>1 Month</masterLabel>
+        <translation><!-- 1 Month --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1 Week</masterLabel>
+        <translation><!-- 1 Week --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1 Year</masterLabel>
+        <translation><!-- 1 Year --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>10 Months</masterLabel>
+        <translation><!-- 10 Months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>11 Months</masterLabel>
+        <translation><!-- 11 Months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>12 Months</masterLabel>
+        <translation><!-- 12 Months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 Months</masterLabel>
+        <translation><!-- 2 Months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 Weeks</masterLabel>
+        <translation><!-- 2 Weeks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 Years</masterLabel>
+        <translation><!-- 2 Years --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3 Months</masterLabel>
+        <translation><!-- 3 Months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3 Weeks</masterLabel>
+        <translation><!-- 3 Weeks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3 Years</masterLabel>
+        <translation><!-- 3 Years --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4 Months</masterLabel>
+        <translation><!-- 4 Months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5 Months</masterLabel>
+        <translation><!-- 5 Months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>6 Months</masterLabel>
+        <translation><!-- 6 Months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>7 Months</masterLabel>
+        <translation><!-- 7 Months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>8 Months</masterLabel>
+        <translation><!-- 8 Months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9 Months</masterLabel>
+        <translation><!-- 9 Months --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unlimited</masterLabel>
+        <translation><!-- Unlimited --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

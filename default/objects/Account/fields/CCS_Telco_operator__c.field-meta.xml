@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Telco_operator__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Telco operator</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>T-Mobile</fullName>
+                <default>false</default>
+                <label>T-Mobile</label>
+            </value>
+            <value>
+                <fullName>Telefonica O2</fullName>
+                <default>false</default>
+                <label>Telefonica O2</label>
+            </value>
+            <value>
+                <fullName>Vodafone</fullName>
+                <default>false</default>
+                <label>Vodafone</label>
+            </value>
+            <value>
+                <fullName>Jiný</fullName>
+                <default>false</default>
+                <label>Jiný</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

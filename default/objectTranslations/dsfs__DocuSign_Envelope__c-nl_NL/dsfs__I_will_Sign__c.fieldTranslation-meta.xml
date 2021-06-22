@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Schakel dit selectievakje in als u toegevoegd wilt worden als een aanvullende ontvanger/ondertekenaar van dit document.  Als u het selectievakje leeg laat, ontvangt u een melding dat de contactpersoon het document heeft ondertekend, maar dat u het niet zelf kunt ondertekenen.</help>
+    <label><!-- I will also Sign --></label>
+    <name>dsfs__I_will_Sign__c</name>
+</CustomFieldTranslation>

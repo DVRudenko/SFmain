@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Final status of Call --></help>
+    <label><!-- End Reason --></label>
+    <name>NVMStatsSF__EndReason__c</name>
+</CustomFieldTranslation>

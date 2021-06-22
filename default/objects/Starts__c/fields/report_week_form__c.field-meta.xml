@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>report_week_form__c</fullName>
+    <description>Report Week as a formula field to show the raw number in report_week__c from GFN as Text to display without separators: 1,000 will be 1000</description>
+    <externalId>false</externalId>
+    <formula>TEXT(report_week__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Report Week from GFN; the week in which the report is generated.</inlineHelpText>
+    <label>Report Week</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

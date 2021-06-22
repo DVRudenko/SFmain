@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Free_choice_of_products__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Для правила огранич выбор продукта в зависимости от сэлз группы и канала.</description>
+    <externalId>false</externalId>
+    <label>Free choice of products</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

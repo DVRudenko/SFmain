@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS Retention Flag --></label>
+    <name>CCS_Retention_Flag__c</name>
+    <picklistValues>
+        <masterLabel>důvod neuveden</masterLabel>
+        <translation><!-- důvod neuveden --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>jiné</masterLabel>
+        <translation><!-- jiné --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>konkurence</masterLabel>
+        <translation><!-- konkurence --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>kreditní důvody</masterLabel>
+        <translation><!-- kreditní důvody --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>neaktivní smlouva</masterLabel>
+        <translation><!-- neaktivní smlouva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>neznámo</masterLabel>
+        <translation><!-- neznámo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>reorganizace</masterLabel>
+        <translation><!-- reorganizace --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>změna subjektu</masterLabel>
+        <translation><!-- změna subjektu --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

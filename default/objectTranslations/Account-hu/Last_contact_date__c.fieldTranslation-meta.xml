@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Date of the last effective talk with the retailer --></help>
+    <label><!-- Last contact date --></label>
+    <name>Last_contact_date__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Temperature sensor Pt100B - with 1m cable. Standard precision 0,3°C. --></help>
+    <label><!-- Temperature sensor Pt100B with cable 1m --></label>
+    <name>Temperature_sensor_Pt100B_Amount__c</name>
+</CustomFieldTranslation>

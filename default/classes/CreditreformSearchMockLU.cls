@@ -1,0 +1,10 @@
+@isTest
+global class CreditreformSearchMockLU implements HttpCalloutMock {
+  	global HttpResponse respond(HTTPRequest req){
+		HttpResponse res = new HttpResponse();
+		res.setStatus('OK');
+		res.setStatusCode(200);
+		res.setBody('<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"><env:Header/><env:Body><ns2:searchResponse xmlns:ns2="https://onlineservice.creditreform.de/webservice/0520-0018"><ns2:header><ns2:communicationlanguage>de</ns2:communicationlanguage><ns2:transmissiontimestamp>2018-11-16T11:36:48.534+01:00</ns2:transmissiontimestamp><ns2:keylistversion>20</ns2:keylistversion><ns2:clientapplicationname>FleetCor Credit Factory</ns2:clientapplicationname><ns2:clientapplicationversion>3</ns2:clientapplicationversion><ns2:useraccount>345013323001</ns2:useraccount><ns2:responseid>2209ad64-b462-47e4-91bb-6064a62c5e31</ns2:responseid></ns2:header><ns2:body><ns2:hit><ns2:identificationnumber>09379370071090</ns2:identificationnumber><ns2:companyname>LU - Kundentestsystem Group SA - BITTE NICHT ÄNDERN</ns2:companyname><ns2:tradename>KTO TV International</ns2:tradename><ns2:street>Bld. Pierre Rot</ns2:street><ns2:housenumber>169</ns2:housenumber><ns2:postcode>1543</ns2:postcode><ns2:city>Luxembourg</ns2:city><ns2:country><ns2:key>LU</ns2:key><ns2:designation>Luxemburg</ns2:designation></ns2:country><ns2:legalform><ns2:key>LEFO-LU-11</ns2:key><ns2:designation>Société Anonyme</ns2:designation><ns2:shortdesignation>SA</ns2:shortdesignation></ns2:legalform><ns2:reportavailable>true</ns2:reportavailable><ns2:reportcompanyname>true</ns2:reportcompanyname><ns2:reportaddress>true</ns2:reportaddress><ns2:operationalstatus><ns2:key>ONST-1</ns2:key><ns2:designation>aktiv</ns2:designation></ns2:operationalstatus><ns2:additionalinformation>true</ns2:additionalinformation></ns2:hit><ns2:morehits>false</ns2:morehits></ns2:body></ns2:searchResponse></env:Body></env:Envelope>');
+		return res;
+  	}
+}

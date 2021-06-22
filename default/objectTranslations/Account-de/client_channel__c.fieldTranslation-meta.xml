@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Client Channel as held in GFN for reconciliation reporting --></help>
+    <label>GFN Kunden Kanal</label>
+    <name>client_channel__c</name>
+</CustomFieldTranslation>

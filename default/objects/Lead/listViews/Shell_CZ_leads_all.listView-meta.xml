@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shell_CZ_leads_all</fullName>
+    <booleanFilter>1 AND 2</booleanFilter>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Sec_Channel__c</columns>
+    <columns>Channel__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Endkunde</value>
+    </filters>
+    <filters>
+        <field>LEAD.COUNTRY_CODE</field>
+        <operation>equals</operation>
+        <value>CZ</value>
+    </filters>
+    <label>"Shell" - CZ leads - all</label>
+    <language>cs</language>
+    <sharedTo>
+        <role>Altevida_Shell_Telesales</role>
+        <role>Altevida_Telesales_Team_Lead</role>
+        <role>CCS_Administrator</role>
+        <role>CCS_CZ_Telesales</role>
+        <role>CCS_Telesales_Team_Lead</role>
+        <role>Role_Up</role>
+    </sharedTo>
+</ListView>

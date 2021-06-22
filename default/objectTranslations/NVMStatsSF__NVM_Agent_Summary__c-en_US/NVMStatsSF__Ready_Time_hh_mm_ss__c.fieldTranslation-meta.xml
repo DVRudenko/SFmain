@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Ready Time rounded to the nearest minute --></help>
+    <label><!-- Ready Time (hh:mm) --></label>
+    <name>NVMStatsSF__Ready_Time_hh_mm_ss__c</name>
+</CustomFieldTranslation>

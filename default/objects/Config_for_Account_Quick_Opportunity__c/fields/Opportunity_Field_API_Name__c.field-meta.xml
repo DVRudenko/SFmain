@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Field_API_Name__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Provide API Name of field that should be populated by this solution (either value or dynamic mapping).</inlineHelpText>
+    <label>Opportunity Field API Name</label>
+    <length>255</length>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

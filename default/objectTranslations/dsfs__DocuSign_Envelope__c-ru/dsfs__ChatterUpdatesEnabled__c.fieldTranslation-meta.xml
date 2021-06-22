@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Если этот флажок установлен, в процессе подписания в DocuSign отображается окно Chatter.</help>
+    <label><!-- Enable Chatter Status Updates --></label>
+    <name>dsfs__ChatterUpdatesEnabled__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Crefo_Report_Created__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Set when PDF report from Credit Factory attached to Opportunity</description>
+    <externalId>false</externalId>
+    <label>Crefo Report Created</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Samarskaja_oblast</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>FS_Territory__c</columns>
+    <columns>FS_Tree_Province__c</columns>
+    <columns>OKATO__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>FS_Tree_Province__c</field>
+        <operation>equals</operation>
+        <value>Samarskaja_oblast</value>
+    </filters>
+    <label>Cамарская область</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Transit_StatusContract__c</fullName>
+    <description>PPR Transit contract statuses. Gathering from Transit3 DB by Talend job. Flield created in scope of W-000044.</description>
+    <externalId>false</externalId>
+    <label>PPR_Transit_StatusContract</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Работает</fullName>
+                <default>false</default>
+                <label>Работает</label>
+            </value>
+            <value>
+                <fullName>Остановлен</fullName>
+                <default>false</default>
+                <label>Остановлен</label>
+            </value>
+            <value>
+                <fullName>Закрыт</fullName>
+                <default>false</default>
+                <label>Закрыт</label>
+            </value>
+            <value>
+                <fullName>Должник</fullName>
+                <default>false</default>
+                <label>Должник</label>
+            </value>
+            <value>
+                <fullName>Заведен</fullName>
+                <default>false</default>
+                <label>Заведен</label>
+            </value>
+            <value>
+                <fullName>Ведется работа</fullName>
+                <default>false</default>
+                <label>Ведется работа</label>
+            </value>
+            <value>
+                <fullName>Заключен контракт</fullName>
+                <default>false</default>
+                <label>Заключен контракт</label>
+            </value>
+            <value>
+                <fullName>Произведена установка</fullName>
+                <default>false</default>
+                <label>Произведена установка</label>
+            </value>
+            <value>
+                <fullName>Банкрот</fullName>
+                <default>false</default>
+                <label>Банкрот</label>
+            </value>
+            <value>
+                <fullName>Работает(дисконт)</fullName>
+                <default>false</default>
+                <label>Работает(дисконт)</label>
+            </value>
+            <value>
+                <fullName>Удален</fullName>
+                <default>false</default>
+                <label>Удален</label>
+            </value>
+            <value>
+                <fullName>Договор расторгнут</fullName>
+                <default>false</default>
+                <label>Договор расторгнут</label>
+            </value>
+            <value>
+                <fullName>Расторжение</fullName>
+                <default>false</default>
+                <label>Расторжение</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

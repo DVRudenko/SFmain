@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- False by default, True only if 11 or more Carnet Units are under Opportunity. --></help>
+    <label><!-- Premium Tariffs --></label>
+    <name>Unit_Package_Price_Paid_monthly__c</name>
+</CustomFieldTranslation>

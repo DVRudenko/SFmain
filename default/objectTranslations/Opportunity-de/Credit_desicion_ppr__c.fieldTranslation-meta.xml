@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Credit desicion ppr --></label>
+    <name>Credit_desicion_ppr__c</name>
+    <picklistValues>
+        <masterLabel>ДА</masterLabel>
+        <translation><!-- ДА --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>НЕТ</masterLabel>
+        <translation><!-- НЕТ --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Not_Change_team_outbound</fullName>
+    <active>true</active>
+    <description>This product can not be selected by the outbound team.</description>
+    <errorConditionFormula>IF(Free_choice_of_products__c = false, ISPICKVAL(Product__c, "Sales no fee promo Feb 2016") &amp;&amp; ISCHANGED(Product__c) &amp;&amp;
+OR($UserRole.Name = 'Salesteam Outbound 1', $UserRole.Name = 'Salesteam Outbound 2',
+$UserRole.Name = 'Salesteam Outbound 3', $UserRole.Name = 'Salesteam Outbound 4',
+$UserRole.Name = 'Teamleiter Outbound 1', $UserRole.Name = 'Teamleiter Outbound 2',
+$UserRole.Name = 'Teamleiter Outbound 3', $UserRole.Name = 'Teamleiter Outbound 4'), false)</errorConditionFormula>
+    <errorMessage>This product can not be selected by the outbound team.</errorMessage>
+</ValidationRule>

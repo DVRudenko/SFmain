@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Service of guarding the vehicle - sending SMS in case of unauthorized use. --></help>
+    <label><!-- Service Alarm --></label>
+    <name>Service_Alarm__c</name>
+</CustomFieldTranslation>

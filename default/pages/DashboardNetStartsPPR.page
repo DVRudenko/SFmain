@@ -1,0 +1,242 @@
+<!--
+ - Created by Nikita.Mikhailov on 30.05.2018.
+ -->
+
+<apex:page id="DashboardNetStartsPPR" controller="DashboardNetStartsPPRCtrl" action="{!init}" sideBar="false"
+           showHeader="false">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+
+    <apex:form >
+        <apex:pageBlock >
+            <apex:outputPanel layout="block" style="display: inline-flex; width: 100%;">
+                <h1 style="margin-bottom: 10px; font-size: 15px; display: block;">NetStarts за
+                    <apex:selectList value="{! selectedPeriod }" size="1" multiselect="false" style="margin-left: 5px;">
+                        <apex:selectOptions value="{! periodsList }"/>
+                        <apex:actionSupport action="{! init }" event="onchange" onSubmit="smthgChanged()"/>
+                    </apex:selectList>
+                    <apex:selectList value="{! selectedYear }" size="1" multiselect="false" style="margin: 0 5px;">
+                        <apex:selectOptions value="{! yearsList }"/>
+                        <apex:actionSupport action="{! changeYear }" event="onchange" onSubmit="smthgChanged()"/>
+                    </apex:selectList>
+                    ({! startDateOfMonthString } - {! endDateOfMonthString }).
+                    Роль
+                    <apex:selectList value="{!selectedRole}" size="1" multiSelect="false" style="margin-left: 5px;">
+                        <apex:selectOptions value="{!rolesList}"/>
+                        <apex:actionSupport action="{!changeRole}" event="onchange" onSubmit="smthgChanged()"/>
+                    </apex:selectList>
+                </h1>
+                <apex:outputPanel layout="block" style="margin-left: auto;">
+                    <apex:outputLink value="/articles/Knowledge/DashboardNetStartsPPRHelp" target="_blank" id="theLink">Справка</apex:outputLink>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            <apex:pageMessages />
+            <div>
+                <apex:outputPanel >
+                    <div id="salesteamleader" style="width: 100%; float: left; height: 550px;"/>
+                </apex:outputPanel>
+            </div>
+            <div style="clear: both"></div>
+        </apex:pageBlock>
+
+        <script>
+            $(document).ready(function () {
+                //console.log('loaded from ready');
+                var event = new CustomEvent('loaded', {detail: 'netStarts'});
+                window.parent.document.dispatchEvent(event);
+            });
+
+            function smthgChanged() {
+                //console.log('smthngChanged');
+                var event = new CustomEvent('smthngChanged', {detail: 'netStarts'});
+                window.parent.document.dispatchEvent(event);
+            };
+
+            var finalList = JSON.parse('{!finalValues}');
+
+            function getCategories() {
+                var cat = [];
+
+                for (var i = 0; i < finalList.length; i++) {
+                    var url = '<\a href="/' + finalList[i].user.Id + '" target="_blank">' + finalList[i].user.Name + ' (' + finalList[i].percentage + '%)' + '</a>';
+                    cat.push(url);
+                    //console.log(url);
+                    //cat.push(finalList[i].user.Name);
+                    //console.log(finalList[i].user.Name)
+                }
+
+                return cat;
+            };
+
+            function getFactData() {
+                var data = [];
+                for (var i = 0; i < finalList.length; i++) {
+                    data.push(finalList[i].fact);
+                }
+                return data;
+            }
+
+            function getPlanData() {
+                var data = [];
+                for (var i = 0; i < finalList.length; i++) {
+                    data.push(finalList[i].plan);
+                }
+                return data;
+            }
+
+            $(function () {
+                $('#salesteamleader').highcharts({
+                    chart: {
+                        inverted: true,
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: [{
+                        categories: getCategories(),
+                        labels: {
+                            useHTML: true
+                        }
+                    }],
+                    yAxis: [{
+                        title: {
+                            text: ''
+                        },
+                        labels: {
+                            formatter: function () {
+                                return Math.round(this.value / 1000) + 'тыс.';
+                            }
+                        }
+                    }, {
+                        title: {
+                            text: 'NetStarts'
+                        },
+                        opposite: true,
+                        reversedStacks: true
+                    }],
+                    legend: {
+                        shadow: false,
+                        labelFormatter: function () {
+                            var total = 0;
+                            for (var i = this.yData.length; i--;) {
+                                total += this.yData[i];
+                            }
+                            return this.name + ' - Всего: ' + total;
+                        }
+                    },
+                    exporting: {
+                        enabled: false
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    tooltip: {
+                        enabled: true
+                    },
+                    plotOptions: {
+                        series: {
+                            groupPadding: 0.5,
+                        },
+                        column: {
+                            grouping: false,
+                            shadow: false,
+                            borderWidth: 0
+                        },
+                        bar: {
+                            dataLabels: {
+                                inside: false,
+                                enabled: true,
+                                shadow: false,
+                                formatter: function () {
+                                    return Math.round(this.y / 1000) + 'тыс.';
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'План',
+                        pointWidth: 25,
+                        data: getPlanData(),
+                        dataLabels: {
+                            color: '#165b9c',
+                            style: {
+                                textShadow: false
+                            }
+                        }
+                    }, {
+                        name: 'Фактические NetStarts',
+                        pointWidth: 15,
+                        data: getFactData()
+                    }]
+                });
+                changeBarColors();
+            });
+
+            function changeBarColors() {
+                var data = $('#salesteamleader').highcharts().series[1].data;
+
+                for (var i = 0; i < data.length; i++) {
+                    data[i].color = colorByPercent(finalList[i].percentage);
+                }
+                $('#salesteamleader').highcharts().series[1].redraw();
+            };
+
+            function colorByPercent(percent) {
+                if (percent > 100) {
+                    return '#00e600';
+                }
+
+                if (percent < 0) {
+                    return '#e60000';
+                }
+
+                var buf = percent / 100;
+                return HSVtoRGB((120 * buf) / 360, 1, 0.85);
+            };
+
+            function HSVtoRGB(h, s, v) {
+                var r, g, b, i, f, p, q, t;
+                if (arguments.length === 1) {
+                    s = h.s, v = h.v, h = h.h;
+                }
+                i = Math.floor(h * 6);
+                f = h * 6 - i;
+                p = v * (1 - s);
+                q = v * (1 - f * s);
+                t = v * (1 - (1 - f) * s);
+                switch (i % 6) {
+                    case 0:
+                        r = v, g = t, b = p;
+                        break;
+                    case 1:
+                        r = q, g = v, b = p;
+                        break;
+                    case 2:
+                        r = p, g = v, b = t;
+                        break;
+                    case 3:
+                        r = p, g = q, b = v;
+                        break;
+                    case 4:
+                        r = t, g = p, b = v;
+                        break;
+                    case 5:
+                        r = v, g = p, b = q;
+                        break;
+                }
+                return "#" + componentToHex(Math.round(r * 255)) + componentToHex(Math.round(g * 255)) + componentToHex(Math.round(b * 255));
+            };
+
+            function componentToHex(c) {
+                var hex = c.toString(16);
+                return hex.length == 1 ? "0" + hex : hex;
+            };
+
+        </script>
+    </apex:form>
+</apex:page>

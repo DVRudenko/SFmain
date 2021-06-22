@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>To_close_Case</fullName>
+    <active>true</active>
+    <description>Only Requested_by__c can close case</description>
+    <errorConditionFormula>AND( 
+$Profile.Name != "System Administrator", 
+$Profile.Name != "Systemadministrator", 
+$Profile.Name != 'API Only',
+$Profile.Name != "CCS System Administrator",
+$Profile.Name != "RU_System_Administrator",
+RecordType.Name = 'Russian Cases',
+Requested_by__r.ID__c != $User.ID__c, 
+ISPICKVAL( Status , "Closed") )</errorConditionFormula>
+    <errorMessage>Only the Requested_by can close the Case!</errorMessage>
+</ValidationRule>

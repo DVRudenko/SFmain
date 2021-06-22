@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Queue_transfer_Inbound_to_Outbound_Lead</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Queue</filterScope>
+    <label>PPR Queue transfer Inbound to Outbound</label>
+    <language>ru</language>
+    <queue>PPR_Queue_transfer_Inbound_to_Outbound</queue>
+    <sharedTo>
+        <role>PPR_Bryansk</role>
+        <role>PPR_Teamleader_Telesales_PSI</role>
+        <roleAndSubordinatesInternal>PPR_Call_Center_Team_Leader</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

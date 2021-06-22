@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NL_Leads</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Beschaeftigte__c</columns>
+    <columns>Branchentext__c</columns>
+    <columns>Anzahl_der_Fahrzeuge__c</columns>
+    <columns>Branche_NACE__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.COUNTRY_CODE</field>
+        <operation>equals</operation>
+        <value>BENL,NL</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,offen</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>BE Computerprofile</value>
+    </filters>
+    <filters>
+        <field>Beschaeftigte__c</field>
+        <operation>greaterThan</operation>
+    </filters>
+    <label>NL Leads</label>
+    <language>de</language>
+    <sharedTo>
+        <role>Teamleiter_Outbound_4</role>
+        <role>Teamleiter_Outbound_5</role>
+    </sharedTo>
+</ListView>

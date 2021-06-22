@@ -1,0 +1,5840 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ShellUniversalCard</fullName>
+    <active>true</active>
+    <businessProcess>Datensatztyp</businessProcess>
+    <label>Shell Universal Card</label>
+    <picklistValues>
+        <picklist>AZS_with_Discount_1_address__c</picklist>
+        <values>
+            <fullName>33070</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AZS_with_Discount_2_address__c</picklist>
+        <values>
+            <fullName>33070</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Status__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Former Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Account_Type__c</picklist>
+        <values>
+            <fullName>Customer</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_Fueling_Methods__c</picklist>
+        <values>
+            <fullName>Bank Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coupons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>House Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leasing Company Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oil Company Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On-Site Tanks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Issuer Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unattended Commercial Fueling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Universal Fleet Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wet Hosing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Additional_Fueling_Methods_specific__c</picklist>
+        <values>
+            <fullName>ARCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avtocard-Voronezh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CFN %28Commercial Fueling Network%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chevron%2FTexaco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Citgo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co-branded card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comdata</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Computer LTD-1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conoco%2FPhillips 66%2F76</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Discover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EKA-Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expense reimbursement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exxon%2FMobil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FleetOne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fuelman</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fully managed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gazpromneft%27</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inforkom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Cardlocks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local Mobile Refueler</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MTK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Magystral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mastercard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Novatorrus-Invest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OTR Trucking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pacific Pride</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petty cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional company</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional operator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rosneft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SKON</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell Russia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surgutneftegas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tatneft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>U%2ES%2E Fleet %28Quick Fuel%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voyager</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>WEX</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Aktuelle_Bezahlmethode__c</picklist>
+        <values>
+            <fullName>Andere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andere Kreditkarte - American Express</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andere Kreditkarte - Andere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andere Kreditkarte - Master Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andere Kreditkarte - Visa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bargeld</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Diverse Tankkarten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EC-Karte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tankkarte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verschiedene Bezahlmethoden</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Aktuelle_Zahlungsmethode__c</picklist>
+        <values>
+            <fullName>Andere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bankkarte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barzahlung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kreditkarte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tankkarte</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Angebotsdauer_in_Monate__c</picklist>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Area_Traveled__c</picklist>
+        <values>
+            <fullName>International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Local</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>National</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Statewide</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Bank__c</picklist>
+        <values>
+            <fullName>Andere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commerzbank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deutsche Bank</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sparkasse</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Beschaeftigte__c</picklist>
+        <values>
+            <fullName>%3E200</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1-4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10-19</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>100-149</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>150-199</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>20-49</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5-9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50-74</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75-99</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Bestehen_Unternehmen__c</picklist>
+        <values>
+            <fullName>0 - 6 Monate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>12 - 18 Monate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>18 Monate - 2 Jahre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - 3 Jahre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - 4 Jahre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - 5 Jahre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 Jahre und länger</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6 - 12 Monate</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Branche_NACE__c</picklist>
+        <values>
+            <fullName>Accommodation and food service activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Activities of extraterritorial organizations and bodies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Activities of households as employers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Administrative and support service activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agriculture%2C forestry and fishing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arts%2C entertainment and recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electricity%2C gas%2C steam and air conditioning supply</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial and insurance activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human health and social work activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Information and communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mining and quarrying</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other services activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Professional%2C scientific and technical activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public administration and defense%3B compulsory social security</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Real estate activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transporting and storage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Water supply%3B sewerage%3B waste management and remediation activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wholesale and retail trade%3B repair of motor vehicles and motorcycles</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Call_status__c</picklist>
+        <values>
+            <fullName>definitivně nezastižen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>domluveno následné volání</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>dovoláno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>nevoláno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>nevoláno - ve volání jinde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>nezvedá%2C obsazeno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>odmítnutý hovor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>odmítnutý hovor - monitoring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>omyl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>zavolat jindy%2C nemá čas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>záznamník%2C fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>číslo neexistuje</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Close_reason__c</picklist>
+        <values>
+            <fullName>Info k BONUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jiný v poznámce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kontakty neexistují</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nabídka CCS LIMIT ESO 2015</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nabídka CCS LIMIT FIX 97</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nabídka CCS LIMIT Moje síť</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nabídka CCS LIMIT%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nezadáno %E2%80%93 Cribis H</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nezadáno %E2%80%93 nesouhlasí se změněnými podmínkami</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nezájem - klient se pouze dívá</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nezájem - nabídka odmítnuta %28viz poznámka%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Objednávku klient odešle později</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Předáno na Market</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Předáno zodpovědné osobě</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Přiobjednávka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schůzka na OZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smlouva uzavřena</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smlouva uzavřena LIMIT%2BMINI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telefonická objednávka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telefonická objednávka CCS LIMIT ESO 2015</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telefonická objednávka CCS LIMIT FIX 97</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zájemce UTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zájemce o Carnet</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Competition__c</picklist>
+        <values>
+            <fullName>Travelcard</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>MKB</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Esso</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Q8</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Maes</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Total</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Avia</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>MoveMove (MTC)</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Texaco</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>DCB</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Dats24</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Gabriels</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Tinq</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Aral</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Fleetpass%2B</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Octa%2B</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Fleetcard (DCS)</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Tamoil</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Go Tankkaart</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Belgian Fuel Card (BFC)</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Routex</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Baywa</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Easyfuel Card</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>E.L’eclerc</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Migrol</fullName>
+            <default>false</default>
+        </values>
+		<values>
+            <fullName>Coop Pronto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eni (Agip)</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Axigon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bank Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benzina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Circle K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DFC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DKV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Do not want to share</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EuroOil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eurowag</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Expensa (Direct Fidoo)</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LukOil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitoring - Carcontrol %28O2%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitoring - Commander</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitoring - GX Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitoring - Infocar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitoring - Level</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitoring - Princip (Webdispecing)</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitoring - T-Com</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitoring - T-cars</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monitoring - oni System</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OMV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Orlen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Own petrol site</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RobinOil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Skyguard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovnaft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TankOno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UTA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Competitor_Country__c</picklist>
+        <values>
+            <fullName>Austria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belgium-FR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belgium-NL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Czech Republic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hungary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luxembourg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Netherlands</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovakia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switzerland-DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Switzerland-FR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Cribis__c</picklist>
+        <values>
+            <fullName>A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>H</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Š</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_First_Contact_Inbound_Outbound__c</picklist>
+        <values>
+            <fullName>Inbound Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incoming SMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound e-mail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Interest_YES__c</picklist>
+        <values>
+            <fullName>objednávka Eso 2015</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>objednávka FIX 97</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>objednávka Limit%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>objednávka Limit%2B MINI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>objednávka Moje síť</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>schůzka OZ</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Interest__c</picklist>
+        <values>
+            <fullName>ano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>nabídka e-mailem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ne</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Jm_na__c</picklist>
+        <values>
+            <fullName>Bronislava Štajerová</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Filip Směšný</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hanka Bartoňová</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Helena Jandová</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iveta Baštářová</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Martina Kabíčková</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matěj Peltán</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miroslav Děd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miroslava Lohniská</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Olga Maníková</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pavel Porubiak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Radka Zahajská</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tereza Raušová</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veronika Filipová</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vladimíra Ouřadová</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Věra Staňková</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Merlin_Stage__c</picklist>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Duplicate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order entered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order entered - deposit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Order entered - more often DD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waitiing for components</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for Credit decision</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for DD confirmation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for MANDAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for PIT%2FCIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for amendment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for card issuance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for deposit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for order signature</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Waiting for power of attorney</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Monitoring__c</picklist>
+        <values>
+            <fullName>Ano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ne</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Names_2__c</picklist>
+        <values>
+            <fullName>Filip Směšný</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Helena Jandová</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jana Jandáčková</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jozef Muhar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Martina Kabíčková</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Matěj Peltán</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miroslav Děd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Miroslava Lohniská</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Olga Maníková</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pavel Porubiak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tereza Raušová</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veronika Filipová</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Primary_Fueling_Method__c</picklist>
+        <values>
+            <fullName>Bankovní karta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bankovní karta%26Hotovost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotovost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jiný</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karta CCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karta řetězce ČS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lokální kredit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vlastní bencalor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>neznámo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Primary_Fueling_Method_specific__c</picklist>
+        <values>
+            <fullName>Benzina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eni %28Agip%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jiné</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LukOil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OMV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PapOil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RobinOil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TankONO</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Promo_offer__c</picklist>
+        <values>
+            <fullName>CCS Carnet 1%2B1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Carnet 149%2F7%2C99 EUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Carnet 2%2B1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Carnet 2990</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS ČSOBL Agro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karty - CCS Limit Easy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karty - CCS Limit Eso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karty - CCS Limit Fix 97</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Karty - CCS Limit Moje síť</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Reason_of_lack_of_interest__c</picklist>
+        <values>
+            <fullName>Je klient CCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jiný důvod %28v poznámce%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Konkurence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Má asistenci%2C pojištění a další benefity jinde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nechce sdělit důvod</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nelíbí se mu poplatek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nemají vozový park</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nepotřebuje%2C nevyužije</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nízký limit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Odeslán email %E2%80%93 ozve se sám</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platba paušálem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ukončená činnost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Čerpání v zahraničí</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Špatná zkušenost s CCS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_competition_2__c</picklist>
+        <values>
+            <fullName>Benzina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OMV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RobinOil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TankOno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>bankovní karta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>hotovost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>jiné</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>nesdělil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>vlastní ČS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Channel__c</picklist>
+        <values>
+            <fullName>Anruf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FLMT_Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Credit_Days_ppr__c</picklist>
+        <values>
+            <fullName>Предоплата</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>к14д</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>к30д</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>к7д</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Credit_Desicion_ppr__c</picklist>
+        <values>
+            <fullName>ДА</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>НЕТ</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_services__c</picklist>
+        <values>
+            <fullName>Toll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VAT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Customer_interest__c</picklist>
+        <values>
+            <fullName>Зеленый</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Оранжевый</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Синий</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Derzeitige_Zahlungsmethode__c</picklist>
+        <values>
+            <fullName>Bankkarte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Barzahlung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kreditkarte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stationskarte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tankkarte</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Desired_services__c</picklist>
+        <values>
+            <fullName>Toll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VAT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>E2E_Adoption_Status__c</picklist>
+        <values>
+            <fullName>Adoption Email Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manual Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Returned to Manual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Successful Adoption</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>First_Contact_Inbound_Outbound__c</picklist>
+        <values>
+            <fullName>Direct App - Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct App - Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Banner Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound SMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onsite Visit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound e-mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>citypoint</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>omnicomm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Не контактировали</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fleet_Ownership__c</picklist>
+        <values>
+            <fullName>Lease</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Own</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reimburse</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Fleet_Type__c</picklist>
+        <values>
+            <fullName>Cars and vans up to 3%2E5 t</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other heavy machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trucks over 12 t</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vans and trucks up to 12 t</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Geschaeftsbereich__c</picklist>
+        <values>
+            <fullName>Automobil-Gewerbe %28KFZ%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energie-Versorgung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Handwerker %28Maler%2C Lackierer%2C etc%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Produzierendes Gewerbe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sonstiges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Soziale Dienstleistung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technische Dienstleistung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transport %28Fracht%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transport %28Personen%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verarbeitendes Gewerbe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vertrieb und Beratung</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Gesellschaftsform__c</picklist>
+        <values>
+            <fullName>AG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASBL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agency of an Overseas Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Akciová společnost - a%2Es%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Artisans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Association</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Association à but lucratif</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Association à but non lucratif</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Auto entrepreneur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autres</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AöR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BVBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Behörde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Branch of an Overseas Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVBA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CVOA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Civil Law Partnership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comm V</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Comm VA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cooperative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coöperatieve en onderlinge waarborgmaatschappij</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EESV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EIRL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ENTREPRISE INDIVIDUELLE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ESV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EURL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eenmanszaak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Einzelfirma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foundation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Freier Beruf</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GCV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GEIE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GIE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GbR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General or Registered Partnership %28sp%2E j%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gewerbebetrieb</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GmbH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GmbH %26 co KG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Körperschaft Öffentlichen Rechts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Limited Joint Stock Partnership %28S%2EK%2EA%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Limited Liability Partnership %28sp%2E p%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Limited Partnership %28sp%2E k%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maatschap</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pobočka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Profession libérale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SARL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SAS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SASU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCRI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCRL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SNC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPRL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Secteur Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sole proprietorship</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sonstige Kapitalgesellschaften</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Společnost s ručením omezeným - s%2Er%2Eo%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stichting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stiftung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Polish Joint Stock Company %28S%2EA%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>The Polish Limited Liability Company %28sp%2Ez o%2Eo%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UG %26 Co%2E KG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VOF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VZW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VaG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vereniging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Veřejná obchodní společnost - v%2Eo%2Es%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>e%2EK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>e%2EU%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>e%2EV%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>eG</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>gGmbH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>mbB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>mbH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>oHG</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>How_Heard_About_Us__c</picklist>
+        <values>
+            <fullName>Associations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automotive Fleet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BP%2FCITGO%2FCHEVRON Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Fleet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dun %26 Bradstreet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Equifax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FM Postcard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fleet Financials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fleet Owner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>From a FleetCards USA rep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>From a Fuelman merchant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>From a colleague</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fueling Station</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government Fleet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hoover%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MSN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Campaign</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>News article or blog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral - Employee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral - Fueling Station</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral - Sales Representative</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Search Engine - Google%2FYahoo%2FMSN%2Fetc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Third Party Online Advertising</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trans-Union</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web %28organic%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web banner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Word of mouth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Work Truck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yahoo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Automotive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Handwerker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Kraftstoff_Verbrauch__c</picklist>
+        <values>
+            <fullName>%3C 300</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E000-1%2E999</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10%2E000-14%2E999</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>15%2E000 und mehr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E000-2%2E999</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E000-3%2E999</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>300-999</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%2E000-4%2E999</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5%2E000-7%2E999</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8%2E000-9%2E999</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Language_Preference__c</picklist>
+        <values>
+            <fullName>Czech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dutch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>German</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hungarian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovak</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Allstar Mondo Contact Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allstar Mondo Web Short Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emailmarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Empfehlung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Agg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stationskunde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telesales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Status_Specific__c</picklist>
+        <values>
+            <fullName>Bad Data%2FWrong Phone Number</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Prior Experience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email SPAM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gov%27t%2FNon-Profit%2FTax Exempt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Company Vehicles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not a Valid Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onsite Tank%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out of Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rewards Programs%2FRebates%2FDiscounts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unable to Reach</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Leadprio__c</picklist>
+        <values>
+            <fullName>high</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>normal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Merlin_Partner__c</picklist>
+        <values>
+            <fullName>CCS%2FFLEETCOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CESKAPOSTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INNOGY</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MobilePhone_Status__c</picklist>
+        <values>
+            <fullName>Dial out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs validation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Successful dialing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A1</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Most_Important_Feature__c</picklist>
+        <values>
+            <fullName>Controls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cost Savings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eliminate AR Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Locations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rebates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Simplicity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Terms</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volume Growth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Бренд</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ГАЗовые АЗС</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Конкретные АЗС</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>НДС</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Налив</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Отсрочка%2C кредит</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Рекомендация</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Сервис</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Тендер</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Условия договора</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Most_Important_Feature_specific__c</picklist>
+        <values>
+            <fullName>Бензовоз</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Би Пи</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Газпром</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Другое</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Клиент не прошел по критериям</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Лукойл</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Мало АЗС</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Метан</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Не готовы начать работать по предоплате</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Не устроили  предоставленные условия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Не участвовали</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Проиграли</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Работа по предоплате%2C с последующей отсрочкой</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Работает по предоставленным условиям</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Роснефть</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Своя АЗС</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ТНК</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Татнефть</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Most_Used_Brand__c</picklist>
+        <values>
+            <fullName>76</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ARCO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BP-Amoco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bashneft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chevron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Citgo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conoco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Costco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crystal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EKA-AZS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Exxon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flying J</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gazpromneft%27</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Independent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Love%27s</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lukoil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MTK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marathon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Murphy USA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Phillips 66</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pilot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QuikTrip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Racetrack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rosneft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell Russia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surgutneftegas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TNK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tatneft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Texaco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valero</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Frau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Herr</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OLD_Why_not_interested__c</picklist>
+        <values>
+            <fullName>-None-</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Opportunity_Type__c</picklist>
+        <values>
+            <fullName>BAU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Existing GFN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New GFN</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Organization_Type__c</picklist>
+        <values>
+            <fullName>Corporation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LLC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LLP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partnership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proprietorship</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PPR_Contact_Phone_Status__c</picklist>
+        <values>
+            <fullName>Dial out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs validation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Successful dialing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A1</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PPR_Fleet_Type__c</picklist>
+        <values>
+            <fullName>Автобус</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Газель-микроавтобус</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Грузовой</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Другое - отметить в Описании</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Легковой</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Спецтехника</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PPR_Vehicle_Brands__c</picklist>
+        <values>
+            <fullName>AUDI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BAW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BMW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bogdan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CADILLAC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHANCE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHERY</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHEVROLET</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CHRYSLER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CITROEN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAEWOO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DAF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DODGE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIAT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FORD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FUSO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GAZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HYUNDAI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Higer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hino</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Howo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INFINITI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IZH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Isuzu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Iveco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JAGUAR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JEEP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KAMAZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KAVZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KRAZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LADA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAND ROVER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LIAZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAZDA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MERCEDES-BENZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MERCEDES-BENZ VANS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MINI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MITSUBISHI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NEFAZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NISSAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPEL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PAZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PEUGEOT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PORSCHE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RENAULT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SKODA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUBARU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SUZUKI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shaanxi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TOYOTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UAZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>URAL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VOLVO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VW VANS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Volkswagen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZIL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Partner_card__c</picklist>
+        <values>
+            <fullName>PORT ONE OU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unicard oil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>АЗС Технология</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>АЗС-ПРОСТОР</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>АЛЬКОРР</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Альгазтранс</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ВАЛАР</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ГПН</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ГЭС</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Гамаюн</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Грилен-Карт</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Другое</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ИНТРАНСГАЗ-СЕРВИС</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Л-Ульяновскнефтепродукт</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Лукойл</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>МАСТЕРС</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Магистраль</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>НОВГОРОДНЕФТЕПРОДУКТ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Нефтемаркет</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ОПТАН-Мордовия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ПИТ-СТОП</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ПТК</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ПТК Уралнефть</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Петролстарт</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Пикалёвская Топливная Компания</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Роснефть</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Сапсан</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Совинтеравтосервис</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ТАИФ-НК АЗС</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ТД ИЛИМ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ТД Нефтьмагистраль</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ТК ТранзитСити</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ТРАНСЕРВИС-АЗС</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Тайм</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Терминал</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ТрансКарт</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Транспорт</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Фаэтон- топливная сеть номер 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Фриз</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ЦНП-КАРД</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Шельф %28ТУРБО%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ЭЦК</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_system__c</picklist>
+        <values>
+            <fullName>Amercan Express</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mastercard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Visa</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Phone_Status__c</picklist>
+        <values>
+            <fullName>Dial out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs validation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Successful dialing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A1</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Channel__c</picklist>
+        <values>
+            <fullName>Adressbroker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FleetCor Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Ad-Words</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Organic Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner Channels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pilot-Survey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell Customer</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Fueling_Method__c</picklist>
+        <values>
+            <fullName>Bank Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coupons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>House Account</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leasing Company Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On-Site Tanks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Issuer Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Universal Fleet Card</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Primary_Fueling_Method_specific__c</picklist>
+        <values>
+            <fullName>EKA-Processing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inforkom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Licard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rosneft</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell Russia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Surgutneftegas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tatneft</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>Shell Universal Card</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Produkt__c</picklist>
+        <values>
+            <fullName>CCS Aukce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Bonus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Bonus Fleet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Bonus%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Carnet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Carnet NP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS LIMIT Exclusive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Limit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Limit M4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Limit NP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Limit PRIM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Limit%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Toll</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Trucks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E-shop</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ERV insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UTA%2FCCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>euroShell Card International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>euroShell Card Kompakt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Produkt_copy__c</picklist>
+        <values>
+            <fullName>euroShell Card Kompakt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Projekt__c</picklist>
+        <values>
+            <fullName>Projekt 25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Projektbezeichnung__c</picklist>
+        <values>
+            <fullName>%28Default%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid %E2%80%93 Option 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid %E2%80%93 Option 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid %E2%80%93 Option 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small %E2%80%93 Option 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small %E2%80%93 Option 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small %E2%80%93 Option 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Promo_Code1__c</picklist>
+        <values>
+            <fullName>1Ч01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2И01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2И02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5БК6</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5БК7</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5БК9</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6З03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6З06</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7FS1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7ВЗ1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7З00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7З09</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>7З12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>9ВЗ1</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Quali_Status__c</picklist>
+        <values>
+            <fullName>Customer reached %E2%80%93 call later</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer reached %E2%80%93 didn%E2%80%99t talk to decision maker</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer reached %E2%80%93 email sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer reached %E2%80%93 first meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer reached %E2%80%93 follow up %28seasonality%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer reached %E2%80%93 forwarded to Field</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer reached %E2%80%93 next meeting%28s%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not reached</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not reached %E2%80%93 SMS sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not reached %E2%80%93 dial tone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not reached %E2%80%93 voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Acquisition - Contacted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent to Acquisition - Not contacted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dublette</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial/Credit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost to Competition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not a Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating_attractive__c</picklist>
+        <values>
+            <fullName>1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Region__c</picklist>
+        <values>
+            <fullName>Central Bohemia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prague</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Алтайский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Амурская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Архангельская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Астраханская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Байконур</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Белгородская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Брянская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Владимирская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Волгоградская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Вологодская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Воронежская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Забайкальский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ивановская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Иркутская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Кабардино-Балкарская Республика</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Калининградская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Калужская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Камчатский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Карачаево-Черкесская Республика</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Кемеровская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Кировская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Костромская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Краснодарский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Красноярский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Курганская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Курская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ленинградская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Липецкая область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Магаданская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Москва</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Московская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Мурманская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ненецкий автономный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Нижегородская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Новгородская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Новосибирская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Омская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Оренбургская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Орловская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Пензенская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Пермский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Приморский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Псковская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Адыгея</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Алтай</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Башкортостан</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Бурятия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Дагестан</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Калмыкия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Карелия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Коми</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Крым</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Марий Эл</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Мордовия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Саха %28Якутия%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Северная Осетия - Алания</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Хакасия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ростовская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Рязанская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Самарская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Санкт-Петербург</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Саратовская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Сахалинская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Свердловская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Северо-Кавказский%C2%A0федеральный%C2%A0округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Смоленская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ставропольский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Тамбовская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Тверская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Томская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Тульская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Тюменская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Удмуртская Республика</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ульяновская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Хабаровский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ханты-Мансийский автономный округ - Югра</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Челябинская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Чеченская Республика</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Чувашская Республика</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Чукотский автономный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ямало-Ненецкий автономный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ярославская область</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Regional_Fueling_Method_specific__c</picklist>
+        <values>
+            <fullName>7-Eleven</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ARI Fleet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASP Kholding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ASPEK-Nefteprodukt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AZS-Servis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arkhipelag</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assotsiatsiya GRAND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avtodorstroy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banamex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bancomer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banorte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Donlen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EFS %28First Data%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ekoyl-Protsessing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emkay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enterprise%2FWEX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FTS %28Fleet-Tech Transp%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GE Fleet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gelios</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grilen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HSBC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hess</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MNGK-AVTOKARD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Motom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NK Arsenal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nefko-kart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neftika-Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OPTAN-SMART</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other Regional%2FLocal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PC %22Petrol Plyus%22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PHH Arval</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PORT ONE OU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Penske%2FRyder</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pilot %28Flying J%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Processing-Servis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Propietary Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>QuikTrip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rapid Fuel %28Kangaroo%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Santander</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scotia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sheetz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Smart Plyus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Speedway</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Statoyl Riteyl Opereyshns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T-Chek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trans Oyl</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tsentral%27naya Processingovaya Kompaniya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tsentrnefteprodukt-servis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Universal Card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Valero</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wheels</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yunikard-Oyl</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SalesPitch_Level1_Product__c</picklist>
+        <values>
+            <fullName>Flexible Kreditkarte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Universelle Flottenkarte</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>SalesPitch__c</picklist>
+        <values>
+            <fullName>Aktionen oder Rabatte - Alle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aktionen oder Rabatte - Hotel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aktionen oder Rabatte - Priority Pass</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flexibilität - universelle Akzeptanz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Flexibilität - über vorhandenes Konto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kosten - billiger aktuelles Zahlungsart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liquidität - Planungssicherheit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Liquidität - gute Zahlungsbedingungen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sicherheit - Online-Shopping Sicherheit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sicherheit - Schutz vor Betrug</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sicherheit - Sicherer als Bargeld</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sonstige %28bitte angeben%21%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T%26C - Kartenlimit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T%26C - Kontrolle über Ausgaben</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T%26C - einfache Buchführung%2Fweniger Admin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T%26C - einstellbare Warengruppen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>zusätzliche Funktion - Versicherung</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sec_Channel__c</picklist>
+        <values>
+            <fullName>Field</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JITB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source_of_Lead__c</picklist>
+        <values>
+            <fullName>Business card</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email рассылка</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook_CCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Petrolcards%2Eru - АГГРЕГАТОР</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>АЗС Заявка Shell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Актуализированная БД</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Акция Рекомендация</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Выставка</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Интернет Источники</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Найден в Интернете</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Партнерская Программа</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Поисковая Система</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Почтовая рассылка</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Прочая БД</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Реклама Клиента</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Реклама в СМИ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Реклама на АЗС</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Рекомендация</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Сайт Petrolplus%2Ekz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Сайт Petrolplus%2Eru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Сайт fuel%2Eveb-leasing%2Eru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Сайт gpc-store%2Eru</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_status_detail__c</picklist>
+        <values>
+            <fullName>Already Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Already in Pipeline</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blacklist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer not reached</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High fees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Longterm contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low discount</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Loyalty program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No vehicles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not a legal entity</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong contact details</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Potential fraud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejection of T&amp;Cs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not a priority</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Refused to talk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forwarded externally</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tankkarten_im_Einsatz__c</picklist>
+        <values>
+            <fullName>Ja</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nein</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>The_region__c</picklist>
+        <values>
+            <fullName>Абхазия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Агинский Бурятский автономный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Азербайджан</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Алтайский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Амурская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Архангельская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Астраханская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Белгородская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Белоруссия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Брянская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Владимирская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Волгоградская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Вологодская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Воронежская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Грузия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Дальневосточный федеральный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Еврейская автономная область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Забайкальский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ивановская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Иркутская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Кабардино-Балкарская Республика</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Казахстан</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Калининградская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Калужская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Камчатская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Камчатский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Кемеровская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Кировская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Китай</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Коми-Пермяцкий автономный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Корякский автономный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Костромская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Краснодарский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Красноярский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Крымский федеральный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Курганская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Курская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Латвия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ленинградская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Липецкая область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Литва</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Магаданская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Монголия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Московская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Мурманская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ненецкий автономный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Нижегородская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Новгородская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Новосибирская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Норвегия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Омская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Оренбургская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Орловская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Пензенская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Пермская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Пермский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Польша</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Приволжский федеральный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Приморский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Псковская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Адыгея</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Алтай</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Башкортостан</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Бурятия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Дагестан</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Ингушетия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Калмыкия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Карачаево-Черкесия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Карелия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Коми</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Крым</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Марий Эл</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Мордовия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Саха %28Якутия%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Татарстан</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Тыва</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Республика Хакасия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Россия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ростовская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Рязанская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Самарская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Саратовская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Сахалинская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Свердловская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Северо-Западный федеральный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Сибирский федеральный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Смоленская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ставропольский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Таймырский автономный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Тамбовская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Тверская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Томская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Тульская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Тюменская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Удмуртская Республика</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Украина</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ульяновская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Уральский федеральный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>УстьОрдынский Бурятский автономный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Финляндия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Хабаровский край</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ханты-Мансийский автономный округ - Югра</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Центральный федеральный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Челябинская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Чеченская республика</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Читинская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Чувашская Республика</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Чукотский автономный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Эвенкийский автономный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Эстония</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Южная Осетия</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Южный федеральный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ямало-Ненецкий автономный округ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ярославская область</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>г%2E Москва</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>г%2E Санкт-Петербург</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>г%2EСевастополь</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Travel_Pattern__c</picklist>
+        <values>
+            <fullName>Random Route</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regular %26 Random</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regular Route</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Welche_Tankkarten__c</picklist>
+        <values>
+            <fullName>ANWB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ARGOS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AVIA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Agip</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bamaka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Benzina</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DCB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DE HAAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>DKV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Esso</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GULF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IDS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MKB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MOL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MULTI TANKCARD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Novofleet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OMV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>POST%2FSALLAND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q8%2FTANGO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ROUTEX</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RobinOil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TAMOIL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TEXACO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TINQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TRAVELCARD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TankOno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tankpool24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>bankovníkarta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>hotovost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>jiné</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>nesdělil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>tks</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>vlastníČS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Zahlungsart__c</picklist>
+        <values>
+            <fullName>Banküberweisung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lastschrift</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>warum_kein_Interesse__c</picklist>
+        <values>
+            <fullName>1%2E1 Finanziell%3A Rabatt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E2 Finanziell%3A Kartengebuehre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E3 Finanziell%3A Transaktiongebuehre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2E4 Finanziell%3A Andere Gebuehre</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E1 Netzwerk%3A Tankstellnetzwerk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2E2 Netzwerk%3A Nicht-Kraftstoff-Netzwerk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E1 Brand%3A FleetCor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E2 Brand%3A Shell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3%2E3 Brand%3A Allstar Mondo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%2E1 Service%3A Kontrolle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%2E2 Service%3A Wunsch-PIN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4%2E3 Service%3A Sonstiges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>AGB nicht akzeptiert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>APP zu aufwendig</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ablehnung Shell %28Brand %2F Service%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andere</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andere Bezahlmethode - Cash</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andere Bezahlmethode - EC%2FKreditkarte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andere Bezahlmethode - Tankkarte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andere Bezahlmethode - VISA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Andere%2Fn Anbieter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anderes Produkt - Zahlungsbedingungen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anderes Produkt - geringere Kosten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anderes Produkt - höheres Kreditlimit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anderes Produkt - keine Garantien</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Anderes Produkt - mehr Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Angabenkorrektur nicht möglich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bereits Kreditkarte vorhanden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bestellprozess zu lange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Brand%3A CCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dublette</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eigene Tankstelle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial%3A Limit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Firma zu jung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gebühren</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gebühren%2FKosten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Grundgebühr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hausbank bietet bessere Konditionen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Je klient CCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kartenantrag zu umfrangreich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keine Kaution als Sicherheit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keine Kontrolle auf Produktebene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keine MwSt%2E-fähige Rechnung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keine Rabatte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keine Rabatte %2F zu geringe Rabatte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keine Shell Tankstelle in der Naehe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keine detaillierten Tankdaten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keine steuerbare Rechnung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kleinkunde hat keine Vorteile von TK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Konditionen%2FErsparnis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kreditlimit zu gering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leasingfahrzeuge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Long term contract</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lump sum payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mindestbestellwert nicht erreicht</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mit aktueller Lösung zufrieden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Má asistenci%2C pojištění a další benefity jinde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nechce sdělit důvod</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nelíbí se mu poplatek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nemají vozový park</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nepotřebuje%2C nevyužije</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network%3A using abroad</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not specified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nutzen nur EC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nízký limit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platba paušálem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product%3A benefits</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sicherheit nicht bereitgestellt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sonstige</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sonstiges</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T%26C - Kartengebühr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>T%26C - andere Gebühren</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ukončená činnost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unterlagen zu umfangreich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vereinbarung zu umfangreich</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Versorgung nicht gegeben</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verwaltungsaufwand zu aufwändig%C2%A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wartezeit zu lange</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zahlungsbedingungen zu kurz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zentralentscheid</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zu unbekannt%2Fkeine Reputation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>zu wenig Autos%2FVerbrauch %E2%80%93 Kleinkunde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Špatná zkušenost s CCS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

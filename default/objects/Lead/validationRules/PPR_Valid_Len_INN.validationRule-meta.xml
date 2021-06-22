@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Valid_Len_INN</fullName>
+    <active>true</active>
+    <description>Should contain only numbers:
+12 digits - entrepreneur;
+10 digits - legal entity.</description>
+    <errorConditionFormula>IF(
+AND(
+RecordType.Name = 'Russian Sales',
+$UserRole.DeveloperName != 'PPR_Bryansk_Call_Center_Speed_Up',
+$UserRole.DeveloperName != 'PPR_FieldTerritory_Call_Center',
+$Profile.Name != 'API Only',
+NOT(ISPICKVAL( Status , 'NEW - Not Yet Contacted')),
+NOT(ISPICKVAL( Status , 'Unprocessed')),
+NOT(ISCHANGED( Number_of_open_tasks__c )),
+NOT(ISCHANGED( Open_Task__c )),
+NOT(ISCHANGED( Promo_Code1__c )),
+NOT(ISCHANGED( OwnerId )),
+Nonresident__c = false,
+NOT(ISBLANK(INN__c )),
+LEN( INN__c) &lt;&gt; 12 ,
+LEN( INN__c) &lt;&gt; 10),
+true ,false)</errorConditionFormula>
+    <errorDisplayField>INN__c</errorDisplayField>
+    <errorMessage>Wrong INN!</errorMessage>
+</ValidationRule>

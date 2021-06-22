@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Time Zone --></label>
+    <name>Time_Zone__c</name>
+    <picklistValues>
+        <masterLabel>(GMT+00:00) Greenwich Mean Time (Europe/Dublin)</masterLabel>
+        <translation><!-- (GMT+00:00) Greenwich Mean Time (Europe/Dublin) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+00:00) Greenwich Mean Time (Europe/London)</masterLabel>
+        <translation><!-- (GMT+00:00) Greenwich Mean Time (Europe/London) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+00:00) Greenwich Mean Time (GMT)</masterLabel>
+        <translation><!-- (GMT+00:00) Greenwich Mean Time (GMT) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+00:00) Western European Time (Europe/Lisbon)</masterLabel>
+        <translation><!-- (GMT+00:00) Western European Time (Europe/Lisbon) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+01:00) Central European Time (Africa/Algiers)</masterLabel>
+        <translation><!-- (GMT+01:00) Central European Time (Africa/Algiers) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+01:00) Central European Time (Europe/Amsterdam)</masterLabel>
+        <translation><!-- (GMT+01:00) Central European Time (Europe/Amsterdam) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+01:00) Central European Time (Europe/Berlin)</masterLabel>
+        <translation><!-- (GMT+01:00) Central European Time (Europe/Berlin) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+01:00) Central European Time (Europe/Brussels)</masterLabel>
+        <translation><!-- (GMT+01:00) Central European Time (Europe/Brussels) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+01:00) Central European Time (Europe/Paris)</masterLabel>
+        <translation><!-- (GMT+01:00) Central European Time (Europe/Paris) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+01:00) Central European Time (Europe/Prague)</masterLabel>
+        <translation><!-- (GMT+01:00) Central European Time (Europe/Prague) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+01:00) Central European Time (Europe/Rome)</masterLabel>
+        <translation><!-- (GMT+01:00) Central European Time (Europe/Rome) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+02:00) Eastern European Time (Africa/Cairo)</masterLabel>
+        <translation><!-- (GMT+02:00) Eastern European Time (Africa/Cairo) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+02:00) Eastern European Time (Europe/Athens)</masterLabel>
+        <translation><!-- (GMT+02:00) Eastern European Time (Europe/Athens) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+02:00) Eastern European Time (Europe/Bucharest)</masterLabel>
+        <translation><!-- (GMT+02:00) Eastern European Time (Europe/Bucharest) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+02:00) Eastern European Time (Europe/Helsinki)</masterLabel>
+        <translation><!-- (GMT+02:00) Eastern European Time (Europe/Helsinki) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+02:00) Eastern European Time (Europe/Istanbul)</masterLabel>
+        <translation><!-- (GMT+02:00) Eastern European Time (Europe/Istanbul) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+02:00) Israel Standard Time (Asia/Jerusalem)</masterLabel>
+        <translation><!-- (GMT+02:00) Israel Standard Time (Asia/Jerusalem) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+02:00) South Africa Standard Time (Africa/Johannesburg)</masterLabel>
+        <translation><!-- (GMT+02:00) South Africa Standard Time (Africa/Johannesburg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+03:00) Arabian Standard Time (Asia/Baghdad)</masterLabel>
+        <translation><!-- (GMT+03:00) Arabian Standard Time (Asia/Baghdad) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+03:00) Arabian Standard Time (Asia/Kuwait)</masterLabel>
+        <translation><!-- (GMT+03:00) Arabian Standard Time (Asia/Kuwait) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+03:00) Arabian Standard Time (Asia/Riyadh)</masterLabel>
+        <translation><!-- (GMT+03:00) Arabian Standard Time (Asia/Riyadh) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+03:00) East Africa Time (Africa/Nairobi)</masterLabel>
+        <translation><!-- (GMT+03:00) East Africa Time (Africa/Nairobi) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+03:00) Further-eastern European Time (Europe/Minsk)</masterLabel>
+        <translation><!-- (GMT+03:00) Further-eastern European Time (Europe/Minsk) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+03:30) Iran Standard Time (Asia/Tehran)</masterLabel>
+        <translation><!-- (GMT+03:30) Iran Standard Time (Asia/Tehran) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+04:00) Georgia Time (Asia/Tbilisi)</masterLabel>
+        <translation><!-- (GMT+04:00) Georgia Time (Asia/Tbilisi) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+04:00) Gulf Standard Time (Asia/Dubai)</masterLabel>
+        <translation><!-- (GMT+04:00) Gulf Standard Time (Asia/Dubai) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+04:00) Moscow Standard Time (Europe/Moscow)</masterLabel>
+        <translation><!-- (GMT+04:00) Moscow Standard Time (Europe/Moscow) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+04:30) Afghanistan Time (Asia/Kabul)</masterLabel>
+        <translation><!-- (GMT+04:30) Afghanistan Time (Asia/Kabul) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+05:00) Pakistan Time (Asia/Karachi)</masterLabel>
+        <translation><!-- (GMT+05:00) Pakistan Time (Asia/Karachi) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+05:00) Uzbekistan Time (Asia/Tashkent)</masterLabel>
+        <translation><!-- (GMT+05:00) Uzbekistan Time (Asia/Tashkent) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+05:30) India Standard Time (Asia/Colombo)</masterLabel>
+        <translation><!-- (GMT+05:30) India Standard Time (Asia/Colombo) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+05:30) India Standard Time (Asia/Kolkata)</masterLabel>
+        <translation><!-- (GMT+05:30) India Standard Time (Asia/Kolkata) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+05:45) Nepal Time (Asia/Kathmandu)</masterLabel>
+        <translation><!-- (GMT+05:45) Nepal Time (Asia/Kathmandu) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+06:00) Bangladesh Time (Asia/Dhaka)</masterLabel>
+        <translation><!-- (GMT+06:00) Bangladesh Time (Asia/Dhaka) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+06:00) Yekaterinburg Time (Asia/Yekaterinburg)</masterLabel>
+        <translation><!-- (GMT+06:00) Yekaterinburg Time (Asia/Yekaterinburg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+06:30) Myanmar Time (Asia/Rangoon)</masterLabel>
+        <translation><!-- (GMT+06:30) Myanmar Time (Asia/Rangoon) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+07:00) Indochina Time (Asia/Bangkok)</masterLabel>
+        <translation><!-- (GMT+07:00) Indochina Time (Asia/Bangkok) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+07:00) Indochina Time (Asia/Ho_Chi_Minh)</masterLabel>
+        <translation><!-- (GMT+07:00) Indochina Time (Asia/Ho_Chi_Minh) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+07:00) Western Indonesia Time (Asia/Jakarta)</masterLabel>
+        <translation><!-- (GMT+07:00) Western Indonesia Time (Asia/Jakarta) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+08:00) Australian Western Standard Time (Australia/Perth)</masterLabel>
+        <translation><!-- (GMT+08:00) Australian Western Standard Time (Australia/Perth) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+08:00) China Standard Time (Asia/Shanghai)</masterLabel>
+        <translation><!-- (GMT+08:00) China Standard Time (Asia/Shanghai) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+08:00) Hong Kong Time (Asia/Hong_Kong)</masterLabel>
+        <translation><!-- (GMT+08:00) Hong Kong Time (Asia/Hong_Kong) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+08:00) Malaysia Time (Asia/Kuala_Lumpur)</masterLabel>
+        <translation><!-- (GMT+08:00) Malaysia Time (Asia/Kuala_Lumpur) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+08:00) Philippine Time (Asia/Manila)</masterLabel>
+        <translation><!-- (GMT+08:00) Philippine Time (Asia/Manila) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+08:00) Singapore Standard Time (Asia/Singapore)</masterLabel>
+        <translation><!-- (GMT+08:00) Singapore Standard Time (Asia/Singapore) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+08:00) Taipei Standard Time (Asia/Taipei)</masterLabel>
+        <translation><!-- (GMT+08:00) Taipei Standard Time (Asia/Taipei) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+09:00) Japan Standard Time (Asia/Tokyo)</masterLabel>
+        <translation><!-- (GMT+09:00) Japan Standard Time (Asia/Tokyo) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+09:00) Korean Standard Time (Asia/Seoul)</masterLabel>
+        <translation><!-- (GMT+09:00) Korean Standard Time (Asia/Seoul) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+09:30) Australian Central Standard Time (Australia/Darwin)</masterLabel>
+        <translation><!-- (GMT+09:30) Australian Central Standard Time (Australia/Darwin) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+10:30) Australian Central Daylight Time (Australia/Adelaide)</masterLabel>
+        <translation><!-- (GMT+10:30) Australian Central Daylight Time (Australia/Adelaide) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney)</masterLabel>
+        <translation><!-- (GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+11:00) Lord Howe Daylight Time (Australia/Lord_Howe)</masterLabel>
+        <translation><!-- (GMT+11:00) Lord Howe Daylight Time (Australia/Lord_Howe) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+11:00) Solomon Islands Time (Pacific/Guadalcanal)</masterLabel>
+        <translation><!-- (GMT+11:00) Solomon Islands Time (Pacific/Guadalcanal) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+11:30) Norfolk Islands Time (Pacific/Norfolk)*</masterLabel>
+        <translation><!-- (GMT+11:30) Norfolk Islands Time (Pacific/Norfolk)* --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+12:00) Magadan Time (Asia/Kamchatka)</masterLabel>
+        <translation><!-- (GMT+12:00) Magadan Time (Asia/Kamchatka) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+13:00) Fiji Summer Time (Pacific/Fiji)</masterLabel>
+        <translation><!-- (GMT+13:00) Fiji Summer Time (Pacific/Fiji) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+13:00) New Zealand Daylight Time (Pacific/Auckland)</masterLabel>
+        <translation><!-- (GMT+13:00) New Zealand Daylight Time (Pacific/Auckland) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+13:00) Phoenix Islands Time (Pacific/Enderbury)</masterLabel>
+        <translation><!-- (GMT+13:00) Phoenix Islands Time (Pacific/Enderbury) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+13:00) Tonga Time (Pacific/Tongatapu)</masterLabel>
+        <translation><!-- (GMT+13:00) Tonga Time (Pacific/Tongatapu) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+13:45) Chatham Daylight Time (Pacific/Chatham)</masterLabel>
+        <translation><!-- (GMT+13:45) Chatham Daylight Time (Pacific/Chatham) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT+14:00) Line Islands Time (Pacific/Kiritimati)</masterLabel>
+        <translation><!-- (GMT+14:00) Line Islands Time (Pacific/Kiritimati) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-01:00) Cape Verde Time (Atlantic/Cape_Verde)</masterLabel>
+        <translation><!-- (GMT-01:00) Cape Verde Time (Atlantic/Cape_Verde) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-02:00) Brasilia Summer Time (America/Sao_Paulo)</masterLabel>
+        <translation><!-- (GMT-02:00) Brasilia Summer Time (America/Sao_Paulo) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-02:00) South Georgia Time (Atlantic/South_Georgia)</masterLabel>
+        <translation><!-- (GMT-02:00) South Georgia Time (Atlantic/South_Georgia) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-03:00) Argentina Time (America/Argentina/Buenos_Aires)</masterLabel>
+        <translation><!-- (GMT-03:00) Argentina Time (America/Argentina/Buenos_Aires) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-03:00) Chile Summer Time (America/Santiago)</masterLabel>
+        <translation><!-- (GMT-03:00) Chile Summer Time (America/Santiago) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-03:30) Newfoundland Standard Time (America/St_Johns)</masterLabel>
+        <translation><!-- (GMT-03:30) Newfoundland Standard Time (America/St_Johns) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-04:00) Atlantic Standard Time (America/Halifax)</masterLabel>
+        <translation><!-- (GMT-04:00) Atlantic Standard Time (America/Halifax) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-04:00) Atlantic Standard Time (America/Puerto_Rico)</masterLabel>
+        <translation><!-- (GMT-04:00) Atlantic Standard Time (America/Puerto_Rico) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-04:00) Atlantic Standard Time (Atlantic/Bermuda)</masterLabel>
+        <translation><!-- (GMT-04:00) Atlantic Standard Time (Atlantic/Bermuda) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-04:30) Venezuela Time (America/Caracas)</masterLabel>
+        <translation><!-- (GMT-04:30) Venezuela Time (America/Caracas) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-05:00) Colombia Time (America/Bogota)</masterLabel>
+        <translation><!-- (GMT-05:00) Colombia Time (America/Bogota) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-05:00) Eastern Standard Time (America/Indiana/Indianapolis)</masterLabel>
+        <translation><!-- (GMT-05:00) Eastern Standard Time (America/Indiana/Indianapolis) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-05:00) Eastern Standard Time (America/New_York)</masterLabel>
+        <translation><!-- (GMT-05:00) Eastern Standard Time (America/New_York) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-05:00) Eastern Standard Time (America/Panama)</masterLabel>
+        <translation><!-- (GMT-05:00) Eastern Standard Time (America/Panama) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-05:00) Peru Time (America/Lima)</masterLabel>
+        <translation><!-- (GMT-05:00) Peru Time (America/Lima) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-06:00) Central Standard Time (America/Chicago)</masterLabel>
+        <translation><!-- (GMT-06:00) Central Standard Time (America/Chicago) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-06:00) Central Standard Time (America/El_Salvador)</masterLabel>
+        <translation><!-- (GMT-06:00) Central Standard Time (America/El_Salvador) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-06:00) Central Standard Time (America/Mexico_City)</masterLabel>
+        <translation><!-- (GMT-06:00) Central Standard Time (America/Mexico_City) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-07:00) Mountain Standard Time (America/Denver)</masterLabel>
+        <translation><!-- (GMT-07:00) Mountain Standard Time (America/Denver) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-07:00) Mountain Standard Time (America/Phoenix)</masterLabel>
+        <translation><!-- (GMT-07:00) Mountain Standard Time (America/Phoenix) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-08:00) Pacific Standard Time (America/Los_Angeles)</masterLabel>
+        <translation><!-- (GMT-08:00) Pacific Standard Time (America/Los_Angeles) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-08:00) Pacific Standard Time (America/Tijuana)</masterLabel>
+        <translation><!-- (GMT-08:00) Pacific Standard Time (America/Tijuana) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-09:00) Alaska Standard Time (America/Anchorage)</masterLabel>
+        <translation><!-- (GMT-09:00) Alaska Standard Time (America/Anchorage) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-10:00) Hawaii-Aleutian Standard Time (Pacific/Honolulu)</masterLabel>
+        <translation><!-- (GMT-10:00) Hawaii-Aleutian Standard Time (Pacific/Honolulu) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-11:00) Niue Time (Pacific/Niue)</masterLabel>
+        <translation><!-- (GMT-11:00) Niue Time (Pacific/Niue) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>(GMT-11:00) Samoa Standard Time (Pacific/Pago_Pago)</masterLabel>
+        <translation><!-- (GMT-11:00) Samoa Standard Time (Pacific/Pago_Pago) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

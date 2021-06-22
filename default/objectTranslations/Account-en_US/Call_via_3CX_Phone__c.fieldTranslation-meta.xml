@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Clicking this link will launch a call to this account&apos;s phone and connect it to your phone --></help>
+    <label><!-- Call phone via 3CX --></label>
+    <name>Call_via_3CX_Phone__c</name>
+</CustomFieldTranslation>

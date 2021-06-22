@@ -1,0 +1,15 @@
+<!--
+  - Created by Nikita.Mikhailov on 29.01.2019.
+ -->
+
+<apex:page id="GFNI_LogReportExtended" standardController="Opportunity" extensions="GFNI_OpportunityLogReportCtrl">
+    <apex:pageBlock title="GFNI Log">
+        <apex:pageBlockTable value="{!logs}" var="log">
+            <apex:column value="{!log.LogType__c}"/>
+            <apex:column value="{!log.RecordDateTime__c}"/>
+            <apex:column value="{!log.Request_Id__c}"/>
+            <apex:column value="{!log.Message__c}"/>
+            <apex:column value="{!log.IsFirst__c}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

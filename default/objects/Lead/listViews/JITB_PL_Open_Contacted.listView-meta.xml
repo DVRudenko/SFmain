@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JITB_PL_Open_Contacted</fullName>
+    <columns>Number_of_days__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Sec_Channel__c</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Quali_Status__c</columns>
+    <columns>LEAD.COUNTRY_CODE</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Sec_Channel__c</field>
+        <operation>equals</operation>
+        <value>JITB</value>
+    </filters>
+    <filters>
+        <field>LEAD.COUNTRY_CODE</field>
+        <operation>equals</operation>
+        <value>PL</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,Contacted</value>
+    </filters>
+    <label>JITB PL Open + Contacted</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>AllStar_Teamleader</role>
+        <role>CCS_Administrator</role>
+        <roleAndSubordinates>Teamleiter_Inbound_2</roleAndSubordinates>
+    </sharedTo>
+</ListView>

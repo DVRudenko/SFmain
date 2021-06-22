@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>CCS_Contact_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>CCS_Contact_layout</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>CCS Contact Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NVM_Increment_Call_Count</fullName>
+        <field>NVM_Call_Count__c</field>
+        <formula>NVM_Call_Count__c +1</formula>
+        <name>NVM Increment Call Count</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NVM_Uncheck_Call_Logged</fullName>
+        <field>NVM_Call_Logged__c</field>
+        <literalValue>0</literalValue>
+        <name>NVM Uncheck Call Logged</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UPPER_Name</fullName>
+        <field>FirstName</field>
+        <formula>UPPER( FirstName )</formula>
+        <name>UPPER Name</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UPPER_Surname</fullName>
+        <field>LastName</field>
+        <formula>UPPER( LastName )</formula>
+        <name>UPPER Surname</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>reset_PD_Avaliable_LastName_Update_c</fullName>
+        <field>PD_Avaliable_LastName_Update__c</field>
+        <literalValue>0</literalValue>
+        <name>reset PD_Avaliable_LastName_Update__c</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>CCS_convert_Contact</fullName>
+        <actions>
+            <name>CCS_Contact_Record_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.CCS_Contact_Record_Type__c</field>
+            <operation>contains</operation>
+            <value>CCS</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>NVM Update Call Count on Contact</fullName>
+        <actions>
+            <name>NVM_Uncheck_Call_Logged</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.NVM_Call_Logged__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>Increment the Call Count when the Call Logged checkbox is set to True</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Reset PD_Avaliable_LastName_Update</fullName>
+        <actions>
+            <name>reset_PD_Avaliable_LastName_Update_c</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.PD_Avaliable_LastName_Update__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>UPPER Contact</fullName>
+        <actions>
+            <name>UPPER_Name</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>UPPER_Surname</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Contact.LastName</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Contact.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>AllStar,CCS Contact layout,Contact layout</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

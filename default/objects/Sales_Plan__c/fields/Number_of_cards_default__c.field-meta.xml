@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_cards_default__c</fullName>
+    <description>Default values for OUTBOUND and 4 weeks</description>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(User__r.Grade__c,&quot;Sales consultant&quot;),
+	IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))==0),
+		15,
+		IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))==1),
+			29,
+			IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))==2),
+				44,
+				IF((AND((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))&gt;=3,
+						(Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))&lt;=7)),
+					89,
+					IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))==8),
+						90,
+						IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))==9),
+							91,
+							IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))==10),
+								92,
+								93))))))),
+IF(ISPICKVAL(User__r.Grade__c,&quot;Senior consultant&quot;),
+	IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))==0),
+		17,
+		IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))==1),
+			33,
+			IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))==2),
+				49,
+				IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))&gt;=3),
+					100,
+					0)))),
+IF(ISPICKVAL(User__r.Grade__c,&quot;Top consultant&quot;),
+	IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))==0),
+		20,
+		IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))==1),
+			38,
+			IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))==2),
+				58,
+				IF(((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c)-(YEAR(User__r.Hire_Date__c)*12+MONTH(User__r.Hire_Date__c))&gt;=3),
+					118,
+					0)))),
+0)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Plan by TODAY date</inlineHelpText>
+    <label>Number of cards (default)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

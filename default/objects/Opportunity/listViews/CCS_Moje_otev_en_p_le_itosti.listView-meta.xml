@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Moje_otev_en_p_le_itosti</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.PROBABILITY</columns>
+    <columns>Number_of_GPS_units__c</columns>
+    <columns>OPPORTUNITY.NEXT_STEP</columns>
+    <columns>CCS_Promo_offer__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>contains</operation>
+        <value>,Kvalifikovaný lead,Nabídka zaslána,Schůzka,Nabídka předána,Objednávka přijata</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>contains</operation>
+        <value>Nabídka/Objednávka předána</value>
+    </filters>
+    <label>CCS_Moje otevřené příležitosti</label>
+    <language>cs</language>
+    <sharedTo>
+        <group>CCS_Records</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_liters_default__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(User__r.Grade__c, &quot;Sales consultant&quot;), 
+	IF (((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c) - (YEAR(  User__r.Hire_Date__c  )*12+MONTH(User__r.Hire_Date__c )) == 0), 
+		12700, 
+		IF (((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c) - (YEAR(  User__r.Hire_Date__c  )*12+MONTH(User__r.Hire_Date__c )) == 1), 
+			24600, 
+			IF (((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c) - (YEAR(  User__r.Hire_Date__c  )*12+MONTH(User__r.Hire_Date__c )) == 2), 
+				37300, 
+				IF (((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c) - (YEAR(  User__r.Hire_Date__c  )*12+MONTH(User__r.Hire_Date__c )) &gt;= 3), 
+					75400, 
+					0)))),
+IF( ISPICKVAL(User__r.Grade__c, &quot;Senior consultant&quot;), 
+	IF (((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c) - (YEAR(  User__r.Hire_Date__c  )*12+MONTH(User__r.Hire_Date__c )) == 0), 
+		13600, 
+		IF (((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c) - (YEAR(  User__r.Hire_Date__c  )*12+MONTH(User__r.Hire_Date__c )) == 1), 
+			28000, 
+			IF (((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c) - (YEAR(  User__r.Hire_Date__c  )*12+MONTH(User__r.Hire_Date__c )) == 2), 
+				41500, 
+				IF (((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c) - (YEAR(  User__r.Hire_Date__c  )*12+MONTH(User__r.Hire_Date__c )) &gt;= 3), 
+					84700, 
+					0)))),
+IF( ISPICKVAL(User__r.Grade__c, &quot;Top consultant&quot;), 
+	IF (((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c) - (YEAR(  User__r.Hire_Date__c  )*12+MONTH(User__r.Hire_Date__c )) == 0), 
+		16100, 
+		IF (((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c) - (YEAR(  User__r.Hire_Date__c  )*12+MONTH(User__r.Hire_Date__c )) == 1), 
+			32200, 
+			IF (((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c) - (YEAR(  User__r.Hire_Date__c  )*12+MONTH(User__r.Hire_Date__c )) == 2), 
+				49200, 
+				IF (((Y__c*12+Fleetcor_Calendar_Month__r.Month_Number__c) - (YEAR(  User__r.Hire_Date__c  )*12+MONTH(User__r.Hire_Date__c )) &gt;= 3), 
+					100000, 
+					0)))),
+0)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Number of liters (default)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

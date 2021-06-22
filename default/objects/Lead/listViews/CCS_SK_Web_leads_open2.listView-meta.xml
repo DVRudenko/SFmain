@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_SK_Web_leads_open2</fullName>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.COUNTRY_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Quali_Status__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Open,Otevřený,offen</value>
+    </filters>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.CCS_Sales_process</value>
+    </filters>
+    <label>"CCS" - SK Web leads - open</label>
+    <language>en_US</language>
+    <queue>CCS_Web_Leads_SK</queue>
+    <sharedTo>
+        <role>Altevida_CCS_Telesales</role>
+        <role>Altevida_Telesales_Team_Lead</role>
+        <role>CCS_CZ_Telesales</role>
+        <role>CCS_Telesales_Team_Lead</role>
+    </sharedTo>
+</ListView>

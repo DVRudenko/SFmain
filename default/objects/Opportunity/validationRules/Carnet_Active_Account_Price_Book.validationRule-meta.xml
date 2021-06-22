@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carnet_Active_Account_Price_Book</fullName>
+    <active>true</active>
+    <description>Enforce user to select Active Account Price Book.</description>
+    <errorConditionFormula>IF(
+AND(
+RecordType.DeveloperName = "Carnet",
+OR(
+IsClosed = false,
+AND(
+ISCHANGED(StageName),
+ISPICKVAL(StageName, 'Closed Won'))),
+Account_Price_Book__c &lt;&gt; null,
+Account_Price_Book__r.Active__c = False),
+true,
+false)</errorConditionFormula>
+    <errorDisplayField>Account_Price_Book__c</errorDisplayField>
+    <errorMessage>You have Inactive Account Price Book selected on Opportunity. Please choose another (Active) Price Book.</errorMessage>
+</ValidationRule>

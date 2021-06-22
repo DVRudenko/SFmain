@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duration_work_Opp__c</fullName>
+    <description>Working days from the date of transfer</description>
+    <externalId>false</externalId>
+    <formula>IF( TEXT( DATEVALUE( Last_Owner_Change_Date_RUS__c )) &lt;&gt; "",
+((5 * ( FLOOR( (  TODAY() - DATE( 2015, 1, 5) ) / 7 ) ) + MIN( 5, MOD( TODAY() - DATE( 2015, 1, 5), 7 ) ) )
+-
+(5 * ( FLOOR( ( DATEVALUE( Last_Owner_Change_Date_RUS__c ) - DATE( 2015, 1, 5) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE( Last_Owner_Change_Date_RUS__c ) - DATE( 2015, 1, 5), 7 ) ) )),
+((5 * ( FLOOR( ( TODAY()- DATE( 2015, 1, 5) ) / 7 ) ) + MIN( 5, MOD( TODAY() - DATE( 2015, 1, 5), 7 ) ) )
+-
+(5 * ( FLOOR( ( DATEVALUE( CreatedDate) - DATE( 2015, 1, 5) ) / 7 ) ) + MIN( 5, MOD( DATEVALUE( CreatedDate)- DATE( 2015, 1, 5), 7 ) ) )))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Working days from the date of transfer</inlineHelpText>
+    <label>Duration work Opp</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

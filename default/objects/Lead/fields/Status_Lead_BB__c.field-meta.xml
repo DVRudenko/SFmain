@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Lead_BB__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(TEXT(Return_funnel_Lead__r.Status) = "NEW - Not Yet Contacted", "Новый - не контактировали",
+IF(TEXT(Return_funnel_Lead__r.Status) = "IN PROCESS - 1st Attempt", "Перезвонить - 1-я попытка связаться",
+IF(TEXT(Return_funnel_Lead__r.Status) = "IN PROCESS - 2nd Attempt", "Перезвонить - 2-я попытка связаться",
+IF(TEXT(Return_funnel_Lead__r.Status) = "IN PROCESS - 3rd Attempt", "Перезвонить - 3-я попытка связаться",
+IF(TEXT(Return_funnel_Lead__r.Status) = "IN PROCESS - 4th Attempt", "Перезвонить - 4-я попытка связаться",
+IF(TEXT(Return_funnel_Lead__r.Status) = "IN PROCESS - 5th Attempt", "Перезвонить - 5-я попытка связаться",
+IF(TEXT(Return_funnel_Lead__r.Status) = "QUALIFIED - Convert to Opportunity", "Квалификация - перевод в Возможности",
+IF(TEXT(Return_funnel_Lead__r.Status) = "Waiting INN", "Ожидание ИНН",
+IF(TEXT(Return_funnel_Lead__r.Status) = "Disqualified", "Дисквалификация", "") ))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status Lead (return to funnel)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPT_IN__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>"Möchten Sie von FleetCor über Neuheiten,
+            Angebote und Wissenswertes rund um ihre
+            Tankkarte per E-Mail Informiert werden?"</description>
+    <externalId>false</externalId>
+    <inlineHelpText>"Möchten Sie von FleetCor über Neuheiten,
+            Angebote und Wissenswertes rund um ihre
+            Tankkarte per E-Mail Informiert werden?"</inlineHelpText>
+    <label>Marketing activities Opt-in</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

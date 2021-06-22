@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LimitToSetStatusClosed</fullName>
+    <active>true</active>
+    <description>STCP1-160/STCP1-408 - prevent users from manual choosing the status 'Closed'
+Note: sys admin profile and automated process user were exluded</description>
+    <errorConditionFormula>AND( 
+ISCHANGED(Status), 
+ISPICKVAL(Status, 'Closed'), 
+OR(RecordType.DeveloperName = 'Support',
+RecordType.DeveloperName = 'Support_CCS'),
+$Profile.Name != 'System Administrator',
+$Profile.Name != "Systemadministrator",
+$Profile.Name != "API Only",
+$User.Alias != 'autoproc',
+$User.Alias != 'autocase',
+        NOT($Permission.PO_Custom_Permission )
+)</errorConditionFormula>
+    <errorMessage>You cannot use 'Closed' status. For closing the case please choose 'Resolved' status.</errorMessage>
+</ValidationRule>

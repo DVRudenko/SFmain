@@ -1,0 +1,149 @@
+<template>
+    <h2 class="inlineTitle slds-p-top--large slds-p-horizontal--medium slds-p-bottom--medium slds-text-heading--medium">Edit and Create New</h2>
+    <div class="slds-grid slds-no-flex">
+        <div class="slds-col slds-size_1-of-2 slds-p-horizontal_large">
+            <!--Owner Id  -->
+            <div class="slds-m-vertical_xx-small">
+                <c-lookup
+                    selection={ownerRecord}
+                    errors={ownerIderrors}
+                    onsearch={handleUserSearch}
+                    onselectionchange={handleUserChange}
+                    label="Name"
+                    placeholder="Name"
+                    new-record-options={newNameOptions}
+                >
+                </c-lookup>
+            </div>
+            <!-- Subject -->
+            <div class="slds-m-vertical_x-small">
+                <lightning-combobox
+                    name="subject-field"
+                    label="Subject"
+                    value={eventData.Subject}
+                    placeholder="Subject"
+                    options={subjectOptions}
+                    onchange={handleSubjectChange} 
+                >
+                </lightning-combobox>
+            </div>
+
+            <div class="slds-m-vertical_x-small">
+                <lightning-combobox
+                    name="type-field"
+                    label="Type"
+                    value={eventData.Type}
+                    placeholder="Type"
+                    options={typeOptions}
+                    onchange={handleTypeChange} 
+                >
+                </lightning-combobox>
+            </div>
+
+            <div class="slds-m-vertical_x-small">
+                <lightning-input type="checkbox" name="is-all-day-event" label="All-Day Event" checked={eventData.IsAllDayEvent} value={eventData.IsAllDayEvent} onchange={handleIsAllDayChange}></lightning-input>
+            </div>
+        
+            <template if:true={eventData.IsAllDayEvent}>
+                <lightning-input type="date" name="start-date-time" label="Start" value={eventData.StartDateTime} onchange={handleStartChange}></lightning-input>
+                <lightning-input type="date" name="end-date-time" label="End" value={eventData.EndDateTime} onchange={handleEndChange}></lightning-input>
+            </template>
+            <template if:false={eventData.IsAllDayEvent}>
+                <lightning-input type="datetime" name="start-date-time" label="Start" value={eventData.StartDateTime} onchange={handleStartChange}></lightning-input>
+                <lightning-input type="datetime" name="end-date-time" label="End" value={eventData.EndDateTime} onchange={handleEndChange}></lightning-input>
+            </template>
+        </div>
+
+        <div class="slds-col slds-size_1-of-2 slds-p-horizontal_large">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-6">
+                    <!-- WhatId -->
+                    <div class="slds-m-vertical_x-small">
+      
+                        <lightning-combobox
+                            name="related-to-object-name"
+                            label=" "
+                            value={relatedToObject}
+                            placeholder="Related To Object"
+                            options={relatedToOptions}
+                            onchange={handleChange} 
+                        >
+                        </lightning-combobox>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_5-of-6">
+                    <div class="slds-m-vertical_xxx-small slds-p-horizontal_xx-small">
+        
+                        <c-lookup
+                            selection={relatedToRecord}
+                            errors={whatIdErrors}
+                            onsearch={handleRelatedToSearch}
+                            onselectionchange={handleWhatIdChange}
+                            label="Related To"
+                            placeholder="Related To"
+                            new-record-options={newRecordOptions}
+                        >
+                        </c-lookup>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-6">
+                    <div class="slds-m-vertical_x-small">
+        
+                            <!-- WhoId -->
+                        <lightning-combobox
+                            name="name-object-name"
+                            label=""
+                            value={nameObject}
+                            placeholder="Name"
+                            options={nameObjectOptions}
+                            onchange={handleNameObjectChange} 
+                        >
+                        </lightning-combobox>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_5-of-6">
+                    <div class="slds-m-vertical_xxx-small slds-m-horizontal_xx-small">
+                        <c-lookup
+                            selection={nameRecord}
+                            errors={whoIdErrors}
+                            onsearch={handleNameSearch}
+                            onselectionchange={handleWhoIdChange}
+                            label="Name"
+                            placeholder="Name"
+                            new-record-options={newNameOptions}
+                        >
+                        </c-lookup>
+                    </div>
+                </div>
+
+                <div class="slds-m-vertical_xx-small slds-m-horizontal_xx-small">
+                    <lightning-input type="checkbox" name="is-private" label="Private" checked={eventData.IsPrivate} value={eventData.IsPrivate} onchange={handlePrivateChange}></lightning-input>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slds-p-horizontal_large">
+        <lightning-textarea name="description" label="Description" value={descriptionText} onchange={handleDescriptionChange} class="slds-m-vertical_xx-small"></lightning-textarea>
+
+        <lightning-input type="text" name="location-field" label="Location" value={eventData.Location} onchange={handleLocationChange} class="slds-m-vertical_xx-small"></lightning-input>
+        <lightning-combobox
+            name="show-as-field"
+            label="Show Time As"
+            value={eventData.ShowAs}
+            placeholder="Show Time As"
+            options={showAsOptions}
+            onchange={handleShowAsChange} 
+        >
+        </lightning-combobox>
+        <lightning-input type="checkbox" name="is-reminder-set" label="Reminder Set" checked={eventData.IsReminderSet} value={eventData.IsReminderSet} onchange={handleIsReminderChange} class="slds-m-vertical_xx-small"></lightning-input>
+    </div>
+    <div>
+        <div class="button-panel slds-m-left_small">
+            <lightning-button variant="brand" label="Save and New" title="Save and New" onclick={saveAndCreateNew} class="slds-m-left_small"></lightning-button>
+            <lightning-button variant="neutral" label="Cancel" title="Cancel" onclick={closeModal} class="slds-m-left_small"></lightning-button>
+        </div>
+    </div>
+
+
+</template>

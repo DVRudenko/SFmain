@@ -1,0 +1,104 @@
+:host {
+    display: inline-block;
+    border-radius: 50px;
+}
+
+/* size small */
+.fltbase-button-size_small {
+    padding: 4px 20px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+/* size medium */
+.fltbase-button-size_medium {
+    padding: 12px 40px;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+/* size large */
+.fltbase-button-size_large {
+    padding: 18px 60px;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+/* variant base */
+.fltbase-button-variant_base {
+    display: block;
+    cursor: pointer;
+    border-radius: 50px;
+
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #212E35;
+    
+    outline: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* variant blue */
+.fltbase-button-variant_blue { background-color: #80D3DD; }
+.fltbase-button-variant_blue:hover { background-color: #A5DDE4; }
+.fltbase-button-variant_blue:active { background-color: #67CDDA; }
+
+/* variant gold */
+.fltbase-button-variant_gold { background-color: #FFD300; }
+.fltbase-button-variant_gold:hover { background-color: #ECC300; }
+.fltbase-button-variant_gold:active { background-color: #D9B300; }
+
+/* variant gray */
+.fltbase-button-variant_gray { background-color: #EEEEEE; }
+.fltbase-button-variant_gray:hover { 
+    background-color: #E6E6E6; 
+}
+.fltbase-button-variant_gray:active { background-color: #D6D6D6; }
+
+.fltbase-button-disabled,
+.fltbase-button-disabled:focus,
+.fltbase-button-disabled:hover,
+.fltbase-button-disabled:active {
+    background-color: #EEEEEE;
+    cursor: not-allowed;
+    color: #B4AFB5;
+}
+
+
+/* variant salesforce */
+.fltbase-button-variant_salesforce {
+    line-height: 20px;
+    padding: 5px 16px;
+
+    font-size: inherit;
+    text-transform: none;
+    color: #0070d2;
+
+    background-color: #FFFFFF; 
+    border: 1px solid #dddbda;
+    border-radius: .25rem;
+    box-sizing: border-box;
+}
+
+.fltbase-button-variant_salesforce:focus { 
+    background-color: #f4f6f9;
+    box-shadow: 0 0 3px #0070D2;
+}
+
+.fltbase-button-variant_salesforce:hover { background-color: #f4f6f9; }
+.fltbase-button-variant_salesforce:active { background-color: #eef1f6; }
+
+/* disabled salesforce variant*/
+.fltbase-button-variant_salesforce.fltbase-button-disabled,
+.fltbase-button-variant_salesforce.fltbase-button-disabled:focus,
+.fltbase-button-variant_salesforce.fltbase-button-disabled:hover,
+.fltbase-button-variant_salesforce.fltbase-button-disabled:active {
+    background-color: #FFFFFF;
+    color: #dddbda;
+    box-shadow: none;
+}

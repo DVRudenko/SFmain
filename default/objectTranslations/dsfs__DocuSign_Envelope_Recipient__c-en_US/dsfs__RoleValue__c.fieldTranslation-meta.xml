@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>VALUE ASSOCIATED WITH THE DOCUSIGN RECIPIENT ROLE. THIS VALUE IS USED TO MAP TO DEFAULT ANCHOR TAGS IN DOCUMENTS.</help>
+    <label><!-- RoleValue --></label>
+    <name>dsfs__RoleValue__c</name>
+</CustomFieldTranslation>

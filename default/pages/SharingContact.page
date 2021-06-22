@@ -1,0 +1,59 @@
+<apex:page name="SharingContact" standardController="Contact" extensions="SharingContactController" readOnly="true">
+    <apex:form >
+        <apex:sectionHeader title="{!$ObjectType.Contact.Label}" subtitle="{!if(contact.Id==null,'Contact',contact.Name)}"></apex:sectionHeader>
+        <apex:pageBlock mode="detail" id="contactPB">
+            <apex:pageBlockSection id="contactInformationPBS" title="{!$ObjectType.Contact.Label}">
+                <apex:outputField value="{!contact.OwnerId}"></apex:outputField>
+                <apex:outputField value="{!contact.Name}"></apex:outputField>
+                <apex:outputField value="{!contact.Phone}"></apex:outputField>
+                <apex:outputField value="{!contact.Email}"></apex:outputField>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+
+    <apex:pageBlock title="{!$ObjectType.OpenActivity.Label}">
+        <apex:pageBlockTable value="{!contact.OpenActivities}" var="openActive">
+            <apex:column value="{!openActive.Subject}"/>
+            <apex:column value="{!openActive.Who.Name}"/>
+            <apex:column value="{!openActive.IsTask}"/>
+            <apex:column value="{!openActive.ActivityDate}"/>
+            <apex:column value="{!openActive.Status}"/>
+            <apex:column value="{!openActive.Priority}"/>
+            <apex:column value="{!openActive.OwnerId}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="{!$ObjectType.ActivityHistory.Label}">
+        <apex:pageBlockTable value="{!contact.ActivityHistories}" var="historyActive">
+            <apex:column value="{!historyActive.Subject}"/>
+            <apex:column value="{!historyActive.Who.Name}"/>
+            <apex:column value="{!historyActive.Description}"/>
+            <apex:column value="{!historyActive.IsTask}"/>
+            <apex:column value="{!historyActive.ActivityDate}"/>
+            <apex:column value="{!historyActive.Status}"/>
+            <apex:column value="{!historyActive.Priority}"/>
+            <apex:column value="{!historyActive.OwnerId}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="Возможности">
+        <apex:pageBlockTable value="{!contact.OpportunityContactRoles}" var="opp">
+            <apex:column value="{!opp.Opportunity.Name}"/>
+            <apex:column value="{!opp.Opportunity.CreatedDate}"/>
+            <apex:column value="{!opp.Opportunity.StageName}"/>
+            <apex:column value="{!opp.Opportunity.Contract_Number__c}"/>
+            <apex:column value="{!opp.Opportunity.CloseDate}"/>
+            <apex:column value="{!opp.Opportunity.ALL_Cards__c}"/>
+            <apex:column value="{!opp.Opportunity.Number_of_Vehicles__c}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="{!$ObjectType.ContactHistory.Label}">
+        <apex:pageBlockTable value="{!contactHistory}" var="history">
+            <apex:column headerValue="Дата" value="{!history.theDate}"/>
+            <apex:column headerValue="Пользователь">
+                <apex:outputLink value="/{!history.userId}"> {!history.who} </apex:outputLink>
+            </apex:column>
+            <apex:column headerValue="Действие">
+                <apex:outputText escape="false" value="{!history.action}"/>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

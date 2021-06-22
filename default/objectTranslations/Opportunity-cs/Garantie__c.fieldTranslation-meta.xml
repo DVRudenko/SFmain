@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Záruka</label>
+    <name>Garantie__c</name>
+    <picklistValues>
+        <masterLabel>Bankbürgschaft</masterLabel>
+        <translation>Bankovní záruka</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kaution</masterLabel>
+        <translation>Bezhotovostní záruka</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Jiné</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parent/Cross-Corporate Bürgschaft</masterLabel>
+        <translation>Firemní záruka</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Personalbürgschaft</masterLabel>
+        <translation>Záruka od FO</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Promissory note/ Weksel</masterLabel>
+        <translation><!-- Promissory note/ Weksel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>keine</masterLabel>
+        <translation>Bez záruky</translation>
+    </picklistValues>
+</CustomFieldTranslation>

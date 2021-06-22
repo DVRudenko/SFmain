@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type of Organization --></label>
+    <name>Organization_Type__c</name>
+    <picklistValues>
+        <masterLabel>Corporation</masterLabel>
+        <translation><!-- Corporation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Education</masterLabel>
+        <translation><!-- Education --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Government</masterLabel>
+        <translation><!-- Government --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LLC</masterLabel>
+        <translation><!-- LLC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LLP</masterLabel>
+        <translation><!-- LLP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non active</masterLabel>
+        <translation><!-- Non active --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Non-Profit</masterLabel>
+        <translation><!-- Non-Profit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partnership</masterLabel>
+        <translation><!-- Partnership --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proprietorship</masterLabel>
+        <translation><!-- Proprietorship --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Государственное учреждение</masterLabel>
+        <translation><!-- Государственное учреждение --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Другой</masterLabel>
+        <translation><!-- Другой --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ЗАО</masterLabel>
+        <translation><!-- ЗАО --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ИП</masterLabel>
+        <translation><!-- ИП --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Некоммерческая организация</masterLabel>
+        <translation><!-- Некоммерческая организация --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ОАО</masterLabel>
+        <translation><!-- ОАО --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ООО</masterLabel>
+        <translation><!-- ООО --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Образовательное учреждение</masterLabel>
+        <translation><!-- Образовательное учреждение --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Партнерство</masterLabel>
+        <translation><!-- Партнерство --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

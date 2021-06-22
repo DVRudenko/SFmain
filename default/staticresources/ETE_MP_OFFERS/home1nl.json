@@ -1,0 +1,97 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "Wait until you receive your Shell cards and PIN numbers by post.",
+                "nl": "Wacht tot u uw Shell Cards en pincodes per post ontvangt."
+            },
+            {
+                "en": "Once received, your cards are automatically active and you can start using the cards! Enjoy a care-free refueling experience with your Shell Cards.",
+                "nl": "Na ontvangst kunt u direct gebruik maken van uw Shell Cards. Geniet van een zorgeloze tankervaring met uw Shell Cards."
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "transaction fee at Home station",
+                    "nl": "Transactiekosten voorkeurstation"
+                },
+                "value": {
+                    "en": "FREE",
+                    "nl": "GRATIS"
+                }
+            },
+            {
+                "label": {
+                    "en": "for all transactions",
+                    "nl": "voor alle transacties"
+                },
+                "value": {
+                    "en": "SINGLE INVOICE",
+                    "nl": "ÉÉN FACTUUR"
+                }
+            },
+            {
+                "label": {
+                    "en": "card issuing and delivery",
+                    "nl": "Pas productie en verzending"
+                },
+                "value": {
+                    "en": "FREE",
+                    "nl": "GRATIS"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "HOME 1"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "nl": "SHELL CARD"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/shellkarte_eu.jpg"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "Shell fuel card for business guarantees your company stable and permanent fuel discounts, a convenient online customer portal and a dense network of stations.",
+            "nl": "De Shell Card voor bedrijven garandeert uw bedrijf stabiele en permanente brandstofkortingen, een handig online klantenportaal en een groot netwerk van stations."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "nl": "SHELL CARD"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "SHELL CARDS",
+            "nl": "SHELL CARDS"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "SHELL CARD",
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "0",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "monthlyFuelConsumption_max": "5000",
+            "monthlyFuelConsumption_min": "50",
+            "showEuroLocatorTab": true,
+            "euroLocatorProductNumber": "4",
+            "order": 4
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Netherlands": "/resource/ETE_DOCUMENTS_1/tariffSheets_home1nl.jpg"
+    }
+}

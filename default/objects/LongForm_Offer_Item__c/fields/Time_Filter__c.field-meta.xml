@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Time_Filter__c</fullName>
+    <externalId>false</externalId>
+    <label>Time Filter</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unlimited</fullName>
+                <default>false</default>
+                <label>Unlimited</label>
+            </value>
+            <value>
+                <fullName>3 Months</fullName>
+                <default>false</default>
+                <label>3 Months</label>
+            </value>
+            <value>
+                <fullName>4 Months</fullName>
+                <default>false</default>
+                <label>4 Months</label>
+            </value>
+            <value>
+                <fullName>5 Months</fullName>
+                <default>false</default>
+                <label>5 Months</label>
+            </value>
+            <value>
+                <fullName>6 Months</fullName>
+                <default>false</default>
+                <label>6 Months</label>
+            </value>
+            <value>
+                <fullName>1 Week</fullName>
+                <default>false</default>
+                <label>1 Week</label>
+            </value>
+            <value>
+                <fullName>2 Weeks</fullName>
+                <default>false</default>
+                <label>2 Weeks</label>
+            </value>
+            <value>
+                <fullName>3 Weeks</fullName>
+                <default>false</default>
+                <label>3 Weeks</label>
+            </value>
+            <value>
+                <fullName>1 Month</fullName>
+                <default>false</default>
+                <label>1 Month</label>
+            </value>
+            <value>
+                <fullName>2 Months</fullName>
+                <default>false</default>
+                <label>2 Months</label>
+            </value>
+            <value>
+                <fullName>7 Months</fullName>
+                <default>false</default>
+                <label>7 Months</label>
+            </value>
+            <value>
+                <fullName>8 Months</fullName>
+                <default>false</default>
+                <label>8 Months</label>
+            </value>
+            <value>
+                <fullName>9 Months</fullName>
+                <default>false</default>
+                <label>9 Months</label>
+            </value>
+            <value>
+                <fullName>10 Months</fullName>
+                <default>false</default>
+                <label>10 Months</label>
+            </value>
+            <value>
+                <fullName>11 Months</fullName>
+                <default>false</default>
+                <label>11 Months</label>
+            </value>
+            <value>
+                <fullName>12 Months</fullName>
+                <default>false</default>
+                <label>12 Months</label>
+            </value>
+            <value>
+                <fullName>1 Year</fullName>
+                <default>false</default>
+                <label>1 Year</label>
+            </value>
+            <value>
+                <fullName>2 Years</fullName>
+                <default>false</default>
+                <label>2 Years</label>
+            </value>
+            <value>
+                <fullName>3 Years</fullName>
+                <default>false</default>
+                <label>3 Years</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

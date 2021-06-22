@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Operator__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Укажите оператора ЭДО</inlineHelpText>
+    <label>PPR Operator</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>false</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Контур</fullName>
+                <default>false</default>
+                <label>Контур</label>
+            </value>
+            <value>
+                <fullName>Тензор</fullName>
+                <default>false</default>
+                <label>Тензор</label>
+            </value>
+            <value>
+                <fullName>Другое</fullName>
+                <default>false</default>
+                <label>Другое</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

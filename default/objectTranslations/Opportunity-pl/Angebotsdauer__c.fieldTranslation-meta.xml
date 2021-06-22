@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Angebotsdauer --></label>
+    <name>Angebotsdauer__c</name>
+    <picklistValues>
+        <masterLabel>3 Monate</masterLabel>
+        <translation><!-- 3 Monate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>4 Monate</masterLabel>
+        <translation><!-- 4 Monate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>5 Monate</masterLabel>
+        <translation><!-- 5 Monate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>6 Monate</masterLabel>
+        <translation><!-- 6 Monate --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

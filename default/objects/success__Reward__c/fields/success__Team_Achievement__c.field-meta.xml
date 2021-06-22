@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Team_Achievement__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>The behaviour that generated the reward</inlineHelpText>
+    <label>Behaviour</label>
+    <referenceTo>success__Team_Achievement__c</referenceTo>
+    <relationshipLabel>Rewards</relationshipLabel>
+    <relationshipName>Rewards</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__All_Available</fullName>
+    <columns>NAME</columns>
+    <columns>success__Featured__c</columns>
+    <columns>success__Functional_Area__c</columns>
+    <columns>success__Experience_Formula__c</columns>
+    <columns>success__Aggregate_Field__c</columns>
+    <columns>success__Number_of_occurrences__c</columns>
+    <columns>success__Time_limit_in_days__c</columns>
+    <columns>success__Time_Limit_Unit__c</columns>
+    <columns>success__Maximum_number_of_rewards__c</columns>
+    <columns>success__Badge_Type__c</columns>
+    <columns>success__Badge_Name__c</columns>
+    <columns>success__Action__c</columns>
+    <columns>success__Recipient__c</columns>
+    <columns>success__CloudApps_Id__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>success__Functional_Area__c</field>
+        <operation>notEqual</operation>
+        <value>User Challenge</value>
+    </filters>
+    <label>All</label>
+    <language>en_US</language>
+</ListView>

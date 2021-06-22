@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_of_transfer_to_service__c</fullName>
+    <description>Last Close Date Opportunity on stage "Moved to Start" by MAIN_ID (E2E)</description>
+    <externalId>false</externalId>
+    <label>Date of transfer to service</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

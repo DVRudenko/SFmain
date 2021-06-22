@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Укажите принадлежность автопарка (напр. собственный, лизинг и т.д.)</help>
+    <label>Принадлежность автопарка</label>
+    <name>Fleet_Ownership__c</name>
+    <picklistValues>
+        <masterLabel>Lease</masterLabel>
+        <translation>Лизинг</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Другой</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Own</masterLabel>
+        <translation>Собственность</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reimburse</masterLabel>
+        <translation>Аренда</translation>
+    </picklistValues>
+</CustomFieldTranslation>

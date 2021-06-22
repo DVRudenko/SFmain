@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Open_Leads_Inbound_Email</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(Sec_Channel__c, "Inbound") &amp;&amp; ISPICKVAL(Channel__c, "E-mail") &amp;&amp; IF(OR(ISPICKVAL(Status, "Open"),ISPICKVAL(Status,"Disqualified")), false, true)&amp;&amp; ISNEW()</errorConditionFormula>
+    <errorMessage>New Leads with Sec. Channel “Inbound” and Channel “Email” should be created in Status “Open”</errorMessage>
+</ValidationRule>

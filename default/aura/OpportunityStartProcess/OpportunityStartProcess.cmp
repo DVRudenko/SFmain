@@ -1,0 +1,74 @@
+<aura:component controller="OpportunityStartProcessCtrl" implements="force:hasRecordId,force:hasSObjectName,flexipage:availableForRecordHome">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="recordTypeId" type="String" />
+    <aura:attribute name="mode" type="String" default="Read" />
+    <aura:attribute name="pageReadFields" type="String[]" />
+    <aura:attribute name="pageEditFields" type="String[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:attribute name="showSpinner" type="Boolean" default="false" />
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner />
+    </aura:if>
+
+    <div class="slds-p-bottom_small">
+        <lightning:recordViewForm recordId="{!v.recordId}"
+                                  objectApiName="Opportunity">
+            <div class="slds-box">
+                <div class="slds-grid slds-wrap">
+                    <aura:iteration items="{!v.pageReadFields}" var="item">
+                        <div class="slds-col slds-size_1-of-3">
+                            <lightning:outputField fieldName="{!item}" />
+                        </div>
+                    </aura:iteration>
+                </div>
+                <div class="slds-grid slds-wrap">
+                    <aura:if isTrue="{!if(v.mode == 'Read', true, false)}">
+                        <aura:iteration items="{!v.pageEditFields}" var="item">
+                            <div class="slds-col slds-size_1-of-3">
+                                <lightning:outputField fieldName="{!item}" />
+                            </div>
+                        </aura:iteration>
+                    </aura:if>
+                </div>
+            </div>
+        </lightning:recordViewForm>
+    </div>
+
+    <aura:if isTrue="{!if(v.mode == 'Read', true, false)}">
+        <div class="slds-grid slds-grid_align-center slds-p-bottom_small">
+            <div class="slds-col">
+                <lightning:button aura:id="edit" label="Edit" onclick="{!c.editFormHandler}" class="slds-m-top_medium" />
+            </div>
+        </div>
+    </aura:if>
+
+    <aura:if isTrue="{!if(v.mode == 'Edit', true, false)}">
+        <lightning:recordEditForm aura:id="recordEditForm"
+                                  onload="{!c.handleLoad}"
+                                  onsubmit="{!c.handleSubmit}"
+                                  onsuccess="{!c.handleSuccess}"
+                                  onerror="{!c.handleError}"
+                                  recordId="{!v.recordId}"
+                                  recordTypeId="{!v.recordTypeId}"
+                                  objectApiName="Opportunity">
+            <lightning:messages />
+            <div class="slds-grid slds-wrap">
+                <aura:iteration items="{!v.pageEditFields}" var="item">
+                    <div class="slds-col slds-size_1-of-3">
+                        <lightning:inputField fieldName="{!item}" />
+                    </div>
+                </aura:iteration>
+            </div>
+
+            <div class="slds-grid slds-grid_align-center">
+                <div class="slds-col slds-p-right_small">
+                    <lightning:button aura:id="Cancel" label="Cancel" onclick="{!c.cancelEditing}" class="slds-m-top_medium" />
+                </div>
+                <div class="slds-col">
+                    <lightning:button aura:id="submit" type="submit" label="Save" class="slds-m-top_medium" />
+                </div>
+            </div>
+        </lightning:recordEditForm>
+    </aura:if>
+</aura:component>

@@ -1,0 +1,15 @@
+<apex:page standardController="Account" extensions="AccountClickToCallSectionController">
+    <apex:form >
+    	<apex:pageMessages />
+	    <apex:pageBlock mode="maindetail" id="mainblock">
+	    	<apex:pageBlockSection collapsible="false">
+				<apex:repeat value="{! fieldsValuesMap }" var="key">
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="{! key }"/>
+						<apex:outputText escape="false" value="{! fieldsValuesMap[key] }"/>
+					</apex:pageBlockSectionItem>
+				</apex:repeat>
+	    	</apex:pageBlockSection>
+	    </apex:pageBlock>
+    </apex:form>
+</apex:page>

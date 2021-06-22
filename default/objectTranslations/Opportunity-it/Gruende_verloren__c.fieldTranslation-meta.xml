@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Gründe verloren --></label>
+    <name>Gruende_verloren__c</name>
+    <picklistValues>
+        <masterLabel>AGB nicht aktzeptiert</masterLabel>
+        <translation><!-- AGB nicht aktzeptiert --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>After Sales - Degussa</masterLabel>
+        <translation><!-- After Sales - Degussa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Already FLEETCOR Customer</masterLabel>
+        <translation><!-- Already FLEETCOR Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Bezahlmethode - Cash</masterLabel>
+        <translation><!-- Andere Bezahlmethode - Cash --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Bezahlmethode - EC/Kreditkarte</masterLabel>
+        <translation><!-- Andere Bezahlmethode - EC/Kreditkarte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Bezahlmethode - Tankkarte</masterLabel>
+        <translation><!-- Andere Bezahlmethode - Tankkarte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Bezahlmethode - VISA</masterLabel>
+        <translation><!-- Andere Bezahlmethode - VISA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - bessere Zahlungsbeding</masterLabel>
+        <translation><!-- Anderes Produkt - bessere Zahlungsbeding --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - geringere Kosten</masterLabel>
+        <translation><!-- Anderes Produkt - geringere Kosten --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - höheres Kreditlimit</masterLabel>
+        <translation><!-- Anderes Produkt - höheres Kreditlimit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - keine Garantien</masterLabel>
+        <translation><!-- Anderes Produkt - keine Garantien --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - mehr Features</masterLabel>
+        <translation><!-- Anderes Produkt - mehr Features --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Angabenkorrektur nicht möglich</masterLabel>
+        <translation><!-- Angabenkorrektur nicht möglich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bearbeitung - Degussa</masterLabel>
+        <translation><!-- Bearbeitung - Degussa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bestellprozess zu lange</masterLabel>
+        <translation><!-- Bestellprozess zu lange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Black List</masterLabel>
+        <translation><!-- Black List --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brand</masterLabel>
+        <translation><!-- Brand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change his mind</masterLabel>
+        <translation><!-- Change his mind --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competitors</masterLabel>
+        <translation><!-- Competitors --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Coverage/Acceptance</masterLabel>
+        <translation><!-- Coverage/Acceptance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Report not available</masterLabel>
+        <translation><!-- Credit Report not available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer not reached</masterLabel>
+        <translation><!-- Customer not reached --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deposit – not confirmed</masterLabel>
+        <translation><!-- Deposit – not confirmed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Didn&apos;t confirm card order</masterLabel>
+        <translation><!-- Didn&apos;t confirm card order --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct debit</masterLabel>
+        <translation><!-- Direct debit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate</masterLabel>
+        <translation><!-- Duplicate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Execution</masterLabel>
+        <translation><!-- Execution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial/Credit</masterLabel>
+        <translation><!-- Financial/Credit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Firma zu jung</masterLabel>
+        <translation><!-- Firma zu jung --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gebühren</masterLabel>
+        <translation><!-- Gebühren --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grundgebühr</masterLabel>
+        <translation><!-- Grundgebühr --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kartenantrag zu umfangreich</masterLabel>
+        <translation><!-- Kartenantrag zu umfangreich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine Kaution als Sicherheit</masterLabel>
+        <translation><!-- Keine Kaution als Sicherheit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine MwSt.-fähige Rechnung / Tankdaten</masterLabel>
+        <translation><!-- Keine MwSt.-fähige Rechnung / Tankdaten --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine Produktlevel-Kontrolle</masterLabel>
+        <translation><!-- Keine Produktlevel-Kontrolle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine steuerbare Rechnung / Tankdaten</masterLabel>
+        <translation><!-- Keine steuerbare Rechnung / Tankdaten --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kreditlimit zu gering</masterLabel>
+        <translation><!-- Kreditlimit zu gering --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kunde meldet sich bei Interesse</masterLabel>
+        <translation><!-- Kunde meldet sich bei Interesse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost to competition</masterLabel>
+        <translation><!-- Lost to competition --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mindestbestellwert nicht erfüllt</masterLabel>
+        <translation><!-- Mindestbestellwert nicht erfüllt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mit aktueller Lösung zufrieden</masterLabel>
+        <translation><!-- Mit aktueller Lösung zufrieden --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mitbewerber</masterLabel>
+        <translation><!-- Mitbewerber --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mitbewerber besseres Angebot</masterLabel>
+        <translation><!-- Mitbewerber besseres Angebot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a Lead/Opportunity</masterLabel>
+        <translation><!-- Not a Lead/Opportunity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a legal entity</masterLabel>
+        <translation><!-- Not a legal entity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not interested</masterLabel>
+        <translation><!-- Not interested --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Package Carnet - card exchange</masterLabel>
+        <translation><!-- Package Carnet - card exchange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment Conditions</masterLabel>
+        <translation><!-- Payment Conditions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Potential fraud</masterLabel>
+        <translation><!-- Potential fraud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Preisvorteil zu gering</masterLabel>
+        <translation><!-- Preisvorteil zu gering --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Processing Too Long</masterLabel>
+        <translation><!-- Processing Too Long --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product features</masterLabel>
+        <translation><!-- Product features --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refused Credit</masterLabel>
+        <translation><!-- Refused Credit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refused Credit H, Š</masterLabel>
+        <translation><!-- Refused Credit H, Š --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sicherheit nicht bereitgestellt</masterLabel>
+        <translation><!-- Sicherheit nicht bereitgestellt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sonstige</masterLabel>
+        <translation><!-- Sonstige --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sonstige Gebühren</masterLabel>
+        <translation><!-- Sonstige Gebühren --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spam</masterLabel>
+        <translation><!-- Spam --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C – Kartengebühr</masterLabel>
+        <translation><!-- T&amp;C – Kartengebühr --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C – sonstige Kosten und Gebühren</masterLabel>
+        <translation><!-- T&amp;C – sonstige Kosten und Gebühren --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tanken nur in einem Netz / an einer Station</masterLabel>
+        <translation><!-- Tanken nur in einem Netz / an einer Station --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Too Small Price Advantage</masterLabel>
+        <translation><!-- Too Small Price Advantage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unterlagen zu umfangreich</masterLabel>
+        <translation><!-- Unterlagen zu umfangreich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vereinbarung zu umfangreich</masterLabel>
+        <translation><!-- Vereinbarung zu umfangreich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wartezeit / Bearbeitung zu lange</masterLabel>
+        <translation><!-- Wartezeit / Bearbeitung zu lange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wartezeit zu lange</masterLabel>
+        <translation><!-- Wartezeit zu lange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong contact detail</masterLabel>
+        <translation><!-- Wrong contact detail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Young company (less than 18 months)</masterLabel>
+        <translation><!-- Young company (less than 18 months) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zahlungsbedingungen</masterLabel>
+        <translation><!-- Zahlungsbedingungen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zahlungsbedingungen zu kurz</masterLabel>
+        <translation><!-- Zahlungsbedingungen zu kurz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zu wenig Nachlässe</masterLabel>
+        <translation><!-- Zu wenig Nachlässe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zu wenig Rabatte</masterLabel>
+        <translation><!-- Zu wenig Rabatte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zusätzliche Sicherheit / Kontrolle nicht interessant</masterLabel>
+        <translation><!-- Zusätzliche Sicherheit / Kontrolle nicht interessant --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

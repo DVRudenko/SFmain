@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Heading</fullName>
+                <default>false</default>
+                <label>Heading</label>
+            </value>
+            <value>
+                <fullName>Text Field</fullName>
+                <default>false</default>
+                <label>Text Field</label>
+            </value>
+            <value>
+                <fullName>Radio-button Field</fullName>
+                <default>false</default>
+                <label>Radio-button Field</label>
+            </value>
+            <value>
+                <fullName>Checkbox Field</fullName>
+                <default>false</default>
+                <label>Checkbox Field</label>
+            </value>
+            <value>
+                <fullName>Slider Field</fullName>
+                <default>false</default>
+                <label>Slider Field</label>
+            </value>
+            <value>
+                <fullName>Button</fullName>
+                <default>false</default>
+                <label>Button</label>
+            </value>
+            <value>
+                <fullName>Text Block</fullName>
+                <default>false</default>
+                <label>Text Block</label>
+            </value>
+            <value>
+                <fullName>URL</fullName>
+                <default>false</default>
+                <label>URL</label>
+            </value>
+            <value>
+                <fullName>Image</fullName>
+                <default>false</default>
+                <label>Image</label>
+            </value>
+            <value>
+                <fullName>Picklist Field</fullName>
+                <default>false</default>
+                <label>Picklist Field</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

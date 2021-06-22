@@ -1,0 +1,10 @@
+@isTest
+global class CommercialProposalResponse implements HttpCalloutMock {
+  global HttpResponse respond(HTTPRequest req){
+    HttpResponse res = new HttpResponse();
+    res.setStatus('OK');
+    res.setStatusCode(200);
+    res.setBody('{"eurolocatorUrl":"http://eurolocator.fleetcor.de/locator/?latitude=48.981186&longitude=8.202567&lang=de&zoom=11&address=LUDWIGSTRASSE69BERGDeutschland&product=1","mapImage":"123","petrolStationList":[{"indexNumber":1,"address":"PFORTZER STR. 1, GERMANY","brand":{"id":16,"name":"TOTAL"},"phone":"","fuelServices":[],"additionalServices":[],"distanceToFuelStation":10.22},{"indexNumber":2,"address":"Lammstraße 1, GERMANY","brand":{"id":1,"name":"AVIA"},"phone":"","fuelServices":[],"additionalServices":[],"distanceToFuelStation":10.42},{"indexNumber":3,"address":"BAHNHOFSTR. 45, GERMANY","brand":{"id":16,"name":"TOTAL"},"phone":"","fuelServices":[],"additionalServices":[],"distanceToFuelStation":10.79},{"indexNumber":4,"address":"BAHNHOFSTR 42, GERMANY","brand":{"id":4,"name":"ESSO"},"phone":"","fuelServices":[],"additionalServices":[],"distanceToFuelStation":10.85},{"indexNumber":5,"address":"Hauptstraße 34a, GERMANY","brand":{"id":1,"name":"AVIA"},"phone":"","fuelServices":[],"additionalServices":[],"distanceToFuelStation":22.93},{"indexNumber":6,"address":"AN DER B 36, GERMANY","brand":{"id":13,"name":"SHELL"},"phone":"07242700259","fuelServices":[{"id":2,"serviceName":"Truck Diesel"},{"id":4,"serviceName":"V-Power Diesel"},{"id":6,"serviceName":"Super Plus 98"},{"id":8,"serviceName":"Super 95"}],"additionalServices":[{"id":101,"serviceName":"Ad Blue"},{"id":102,"serviceName":"Car wash "},{"id":103,"serviceName":"WC"},{"id":105,"serviceName":"Shop"},{"id":106,"serviceName":"24H"},{"id":107,"serviceName":"ATM"},{"id":109,"serviceName":"Truck friendly"}],"distanceToFuelStation":25.44},{"indexNumber":7,"address":"HANS-JAKOB-STR 2, GERMANY","brand":{"id":4,"name":"ESSO"},"phone":"","fuelServices":[],"additionalServices":[],"distanceToFuelStation":27.78}]}');
+    return res;
+  }
+}

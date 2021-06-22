@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Typ retence</label>
+    <name>CCS_retention_type__c</name>
+    <picklistValues>
+        <masterLabel>inbound retention</masterLabel>
+        <translation>příchozí</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>outbound retention - campaign</masterLabel>
+        <translation>odchozí - akce</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>outbound retention - care</masterLabel>
+        <translation>odchozí - péče</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Produkt_copy --></label>
+    <name>Produkt_copy__c</name>
+    <picklistValues>
+        <masterLabel>euroShell Card Kompakt</masterLabel>
+        <translation><!-- euroShell Card Kompakt --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

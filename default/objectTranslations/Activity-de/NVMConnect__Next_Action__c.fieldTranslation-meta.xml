@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Next Action --></label>
+    <name>NVMConnect__Next_Action__c</name>
+    <picklistValues>
+        <masterLabel>Bad Number</masterLabel>
+        <translation><!-- Bad Number --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Busy</masterLabel>
+        <translation><!-- Busy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Call in 7 days</masterLabel>
+        <translation><!-- Call in 7 days --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Call tomorrow</masterLabel>
+        <translation><!-- Call tomorrow --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact</masterLabel>
+        <translation><!-- Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Don&#39;t call again</masterLabel>
+        <translation><!-- Don&apos;t call again --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Left Live Message</masterLabel>
+        <translation><!-- Left Live Message --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Left Voicemail</masterLabel>
+        <translation><!-- Left Voicemail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Answer</masterLabel>
+        <translation><!-- No Answer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>None</masterLabel>
+        <translation><!-- None --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sent Documentation</masterLabel>
+        <translation><!-- Sent Documentation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Set Callback</masterLabel>
+        <translation><!-- Set Callback --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transfer</masterLabel>
+        <translation><!-- Transfer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Update contact details</masterLabel>
+        <translation><!-- Update contact details --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong Number</masterLabel>
+        <translation><!-- Wrong Number --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

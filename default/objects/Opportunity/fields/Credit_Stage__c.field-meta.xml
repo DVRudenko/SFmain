@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Credit Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pending Credit Report</fullName>
+                <default>false</default>
+                <label>Pending Credit Report</label>
+            </value>
+            <value>
+                <fullName>Pending Sales – Deposit</fullName>
+                <default>false</default>
+                <label>Pending Sales – Deposit</label>
+            </value>
+            <value>
+                <fullName>Pending Sales – Information</fullName>
+                <default>false</default>
+                <label>Pending Sales – Information</label>
+            </value>
+            <value>
+                <fullName>CreditCheck</fullName>
+                <default>false</default>
+                <label>CreditCheck</label>
+            </value>
+            <value>
+                <fullName>Pending Credit - Contract Check</fullName>
+                <default>false</default>
+                <label>Pending Credit - Contract Check</label>
+            </value>
+            <value>
+                <fullName>Credit Check - Pending Credit</fullName>
+                <default>false</default>
+                <label>Credit Check - Pending Credit</label>
+            </value>
+            <value>
+                <fullName>CreditCheck rejected</fullName>
+                <default>false</default>
+                <label>CreditCheck rejected</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

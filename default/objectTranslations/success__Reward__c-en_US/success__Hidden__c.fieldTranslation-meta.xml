@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Rewards that are flagged as &apos;Hidden&apos; will not be displayed to the Player or count towards their current score --></help>
+    <label><!-- Hidden --></label>
+    <name>success__Hidden__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,83 @@
+<style>
+    body{
+        font-family: 'Montserrat', sans-serif !important;
+        font-weight: 400;
+        line-height:1.4;
+    }
+
+    .bold{
+        font-weight: 600;
+    }
+
+    .underline {
+        border-bottom: 1px solid black;
+    }
+</style>
+
+<div class="documents-agreement">
+    <div>
+        <div>Venturo Technologien Swiss GmbH</div>
+        <div>Grafenaustrasse 5 </div>
+        <div>6304 Zug</div>
+    </div>
+
+    <h2 class="bold" style="text-align: center; margin: 24px 0 36px;">Cautionnement</h2>
+
+    <div style="position: relative;">
+        <div style="position: absolute; top: 0; left: 0;">
+            <div style="text-align: center;">Par la présente</div>
+        </div>
+        <div style="display: inline-block; width: 75%; margin-left: 14%; margin-right: 14%;">
+            <div class="underline" style="min-height: 12px; text-align: center;">{!dataObject.Selected_Company_Name__c}</div>
+            <div style="text-align: center;">(Le fournisseur de caution)</div>
+        </div>
+        <div style="position: absolute; top: 0; right: 0;">
+            <div style="text-align: center;">confirme</div>
+        </div>
+    </div>
+
+    <div style="margin-top: 12px;">L’accord suivant:</div>
+    <div style="margin-left: 24px;">
+        <p>
+            1. Afin de garantir toutes les créances qui naissent des relations d'affaires existantes entre Venturo
+            Technologien Swiss GmbH et le fournisseur de caution, une caution à hauteur de 
+        </p>
+        <div style="position: relative; width: 50%; margin-left: 25%;">
+            <span>CHF</span>
+            <div class="underline" style="min-height: 12px; text-align: center; margin: 0 8px; width: 60%; display: inline-block;">{!securityAmountToPay}</div>
+            <span>est constituée.</span>
+        </div>
+        <p>
+            2. Le compte de caution subsiste pour la durée de nos relations d'affaires. Le fournisseur de caution
+            peut remplacer l'avoir de la caution par une garantie de valeur égale, pour autant que Venturo
+            Technologien Swiss GmbH l'accepte expressément.
+        </p>
+        <p>
+            3. Venturo Technologien Swiss GmbH est, dans le cas de défaut de paiement de créances échues,
+            autorisé, par voie de compensation, à prélever le montant de la créance sur le compte de
+            caution. 
+        </p>
+        <p>
+            4. La caution déposée est d'abord calculée sur la base de la créance principale, ensuite sur la base
+            des intérêts et des frais encourus par la mise en demeure ou les frais découlant d'une action en
+            justice.
+        </p>
+
+        <div style="margin-left: 12px;">
+            <div>La relation bancaire pour le paiement de la caution est: </div>
+            <div>Barclays Bank:<span class="bold"> IBAN: CH780027327313682003Y; BIC: UBSWCHZH80A</span></div>
+        </div>
+    </div>
+
+
+    <div style="position: relative; margin-top: 36px;">
+        <div style="position: absolute; top: 0; left: 0; width: 40%;">
+            <div class="underline" style="min-height: 12px; text-align: center;">{!today} {!dataObject.Registered_City__c}</div>
+            <div style="text-align: center;">Lieu et Date</div>
+        </div>
+        <div style="position: absolute; top: 0; right: 0; width: 40%;">
+            <div class="underline" style="min-height: 12px; text-align: center;">{!fullName}</div>
+            <div style="text-align: center;">Le fournisseur de caution - Signature</div>
+        </div>
+    </div>
+</div>

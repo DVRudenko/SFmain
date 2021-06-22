@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__State_Label__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>CASE( success__State__c,
+0, $Label.success__available,
+1, &quot;Scheduled&quot;,
+2, &quot;Running&quot;,
+3, CASE(TEXT(success__Status__c), &quot;Declared&quot;, $Label.success__declared, &quot;Archived&quot;, $Label.success__archived, $Label.success__finished ) ,
+&quot;&quot; )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>State Text</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

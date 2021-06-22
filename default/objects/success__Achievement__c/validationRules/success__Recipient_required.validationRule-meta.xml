@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Recipient_required</fullName>
+    <active>true</active>
+    <description>Recipient is required for standard behaviours.</description>
+    <errorConditionFormula>and(isblank(success__Recipient__c), isblank(success__Query__c), not(RecordTypeId = &#39;Scheduled&#39;))</errorConditionFormula>
+    <errorMessage>Recipient is required</errorMessage>
+</ValidationRule>

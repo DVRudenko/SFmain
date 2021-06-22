@@ -1,0 +1,222 @@
+<apex:page controller="DashboardSalesDirectorCtrl" action="{!init}" sidebar="false">
+    <apex:form >
+        <style>
+            .tabButton {
+                border: 1px solid #ddd; 
+                display: inline-block; 
+                text-decoration: none; 
+                font-weight: bold; 
+                padding: 8px;
+                background: #F0F8FF;
+            }
+            .tabButton:hover {
+                text-decoration: none;
+            }
+
+            .activeTabButton {
+                background: black;
+                color: white;
+            }
+        </style>
+
+        <h1 style="margin-bottom: 0px; font-size: 15px; display: block;">Select Teamleader <apex:selectList value="{! teamType}" size="1" multiselect="false" style="margin-left: 5px;">
+            <apex:selectOptions value="{! teamTypes}"/>
+            <apex:actionSupport action="{! selectTeamType }" event="onchange"/>
+            </apex:selectList></h1>
+        <apex:pageMessages />
+        
+        <apex:outputPanel rendered="{! IF(teamType = 'Teamleiter Inbound', true, false) }">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td height="30px">
+                        View by: <a href="/{! userId}" target="_blank">{! userName}</a>
+                    </td>               
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardConversionRate?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="conRateInb"/></td>              
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardApprovalRate?userid={! userId}" scrolling="true" frameborder="0" height="650px" id="aprRateInb"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardNetStarts?userid={! userId}" scrolling="true" frameborder="0" height="600px" id="netStarts"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardLeadProcessingTimeTL?userid={! userId}" scrolling="true" frameborder="0" height="520px" id="proccessTime"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardContactedLead?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="contactedLead"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardOpenOpportunity?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="openOpportunity"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardStartsSLAoverdue?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="startsSLAOverdue"/></td>
+                </tr>       
+            </table>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{! IF(teamType = 'Teamleiter Inbound 2', true, false) }">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td height="30px">
+                        View by: <a href="/{! userId}" target="_blank">{! userName}</a>
+                    </td>               
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardConversionRate?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="conRateInb2"/></td>              
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardApprovalRate?userid={! userId}" scrolling="true" frameborder="0" height="650px" id="aprRateInb2"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardNetStarts?userid={! userId}" scrolling="true" frameborder="0" height="600px" id="netStartsInb2"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardLiters?userid={! userId}" scrolling="true" frameborder="0" height="670px" id="dashLitersInb2"/></td>             
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardLeadProcessingTimeTL?userid={! userId}" scrolling="true" frameborder="0" height="520px" id="proccessTimeInb2"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardContactedLead?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="contactedLeadInb2"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardOpenOpportunity?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="openOpportunityInb2"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardStartsSLAoverdue?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="startsSLAOverdue2"/></td>
+                </tr>     
+            </table>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{! IF(teamType = 'CCS Telesales Team Lead', true, false) }">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td height="30px">
+                        View by: <a href="/{! userId}" target="_blank">{! userName}</a>
+                    </td>               
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardTopDealsCCS?userid={! userId}" scrolling="true" frameborder="0" height="650px" id="topDealsTelesalesCCS"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardCardsAndGPSUnitsSoldCCS?userid={! userId}" scrolling="true" frameborder="0" height="650px" id="cardsAndGPSTelesalesCCS"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardLeadProcessingTimeCCS?userid={! userId}" scrolling="true" frameborder="0" height="520px" id="proccessTimeTelesalesCCS"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardApprovalRateCCS?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="approvalRateTimeTelesalesCCS"/></td>                
+                </tr> 
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardConversionRateCCS?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="conRateTimeTelesalesCCS"/></td>                
+                </tr>        
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardContactedLead?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="contactedLeadTelesalesCCS"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardOpenOpportunity?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="openOpportunityTelesalesCCS"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardNewActivitiesCCS?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="newActivitiesTelesalesCCS"/></td>                
+                </tr> 
+            </table>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{! IF(teamType = 'CCS SME Team Lead', true, false) }">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td height="30px">
+                        View by: <a href="/{! userId}" target="_blank">{! userName}</a>
+                    </td>               
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardTopDealsCCS?userid={! userId}" scrolling="true" frameborder="0" height="650px" id="topDealsSMEccs"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardCardsAndGPSUnitsSoldCCS?userid={! userId}" scrolling="true" frameborder="0" height="650px" id="cardsAndGPSsmeCCS"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardFieldMeetingsPlanCCS?userid={! userId}" scrolling="true" frameborder="0" height="650px" id="fieldMeetingsPlanSMEccs"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardLeadProcessingTimeCCS?userid={! userId}" scrolling="true" frameborder="0" height="520px" id="proccessTimeSMEccs"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardApprovalRateCCS?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="approvalRateTimeSMEccs"/></td>                
+                </tr> 
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardConversionRateCCS?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="conRateTimeSMEccs"/></td>                
+                </tr>           
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardContactedLead?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="contactedLeadSMEccs"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/SalesDashboardOpenOpportunity?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="openOpportunitySMEccs"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardNewActivitiesCCS?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="newActivitiesSMEccs"/></td>                
+                </tr>
+            </table>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{! IF(teamType = 'CCS CZ KAM Team Lead', true, false) }">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td height="30px">
+                        View by: <a href="/{! userId}" target="_blank">{! userName}</a>
+                    </td>               
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardFieldMeetingsPlanCCS?userid={! userId}" scrolling="true" frameborder="0" height="650px" id="fieldMeetingsPlanKAMccs"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardTopDealsCCS?userid={! userId}" scrolling="true" frameborder="0" height="650px" id="topDealsKAMccs"/></td>
+                </tr> 
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardCardsAndGPSUnitsSoldCCS?userid={! userId}" scrolling="true" frameborder="0" height="650px" id="cardsAndGpsKAMCCS"/></td>
+                </tr> 
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardNewActivitiesCCS?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="newActivitiesKAMccs"/></td>                
+                </tr>
+            </table>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{! IF(teamType = 'CCS CZ LAM Team Lead', true, false) }">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td height="30px">
+                        View by: <a href="/{! userId}" target="_blank">{! userName}</a>
+                    </td>               
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardFieldMeetingsPlanCCS?userid={! userId}" scrolling="true" frameborder="0" height="650px" id="fieldMeetingsPlanLAMccs"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardTopDealsCCS?userid={! userId}" scrolling="true" frameborder="0" height="650px" id="topDealsLAMccs"/></td>
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardCardsAndGPSUnitsSoldCCS?userid={! userId}" scrolling="true" frameborder="0" height="650px" id="cardsAndGpsLAMCCS"/></td>
+                </tr>  
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardNewActivitiesCCS?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="newActivitiesLAMccs"/></td>                
+                </tr>
+            </table>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{! IF(teamType = 'Starts Team Manager', true, false) }">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td height="30px">
+                        View by: <a href="/{! userId}" target="_blank">{! userName}</a>
+                    </td>               
+                </tr>
+                <tr>
+                    <td><apex:iframe src="/apex/DashboardStartsSLAoverdue?userid={! userId}" scrolling="true" frameborder="0" height="630px" id="startsSLAOverdueSTM"/></td>
+                </tr> 
+            </table>
+        </apex:outputPanel>
+
+    </apex:form>
+</apex:page>

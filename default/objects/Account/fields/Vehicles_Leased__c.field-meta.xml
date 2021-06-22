@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vehicles_Leased__c</fullName>
+    <description>BisNode2019 import</description>
+    <externalId>false</externalId>
+    <inlineHelpText># of vehicles leased by the company</inlineHelpText>
+    <label>Vehicles Leased</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

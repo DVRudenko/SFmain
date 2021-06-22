@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Zahlungsart * --></label>
+    <name>Zahlungsart__c</name>
+    <picklistValues>
+        <masterLabel>Banküberweisung</masterLabel>
+        <translation>Banki átutalás</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lastschrift</masterLabel>
+        <translation>Azonnali beszedési megbízás</translation>
+    </picklistValues>
+</CustomFieldTranslation>

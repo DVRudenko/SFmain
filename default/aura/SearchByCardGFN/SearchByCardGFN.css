@@ -1,0 +1,17 @@
+.THIS .search-input{
+    float: left;
+    max-width: 512px;
+}
+.THIS .search-button{
+    float: right;
+    width: 15%;
+    margin-top: 19px;
+    max-width: 100px;
+}
+.THIS .search-panel{
+    margin: 10px;
+    max-width: 1024px;
+}
+.THIS .slds-item:hover{
+    background-color: azure;
+}

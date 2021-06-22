@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BR_Setting__c</fullName>
+    <description>parent setting record</description>
+    <externalId>false</externalId>
+    <inlineHelpText>parent setting record</inlineHelpText>
+    <label>BR Setting</label>
+    <referenceTo>BR_Setting__c</referenceTo>
+    <relationshipLabel>BR cases</relationshipLabel>
+    <relationshipName>BR_cases</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

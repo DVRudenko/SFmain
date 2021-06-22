@@ -1,0 +1,155 @@
+<style>
+    .mandate-acceptance {
+        font-size: 11px;
+    }
+
+    .mandate-acceptance__header {
+        margin: 0;
+        text-align:center;
+    }
+
+    .mandate-acceptance__block-header {
+        font-size: 14px; 
+        margin-top: 3px; 
+        text-align: center; 
+        font-weight: bold;
+    }
+
+    .mandate-acceptance__underline {
+        border-bottom: 1px solid black;
+    }
+
+    .mandate-acceptance__id-block {
+        width: 300px; 
+        height: 40px; 
+        font-size: 21px; 
+        padding: 4px 0 0 0; 
+        margin-left: -14px;  
+        text-align: center; 
+        float: left;
+    }
+
+    .mandate-acceptance__id-block-char {
+        width: 28px; 
+        border: 2px solid #B4AFB5; 
+        border-right: none; 
+        margin-left: -6px; 
+        display: inline-block;
+    }
+
+    .mandate-acceptance__id-block-char_last {
+        border-right: 2px solid #B4AFB5; 
+    }
+
+    .mandate-acceptance__number-char {
+        width: 19px; 
+        height: 26px; 
+        border: 2px solid #B4AFB5; 
+        border-right: none; 
+        margin-left: -6px; 
+        display: inline-block;
+    }
+
+    .mandate-acceptance__number-char_first {
+        margin-left: 0; 
+    }
+
+    .mandate-acceptance__number-char_last {
+        width: 17px; 
+        border: 2px solid #B4AFB5;
+    }
+
+    .mandate-acceptance__line-dot {
+        display: inline-block; 
+        border-bottom: 3px solid #B4AFB5; 
+        width: 25px; 
+        margin-left: 20px;
+    }
+
+    .mandate-acceptance__signature-item {
+        display: inline-block;
+        text-align: center; 
+        vertical-align: top;
+        border-top: 1px solid gray; 
+        width: 32%; 
+        margin: 12px 1% 0 0;
+        color: gray;
+    }
+    
+</style>
+<div class="mandate-acceptance">
+    <h2 class="mandate-acceptance__header" style="text-align:right;">POTVRZENÍ O ZPŘÍSTUPNĚNÍ ÚČTU PRO INKASA</h2>
+    <p style="font-size: 14px;line-height:1.25">
+        V případě, že souhlasíte se zaplacením Vašich závazků formou Inkasa, dejte prosím Vaší bance souhlas k proplácení inkasních příkazů ve prospěch účtu FLEETCOR Czech Republic s.r.o.. Vyplněné potvrzení o zpřístupnění účtu zašlete elektronicky na <u>zakaznickyservis@fleetcor.cz</u>
+    </p>
+    <h3 style="margin-top: 20px;">POTVRZENÍ O ZPŘÍSTUPNĚNÍ ÚČTU PRO INKASA</h3>
+    <div style="padding: 12px 8px; border: 2px solid #CCCBCC; font-size: 14px;">
+        <div style="height: 20px;">
+            <span>Název společnosti / Jméno a příjmení fyzické osoby - podnikatele:</span>
+        </div>
+        <div style="height: 20px; border-bottom: 1px solid gray; margin-top: 8px;">{!currentOpportunity.Account.Name}</div>
+        <div style="height: 10px; border-bottom: 1px solid gray; margin-top: 10px;"></div>
+        <div> 
+            <div style="margin-top:12px;">
+                <div style="display:inline-block;">IČO (případně rodné číslo):</div>
+                <div style="display:inline-block;margin: 0 8px 0 8px;height: 22px; border-bottom: 1px solid gray; width:130px;">{!currentOpportunity.Account.Steuernummer__c}</div>
+                <div style="display:inline-block;">FLEETCOR Zákaznické číslo:</div>
+                <div style="display:inline-block;margin-left:8px;height: 22px; border-bottom: 1px solid gray;width:140px;">{!currentOpportunity.Account.UMR__c}</div>
+            </div>
+            <div style="display: flex; margin-top:12px;">
+                <div style="display:inline-block;">Kontaktní telefonní číslo zákazníka:</div>
+                <div style="display:inline-block;margin: 0 16px 0 16px;height: 22px; border-bottom: 1px solid gray;width:150px;"></div>
+                <div style="display:inline-block;">E-mail:</div>
+                <div style="display:inline-block;margin-left:16px;height: 22px; border-bottom: 1px solid gray;width:208px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <h3 style="margin-top: 20px;">BANKOVNÍ ÚDAJE</h3>
+    <div style="border: 2px solid #CCCBCC; font-size: 14px; line-height:1.25">
+        <div style="padding: 12px 8px; border-bottom: 2px solid #CCCBCC;">
+            Zákazník souhlasí s proplácením inkasních příkazů ve prospěch účtu <br>FLEETCOR Czech Republic s.r.o.: <b>2068560118/2600</b> 
+            <span style="margin-left:32px;">IBAN: CZ5826000000002068560118</span>
+        </div>
+        <div style="padding: 12px 8px;">
+            <span style="margin-right:12px;">S platností ode dne:</span>
+            <div style="display:inline-block;margin: 0 4px 0 0; height: 22px; border-bottom: 1px solid gray; width:120px;"></div>
+            <div style="display:inline-block;margin-left:8px;">Inkasní limit účtu je povolen na částku:</div>
+            <div style="display:inline-block;margin: 0 4px 0 8px;height: 22px; border-bottom: 1px solid gray; width:120px;">{!securityAmountToPay} Kč</div>
+            <div style="margin-top:16px;">
+                <div style="display:inline-block;">Číslo účtu:</div>
+                <div style="display:inline-block;margin: 0 16px 0 16px;height: 22px; border-bottom: 1px solid gray; width:200px;"></div>
+                <div style="display:inline-block;">Směrový kód banky:</div>
+                <div style="display:inline-block;margin-left:16px;height: 22px; border-bottom: 1px solid gray;width:200px;"></div>
+            </div>
+            <div style="margin-top: 16px;">
+               <span>Zpřístupnění účtu bylo provedeno:</span>
+               <span style="width:14px;height:14px;display:inline-block;border:1px solid;margin: 0 8px -2px;"></span>
+               <span>Přes internet</span>
+               <span style="width:14px;height:14px;display:inline-block;border:1px solid;margin: 0 8px -2px 16px;"></span>
+               <span>V bance</span>
+            </div>
+            <div style="margin-top: 16px;">
+               <strong>Čestné prohlášení:</strong><br>
+               Níže podepsaný zákazník tímto čestně prohlašuje, že uvedené údaje o zpřístupnění účtu jsou správné a pravdivé.
+            </div>
+            
+        </div>
+        <div style="margin-top: 16px; border-top: 2px solid #CCCBCC; color:gray; font-size:12px;">
+            <div style="padding: 12px 8px;display: inline-block; width:50%; height:100px;">Datum, razítko a podpis zákazníka
+                <br>(u právnických osob statutární orgán nebo prokurista dle OR)</div>
+            <div style="padding: 12px 8px;display: inline-block; width:40%;border-left:2px solid #CCCBCC; height:100px;">Datum, razítko a podpis banky<br>(pouze při osobní návštěvě v bance)</div>
+         </div>
+    </div>
+
+    <h3 style="margin-top: 20px;">UPOZORNĚNÍ</h3>
+    <div style="padding: 12px 8px; border: 2px solid #CCCBCC; font-size: 14px; line-height:1.25; margin-bottom:32px;">
+        Zpřístupnění účtu musí umožnit realizaci více inkasních příkazů v měsíci.<br>
+        Případné stanovení limitu pro výši jednoho inkasa musí respektovat očekávanou spotřebu.
+    </div>
+    <hr/>
+    <p style="text-align: center;font-size: 10px;">
+        <span>FLEETCOR Czech Republic s.r.o. | Voctářova 2500/20a | 180 00 | Praha 8 | Česká Republika</span><br>
+        Obchodní rejstřík: Městský soud v Praze | Daňové identifikační číslo (DIČ): CZ03806847
+    </p>
+</div>

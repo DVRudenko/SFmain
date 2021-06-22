@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Reason for Buying Flexcard</label>
+    <name>Warum_Flexcard__c</name>
+    <picklistValues>
+        <masterLabel>Aktionen oder Rabatte - Alle</masterLabel>
+        <translation>Rebates or discounts - All</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aktionen oder Rabatte - Hotel</masterLabel>
+        <translation>Rebates or discounts - Hotel</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aktionen oder Rabatte - Priority Pass</masterLabel>
+        <translation>Rebates or discounts - Priority Pass</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere (die dann in die Notes)</masterLabel>
+        <translation>Other (see description)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flexibilität - universelle Akzeptanz</masterLabel>
+        <translation>Flexibility - Universal acceptance</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flexibilität - über vorhandes Konto</masterLabel>
+        <translation>Flexibility - Use with existing account</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kosten - billiger aktuelles Zahlungsart</masterLabel>
+        <translation>Cost - Cheaper than current method(s)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Liquidität - gute Zahlungsbedingungen</masterLabel>
+        <translation>Liquidity - Good payment conditions</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sicherheit - Online-Shopping Sicherheit</masterLabel>
+        <translation>Security - Online shopping security</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sicherheit - Schutz vor Betrug</masterLabel>
+        <translation>Security - Fraud protection</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sicherheit - Sicherer als Bargeld</masterLabel>
+        <translation>Security - More secure than cash</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C - Kartenlimit</masterLabel>
+        <translation>T&amp;C - Credit limit</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C - Kontrolle über Ausgaben</masterLabel>
+        <translation>T&amp;C - Expenses control</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C - einfache Buchführung/weniger Admin</masterLabel>
+        <translation>T&amp;C - Ease for accounting/reduces admin</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C - einstellbare Warengruppen</masterLabel>
+        <translation>T&amp;C - Adjustable good categories</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>zusätzliche Funktion - Versicherung</masterLabel>
+        <translation>Additional feature - Insurance</translation>
+    </picklistValues>
+</CustomFieldTranslation>

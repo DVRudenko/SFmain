@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Notify_before_End_Date_Time__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>success__End_Date_Time__c -  success__Notify_days_before_end__c</formula>
+    <inlineHelpText>The date / time that the end of competition announcement will be sent</inlineHelpText>
+    <label>End Notification Date / Time</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

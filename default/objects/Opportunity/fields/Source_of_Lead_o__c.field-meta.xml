@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_of_Lead_o__c</fullName>
+    <externalId>false</externalId>
+    <label>Source of Lead_o</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Актуализированная БД</fullName>
+                <default>false</default>
+                <label>Актуализированная БД</label>
+            </value>
+            <value>
+                <fullName>Прочая БД</fullName>
+                <default>true</default>
+                <label>Прочая БД</label>
+            </value>
+            <value>
+                <fullName>Выставка</fullName>
+                <default>false</default>
+                <label>Выставка</label>
+            </value>
+            <value>
+                <fullName>Найден в Интернете</fullName>
+                <default>false</default>
+                <label>Найден в Интернете</label>
+            </value>
+            <value>
+                <fullName>Реклама Клиента</fullName>
+                <default>false</default>
+                <label>Реклама Клиента</label>
+            </value>
+            <value>
+                <fullName>Почтовая Рассылка</fullName>
+                <default>false</default>
+                <label>Почтовая Рассылка</label>
+            </value>
+            <value>
+                <fullName>Рекомендация</fullName>
+                <default>false</default>
+                <label>Рекомендация</label>
+            </value>
+            <value>
+                <fullName>Реклама на АЗС</fullName>
+                <default>false</default>
+                <label>Реклама на АЗС</label>
+            </value>
+            <value>
+                <fullName>Email Рассылка</fullName>
+                <default>false</default>
+                <label>Email Рассылка</label>
+            </value>
+            <value>
+                <fullName>Интернет Источники</fullName>
+                <default>false</default>
+                <label>Интернет Источники</label>
+            </value>
+            <value>
+                <fullName>Сайт Petrolplus.ru</fullName>
+                <default>false</default>
+                <label>Сайт Petrolplus.ru</label>
+            </value>
+            <value>
+                <fullName>Поисковая Система</fullName>
+                <default>false</default>
+                <label>Поисковая Система</label>
+            </value>
+            <value>
+                <fullName>Business card</fullName>
+                <default>false</default>
+                <label>Business card</label>
+            </value>
+            <value>
+                <fullName>Партнерская Программа</fullName>
+                <default>false</default>
+                <label>Партнерская Программа</label>
+            </value>
+            <value>
+                <fullName>Реклама в СМИ</fullName>
+                <default>false</default>
+                <label>Реклама в СМИ</label>
+            </value>
+            <value>
+                <fullName>Полевой канал</fullName>
+                <default>false</default>
+                <label>Полевой канал</label>
+            </value>
+            <value>
+                <fullName>Сайт fuel.veb-leasing.ru</fullName>
+                <default>false</default>
+                <label>Сайт fuel.veb-leasing.ru</label>
+            </value>
+            <value>
+                <fullName>Сайт Petrolplus.kz</fullName>
+                <default>false</default>
+                <label>Сайт Petrolplus.kz</label>
+            </value>
+            <value>
+                <fullName>Petrolcards.ru - АГГРЕГАТОР</fullName>
+                <default>false</default>
+                <label>Petrolcards.ru - АГГРЕГАТОР</label>
+            </value>
+            <value>
+                <fullName>АЗС Заявка Shell</fullName>
+                <default>false</default>
+                <label>АЗС Заявка Shell</label>
+            </value>
+            <value>
+                <fullName>Сайт gpc-store.ru</fullName>
+                <default>false</default>
+                <label>Сайт gpc-store.ru</label>
+            </value>
+            <value>
+                <fullName>Сайт Shell Card.ru</fullName>
+                <default>false</default>
+                <label>Сайт Shell Card.ru</label>
+            </value>
+            <value>
+                <fullName>E2E Form RU</fullName>
+                <default>false</default>
+                <label>E2E Form RU</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

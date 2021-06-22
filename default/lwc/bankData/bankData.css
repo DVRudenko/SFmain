@@ -1,0 +1,32 @@
+@import "c/styles";
+
+.bank–list-item {
+  padding-top: 10px;
+  margin-left: 5%;
+}
+
+.bank-list {
+  max-height: 200px;
+  overflow-y: scroll;
+  margin-left: 10%;
+  margin-right: 60%;
+}
+
+.bank-small–text {
+  font-size: smaller;
+}
+
+.bank-list-item-disabled {
+  pointer-events: none;
+  color: grey;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}

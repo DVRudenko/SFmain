@@ -1,0 +1,88 @@
+<template>
+  <lightning-card variant="base" class="field">
+    <h3 slot="title" class="header exportable-header">{labels.CONTRACT_INFORMATION}</h3>
+
+    <lightning-input
+      name="amountPayment"
+      class="field exportable-field"
+      label={labels.PAYMENT_AMMOUNT}
+      type="number"
+      step="0.01"
+      max-length="7"
+      value={contractData.amountPayment}
+      onchange={handleChange}
+    >
+    </lightning-input>
+    <lightning-combobox
+      name="organization"
+      class="field exportable-field"
+      label={labels.ORGANIZATION}
+      required
+      options={organization}
+      value={contractData.organization}
+      placeholder={labels.CHOOSE_ORGANIZATION}
+      onchange={handleChange}
+    >
+    </lightning-combobox>
+    <lightning-combobox
+      name="categoryOfСontract"
+      class="field exportable-field"
+      label={labels.CONTRACT_TYPE}
+      required
+      options={categoryOfСontract}
+      value={contractData.categoryOfСontract}
+      placeholder={labels.CHOOSE_CONTRACT_TYPE}
+      onchange={handleChange}
+    >
+    </lightning-combobox>
+    <lightning-input
+      name="сontractSubject"
+      class="field exportable-field"
+      label={labels.CONTRACT_SUBJECT}
+      max-length="255"
+      type="text"
+      value={contractData.сontractSubject}
+      onchange={handleChange}
+    >
+    </lightning-input>
+    <lightning-input
+      name="contractNote"
+      class="field exportable-field"
+      label={labels.CONTRACT_NOTE}
+      max-length="255"
+      type="text"
+      value={contractData.contractNote}
+      onchange={handleChange}
+    >
+    </lightning-input>
+    <lightning-input
+      name="standardСontractSelected"
+      class="toggle exportable-field exportable-boolean"
+      type="toggle"
+      label={labels.STANDART_CONTRACT}
+      checked={contractData.standardСontractSelected}
+      onchange={handleChange}
+    >
+    </lightning-input>
+    <lightning-input
+      name="contractAmount"
+      class="field exportable-field"
+      label={labels.CONTRACT_AMOUNT}
+      type="number"
+      step="0.01"
+      max-length="12"
+      value={contractData.contractAmount}
+      onchange={handleChange}
+    >
+    </lightning-input>
+    <lightning-input
+      name="withAutoRolloverSelected"
+      class="toggle slds-hidden exportable-field exportable-boolean"
+      type="toggle"
+      label={labels.WITH_AUTO_ROLLOVER}
+      checked={contractData.withAutoRolloverSelected}
+      onchange={handleChange}
+    >
+    </lightning-input>
+  </lightning-card>
+</template>

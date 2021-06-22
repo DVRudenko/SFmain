@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- How intensively the Customer plans to use the product? --></help>
+    <label>Geplantes Einsatzgebiet</label>
+    <name>Planned_usage__c</name>
+    <picklistValues>
+        <masterLabel>Primary card</masterLabel>
+        <translation><!-- Primary card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Secondary card</masterLabel>
+        <translation><!-- Secondary card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test</masterLabel>
+        <translation><!-- Test --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

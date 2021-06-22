@@ -1,0 +1,1180 @@
+<apex:page standardController="Financial_Module__c" extensions="FinancialModuleController" sidebar="false" showHeader="false">
+    <style>
+        #lightbox-cf {
+            display: none;
+            background: #000000;
+            opacity: 0.7;
+            filter: alpha(opacity=70);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 1000;
+        }
+
+        .input {
+        	width: 95%;
+        	text-align: right;
+        }
+
+        .group {
+        	font-weight: bold;
+        }
+    </style>
+    <apex:stylesheet value="{!URLFOR($Resource.Spinner, 'spinner.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Spinner, 'spinner.js')}"/>
+    <script>
+        //Function is used to get splash status bar when server side call is going on
+        function startSplash() {
+            document.getElementById('splashDiv').style.display='table-cell';
+            document.getElementById('lightbox-cf').style.display = 'block';
+        }
+
+        //Function will make the splash status to be stopped.
+        function endSplash() {
+            document.getElementById('splashDiv').style.display='none';
+            document.getElementById('lightbox-cf').style.display = 'none';
+        }
+    </script>
+    <script type="text/javascript">
+        function confirmDelete() {
+	        return confirm('Are you sure you want to delete?');
+        }
+    </script>
+    <div class="splashStatus" id="splashDiv" style="position: fixed; top: 15%;">
+        <div class="circle"><img src="{!URLFOR($Resource.Spinner, 'spinner.gif')}"/></div>
+        <div class="txt">Please Wait. Loading...</div>
+    </div>
+    <apex:actionStatus id="splashStatus" onstart="startSplash();" onstop="endSplash();"/>
+	<apex:form id="formId">
+		<apex:pageBlock >
+			<apex:pageMessages />
+			<table class="list" width="100%" border="0" cellpadding="0" cellspacing="0" style="table-layout: fixed;">
+		        <tr>
+					<td width="30%"></td>
+					<apex:variable var="index" value="{! 0 }"/>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td height="15px" style="text-align: right">
+							<apex:commandLink value="Delete" action="{! deleteDetail }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }" 
+									status="splashStatus" onclick="if (! confirmDelete()) return false;" reRender="formId">
+								<apex:param name="detailToDelete" value="{! index }"/>
+							</apex:commandLink>
+						</td>
+						<apex:variable var="index" value="{! index + 1 }"/>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Year</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.Year__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }"/>
+							<apex:inputField value="{! detail.Year__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }" required="true" styleClass="input"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr bgcolor="#bcbcbc">
+					<th>Balance Sheet</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th style="text-align: right">
+							<apex:outputText value="{! detail.Year__c } (in TEUR)" rendered="{! detail.Type__c = 'Annual' }" styleClass="output"/>
+							<apex:outputText value="Change" rendered="{! detail.Type__c = 'Score' }"/>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th bgcolor="#e2e2e2">Total Assets</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th bgcolor="#e2e2e2" style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! detail.Type__c = 'Annual' }">
+								<apex:param value="{! detail.Total_Assets__c }"/>
+							</apex:outputText>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Total_Assets__c }"/>
+							</apex:outputText>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th>Total Fixed Assets</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! detail.Type__c = 'Annual' }">
+								<apex:param value="{! detail.Total_Fixed_Assets__c }"/>
+							</apex:outputText>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Total_Fixed_Assets__c }"/>
+							</apex:outputText>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Intangible Fixed Assets</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Intangible_Fixed_Assets__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Intangible_Fixed_Assets__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }" 
+									styleClass="input" id="intangibleFixedAssets">
+								<script>                      
+									if (document.getElementById('{!$Component.intangibleFixedAssets}').value === "") {
+										document.getElementById('{!$Component.intangibleFixedAssets}').value = null;
+									} else {
+										document.getElementById('{!$Component.intangibleFixedAssets}').value = 
+											document.getElementById('{!$Component.intangibleFixedAssets}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Intangible_Fixed_Assets__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Tangible Fixed Assets</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Tangible_Fixed_Assets__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Tangible_Fixed_Assets__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="tangibleFixedAssets">
+								<script>    
+									if (document.getElementById('{!$Component.tangibleFixedAssets}').value === "") {
+										document.getElementById('{!$Component.tangibleFixedAssets}').value = null;
+									} else {
+										document.getElementById('{!$Component.tangibleFixedAssets}').value = 
+											document.getElementById('{!$Component.tangibleFixedAssets}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}                       
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Tangible_Fixed_Assets__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Financial LT Assets</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Financial_LT_Assets__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Financial_LT_Assets__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="financialLTAssets">
+								<script>  
+									if (document.getElementById('{!$Component.financialLTAssets}').value === "") {
+										document.getElementById('{!$Component.financialLTAssets}').value = null;
+									} else {
+										document.getElementById('{!$Component.financialLTAssets}').value = 
+											document.getElementById('{!$Component.financialLTAssets}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}                         
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Financial_LT_Assets__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Other Fixed assets</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Other_Fixed_assets__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Other_Fixed_assets__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="otherFixedAssets">
+								<script>  
+									if (document.getElementById('{!$Component.otherFixedAssets}').value === "") {
+										document.getElementById('{!$Component.otherFixedAssets}').value = null;
+									} else {
+										document.getElementById('{!$Component.otherFixedAssets}').value = 
+											document.getElementById('{!$Component.otherFixedAssets}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}                         
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Other_Fixed_assets__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th>Total Current Assets</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! detail.Type__c = 'Annual' }">
+								<apex:param value="{! detail.Total_Current_Assets__c }"/>
+							</apex:outputText>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Total_Current_Assets__c }"/>
+							</apex:outputText>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Stock, material &amp; work in progress</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Stock_material_work__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Stock_material_work__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="stockMaterialWork">
+								<script>  
+									if (document.getElementById('{!$Component.stockMaterialWork}').value === "") {
+										document.getElementById('{!$Component.stockMaterialWork}').value = null;
+									} else {
+										document.getElementById('{!$Component.stockMaterialWork}').value = 
+											document.getElementById('{!$Component.stockMaterialWork}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}                   
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Stock_material_work__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Trade debtors</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Trade_debtors__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Trade_debtors__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="tradeDebtors">
+								<script>                           
+									if (document.getElementById('{!$Component.tradeDebtors}').value === "") {
+										document.getElementById('{!$Component.tradeDebtors}').value = null;
+									} else {
+										document.getElementById('{!$Component.tradeDebtors}').value = 
+											document.getElementById('{!$Component.tradeDebtors}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Trade_debtors__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Cash/Cash equivalent</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Cash_Cash_equivalent__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Cash_Cash_equivalent__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="cashCashEquivalent">
+								<script>                           
+									if (document.getElementById('{!$Component.cashCashEquivalent}').value === "") {
+										document.getElementById('{!$Component.cashCashEquivalent}').value = null;
+									} else {
+										document.getElementById('{!$Component.cashCashEquivalent}').value = 
+											document.getElementById('{!$Component.cashCashEquivalent}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Cash_Cash_equivalent__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Others Current Assets</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Others_Current_Assets__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Others_Current_Assets__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="othersCurrentAssets">
+								<script>  
+									if (document.getElementById('{!$Component.othersCurrentAssets}').value === "") {
+										document.getElementById('{!$Component.othersCurrentAssets}').value = null;
+									} else {
+										document.getElementById('{!$Component.othersCurrentAssets}').value = 
+											document.getElementById('{!$Component.othersCurrentAssets}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}                         
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Others_Current_Assets__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th bgcolor="#e2e2e2">Total Liabilities</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th bgcolor="#e2e2e2" style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! detail.Type__c = 'Annual' }">
+								<apex:param value="{! detail.Total_Liabilities__c }"/>
+							</apex:outputText>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Total_Liabilities__c }"/>
+							</apex:outputText>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th>Net worth</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }" style="font-weight: bold">
+								<apex:param value="{! detail.Net_worth__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Net_worth__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }" styleClass="input"
+									style="font-weight: bold" id="netWorth">
+								<script> 
+									if (document.getElementById('{!$Component.netWorth}').value === "") {
+										document.getElementById('{!$Component.netWorth}').value = null;
+									} else {
+										document.getElementById('{!$Component.netWorth}').value = 
+											document.getElementById('{!$Component.netWorth}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}                          
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Net_worth__c }"/>
+							</apex:outputText>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th>Reserves</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }" style="font-weight: bold">
+								<apex:param value="{! detail.Reserves__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Reserves__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }" styleClass="input"
+									style="font-weight: bold" id="reserves">
+								<script>  
+									if (document.getElementById('{!$Component.reserves}').value === "") {
+										document.getElementById('{!$Component.reserves}').value = null;
+									} else {
+										document.getElementById('{!$Component.reserves}').value = 
+											document.getElementById('{!$Component.reserves}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Reserves__c }"/>
+							</apex:outputText>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th>Liabilities</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! detail.Type__c = 'Annual' }">
+								<apex:param value="{! detail.Liabilities__c }"/>
+							</apex:outputText>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Liabilities__c }"/>
+							</apex:outputText>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>LongTerm Liabilities</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.LongTerm_Liabilities__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.LongTerm_Liabilities__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="longTermLiabilities">
+								<script>          
+									if (document.getElementById('{!$Component.longTermLiabilities}').value === "") {
+										document.getElementById('{!$Component.longTermLiabilities}').value = null;
+									} else {
+										document.getElementById('{!$Component.longTermLiabilities}').value = 
+											document.getElementById('{!$Component.longTermLiabilities}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}                 
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.LongTerm_Liabilities__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td> - from that LT bank debt</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.From_that_LT_bank_debt__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.From_that_LT_bank_debt__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="fromThatLTBankDebt">
+								<script> 
+									if (document.getElementById('{!$Component.fromThatLTBankDebt}').value === "") {
+										document.getElementById('{!$Component.fromThatLTBankDebt}').value = null;
+									} else {
+										document.getElementById('{!$Component.fromThatLTBankDebt}').value = 
+											document.getElementById('{!$Component.fromThatLTBankDebt}').value.slice(0, -3).split('.').join('').split(',').join('');
+									} 
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.From_that_LT_bank_debt__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>- from that other LT liabilities</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.from_that_other_LT_liabilities__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.from_that_other_LT_liabilities__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="fromThatOtherLTLiabilities">
+								<script> 
+									if (document.getElementById('{!$Component.fromThatOtherLTLiabilities}').value === "") {
+										document.getElementById('{!$Component.fromThatOtherLTLiabilities}').value = null;
+									} else {
+										document.getElementById('{!$Component.fromThatOtherLTLiabilities}').value = 
+											document.getElementById('{!$Component.fromThatOtherLTLiabilities}').value.slice(0, -3).split('.').join('').split(',').join('');
+									} 
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.from_that_other_LT_liabilities__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Leasing Engagement</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Leasing_Engagement__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Leasing_Engagement__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="leasingEngagement">
+								<script> 
+									if (document.getElementById('{!$Component.leasingEngagement}').value === "") {
+										document.getElementById('{!$Component.leasingEngagement}').value = null;
+									} else {
+										document.getElementById('{!$Component.leasingEngagement}').value = 
+											document.getElementById('{!$Component.leasingEngagement}').value.slice(0, -3).split('.').join('').split(',').join('');
+									} 
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Leasing_Engagement__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>ShortTerm Liabilities (due within 1 year)</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.ShortTerm_Liabilities__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.ShortTerm_Liabilities__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="shortTermLiabilities">
+								<script>                      
+									if (document.getElementById('{!$Component.shortTermLiabilities}').value === "") {
+										document.getElementById('{!$Component.shortTermLiabilities}').value = null;
+									} else {
+										document.getElementById('{!$Component.shortTermLiabilities}').value = document.getElementById('{!$Component.shortTermLiabilities}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.ShortTerm_Liabilities__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td> - from that Trade Creditors + prepayments</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.From_that_Trade_Creditors__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.From_that_Trade_Creditors__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="fromThatTradeCreditors">
+								<script>
+									if (document.getElementById('{!$Component.fromThatTradeCreditors}').value === "") {
+										document.getElementById('{!$Component.fromThatTradeCreditors}').value = null;
+									} else {
+										document.getElementById('{!$Component.fromThatTradeCreditors}').value = 
+											document.getElementById('{!$Component.fromThatTradeCreditors}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}                        
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.From_that_Trade_Creditors__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td> - from that ST bank debt</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.From_that_ST_bank_debt__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.From_that_ST_bank_debt__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="fromThatSTBankDebt">
+								<script> 
+									if (document.getElementById('{!$Component.fromThatSTBankDebt}').value === "") {
+										document.getElementById('{!$Component.fromThatSTBankDebt}').value = null;
+									} else {
+										document.getElementById('{!$Component.fromThatSTBankDebt}').value = 
+											document.getElementById('{!$Component.fromThatSTBankDebt}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.From_that_ST_bank_debt__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>- from that other ST liabilities</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.From_That_Other_ST_liabilities__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.From_That_Other_ST_liabilities__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="fromThatOtherSTLiabilities">
+								<script>
+									if (document.getElementById('{!$Component.fromThatOtherSTLiabilities}').value === "") {
+										document.getElementById('{!$Component.fromThatOtherSTLiabilities}').value = null;
+									} else {
+										document.getElementById('{!$Component.fromThatOtherSTLiabilities}').value = 
+											document.getElementById('{!$Component.fromThatOtherSTLiabilities}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}                         
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.From_That_Other_ST_liabilities__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr bgcolor="#bcbcbc">
+					<th>Profit and loss statements</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th style="text-align: right">
+							<apex:outputText value="{! detail.Year__c } (in TEUR)" rendered="{! detail.Type__c = 'Annual' }"/>
+							<apex:outputText value="Change" rendered="{! detail.Type__c = 'Score' }"/>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th bgcolor="#e2e2e2">Total Turnover</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th bgcolor="#e2e2e2" style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! detail.Type__c = 'Annual' }">
+								<apex:param value="{! detail.Total_Turnover__c }"/>
+							</apex:outputText>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Total_Turnover__c }"/>
+							</apex:outputText>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Turnover</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Turnover__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Turnover__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="turnover">
+								<script> 
+									if (document.getElementById('{!$Component.turnover}').value === "") {
+										document.getElementById('{!$Component.turnover}').value = null;
+									} else {
+										document.getElementById('{!$Component.turnover}').value = 
+											document.getElementById('{!$Component.turnover}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Turnover__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Activation</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Activation__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Activation__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="activation">
+								<script>
+									if (document.getElementById('{!$Component.activation}').value === "") {
+										document.getElementById('{!$Component.activation}').value = null;
+									} else {
+										document.getElementById('{!$Component.activation}').value = 
+											document.getElementById('{!$Component.activation}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}                          
+							    </script>
+
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Activation__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Other operational income</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Other_operational_income__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Other_operational_income__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="otherOperationalIncome">
+								<script>
+									if (document.getElementById('{!$Component.otherOperationalIncome}').value === "") {
+										document.getElementById('{!$Component.otherOperationalIncome}').value = null;
+									} else {
+										document.getElementById('{!$Component.otherOperationalIncome}').value = 
+											document.getElementById('{!$Component.otherOperationalIncome}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Other_operational_income__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Cost of goods sold</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Cost_of_goods_sold__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Cost_of_goods_sold__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="costOfGoodsSold">
+								<script>
+									if (document.getElementById('{!$Component.costOfGoodsSold}').value === "") {
+										document.getElementById('{!$Component.costOfGoodsSold}').value = null;
+									} else {
+										document.getElementById('{!$Component.costOfGoodsSold}').value = 
+											document.getElementById('{!$Component.costOfGoodsSold}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Cost_of_goods_sold__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Gross profit/loss</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Gross_profit_loss__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Gross_profit_loss__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="grossProfitLoss">
+								<script>
+									if (document.getElementById('{!$Component.grossProfitLoss}').value === "") {
+										document.getElementById('{!$Component.grossProfitLoss}').value = null;
+									} else {
+										document.getElementById('{!$Component.grossProfitLoss}').value = 
+											document.getElementById('{!$Component.grossProfitLoss}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Gross_profit_loss__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th>Depreciation</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }" style="font-weight: bold">
+								<apex:param value="{! detail.Depreciation__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Depreciation__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }" styleClass="input"
+									style="font-weight: bold" id="depreciation">
+								<script>                           
+							        if (document.getElementById('{!$Component.depreciation}').value === "") {
+										document.getElementById('{!$Component.depreciation}').value = null;
+									} else {
+										document.getElementById('{!$Component.depreciation}').value = 
+											document.getElementById('{!$Component.depreciation}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Depreciation__c }"/>
+							</apex:outputText>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>EBIT from Crefo</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.EBIT_from_Crefo__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.EBIT_from_Crefo__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="ebitFromCrefo">
+								<script>                           
+							        if (document.getElementById('{!$Component.ebitFromCrefo}').value === "") {
+										document.getElementById('{!$Component.ebitFromCrefo}').value = null;
+									} else {
+										document.getElementById('{!$Component.ebitFromCrefo}').value = 
+											document.getElementById('{!$Component.ebitFromCrefo}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.EBIT_from_Crefo__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Operational profit EBIT</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! detail.Type__c = 'Annual' }">
+								<apex:param value="{! detail.Operational_profit_EBIT__c }"/>
+							</apex:outputText>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Operational_profit_EBIT__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th bgcolor="#e2e2e2">EBITDA</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th bgcolor="#e2e2e2" style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! detail.Type__c = 'Annual' }">
+								<apex:param value="{! detail.EBITDA__c }"/>
+							</apex:outputText>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.EBITDA__c }"/>
+							</apex:outputText>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Calculated CF</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! detail.Type__c = 'Annual' }">
+								<apex:param value="{! detail.Calculated_CF__c }"/>
+							</apex:outputText>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Calculated_CF__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Financial Income</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Financial_Income__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Financial_Income__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="financialIncome">
+								<script>                           
+							        if (document.getElementById('{!$Component.financialIncome}').value === "") {
+										document.getElementById('{!$Component.financialIncome}').value = null;
+									} else {
+										document.getElementById('{!$Component.financialIncome}').value = 
+											document.getElementById('{!$Component.financialIncome}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Financial_Income__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Financial Charges</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }">
+								<apex:param value="{! detail.Financial_Charges__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Financial_Charges__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="financialCharges">
+								<script>                           
+							        if (document.getElementById('{!$Component.financialCharges}').value === "") {
+										document.getElementById('{!$Component.financialCharges}').value = null;
+									} else {
+										document.getElementById('{!$Component.financialCharges}').value = 
+											document.getElementById('{!$Component.financialCharges}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Financial_Charges__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Net Interest expense</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! detail.Type__c = 'Annual' }">
+								<apex:param value="{! detail.Net_Interest_expense__c }"/>
+							</apex:outputText>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Net_Interest_expense__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Income and other taxes</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }" style="font-weight: bold">
+								<apex:param value="{! detail.Income_and_other_taxes__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Income_and_other_taxes__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }" styleClass="input"
+									style="font-weight: bold" id="incomeAndOtherTaxes">
+								<script>                           
+							        if (document.getElementById('{!$Component.incomeAndOtherTaxes}').value === "") {
+										document.getElementById('{!$Component.incomeAndOtherTaxes}').value = null;
+									} else {
+										document.getElementById('{!$Component.incomeAndOtherTaxes}').value = 
+											document.getElementById('{!$Component.incomeAndOtherTaxes}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Income_and_other_taxes__c }"/>
+							</apex:outputText>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th bgcolor="#e2e2e2">EAT = Earning after tax, net profit</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th bgcolor="#e2e2e2" style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }" style="font-weight: bold">
+								<apex:param value="{! detail.EAT__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.EAT__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }" styleClass="input"
+									style="font-weight: bold" id="eat">
+								<script>                           
+							        if (document.getElementById('{!$Component.eat}').value === "") {
+										document.getElementById('{!$Component.eat}').value = null;
+									} else {
+										document.getElementById('{!$Component.eat}').value = 
+											document.getElementById('{!$Component.eat}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.EAT__c }"/>
+							</apex:outputText>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Extraordinary Items</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }" style="font-weight: bold">
+								<apex:param value="{! detail.Extraordinary_Items__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Extraordinary_Items__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="extraordinaryItems">
+								<script>                           
+							        if (document.getElementById('{!$Component.extraordinaryItems}').value === "") {
+										document.getElementById('{!$Component.extraordinaryItems}').value = null;
+									} else {
+										document.getElementById('{!$Component.extraordinaryItems}').value = 
+											document.getElementById('{!$Component.extraordinaryItems}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Extraordinary_Items__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Exceptional Income</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }" style="font-weight: bold">
+								<apex:param value="{! detail.Exceptional_Income__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Exceptional_Income__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="exceptionalIncome">
+								<script>                           
+							        if (document.getElementById('{!$Component.exceptionalIncome}').value === "") {
+										document.getElementById('{!$Component.exceptionalIncome}').value = null;
+									} else {
+										document.getElementById('{!$Component.exceptionalIncome}').value = 
+											document.getElementById('{!$Component.exceptionalIncome}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Exceptional_Income__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Exceptional Charges</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'View') }" style="font-weight: bold">
+								<apex:param value="{! detail.Exceptional_Charges__c }"/>
+							</apex:outputText>
+							<apex:inputField value="{! detail.Exceptional_Charges__c }" rendered="{! AND(detail.Type__c = 'Annual', pageMode = 'Edit') }"
+									styleClass="input" id="exceptionalCharges">
+								<script>                           
+							        if (document.getElementById('{!$Component.exceptionalCharges}').value === "") {
+										document.getElementById('{!$Component.exceptionalCharges}').value = null;
+									} else {
+										document.getElementById('{!$Component.exceptionalCharges}').value = 
+											document.getElementById('{!$Component.exceptionalCharges}').value.slice(0, -3).split('.').join('').split(',').join('');
+									}
+							    </script>
+							</apex:inputField>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Exceptional_Charges__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Exceptional Items Total</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! detail.Type__c = 'Annual' }">
+								<apex:param value="{! detail.Exceptional_Items_Total__c }"/>
+							</apex:outputText>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Exceptional_Items_Total__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr bgcolor="#bcbcbc">
+					<th>Financial Analisys</th>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th style="text-align: right">
+							<apex:outputText value="{! detail.Year__c }" rendered="{! detail.Type__c = 'Annual' }"/>
+							<apex:outputText value="RS" rendered="{! detail.Type__c = 'Score' }"/>
+						</th>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th colspan="{! financialDetailsList.size + 1}" bgcolor="#e2e2e2">Profitability</th>
+				</tr>
+				<tr>
+					<td>Profit Margin</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.Profit_Margin__c }"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>ROA (calculation includes taxes x D&amp;B)</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.ROA_calculation_includes_taxes_x_D_B__c }" rendered="{! detail.Type__c = 'Annual' }"/>
+							<apex:outputText rendered="{! AND(detail.ROA_calculation_includes_taxes_x_D_B__c != null, detail.Type__c = 'Score') }"
+								value="{! ROUND(detail.ROA_calculation_includes_taxes_x_D_B__c, 0)} - {! ratingsMap[detail.ROA_calculation_includes_taxes_x_D_B__c] }"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>ROE (without Reserves)</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.ROE_without_Reserves__c }"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Profitability</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.Profitability__c }"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th colspan="{! financialDetailsList.size + 1}" bgcolor="#e2e2e2">Solvency</th>
+				</tr>
+				<tr>
+					<td>Solvency ratio</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.Solvency_ratio__c }"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Leverage</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.Leverage__c }" rendered="{! detail.Type__c = 'Annual' }"/>
+							<apex:outputText rendered="{! AND(detail.Leverage__c != null, detail.Type__c = 'Score') }"
+								value="{! ROUND(detail.Leverage__c, 0) } - {! ratingsMap[detail.Leverage__c] }"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Debt to EBITDA</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.Debt_to_EBITDA__c }" rendered="{! detail.Type__c = 'Annual' }"/>
+							<apex:outputText rendered="{! AND(detail.Debt_to_EBITDA__c != null, detail.Type__c = 'Score') }"
+								value="{! ROUND(detail.Debt_to_EBITDA__c, 0) } - {! ratingsMap[detail.Debt_to_EBITDA__c] }"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>EBITDA coverage</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.EBITDA_coverage__c }" rendered="{! detail.Type__c = 'Annual' }"/>
+							<apex:outputText rendered="{! AND(detail.EBITDA_coverage__c != null, detail.Type__c = 'Score') }"
+								value="{! ROUND(detail.EBITDA_coverage__c, 0) } - {! ratingsMap[detail.EBITDA_coverage__c] }"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th colspan="{! financialDetailsList.size + 1}" bgcolor="#e2e2e2">Liquidity</th>
+				</tr>
+				<tr>
+					<td>current ratio</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.Current_ratio__c }" rendered="{! detail.Type__c = 'Annual' }"/>
+							<apex:outputText rendered="{! AND(detail.Current_ratio__c != null, detail.Type__c = 'Score') }"
+								value="{! ROUND(detail.Current_ratio__c, 0) } - {! ratingsMap[detail.Current_ratio__c] }"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>quick "acid" ratio</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.Quick_acid_ratio__c }"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>working capital (in TEUR)</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{0, number, integer}" rendered="{! detail.Type__c = 'Annual' }">
+								<apex:param value="{! detail.Working_capital__c }"/>
+							</apex:outputText>
+							<apex:outputText value="{0, number}" rendered="{! detail.Type__c = 'Score' }">
+								<apex:param value="{! detail.Working_capital__c }"/>
+							</apex:outputText>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>Cash flow ratio</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.Cash_flow_ratio__c }" rendered="{! detail.Type__c = 'Annual' }"/>
+							<apex:outputText rendered="{! AND(detail.Cash_flow_ratio__c != null, detail.Type__c = 'Score') }"
+								value="{! ROUND(detail.Cash_flow_ratio__c, 0) } - {! ratingsMap[detail.Cash_flow_ratio__c] }"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<th colspan="{! financialDetailsList.size + 1}" bgcolor="#e2e2e2">Activity</th>
+					
+				</tr>
+				<tr>
+					<td>DSO in days</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.DSO_in_days__c }"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td>DPO in days</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<td style="text-align: right">
+							<apex:outputText value="{! detail.DPO_in_days__c }" rendered="{! detail.Type__c = 'Annual' }"/>
+							<apex:outputText rendered="{! AND(detail.DPO_in_days__c != null, detail.Type__c = 'Score') }" 
+								value="{! ROUND(detail.DPO_in_days__c, 0) } - {! ratingsMap[detail.DPO_in_days__c] }"/>
+						</td>
+					</apex:repeat>
+				</tr>
+				<tr>
+					<td bgcolor="#e2e2e2">Overall score</td>
+					<apex:repeat value="{! financialDetailsList }" var="detail">
+						<th bgcolor="#e2e2e2" style="text-align: right">
+							<apex:outputText rendered="{! detail.Overall_score__c != null }" 
+								value="{! ROUND(detail.Overall_score__c, 0) } - {! ratingsMap[detail.Overall_score__c] }"/>
+						</th>
+					</apex:repeat>
+				</tr>
+			</table>
+			<apex:pageBlockButtons location="top">
+				<apex:commandLink value="Save as CSV" action="{! saveAsCSV }" styleClass="btn" style="text-decoration: none; padding:4px;" 
+						target="_blank" rendered="{! pageMode = 'View' }"/>
+				<apex:commandButton value="Edit" action="{! setEditMode }" status="splashStatus" reRender="formId" rendered="{! pageMode = 'View' }"/>
+				<apex:commandButton value="Add" action="{! addDetail }" status="splashStatus" reRender="formId" rendered="{! pageMode = 'Edit' }"/>
+				<apex:commandButton value="Update" action="{! updateModule }" status="splashStatus" reRender="formId" rendered="{! pageMode = 'Edit' }"/>
+				<apex:commandButton value="Cancel" action="{! removeChanges }" status="splashStatus" reRender="formId" rendered="{! pageMode = 'Edit' }"/>
+			</apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+	<div id="lightbox-cf"></div>
+</apex:page>

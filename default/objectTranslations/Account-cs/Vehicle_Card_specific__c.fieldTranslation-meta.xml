@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Disclosure Group – no insurance --></label>
+    <name>Vehicle_Card_specific__c</name>
+    <picklistValues>
+        <masterLabel>FCCI0249</masterLabel>
+        <translation><!-- FCCI0249 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FCCT0000</masterLabel>
+        <translation><!-- FCCT0000 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FCCT0099</masterLabel>
+        <translation><!-- FCCT0099 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FCCT0149</masterLabel>
+        <translation><!-- FCCT0149 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NoEditCloseNStageByStartsNCardP_OPP001</fullName>
+    <active>true</active>
+    <description>Don't allow Edit of the Oppty Close Date and Stage values by Starts Team and Card Processing.</description>
+    <errorConditionFormula>AND(
+OR( $User.ProfileId = "00e20000001Aim2", $User.ProfileId = "00e2000000164DJ", $User.ProfileId = "00e0O000001VEQJ"),
+OR( ISCHANGED( CloseDate ),ISCHANGED( StageName )))</errorConditionFormula>
+    <errorDisplayField>CloseDate</errorDisplayField>
+    <errorMessage>You do not have permission to update Close Date or Stage. (OPP001)</errorMessage>
+</ValidationRule>

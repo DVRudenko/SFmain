@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Data_Object__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>E2E Data Object</label>
+    <referenceTo>E2E_Data_Object__c</referenceTo>
+    <relationshipLabel>E2E Data Offer Items</relationshipLabel>
+    <relationshipName>E2E_Data_Offer_Items</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

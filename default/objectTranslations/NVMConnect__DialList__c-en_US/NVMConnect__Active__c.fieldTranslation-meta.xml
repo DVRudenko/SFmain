@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A list must be set active before its members will be dialled --></help>
+    <label><!-- Active --></label>
+    <name>NVMConnect__Active__c</name>
+</CustomFieldTranslation>

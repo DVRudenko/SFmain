@@ -1,0 +1,407 @@
+<apex:page name="FindDuplicates" controller="FindDuplicatesCtrl" showHeader="true" action="{! init }"
+           sidebar="true" standardStylesheets="true" setup="true" showChat="true">
+<apex:form >
+    <apex:inputHidden value="{!idForRequest}" id="pIdForRequest"/>
+    <apex:inputHidden value="{!idToGetExtendedInfo}" id="pIdToGetExtendedInfo"/>
+    <head>
+        <style>
+        .labelCol {
+            text-align: right;
+            font-weight: bold;
+        }
+        .pbSubheader {
+            margin-top: 0px;
+        }
+        </style>
+
+        <script>
+            var jspIdForRequest = document.getElementById("{!$Component.pIdForRequest}");
+            var jspIdToGetExtendedInfo = document.getElementById("{!$Component.pIdToGetExtendedInfo}");
+
+            function setIdForRequest(radioBtn) {
+                if (radioBtn.checked) {
+                    jspIdForRequest.value = radioBtn.value;
+                }
+            }
+            
+            //SF-1104 start
+            function searchCheck() {
+                var numbers = /^[0-9]+$/;
+                var phone = /^(\+)?[0-9#]+$/;
+                if (document.getElementsByClassName("sInn")[0] !== undefined && 
+                    document.getElementsByClassName("isInn")[0] !== undefined && 
+                    document.getElementsByClassName("sPhone")[0] !== undefined && 
+                    document.getElementsByClassName("isPhone")[0] !== undefined) {
+                    if (document.getElementsByClassName("isInn")[0].checked) {
+                        if (document.getElementsByClassName("sInn")[0].value.length < 9) {
+                            alert("Для поиска по ИНН введите пожалуйста полный номер");
+                            return false;
+                        }
+                        if (!document.getElementsByClassName("sInn")[0].value.match(numbers)) {
+                            alert("Для поиска по ИНН используйте пожалуйста только цифры");
+                            return false;
+                        }
+                    }
+                    if (document.getElementsByClassName("isPhone")[0].checked) {
+                        if (document.getElementsByClassName("sPhone")[0].value.length < 10) {
+                            alert("Номер телефона должен содержать 10 цифр без кода страны");
+                            return false;
+                        }
+                        if (!document.getElementsByClassName("sPhone")[0].value.match(phone)) {
+                            alert("Номер телефона должен содержать только цифры, +, #");
+                            return false;
+                        }
+                    }
+                }
+                searchPage();
+            }
+            function getOwnerAdditionalInfo(link) {
+                jspIdToGetExtendedInfo.value = link.target;
+                getExtendedInfo();
+                return false;
+            }
+            //SF-1104 end
+        </script>
+    </head>
+
+    <apex:pageBlock title="{!findPageTitle}">
+        <apex:pageMessages ></apex:pageMessages>
+        <apex:pageBlockButtons >
+            <!-- SF-1104 start -->
+            <apex:commandButton value="Поиск дубликатов" style="width:150px;" onclick="searchCheck();return false;"/>
+            <apex:commandButton value="Назад к записи" action="{!backToRecord}"
+                                style="width:150px;"/>
+        </apex:pageBlockButtons>
+        <apex:actionFunction id="searchPage"
+                             name="searchPage"
+                             action="{! searchPage }"/>
+        <apex:actionFunction id="getExtendedInfo"
+                             name="getExtendedInfo"
+                             action="{! getExtendedInfo }"/>
+        <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td class="labelCol"></td>
+                <td>
+                    <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="labelCol">ИНН</td>
+                            <td>
+                                <apex:inputCheckbox value="{!isINNSelected}" styleClass="isInn"/>
+                                <apex:inputText label="INN" value="{!sInn}" styleClass="sInn"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelCol">Email</td>
+                            <td>
+                                <apex:inputCheckbox value="{!isEmailSelected}"/>
+                                <apex:inputText label="Email" value="{!sEmail}"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="labelCol">Телефон</td>
+                            <td>
+                                <apex:inputCheckbox value="{!isPhoneSelected}" styleClass="isPhone"/>
+                                <apex:inputText label="Phone" value="{!inputPhone}" styleClass="sPhone"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <!-- SF-1104 end -->
+                <td>
+                    <table class="detailList" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <apex:outputLabel value="Комментарий к запросу на перевод:"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <apex:inputTextarea value="{!CommentForRequest}" cols="50" rows="3"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <apex:commandButton value="Отправить запрос" action="{! sendRequestForChangeOwner}"
+                                                    style="width:150px;"
+                                                    title="Отправить запрос администратору о переводе записи на меня"/>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <!-- LEADS -->
+        <apex:pageBlockTable value="{!leadsResult}" var="lead" style="margin-bottom: 15px"
+                                 captionStyle="font-weight: bold; text-align: left;">
+                <apex:facet name="caption">{!'Совпадающие Интересы: ' + TEXT(leadsResult.size)}</apex:facet>
+
+                <apex:column >
+                    <apex:outputPanel layout="block" rendered="{!NOT(lead.isConvert)}">
+                        <input type="radio"
+                               name="primary"
+                               value ="{!lead.record.Id}"
+                               onclick="setIdForRequest(this)"/>
+                    </apex:outputPanel>
+                        {!lead.record.Id}
+                </apex:column>
+
+                <apex:column headerValue="{!$ObjectType.Lead.fields.Name.label}">
+                    {!lead.record.Name}
+                    <br>
+                    <!--SF-1436 begin-->
+                    <apex:outputLink value="/{! lead.record.Id }" target="_blank"
+                                     rendered="{! RecordAccessMap[lead.record.ID] }">
+                        --Переход--
+                    </apex:outputLink>
+                    <apex:outputLink value="/apex/SharingLead?id={!lead.record.Id}" target="_blank"
+                                      rendered="{! AND(isInboundUserRole, NOT(RecordAccessMap[lead.record.ID])) }">
+                        Подробнее
+                    </apex:outputLink>
+                    <!--SF-1436 end-->
+                    </br>
+                </apex:column>
+                <apex:column value="{! lead.record.Company}"
+                             headerValue="{!$ObjectType.Lead.fields.Company.label}"/>
+                <apex:column headerValue="{!$ObjectType.Lead.fields.INN__c.label}"
+                             value="{! lead.inn}" style="color:{!(IF(lead.innMatched,'red',''))};"/>
+                <apex:column value="{! lead.record.Status}"
+                             headerValue="{!$ObjectType.Lead.fields.Status.label}"/>
+         		<!--SF-1456 begin-->
+                <apex:column headerValue="{!$Label.Source_of_Lead}"
+                             value="{!Lead.record.Source_of_Lead__c}"/>
+        		<!--SF-1456 end-->
+                <apex:column value="{! lead.phone}" headerValue="{!$ObjectType.Lead.fields.Phone.label}"
+                             style="color:{!(IF(lead.phoneMatched,'red',''))};" width="100"/>
+                <apex:column headerValue="{!$ObjectType.Lead.fields.Email.label}"
+                             style="color:{!(IF(lead.emailMatched,'red',''))};" value="{! lead.mail}"/>
+
+                <apex:column >
+                   <apex:facet name="header">Дата задачи <img
+                            src="{!URLFOR($Resource.RussianImages, 'img/HelpText.png')}"
+                            title="Крайний срок открытой задачи. Если в поле пусто - задача была закрыта, или к данной записи не было создано ни одной задачи. Если дата находится в прошлом, задача была просрочена"/>
+                    </apex:facet>
+                    <apex:outputPanel >
+                        <apex:outputText value="{0, date, d/MM/yyyy}">
+                            <apex:param value="{! lead.activityDate }"/>
+                        </apex:outputText>
+                    </apex:outputPanel>
+                </apex:column>
+                <apex:column headerValue="Дата создания">
+                    <apex:outputText value="{0, date, d.MM.yyyy}">
+                        <apex:param value="{! lead.record.CreatedDate }"/>
+                    </apex:outputText>
+                </apex:column>
+                <!--SF-1060 begin-->
+                <apex:column headerValue="{!$Label.last_owner_change_date_rus}">
+                    <apex:outputField value="{!lead.record.Last_Owner_Change_Date_RUS__c}"/>
+                </apex:column>
+                <!--SF-1060 end-->
+                <apex:column headerValue="Имя ответств.">
+                    <apex:outputPanel style="color:{!lead.colorOwner};">
+                        <a href="/{!lead.record.OwnerId}" target="_blank">{!lead.record.Owner.Name}</a>
+                    </apex:outputPanel>
+                    <a onclick="getOwnerAdditionalInfo(this)" target="{!lead.record.Id}">Подробнее</a>
+                </apex:column>
+                <!--SF-1060 fix begin-->
+                <apex:column headerValue="Добавочный ответств." value="{!lead.ownerExtension}"/>
+                <apex:column headerValue="Имя менеджера" value="{!lead.managerName}"/>
+                <apex:column headerValue="Идентификатор записи" value="{!lead.record.Id}"/>
+                <!--SF-1060 fix end-->
+            </apex:pageBlockTable>
+
+            <!-- ACCOUNTS -->
+            <apex:outputText style="font-weight: bold; text-align: left;" value="{!'Совпадающие организации: ' + accMapSize}"/>
+            <apex:repeat value="{! accMap }" var="account" >
+                <apex:pageBlockTable value="{! accMap[account]}" var="acc" style="margin-top: 15px"
+                                 captionStyle="font-weight: bold; text-align: left;">
+                    <apex:column >
+                        <apex:outputPanel layout="block" rendered="{!acc.isSelectable}">
+                            <input type="radio"
+                                name="primary"
+                                onclick="setIdForRequest(this)"
+                                value="{!acc.record.Id}"/>
+                        </apex:outputPanel>
+                    </apex:column>    
+                             
+                    <apex:column headerValue="{!$ObjectType.account.fields.Name.label}">
+                        {!acc.Name}
+                        <br>
+                        <!--SF-1436 begin-->
+                        <apex:outputLink value="/{! acc.record.Id }" target="_blank"
+                                        rendered="{! RecordAccessMap[acc.record.ID] }">
+                            --Переход--
+                        </apex:outputLink>
+                        <apex:outputLink value="/apex/SharingAccount?id={! acc.record.Id }" target="_blank"
+                                        rendered="{! AND(isInboundUserRole, NOT(RecordAccessMap[acc.record.Id])) }">
+                            Подробнее
+                        </apex:outputLink>
+                        <!--SF-1436 end-->
+                        </br>
+                    </apex:column>
+                    <apex:column headerValue="{!$ObjectType.account.fields.INN__c.label}">
+                        <apex:outputPanel style="color:{!(IF(acc.innMatched,'red',''))};">
+                                {! acc.inn}
+                        </apex:outputPanel>
+                    </apex:column>
+                    <apex:column value="{!acc.record.Type}"
+                                 headerValue="{!$ObjectType.account.fields.Type.label}"></apex:column>
+                    <!--SF-1060 begin-->
+                    <apex:column headerValue="Крайняя дата литровой транзакции">
+                        <apex:outputText value="{0, date, d.MM.yyyy}">
+                            <apex:param value="{! acc.record.Last_pump_date__c }"/>
+                        </apex:outputText>
+                    </apex:column>
+                    <!--SF-1060 end-->
+                    
+                    <apex:column value="{! acc.phone}"
+                                headerValue="{!$ObjectType.account.fields.Phone.label}" width="100"
+                                style="color:{!(IF(acc.phoneMatched,'red',''))};"/>
+
+                    <apex:column headerValue="Дата создания">
+                        <apex:outputText value="{0, date, d.MM.yyyy}">
+                            <apex:param value="{! acc.createdDate }"/>
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="Имя ответств.">
+                        <apex:outputPanel style="color:{!acc.colorOwner};">
+                            <a href="/{!acc.record.OwnerId}" target="_blank">{!acc.Owner.Name}</a>
+                        </apex:outputPanel>
+                        <a onclick="getOwnerAdditionalInfo(this)" target="{!acc.record.Id}">Подробнее</a>
+                    </apex:column>
+                    <!--SF-1060 fix begin-->
+                    <apex:column headerValue="Добавочный ответств." value="{!acc.ownerExtension}"/>
+                    <apex:column headerValue="Имя менеджера" value="{!acc.managerName}"/>
+                    <apex:column headerValue="Идентификатор записи" value="{!acc.record.Id}"/>
+                    <!--SF-1060 fix end-->
+                </apex:pageBlockTable>
+
+                <!-- OPPORTUNITY -->
+                <apex:pageBlockSection title="Совпадающие возможности" columns="1" rendered="{! AND(accMap[account].oppList.size != null, accMap[account].oppList.size > 0) }">
+
+                <apex:pageBlockTable value="{! accMap[account].oppList }" var="opportunity" style="margin-bottom: 15px; margin-left: 15px"
+                                     captionStyle="font-weight: bold; text-align: left;" >
+                    <!--apex:facet name="caption">Совпадающие возможности</apex:facet-->
+                    <apex:column >
+                        <apex:outputPanel layout="block" rendered="{!NOT(opportunity.stageName == 'Moved to Start')}">
+                            <input type="radio"
+                                name="primary"
+                                onclick="setIdForRequest(this)"
+                                value="{!opportunity.record.Id}"/>
+                        </apex:outputPanel>
+                    </apex:column>
+
+                    <apex:column headerValue="{!$ObjectType.opportunity.fields.Name.label}">
+                        {!opportunity.name}
+                        <br>
+                        <!--SF-1436 begin-->
+                        <apex:outputLink value="/{! opportunity.record.Id }" target="_blank"
+                                        rendered="{! RecordAccessMap[opportunity.record.Id] }">
+                            --Переход--
+                        </apex:outputLink>
+                        <apex:outputLink value="/apex/SharingOpportunity?id={!opportunity.record.Id}" target="_blank"
+                                                            rendered="{! AND(isInboundUserRole, NOT(RecordAccessMap[opportunity.record.Id])) }">
+                            Подробнее
+                        </apex:outputLink>
+                        <!--SF-1436 end-->
+                        </br>
+                    </apex:column>
+                    <!-- SF-1151 begin -->
+                    <apex:column value="{! opportunity.record.StageName}"
+                                 headerValue="{!$ObjectType.opportunity.fields.StageName.label}"/>
+                    <!--SF-1456 begin-->
+        			<apex:column headerValue="{!$Label.Source_of_Lead}"
+                             	value="{!opportunity.record.Source_of_Lead_o__c}"/>
+        			<!--SF-1456 end-->
+                    <apex:column headerValue="Дата создания">
+                        <apex:outputText value="{0, date, d.MM.yyyy}">
+                            <apex:param value="{! opportunity.createdDate }"/>
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column value="{! opportunity.record.Last_Owner_Change_Date_RUS__c }"  
+                                 headerValue="{!$ObjectType.opportunity.fields.Last_Owner_Change_Date_RUS__c.label}"/>
+                    <apex:column headerValue="{!$ObjectType.opportunity.fields.CloseDate.label}">
+                        <apex:outputText value="{0, date, d.MM.yyyy}">
+                            <apex:param value="{! opportunity.closeDate }"/>
+                        </apex:outputText>
+                    </apex:column>
+                    <!-- SF-1151 end -->
+
+                    <apex:column >
+                        <apex:facet name="header">Дата задачи <img
+                                src="{!URLFOR($Resource.RussianImages, 'img/HelpText.png')}"
+                                title="Крайний срок открытой задачи. Если в поле пусто - задача была закрыта, или к данной записи не было создано ни одной задачи. Если дата находится в прошлом, задача была просрочена"/>
+                        </apex:facet>
+                        <apex:outputPanel >
+                        <apex:outputText value="{0, date, d/MM/yyyy}">
+                            <apex:param value="{! opportunity.activityDate }"/>
+                        </apex:outputText>
+                    </apex:outputPanel>
+                    </apex:column>
+
+                    <apex:column headerValue="Имя ответств.">
+                        <apex:outputPanel style="color:{!opportunity.colorOwner};">
+                            <a href="/{!opportunity.record.OwnerId}" target="_blank">{!opportunity.Owner.Name}</a>
+                        </apex:outputPanel>
+                        <a onclick="getOwnerAdditionalInfo(this)" target="{!opportunity.record.Id}">Подробнее</a>
+                    </apex:column>
+                    <!--SF-1060 fix begin-->
+                    <apex:column headerValue="Добавочный ответств." value="{!opportunity.ownerExtension}"/>
+                    <apex:column headerValue="Имя менеджера" value="{!opportunity.managerName}"/>
+                    <apex:column headerValue="Идентификатор записи" value="{!opportunity.record.Id}"/>
+                    <!--SF-1060 fix end-->
+                </apex:pageBlockTable>
+                </apex:pageBlockSection>
+
+                <!-- CONTACT -->
+                <apex:pageBlockSection title="Совпадающие контакты" columns="1" rendered="{! AND(accMap[account].conList.size != null, accMap[account].conList.size > 0) }">
+
+                <apex:pageBlockTable value="{! accMap[account].conList}" var="contact" style="margin-bottom: 15px; margin-left: 15px"
+                                 captionStyle="font-weight: bold; text-align: left;" >
+                    <!--apex:facet name="caption">Совпадающие контакты</apex:facet-->
+                    <apex:column headerValue="{!$ObjectType.Contact.fields.Name.label}">
+                        {!contact.name}
+                        <br>
+                        <!--SF-1436 begin-->
+                        <apex:outputLink value="/{! contact.record.Id }" target="_blank"
+                                        rendered="{! RecordAccessMap[contact.record.Id] }">
+                            --Переход--
+                        </apex:outputLink>
+                        <apex:outputLink value="/apex/SharingContact?id={!contact.record.Id}" target="_blank"
+                                        rendered="{! AND(isInboundUserRole, NOT(RecordAccessMap[contact.record.Id])) }">
+                            Подробнее
+                        </apex:outputLink>
+                        <!--SF-1436 end-->
+                        </br>
+                    </apex:column>
+                    <apex:column value="{! contact.phone}"
+                                headerValue="{!$ObjectType.Contact.fields.Phone.label}" width="100"
+                                style="color:{!(IF(contact.phoneMatched,'red',''))};"/>
+                    <apex:column headerValue="{!$ObjectType.Contact.fields.Email.label}"
+                                style="color:{!(IF(contact.emailMatched,'red',''))};">
+                            {! contact.email}
+                    </apex:column>
+
+                    <apex:column headerValue="Дата создания">
+                        <apex:outputText value="{0, date, d.MM.yyyy}">
+                            <apex:param value="{! contact.createdDate }"/>
+                        </apex:outputText>
+                    </apex:column>
+                    <apex:column headerValue="Имя ответств.">
+                        <apex:outputPanel style="color:{!contact.colorOwner};">
+                            <a href="/{!contact.record.OwnerId}" target="_blank">{!contact.Owner.Name}</a>
+                        </apex:outputPanel>
+                        <a onclick="getOwnerAdditionalInfo(this)" target="{!contact.record.Id}">Подробнее</a>
+                    </apex:column>
+                    <!--SF-1060 fix begin-->
+                    <apex:column headerValue="Добавочный ответств." value="{!contact.ownerExtension}"/>
+                    <apex:column headerValue="Имя менеджера" value="{!contact.managerName}"/>
+                    <apex:column headerValue="Идентификатор записи" value="{!contact.record.Id}"/>
+                    <!--SF-1060 fix end-->
+                </apex:pageBlockTable>
+                </apex:pageBlockSection>
+            </apex:repeat>
+
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

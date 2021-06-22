@@ -1,0 +1,102 @@
+<apex:page controller="DashboardLeadProcessingTimeCCSctrl" action="{! init }" sidebar="false" showHeader="false">
+	<apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+    <apex:form >
+    	<apex:pageBlock >
+	        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+	            <tr>
+	                <td>
+	                    <h1 style="margin-bottom: 10px; font-size: 15px; display: block;">Team Processing Time in minutes for <apex:selectList value="{! selectedPeriod }" size="1" multiselect="false" style="margin-left: 5px;">
+	                            <apex:selectOptions value="{! currentWeeks }"/>
+	                            <apex:actionSupport action="{! init }" event="onchange"/>
+	                        </apex:selectList> <apex:selectList value="{! selectedYear }" size="1" multiselect="false" style="margin: 0 5px;">
+	                            <apex:selectOptions value="{! years }"/>
+	                            <apex:actionSupport action="{! changeYear }" event="onchange"/>
+	                        </apex:selectList>({! startDateOfWeekString } - {! endDateOfWeekString })</h1>                    
+	                    <h1 style="margin-bottom: 10px; font-size: 15px; display: block;"> 
+	                        <apex:selectRadio value="{! selectedSecChannel}">
+	                            <apex:selectOptions value="{! secChannels }"/>                           
+	                            <apex:actionSupport action="{! init}" event="onchange"/>
+	                        </apex:selectRadio> 
+	                    </h1>
+	                </td>
+	                <!-- <td style="text-align: right;">
+	                    <apex:outputLink value="/articles/Knowledge/Help-page-for-Team-Processing-Time-dashboard?navBack=H4sIAAAAAAAAAIuuVipWslLyzssvz0lNSU_1yM9NVdJRygaKFSSmp4ZkluSA-KVAvn58aaZ-NkyhPpCDosu-ODWxKDnDVqk2FgDeHqwIVQAAAA&popup=false" target="_blank" id="theLink">Help</apex:outputLink>
+	                </td> -->
+	            </tr>
+	        </table>
+	        <apex:pageMessages />
+	        <div id="salesteamleader" style="width: 100%; height: 400px;"></div>
+	    </apex:pageBlock>
+
+	    <script>
+	        $(function () {
+	            $('#salesteamleader').highcharts({
+	                chart: {
+	                    type: 'bar'
+	                },
+	                title: {
+	                    text: '',
+	                    style: {
+	                        display: 'none'
+	                    }
+	                },
+	                xAxis: {
+	                    categories: [<apex:repeat value="{! timesMap }" var="key">'<a href="/apex/LeadProcessingTimeReportCCS?userId={! currentUser.Id }&country={! key }&start={! startDateOfWeekParam }&end={! endDateOfWeekParam }&selectedSecChannel={! selectedSecChannel}" target="_blank">{! key } ({! toProcessMap[key] } to process)</a>',</apex:repeat>
+	                    ],
+	                    labels: {
+	                        useHTML: true
+	                    }
+	                },
+	                yAxis: [{
+	                    min: 0,
+	                    title: {
+	                        text: ''
+	                    }, 
+	                    style: {
+	                        display: 'none'
+	                    }
+	                }, {
+	                    title: {
+	                        text: 'Lead Processing Time'
+	                    },
+	                    opposite: true
+	                }],
+	                legend: {
+	                    shadow: false
+	                },
+	                exporting: { enabled: false },
+	                credits: {
+	                      enabled: false
+	                },
+	                tooltip: {
+	                    enabled: false
+	                },
+	                plotOptions: {
+	                    column: {
+	                        grouping: false,
+	                        shadow: false,
+	                        borderWidth: 0
+	                    },
+	                    bar: {
+	                        dataLabels: {
+	                            enabled: true,
+	                            formatter: function () {
+	                                return this.y;  
+	                            }
+	                        }
+	                    }
+	                },
+	                series: [{
+	                    name: '{! IF(currentUser.UserRole.Name = 'CCS Telesales Team Lead', 'Time in minutes', 'Time in hours') }',
+	                    color: 'rgba(126,86,134,.9)',
+	                    data: [<apex:repeat value="{! timesMap }" var="key">{! timesMap[key] },</apex:repeat>],
+	                    pointPadding: -0.1,
+	                    pointPlacement: 0.05
+	                }]
+	            });
+	        });
+	    </script>
+	</apex:form>
+</apex:page>

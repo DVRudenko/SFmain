@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__Day_of_Week__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>CASE(MOD( NVMStatsSF__Date__c - DATE(1900, 1, 7), 7), 
+1, &#39;1-Monday&#39;, 
+2, &#39;2-Tuesday&#39;, 
+3, &#39;3-Wednesday&#39;, 
+4, &#39;4-Thursday&#39;, 
+5, &#39;5-Friday&#39;, 
+6, &#39;6-Saturday&#39;, 
+7, &#39;7-Sunday&#39;, &#39; &#39;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Day of Week</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cena_objednavky_celkem__c</fullName>
+    <description>Cena objednávky celkem.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Cena objednávky celkem.</inlineHelpText>
+    <label>Cena objednávky celkem</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Soms kan het nodig zijn om uw ontvangers aan te sporen een envelop sneller te voltooien. Nadat een envelop verloopt, maakt DocuSign voor Salesforce de envelop ongeldig en stuurt vervolgens een melding naar de afzender en de ontvanger.</help>
+    <label><!-- Expire/Void Envelope --></label>
+    <name>dsfs__Expire_Void_Envelope__c</name>
+</CustomFieldTranslation>

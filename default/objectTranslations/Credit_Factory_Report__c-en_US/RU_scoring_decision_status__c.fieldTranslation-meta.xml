@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Показывает просрочен ли скоринг --></help>
+    <label><!-- Scoring status --></label>
+    <name>RU_scoring_decision_status__c</name>
+</CustomFieldTranslation>

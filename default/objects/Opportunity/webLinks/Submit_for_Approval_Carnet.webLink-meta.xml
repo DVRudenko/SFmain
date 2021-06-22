@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_for_Approval_Carnet</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Submit for Pricing Approval</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT("/soap/ajax/35.0/connection.js")}
+
+var appStatus = "{!Opportunity.Pricing_Approval_Status__c}";
+
+if(appStatus === "Approval Required"){
+    var oppToUpdate = new sforce.SObject("Opportunity");
+    oppToUpdate.Id = "{!Opportunity.Id}";
+    oppToUpdate.Carnet_Approval_Process__c = true;
+
+    sforce.connection.update([oppToUpdate]);
+
+    window.location.reload();
+}
+else{
+    alert("You cannot start Carnet Approval Process on this Opportunity. Check Pricing Approval Status field.");
+}</url>
+</WebLink>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMConnect__NextContactTime__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Until the specified time, this record won't be considered when refreshing Dial Lists.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Until the specified time, this record won't be considered when refreshing Dial Lists.</inlineHelpText>
+    <label>Next Contact Time</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Anzahl_der_Karten_All__c</fullName>
+    <description>Общее карт по Организации</description>
+    <externalId>false</externalId>
+    <label>Anzahl der Karten All</label>
+    <summarizedField>Opportunity.Anzahl_der_Karten__c</summarizedField>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

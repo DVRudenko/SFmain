@@ -1,0 +1,78 @@
+<apex:page showHeader="false"
+           standardStylesheets="false"
+           sidebar="false"
+           docType="html-5.0"
+           applyBodyTag="false"
+           applyHtmlTag="false"
+           controller="ETEController"
+		   action="{! runLongFormFR }">
+		   
+    <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Commander des cartes Shell en ligne</title>
+        
+        <!-- Google Tag Manager -->
+        <script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || []; w[l].push({
+				"gtm.start":
+					new Date().getTime(), event: "gtm.js"
+				}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != "dataLayer" ? "&l=" + l : ""; j.async = true; j.src =
+				"https://www.googletagmanager.com/gtm.js?id=" + i + dl; f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-PX3R3T4");
+        </script>
+        <!-- End Google Tag Manager -->
+        
+		<link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"/></noscript>
+        <link rel="preload" href="{!scripts.defaultChunk.css}" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+		<noscript><link rel="stylesheet" href="{!scripts.defaultChunk.css}"/></noscript>
+		<link rel="preload" href="{!scripts.defaultChunk.js}" as="script" />
+              
+		<apex:repeat value="{!scripts.preloadChunks}" var="chunk">
+			<link rel="preload" href="{!chunk.js}" as="script" />
+			<apex:outputPanel rendered="{!chunk.css != null}">
+				<link rel="prefetch" href="{!chunk.css}" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+        		<noscript><link rel="stylesheet" href="{!chunk.css}"/></noscript>
+			</apex:outputPanel>
+		</apex:repeat>
+		
+		<!-- IMAGES -->
+		<link rel="preload" href="/resource/ete_images/bg.jpg" as="image"/>
+		<link rel="preload" href="/resource/ete_images/ev_fob.png" as="image"/>
+		<link rel="preload" href="/resource/ete_images/shellkarte_eu.jpg" as="image"/>
+    </head>
+
+    <body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX3R3T4" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) -->
+
+		<style>{!scripts.indexCss}</style>
+		<div id="ete"></div>
+		
+		<script>
+			var user = {! userModel };
+			var settings = {! settings };
+			var content = {! content };
+
+			{!scripts.indexJs}
+		</script>
+
+		<script src="{!scripts.defaultChunk.js}"></script>
+		<script
+				id="Cookiebot"
+				src="https://consent.cookiebot.com/uc.js"
+				data-cbid="f1aa04ae-67fe-4a4b-b79b-864875490827"
+				data-blockingmode="auto"
+				type="text/javascript"
+		></script>
+    </body>
+    </html>
+</apex:page>

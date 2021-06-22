@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_First_Contact_Inbound_Outbound__c</fullName>
+    <description>Was first contact inbound from the Lead, or outbound by the sales team? This is particularly helpful to know when the Lead was included in a marketing campaign.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Was first contact inbound from the Lead, or outbound by the sales team? This is particularly helpful to know when the Lead was included in a marketing campaign.</inlineHelpText>
+    <label>PPR First Contact: Inbound/Outbound</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inbound Call</fullName>
+                <default>false</default>
+                <label>Inbound Call</label>
+            </value>
+            <value>
+                <fullName>Outbound call</fullName>
+                <default>false</default>
+                <label>Outbound call</label>
+            </value>
+            <value>
+                <fullName>Chat</fullName>
+                <default>false</default>
+                <label>Chat</label>
+            </value>
+            <value>
+                <fullName>Inbound Mail</fullName>
+                <default>false</default>
+                <label>Inbound Mail</label>
+            </value>
+            <value>
+                <fullName>Inbound Website</fullName>
+                <default>false</default>
+                <label>Inbound Website</label>
+            </value>
+            <value>
+                <fullName>Onsite Visit</fullName>
+                <default>false</default>
+                <label>Onsite Visit</label>
+            </value>
+            <value>
+                <fullName>Не контактировали</fullName>
+                <default>false</default>
+                <label>Не контактировали</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Comma separated list of phone fields to exclude from the Dialler. Use the API names i.e. Account.CustomField__c --></help>
+    <label><!-- Excluded Phone Fields --></label>
+    <name>NVMConnect__ExcludedPhoneFields__c</name>
+</CustomFieldTranslation>

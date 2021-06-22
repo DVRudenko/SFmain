@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_card__c</fullName>
+    <externalId>false</externalId>
+    <label>Partner card</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PORT ONE OU</fullName>
+                <default>false</default>
+                <label>PORT ONE OU</label>
+            </value>
+            <value>
+                <fullName>Shell</fullName>
+                <default>false</default>
+                <label>Shell</label>
+            </value>
+            <value>
+                <fullName>Unicard oil</fullName>
+                <default>false</default>
+                <label>Unicard oil</label>
+            </value>
+            <value>
+                <fullName>АЗС Технология</fullName>
+                <default>false</default>
+                <label>АЗС Технология</label>
+            </value>
+            <value>
+                <fullName>АЗС-ПРОСТОР</fullName>
+                <default>false</default>
+                <label>АЗС-ПРОСТОР</label>
+            </value>
+            <value>
+                <fullName>Альгазтранс</fullName>
+                <default>false</default>
+                <label>Альгазтранс</label>
+            </value>
+            <value>
+                <fullName>АЛЬКОРР</fullName>
+                <default>false</default>
+                <label>АЛЬКОРР</label>
+            </value>
+            <value>
+                <fullName>ВАЛАР</fullName>
+                <default>false</default>
+                <label>ВАЛАР</label>
+            </value>
+            <value>
+                <fullName>Гамаюн</fullName>
+                <default>false</default>
+                <label>Гамаюн</label>
+            </value>
+            <value>
+                <fullName>ГПН</fullName>
+                <default>false</default>
+                <label>ГПН</label>
+            </value>
+            <value>
+                <fullName>Грилен-Карт</fullName>
+                <default>false</default>
+                <label>Грилен-Карт</label>
+            </value>
+            <value>
+                <fullName>ГЭС</fullName>
+                <default>false</default>
+                <label>ГЭС</label>
+            </value>
+            <value>
+                <fullName>ИНТРАНСГАЗ-СЕРВИС</fullName>
+                <default>false</default>
+                <label>ИНТРАНСГАЗ-СЕРВИС</label>
+            </value>
+            <value>
+                <fullName>Лукойл</fullName>
+                <default>false</default>
+                <label>Лукойл</label>
+            </value>
+            <value>
+                <fullName>Л-Ульяновскнефтепродукт</fullName>
+                <default>false</default>
+                <label>Л-Ульяновскнефтепродукт</label>
+            </value>
+            <value>
+                <fullName>Магистраль</fullName>
+                <default>false</default>
+                <label>Магистраль</label>
+            </value>
+            <value>
+                <fullName>МАСТЕРС</fullName>
+                <default>false</default>
+                <label>МАСТЕРС</label>
+            </value>
+            <value>
+                <fullName>Нефтемаркет</fullName>
+                <default>false</default>
+                <label>Нефтемаркет</label>
+            </value>
+            <value>
+                <fullName>НОВГОРОДНЕФТЕПРОДУКТ</fullName>
+                <default>false</default>
+                <label>НОВГОРОДНЕФТЕПРОДУКТ</label>
+            </value>
+            <value>
+                <fullName>ОПТАН-Мордовия</fullName>
+                <default>false</default>
+                <label>ОПТАН-Мордовия</label>
+            </value>
+            <value>
+                <fullName>Петролстарт</fullName>
+                <default>false</default>
+                <label>Петролстарт</label>
+            </value>
+            <value>
+                <fullName>Пикалёвская Топливная Компания</fullName>
+                <default>false</default>
+                <label>Пикалёвская Топливная Компания</label>
+            </value>
+            <value>
+                <fullName>ПИТ-СТОП</fullName>
+                <default>false</default>
+                <label>ПИТ-СТОП</label>
+            </value>
+            <value>
+                <fullName>ПТК</fullName>
+                <default>false</default>
+                <label>ПТК</label>
+            </value>
+            <value>
+                <fullName>ПТК Уралнефть</fullName>
+                <default>false</default>
+                <label>ПТК Уралнефть</label>
+            </value>
+            <value>
+                <fullName>Роснефть</fullName>
+                <default>false</default>
+                <label>Роснефть</label>
+            </value>
+            <value>
+                <fullName>Сапсан</fullName>
+                <default>false</default>
+                <label>Сапсан</label>
+            </value>
+            <value>
+                <fullName>Совинтеравтосервис</fullName>
+                <default>false</default>
+                <label>Совинтеравтосервис</label>
+            </value>
+            <value>
+                <fullName>Тайм</fullName>
+                <default>false</default>
+                <label>Тайм</label>
+            </value>
+            <value>
+                <fullName>ТАИФ-НК АЗС</fullName>
+                <default>false</default>
+                <label>ТАИФ-НК АЗС</label>
+            </value>
+            <value>
+                <fullName>ТД ИЛИМ</fullName>
+                <default>false</default>
+                <label>ТД ИЛИМ</label>
+            </value>
+            <value>
+                <fullName>ТД Нефтьмагистраль</fullName>
+                <default>false</default>
+                <label>ТД Нефтьмагистраль</label>
+            </value>
+            <value>
+                <fullName>Терминал</fullName>
+                <default>false</default>
+                <label>Терминал</label>
+            </value>
+            <value>
+                <fullName>ТК ТранзитСити</fullName>
+                <default>false</default>
+                <label>ТК ТранзитСити</label>
+            </value>
+            <value>
+                <fullName>ТРАНСЕРВИС-АЗС</fullName>
+                <default>false</default>
+                <label>ТРАНСЕРВИС-АЗС</label>
+            </value>
+            <value>
+                <fullName>ТрансКарт</fullName>
+                <default>false</default>
+                <label>ТрансКарт</label>
+            </value>
+            <value>
+                <fullName>Транспорт</fullName>
+                <default>false</default>
+                <label>Транспорт</label>
+            </value>
+            <value>
+                <fullName>Фаэтон- топливная сеть номер 1</fullName>
+                <default>false</default>
+                <label>Фаэтон- топливная сеть номер 1</label>
+            </value>
+            <value>
+                <fullName>Фриз</fullName>
+                <default>false</default>
+                <label>Фриз</label>
+            </value>
+            <value>
+                <fullName>ЦНП-КАРД</fullName>
+                <default>false</default>
+                <label>ЦНП-КАРД</label>
+            </value>
+            <value>
+                <fullName>Шельф (ТУРБО)</fullName>
+                <default>false</default>
+                <label>Шельф (ТУРБО)</label>
+            </value>
+            <value>
+                <fullName>ЭЦК</fullName>
+                <default>false</default>
+                <label>ЭЦК</label>
+            </value>
+            <value>
+                <fullName>Другое</fullName>
+                <default>false</default>
+                <label>Другое</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>PORT ONE OU</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Shell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Unicard oil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>АЗС Технология</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>АЗС-ПРОСТОР</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Альгазтранс</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>АЛЬКОРР</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ВАЛАР</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Гамаюн</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ГПН</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Грилен-Карт</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ГЭС</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ИНТРАНСГАЗ-СЕРВИС</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Лукойл</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Л-Ульяновскнефтепродукт</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Магистраль</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>МАСТЕРС</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Нефтемаркет</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>НОВГОРОДНЕФТЕПРОДУКТ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ОПТАН-Мордовия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Петролстарт</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Пикалёвская Топливная Компания</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ПИТ-СТОП</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ПТК</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ПТК Уралнефть</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Роснефть</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Сапсан</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Совинтеравтосервис</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Тайм</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ТАИФ-НК АЗС</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ТД ИЛИМ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ТД Нефтьмагистраль</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Терминал</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ТК ТранзитСити</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ТРАНСЕРВИС-АЗС</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ТрансКарт</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Транспорт</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Фаэтон- топливная сеть номер 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Фриз</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ЦНП-КАРД</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Шельф (ТУРБО)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>ЭЦК</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Petrolcards.ru - АГГРЕГАТОР</controllingFieldValue>
+            <valueName>Другое</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

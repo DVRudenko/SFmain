@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>All_Internal_Users_except_HH</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>All Internal Users except HH</label>
+        <sharedTo>
+            <roleAndSubordinates>Salesmanager</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Salesmanager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

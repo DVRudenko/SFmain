@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category_Of_Products__c</fullName>
+    <externalId>false</externalId>
+    <label>Category Of Products</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0 Diesel, tunnel-, highway- and ferry toll fees</fullName>
+                <default>false</default>
+                <label>0 Diesel, tunnel-, highway- and ferry toll fees</label>
+            </value>
+            <value>
+                <fullName>1 All fuels, tunnel-, highway- and ferry toll fees</fullName>
+                <default>false</default>
+                <label>1 All fuels, tunnel-, highway- and ferry toll fees</label>
+            </value>
+            <value>
+                <fullName>2 Category 1 plus vehicle-related goods and services (oils, car wash)</fullName>
+                <default>false</default>
+                <label>2 Category 1 plus vehicle-related goods and services (oils, car wash)</label>
+            </value>
+            <value>
+                <fullName>Lotos All Products</fullName>
+                <default>false</default>
+                <label>Lotos All Products</label>
+            </value>
+            <value>
+                <fullName>Lotos Diesel</fullName>
+                <default>false</default>
+                <label>Lotos Diesel</label>
+            </value>
+            <value>
+                <fullName>Lotos All Fuel</fullName>
+                <default>false</default>
+                <label>Lotos All Fuel</label>
+            </value>
+            <value>
+                <fullName>Group 00</fullName>
+                <default>false</default>
+                <label>Group 00</label>
+            </value>
+            <value>
+                <fullName>Group 01</fullName>
+                <default>false</default>
+                <label>Group 01</label>
+            </value>
+            <value>
+                <fullName>Group 02</fullName>
+                <default>false</default>
+                <label>Group 02</label>
+            </value>
+            <value>
+                <fullName>Group 03</fullName>
+                <default>false</default>
+                <label>Group 03</label>
+            </value>
+            <value>
+                <fullName>Group 04</fullName>
+                <default>false</default>
+                <label>Group 04</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

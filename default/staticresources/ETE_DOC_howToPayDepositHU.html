@@ -1,0 +1,50 @@
+<style>
+    .how-to-pay {
+        font-size: 11px;
+    }
+
+    .how-to-pay__table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .how-to-pay__table tr {
+        margin-top: 5px;
+    }
+
+    .how-to-pay__table tr td {
+        width: 50%;
+        padding: 4px 0 0;
+        border-bottom: 1px solid rgb(196, 196, 196);
+    }
+</style>
+
+<div class="how-to-pay">
+    <p class="doc-header">Az óvadéki összeg a FLEETCOR Hungary Kft. alábbi számlaszámára utalható:</p>
+    <table class="how-to-pay__table">
+        <tr>
+            <td>Fizetendő óvadék:</td>
+            <td>{!securityAmountToPay} Ft</td>
+        </tr>
+        <tr>
+            <td>Számlatulajdonos:</td>
+            <td>FLEETCOR Hungary Kft.</td>
+        </tr>
+        <tr>
+            <td>Számlaszám:</td>
+            <td>10800007-30000000-15307021</td>
+        </tr>
+        <tr>
+            <td>IBAN:</td>
+            <td>HU76 1080 0007 3000 0000 1530 7021</td>
+        </tr>
+        <tr>
+            <td>BIC:</td>
+            <td>CITIHUHX</td>
+        </tr>
+        <tr>
+            <td>Fizetés célja:</td>
+            <td>Vállalkozásának neve</td>
+        </tr>
+    </table>
+</div>

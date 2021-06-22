@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- List email addresses separated by commas --></help>
+    <label><!-- Email Recipients --></label>
+    <name>Email_Recipients__c</name>
+</CustomFieldTranslation>

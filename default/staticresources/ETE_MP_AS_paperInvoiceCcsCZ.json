@@ -1,0 +1,23 @@
+
+{
+    "translations": {
+        "price_value": {
+            "en": "90 CZK per invoice",
+            "cs": "90 Kč za fakturu"
+        },
+        "title": {
+            "en": "Paper invoice",
+            "cs": "Papírová faktura"
+        },
+        "description": {
+            "en": "<p>All invoices are delivered in electronic form via e-mail and are available on the customer online portal free of charge. If you wish to receive paper invoices by post, we will send them to you for 90 CZK per invoice.</p>",
+            "cs": "<p>Všechny faktury jsou zdarma doručovány v elektronické podobě na e-mail a jsou k dispozici v online Zákaznickém servisu. Pokud si přejete dostávat papírové faktury poštou, budeme vám je zasílat za 90 Kč za fakturu.</p>"
+        }
+    },
+    "settings": {
+        "bgImage": "/resource/ete_images/bgInfoCardLetter.png",
+        "show_more": "false",
+        "show_checkbox_1": "false",
+        "show_checkbox_2": "false"
+    }
+}

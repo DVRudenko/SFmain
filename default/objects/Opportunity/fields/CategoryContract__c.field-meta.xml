@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CategoryContract__c</fullName>
+    <externalId>false</externalId>
+    <label>Category of Contract</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>О</fullName>
+                <default>false</default>
+                <label>О</label>
+            </value>
+            <value>
+                <fullName>У</fullName>
+                <default>false</default>
+                <label>У</label>
+            </value>
+            <value>
+                <fullName>МО</fullName>
+                <default>false</default>
+                <label>МО</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

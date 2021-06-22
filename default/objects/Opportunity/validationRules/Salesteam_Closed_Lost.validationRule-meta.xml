@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salesteam_Closed_Lost</fullName>
+    <active>true</active>
+    <description>00e20000001piOZ - Harte Hanke (Sales),
+00e20000001R2TS - Sales Inbound,
+00e20000001AiiF - Sales,
+00e0O000001VEK1 - CCS Sales Inbound,
+00e20000001pihq - CCS Sales Manager,
+012200000006sWc - Euroshell,
+01220000000B5PI - Euroshell Star</description>
+    <errorConditionFormula>IF( ($Profile.Id = "00e20000001piOZ" ||
+$Profile.Id = "00e20000001R2TS" ||
+$Profile.Id = "00e20000001AiiF"||
+$Profile.Id = "00e0O000001VEK1"||
+$Profile.Id = "00e20000001pihq" ||
+$Profile.Name = "Salesteamleiter Inbound" ||
+$Profile.Name = "Salesteamleiter") &amp;&amp;
+(RecordType.Id = "012200000006sWc" || RecordType.Id = "01220000000B5PI") &amp;&amp;
+ISCHANGED( StageName ) &amp;&amp;
+NOT( ISPICKVAL(StageName, "Closed Lost")) &amp;&amp;
+NOT( ISPICKVAL(StageName, "CreditCheck")) &amp;&amp;
+NOT( ISPICKVAL(StageName, "Credit Check - Pending Credit")) &amp;&amp;
+NOT( ISPICKVAL(StageName, "Pending Sales - SEPA Confirmation")) &amp;&amp;
+NOT( ISPICKVAL(StageName, "Pending Credit Report")) &amp;&amp;
+NOT( ISPICKVAL(StageName, "Pending Credit - Contract Check")) &amp;&amp;
+NOT( ISPICKVAL(StageName, "Pending Sales - Advance payment")) &amp;&amp;
+NOT( AND(PRIORVALUE( Closed_Won_by_CF__c ) = false,Closed_Won_by_CF__c = true)) &amp;&amp;
+NOT( AND(PRIORVALUE( Pending_Deposit_by_CF__c ) = false, Pending_Deposit_by_CF__c = true)) &amp;&amp;
+NOT(ISCHANGED(Relaunch_CF__c))&amp;&amp;
+NOT(ISCHANGED(Reopen_Log__c)),
+TRUE,false)</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>Manual Stage changes are not allowed. The only available values for manual selection are "Closed Lost", "CreditCheck", "Credit Check - Pending Credit", "Pending Sales - SEPA Confirmation", "Pending Credit Report", "Pending Credit - Contract Check".</errorMessage>
+</ValidationRule>

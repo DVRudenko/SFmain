@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Access_To_Edit_E2E_Record</fullName>
+    <active>true</active>
+    <description>Restricting access to editing an E2E record.</description>
+    <errorConditionFormula>($Profile.Name &lt;&gt; 'System Administrator' &amp;&amp;
+$Profile.Name &lt;&gt; 'Systemadministrator' &amp;&amp;
+$Profile.Name &lt;&gt; 'E2E Profile' &amp;&amp;
+$Profile.Name &lt;&gt; 'FleetcorEmea Profile' &amp;&amp;
+$Profile.Name &lt;&gt; 'Service Agent' &amp;&amp;
+$Profile.Name &lt;&gt; 'Service Manager' &amp;&amp;
+$Profile.Name &lt;&gt; 'Retention Agent' &amp;&amp;
+$Profile.Name &lt;&gt; 'Retention Manager' &amp;&amp;
+$Profile.Name &lt;&gt; 'API Only' &amp;&amp;
+$Profile.Name &lt;&gt; 'In-house Developer' &amp;&amp;
+NOT($Permission.E2E_Admin) &amp;&amp;
+(E2E__c = true || E2E_2__c = true) &amp;&amp;
+Opp_Owner_Profile__c = 'API Only' &amp;&amp;
+ISNEW() = false &amp;&amp;
+NOT(ISCHANGED(Number_of_open_tasks__c)) &amp;&amp;
+NOT(ISCHANGED(E2E_Chat__c)) &amp;&amp;
+NOT(ISCHANGED(E2E_Agent_Message_Count__c)) &amp;&amp;
+NOT(ISCHANGED(E2E_Visitor_Message_Count__c)) &amp;&amp;
+NOT(ISCHANGED(E2E_Sales_Type__c)) &amp;&amp;
+NOT(ISCHANGED(Owner_Change_Reason__c)) &amp;&amp;
+NOT(ISCHANGED(Reopen__c)) &amp;&amp;
+NOT(ISCHANGED(Reopen_Log__c)))</errorConditionFormula>
+    <errorMessage>You can't change E2E opportunity.</errorMessage>
+</ValidationRule>

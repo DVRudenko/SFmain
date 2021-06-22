@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Typ vozidla. --></help>
+    <label><!-- Typ vozidla --></label>
+    <name>Typ_vozidla__c</name>
+    <picklistValues>
+        <masterLabel>Nákladní auto</masterLabel>
+        <translation><!-- Nákladní auto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Osobní auto</masterLabel>
+        <translation><!-- Osobní auto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Traktor</masterLabel>
+        <translation><!-- Traktor --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

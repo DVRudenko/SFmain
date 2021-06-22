@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Word that will be used for prsing and searching --></help>
+    <label><!-- Search Word --></label>
+    <name>Search_Word__c</name>
+</CustomFieldTranslation>

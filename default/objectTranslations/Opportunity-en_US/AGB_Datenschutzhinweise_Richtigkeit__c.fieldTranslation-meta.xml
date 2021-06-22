@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Kunde (bei Personengesellschaften aller inhaber) bestätigt, die Allgemeinen Geschäftsbedingungen inkl. der Datenschutzhinweise und der aktuellen Gebührenüberischt gelesen zu haben und erkennt diese an. Kunde bestätigt die Richtigkeit der gemachten Angaben --></help>
+    <label>T&amp;C&#39;s/Data Protection/Correctness</label>
+    <name>AGB_Datenschutzhinweise_Richtigkeit__c</name>
+</CustomFieldTranslation>

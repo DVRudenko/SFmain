@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Services that the Customer has with his current provider --></help>
+    <label><!-- Current services --></label>
+    <name>Current_services__c</name>
+    <picklistValues>
+        <masterLabel>Toll</masterLabel>
+        <translation><!-- Toll --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VAT</masterLabel>
+        <translation><!-- VAT --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

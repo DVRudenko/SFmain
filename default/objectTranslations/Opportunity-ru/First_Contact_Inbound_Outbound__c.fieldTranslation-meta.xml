@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS_First Contact: Inbound/Outbound --></label>
+    <name>First_Contact_Inbound_Outbound__c</name>
+    <picklistValues>
+        <masterLabel>Inbound Call</masterLabel>
+        <translation><!-- Inbound Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Mail</masterLabel>
+        <translation><!-- Inbound Mail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Website</masterLabel>
+        <translation><!-- Inbound Website --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incoming SMS</masterLabel>
+        <translation><!-- Incoming SMS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound Call</masterLabel>
+        <translation><!-- Outbound Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound e-mail</masterLabel>
+        <translation><!-- Outbound e-mail --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

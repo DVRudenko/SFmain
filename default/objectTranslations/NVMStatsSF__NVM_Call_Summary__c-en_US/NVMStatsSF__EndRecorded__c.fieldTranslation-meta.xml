@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Checked if the Call End Event was received from ContactWorld; indicative of completeness of a Call Summary. The End Event for Inbound Calls and Cases conveys the total duration; if missing, duration is approximated using sub totals known. --></help>
+    <label><!-- EndRecorded --></label>
+    <name>NVMStatsSF__EndRecorded__c</name>
+</CustomFieldTranslation>

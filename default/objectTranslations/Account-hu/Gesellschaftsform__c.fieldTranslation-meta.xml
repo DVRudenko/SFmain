@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Gesellschaftsform --></label>
+    <name>Gesellschaftsform__c</name>
+    <picklistValues>
+        <masterLabel>AG</masterLabel>
+        <translation>ZRT</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ASBL</masterLabel>
+        <translation><!-- ASBL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Agency of an Overseas Business</masterLabel>
+        <translation><!-- Agency of an Overseas Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Akciová společnost - a.s.</masterLabel>
+        <translation><!-- Akciová společnost - a.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Artisans</masterLabel>
+        <translation><!-- Artisans --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Association</masterLabel>
+        <translation><!-- Association --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Association à but lucratif</masterLabel>
+        <translation><!-- Association à but lucratif --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Association à but non lucratif</masterLabel>
+        <translation><!-- Association à but non lucratif --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Auto entrepreneur</masterLabel>
+        <translation><!-- Auto entrepreneur --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Autres</masterLabel>
+        <translation><!-- Autres --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AöR</masterLabel>
+        <translation><!-- AöR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BV</masterLabel>
+        <translation><!-- BV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BVBA</masterLabel>
+        <translation><!-- BVBA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Behörde</masterLabel>
+        <translation><!-- Behörde --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Branch of an Overseas Business</masterLabel>
+        <translation><!-- Branch of an Overseas Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CV</masterLabel>
+        <translation><!-- CV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CVBA</masterLabel>
+        <translation><!-- CVBA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CVOA</masterLabel>
+        <translation><!-- CVOA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Civil Law Partnership</masterLabel>
+        <translation><!-- Civil Law Partnership --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Comm V</masterLabel>
+        <translation><!-- Comm V --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Comm VA</masterLabel>
+        <translation><!-- Comm VA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cooperative</masterLabel>
+        <translation><!-- Cooperative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Coöperatieve en onderlinge waarborgmaatschappij</masterLabel>
+        <translation><!-- Coöperatieve en onderlinge waarborgmaatschappij --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EESV</masterLabel>
+        <translation><!-- EESV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EI</masterLabel>
+        <translation><!-- EI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EIRL</masterLabel>
+        <translation><!-- EIRL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ENTREPRISE INDIVIDUELLE</masterLabel>
+        <translation><!-- ENTREPRISE INDIVIDUELLE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ESV</masterLabel>
+        <translation><!-- ESV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EURL</masterLabel>
+        <translation><!-- EURL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eenmanszaak</masterLabel>
+        <translation><!-- Eenmanszaak --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Einzelfirma</masterLabel>
+        <translation><!-- Einzelfirma --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Foundation</masterLabel>
+        <translation><!-- Foundation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Freier Beruf</masterLabel>
+        <translation><!-- Freier Beruf --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GCV</masterLabel>
+        <translation><!-- GCV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GEIE</masterLabel>
+        <translation><!-- GEIE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GIE</masterLabel>
+        <translation><!-- GIE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GbR</masterLabel>
+        <translation><!-- GbR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General or Registered Partnership (sp. j.)</masterLabel>
+        <translation><!-- General or Registered Partnership (sp. j.) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gewerbebetrieb</masterLabel>
+        <translation><!-- Gewerbebetrieb --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GmbH</masterLabel>
+        <translation><!-- GmbH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GmbH &amp; co KG</masterLabel>
+        <translation><!-- GmbH &amp; co KG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>KG</masterLabel>
+        <translation><!-- KG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Körperschaft Öffentlichen Rechts</masterLabel>
+        <translation><!-- Körperschaft Öffentlichen Rechts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Limited Joint Stock Partnership (S.K.A.)</masterLabel>
+        <translation><!-- Limited Joint Stock Partnership (S.K.A.) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Limited Liability Partnership (sp. p.)</masterLabel>
+        <translation><!-- Limited Liability Partnership (sp. p.) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Limited Partnership (sp. k.)</masterLabel>
+        <translation><!-- Limited Partnership (sp. k.) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maatschap</masterLabel>
+        <translation><!-- Maatschap --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NV</masterLabel>
+        <translation><!-- NV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OSVČ</masterLabel>
+        <translation><!-- OSVČ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pobočka</masterLabel>
+        <translation><!-- Pobočka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Profession libérale</masterLabel>
+        <translation><!-- Profession libérale --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SA</masterLabel>
+        <translation><!-- SA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SARL</masterLabel>
+        <translation><!-- SARL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SAS</masterLabel>
+        <translation><!-- SAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SASU</masterLabel>
+        <translation><!-- SASU --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCA</masterLabel>
+        <translation><!-- SCA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCP</masterLabel>
+        <translation><!-- SCP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCRI</masterLabel>
+        <translation><!-- SCRI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCRL</masterLabel>
+        <translation><!-- SCRL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SCS</masterLabel>
+        <translation><!-- SCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SE</masterLabel>
+        <translation><!-- SE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SNC</masterLabel>
+        <translation><!-- SNC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SPRL</masterLabel>
+        <translation><!-- SPRL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Secteur Public</masterLabel>
+        <translation><!-- Secteur Public --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sole proprietorship</masterLabel>
+        <translation><!-- Sole proprietorship --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sonstige Kapitalgesellschaften</masterLabel>
+        <translation><!-- Sonstige Kapitalgesellschaften --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Společnost s ručením omezeným - s.r.o.</masterLabel>
+        <translation><!-- Společnost s ručením omezeným - s.r.o. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stichting</masterLabel>
+        <translation><!-- Stichting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stiftung</masterLabel>
+        <translation><!-- Stiftung --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The Polish Joint Stock Company (S.A.)</masterLabel>
+        <translation><!-- The Polish Joint Stock Company (S.A.) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The Polish Limited Liability Company (sp.z o.o)</masterLabel>
+        <translation><!-- The Polish Limited Liability Company (sp.z o.o) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UG</masterLabel>
+        <translation><!-- UG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UG &amp; Co. KG</masterLabel>
+        <translation><!-- UG &amp; Co. KG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VOF</masterLabel>
+        <translation><!-- VOF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VZW</masterLabel>
+        <translation><!-- VZW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VaG</masterLabel>
+        <translation><!-- VaG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vereniging</masterLabel>
+        <translation><!-- Vereniging --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Veřejná obchodní společnost - v.o.s.</masterLabel>
+        <translation><!-- Veřejná obchodní společnost - v.o.s. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>e.K</masterLabel>
+        <translation><!-- e.K --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>e.V.</masterLabel>
+        <translation><!-- e.V. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>eG</masterLabel>
+        <translation><!-- eG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>gGmbH</masterLabel>
+        <translation><!-- gGmbH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>mbB</masterLabel>
+        <translation><!-- mbB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>mbH</masterLabel>
+        <translation><!-- mbH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>oHG</masterLabel>
+        <translation><!-- oHG --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

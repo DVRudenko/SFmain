@@ -1,0 +1,191 @@
+<apex:page controller="e2eShortFormCtrl" action="{! init }" sidebar="false" showHeader="false" standardStylesheets="false" docType="html-5.0" cache="false">
+    <apex:form id="formId">
+        <head>
+            <title>Shell Tankkarten online bestellen</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            <apex:includeScript value="{!$Resource.jQuery}"/>
+            <apex:includeScript value="{!$Resource.jqueryInputMask}"/>
+            <apex:stylesheet value="{!URLFOR($Resource.Spinner, 'spinner.css')}"/>
+            <apex:includeScript value="{!URLFOR($Resource.Spinner, 'spinner.js')}"/>
+            <style>
+                @font-face {
+                    font-family: Montserrat;
+                    src: url({!URLFOR($Resource.e2eFonts, '/Montserrat-Regular.ttf')});
+                }
+                @font-face {
+                    font-family: Montserrat bold;
+                    src: url({!URLFOR($Resource.e2eFonts, '/Montserrat-Bold.ttf')});
+                }
+                @font-face {
+                    font-family: Montserrat light;
+                    src: url({!URLFOR($Resource.e2eFonts, '/Montserrat-Light.ttf')});
+                }
+                @font-face {
+                    font-family: Montserrat semibold;
+                    src: url({!URLFOR($Resource.e2eFonts, '/Montserrat-SemiBold.ttf')});
+                }
+                @font-face {
+                    font-family: Montserrat medium;
+                    src: url({!URLFOR($Resource.e2eFonts, '/Montserrat-Medium.ttf')});
+                }
+
+                .b-page-header {
+                    font-family: Montserrat bold;
+                    color: #1A1A1A;
+                    width: 100%;
+                    font-size: 36px;
+                }
+                .body {
+                    background: #F2F2F2;
+                    font-family: Montserrat;
+                    margin: 0;
+                }
+
+                .wrapper {
+                    margin: 0 auto;
+                    max-width: 900px;
+                }
+
+                .white {
+                    background: #FFFFFF;
+                    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+                }
+
+                .inside {
+                    padding: 20px;
+                }
+
+                .b-block-header {
+                    font-family: Montserrat bold;
+                    font-size: 36px;
+                    letter-spacing: -0.8px;
+                    color: #1A1A1A;
+                    margin: 0 0 30px 10px;
+                }
+
+                input[type='text'] {
+                    background: rgba(245, 245, 245, 0.0001);
+                    border: 2px solid #DEDEDE;
+                    box-sizing: border-box;
+                    padding: 10px;
+                    border-radius: unset;
+                    font-style: normal;
+                    font-weight: normal;
+                    line-height: 18px;
+                    font-size: 15px;
+                    width: 100%;
+                    margin: 5px 0;
+                }
+
+                .btn-red {
+                    width: auto;
+                    height: auto;
+                    line-height: 25px;
+                    background: #EE3A43;
+                    font-family: Montserrat bold;
+                    font-size: 12px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    border-radius: unset;
+                    min-width: 125px;
+                    max-width: 400px;
+                    white-space: normal;
+                    display: inline-block;
+                    padding: 6px 12px;
+                    touch-action: manipulation;
+                    cursor: pointer;
+                    border: 1px solid transparent;
+                    text-decoration: none;
+                    margin-top: 30px;
+                }
+
+                .messageCell h4 {
+                    display: none;
+                }
+
+                .message.errorM3 {
+                    color: red;
+                }
+                
+                .message.confirmM3 {
+                    color: green;
+                }
+
+                #lightbox-e2e {
+                    display: none;
+                    background: #000000;
+                    opacity: 0.7;
+                    filter: alpha(opacity=70);
+                    position: fixed;
+                    top: 0px;
+                    left: 0px;
+                    min-width: 100%;
+                    min-height: 100%;
+                    z-index: 1000;
+                }
+            </style>
+            <script>
+                $(document).ready(function() {
+                    $('.phoneNumber').inputmask({mask:"+3\\1999999999999", "placeholder": "" });
+                });
+            </script>
+        </head>
+        <body class="body">
+            <script>
+                //Function is used to get splash status bar when server side call is going on
+                function startSplash() {
+                    document.getElementById('splashDiv').style.display='table-cell';
+                    document.getElementById('lightbox-e2e').style.display = 'block';
+                }
+
+                //Function will make the splash status to be stopped.
+                function endSplash() {
+                    document.getElementById('splashDiv').style.display='none';
+                    document.getElementById('lightbox-e2e').style.display = 'none';
+                }
+            </script>
+            <div class="splashStatus" id="splashDiv">
+                <div class="circle"><img src="{!URLFOR($Resource.Spinner, 'spinner.gif')}"/></div>
+                <div class="txt">Please Wait. Loading...</div>
+            </div>
+            <apex:actionStatus id="splashStatus" onstart="startSplash();" onstop="endSplash();"/>
+            <div class="wrapper">
+                <div style="margin: 30px 0 30px 10px;">
+                    <a href="https://fleetcor.de/" target="_blank">
+                        <apex:image url="{!URLFOR($Resource.e2e_images, 'logo.png')}"/>
+                    </a>
+                </div>
+                <div class="b-block-header">DE SHELL TANKPAS VOOR UW BEDRIJF AANVRAGEN</div>
+            </div>
+            <div class="wrapper white">
+                <div class="inside">
+                    <apex:pageMessages />
+                    <div>
+                        <apex:outputLabel value="Voornaam & Achternaam *"/>
+                        <apex:inputText value="{! lastName }"/>
+                    </div>
+                    <div>
+                        <apex:outputLabel value="Bedrijfsnaam *"/>
+                        <apex:inputText value="{! companyName }"/>
+                    </div>
+                    <div>
+                        <apex:outputLabel value="Telefoonnummer *"/>
+                        <apex:inputText styleClass="phoneNumber" value="{! phoneNumber }"/>
+                    </div>
+                    <div>
+                        <apex:outputLabel value="E-mailadres *"/>
+                        <apex:inputText value="{! email }"/>
+                    </div>
+                    <div>
+                        <br/><strong>Nieuwsbrief</strong><br/>
+                        <apex:inputCheckbox value="{! news }"/>
+                        Wilt u door FLEETCOR per e-mail worden geïnformeerd over nieuws, aanbiedingen en wetenswaardigheden rond uw tankpas?
+                    </div>
+                    <apex:commandLink value="Meer informatie aanvragen" action="{! createLead }" styleClass="btn-red" status="splashStatus" reRender="formId"/>
+                </div>
+            </div>
+        </body>
+        <div id="lightbox-e2e"></div>
+    </apex:form>
+</apex:page>

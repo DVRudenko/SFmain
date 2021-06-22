@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please select Price Book under Opportunity. To select this under Opportunity, you need to have Price Book added under your Account. --></help>
+    <label><!-- Account Price Book --></label>
+    <name>Account_Price_Book__c</name>
+    <relationshipLabel><!-- Additional Hardware --></relationshipLabel>
+</CustomFieldTranslation>

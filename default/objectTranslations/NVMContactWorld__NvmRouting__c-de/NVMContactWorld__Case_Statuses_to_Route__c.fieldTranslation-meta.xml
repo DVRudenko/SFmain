@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter one Case Status per line for Statuses that should cause a Case to be routed to an agent. --></help>
+    <label><!-- Case Statuses to Route --></label>
+    <name>NVMContactWorld__Case_Statuses_to_Route__c</name>
+</CustomFieldTranslation>

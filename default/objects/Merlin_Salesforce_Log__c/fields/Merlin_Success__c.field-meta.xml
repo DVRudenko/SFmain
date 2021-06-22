@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Merlin_Success__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Did the communication to Merlin succeeded?</description>
+    <externalId>false</externalId>
+    <label>Merlin Success</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

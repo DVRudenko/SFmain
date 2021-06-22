@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Or_Email_Should_Be_Filled</fullName>
+    <active>true</active>
+    <description>STCP1-997</description>
+    <errorConditionFormula>AND(
+OR (
+$Profile.Name = 'Retention Agent',
+$Profile.Name = 'Retention Manager',
+$Profile.Name = 'CCS Service Agent',
+$Profile.Name = 'CCS Service Manager',
+$Profile.Name = 'Service Agent',
+$Profile.Name = 'Service Manager'
+),
+OR (
+RecordType.Name = "AllStar",
+RecordType.Name = "CCS Contact layout",
+RecordType.Name = "Contact layout",
+ISBLANK(RecordTypeId)
+),
+
+ISBLANK( Phone ),
+ISBLANK( Email ),
+ISBLANK( MobilePhone )
+)</errorConditionFormula>
+    <errorMessage>Email and phone number empty - please insert one</errorMessage>
+</ValidationRule>

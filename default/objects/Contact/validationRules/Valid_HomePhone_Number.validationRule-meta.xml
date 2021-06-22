@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_HomePhone_Number</fullName>
+    <active>true</active>
+    <description>Allows to enter a phone number in a valid format only</description>
+    <errorConditionFormula>AND(
+            NOT(BEGINS($User.Username, 'e2e_ru@fleetcoremea.force.com')),
+NOT(BEGINS($User.Username, 'sfintegration@transitcard.ru')),
+            OR(ISNEW(), ISCHANGED(HomePhone), ISCHANGED(HomePhone_Status__c)),
+            NOT(OR(
+            ISBLANK(HomePhone),
+            ISPICKVAL(HomePhone_Status__c, 'Needs validation'),
+            AND (
+            OR( AND(BEGINS(HomePhone, '+'), ISNUMBER(LEFT(SUBSTITUTE(HomePhone, '+', ''), 1))),
+            BEGINS(HomePhone, '8')
+            ),
+            NOT(FIND('+', HomePhone, 2) != 0),
+            NOT(CONTAINS(HomePhone, '.')),
+            ISNUMBER(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(HomePhone, '+', ''), '#', ''),' ', '')),
+            OR (
+            AND(NOT(CONTAINS(HomePhone, '#')),
+            IF(OR(BEGINS(HomePhone, '+7'), BEGINS(HomePhone, '8')),
+            LEN(SUBSTITUTE(SUBSTITUTE(HomePhone, '+', ''),' ', '')) = 11,
+            AND(LEN(SUBSTITUTE(SUBSTITUTE(HomePhone, '+', ''),' ', '')) &gt;= 8, LEN(SUBSTITUTE(SUBSTITUTE(HomePhone, '+', ''),' ', '')) &lt;= 15)
+            )
+            ),
+            AND(CONTAINS(HomePhone, '#'),
+            IF(OR(BEGINS(HomePhone, '+7'), BEGINS(HomePhone, '8')),
+            FIND('#', SUBSTITUTE(SUBSTITUTE(HomePhone, '+', ''),' ', '')) = 12,
+            AND(FIND('#', SUBSTITUTE(SUBSTITUTE(HomePhone, '+', ''),' ', '')) &gt;= 9, FIND('#', SUBSTITUTE(SUBSTITUTE(HomePhone, '+', ''),' ', '')) &lt;= 16)
+            )
+            )
+            )
+            )
+            ))
+            )</errorConditionFormula>
+    <errorDisplayField>HomePhone</errorDisplayField>
+    <errorMessage>Wrong phone number format. Only '+', '0-9' and spaces are allowed. Use '#' for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: '+49 5545555#045'</errorMessage>
+</ValidationRule>

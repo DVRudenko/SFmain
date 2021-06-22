@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Order Stage --></label>
+    <name>Order_Stage__c</name>
+    <picklistValues>
+        <masterLabel>Nová</masterLabel>
+        <translation><!-- Nová --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Schváleno</masterLabel>
+        <translation><!-- Schváleno --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

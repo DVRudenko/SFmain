@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_balance_zero__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If a badge has a &#39;if zero balance&#39; checked field, negative value won&#39;t be substracted from User&#39;s balance.</description>
+    <externalId>false</externalId>
+    <label>If balance zero</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

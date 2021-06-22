@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Exceeds_Function_Limit__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>AND(NOT(ISBLANK(success__Base_Behaviour__r.success__Repetition_Limit__c)),success__Count__c &gt; success__Base_Behaviour__r.success__Repetition_Limit__c)</formula>
+    <label>Exceeds Function Limit</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

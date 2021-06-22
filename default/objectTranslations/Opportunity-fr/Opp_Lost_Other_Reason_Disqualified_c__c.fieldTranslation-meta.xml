@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Opp_Lost_Other_Reason_Disqualified --></label>
+    <name>Opp_Lost_Other_Reason_Disqualified_c__c</name>
+    <picklistValues>
+        <masterLabel>Existing client</masterLabel>
+        <translation><!-- Existing client --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect contact information</masterLabel>
+        <translation><!-- Incorrect contact information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not an organization</masterLabel>
+        <translation><!-- Not an organization --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Re-application</masterLabel>
+        <translation><!-- Re-application --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reseller</masterLabel>
+        <translation><!-- Reseller --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Return to funnel</masterLabel>
+        <translation><!-- Return to funnel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tender with a little pumping</masterLabel>
+        <translation><!-- Tender with a little pumping --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test</masterLabel>
+        <translation><!-- Test --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>There is no fleet</masterLabel>
+        <translation><!-- There is no fleet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>There is no time frame for decision</masterLabel>
+        <translation><!-- There is no time frame for decision --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

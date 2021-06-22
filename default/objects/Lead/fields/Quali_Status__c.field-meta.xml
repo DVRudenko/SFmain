@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quali_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Quali-Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Status</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>-</fullName>
+                <default>false</default>
+                <label>-</label>
+            </value>
+            <value>
+                <fullName>Already Allstar Customer</fullName>
+                <default>false</default>
+                <label>Already Allstar Customer</label>
+            </value>
+            <value>
+                <fullName>Already CCS customer</fullName>
+                <default>false</default>
+                <label>Already CCS customer</label>
+            </value>
+            <value>
+                <fullName>Already Lotos Customer</fullName>
+                <default>false</default>
+                <label>Already Lotos Customer</label>
+            </value>
+            <value>
+                <fullName>Anwahllimit erreicht</fullName>
+                <default>false</default>
+                <label>Anwahllimit erreicht</label>
+            </value>
+            <value>
+                <fullName>Bereits Kunde - FleetCor</fullName>
+                <default>false</default>
+                <label>Bereits Kunde - FleetCor</label>
+            </value>
+            <value>
+                <fullName>Bereits Kunde - Shell</fullName>
+                <default>false</default>
+                <label>Bereits Kunde - Shell</label>
+            </value>
+            <value>
+                <fullName>Brand</fullName>
+                <default>false</default>
+                <label>Brand</label>
+            </value>
+            <value>
+                <fullName>Centrally decided</fullName>
+                <default>false</default>
+                <label>Centrally decided</label>
+            </value>
+            <value>
+                <fullName>Company ceased to exist</fullName>
+                <default>false</default>
+                <label>Company ceased to exist</label>
+            </value>
+            <value>
+                <fullName>Competitor´s customer - CS request</fullName>
+                <default>false</default>
+                <label>Competitor´s customer - CS request</label>
+            </value>
+            <value>
+                <fullName>Competitor - request</fullName>
+                <default>false</default>
+                <label>Competitor - request</label>
+            </value>
+            <value>
+                <fullName>Competitors</fullName>
+                <default>false</default>
+                <label>Competitors</label>
+            </value>
+            <value>
+                <fullName>Coverage/Acceptance</fullName>
+                <default>false</default>
+                <label>Coverage/Acceptance</label>
+            </value>
+            <value>
+                <fullName>Customer reached – additional information required</fullName>
+                <default>false</default>
+                <label>Customer reached – additional information required</label>
+            </value>
+            <value>
+                <fullName>Customer reached – call later</fullName>
+                <default>false</default>
+                <label>Customer reached – call later</label>
+            </value>
+            <value>
+                <fullName>Customer reached – didn’t talk to decision maker</fullName>
+                <default>false</default>
+                <label>Customer reached – didn’t talk to decision maker</label>
+            </value>
+            <value>
+                <fullName>Customer reached – email sent</fullName>
+                <default>false</default>
+                <label>Customer reached – email sent</label>
+            </value>
+            <value>
+                <fullName>Customer reached – first meeting</fullName>
+                <default>false</default>
+                <label>Customer reached – first meeting</label>
+            </value>
+            <value>
+                <fullName>Customer reached – follow up (seasonality)</fullName>
+                <default>false</default>
+                <label>Customer reached – follow up (seasonality)</label>
+            </value>
+            <value>
+                <fullName>Customer reached – forwarded to Field</fullName>
+                <default>false</default>
+                <label>Customer reached – forwarded to Field</label>
+            </value>
+            <value>
+                <fullName>Customer reached – next meeting(s)</fullName>
+                <default>false</default>
+                <label>Customer reached – next meeting(s)</label>
+            </value>
+            <value>
+                <fullName>Do Not Contact</fullName>
+                <default>false</default>
+                <label>Do Not Contact</label>
+            </value>
+            <value>
+                <fullName>Dublette</fullName>
+                <default>false</default>
+                <label>Dublette</label>
+            </value>
+            <value>
+                <fullName>Financial/Credit</fullName>
+                <default>false</default>
+                <label>Financial/Credit</label>
+            </value>
+            <value>
+                <fullName>Follow UP</fullName>
+                <default>false</default>
+                <label>Follow UP</label>
+            </value>
+            <value>
+                <fullName>Follow up email #1 sent</fullName>
+                <default>false</default>
+                <label>Follow up email #1 sent</label>
+            </value>
+            <value>
+                <fullName>Follow up email #2 sent</fullName>
+                <default>false</default>
+                <label>Follow up email #2 sent</label>
+            </value>
+            <value>
+                <fullName>Forwarded</fullName>
+                <default>false</default>
+                <label>Forwarded</label>
+            </value>
+            <value>
+                <fullName>Forwarded internally</fullName>
+                <default>false</default>
+                <label>Forwarded internally</label>
+            </value>
+            <value>
+                <fullName>Forwarded to external provider</fullName>
+                <default>false</default>
+                <label>Forwarded to external provider</label>
+            </value>
+            <value>
+                <fullName>Forwarded to Market</fullName>
+                <default>false</default>
+                <label>Forwarded to Market</label>
+            </value>
+            <value>
+                <fullName>Gesprächsverweigerer</fullName>
+                <default>false</default>
+                <label>Gesprächsverweigerer</label>
+            </value>
+            <value>
+                <fullName>Info Bonus card</fullName>
+                <default>false</default>
+                <label>Info Bonus card</label>
+            </value>
+            <value>
+                <fullName>Jiné</fullName>
+                <default>false</default>
+                <label>Jiné</label>
+            </value>
+            <value>
+                <fullName>Keine Fahrzeuge</fullName>
+                <default>false</default>
+                <label>Keine Fahrzeuge</label>
+            </value>
+            <value>
+                <fullName>Kein Interesse</fullName>
+                <default>false</default>
+                <label>Kein Interesse</label>
+            </value>
+            <value>
+                <fullName>Kontaktdaten falsch</fullName>
+                <default>false</default>
+                <label>Kontaktdaten falsch</label>
+            </value>
+            <value>
+                <fullName>Kunde nicht erreicht</fullName>
+                <default>false</default>
+                <label>Kunde nicht erreicht</label>
+            </value>
+            <value>
+                <fullName>Leasing</fullName>
+                <default>false</default>
+                <label>Leasing</label>
+            </value>
+            <value>
+                <fullName>Loajalitní program/Slevy</fullName>
+                <default>false</default>
+                <label>Loajalitní program/Slevy</label>
+            </value>
+            <value>
+                <fullName>Lost to Competition</fullName>
+                <default>false</default>
+                <label>Lost to Competition</label>
+            </value>
+            <value>
+                <fullName>Low potential</fullName>
+                <default>false</default>
+                <label>Low potential</label>
+            </value>
+            <value>
+                <fullName>Nedosažitelný</fullName>
+                <default>false</default>
+                <label>Nedosažitelný</label>
+            </value>
+            <value>
+                <fullName>Neplatný firemní záznam</fullName>
+                <default>false</default>
+                <label>Neplatný firemní záznam</label>
+            </value>
+            <value>
+                <fullName>Nepodniká</fullName>
+                <default>false</default>
+                <label>Nepodniká</label>
+            </value>
+            <value>
+                <fullName>No reply – Quick Process</fullName>
+                <default>false</default>
+                <label>No reply – Quick Process</label>
+            </value>
+            <value>
+                <fullName>Not a Lead</fullName>
+                <default>false</default>
+                <label>Not a Lead/Opportunity</label>
+            </value>
+            <value>
+                <fullName>Not a legal entity</fullName>
+                <default>false</default>
+                <label>Not a legal entity</label>
+            </value>
+            <value>
+                <fullName>Not reached</fullName>
+                <default>false</default>
+                <label>Not reached</label>
+            </value>
+            <value>
+                <fullName>Not reached – dial tone</fullName>
+                <default>false</default>
+                <label>Not reached – dial tone</label>
+            </value>
+            <value>
+                <fullName>Not reached – SMS sent</fullName>
+                <default>false</default>
+                <label>Not reached – SMS sent</label>
+            </value>
+            <value>
+                <fullName>Not reached – voicemail</fullName>
+                <default>false</default>
+                <label>Not reached – voicemail</label>
+            </value>
+            <value>
+                <fullName>Offer sent</fullName>
+                <default>false</default>
+                <label>Offer sent</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Příliš nízký potenciál</fullName>
+                <default>false</default>
+                <label>Příliš nízký potenciál</label>
+            </value>
+            <value>
+                <fullName>Privatkunde</fullName>
+                <default>false</default>
+                <label>Privatkunde</label>
+            </value>
+            <value>
+                <fullName>Product features</fullName>
+                <default>false</default>
+                <label>Product features</label>
+            </value>
+            <value>
+                <fullName>Reached</fullName>
+                <default>false</default>
+                <label>Reached</label>
+            </value>
+            <value>
+                <fullName>Refused to talk - monitoring</fullName>
+                <default>false</default>
+                <label>Refused to talk - monitoring</label>
+            </value>
+            <value>
+                <fullName>Rozhodnutí z centrály</fullName>
+                <default>false</default>
+                <label>Rozhodnutí z centrály</label>
+            </value>
+            <value>
+                <fullName>Sent to Acquisition - Contacted</fullName>
+                <default>false</default>
+                <label>Sent to Acquisition - Contacted</label>
+            </value>
+            <value>
+                <fullName>Sent to Acquisition - Not contacted</fullName>
+                <default>false</default>
+                <label>Sent to Acquisition - Not contacted</label>
+            </value>
+            <value>
+                <fullName>Sent to Lotos</fullName>
+                <default>false</default>
+                <label>Sent to Lotos</label>
+            </value>
+            <value>
+                <fullName>Sent to Shell</fullName>
+                <default>false</default>
+                <label>Sent to Shell</label>
+            </value>
+            <value>
+                <fullName>Sent to support</fullName>
+                <default>false</default>
+                <label>Sent to support</label>
+            </value>
+            <value>
+                <fullName>Současný zákazník</fullName>
+                <default>false</default>
+                <label>Současný zákazník</label>
+            </value>
+            <value>
+                <fullName>Spam</fullName>
+                <default>false</default>
+                <label>Spam</label>
+            </value>
+            <value>
+                <fullName>Unternehmen erloschen</fullName>
+                <default>false</default>
+                <label>Unternehmen erloschen</label>
+            </value>
+            <value>
+                <fullName>Vlastní bencalor</fullName>
+                <default>false</default>
+                <label>Vlastní bencalor</label>
+            </value>
+            <value>
+                <fullName>Vlastnosti produktu</fullName>
+                <default>false</default>
+                <label>Vlastnosti produktu</label>
+            </value>
+            <value>
+                <fullName>Young company (less than 18 months)</fullName>
+                <default>false</default>
+                <label>Young company (less than 18 months)</label>
+            </value>
+            <value>
+                <fullName>Zavázán dlouhodobým kontraktem</fullName>
+                <default>false</default>
+                <label>Zavázán dlouhodobým kontraktem</label>
+            </value>
+            <value>
+                <fullName>Zentralentscheid</fullName>
+                <default>false</default>
+                <label>Zentralentscheid</label>
+            </value>
+            <value>
+                <fullName>zu viele Fahrzeuge</fullName>
+                <default>false</default>
+                <label>zu viele Fahrzeuge</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Contacted - 4th Attempt</controllingFieldValue>
+            <valueName>-</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Bereits Kunde - Shell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Do Not Contact</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <valueName>Anwahllimit erreicht</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Zentralentscheid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Unternehmen erloschen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Dublette</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <valueName>Follow UP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Kein Interesse</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Keine Fahrzeuge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Gesprächsverweigerer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified</controllingFieldValue>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Kontaktdaten falsch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Already Allstar Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Already CCS customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Bereits Kunde - FleetCor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Already Lotos Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Brand</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Centrally decided</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Company ceased to exist</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Competitor´s customer - CS request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Competitor - request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Competitors</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Coverage/Acceptance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Kunde nicht erreicht</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Financial/Credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Forwarded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Forwarded internally</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Forwarded to external provider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Forwarded to Market</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Info Bonus card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Jiné</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Leasing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Loajalitní program/Slevy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Lost to Competition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Low potential</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Nedosažitelný</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Neplatný firemní záznam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Nepodniká</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>No reply – Quick Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Not a Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Not a legal entity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Příliš nízký potenciál</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Product features</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Refused to talk - monitoring</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Rozhodnutí z centrály</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Sent to Lotos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Sent to Shell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Současný zákazník</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Spam</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Vlastní bencalor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Vlastnosti produktu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Young company (less than 18 months)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Zavázán dlouhodobým kontraktem</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Customer reached – additional information required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Customer reached – call later</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Customer reached – didn’t talk to decision maker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Customer reached – email sent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Customer reached – first meeting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Customer reached – follow up (seasonality)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Customer reached – forwarded to Field</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Customer reached – next meeting(s)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Not reached</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Not reached – dial tone</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Not reached – SMS sent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Not reached – voicemail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Reached</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Sent to Acquisition - Contacted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Contacted</controllingFieldValue>
+            <valueName>Sent to Acquisition - Not contacted</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

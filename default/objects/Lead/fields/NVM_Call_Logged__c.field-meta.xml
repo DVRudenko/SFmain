@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVM_Call_Logged__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>NVM: Triggers Workflow rule to increment Call Count</description>
+    <externalId>false</externalId>
+    <label>NVM Call Logged</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

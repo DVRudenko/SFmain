@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Starts Rep selected by the Starts Manager --></help>
+    <label><!-- Starts Rep --></label>
+    <name>Starts_Rep__c</name>
+    <relationshipLabel><!-- Opportunities (Starts Rep) --></relationshipLabel>
+</CustomFieldTranslation>

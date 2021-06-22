@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Prvotní kontakt (příchozí/odchozí)</label>
+    <name>First_Contact_Inbound_Outbound__c</name>
+    <picklistValues>
+        <masterLabel>Inbound Call</masterLabel>
+        <translation>Příchozí telefonát</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Mail</masterLabel>
+        <translation>Příchozí e-mail</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Website</masterLabel>
+        <translation>Poptávka z webu</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incoming SMS</masterLabel>
+        <translation>Příchozí SMS</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound Call</masterLabel>
+        <translation>Odchozí telefonát</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound e-mail</masterLabel>
+        <translation>Odchozí e-mail</translation>
+    </picklistValues>
+</CustomFieldTranslation>

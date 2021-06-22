@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>e2eChatCHFR_LiveChatTranscript</fullName>
+    <filterScope>Queue</filterScope>
+    <label>e2eChatCHFR</label>
+    <queue>e2eChatCHFR</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

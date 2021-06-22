@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__If_Not_Aggregate_then_no_Aggregate_value</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(ISBLANK( success__Aggregate_Field__c ),NOT(ISBLANK( success__Number_of_occurrences__c )), ISBLANK( success__Number_of_occurrences__c ))</errorConditionFormula>
+    <errorMessage>If aggregate rewarding is required, an Aggregate Function and a Function Value must both be specified.</errorMessage>
+</ValidationRule>

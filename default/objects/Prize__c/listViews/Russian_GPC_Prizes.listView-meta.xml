@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Russian_GPC_Prizes</fullName>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Prize__c.Russian_GPC</value>
+    </filters>
+    <label>Russian GPC Prizes</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>GPC_Badges</group>
+    </sharedTo>
+</ListView>

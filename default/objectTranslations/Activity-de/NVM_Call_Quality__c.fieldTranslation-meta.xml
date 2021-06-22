@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>NVM Gesprächsqualität</label>
+    <name>NVM_Call_Quality__c</name>
+    <picklistValues>
+        <masterLabel>Call breaking up</masterLabel>
+        <translation>Gesprächsunterbrechungen</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Call disconnected</masterLabel>
+        <translation>Gespräch getrennt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Can&#39;t hear customer</masterLabel>
+        <translation>Kunde nicht hörbar</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Can&#39;t hear operator</masterLabel>
+        <translation>Verkäufer nicht hörbar</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NVM not connected, old system ok</masterLabel>
+        <translation>NVM nicht verbunden, Dialoga ok</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Noise during call</masterLabel>
+        <translation>Geräusche während dem Gespräch</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not able to connect</masterLabel>
+        <translation>Gesrpächsaufbau nicht möglich</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Sonstiges</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong number</masterLabel>
+        <translation>Falsche Nummer</translation>
+    </picklistValues>
+</CustomFieldTranslation>

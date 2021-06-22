@@ -1,0 +1,23 @@
+<messaging:emailTemplate subject="One-time security code" recipientType="Contact" relatedToType="E2E_Data_Object__c" renderUsingSystemContextWithoutSharing="true">
+    <messaging:htmlEmailBody>
+        <table width="600px" border="0" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td><img align="center" border="0" src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/d1f87f67-8c84-477b-b422-7d4a4c01195d/00D1X0000000f0gUAA/Header_CCS_CZ.jpg" alt="Image" title="Image" width="600"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <br/>
+                        Dear customer, <br/><br/>
+                        Here is the confirmation code for your online form: <br/>
+                        <h1 align="center">{! relatedTo.Verification_Code__c }</h1>
+                        All you have to do is copy the confirmation code and paste it to the form to complete your order.<br/><br/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img align="center" border="0" src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/d1f87f67-8c84-477b-b422-7d4a4c01195d/00D1X0000000f0gUAA/Footer_CCS_CZ.jpg" alt="Image" title="Image" width="600"/></td>
+                </tr>
+            </tbody>
+        </table>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

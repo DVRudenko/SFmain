@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Rejected_Abandoned_hard</fullName>
+    <columns>Registered_Country__c</columns>
+    <columns>Opp_Age__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Sec_Channel__c</columns>
+    <columns>OPPORTUNITY.LEAD_SOURCE</columns>
+    <columns>E2E_Active_Substep__c</columns>
+    <columns>Anzahl_der_Karten__c</columns>
+    <columns>Total_consumption_l_month__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>E2E__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Euroshell,Opportunity.Euroshell_Starts</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>contains</operation>
+        <value>Altan,Rutger</value>
+    </filters>
+    <filters>
+        <field>E2E_Status__c</field>
+        <operation>equals</operation>
+        <value>Abandoned (hard),Rejected</value>
+    </filters>
+    <label>E2E Rejected/Abandoned (hard)</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>Teamleiter_Inbound</role>
+        <role>Teamleiter_Inbound_2</role>
+    </sharedTo>
+</ListView>

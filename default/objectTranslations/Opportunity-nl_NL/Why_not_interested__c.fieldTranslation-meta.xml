@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Why not interested? --></label>
+    <name>Why_not_interested__c</name>
+    <picklistValues>
+        <masterLabel>Brand: Allstar Mondo</masterLabel>
+        <translation><!-- Brand: Allstar Mondo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brand: Fleetcor</masterLabel>
+        <translation><!-- Brand: Fleetcor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial: monthly card fees</masterLabel>
+        <translation><!-- Financial: monthly card fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial: no discount</masterLabel>
+        <translation><!-- Financial: no discount --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial: other fees</masterLabel>
+        <translation><!-- Financial: other fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial: transaction fees</masterLabel>
+        <translation><!-- Financial: transaction fees --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Process: too complex, too many stages, too long</masterLabel>
+        <translation><!-- Process: too complex, too many stages, too long --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Process: too many documents to hand in</masterLabel>
+        <translation><!-- Process: too many documents to hand in --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service: control</masterLabel>
+        <translation><!-- Service: control --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service: custom PIN</masterLabel>
+        <translation><!-- Service: custom PIN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service: other</masterLabel>
+        <translation><!-- Service: other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable to reclaim VAT with invoice</masterLabel>
+        <translation><!-- Unable to reclaim VAT with invoice --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

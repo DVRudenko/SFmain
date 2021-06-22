@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Read_only_when_checked_CE</fullName>
+    <active>true</active>
+    <description>For CE countries (HU, CZ, SK) it is not possible to change uncheck if already checked. CCS Record Type is excluded.</description>
+    <errorConditionFormula>
+        AND(Eco_Fee__c != TRUE,ISCHANGED(Eco_Fee__c), OR(Registered_Country__c = "Czech Republic",
+        Registered_Country__c = "Hungary",
+        Registered_Country__c = "Slovakia"),
+        RecordType.DeveloperName != "CCS_Opportunity",
+        $Profile.Name != "E2E Profile",
+        $Profile.Name != "E2E PL Profile",
+        $Profile.Name != "Admin",
+        $Profile.Name != "System Administrator",
+        $Profile.Name != 'API Only',
+        $Profile.Name != 'CCS API System Admin')
+    </errorConditionFormula>
+    <errorDisplayField>Eco_Fee__c</errorDisplayField>
+    <errorMessage>For CZ,SK,HU it is not possible to uncheck when already checked. Customer has to opt-out via email or calling Customer Service.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Allow disable features</description>
+    <label>Service Transformation Settings</label>
+    <pluralLabel>Service Transformation Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

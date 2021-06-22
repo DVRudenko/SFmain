@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Owner_is_Queue</fullName>
+    <active>true</active>
+    <description>User should not be able to change Lead status if Owner is Queue.</description>
+    <errorConditionFormula>AND(BEGINS(OwnerId , "00G"), ISCHANGED(Status),NOT(BEGINS($Profile.Name,"CCS")),NOT($User.Username != "natalia.skachko@transitcard.ru.eu"),NOT($User.Username != "tatianakim@transitcard.ru"))</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>Lead is currently in the queue. Please assign it to a User before changing the Status.</errorMessage>
+</ValidationRule>

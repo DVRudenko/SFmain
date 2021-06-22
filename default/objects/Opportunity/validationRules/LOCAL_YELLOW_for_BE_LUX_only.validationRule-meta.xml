@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LOCAL_YELLOW_for_BE_LUX_only</fullName>
+    <active>true</active>
+    <description>Product__c = "LOCAL - YELLOW" is available only if Registered_Country__c = "Belgium-NL", "Belgium-FR" or "Luxembourg".</description>
+    <errorConditionFormula>AND(ISPICKVAL(Product__c, "LOCAL - YeLLOW"), Registered_Country__c != "Belgium-FR", Registered_Country__c != "Belgium-NL", Registered_Country__c != "Luxembourg", Registered_Country__c != "Switzerland-FR")</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Offer "LOCAL - YELLOW" is available only for Belgium and Luxembourg.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carnet_Discount_Package</fullName>
+    <active>true</active>
+    <description>You can only have "Unit Package Price - Paid monthly" or "Sales Discount", not both.</description>
+    <errorConditionFormula>AND(
+RecordTypeId = '0120O000000XMWa',
+Unit_Package_Price_Paid_monthly__c = True,
+Sales_Basic_Monthly_Fee_Discount__c &lt;&gt; 0)</errorConditionFormula>
+    <errorMessage>You can't have both "Unit Package Price - Paid monthly" and "Sales Discount".</errorMessage>
+</ValidationRule>

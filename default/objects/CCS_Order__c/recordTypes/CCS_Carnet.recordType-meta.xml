@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Carnet</fullName>
+    <active>true</active>
+    <description>CCS Carnet Record Type for CCS Order.</description>
+    <label>CCS Carnet</label>
+    <picklistValues>
+        <picklist>Billing_Country__c</picklist>
+        <values>
+            <fullName>Slovensko</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Česká republika</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Cribis__c</picklist>
+        <values>
+            <fullName>A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>D</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>G</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>H</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>K</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Š</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Merlin_Partner__c</picklist>
+        <values>
+            <fullName>CCS%2FFLEETCOR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CESKAPOSTA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INNOGY</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Offer_Type__c</picklist>
+        <values>
+            <fullName>1%2B1 Zdarma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1%2B1 zadarmo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2%2B1 Zdarma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Carnet s predplatenou kartou na 40 EUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Carnet s predplatenou kartou na 50 EUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Carnet s předplacenou kartou na PHM s nábojem 1500 Kč zdarma%21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carnet 10%2B za 1Kč</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carnet 10ks%2B za 1 EUR%21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carnet 5%2Bks za 1 EUR%21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carnet 5%2Bks za 1Kč%21</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carnet výhodne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carnet výhodně</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carnet za 1 EUR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Carnet za 1 Kč</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobilní jednotka OBD2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sada KOMPLET</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Order_Stage__c</picklist>
+        <values>
+            <fullName>Nepotvrzeno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Neschváleno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nová</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Předáno na K%2EO%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Předáno na Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schváleno nové</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stornováno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zadaná přiobjednávka</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zadáno do systému</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Čekáme na PM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Čekáme na dodatek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Čekáme na komponenty</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Čekáme na mandát</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Čekáme na potvrzení o inkasu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Čekáme na výkazy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Čekáme na zadání karet</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Order_Status__c</picklist>
+        <values>
+            <fullName>Objednáno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rozpracováno</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Packaging_Type__c</picklist>
+        <values>
+            <fullName>Birthday gift packaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christmas gift packaging</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Without gift packaging</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Type__c</picklist>
+        <values>
+            <fullName>Bank Transfer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cash on delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Direct Debit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proforma invoice</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product_Country__c</picklist>
+        <values>
+            <fullName>CZ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Product__c</picklist>
+        <values>
+            <fullName>CCS Carnet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Carnet OBD2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Carnet OBD2 SK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Carnet SK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Carnet Služba</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Carnet Služba SK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Shipping_Country__c</picklist>
+        <values>
+            <fullName>Slovensko</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Česká republika</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Shipping_Type__c</picklist>
+        <values>
+            <fullName>Courier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pickup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Post</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

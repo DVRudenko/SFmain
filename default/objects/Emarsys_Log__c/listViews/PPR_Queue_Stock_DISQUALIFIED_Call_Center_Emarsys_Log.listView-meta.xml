@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Queue_Stock_DISQUALIFIED_Call_Center_Emarsys_Log</fullName>
+    <filterScope>Queue</filterScope>
+    <label>PPR Queue Stock DISQUALIFIED Call Center</label>
+    <queue>PPR_Queue_Stock_DISQUALIFIED_Call_Center</queue>
+    <sharedTo>
+        <allInternalUsers/>
+    </sharedTo>
+</ListView>

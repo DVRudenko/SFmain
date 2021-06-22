@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the reason that best describes lead disqualification --></help>
+    <label><!-- Lead Status (Specific) --></label>
+    <name>Lead_Status_Specific__c</name>
+    <picklistValues>
+        <masterLabel>Bad Data/Wrong Phone Number</masterLabel>
+        <translation><!-- Bad Data/Wrong Phone Number --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bad Prior Experience</masterLabel>
+        <translation>Špatná předchozí zkušenost</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank not in Kabbage system</masterLabel>
+        <translation><!-- Bank not in Kabbage system --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chybné/odpojené telefonní číslo</masterLabel>
+        <translation><!-- Chybné/odpojené telefonní číslo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed Account</masterLabel>
+        <translation><!-- Closed Account --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consumer Card</masterLabel>
+        <translation>Bankovní karta</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Decisions Made Different Location</masterLabel>
+        <translation>Rozhodnutí z centrály</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Delinquent</masterLabel>
+        <translation>Dlužník</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Denial of credit</masterLabel>
+        <translation><!-- Denial of credit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate</masterLabel>
+        <translation>Duplikát</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate (Site)</masterLabel>
+        <translation><!-- Duplicate (Site) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Economic Concerns</masterLabel>
+        <translation><!-- Economic Concerns --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email SPAM</masterLabel>
+        <translation><!-- Email SPAM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Employees not Mobile</masterLabel>
+        <translation><!-- Employees not Mobile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Existing Customer</masterLabel>
+        <translation>Současný zákazník</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Existing Customer - Fuelman</masterLabel>
+        <translation><!-- Existing Customer - Fuelman --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Existing Customer - Speedway</masterLabel>
+        <translation><!-- Existing Customer - Speedway --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Features of Card</masterLabel>
+        <translation>Vlastnosti produktu</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fraud</masterLabel>
+        <translation>Zpronevěra</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuel Distributor</masterLabel>
+        <translation>Distributor paliva</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gov&#39;t/Non-Profit/Tax Exempt</masterLabel>
+        <translation><!-- Gov&apos;t/Non-Profit/Tax Exempt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Low Priority Now</masterLabel>
+        <translation><!-- Low Priority Now --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile Workers don&#39;t have Phones</masterLabel>
+        <translation><!-- Mobile Workers don&apos;t have Phones --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Company Vehicles</masterLabel>
+        <translation><!-- No Company Vehicles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Interest: Credit Line Offer is Not Competitive</masterLabel>
+        <translation><!-- No Interest: Credit Line Offer is Not Competitive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Interest: Only Purchase Fuel</masterLabel>
+        <translation><!-- No Interest: Only Purchase Fuel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Interest: Poor Prior Experience</masterLabel>
+        <translation><!-- No Interest: Poor Prior Experience --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Interest: Prefer Current Payment Method</masterLabel>
+        <translation><!-- No Interest: Prefer Current Payment Method --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Interest: Product Lacks Needed Feature</masterLabel>
+        <translation><!-- No Interest: Product Lacks Needed Feature --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Interest: Want More Rewards/Points</masterLabel>
+        <translation><!-- No Interest: Want More Rewards/Points --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Sufficient Fuelman Business</masterLabel>
+        <translation><!-- No Sufficient Fuelman Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No suitable gas stations</masterLabel>
+        <translation><!-- No suitable gas stations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Interested</masterLabel>
+        <translation><!-- Not Interested --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a Current Customer</masterLabel>
+        <translation><!-- Not a Current Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a Valid Business</masterLabel>
+        <translation><!-- Not a Valid Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not enough business revenue (less than $50k)</masterLabel>
+        <translation><!-- Not enough business revenue (less than $50k) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not in business for more than 1 year</masterLabel>
+        <translation><!-- Not in business for more than 1 year --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onsite Tank(s)</masterLabel>
+        <translation><!-- Onsite Tank(s) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Out of Business</masterLabel>
+        <translation><!-- Out of Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricing</masterLabel>
+        <translation><!-- Pricing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Privacy Concerns</masterLabel>
+        <translation><!-- Privacy Concerns --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Re-request</masterLabel>
+        <translation><!-- Re-request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refusal from PPR</masterLabel>
+        <translation><!-- Refusal from PPR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remove from List/Do Not Contact</masterLabel>
+        <translation><!-- Remove from List/Do Not Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Return to funnel</masterLabel>
+        <translation><!-- Return to funnel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rewards Programs/Rebates/Discounts</masterLabel>
+        <translation><!-- Rewards Programs/Rebates/Discounts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STK - terminal</masterLabel>
+        <translation><!-- STK - terminal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Satisfied with Competitor Program</masterLabel>
+        <translation><!-- Satisfied with Competitor Program --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Terms</masterLabel>
+        <translation><!-- Terms --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Too Few Vehicles</masterLabel>
+        <translation><!-- Too Few Vehicles --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Too Little Fuel Consumption</masterLabel>
+        <translation><!-- Too Little Fuel Consumption --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unable to Reach</masterLabel>
+        <translation><!-- Unable to Reach --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Under Long-Term Contract</masterLabel>
+        <translation><!-- Under Long-Term Contract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unreachable: &gt;5 Attempts</masterLabel>
+        <translation><!-- Unreachable: &gt;5 Attempts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Using Non-Partner Solution</masterLabel>
+        <translation><!-- Using Non-Partner Solution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Using Partner Solution</masterLabel>
+        <translation><!-- Using Partner Solution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wet Hosing</masterLabel>
+        <translation><!-- Wet Hosing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>АГРЕГАТОР – существующий клиент партнера</masterLabel>
+        <translation><!-- АГРЕГАТОР – существующий клиент партнера --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

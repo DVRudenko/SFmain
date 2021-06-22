@@ -1,0 +1,19 @@
+
+{
+    "translations": {
+        "title": {
+            "en": "Paper invoice",
+            "pl": "Faktura papierowa"
+        },
+        "description": {
+            "en": "<p>All invoices are delivered in electronic format for free. However, if you want to receive a printout, we will deliver it to you.</p><p>PLN 20.00 for a paper invoice</p>",
+            "pl": "<p>Wszystkie faktury są dostarczane w formacie elektronicznym za darmo. Jeżeli jednak chcesz otrzymać wydruk, to dostarczymy go do Ciebie.</p><p>20.00 zł za fakturę papierową</p>"
+        }
+    },
+    "settings": {
+        "bgImage": "/resource/ete_images/bgInfoCardLetter.png",
+        "show_more": "false",
+        "show_checkbox_1": "false",
+        "show_checkbox_2": "false"
+    }
+}

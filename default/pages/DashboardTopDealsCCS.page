@@ -1,0 +1,164 @@
+<apex:page controller="DashboardTopDealsCCSctrl" action="{! init }" sidebar="false" showHeader="false">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+    <apex:form >
+        <style>
+            .greenLink {
+                color: green !important;
+                font-weight: bold;
+            }
+            .orangeLink {
+                color: orange !important;
+                font-weight: bold;
+            }
+            .redLink {
+                color: red !important;
+                font-weight: bold;
+            }
+            .link {
+                color: black !important;
+                font-weight: bold;
+            }
+            .legendbox {
+                display: inline-block; 
+                height: 12px; 
+                width: 12px; 
+                margin: 0 3px 0 5px;
+            }
+        </style>
+        <apex:pageBlock >
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <h1 style="margin-bottom: 10px; font-size: 15px; display: block;">Top 10 deals in progress for 
+                            <apex:selectList value="{! selectedPeriod }" size="1" multiselect="false" style="margin-left: 5px;">
+                                <apex:selectOptions value="{! periodsList }"/>
+                                <apex:actionSupport action="{! init }" event="onchange"/>
+                            </apex:selectList>
+                            <apex:selectList value="{! selectedYear }" size="1" multiselect="false" style="margin: 0 5px;">
+                                <apex:selectOptions value="{! yearsList }"/>
+                                <apex:actionSupport action="{! changeYear }" event="onchange"/>
+                            </apex:selectList>({! startDateOfMonthString } - {! endDateOfMonthString })
+                        </h1>
+                    </td>
+                    <!-- <td style="text-align: right;">
+                        <apex:outputLink value="/articles/Knowledge/Help-page-for-Top-10-deals-in-progress-dashboard" target="_blank" id="theLink">Help</apex:outputLink>
+                    </td> -->
+                </tr>
+            </table>
+            <apex:pageMessages />
+            <div>
+                <apex:outputPanel rendered="{! OR(currentUser.UserRole.Name == 'CCS Telesales Team Lead',
+                                                  currentUser.UserRole.Name == 'CCS CZ Telesales',
+                                                  currentUser.UserRole.Name == 'CCS SME Team Lead',
+                                                  currentUser.UserRole.Name == 'CCS CZ SME',
+                                                  currentUser.UserRole.Name == 'CCS SK SME',
+                                                  currentUser.UserRole.Name == 'CCS CZ KAM Team Lead',
+                                                  currentUser.UserRole.Name == 'CCS CZ KAM',
+                                                  currentUser.UserRole.Name == 'CCS CZ LAM Team Lead',
+                                                  currentUser.UserRole.Name == 'CCS CZ LAM') }">
+                    <div id="dashboard" style="width: 100%; float: left; height: 550px;"></div>
+                </apex:outputPanel>
+                <div style="clear: both;"></div>
+            </div>
+            <div style="text-align: center;">
+                <apex:outputPanel rendered="{! OR(currentUser.UserRole.Name == 'CCS Telesales Team Lead',
+                                                currentUser.UserRole.Name == 'CCS CZ Telesales',
+                                                currentUser.UserRole.Name == 'CCS SME Team Lead',
+                                                currentUser.UserRole.Name == 'CCS CZ SME',
+                                                currentUser.UserRole.Name == 'CCS SK SME') }">
+                    Last Stage change:  <span style="background: green;" class="legendbox"></span> - <span style="color: green;">less than 3 days</span>,
+                                        <span style="background: orange;" class="legendbox"></span> - <span style="color: orange;">4-5 days</span>,
+                                        <span style="background: red;" class="legendbox"></span> - <span style="color: red;">6+ days</span>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{! OR(currentUser.UserRole.Name == 'CCS CZ KAM Team Lead',
+                                                currentUser.UserRole.Name == 'CCS CZ KAM',
+                                                currentUser.UserRole.Name == 'CCS CZ LAM Team Lead',
+                                                currentUser.UserRole.Name == 'CCS CZ LAM') }">
+                    Last Stage change:  <span style="background: green;" class="legendbox"></span> - <span style="color: green;">less than 3 weeks</span>,
+                                        <span style="background: orange;" class="legendbox"></span> - <span style="color: orange;">4-5 weeks</span>,
+                                        <span style="background: red;" class="legendbox"></span> - <span style="color: red;">6+ weeks</span>
+                </apex:outputPanel>
+            </div> 
+        </apex:pageBlock>
+        <script>
+            $(function () { 
+                $('#dashboard').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                        <apex:repeat value="{! sortedDealsList }" var="key">
+                            '<a href="/{! key.Id }" class="{! IF(linkColorsMap[key.Id] = '1-3', "greenLink" , IF(linkColorsMap[key.Id] = '4-5', "orangeLink", IF(linkColorsMap[key.Id] = '6+', "redLink", "link"))) }" target="_blank"> {!JSENCODE(namesOfTopDealsMap[key.Id])}</a>',   
+                        </apex:repeat>
+                        ],
+                        labels: {
+                            useHTML: true
+                        }
+                    },
+                    yAxis: [{
+                        min: 0,
+                        title: {
+                            text: ''
+                        },
+                        stackLabels: {
+                            enabled: true,
+                            style: {
+                                fontWeight: 'bold',
+                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        }
+                    }],
+                    legend: {
+                        shadow: false,
+                        labelFormatter: function() {
+                          var total = 0;
+                          for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+                          return this.name + ': ' + total;
+                        }
+                    },
+                    exporting: { enabled: false },
+                    credits: {
+                          enabled: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    },
+                    plotOptions: {
+                        column: {
+                            grouping: false,
+                            shadow: false,
+                            borderWidth: 0
+                        },
+                        bar: {
+                            dataLabels: {
+                                enabled: true,
+                                formatter: function () {
+                                    return this.y;  
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'Total consumption (l/month)',
+                        color: 'rgba(126,86,134,.9)',
+                        data: [<apex:repeat value="{! sortedDealsList }" var="key">
+                        {! finalTop10DealsMap[key.Id].Expected_Volume__c },
+                        </apex:repeat>],
+                        pointPadding: -0.1,
+                        pointPlacement: 0.0
+                    }]
+                });            
+            });
+        </script>
+        <br/>
+    </apex:form>
+</apex:page>

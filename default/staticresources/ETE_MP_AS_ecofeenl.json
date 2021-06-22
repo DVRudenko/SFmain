@@ -1,0 +1,18 @@
+{
+	"translations": {
+		"title": {
+			"en": "Clean Advantage program",
+			"nl": "Clean Advantage programma"
+		},
+		"description": {
+			"en": "<p>Contribute to reduction of CO2 emissions together with FLEETCOR! We offer you the Clean Advantage program for climate-neutral driving. Become a part of this project and actively protect our planet with every meter driven!</p><p>By participating in this program, you automatically donate 1% of your refueling bill to environmental protection projects. This way you can actively help to prevent climate catastrophes.</p>",
+			"nl": "<p>Draag samen met FLEETCOR bij aan de vermindering van de CO2-uitstoot! Wij bieden u het Clean Advantage-programma voor klimaatneutraal rijden. Word onderdeel van dit project en bescherm onze planeet actief met elke gereden meter!</p><p>Door deel te nemen aan dit programma, betaalt u automatisch 1% van uw tankkosten aan milieuprojecten. Zo helpt u actief mee om klimaatrampen te voorkomen.</p>"
+		}
+	},
+	"settings": {
+		"bgImage": "/resource/ete_images/bgInfoCardFirst.png",
+		"show_more": "false",
+		"show_checkbox_1": "false",
+		"show_checkbox_2": "false"
+	}
+}

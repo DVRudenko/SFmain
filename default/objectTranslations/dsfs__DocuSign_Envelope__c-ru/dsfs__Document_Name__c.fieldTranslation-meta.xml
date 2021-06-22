@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Это список документов в формате PDF, указанных на вкладке документов Salesforce для вашей организации. Для передачи документа в формате PDF с помощью DocuSign необходимо добавить его к любой папке на вкладке документов Salesforce. Для передачи документов в других форматах нажмите &quot;Дополнительная информация&quot;.</help>
+    <label><!-- Document Name --></label>
+    <name>dsfs__Document_Name__c</name>
+</CustomFieldTranslation>

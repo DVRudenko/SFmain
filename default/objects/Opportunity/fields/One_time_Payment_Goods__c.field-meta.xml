@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>One_time_Payment_Goods__c</fullName>
+    <externalId>false</externalId>
+    <formula>Total_One_time_Payment_AHW__c + Total_Unit_Price__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Advanced payment amount - Units &amp; HW.</inlineHelpText>
+    <label>One-time Payment - Goods</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

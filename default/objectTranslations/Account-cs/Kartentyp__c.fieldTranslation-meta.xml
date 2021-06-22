@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Kartentyp --></label>
+    <name>Kartentyp__c</name>
+    <picklistValues>
+        <masterLabel>FlexKarte</masterLabel>
+        <translation><!-- FlexKarte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FlexKarte/Tankkarte</masterLabel>
+        <translation><!-- FlexKarte/Tankkarte --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

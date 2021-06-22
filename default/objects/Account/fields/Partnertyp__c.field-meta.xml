@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partnertyp__c</fullName>
+    <externalId>false</externalId>
+    <label>Partnertyp</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Dealer</fullName>
+                <default>false</default>
+                <label>Dealer</label>
+            </value>
+            <value>
+                <fullName>Lotos partner</fullName>
+                <default>false</default>
+                <label>Lotos partner</label>
+            </value>
+            <value>
+                <fullName>Markenpartner</fullName>
+                <default>false</default>
+                <label>Markenpartner</label>
+            </value>
+            <value>
+                <fullName>Marketing Partner</fullName>
+                <default>false</default>
+                <label>Marketing Partner</label>
+            </value>
+            <value>
+                <fullName>Retailer</fullName>
+                <default>false</default>
+                <label>Retailer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

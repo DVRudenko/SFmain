@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- reference to Form data object with business data --></help>
+    <label><!-- E2E Form Ru Data --></label>
+    <name>E2E_Form_Ru_Data__c</name>
+    <relationshipLabel><!-- Logs --></relationshipLabel>
+</CustomFieldTranslation>

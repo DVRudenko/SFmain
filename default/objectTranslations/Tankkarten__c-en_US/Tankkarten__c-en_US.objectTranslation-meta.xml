@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Card</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Cards</value>
+    </caseValues>
+    <layouts>
+        <layout>Customer Service Europe</layout>
+        <sections>
+            <label><!-- Benutzerdefinierte Links --></label>
+            <section>Benutzerdefinierte Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Tankkarten-Layout</layout>
+        <sections>
+            <label><!-- Benutzerdefinierte Links --></label>
+            <section>Benutzerdefinierte Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- AllStar --></label>
+        <name>AllStar</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- This product is available only for Switzerland. --></errorMessage>
+        <name>Category_3_only_for_Switzerland</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a License plate number or Driver&apos;s name on the card. --></errorMessage>
+        <name>License_plate_or_Driver_name_mandatory</name>
+    </validationRules>
+</CustomObjectTranslation>

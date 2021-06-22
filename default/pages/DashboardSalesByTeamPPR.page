@@ -1,0 +1,161 @@
+<!--
+ - Created by A.Syromyatnikov on 28.01.2019.
+ -->
+
+<apex:page id="DashboardSalesByTeamPPR" sideBar="false" controller="DashboardSalesByTeamPPRCtrl">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/jquery-ui.min.js')  }"/>
+    <apex:includeScript value="{! URLFOR($Resource.Tablesorter,'jquery.tablesorter.min.js') }"/>
+
+    <apex:form >
+        <style>
+            .tabButton {
+                border: 1px solid #ddd;
+                display: inline-block;
+                text-decoration: none;
+                font-weight: bold;
+                padding: 8px;
+                background: #F0F8FF;
+            }
+            .tabButton:hover {
+                text-decoration: none;
+            }
+
+            .activeTabButton {
+                background: black;
+                color: white;
+            }
+        </style>
+
+
+        <h1 style="margin-bottom: 0px; font-size: 15px; display: block; padding-bottom: 10px">
+            Выбирете роль
+            <apex:selectList value="{!selectedRole}" size="1" multiSelect="false" style="margin-left: 5px;">
+                <apex:selectOptions value="{!rolesList}"/>
+                <apex:actionSupport action="{!changeRole}" event="onchange"/>
+            </apex:selectList>
+        </h1>
+
+        <div id="topDealsArea" style="width: 100%; height: auto; padding-bottom: 10px">
+            <div id="topDealsPage">
+                <apex:iframe src="/apex/DashboardTopDealsByTeamPPR?userId={!userId}&userroleid={!selectedRole}" scrolling="false" frameBorder="0" id="topDeals" width="100%"/>
+            </div>
+            <div id="topDealsLoader" class="loader"/>
+        </div>
+
+        <div id="intensityOfSalesWorkArea" style="width: 100%; height: auto; padding-bottom: 10px">
+            <div id="intensityOfSalesWorkPage">
+                <apex:iframe src="/apex/DashboardSalesWorkIntensityByTeamPPR?userId={!userId}&userroleid={!selectedRole}" scrolling="false" frameBorder="0" id="intensityOfSalesWork"/>
+            </div>
+            <div id="intensityOfSalesWorkLoader" class="loader"/>
+        </div>
+
+        <div id="netStartsArea" style="width: 100%; height: auto; padding-bottom: 10px">
+            <div id="netStartsPage">
+                <apex:iframe src="/apex/DashboardNetStartsByTeamPPR?userId={!userId}&userroleid={!selectedRole}" scrolling="false" frameBorder="0" id="netStarts"/>
+            </div>
+            <div id="netStartsLoader" class="loader"/>
+        </div>
+
+        <div id="contactedLeadArea" style="width: 100%; height: auto; padding-bottom: 10px">
+            <div id="contactedLeadPage">
+                <apex:iframe src="/apex/DashboardContactedLeadsByTeamPPR?userId={!userId}&userroleid={!selectedRole}" scrolling="false" frameBorder="0" id="contactedLead"/>
+            </div>
+            <div id="contactedLeadLoader" class="loader"/>
+        </div>
+
+        <div id="openOpptysArea" style="width: 100%; height: auto; padding-bottom: 10px">
+            <div id="openOpptysPage">
+                <apex:iframe src="/apex/DashboardOpenOpptysByTeamPPR?userId={!userId}&userroleid={!selectedRole}" scrolling="false" frameBorder="0" id="openOpptys"/>
+            </div>
+            <div id="openOpptysLoader" class="loader"/>
+        </div>
+
+
+        <script>
+            j$ = jQuery.noConflict();
+
+            j$(document).ready(function () {
+                enableLoader("topDeals");
+                enableLoader("intensityOfSalesWork");
+                enableLoader("netStarts");
+                enableLoader("contactedLead");
+                enableLoader("openOpptys");
+            })
+
+            window.document.addEventListener('smthngChanged', function (e) {
+                enableLoader(e.detail);
+            });
+
+            window.document.addEventListener('loaded', function (e) {
+                disableLoader(e.detail);
+            });
+
+            function enableLoader(val)
+            {
+                var pageId = val + 'Page';
+                var loaderId = val + 'Loader';
+
+                var page = document.getElementById(pageId);
+                page.style.opacity = "0.4";
+                page.style.pointerEvents = "none";
+
+                var loader = document.getElementById(loaderId);
+                loader.style.opacity = "1.0";
+
+                var elementRect = document.getElementById(val + 'Area').getBoundingClientRect();
+
+                loader.style.top = getPos(page).y + elementRect.height/4 + "px";
+                loader.style.left = getPos(page).x + elementRect.width/2 + "px";
+            };
+
+            function disableLoader(val)
+            {
+                var pageId = val + 'Page';
+                var loaderId = val + 'Loader';
+
+                var page = document.getElementById(pageId);
+                page.style.opacity = "1.0";
+                page.style.pointerEvents = "all";
+
+                var loader = document.getElementById(loaderId);
+                loader.style.opacity = "0.0";
+            };
+
+            function getPos(el) {
+                for (var lx=0, ly=0;
+                     el != null;
+                     lx += el.offsetLeft, ly += el.offsetTop, el = el.offsetParent);
+                return {x: lx, y: ly};
+            }
+
+            window.document.addEventListener('topSizeChanged', function (e) {
+               iFrame.height = parseInt(e.detail) + 110;
+            });
+
+            var iFrame = document.getElementById('topDeals');
+            var iFrameDoc = iFrame.contentDocument || iFrame.contentWindow.document;
+
+        </script>
+        <style>
+            .loader {
+                border: 5px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 5px solid blue;
+                border-right: 5px solid green;
+                border-bottom: 5px solid red;
+                width: 30px;
+                height: 30px;
+                opacity: 0.0;
+                -webkit-animation: spin 2s linear infinite;
+                animation: spin 2s linear infinite;
+                position: absolute;
+            }
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        </style>
+    </apex:form>
+</apex:page>

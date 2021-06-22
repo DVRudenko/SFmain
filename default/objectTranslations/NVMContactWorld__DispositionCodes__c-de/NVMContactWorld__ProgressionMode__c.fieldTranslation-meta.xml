@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Value indicating the mode of progression in the Connect dialler. --></help>
+    <label><!-- Progression Mode --></label>
+    <name>NVMContactWorld__ProgressionMode__c</name>
+</CustomFieldTranslation>

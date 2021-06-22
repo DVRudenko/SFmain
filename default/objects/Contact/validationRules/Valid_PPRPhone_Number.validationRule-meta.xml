@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Valid_PPRPhone_Number</fullName>
+    <active>true</active>
+    <description>Allows to enter a phone number in a valid format only</description>
+    <errorConditionFormula>AND(
+            NOT(BEGINS($User.Username, 'e2e_ru@fleetcoremea.force.com')),
+            NOT(BEGINS($User.Username, 'sfintegration@transitcard.ru')),
+            OR(ISNEW(), ISCHANGED(PPR_Contact_Phone__c), ISCHANGED(PPR_Contact_Phone_Status__c)),
+            NOT(OR(
+            ISBLANK(PPR_Contact_Phone__c),
+            ISPICKVAL(PPR_Contact_Phone_Status__c, 'Needs validation'),
+            AND (
+            OR( AND(BEGINS(PPR_Contact_Phone__c, '+'), ISNUMBER(LEFT(SUBSTITUTE(PPR_Contact_Phone__c, '+', ''), 1))),
+            BEGINS(PPR_Contact_Phone__c, '8')
+            ),
+            NOT(FIND('+', PPR_Contact_Phone__c, 2) != 0),
+            NOT(CONTAINS(PPR_Contact_Phone__c, '.')),
+            ISNUMBER(SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(PPR_Contact_Phone__c, '+', ''), '#', ''),' ', '')),
+            OR (
+            AND(NOT(CONTAINS(PPR_Contact_Phone__c, '#')),
+            IF(OR(BEGINS(PPR_Contact_Phone__c, '+7'), BEGINS(PPR_Contact_Phone__c, '8')),
+            LEN(SUBSTITUTE(SUBSTITUTE(PPR_Contact_Phone__c, '+', ''),' ', '')) = 11,
+            AND(LEN(SUBSTITUTE(SUBSTITUTE(PPR_Contact_Phone__c, '+', ''),' ', '')) &gt;= 8, LEN(SUBSTITUTE(SUBSTITUTE(PPR_Contact_Phone__c, '+', ''),' ', '')) &lt;= 15)
+            )
+            ),
+            AND(CONTAINS(PPR_Contact_Phone__c, '#'),
+            IF(OR(BEGINS(PPR_Contact_Phone__c, '+7'), BEGINS(PPR_Contact_Phone__c, '8')),
+            FIND('#', SUBSTITUTE(SUBSTITUTE(PPR_Contact_Phone__c, '+', ''),' ', '')) = 12,
+            AND(FIND('#', SUBSTITUTE(SUBSTITUTE(PPR_Contact_Phone__c, '+', ''),' ', '')) &gt;= 9, FIND('#', SUBSTITUTE(SUBSTITUTE(PPR_Contact_Phone__c, '+', ''),' ', '')) &lt;= 16)
+            )
+            )
+            )
+            )
+            ))
+            )</errorConditionFormula>
+    <errorDisplayField>PPR_Contact_Phone__c</errorDisplayField>
+    <errorMessage>Wrong phone number format. Only '+', '0-9' and spaces are allowed. Use '#' for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: '+49 5545555#045'</errorMessage>
+</ValidationRule>

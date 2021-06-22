@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unit_Package_Price_Paid_monthly__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>False by default, True only if 11 or more Carnet Units are under Opportunity.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>False by default, True only if 11 or more Carnet Units are under Opportunity.</inlineHelpText>
+    <label>Premium Tariffs</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

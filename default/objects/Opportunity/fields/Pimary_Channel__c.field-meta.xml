@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pimary_Channel__c</fullName>
+    <externalId>false</externalId>
+    <label>Pimary Channel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adressbroker</fullName>
+                <default>false</default>
+                <label>Adressbroker</label>
+            </value>
+            <value>
+                <fullName>Shell Customer</fullName>
+                <default>false</default>
+                <label>Shell Customer</label>
+            </value>
+            <value>
+                <fullName>Google Organic Search</fullName>
+                <default>false</default>
+                <label>Google Organic Search</label>
+            </value>
+            <value>
+                <fullName>Print</fullName>
+                <default>false</default>
+                <label>Print</label>
+            </value>
+            <value>
+                <fullName>Google Ad-Words</fullName>
+                <default>false</default>
+                <label>Google Ad-Words</label>
+            </value>
+            <value>
+                <fullName>PR</fullName>
+                <default>false</default>
+                <label>PR</label>
+            </value>
+            <value>
+                <fullName>Partner Channels</fullName>
+                <default>false</default>
+                <label>Partner Channels</label>
+            </value>
+            <value>
+                <fullName>Winback_distance selling</fullName>
+                <default>false</default>
+                <label>Winback_distance selling</label>
+            </value>
+            <value>
+                <fullName>Winback_personal meeting</fullName>
+                <default>false</default>
+                <label>Winback_personal meeting</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Akční nabídka</label>
+    <name>CCS_Promo_offer__c</name>
+    <picklistValues>
+        <masterLabel>CCS Carnet 1+1</masterLabel>
+        <translation><!-- CCS Carnet 1+1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Carnet 149/7,99 EUR</masterLabel>
+        <translation><!-- CCS Carnet 149/7,99 EUR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Carnet 2+1</masterLabel>
+        <translation><!-- CCS Carnet 2+1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Carnet 2990</masterLabel>
+        <translation><!-- CCS Carnet 2990 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS ČSOBL Agro</masterLabel>
+        <translation><!-- CCS ČSOBL Agro --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karty - CCS Limit Easy</masterLabel>
+        <translation><!-- Karty - CCS Limit Easy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karty - CCS Limit Eso</masterLabel>
+        <translation><!-- Karty - CCS Limit Eso --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karty - CCS Limit Fix 97</masterLabel>
+        <translation><!-- Karty - CCS Limit Fix 97 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karty - CCS Limit Moje síť</masterLabel>
+        <translation><!-- Karty - CCS Limit Moje síť --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

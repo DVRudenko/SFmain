@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>CE Goals Layout</layout>
+        <sections>
+            <label>Opis</label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Russian Goals Layout</layout>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Ziel-Layout</layout>
+        <sections>
+            <label>Opis</label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- CE Goals --></label>
+        <name>CE_Goals</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Russian --></label>
+        <name>Russian</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Refresh_Metrics --></label>
+        <name>Refresh_Metrics</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Refresh_Selected_Metrics --></label>
+        <name>Refresh_Selected_Metrics</name>
+    </webLinks>
+</CustomObjectTranslation>

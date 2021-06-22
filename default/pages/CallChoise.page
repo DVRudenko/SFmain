@@ -1,0 +1,38 @@
+<apex:page controller="CallChoiseController" action="{! init}" sidebar="false" showHeader="false">
+	<apex:pageBlock >
+        <apex:pageBlockSection columns="1" title="Tasks">
+            <apex:pageBlockTable value="{! tasksList}" var="task">
+                <apex:column headerValue="Subject">
+                  	<apex:outputLink value="#" onclick="fillIn('{! task.Subject}', '{! task.id}')">{! task.Subject}</apex:outputLink>       
+                </apex:column>
+                <apex:column headerValue="Due Date">{! task.ActivityDate}</apex:column>
+                <apex:column headerValue="Status">{! task.Status}</apex:column>
+                <apex:column headerValue="Priority">{! task.Priority}</apex:column>
+                <apex:column headerValue="Last Modified Date">{! task.LastModifiedDate}</apex:column>
+            </apex:pageBlockTable>    
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <script>	   	
+        function fillIn(name, id) {
+	      	var winMain = window.opener;
+	      	if (winMain == null) {
+	         	winMain = window.parent.opener;
+	      	}
+
+	      	var ele = winMain.document.getElementById('{! $CurrentPage.parameters.callfield}');
+	      	ele.value = name;
+	      	ele = winMain.document.getElementById('{! $CurrentPage.parameters.idfield}');
+	      	ele.value = id;
+	      	closeWindow();
+	   	}
+	 
+	   	function closeWindow() {
+	      	var winMain = window.opener;
+	      	if (winMain == null) {
+	         	winMain = window.parent.opener;
+	      	}
+	      	
+	      	winMain.closeLookupPopup();
+	  	}
+    </script> 
+</apex:page>

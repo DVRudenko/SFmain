@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Gelegentlich müssen Sie Ihre Empfänger daran erinnern, einen Umschlag schneller abzuschließen. Nachdem ein Umschlag abgelaufen ist, storniert DocuSign für Salesforce den Umschlag und sendet eine entsprechende Benachrichtigung an Absender und Empfänger.</help>
+    <label><!-- Expire/Void Envelope --></label>
+    <name>dsfs__Expire_Void_Envelope__c</name>
+</CustomFieldTranslation>

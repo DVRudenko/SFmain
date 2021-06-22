@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Time in seconds that we will attempt to route a case to the case owner when they are logged out. --></help>
+    <label><!-- Case owner routing timeout (Logged out) --></label>
+    <name>NVMContactWorld__Case_owner_routing_timeout_Logged_out__c</name>
+</CustomFieldTranslation>

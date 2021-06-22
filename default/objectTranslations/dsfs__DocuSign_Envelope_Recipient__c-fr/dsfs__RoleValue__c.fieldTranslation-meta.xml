@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>VALEUR ASSOCIÉE AU RÔLE DU DESTINATAIRE DOCUSIGN. CETTE VALEUR SERT À DIRIGER VERS LES BALISES D&#39;ANCRAGE PAR DÉFAUT AU SEIN DES DOCUMENTS.</help>
+    <label><!-- RoleValue --></label>
+    <name>dsfs__RoleValue__c</name>
+</CustomFieldTranslation>

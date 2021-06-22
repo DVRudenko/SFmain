@@ -1,0 +1,62 @@
+<apex:component id="E2EComponentInput">
+
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map"
+                    required="true"/>
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="name of field in parent page"
+                    required="true"/>
+
+    <apex:attribute name="firstClass"
+                    type="String"
+                    description="class name of label and input div" />
+
+    <apex:attribute name="secondClass"
+                    type="String"
+                    description="class name of input div" />
+
+    <apex:attribute name="inputClass"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="errorClass"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="maxLength"
+                    type="String"
+                    description="maximum length of input" />
+
+    <apex:attribute name="inputType"
+                    type="String"
+                    description="input type" />
+
+    <div class="{!firstClass}">
+        <label for="">{!pageMap[field].elementItemsMap['LABEL'].value}<sup>{! pageMap[field].elementItemsMap['ASTERISK'].value }</sup></label>
+        <div class="{!secondClass}">
+            <apex:input id="inputID"
+                        styleClass="{! inputClass }"
+                        value="{!pageMap[field].elementItemsMap['DEFAULT VALUE'].value}"
+                        type="{!IF(inputType == null, 'text', inputType)}"
+                        html-maxlength="{! maxLength }"
+                        html-placeholder="{! pageMap[field].elementItemsMap['PLACEHOLDER'].value }"/>
+            <div class="close none"></div>
+        </div>
+        <div class="{!errorClass}">{!IF(errorClass == null, '', pageMap[field].elementItemsMap['WARN MESSAGE'].value )}</div>
+    </div>
+
+
+    <!--<div class="block__inputs validations error">-->
+        <!--<label for="">Телефон<sup>*</sup></label>-->
+        <!--<div class="input__obl">-->
+            <!--<input class="js-phone" type="tel" placeholder="7 (_ _ _) _ _ _ - _ _ - _ _" maxlength="17"/>-->
+            <!--<div class="close"></div>-->
+        <!--</div>-->
+        <!--<div class="error&#45;&#45;text">Номер телефона должен состоять из 10 цифр, начиная с кода оператора</div>-->
+    <!--</div>-->
+
+
+</apex:component>

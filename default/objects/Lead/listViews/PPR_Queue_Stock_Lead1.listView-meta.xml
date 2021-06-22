@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Queue_Stock_Lead1</fullName>
+    <columns>INN__c</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>Organization_Type__c</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Source_of_Lead__c</columns>
+    <columns>Region__c</columns>
+    <columns>LEAD.LAST_TRANSFER</columns>
+    <columns>Number_of_Vehicles__c</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>LEAD.PHONE</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>INN__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Organization_Type__c</field>
+        <operation>equals</operation>
+        <value>Corporation,ОАО,Proprietorship,ИП,LLC,ООО,LLP,ЗАО</value>
+    </filters>
+    <filters>
+        <field>Region__c</field>
+        <operation>notEqual</operation>
+        <value>Амурская область,Камчатский край,Магаданская область,Республика Саха (Якутия)</value>
+    </filters>
+    <filters>
+        <field>Source_of_Lead__c</field>
+        <operation>notEqual</operation>
+        <value>Партнерская Программа</value>
+    </filters>
+    <label>PPR Queue Stock</label>
+    <language>en_US</language>
+    <queue>PPR_Queue_Stock</queue>
+    <sharedTo>
+        <group>Russian_Admins</group>
+        <role>PPR_Bryansk</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Link to Agent Summary for the last agent to contribute an event to this Call --></help>
+    <label><!-- Last Agent&apos;s Calls this Day --></label>
+    <name>NVMStatsSF__Last_Agent_Summary__c</name>
+    <relationshipLabel><!-- Call Summaries --></relationshipLabel>
+</CustomFieldTranslation>

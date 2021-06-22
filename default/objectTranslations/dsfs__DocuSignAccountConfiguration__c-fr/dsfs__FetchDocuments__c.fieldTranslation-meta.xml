@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Prend en charge des enveloppes DocuSign volumineuses en envoyant des enveloppes à DocuSign sans données de documents, et en autorisant DocuSign à récupérer des données de documents le cas échéant. Activer uniquement si la taille des enveloppes envoyées à Salesforce dépasse la limite autorisée.</help>
+    <label><!-- Fetch Documents --></label>
+    <name>dsfs__FetchDocuments__c</name>
+</CustomFieldTranslation>

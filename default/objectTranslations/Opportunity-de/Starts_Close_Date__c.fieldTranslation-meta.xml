@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Opportunity Close Date plus 3 months; formula field; the date that the Starts Process should end for this Opportunity --></help>
+    <label>Starts: Enddatum</label>
+    <name>Starts_Close_Date__c</name>
+</CustomFieldTranslation>

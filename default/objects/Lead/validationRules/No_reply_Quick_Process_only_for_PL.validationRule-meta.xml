@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_reply_Quick_Process_only_for_PL</fullName>
+    <active>true</active>
+    <description>New Quali status: No reply – Quick Process for Lead Status: Disqualified - has to be available only for Country: Poland and Sec. Channel: JITB.</description>
+    <errorConditionFormula>IF(
+Country != "Poland" &amp;&amp;
+ISPICKVAL(Status , "Disqualified") &amp;&amp;
+ISPICKVAL(Quali_Status__c , "No reply – Quick Process"),
+true,
+IF(
+Country = "Poland" &amp;&amp;
+ISPICKVAL(Status, "Disqualified") &amp;&amp;
+ISPICKVAL(Quali_Status__c , "No reply – Quick Process") &amp;&amp;
+TEXT(Sec_Channel__c) != "JITB",
+true,
+false)
+)</errorConditionFormula>
+    <errorMessage>Quali Status "No reply – Quick Process" is only available for Poland, Sec. channel: JITB.</errorMessage>
+</ValidationRule>

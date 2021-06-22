@@ -1,0 +1,62 @@
+:host {
+    display: inline-block;
+}
+
+.fltbase-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer; 
+    height: 32px;
+}
+
+.fltbase-toggle-input {
+    display: none;
+}
+
+.fltbase-toggle-body {
+    margin: 0 10px;
+    padding: 4px;
+    width: 56px;
+    height: 32px;
+    background-color: #EEEEEE;
+    border-radius: 40px;
+    text-align: left;
+    flex-shrink: 0;
+}
+  
+.fltbase-toggle-body::after {
+    content: "";
+    display: inline-block;
+    border: 12px solid #ED123D;
+    border-radius: 50%;
+
+    transition: margin 0.3s ease-out;
+}
+
+.fltbase-toggle-input:checked ~ .fltbase-toggle-body::after {
+    margin-left: calc(100% - 24px);
+}
+
+.fltbase-toggle-label__left {
+    text-align: right;
+}
+
+.fltbase-toggle-label__right {
+    text-align: left;
+}
+
+.fltbase-toggle-label__left,
+.fltbase-toggle-label__right {
+    transition: color 0.3s ease-out;
+    /* font-size: 14px; */
+}
+
+.fltbase-toggle-input:checked ~ .fltbase-toggle-label__right,
+.fltbase-toggle-label__left {
+    color: #000000;
+}
+
+.fltbase-toggle-input:checked ~ .fltbase-toggle-label__left,
+.fltbase-toggle-label__right {
+    color: #80828A;
+}

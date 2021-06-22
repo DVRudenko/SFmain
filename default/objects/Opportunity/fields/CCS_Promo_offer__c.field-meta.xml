@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Promo_offer__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Promo offer</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Solicited__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OMV with monthly Fee - List Price</fullName>
+                <default>false</default>
+                <label>OMV with monthly Fee - List Price</label>
+            </value>
+            <value>
+                <fullName>OMV with monthly Fee - Totem Price</fullName>
+                <default>false</default>
+                <label>OMV with monthly Fee - Totem Price</label>
+            </value>
+            <value>
+                <fullName>OMV without monthly Fee - List Price</fullName>
+                <default>false</default>
+                <label>OMV without monthly Fee - List Price</label>
+            </value>
+            <value>
+                <fullName>OMV without monthly Fee - Totem Price</fullName>
+                <default>false</default>
+                <label>OMV without monthly Fee - Totem Price</label>
+            </value>
+            <value>
+                <fullName>OMV Individual</fullName>
+                <default>false</default>
+                <label>OMV Individual</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>OMV</controllingFieldValue>
+            <valueName>OMV with monthly Fee - List Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OMV</controllingFieldValue>
+            <valueName>OMV with monthly Fee - Totem Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OMV</controllingFieldValue>
+            <valueName>OMV without monthly Fee - List Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OMV</controllingFieldValue>
+            <valueName>OMV without monthly Fee - Totem Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OMV</controllingFieldValue>
+            <valueName>OMV Individual</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

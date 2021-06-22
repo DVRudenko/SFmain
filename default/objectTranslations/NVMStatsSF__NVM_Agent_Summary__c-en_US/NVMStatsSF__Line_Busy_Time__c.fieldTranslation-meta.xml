@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total amount of time in seconds spent in Line Busy --></help>
+    <label><!-- Line Busy Time --></label>
+    <name>NVMStatsSF__Line_Busy_Time__c</name>
+</CustomFieldTranslation>

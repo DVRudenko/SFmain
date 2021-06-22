@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If it was a list (Seek or Domino), the name of the list. --></help>
+    <label><!-- List Name --></label>
+    <name>isdc_dialer_list_name__c</name>
+</CustomFieldTranslation>

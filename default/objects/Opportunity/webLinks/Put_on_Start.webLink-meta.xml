@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Put_on_Start</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Чек-лист Старт</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>if({! Opportunity.Probability } &lt;= 60){
+    alert('Возможность находится на низком этапе. Чек-лист заполняется, если этап Возможности не ниже этапа "Договор на проверке"');
+} else {
+    window.parent.location.href = "/apex/OpportunityCheckFields?Id="+'{! Opportunity.Id }';
+}</url>
+</WebLink>

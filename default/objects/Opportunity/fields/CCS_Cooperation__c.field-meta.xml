@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Cooperation__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS_Cooperation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Plzák Robert</fullName>
+                <default>false</default>
+                <label>Plzák Robert</label>
+            </value>
+            <value>
+                <fullName>T-Mobile</fullName>
+                <default>false</default>
+                <label>T-Mobile</label>
+            </value>
+            <value>
+                <fullName>Petra Doffková</fullName>
+                <default>false</default>
+                <label>Petra Doffková</label>
+            </value>
+            <value>
+                <fullName>Eva Pracná</fullName>
+                <default>false</default>
+                <label>Eva Pracná</label>
+            </value>
+            <value>
+                <fullName>Miroslav Vaník</fullName>
+                <default>false</default>
+                <label>Miroslav Vaník</label>
+            </value>
+            <value>
+                <fullName>Jiří Schut</fullName>
+                <default>false</default>
+                <label>Jiří Schut</label>
+            </value>
+            <value>
+                <fullName>Jaroslav Peška</fullName>
+                <default>false</default>
+                <label>Jaroslav Peška</label>
+            </value>
+            <value>
+                <fullName>David Bartůněk</fullName>
+                <default>false</default>
+                <label>David Bartůněk</label>
+            </value>
+            <value>
+                <fullName>Jakub Novák</fullName>
+                <default>false</default>
+                <label>Jakub Novák</label>
+            </value>
+            <value>
+                <fullName>Marek Gruber</fullName>
+                <default>false</default>
+                <label>Marek Gruber</label>
+            </value>
+            <value>
+                <fullName>Klára Horká</fullName>
+                <default>false</default>
+                <label>Klára Horká</label>
+            </value>
+            <value>
+                <fullName>Miroslav Poklop</fullName>
+                <default>false</default>
+                <label>Miroslav Poklop</label>
+            </value>
+            <value>
+                <fullName>Tomáš Zahajský</fullName>
+                <default>false</default>
+                <label>Tomáš Zahajský</label>
+            </value>
+            <value>
+                <fullName>Pavla Platková</fullName>
+                <default>false</default>
+                <label>Pavla Platková</label>
+            </value>
+            <value>
+                <fullName>Irena Vraspírová</fullName>
+                <default>false</default>
+                <label>Irena Vraspírová</label>
+            </value>
+            <value>
+                <fullName>Ctibor Pokorný</fullName>
+                <default>false</default>
+                <label>Ctibor Pokorný</label>
+            </value>
+            <value>
+                <fullName>Petra Škorpíková</fullName>
+                <default>false</default>
+                <label>Petra Škorpíková</label>
+            </value>
+            <value>
+                <fullName>Pavel Záhora</fullName>
+                <default>false</default>
+                <label>Pavel Záhora</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

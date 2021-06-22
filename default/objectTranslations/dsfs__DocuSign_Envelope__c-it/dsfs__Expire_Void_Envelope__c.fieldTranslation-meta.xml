@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>A volte è necessario invitare i destinatari a completare una busta più velocemente. Alla scadenza di una busta, DocuSign for Salesforce annulla la busta e invia una notifica sia al mittente che al destinatario.</help>
+    <label><!-- Expire/Void Envelope --></label>
+    <name>dsfs__Expire_Void_Envelope__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Acc_Sales_Inbound_LEX</fullName>
+    <fields>Name</fields>
+    <fields>Steuernummer__c</fields>
+    <fields>Umsatzsteuer_ID__c</fields>
+    <fields>Beschaeftigte__c</fields>
+    <fields>Branche_NACE__c</fields>
+    <label>Acc Sales Inbound LEX</label>
+</CompactLayout>

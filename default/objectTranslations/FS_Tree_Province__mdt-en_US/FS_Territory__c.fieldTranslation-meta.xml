@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- FS_Territory --></label>
+    <name>FS_Territory__c</name>
+    <relationshipLabel><!-- FS_Tree_Provinces --></relationshipLabel>
+</CustomFieldTranslation>

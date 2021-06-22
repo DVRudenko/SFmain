@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Důvod uzavřeno</label>
+    <name>CCS_Close_reason__c</name>
+    <picklistValues>
+        <masterLabel>Info k BONUS</masterLabel>
+        <translation><!-- Info k BONUS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jiný v poznámce</masterLabel>
+        <translation><!-- Jiný v poznámce --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kontakty neexistují</masterLabel>
+        <translation><!-- Kontakty neexistují --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nabídka CCS LIMIT ESO 2015</masterLabel>
+        <translation><!-- Nabídka CCS LIMIT ESO 2015 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nabídka CCS LIMIT FIX 97</masterLabel>
+        <translation><!-- Nabídka CCS LIMIT FIX 97 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nabídka CCS LIMIT Moje síť</masterLabel>
+        <translation><!-- Nabídka CCS LIMIT Moje síť --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nabídka CCS LIMIT+</masterLabel>
+        <translation><!-- Nabídka CCS LIMIT+ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nezadáno – Cribis H</masterLabel>
+        <translation><!-- Nezadáno – Cribis H --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nezadáno – nesouhlasí se změněnými podmínkami</masterLabel>
+        <translation><!-- Nezadáno – nesouhlasí se změněnými podmínkami --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nezájem - klient se pouze dívá</masterLabel>
+        <translation><!-- Nezájem - klient se pouze dívá --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nezájem - nabídka odmítnuta (viz poznámka)</masterLabel>
+        <translation><!-- Nezájem - nabídka odmítnuta (viz poznámka) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Objednávku klient odešle později</masterLabel>
+        <translation><!-- Objednávku klient odešle později --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Předáno na Market</masterLabel>
+        <translation><!-- Předáno na Market --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Předáno zodpovědné osobě</masterLabel>
+        <translation><!-- Předáno zodpovědné osobě --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Přiobjednávka</masterLabel>
+        <translation><!-- Přiobjednávka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Schůzka na OZ</masterLabel>
+        <translation><!-- Schůzka na OZ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Smlouva uzavřena</masterLabel>
+        <translation><!-- Smlouva uzavřena --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Smlouva uzavřena LIMIT+MINI</masterLabel>
+        <translation><!-- Smlouva uzavřena LIMIT+MINI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telefonická objednávka</masterLabel>
+        <translation><!-- Telefonická objednávka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telefonická objednávka CCS LIMIT ESO 2015</masterLabel>
+        <translation><!-- Telefonická objednávka CCS LIMIT ESO 2015 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telefonická objednávka CCS LIMIT FIX 97</masterLabel>
+        <translation><!-- Telefonická objednávka CCS LIMIT FIX 97 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zájemce UTA</masterLabel>
+        <translation><!-- Zájemce UTA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zájemce o Carnet</masterLabel>
+        <translation><!-- Zájemce o Carnet --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

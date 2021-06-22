@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVM_Unassigned_Voicemails</fullName>
+    <columns>TASK.SUBJECT</columns>
+    <columns>TASK.WHO_NAME</columns>
+    <columns>TASK.WHAT_NAME</columns>
+    <columns>TASK.DUE_DATE</columns>
+    <columns>TASK.STATUS</columns>
+    <columns>TASK.PRIORITY</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>TASK.LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>NVMContactWorld__Customer_Number__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TASK.SUBJECT</field>
+        <operation>startsWith</operation>
+        <value>Voicemail</value>
+    </filters>
+    <filters>
+        <field>TASK.CALLOBJECT</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>intadmin</value>
+    </filters>
+    <label>NVM Unassigned Voicemails</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Role_Up</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legitimation__c</fullName>
+    <description>Legitimation: Post-Ident (PI), Corp. Ident (CI)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Legitimation: Post-Ident (PI), Corp. Ident (CI)</inlineHelpText>
+    <label>Legitimation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PI</fullName>
+                <default>false</default>
+                <label>PI</label>
+            </value>
+            <value>
+                <fullName>CI</fullName>
+                <default>false</default>
+                <label>CI</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

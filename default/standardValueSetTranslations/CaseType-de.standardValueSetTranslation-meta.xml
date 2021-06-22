@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Bug</masterLabel>
+        <translation>Bug</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Change Request</masterLabel>
+        <translation>Änderungsanforderung</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Functionality</masterLabel>
+        <translation>Feature-Request</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Question about working in SF</masterLabel>
+        <translation><!-- Question about working in SF --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

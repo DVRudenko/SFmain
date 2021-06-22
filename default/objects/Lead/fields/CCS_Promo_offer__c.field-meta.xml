@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Promo_offer__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Promo offer</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Karty - CCS Limit Fix 97</fullName>
+                <default>false</default>
+                <label>Karty - CCS Limit Fix 97</label>
+            </value>
+            <value>
+                <fullName>Karty - CCS Limit Easy</fullName>
+                <default>false</default>
+                <label>Karty - CCS Limit Easy</label>
+            </value>
+            <value>
+                <fullName>Karty - CCS Limit Moje síť</fullName>
+                <default>false</default>
+                <label>Karty - CCS Limit Moje síť</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet 1+1</fullName>
+                <default>false</default>
+                <label>CCS Carnet 1+1</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet 149/7,99 EUR</fullName>
+                <default>false</default>
+                <label>CCS Carnet 149/7,99 EUR</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet 2+1</fullName>
+                <default>false</default>
+                <label>CCS Carnet 2+1</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet 2990</fullName>
+                <default>false</default>
+                <label>CCS Carnet 2990</label>
+            </value>
+            <value>
+                <fullName>CCS ČSOBL Agro</fullName>
+                <default>false</default>
+                <label>CCS ČSOBL Agro</label>
+            </value>
+            <value>
+                <fullName>Karty - CCS Limit Eso</fullName>
+                <default>false</default>
+                <label>Karty - CCS Limit Eso</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

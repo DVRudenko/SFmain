@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#1A2EE1</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Application to check records for compliance with business regulations</description>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Business regulations check</label>
+    <navType>Standard</navType>
+    <tabs>BR_setting_list</tabs>
+    <tabs>BR_Setting__c</tabs>
+    <tabs>BR_filter__c</tabs>
+    <tabs>BR_case__c</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>

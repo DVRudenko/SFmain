@@ -1,0 +1,1741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>CaseAssignedRussia</fullName>
+        <description>CaseAssignedRussia</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <field>Requested_by__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>notreply@info.pprcard.ru</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_Assigned_Case</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseClosedRussia</fullName>
+        <description>CaseClosedRussia</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>notreply@info.pprcard.ru</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_Closed_Case</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseCreatedRussia</fullName>
+        <description>CaseCreatedRussia</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <recipients>
+            <recipient>natalia.skachko@transitcard.ru.eu</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tatianakim@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>yuliya.kozhevnikova@fleetcor.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>notreply@info.pprcard.ru</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_Created_Case</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedAustriaGerman</fullName>
+        <description>CaseReceivedAustriaGerman</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>kundenservice@fleetcor.at</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_AT_DE</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedBelgiumDutch</fullName>
+        <description>CaseReceivedBelgiumDutch</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>klantendienst@fleetcorcards.be</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_BE_NL</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedBelgiumFrench</fullName>
+        <description>CaseReceivedBelgiumFrench</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>serviceclients@fleetcorcards.be</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_BE_FR</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedBonusky_CZ</fullName>
+        <description>CaseReceivedBonusky_CZ</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>bonus@ccs.cz</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CCS_CZ</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedCarnet_CZ</fullName>
+        <description>CaseReceivedCarnet_CZ</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>obchod@ccs.cz</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CCS_CZ</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedCzechRepublicCzech</fullName>
+        <description>CaseReceivedCzechRepublicCzech</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>zakaznickyservis@fleetcor.cz</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CZ_CZ</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedDefaultEnglish</fullName>
+        <description>CaseReceivedDefaultEnglish</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_EN_EN</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedEurotoll_CZ</fullName>
+        <description>CaseReceivedEurotoll_CZ</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>eurotoll@ccs.cz</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_UTA_Eurotoll_ENG_CZ</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedFranceFrench</fullName>
+        <description>CaseReceivedFranceFrench</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>serviceclients@fleetcor.fr</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_LU_FR</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedGermanyGerman</fullName>
+        <description>CaseReceivedGermanyGerman</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>kundenservice@fleetcor.de</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_DE_DE</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedHungaryHungarian</fullName>
+        <description>CaseReceivedHungaryHungarian</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>ugyfelszolgalat@fleetcor.hu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_HU_HU</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedKreditCCS_CZ</fullName>
+        <description>CaseReceivedKreditCCS_CZ</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>kredit@ccs.cz</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CCS_CZ</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedKreditCCS_SK</fullName>
+        <description>CaseReceivedKreditCCS_SK</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>kredit@ccs.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CCS_SK</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedLuxembourgFrench</fullName>
+        <description>CaseReceivedLuxembourgFrench</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>serviceclients@fleetcor.lu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_LU_FR</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedMarket_CZ</fullName>
+        <description>CaseReceivedMarket_CZ</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>market@ccs.cz</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CCS_CZ</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedMyto_CZ</fullName>
+        <description>CaseReceivedMyto_CZ</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>myto@ccs.cz</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CCS_CZ</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedNetherlandsDutch</fullName>
+        <description>CaseReceivedNetherlandsDutch</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>klantenservice@fleetcor.nl</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_NL_NL</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedPolandPolish</fullName>
+        <description>CaseReceivedPolandPolish</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>obslugaklienta@fleetcor.pl</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_PL_PL</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedProvoz_CZ</fullName>
+        <description>CaseReceivedProvoz_CZ</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>provoz@ccs.cz</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CCS_CZ</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedReklamace_CZ</fullName>
+        <description>CaseReceivedReklamace_CZ</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>reklamace@ccs.cz</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CCS_CZ</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedSlovakiaSlovak</fullName>
+        <description>CaseReceivedSlovakiaSlovak</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>zakaznickyservis@fleetcor.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_SK_SK</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedSwitzerlandFrench</fullName>
+        <description>CaseReceivedSwitzerlandFrench</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>serviceclients@fleetcor.ch</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CH_FR</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedSwitzerlandGerman</fullName>
+        <description>CaseReceivedSwitzerlandGerman</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>kundenservice@fleetcor.ch</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CH_DE</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedSwitzerlandItalian</fullName>
+        <description>CaseReceivedSwitzerlandItalian</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>servizioclienti@fleetcor.ch</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CH_IT</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedUTA_CZ</fullName>
+        <description>CaseReceivedUTA_CZ</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>uta@ccs.cz</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_UTA_Eurotoll_ENG_CZ</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedZakaznickaPodpora_CZ</fullName>
+        <description>CaseReceivedZakaznickaPodpora_CZ</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>zakaznicka.podpora@ccs.cz</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CCS_CZ</template>
+    </alerts>
+    <alerts>
+        <fullName>CaseReceivedZakaznicke_SK</fullName>
+        <description>CaseReceivedZakaznicke_SK</description>
+        <protected>false</protected>
+        <recipients>
+            <field>SuppliedEmail</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>zakaznicke@ccs.sk</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Service_Emails/CaseCreated_CCS_SK</template>
+    </alerts>
+    <alerts>
+        <fullName>E2E_RU_Assigned_Case</fullName>
+        <description>E2E RU - Assigned Case</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Requested_by__c</field>
+            <type>userLookup</type>
+        </recipients>
+        <senderAddress>salesforce@transitcard.ru</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_Assigned_Case</template>
+    </alerts>
+    <alerts>
+        <fullName>E2E_RU_Closed_Case</fullName>
+        <description>E2E RU - Closed Case</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>natalia.skachko@transitcard.ru.eu</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tatianakim@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>yuliya.kozhevnikova@fleetcor.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@transitcard.ru</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_Closed_Case</template>
+    </alerts>
+    <alerts>
+        <fullName>E2E_RU_Created_Case</fullName>
+        <description>E2E RU - Created Case</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>natalia.skachko@transitcard.ru.eu</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>tatianakim@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>yuliya.kozhevnikova@fleetcor.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>salesforce@transitcard.ru</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>E2E_RU/E2E_RU_Created_Case</template>
+    </alerts>
+    <alerts>
+        <fullName>New_Case_Requested</fullName>
+        <description>New Case Requested</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/New_Case_Requested</template>
+    </alerts>
+    <alerts>
+        <fullName>Overdue_Case_Notification</fullName>
+        <description>Overdue Case Notification</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>Administrator</recipient>
+            <type>caseTeam</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>Cases_Notifications/Overdue_Case</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Auto_Update_Case_Type</fullName>
+        <field>Type</field>
+        <literalValue>Changing the record owner</literalValue>
+        <name>Auto Update Case.Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Check_Is_Account_Changed_c_checkbox</fullName>
+        <field>Is_Account_Changed__c</field>
+        <literalValue>1</literalValue>
+        <name>Check Is_Account_Changed__c checkbox</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Check_Is_account_associated_checkbox</fullName>
+        <field>Is_account_associated__c</field>
+        <literalValue>1</literalValue>
+        <name>Check Is account associated checkbox</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>QueueAssignment_Russian_Cases</fullName>
+        <field>OwnerId</field>
+        <lookupValue>Russian_Cases</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>QueueAssignment_Russian_Cases</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Save_Initial_Case_Queue</fullName>
+        <field>Initial_Case_Queue__c</field>
+        <formula>Owner:Queue.QueueName</formula>
+        <name>Save Initial Case Queue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>SetFirstOwnerChangeDate</fullName>
+        <field>First_Owner_Change_Date__c</field>
+        <formula>NOW()</formula>
+        <name>SetFirstOwnerChangeDate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Set_ShellPremium_as_owner</fullName>
+        <field>OwnerId</field>
+        <lookupValue>SHELL_Premium</lookupValue>
+        <lookupValueType>Queue</lookupValueType>
+        <name>Set ShellPremium as owner</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Account_Email_on_Case</fullName>
+        <field>Account_Email__c</field>
+        <formula>Account.Email_retailer__c</formula>
+        <name>Update Account Email on Case</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Initial_Account_ID</fullName>
+        <description>Updates Initial_Account_ID field to store the ID of initial associated Account</description>
+        <field>Initial_Account_ID__c</field>
+        <formula>AccountId</formula>
+        <name>Update Initial Account ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Auto Reply AustriaGerman</fullName>
+        <actions>
+            <name>CaseReceivedAustriaGerman</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>AT Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Austria German  case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply BelgiumDutch</fullName>
+        <actions>
+            <name>CaseReceivedBelgiumDutch</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>BE_NL Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Belgium Dutch case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply BelgiumFrench</fullName>
+        <actions>
+            <name>CaseReceivedBelgiumFrench</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>BE_FR Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Belgium French case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply Bonusky</fullName>
+        <actions>
+            <name>CaseReceivedBonusky_CZ</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Bonusky</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor,@ccs</value>
+        </criteriaItems>
+        <description>STCP1-388/ auto reply for a new case for Bonusky case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply Carnet</fullName>
+        <actions>
+            <name>CaseReceivedCarnet_CZ</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Carnet</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor,@ccs</value>
+        </criteriaItems>
+        <description>STCP1-388/ auto reply for a new case for Carnet case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply CzechRepublicCzech</fullName>
+        <actions>
+            <name>CaseReceivedCzechRepublicCzech</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>CZ Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Czech Republic Czech case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply DefaultEnglish</fullName>
+        <actions>
+            <name>CaseReceivedDefaultEnglish</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Default Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Default case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply Eurotoll</fullName>
+        <actions>
+            <name>CaseReceivedEurotoll_CZ</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Eurotoll</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor,@ccs</value>
+        </criteriaItems>
+        <description>STCP1-388/ auto reply for a new case for Eurotoll case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply FranceFrench</fullName>
+        <actions>
+            <name>CaseReceivedFranceFrench</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>FR Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for France French case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply GermanyGerman</fullName>
+        <actions>
+            <name>CaseReceivedGermanyGerman</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>DE Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Germany German case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply HungaryHungarian</fullName>
+        <actions>
+            <name>CaseReceivedHungaryHungarian</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>HU Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Hungary Hungarian case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply Kredit CCS CZ</fullName>
+        <actions>
+            <name>CaseReceivedKreditCCS_CZ</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Kredit CCS CZ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor,@ccs</value>
+        </criteriaItems>
+        <description>STCP1-388/ auto reply for a new case for Kredit CCS CZ case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply Kredit CCS SK</fullName>
+        <actions>
+            <name>CaseReceivedKreditCCS_SK</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Kredit CCS SK</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor,@ccs</value>
+        </criteriaItems>
+        <description>STCP1-388/ auto reply for a new case for Kredit CCS SK case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply LuxembourgFrench</fullName>
+        <actions>
+            <name>CaseReceivedLuxembourgFrench</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>LU Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Luxembourg French  case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply Market</fullName>
+        <actions>
+            <name>CaseReceivedMarket_CZ</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Market</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor,@ccs</value>
+        </criteriaItems>
+        <description>STCP1-388/ auto reply for a new case for Market case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply Myto</fullName>
+        <actions>
+            <name>CaseReceivedMyto_CZ</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Mýto</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor,@ccs</value>
+        </criteriaItems>
+        <description>STCP1-388/ auto reply for a new case for Mýto case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply NetherlandsDutch</fullName>
+        <actions>
+            <name>CaseReceivedNetherlandsDutch</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>NL Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Netherlands Dutch case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply PolandPolish</fullName>
+        <actions>
+            <name>CaseReceivedPolandPolish</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>PL Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Poland Polish case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply Provoz</fullName>
+        <actions>
+            <name>CaseReceivedProvoz_CZ</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Provoz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor,@ccs</value>
+        </criteriaItems>
+        <description>STCP1-388/ auto reply for a new case for Provoz case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply Reklamace</fullName>
+        <actions>
+            <name>CaseReceivedReklamace_CZ</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Reklamace</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor,@ccs</value>
+        </criteriaItems>
+        <description>STCP1-388/ auto reply for a new case for Reklamace case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply SlovakiaSlovak</fullName>
+        <actions>
+            <name>CaseReceivedSlovakiaSlovak</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>SK Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Slovakia Slovak case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply SwitzerlandFrench</fullName>
+        <actions>
+            <name>CaseReceivedSwitzerlandFrench</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>CH_FR Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Switzerland French case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply SwitzerlandGerman</fullName>
+        <actions>
+            <name>CaseReceivedSwitzerlandGerman</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>CH_DE Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Switzerland German case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply SwitzerlandItalian</fullName>
+        <actions>
+            <name>CaseReceivedSwitzerlandItalian</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>CH_IT Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor</value>
+        </criteriaItems>
+        <description>STCP1-2/ auto reply for a new case for Switzerland Italian case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply UTA</fullName>
+        <actions>
+            <name>CaseReceivedUTA_CZ</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>UTA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor,@ccs</value>
+        </criteriaItems>
+        <description>STCP1-388/ auto reply for a new case for UTA case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply ZakaznickaPodpora</fullName>
+        <actions>
+            <name>CaseReceivedZakaznickaPodpora_CZ</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Zákaznická podpora</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor,@ccs</value>
+        </criteriaItems>
+        <description>STCP1-388/ auto reply for a new case for Zákaznická podpora case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Reply Zakaznicke</fullName>
+        <actions>
+            <name>CaseReceivedZakaznicke_SK</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <booleanFilter>1 AND (2 OR 3) AND 4 AND 5</booleanFilter>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Zákaznické</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Web</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>notContain</operation>
+            <value>Returned mail,Undeliverable,Auto Reply</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.SuppliedEmail</field>
+            <operation>notContain</operation>
+            <value>@fleetcor,@ccs</value>
+        </criteriaItems>
+        <description>STCP1-388/ auto reply for a new case for Zákaznické case queue</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Auto Update Case%2EType</fullName>
+        <actions>
+            <name>Auto_Update_Case_Type</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.SuppliedName</field>
+            <operation>equals</operation>
+            <value>Fleetcor Salesforce,Tatiana Kim</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Subject</field>
+            <operation>equals</operation>
+            <value>Изменение владельца записи</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Check Is Account Changed checkbox</fullName>
+        <actions>
+            <name>Check_Is_Account_Changed_c_checkbox</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Sets Is Account Changed checkbox if Case was associates to an Account while creation, and this Initial Account is changed to a different Account
+            STCP1-636</description>
+        <formula>AND (             Is_account_associated__c,             ISCHANGED(AccountId),             NOT(ISBLANK(AccountId)),             Initial_Account_ID__c  &lt;&gt;  AccountId             )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Check Is Account associated checkbox</fullName>
+        <actions>
+            <name>Check_Is_account_associated_checkbox</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Update_Initial_Account_ID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>1) Sets the check-box field to TRUE to if the case was associated with an Account while creation by email-to-case; 2) Sets ID of the initially associated Account in the Initial Account ID
+            STCP1-636</description>
+        <formula>AND (             CreatedBy.Alias  = &#39;autocase&#39;,             NOT (ISBLANK (AccountId)),             OR(RecordType.DeveloperName = &#39;Support&#39;,             RecordType.DeveloperName = &#39;Support_CCS&#39;)             )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>E2E RU - Assigned Case</fullName>
+        <actions>
+            <name>E2E_RU_Assigned_Case</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(  RecordType.Name =&quot;Russian Cases&quot; , ISCHANGED( Requested_by__c ), TEXT(Origin)= &#39;Other&#39; )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>E2E RU - Closed Case</fullName>
+        <actions>
+            <name>E2E_RU_Closed_Case</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Russian Cases</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Other</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>E2E RU - Created Case</fullName>
+        <actions>
+            <name>E2E_RU_Created_Case</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Russian Cases</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.Origin</field>
+            <operation>equals</operation>
+            <value>Other</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>FirstOwnerChangeDate</fullName>
+        <actions>
+            <name>SetFirstOwnerChangeDate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>STCP1-251/ saving the date time when owner is changed first time from queue to user (Support record Type)</description>
+        <formula>AND( ISCHANGED(OwnerId), LEFT(PRIORVALUE(OwnerId),3) = &#39;00G&#39;, LEFT(OwnerId,3) = &#39;005&#39;, ISBLANK(First_Owner_Change_Date__c), OR(RecordType.DeveloperName = &#39;Support&#39;, RecordType.DeveloperName = &#39;Support_CCS&#39;) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>New Case Requested</fullName>
+        <actions>
+            <name>New_Case_Requested</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.OwnerId</field>
+            <operation>equals</operation>
+            <value>Eugene Vabishchevich</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Overdue Case Notification</fullName>
+        <actions>
+            <name>Overdue_Case_Notification</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Case.Case_Overdue__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Case.IsClosed</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Russia_Auto Reply_AssignedExecutor</fullName>
+        <actions>
+            <name>CaseAssignedRussia</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>RecordType.DeveloperName = &#39;Russian_Cases&#39; &amp;&amp;  Owner:Queue.DeveloperName = &#39;Russian_Cases&#39; &amp;&amp;
+TEXT(Origin)= &#39;Email&#39; &amp;&amp;
+ISCHANGED( Requested_by__c )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Russia_Auto Reply_Closed</fullName>
+        <actions>
+            <name>CaseClosedRussia</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <formula>RecordType.DeveloperName = &#39;Russian_Cases&#39; &amp;&amp;  Owner:Queue.DeveloperName = &#39;Russian_Cases&#39; &amp;&amp;
+TEXT(Origin)= &#39;Email&#39; &amp;&amp;
+TEXT(Status) = &#39;Closed&#39;</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Russia_Auto Reply_Created</fullName>
+        <actions>
+            <name>CaseCreatedRussia</name>
+            <type>Alert</type>
+        </actions>
+        <actions>
+            <name>QueueAssignment_Russian_Cases</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>RecordType.DeveloperName = &#39;Russian_Cases&#39; &amp;&amp;
+TEXT(Origin)= &#39;Email&#39;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Save Account Email</fullName>
+        <actions>
+            <name>Update_Account_Email_on_Case</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Saves email of associated Account on case (STCP1-619)</description>
+        <formula>(ISNEW() &amp;&amp; NOT (ISBLANK ( AccountId )))             ||             ISCHANGED (AccountId)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Save Initial Case Queue Name</fullName>
+        <actions>
+            <name>Save_Initial_Case_Queue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>STCP1-56/STCP1-330 - save initial case queue name/using in reports to collect statistic of case distribution by queue</description>
+        <formula>(RecordType.DeveloperName = &#39;Support&#39; || RecordType.DeveloperName = &#39;Support_CCS&#39;) &amp;&amp; LEFT(OwnerId, 3) = &#39;00G&#39;</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+
+    <rules>
+        <fullName>Set Case owner to Shell Premium</fullName>
+        <actions>
+            <name>Set_ShellPremium_as_owner</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>used for omni-channel (if language is changed, then set case owner back to initial case queue)</description>
+        <formula>AND
+(
+ISCHANGED(Language__c),
+ Initial_Case_Queue__c = &#39;SHELL Premium&#39;
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

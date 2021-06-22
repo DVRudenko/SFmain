@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Invoicing Form --></label>
+    <name>Invoicing_Form__c</name>
+    <picklistValues>
+        <masterLabel>Email (free)</masterLabel>
+        <translation><!-- Email (free) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Online portal (free)</masterLabel>
+        <translation><!-- Online portal (free) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Paper (20 PLN/generated Invoice)</masterLabel>
+        <translation><!-- Paper (20 PLN/generated Invoice) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

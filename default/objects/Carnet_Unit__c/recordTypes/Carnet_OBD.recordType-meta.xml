@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carnet_OBD</fullName>
+    <active>true</active>
+    <description>Record Type for Carnet OBD orders.</description>
+    <label>Carnet OBD</label>
+    <picklistValues>
+        <picklist>Carnet_Tariff__c</picklist>
+        <values>
+            <fullName>Prepaid 12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prepaid 24</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard 12</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard 24</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Contract_term__c</picklist>
+        <values>
+            <fullName>12 months</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>24 months</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pricing_Approval_Status__c</picklist>
+        <values>
+            <fullName>Approval Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not required</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Pending Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

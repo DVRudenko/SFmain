@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Russia_E2E_Russia</fullName>
+    <columns>INN_Opp__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>E2E_Sub_Status__c</columns>
+    <columns>E2E_Status__c</columns>
+    <columns>E2E_Sales_Type__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>E2E_Active_Substep__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Source_of_Lead_o__c</field>
+        <operation>equals</operation>
+        <value>E2E Form RU</value>
+    </filters>
+    <label>Russia E2E Все заявки</label>
+    <language>ru</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>PPR_Teamleader_Telesales_PSI</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

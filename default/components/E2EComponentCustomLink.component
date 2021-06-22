@@ -1,0 +1,39 @@
+<!--
+ - Created by Kirill.Abanin on 25.07.2018.
+ -->
+
+<apex:component id="E2EComponentCustomLink" controller="E2EComponentsCtrl">
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map" />
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="value of outputPanel" />
+
+    <apex:attribute name="valueName"
+                    type="String"
+                    description="name of the link" />
+
+    <apex:attribute name="className"
+                    type="String"
+                    description="name of the class" />
+
+    <apex:attribute name="hrefLink"
+                    type="String"
+                    description="link" />
+
+    <apex:attribute name="onclick"
+                    type="String"
+                    description="class for text" />
+
+    <apex:attribute name="onComplete"
+                    type="String"
+                    description="class for text" />
+
+    <apex:commandLink styleClass="{! className}"
+                      action="{! hrefLink }"
+                      onclick="{! onclick }"
+                      value="{! valueName }"
+                      onComplete="{! IF(onComplete == null, '', onComplete)}"/>
+</apex:component>

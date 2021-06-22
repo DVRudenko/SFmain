@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOME_1_for_NL_only</fullName>
+    <active>true</active>
+    <description>Product__c = "HOME 1" is available only for Registered_Country__c = "Netherlands".</description>
+    <errorConditionFormula>AND(ISPICKVAL(Product__c, "HOME 1"), Registered_Country__c != "Netherlands")</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Offer "HOME 1" is available only for Netherlands.</errorMessage>
+</ValidationRule>

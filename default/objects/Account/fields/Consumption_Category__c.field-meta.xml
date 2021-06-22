@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Consumption_Category__c</fullName>
+    <description>Picklist field set by connection to BizMachine. Indicates Consumption Category of an Account.</description>
+    <externalId>false</externalId>
+    <label>Consumption Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A: 100K+</fullName>
+                <default>false</default>
+                <label>A: 100K+</label>
+            </value>
+            <value>
+                <fullName>B: 40K - 100K</fullName>
+                <default>false</default>
+                <label>B: 40K - 100K</label>
+            </value>
+            <value>
+                <fullName>C: 20K - 40K</fullName>
+                <default>false</default>
+                <label>C: 20K - 40K</label>
+            </value>
+            <value>
+                <fullName>D: 10K - 20K</fullName>
+                <default>false</default>
+                <label>D: 10K - 20K</label>
+            </value>
+            <value>
+                <fullName>E: 4K - 10K</fullName>
+                <default>false</default>
+                <label>E: 4K - 10K</label>
+            </value>
+            <value>
+                <fullName>F: 0 - 4K</fullName>
+                <default>false</default>
+                <label>F: 0 - 4K</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>T&amp;C&#39;s Confirmation - is always yes</label>
+    <name>AGB_Best_tigung_Ja_Nein_ist_immer_Ja__c</name>
+    <picklistValues>
+        <masterLabel>Ja</masterLabel>
+        <translation>Yes</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nein</masterLabel>
+        <translation>No</translation>
+    </picklistValues>
+</CustomFieldTranslation>

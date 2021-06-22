@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Moved_to_Start_Close_Date</fullName>
+    <active>true</active>
+    <description>Prohibition of changing the closing date after "Moved to Start".</description>
+    <errorConditionFormula>IF(
+        AND(
+        RecordType.Name = "Russian Sales",
+        $Profile.Name != "System Administrator",
+        $Profile.Name != "RU_System_Administrator",
+        $Profile.Name &lt;&gt; "API Only",
+        NOT(ISCHANGED(Number_of_open_tasks__c)),
+        NOT(ISCHANGED( Open_Task__c )),
+        AND (ISPICKVAL(StageName, "Moved to Start"),
+        CloseDate &gt; PRIORVALUE(CloseDate) )),
+        true, false)</errorConditionFormula>
+    <errorDisplayField>CloseDate</errorDisplayField>
+    <errorMessage>Send a request to the SF Administrator to change the "CloseDate".</errorMessage>
+</ValidationRule>

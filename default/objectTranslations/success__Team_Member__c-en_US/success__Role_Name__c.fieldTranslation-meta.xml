@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Member Role --></label>
+    <name>success__Role_Name__c</name>
+    <picklistValues>
+        <masterLabel>Participant</masterLabel>
+        <translation><!-- Participant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spectator</masterLabel>
+        <translation><!-- Spectator --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

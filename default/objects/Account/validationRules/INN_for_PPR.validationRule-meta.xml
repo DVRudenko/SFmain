@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>INN_for_PPR</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(
+AND(
+CONTAINS( $Profile.Name , 'Russian'),
+OR(
+AND(
+CreatedBy.Profile.Name &lt;&gt; 'E2E RU Profile',
+CreatedBy.Profile.Name &lt;&gt; 'API Only',
+ISBLANK( INN__c ) ),
+AND(
+CreatedBy.Profile.Name = 'E2E RU Profile',
+CreatedBy.Profile.Name = 'API Only',
+NOT(ISCHANGED( Rating_FS_Penalty__c)),
+NOT(ISCHANGED( PenaltyScoringRu__c )),
+NOT(ISCHANGED( Account_Status__c)),
+NOT(ISCHANGED( ColCo__c)),
+NOT(ISCHANGED( GFN_Nr__c)),
+NOT(ISCHANGED( Vouchers_Sent__c)),
+NOT(ISBLANK(INN__c )),
+LEN( INN__c) &lt;&gt; 12 ,
+LEN( INN__c) &lt;&gt; 10))),
+true, false)</errorConditionFormula>
+    <errorDisplayField>INN__c</errorDisplayField>
+    <errorMessage>ERROR: ACCT001. Enter the correct INN value!</errorMessage>
+</ValidationRule>

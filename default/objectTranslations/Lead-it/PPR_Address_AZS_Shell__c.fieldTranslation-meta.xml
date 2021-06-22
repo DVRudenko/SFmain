@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Заполняется только если не найдена нужная АЗС --></help>
+    <label><!-- PPR_Address_AZS_Shell --></label>
+    <name>PPR_Address_AZS_Shell__c</name>
+</CustomFieldTranslation>

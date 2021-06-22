@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Checked if a Salesforce Task exists for this call. ContactWorld injects Tasks for Outbound Calls + Agent answered Inbound ones; support cost to serve analysis. No Task if No Agent involvement --></help>
+    <label><!-- TaskExists --></label>
+    <name>NVMStatsSF__TaskExists__c</name>
+</CustomFieldTranslation>

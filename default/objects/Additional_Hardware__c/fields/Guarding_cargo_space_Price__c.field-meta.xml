@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Guarding_cargo_space_Price__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Without Carnet unit and installation.</inlineHelpText>
+    <label>Guarding cargo space package Price</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

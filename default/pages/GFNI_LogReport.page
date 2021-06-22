@@ -1,0 +1,286 @@
+<!--
+ - Created by Nikita.Mikhailov on 28.01.2019.
+ -->
+
+<apex:page id="GFNI_LogReport" controller="GFNI_LogReportCtrl" action="{! init }" readOnly="true" docType="html-5.0">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!$Resource.StickyTableHeaders}"/>
+    <apex:form >
+        <apex:outputPanel layout="block" id="searchValuesBlock" style="margin-left: auto; margin-top:2px;">
+            <apex:outputPanel layout="block" id="dates" style="margin-left: auto;">
+                <apex:outputLabel title="StartDate" value="Start Date "/>
+                <apex:input id="startDate" type="date" value="{!startDate}" label="Start Date" title="Start Date"
+                            required="true" onChange="checkDates()"/>
+                <apex:outputLabel title="EndDate" value="End Date "/>
+                <apex:input id="endDate" type="date" value="{!endDate}" label="End Date" title="End Date"
+                            required="true"
+                            onChange="checkDates()"/>
+            </apex:outputPanel>
+
+            <apex:outputPanel layout="block" id="idValueInput" style="margin-left: auto; margin-top:2px;">
+                <apex:outputLabel title="CustomerId" value="Customer Id "/>
+                <apex:input id="idValue" type="text" value="{!idValue}"
+                            title="Opportunity Id or ERP Number or Account #"
+                            onChange="checkIdValue()"/>
+            </apex:outputPanel>
+
+            <apex:outputPanel layout="block" id="countryList" style="margin-left: auto; margin-top:2px;">
+                <apex:outputLabel title="Country" value="Country "/>
+                <apex:selectList value="{!selectedCountry}" size="1" required="false" label="Country" title="Country">
+                    <apex:selectOptions value="{!countries}"/>
+                </apex:selectList>
+            </apex:outputPanel>
+
+            <apex:outputPanel layout="block" id="finishedList" style="margin-left: auto; margin-top:2px;">
+                <apex:outputLabel title="Finished" value="Finished "/>
+                <apex:selectList value="{!selectedIsFinishedCondition}" size="1" required="false" label="Finished"
+                                 title="Finished">
+                    <apex:selectOptions value="{!isFinishedValues}"/>
+                </apex:selectList>
+            </apex:outputPanel>
+        </apex:outputPanel>
+        <apex:commandButton action="{!onApplyButtonClick}" value="Apply" id="theApplyButton"
+                            onMouseOver="checkIdValue()" onClick="enableLoader()" onComplete="disableLoader()"
+                            reRender="GFNI_Log, paginationButtonsTop, excelExportButton"/>
+        <apex:commandButton action="{!init}" value="Reset Filters" id="theResetFiltersButton" onClick="enableLoader()"
+                            onComplete="disableLoader()"
+                            reRender="GFNI_Log, paginationButtonsTop, searchValuesBlock, excelExportButton"/>
+
+        <apex:outputPanel layout="block" id="paginationButtonsTop"
+                          style="margin-left: auto; margin-top:2px; display: flex;">
+            <apex:outputPanel layout="block">
+                <apex:commandButton value="First" disabled="{!isPreviousDisabled}" action="{!firstPage}"
+                                    onClick="enableLoader()" onComplete="disableLoader()"
+                                    reRender="GFNI_Log, paginationButtonsTop"/>
+                <apex:commandButton value="Previous" disabled="{!isPreviousDisabled}" action="{!previousPage}"
+                                    onClick="enableLoader()" onComplete="disableLoader()"
+                                    reRender="GFNI_Log, paginationButtonsTop"/>
+                <apex:commandButton value="Next" disabled="{!isNextDisabled}" action="{!nextPage}"
+                                    onClick="enableLoader()"
+                                    onComplete="disableLoader()" reRender="GFNI_Log, paginationButtonsTop"/>
+                <apex:commandButton value="End" disabled="{!isNextDisabled}" action="{!lastPage}"
+                                    onClick="enableLoader()"
+                                    onComplete="disableLoader()" reRender="GFNI_Log, paginationButtonsTop"/>
+                <apex:outputLabel value="Page {!pageNumber} of {!totalPages}"/>
+            </apex:outputPanel>
+            <apex:outputPanel layout="block" style="margin-left: auto; margin-top:2px;">
+                Show
+                <apex:selectList value="{!pageSize}" size="1" required="false" label="PageSize"
+                                 title="PageSize">
+                    <apex:selectOptions value="{!pageSizes}"/>
+                    <apex:actionSupport event="onchange" action="{!onApplyButtonClick}" onSubmit="enableLoader()"
+                                        reRender="GFNI_Log, searchValuesBlock, paginationButtonsTop"
+                                        onComplete="disableLoader()"/>
+                </apex:selectList>
+                records.
+            </apex:outputPanel>
+        </apex:outputPanel>
+        <apex:outputPanel layout="block" style="margin-left: auto; margin-top:2px;" id="excelExportButton">
+            <apex:commandButton value="Export current report to excel" action="{!onExportToExcelButtonClick}"
+                                disabled="{!isExportDisabled}"
+                                onClick="enableLoader()"
+                                onComplete="disableLoader()"/>
+        </apex:outputPanel>
+
+    </apex:form>
+    <div id="loader" class="loader-main">
+        <div class="loader-quarter loader-quarter1"></div>
+        <div class="loader-quarter loader-quarter2"></div>
+        <div class="loader-quarter loader-quarter3"></div>
+        <div class="loader-quarter loader-quarter4"></div>
+        <div class="loader-quarter loader-quarter5"></div>
+    </div>
+    <apex:pageBlock title="GFNI Log {!totalSize} records" id="GFNI_Log">
+        <apex:pageBlockTable value="{!report}" var="log" id="GFNI_LogTable">
+            <apex:column headerValue="First Record Date" title="First Record Date" value="{!log.recordDate} ">
+            </apex:column>
+            <apex:column headerValue="Country" value="{!log.registeredCountry}" title="Country"/>
+            <apex:column headerValue="Language" value="{!log.languagePreference}" title="Language"/>
+            <apex:column headerValue="Account #" value="{!log.accountNumberSF}" title="Account #"/>
+            <apex:column headerValue="ERP Number" value="{!log.accountNumberGFN}" title="ERP Number"/>
+            <apex:column headerValue="Account Name" title="Account Name">
+                <apex:outputLink value="/{!log.accountId}">{!log.accountName}</apex:outputLink>
+            </apex:column>
+            <apex:column headerValue="Email" value="{!log.primaryContactEmail}" title="Email"/>
+            <apex:column headerValue="Product" value="{!log.product}" title="Product"/>
+            <apex:column headerValue="Finished" title="Finished">
+                <apex:outputLink value="/apex/GFNI_LogReportExtended?id={!log.opportunityId}">{!log.isFinished}</apex:outputLink>
+            </apex:column>
+            <apex:column headerValue="Conclusion" value="{!log.conclusion}" title="Conclusion"/>
+            <apex:column headerValue="Error/Last message" value="{!log.message}" title="Error/Last message"/>
+            <apex:column headerValue="Opportunity" title="Opportunity">
+                <apex:outputLink value="/{!log.opportunityId}">{!log.opportunityId}</apex:outputLink>
+            </apex:column>
+            <apex:column headerValue="Application Id" value="{!log.applicationId}" title="Application Id"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <script>
+
+        j$ = jQuery.noConflict();
+
+        j$(document).ready(function () {
+            console.debug('ready');
+            enableStickyHeaders();
+        });
+
+        function enableStickyHeaders() {
+            console.log('enabling sticky headers');
+            j$("table[id$='GFNI_LogTable']").stickyTableHeaders();
+        }
+
+        function enableLoader() {
+            var page = document.querySelector('[id$=GFNI_Log]');
+            page.style.opacity = "0.4";
+            page.style.pointerEvents = "none";
+
+            var loader = document.getElementById("loader");
+            loader.style.opacity = "1.0";
+        }
+
+        function disableLoader() {
+            var page = document.querySelector('[id$=GFNI_Log]');
+            page.style.opacity = "1.0";
+            page.style.pointerEvents = "all";
+
+            var loader = document.getElementById("loader");
+            loader.style.opacity = "0.0";
+
+            window.scrollTo(0, 0);
+
+            enableStickyHeaders();
+        }
+
+        function checkDates() {
+            var startDate = document.querySelector('[id$=startDate]').value;
+            var endDate = document.querySelector('[id$=endDate]').value;
+            if (startDate != '' && endDate != '') {
+                if (startDate > endDate) {
+                    document.querySelector('[id$=startDate]').value = endDate;
+                    console.debug('ERROR DATE CROSS');
+                }
+            }
+        }
+
+        var isIdValueChecked = false;
+
+        function checkIdValue() {
+            var idValue = document.querySelector('[id$=idValue]').value;
+
+            Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.GFNI_LogReportCtrl.onIdValueChange}',
+                    idValue,
+                    function (result, event) {
+                        if (event.status) {
+                            switch (result) {
+                                case '1' : {
+                                    if (!isIdValueChecked)
+                                        alert('No opp-ty with Id found');
+                                    disableApplyButton();
+                                    break;
+                                }
+                                case '2' : {
+                                    if (!isIdValueChecked)
+                                        alert('Please use Opportunity Id, Account_Nr or GFN Number to find log');
+                                    disableApplyButton();
+                                    break;
+                                }
+                                default: {
+                                    console.debug(result);
+                                    enableApplyButton();
+                                    break;
+                                }
+                            }
+                        }
+                    },
+                    {escape: true}
+            );
+        }
+
+        function disableApplyButton() {
+            var applyButton = document.querySelector('[id$=theApplyButton]');
+            applyButton.disabled = true;
+            applyButton.style.opacity = 0.5;
+            applyButton.style.pointerEvents = 'none';
+            isIdValueChecked = true;
+        }
+
+        function enableApplyButton() {
+            var applyButton = document.querySelector('[id$=theApplyButton]');
+            applyButton.disabled = false;
+            applyButton.style.opacity = 1;
+            applyButton.style.pointerEvents = '';
+            isIdValueChecked = false;
+        }
+    </script>
+    <style>
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            80% {
+                transform: rotate(320deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loader-main {
+            width: 55px;
+            height: 55px;
+            opacity: 0.0;
+            -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+            position: fixed;
+            margin: auto;
+            transform-origin: left bottom;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        .loader-quarter {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .loader-quarter1 {
+            background-color: red;
+            border-radius: 0 100% 0 0;
+        }
+
+        .loader-quarter2 {
+            background-color: white;
+            border-radius: 0 100% 0 0;
+            top: 20%;
+            width: 80%;
+            height: 80%;
+        }
+
+        .loader-quarter3 {
+            background-color: red;
+            border-radius: 0 100% 0 0;
+            top: 40%;
+            width: 60%;
+            height: 60%;
+        }
+
+        .loader-quarter4 {
+            background-color: white;
+            border-radius: 0 100% 0 0;
+            top: 60%;
+            width: 40%;
+            height: 40%;
+        }
+
+        .loader-quarter5 {
+            background-color: red;
+            border-radius: 0 100% 0 0;
+            top: 80%;
+            width: 20%;
+            height: 20%;
+        }
+    </style>
+</apex:page>

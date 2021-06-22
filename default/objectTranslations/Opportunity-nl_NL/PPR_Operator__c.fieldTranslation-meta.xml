@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Укажите оператора ЭДО --></help>
+    <label><!-- PPR Operator --></label>
+    <name>PPR_Operator__c</name>
+    <picklistValues>
+        <masterLabel>Другое</masterLabel>
+        <translation><!-- Другое --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Контур</masterLabel>
+        <translation><!-- Контур --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Тензор</masterLabel>
+        <translation><!-- Тензор --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

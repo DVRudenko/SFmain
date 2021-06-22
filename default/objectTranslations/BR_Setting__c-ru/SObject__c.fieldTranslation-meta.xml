@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Объект, к которому применяются настройки</help>
+    <label>Объект</label>
+    <name>SObject__c</name>
+    <picklistValues>
+        <masterLabel>Lead</masterLabel>
+        <translation>Интерес</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opportunity</masterLabel>
+        <translation>Возможность</translation>
+    </picklistValues>
+</CustomFieldTranslation>

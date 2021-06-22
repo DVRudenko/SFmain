@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Cache expiration time for dynamic dial lists (if field is empty then value taken from custom settings) --></help>
+    <label><!-- Cache expire time (s) --></label>
+    <name>NVMConnect__CacheExpireTimeSeconds__c</name>
+</CustomFieldTranslation>

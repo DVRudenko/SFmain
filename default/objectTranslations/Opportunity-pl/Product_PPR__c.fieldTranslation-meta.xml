@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Product PPR --></label>
+    <name>Product_PPR__c</name>
+    <picklistValues>
+        <masterLabel>Shell Card &quot;Тариф Сайт&quot;</masterLabel>
+        <translation><!-- Shell Card &quot;Тариф Сайт&quot; --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Вездеход Online &quot;Избранный&quot; Договор</masterLabel>
+        <translation><!-- Вездеход Online &quot;Избранный&quot; Договор --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Вездеход Online &quot;Избранный&quot; Карты</masterLabel>
+        <translation><!-- Вездеход Online &quot;Избранный&quot; Карты --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Вездеход Online &quot;Лайт&quot; Договор</masterLabel>
+        <translation><!-- Вездеход Online &quot;Лайт&quot; Договор --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Вездеход Online &quot;Лайт&quot; Карты</masterLabel>
+        <translation><!-- Вездеход Online &quot;Лайт&quot; Карты --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Вездеход Online &quot;Оптимальный&quot; Договор</masterLabel>
+        <translation><!-- Вездеход Online &quot;Оптимальный&quot; Договор --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Вездеход Online &quot;Оптимальный&quot; Карты</masterLabel>
+        <translation><!-- Вездеход Online &quot;Оптимальный&quot; Карты --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Вездеход Online &quot;Супер&quot; Договор</masterLabel>
+        <translation><!-- Вездеход Online &quot;Супер&quot; Договор --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Вездеход Online &quot;Супер&quot; Карты</masterLabel>
+        <translation><!-- Вездеход Online &quot;Супер&quot; Карты --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Вездеход Online Перевозчик</masterLabel>
+        <translation><!-- Вездеход Online Перевозчик --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ГАЗПРОМ – сеть АЗС Договор</masterLabel>
+        <translation><!-- ГАЗПРОМ – сеть АЗС Договор --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ГАЗПРОМ – сеть АЗС Карты</masterLabel>
+        <translation><!-- ГАЗПРОМ – сеть АЗС Карты --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Парковка</masterLabel>
+        <translation><!-- Парковка --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Шелл Кард &quot;АЗС&quot;</masterLabel>
+        <translation><!-- Шелл Кард &quot;АЗС&quot; --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

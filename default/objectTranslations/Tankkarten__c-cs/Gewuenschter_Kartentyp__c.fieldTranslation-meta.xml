@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Zvolený druh karty</label>
+    <name>Gewuenschter_Kartentyp__c</name>
+    <picklistValues>
+        <masterLabel>Multi Network Card -- International</masterLabel>
+        <translation>Multi - mezinárodní</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multi Network Card -- National</masterLabel>
+        <translation>Multi - národní (CZ/SK)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Single Network Card -- International</masterLabel>
+        <translation>Single - mezinárodní</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Single Network Card -- National</masterLabel>
+        <translation>Single -  národní (CZ/SK)</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Product *</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Carnet Standard 2019</fullName>
+                <default>false</default>
+                <label>Carnet Standard 2019</label>
+            </value>
+            <value>
+                <fullName>Shell Universal Card</fullName>
+                <default>false</default>
+                <label>Shell Universal Card</label>
+            </value>
+            <value>
+                <fullName>Carnet OBD</fullName>
+                <default>false</default>
+                <label>Carnet OBD</label>
+            </value>
+            <value>
+                <fullName>LOTOS Biznes Standard</fullName>
+                <default>false</default>
+                <label>LOTOS Biznes Standard</label>
+            </value>
+            <value>
+                <fullName>LOTOS Biznes No fee</fullName>
+                <default>false</default>
+                <label>LOTOS Biznes No fee</label>
+            </value>
+            <value>
+                <fullName>Shell Basic 2020</fullName>
+                <default>false</default>
+                <label>Shell Basic 2020</label>
+            </value>
+            <value>
+                <fullName>Shell No fee 2020</fullName>
+                <default>false</default>
+                <label>Shell No fee 2020</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

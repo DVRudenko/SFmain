@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Topic__c</fullName>
+    <externalId>false</externalId>
+    <label>Topic</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>My Carnet unit(s)</fullName>
+                <default>false</default>
+                <label>Carnet</label>
+            </value>
+            <value>
+                <fullName>My Card(s)</fullName>
+                <default>false</default>
+                <label>Cards</label>
+            </value>
+            <value>
+                <fullName>Update my account details</fullName>
+                <default>false</default>
+                <label>Admin Account Changes</label>
+            </value>
+            <value>
+                <fullName>Change of conditions</fullName>
+                <default>false</default>
+                <label>Change of conditions</label>
+            </value>
+            <value>
+                <fullName>Products &amp; Services</fullName>
+                <default>false</default>
+                <label>Products &amp; Services</label>
+            </value>
+            <value>
+                <fullName>Invoices &amp; Payments</fullName>
+                <default>false</default>
+                <label>Invoices &amp; Payments</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Internal work</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Unit_Price__c</fullName>
+    <description>Used for calculating One-time Payment - Goods (Price for Unit only + Additional HW).</description>
+    <externalId>false</externalId>
+    <label>Total Unit Price</label>
+    <summarizedField>Carnet_Unit__c.Total_Unit_Price__c</summarizedField>
+    <summaryForeignKey>Carnet_Unit__c.Opportunity__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

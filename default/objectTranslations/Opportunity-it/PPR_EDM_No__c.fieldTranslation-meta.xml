@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- PPR EDM No --></label>
+    <name>PPR_EDM_No__c</name>
+    <picklistValues>
+        <masterLabel>Не готов сейчас подключать</masterLabel>
+        <translation><!-- Не готов сейчас подключать --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Не использует ЭДО</masterLabel>
+        <translation><!-- Не использует ЭДО --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Не подходит наш оператор</masterLabel>
+        <translation><!-- Не подходит наш оператор --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

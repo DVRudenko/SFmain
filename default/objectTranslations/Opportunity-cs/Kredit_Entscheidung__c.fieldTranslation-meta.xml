@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Rozhodnutí Kreditu</label>
+    <name>Kredit_Entscheidung__c</name>
+    <picklistValues>
+        <masterLabel>Abgelehnt</masterLabel>
+        <translation>Odmítnuto</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Genehmigt</masterLabel>
+        <translation>Schváleno</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Genehmigt, Sicherheit geliefert</masterLabel>
+        <translation>Schváleno, doručení zaručeno</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending</masterLabel>
+        <translation><!-- Pending --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending mit Kredit</masterLabel>
+        <translation>V procesu - kredit</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sicherheit verlangt</masterLabel>
+        <translation><!-- Sicherheit verlangt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>falscher Empfang</masterLabel>
+        <translation>Doručeno omylem</translation>
+    </picklistValues>
+</CustomFieldTranslation>

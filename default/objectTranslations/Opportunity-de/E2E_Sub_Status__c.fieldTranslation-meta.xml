@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- E2E Sub. Status --></label>
+    <name>E2E_Sub_Status__c</name>
+    <picklistValues>
+        <masterLabel>Marketing automation</masterLabel>
+        <translation><!-- Marketing automation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Switched to manual</masterLabel>
+        <translation><!-- Switched to manual --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Автоматическое письмо</masterLabel>
+        <translation><!-- Автоматическое письмо --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Дедубликация</masterLabel>
+        <translation><!-- Дедубликация --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Перевод в ручную обработку</masterLabel>
+        <translation><!-- Перевод в ручную обработку --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Чёрный список</masterLabel>
+        <translation><!-- Чёрный список --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

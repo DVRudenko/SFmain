@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Interest_YES__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Interest YES</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CCS_Interest__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>objednávka Limit+</fullName>
+                <default>false</default>
+                <label>objednávka Limit+</label>
+            </value>
+            <value>
+                <fullName>objednávka Limit+ MINI</fullName>
+                <default>false</default>
+                <label>objednávka Limit+ MINI</label>
+            </value>
+            <value>
+                <fullName>objednávka Moje síť</fullName>
+                <default>false</default>
+                <label>objednávka Moje síť</label>
+            </value>
+            <value>
+                <fullName>objednávka FIX 97</fullName>
+                <default>false</default>
+                <label>objednávka FIX 97</label>
+            </value>
+            <value>
+                <fullName>objednávka Eso 2015</fullName>
+                <default>false</default>
+                <label>objednávka Eso 2015</label>
+            </value>
+            <value>
+                <fullName>schůzka OZ</fullName>
+                <default>false</default>
+                <label>schůzka OZ</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>ano</controllingFieldValue>
+            <valueName>objednávka Limit+</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ano</controllingFieldValue>
+            <valueName>objednávka Limit+ MINI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ano</controllingFieldValue>
+            <valueName>objednávka Moje síť</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ano</controllingFieldValue>
+            <valueName>objednávka FIX 97</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ano</controllingFieldValue>
+            <valueName>objednávka Eso 2015</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

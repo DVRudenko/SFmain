@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVM_Hidden_Call_Count__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used behind the scenes to increase the call count</description>
+    <externalId>false</externalId>
+    <label>NVM Hidden Call Count</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,133 @@
+<apex:page name="SharingOpportunity" standardController="Opportunity" extensions="SharingOpportunityController"
+           readOnly="true">
+    <apex:form >
+        <apex:message ></apex:message>
+        <apex:sectionHeader title="{!$ObjectType.Opportunity.Label}"
+                            subtitle="{!if(opportunity.Id==null,'Opportunity',opportunity.Name)}"></apex:sectionHeader>
+        <apex:pageBlock mode="detail" id="opportunityPB">
+            <apex:pageBlockSection id="opportunityInformationPBS" title="{!$ObjectType.Opportunity.Label}">
+                <apex:outputField value="{!opportunity.OwnerId}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Lead_Owner_Role__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Name}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Number_of_Cards__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Number_Business_CARD__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Date_of_First_Contact_Inbound_Outbound__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.PPR_Date_of_Scan__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Product_PPR__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Type}"></apex:outputField>
+                <apex:outputField value="{!opportunity.CategoryContract__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Agreement_Counts__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Agreement_Probability__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.INN_Opp__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.StageName}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Approved_by_Start_Manager__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.CloseDate}"></apex:outputField>
+                <apex:outputField value="{!opportunity.PPR_Lost_To_Competitor__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.PPR_Lost_Reasons__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Decision_Reason_Other__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Transfer_from_inbound__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.FieldsFilling__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Transit_Ultra_Cards__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Sprint_Ultra_Cards__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Rover_Cards_X2_0_Ultra__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.PPR_Special_conditions__c}"></apex:outputField>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection id="opportunityInformationPDI" title="Характеристика контрагента">
+                <apex:outputField value="{!opportunity.Most_Important_Feature__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Most_Important_Feature_specific__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Area_Traveled__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.The_region__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Travel_Pattern__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Primary_Fueling_Method__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Additional_Fueling_Methods__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Field_Telematic__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Fleet_Type__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Projected_Liters_weekly__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Pre_scoring__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Credit_days_ppr__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Credit_desicion_ppr__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.PPR_Credit_Cost__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.VAT_payer__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Number_of_Vehicles_in_Leasing__c}"></apex:outputField>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection id="opportunityInformationCI" title="Информация о компании">
+                <apex:outputField value="{!opportunity.How_Heard_About_Us__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Referred_By__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Channel_Source_Lead__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Contract_Number__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Agreement_Date__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Transit_ID__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Reaction_to_KP__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Description}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Operator__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.PPR_First_Contact_Inbound_Outbound__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Source_of_Lead_o__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Source_of_Lead_re_engaging__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Source_database__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Source_if_self_sourced_c__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Promo_Code1__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Promo_campaign__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.Source_PP__c}"></apex:outputField>
+                <apex:outputField value="{!opportunity.PPR_Electronic_document_management__c}"></apex:outputField>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+
+    <apex:pageBlock title="{!$ObjectType.OpenActivity.Label}">
+        <apex:pageBlockTable value="{!opportunity.OpenActivities}" var="openActive">
+            <apex:column value="{!openActive.Subject}"/>
+            <apex:column value="{!openActive.Who.Name}"/>
+            <apex:column value="{!openActive.IsTask}"/>
+            <apex:column value="{!openActive.ActivityDate}"/>
+            <apex:column value="{!openActive.Status}"/>
+            <apex:column value="{!openActive.Priority}"/>
+            <apex:column value="{!openActive.OwnerId}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="{!$ObjectType.ActivityHistory.Label}">
+        <apex:pageBlockTable value="{!opportunity.ActivityHistories}" var="historyActive">
+            <apex:column value="{!historyActive.Subject}"/>
+            <apex:column value="{!historyActive.Who.Name}"/>
+            <apex:column value="{!historyActive.Description}"/>
+            <apex:column value="{!historyActive.IsTask}"/>
+            <apex:column value="{!historyActive.ActivityDate}"/>
+            <apex:column value="{!historyActive.Status}"/>
+            <apex:column value="{!historyActive.Priority}"/>
+            <apex:column value="{!historyActive.OwnerId}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="{!$ObjectType.OpportunityFieldHistory.Label}">
+        <apex:pageBlockTable value="{!opportunityHistory}" var="history">
+            <apex:column headerValue="Дата" value="{!history.theDate}"/>
+            <apex:column headerValue="Пользователь">
+                <apex:outputLink value="/{!history.userId}"> {!history.who} </apex:outputLink>
+            </apex:column>
+            <apex:column headerValue="Действие">
+                <apex:outputText escape="false" value="{!history.action}"/>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="Журнал этапов">
+        <apex:pageBlockTable value="{!opportunity.OpportunityHistories}" var="history">
+            <apex:column value="{!history.StageName}"/>
+            <apex:column value="{!history.Probability}"/>
+            <apex:column value="{!history.Amount}"/>
+            <apex:column value="{!history.Expectedrevenue}"/>
+            <apex:column value="{!history.Closedate}"/>
+            <apex:column value="{!history.CreatedDate}"/>
+            <apex:column value="{!history.CreatedById}"/>
+            <!--<apex:column value="{!stageHistoryOwner[history.Id]}"/>-->
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="{!$ObjectType.OpportunityContactRole.Label}">
+        <apex:pageBlockTable value="{!opportunity.OpportunityContactRoles}" var="contactRole">
+            <apex:column value="{!contactRole.Contact.Name}"/>
+            <apex:column value="{!contactRole.Contact.Account.Name}"/>
+            <apex:column value="{!contactRole.Contact.Email}"/>
+            <apex:column value="{!contactRole.Contact.Phone}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+
+</apex:page>

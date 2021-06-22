@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>ABVP</fullName>
+        <default>false</default>
+        <label>ABVP</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Adressbroker</fullName>
+        <default>false</default>
+        <label>Adressbroker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Allstar Mondo Contact Form</fullName>
+        <default>false</default>
+        <label>Allstar Mondo Contact Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Allstar Mondo Web Long Form</fullName>
+        <default>false</default>
+        <label>Allstar Mondo Web Long Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Allstar Mondo Web Short Form</fullName>
+        <default>false</default>
+        <label>Allstar Mondo Web Short Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ARCO_CNT</fullName>
+        <default>false</default>
+        <label>ARCO_CNT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Aussendienst</fullName>
+        <default>false</default>
+        <label>Aussendienst</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BDS/BVMU</fullName>
+        <default>false</default>
+        <label>BDS/BVMU</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bestandskunde FleetCor</fullName>
+        <default>false</default>
+        <label>Bestandskunde FleetCor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bestandskunde Shell</fullName>
+        <default>false</default>
+        <label>Bestandskunde Shell</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bestellanfrage</fullName>
+        <default>false</default>
+        <label>Bestellanfrage</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BilloMat</fullName>
+        <default>false</default>
+        <label>BilloMat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Biznode – pilot 5000</fullName>
+        <default>false</default>
+        <label>Biznode – pilot 5000</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bizzbooster</fullName>
+        <default>false</default>
+        <label>Bizzbooster</label>
+    </standardValue>
+    <standardValue>
+        <fullName>bobex.com</fullName>
+        <default>false</default>
+        <label>bobex.com</label>
+    </standardValue>
+    <standardValue>
+        <fullName>bonusky.cz</fullName>
+        <default>false</default>
+        <label>bonusky.cz</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BVK</fullName>
+        <default>false</default>
+        <label>BVK</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Carnet</fullName>
+        <default>false</default>
+        <label>Carnet</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Carnet 5+</fullName>
+        <default>false</default>
+        <label>Carnet 5+</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Carnet OBD</fullName>
+        <default>false</default>
+        <label>Carnet OBD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS 16. seznam PCMS</fullName>
+        <default>false</default>
+        <label>CCS 16. seznam PCMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS 16. seznam PCMS NEW</fullName>
+        <default>false</default>
+        <label>CCS 16. seznam PCMS NEW</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS 16. seznam PCMS NEW 2. várka</fullName>
+        <default>false</default>
+        <label>CCS 16. seznam PCMS NEW 2. várka</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS 16. seznam PCMS NEW 3. várka</fullName>
+        <default>false</default>
+        <label>CCS 16. seznam PCMS NEW 3. várka</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Advertising 1</fullName>
+        <default>false</default>
+        <label>CCS Advertising 1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Altevida E2E</fullName>
+        <default>false</default>
+        <label>CCS Altevida E2E</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Altevida E2E Carnet x-selling</fullName>
+        <default>false</default>
+        <label>CCS Altevida E2E Carnet x-selling</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Altevida SME</fullName>
+        <default>false</default>
+        <label>CCS Altevida SME</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Autoparky 01/2017</fullName>
+        <default>false</default>
+        <label>CCS Autoparky 01/2017</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Autoparky 02/2016</fullName>
+        <default>false</default>
+        <label>CCS Autoparky 02/2016</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Autoparky 04/2016</fullName>
+        <default>false</default>
+        <label>CCS Autoparky 04/2016</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Autoparky 04/2017</fullName>
+        <default>false</default>
+        <label>CCS Autoparky 04/2017</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Autoparky 08/2017</fullName>
+        <default>false</default>
+        <label>CCS Autoparky 08/2017</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Autoparky 10/2017</fullName>
+        <default>false</default>
+        <label>CCS Autoparky 10/2017</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Bisnode 02/2019</fullName>
+        <default>false</default>
+        <label>CCS Bisnode 02/2019</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Carnet + Bonus 600CZK / 24EUR</fullName>
+        <default>false</default>
+        <label>CCS Carnet + Bonus 600CZK / 24EUR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Carnet CZ Custumers</fullName>
+        <default>false</default>
+        <label>CCS Carnet CZ Custumers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Carnet off-line dtb</fullName>
+        <default>false</default>
+        <label>CCS Carnet off-line dtb</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS chat</fullName>
+        <default>false</default>
+        <label>CCS chat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Cribis PILOT OSVČ neplátci</fullName>
+        <default>false</default>
+        <label>CCS Cribis PILOT OSVČ neplátci</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Cribis PILOT OSVČ plátci</fullName>
+        <default>false</default>
+        <label>CCS Cribis PILOT OSVČ plátci</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Cribis SK SME PILOT</fullName>
+        <default>false</default>
+        <label>CCS Cribis SK SME PILOT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS ČSOBL</fullName>
+        <default>false</default>
+        <label>CCS ČSOBL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Database 3</fullName>
+        <default>false</default>
+        <label>CCS Database 3</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Database 4</fullName>
+        <default>false</default>
+        <label>CCS Database 4</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS dtb Filípek 3/2017</fullName>
+        <default>false</default>
+        <label>CCS dtb Filípek 3/2017</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS LAM Cross sell Bundle</fullName>
+        <default>false</default>
+        <label>CCS LAM Cross sell Bundle</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS LT 04/16</fullName>
+        <default>false</default>
+        <label>CCS LT 04/16</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS LT 05/16</fullName>
+        <default>false</default>
+        <label>CCS LT 05/16</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS ML 04/2016</fullName>
+        <default>false</default>
+        <label>CCS ML 04/2016</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS ML 04/2017</fullName>
+        <default>false</default>
+        <label>CCS ML 04/2017</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS ML 06/2016</fullName>
+        <default>false</default>
+        <label>CCS ML 06/2016</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS MSP A1</fullName>
+        <default>false</default>
+        <label>CCS MSP A1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS nový klienti 022015</fullName>
+        <default>false</default>
+        <label>CCS nový klienti 022015</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Partnerhip PRO_DOMA  4/2018</fullName>
+        <default>false</default>
+        <label>CCS Partnerhip PRO_DOMA  4/2018</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS péče o SME - PILOT</fullName>
+        <default>false</default>
+        <label>CCS péče o SME - PILOT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS projekt Up!</fullName>
+        <default>false</default>
+        <label>CCS projekt Up!</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS QB E2E</fullName>
+        <default>false</default>
+        <label>CCS QB E2E</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS QB SME</fullName>
+        <default>false</default>
+        <label>CCS QB SME</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS recyklace diskvalifikovaných leadů 0617</fullName>
+        <default>false</default>
+        <label>CCS recyklace diskvalifikovaných leadů 0617</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS recyklace JP 07/17</fullName>
+        <default>false</default>
+        <label>CCS recyklace JP 07/17</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS recyklace SME 4/2018</fullName>
+        <default>false</default>
+        <label>CCS recyklace SME 4/2018</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Shell SME - SME</fullName>
+        <default>false</default>
+        <label>CCS Shell SME - SME</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Shell SME - TLS</fullName>
+        <default>false</default>
+        <label>CCS Shell SME - TLS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS SK karty bez Carnetu 0617</fullName>
+        <default>false</default>
+        <label>CCS SK karty bez Carnetu 0617</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS SK leady 201805</fullName>
+        <default>false</default>
+        <label>CCS SK leady 201805</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS SK leady updated</fullName>
+        <default>false</default>
+        <label>CCS SK leady updated</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS SME Cross sell Bundle</fullName>
+        <default>false</default>
+        <label>CCS SME Cross sell Bundle</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Spokojenost zákazníků</fullName>
+        <default>false</default>
+        <label>CCS Spokojenost zákazníků</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS_O2 KAMPAN</fullName>
+        <default>false</default>
+        <label>CCS TLS_O2 KAMPAN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS 1. kampaň</fullName>
+        <default>false</default>
+        <label>CCS TLS 1. kampaň</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS 2. kampaň</fullName>
+        <default>false</default>
+        <label>CCS TLS 2. kampaň</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS 3. kampaň</fullName>
+        <default>false</default>
+        <label>CCS TLS 3. kampaň</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS 4. kampaň</fullName>
+        <default>false</default>
+        <label>CCS TLS 4. kampaň</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS 5. kampaň</fullName>
+        <default>false</default>
+        <label>CCS TLS 5. kampaň</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS Cribis new</fullName>
+        <default>false</default>
+        <label>CCS TLS Cribis new</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS Cribis PILOT</fullName>
+        <default>false</default>
+        <label>CCS TLS Cribis PILOT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS Cribis PILOT SK</fullName>
+        <default>false</default>
+        <label>CCS TLS Cribis PILOT SK</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS Cribis safe team</fullName>
+        <default>false</default>
+        <label>CCS TLS Cribis safe team</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS Cribis SK</fullName>
+        <default>false</default>
+        <label>CCS TLS Cribis SK</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS Cribis SME 1.kolo</fullName>
+        <default>false</default>
+        <label>CCS TLS Cribis SME 1.kolo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS Cribis test</fullName>
+        <default>false</default>
+        <label>CCS TLS Cribis test</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS Cribis test 2</fullName>
+        <default>false</default>
+        <label>CCS TLS Cribis test 2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS Cribis test 3</fullName>
+        <default>false</default>
+        <label>CCS TLS Cribis test 3</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS FP 1. vlna</fullName>
+        <default>false</default>
+        <label>CCS TLS FP 1. vlna</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS I.DRUHÉ KOLO VOLÁNÍ</fullName>
+        <default>false</default>
+        <label>CCS TLS I.DRUHÉ KOLO VOLÁNÍ</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS II.DRUHÉ KOLO VOLÁNÍ</fullName>
+        <default>false</default>
+        <label>CCS TLS II.DRUHÉ KOLO VOLÁNÍ</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS TLS vlastní zdroj</fullName>
+        <default>false</default>
+        <label>CCS TLS vlastní zdroj</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS T-mobile 201804</fullName>
+        <default>false</default>
+        <label>CCS T-mobile 201804</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Unicall SME</fullName>
+        <default>false</default>
+        <label>CCS Unicall SME</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS W.A.G. 08/2017</fullName>
+        <default>false</default>
+        <label>CCS W.A.G. 08/2017</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS W.A.G. pilot</fullName>
+        <default>false</default>
+        <label>CCS W.A.G. pilot</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Waftcom ML pilot</fullName>
+        <default>false</default>
+        <label>CCS Waftcom ML pilot</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Waftcom SME</fullName>
+        <default>false</default>
+        <label>CCS Waftcom SME</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS WEB Telesales</fullName>
+        <default>false</default>
+        <label>CCS WEB Telesales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS WEB Telesales CC</fullName>
+        <default>false</default>
+        <label>CCS WEB Telesales CC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS WEB Telesales FB</fullName>
+        <default>false</default>
+        <label>CCS WEB Telesales FB</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS WEB Telesales market</fullName>
+        <default>false</default>
+        <label>CCS WEB Telesales market</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS živnostníci</fullName>
+        <default>false</default>
+        <label>CCS živnostníci</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CEFCO_CNT</fullName>
+        <default>false</default>
+        <label>CEFCO_CNT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CITGO Inbound Call</fullName>
+        <default>false</default>
+        <label>CITGO Inbound Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>E2E Form</fullName>
+        <default>false</default>
+        <label>E2E Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>efektivnetankovanie.sk</fullName>
+        <default>false</default>
+        <label>efektivnetankovanie.sk</label>
+    </standardValue>
+    <standardValue>
+        <fullName>efektivnitankovani.cz</fullName>
+        <default>false</default>
+        <label>efektivnitankovani.cz</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Emailmarketing</fullName>
+        <default>false</default>
+        <label>Emailmarketing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email-Marketing</fullName>
+        <default>false</default>
+        <label>Email-Marketing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Empfehlung</fullName>
+        <default>false</default>
+        <label>Empfehlung</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EV Short Form</fullName>
+        <default>false</default>
+        <label>EV Short Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Facebook</fullName>
+        <default>false</default>
+        <label>Facebook</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fleetexpert</fullName>
+        <default>false</default>
+        <label>Fleetexpert</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FleetGo</fullName>
+        <default>false</default>
+        <label>FleetGo</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fleetmatics</fullName>
+        <default>false</default>
+        <label>Fleetmatics</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fleetmatics_new</fullName>
+        <default>false</default>
+        <label>Fleetmatics_new</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FMWALMART_CNT</fullName>
+        <default>false</default>
+        <label>FMWALMART_CNT</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GFN</fullName>
+        <default>false</default>
+        <label>GFN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GFN subaccount</fullName>
+        <default>false</default>
+        <label>GFN subaccount</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Google AdWords</fullName>
+        <default>false</default>
+        <label>Google AdWords</label>
+    </standardValue>
+    <standardValue>
+        <fullName>House</fullName>
+        <default>false</default>
+        <label>House</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound</fullName>
+        <default>false</default>
+        <label>Inbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound Call</fullName>
+        <default>false</default>
+        <label>Inbound Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound Email</fullName>
+        <default>false</default>
+        <label>Inbound Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound Phone Call</fullName>
+        <default>false</default>
+        <label>Inbound Phone Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Incomplete Web Form Step 1</fullName>
+        <default>false</default>
+        <label>Incomplete Web Form Step 1</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Incomplete Web Form Step 2</fullName>
+        <default>false</default>
+        <label>Incomplete Web Form Step 2</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Internet</fullName>
+        <default>false</default>
+        <label>Internet</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IVD</fullName>
+        <default>false</default>
+        <label>IVD</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Kooperationspartner</fullName>
+        <default>false</default>
+        <label>Kooperationspartner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Landingpage</fullName>
+        <default>false</default>
+        <label>Landingpage</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Live Agent Chat</fullName>
+        <default>false</default>
+        <label>Live Agent Chat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Merchant Referral</fullName>
+        <default>false</default>
+        <label>Merchant Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Migrated</fullName>
+        <default>false</default>
+        <label>Migrated</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MVF Web Lead</fullName>
+        <default>false</default>
+        <label>MVF Web Lead</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outbound</fullName>
+        <default>false</default>
+        <label>Outbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Bonus)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Bonus)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Bonus+)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Bonus+)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Bonus+ SK)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Bonus+ SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Bonus Fleet)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Bonus Fleet)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Bonus Fleet SK)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Bonus Fleet SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Bonus SK)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Bonus SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Business)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Business)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Business SK)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Business SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Carnet)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Carnet)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Carnet SK)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Carnet SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Limit)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Limit)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Limit+)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Limit+)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Limit +MINI)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Limit +MINI)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Limit+ SK)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Limit+ SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Limit SK)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Limit SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Toll)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Toll)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka CCS Toll SK)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka CCS Toll SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka UTA/CCS)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka UTA/CCS)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>OZ login - Web CCS (objednávka UTA/CCS SK)</fullName>
+        <default>false</default>
+        <label>OZ login - Web CCS (objednávka UTA/CCS SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Paper application</fullName>
+        <default>false</default>
+        <label>Paper application</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partner</fullName>
+        <default>false</default>
+        <label>Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PCMS</fullName>
+        <default>false</default>
+        <label>PCMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Polk</fullName>
+        <default>false</default>
+        <label>Polk</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Příchozí poptávka</fullName>
+        <default>false</default>
+        <label>Příchozí poptávka</label>
+    </standardValue>
+    <standardValue>
+        <fullName>QR Code</fullName>
+        <default>false</default>
+        <label>QR Code</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Referal Shell TEam</fullName>
+        <default>false</default>
+        <label>Referal Shell TEam</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Russian Web</fullName>
+        <default>false</default>
+        <label>Russian Web</label>
+    </standardValue>
+    <standardValue>
+        <fullName>sevDesk</fullName>
+        <default>false</default>
+        <label>sevDesk</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Shell</fullName>
+        <default>false</default>
+        <label>Shell</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Shell Email</fullName>
+        <default>false</default>
+        <label>Shell Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Shell Website</fullName>
+        <default>false</default>
+        <label>Shell Website</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Site Agg</fullName>
+        <default>false</default>
+        <label>Site Agg</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SMS</fullName>
+        <default>false</default>
+        <label>SMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Stationskunde</fullName>
+        <default>false</default>
+        <label>Stationskunde</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tablet</fullName>
+        <default>false</default>
+        <label>Tablet</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tablet Short Form</fullName>
+        <default>false</default>
+        <label>Tablet Short Form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Telesales</fullName>
+        <default>false</default>
+        <label>Telesales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>T-mobile Autopark</fullName>
+        <default>false</default>
+        <label>T-mobile Autopark</label>
+    </standardValue>
+    <standardValue>
+        <fullName>T-Mobile CZ</fullName>
+        <default>false</default>
+        <label>T-Mobile CZ</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tradingtwins</fullName>
+        <default>false</default>
+        <label>Tradingtwins</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Transitcard</fullName>
+        <default>false</default>
+        <label>Transitcard</label>
+    </standardValue>
+    <standardValue>
+        <fullName>URL</fullName>
+        <default>false</default>
+        <label>URL</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vimcar</fullName>
+        <default>false</default>
+        <label>Vimcar</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vlastní iniciativa</fullName>
+        <default>false</default>
+        <label>Vlastní iniciativa</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Vodafone CZ</fullName>
+        <default>false</default>
+        <label>Vodafone CZ</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web_LP и web_short-form</fullName>
+        <default>false</default>
+        <label>Web_LP и web_short-form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web_short-form</fullName>
+        <default>false</default>
+        <label>Web_short-form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web_short-form_flex-karte</fullName>
+        <default>false</default>
+        <label>Web_short-form_flex-karte</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web Application</fullName>
+        <default>false</default>
+        <label>Web Application</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS</fullName>
+        <default>false</default>
+        <label>Web CCS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (landing page)</fullName>
+        <default>false</default>
+        <label>Web CCS (landing page)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (Napište nám)</fullName>
+        <default>false</default>
+        <label>Web CCS (Napište nám)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (Napište nám SK)</fullName>
+        <default>false</default>
+        <label>Web CCS (Napište nám SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Bonus)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Bonus)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Bonus+)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Bonus+)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Bonus+ SK)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Bonus+ SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Bonus Fleet)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Bonus Fleet)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Bonus Fleet SK)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Bonus Fleet SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Bonus SK)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Bonus SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Business)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Business)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Business SK)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Business SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Carnet)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Carnet)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Carnet SK)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Carnet SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Limit)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Limit)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Limit+)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Limit+)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Limit +MINI)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Limit +MINI)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Limit+ SK)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Limit+ SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Limit Exclusive)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Limit Exclusive)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Limit SK)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Limit SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Toll)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Toll)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka CCS Toll SK)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka CCS Toll SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka UTA/CCS)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka UTA/CCS)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web CCS (objednávka UTA/CCS SK)</fullName>
+        <default>false</default>
+        <label>Web CCS (objednávka UTA/CCS SK)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WinBack</fullName>
+        <default>false</default>
+        <label>WinBack</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Список Европлан</fullName>
+        <default>false</default>
+        <label>Список Европлан</label>
+    </standardValue>
+    <standardValue>
+        <fullName>carnet.cz</fullName>
+        <default>false</default>
+        <label>carnet.cz</label>
+    </standardValue>
+    <standardValue>
+        <fullName>carnet.sk</fullName>
+        <default>false</default>
+        <label>carnet.sk</label>
+    </standardValue>
+</StandardValueSet>

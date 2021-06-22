@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Pacing_for_aggregates</fullName>
+    <active>true</active>
+    <description>Pacing is only allowed for aggregate behaviours with an end time.</description>
+    <errorConditionFormula>AND(!ISBLANK(TEXT(success__Pacing__c)), OR( ISBLANK(success__Aggregate_Field__c),  ISBLANK(success__Time_limit_in_days__c)))</errorConditionFormula>
+    <errorDisplayField>success__Pacing__c</errorDisplayField>
+    <errorMessage>Pacing requires an Aggregate Function, a Function Value and a Time Limit</errorMessage>
+</ValidationRule>

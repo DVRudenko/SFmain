@@ -1,0 +1,23 @@
+
+{
+    "translations": {
+        "price_value": {
+            "en": "4 CZK per card per month",
+            "cs": "4 Kč za kartu měsíčně"
+        },
+        "title": {
+            "en": "Accident insurance",
+            "cs": "Úrazové pojištění"
+        },
+        "description": {
+            "en": "<p>CCS in partnership with Česká podnikatelská pojišťovna, a.s., Vienna Insurance Group is offering optional accident insurance for CCS card holders with the insured amount of up to 600 000 CZK for 4 CZK per card per month.</p><p>Accident insurance applies to the motor vehicles drivers who legitimately use valid CCS fuel cards with purchased optional accident insurance service.</p><p><a href='https://www.ccs.cz/urazove-pojisteni' target='_blank'>More information</a></p>",
+            "cs": "<p>CCS ve spolupráci s Českou podnikatelskou pojišťovnou, a.s., Vienna Insurance Group nabízí držitelům karet CCS volitelné úrazové pojištění s pojištěnou částkou až 600 000 Kč za 4 Kč za kartu měsíčně.</p><p>Úrazové pojištění se vztahuje na řidiče motorových vozidel, kteří oprávněně užívají platné palivové karty CCS a přistoupili do pojištění.</p><p><a href='https://www.ccs.cz/urazove-pojisteni' target='_blank'>Více informací</a></p>"
+        }
+    },
+    "settings": {
+        "show_more": "false",
+        "show_checkbox_1": "false",
+        "show_checkbox_2": "false",
+        "bgImage": ""
+    }
+}

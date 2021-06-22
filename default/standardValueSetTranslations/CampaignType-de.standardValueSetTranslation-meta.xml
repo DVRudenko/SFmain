@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Andere</masterLabel>
+        <translation>Sonstiges</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Email</masterLabel>
+        <translation>E-Mail</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Konferenz</masterLabel>
+        <translation>Seminar/Konferenz</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Partners</masterLabel>
+        <translation>Partner</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Public Relations</masterLabel>
+        <translation>Pressearbeit</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Social Media</masterLabel>
+        <translation><!-- Social Media --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Telemarketing</masterLabel>
+        <translation>Telemarketing</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Webinar</masterLabel>
+        <translation><!-- Webinar --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Weiterempfehlung</masterLabel>
+        <translation>Referenzprogramm</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Werbung</masterLabel>
+        <translation>Anzeige</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>White Paper</masterLabel>
+        <translation><!-- White Paper --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

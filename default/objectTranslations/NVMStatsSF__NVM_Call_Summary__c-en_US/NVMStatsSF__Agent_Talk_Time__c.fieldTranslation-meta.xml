@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total talk time in seconds (excluding Ringing, Hold, Consult, Transfer and Post Call work time). Add this and Agent2 Transfer time for All Agent talk time --></help>
+    <label><!-- Agent Talk Time --></label>
+    <name>NVMStatsSF__Agent_Talk_Time__c</name>
+</CustomFieldTranslation>

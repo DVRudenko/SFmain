@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Account Land in Registrierte Adresse --></help>
+    <label>Country</label>
+    <name>Land_Opp__c</name>
+</CustomFieldTranslation>

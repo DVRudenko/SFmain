@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVM_Lead_Score__c</fullName>
+    <description>NVM basic score formula for Lead dial lists</description>
+    <externalId>false</externalId>
+    <formula>IF(
+    AND(
+        ISPICKVAL(Status, "Open"),
+        ISPICKVAL(Sec_Channel__c,"Inbound"),
+        CONTAINS("Web", TEXT(LeadSource)),
+        (Number_of_days__c &lt;= 25)
+       ), 1,
+IF(
+    AND(
+        ISPICKVAL(Status, "Open"),
+        ISPICKVAL(Sec_Channel__c,"Inbound"),
+        NOT(CONTAINS("Web", TEXT(LeadSource))),
+        (Number_of_days__c &lt;= 25)
+       ), 2,
+IF(
+    AND(
+        ISPICKVAL(Status, "Open"),
+        ISPICKVAL(Sec_Channel__c,"JITB"),
+        (Number_of_days__c &lt;= 25)
+       ), 3,
+IF(
+    AND(
+        ISPICKVAL(Status, "Open"),
+        ISPICKVAL(Sec_Channel__c,"Inbound"),
+        (Number_of_days__c &gt; 25)
+       ), 4,
+IF(
+    AND(
+        ISPICKVAL(Status, "Open"),
+        ISPICKVAL(Sec_Channel__c,"JITB"),
+        (Number_of_days__c &gt; 25)
+       ), 5,
+IF(
+    AND(
+        ISPICKVAL(Status, "Contacted"),
+        Number_of_open_tasks__c =0
+       ), 6,
+7))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>NVM Lead Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

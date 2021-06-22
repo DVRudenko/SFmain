@@ -1,0 +1,14 @@
+<apex:page standardController="Opportunity" extensions="OpportunityClickToCallController" action="{! init }"> 
+    <apex:form id="formId">
+        <apex:pageMessages />
+        <apex:pageBlock mode="maindetail" id="mainblock">
+            <apex:pageBlockSection collapsible="false" id="dialoga" title="Dialoga" rendered="{! displayDialogaSection }">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Customer's Phone"/>
+                    <apex:commandLink value="{! contactPhone }" action="{! doDialogaCall }" reRender="formId"/>
+                </apex:pageBlockSectionItem>
+                <apex:outputText value="{! userPhone }" label="Agent's Phone" id="userPhoneId"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

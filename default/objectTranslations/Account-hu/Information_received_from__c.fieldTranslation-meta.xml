@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Information received from --></label>
+    <name>Information_received_from__c</name>
+    <picklistValues>
+        <masterLabel>Station employee</masterLabel>
+        <translation><!-- Station employee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Station owner</masterLabel>
+        <translation><!-- Station owner --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

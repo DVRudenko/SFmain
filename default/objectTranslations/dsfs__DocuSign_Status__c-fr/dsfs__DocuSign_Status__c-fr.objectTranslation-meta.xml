@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Statut DocuSign</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Statut DocuSign</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>DocuSign Status With View Button</layout>
+        <sections>
+            <label>Liens personnalisés</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Informations</label>
+            <section>Information</section>
+        </sections>
+        <sections>
+            <label>Objets connexes</label>
+            <section>Related Objects</section>
+        </sections>
+        <sections>
+            <label>Informations système</label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Enveloppe n°</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- CorrectInDocuSign --></label>
+        <name>dsfs__CorrectInDocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Resend_DocuSign_EmailDS --></label>
+        <name>dsfs__Resend_DocuSign_EmailDS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_In_DocuSign --></label>
+        <name>dsfs__View_In_DocuSign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- View_In_DocuSign_Button --></label>
+        <name>dsfs__View_In_DocuSign_Button</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- VoidEnvelope --></label>
+        <name>dsfs__VoidEnvelope</name>
+    </webLinks>
+</CustomObjectTranslation>

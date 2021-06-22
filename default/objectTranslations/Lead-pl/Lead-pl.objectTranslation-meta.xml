@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- All Phone Fields --></label>
+        <name>All_Phone_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- All Phone Fields EU --></label>
+        <name>All_Phone_Fields_EU</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- ClickToCall --></label>
+        <name>ClickToCall</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- PD_Fields --></label>
+        <name>PD_Fields</name>
+    </fieldSets>
+    <layouts>
+        <layout>CCS Lead Layout</layout>
+        <sections>
+            <label><!-- Adresa --></label>
+            <section>Adresa</section>
+        </sections>
+        <sections>
+            <label><!-- CCS Telesales --></label>
+            <section>CCS Telesales</section>
+        </sections>
+        <sections>
+            <label><!-- Charakteristika potenciálu --></label>
+            <section>Charakteristika potenciálu</section>
+        </sections>
+        <sections>
+            <label><!-- Poznámka --></label>
+            <section>Poznámka</section>
+        </sections>
+        <sections>
+            <label><!-- Systémové informace --></label>
+            <section>Systémové informace</section>
+        </sections>
+        <sections>
+            <label><!-- Zdroj Leadu --></label>
+            <section>Zdroj Leadu</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Carnet Lead Layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Analyzing potential --></label>
+            <section>Analyzing potential</section>
+        </sections>
+        <sections>
+            <label><!-- Company details --></label>
+            <section>Company details</section>
+        </sections>
+        <sections>
+            <label><!-- Consents --></label>
+            <section>Consents</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Email-to-Lead --></label>
+            <section>Email-to-Lead</section>
+        </sections>
+        <sections>
+            <label><!-- Inbound/JITB Information --></label>
+            <section>Inbound/JITB Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Source Information --></label>
+            <section>Lead Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- Notes/Description --></label>
+            <section>Notes/Description</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>AllStar-ShellUC Lead Layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Bedarfsanalyse --></label>
+            <section>Bedarfsanalyse</section>
+        </sections>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Kontakdaten --></label>
+            <section>Kontakdaten</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Source Information --></label>
+            <section>Lead Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Unternehmen --></label>
+            <section>Unternehmen</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Flexcard Lead Layout</layout>
+        <sections>
+            <label><!-- Anschrift --></label>
+            <section>Anschrift</section>
+        </sections>
+        <sections>
+            <label><!-- Bedarfsanalyse --></label>
+            <section>Bedarfsanalyse</section>
+        </sections>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Click to Call --></label>
+            <section>Click to Call</section>
+        </sections>
+        <sections>
+            <label><!-- Kontakdaten --></label>
+            <section>Kontakdaten</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Source Information --></label>
+            <section>Lead Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- Unternehmen --></label>
+            <section>Unternehmen</section>
+        </sections>
+        <sections>
+            <label><!-- Unternehmensinformationen --></label>
+            <section>Unternehmensinformationen</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Lead Layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Authorization --></label>
+            <section>Authorization</section>
+        </sections>
+        <sections>
+            <label><!-- Bedarfsanalyse --></label>
+            <section>Bedarfsanalyse</section>
+        </sections>
+        <sections>
+            <label>Opis</label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Email-to-Lead --></label>
+            <section>Email-to-Lead</section>
+        </sections>
+        <sections>
+            <label><!-- Inbound/JITB Information --></label>
+            <section>Inbound/JITB Information</section>
+        </sections>
+        <sections>
+            <label><!-- JITB Reporting --></label>
+            <section>JITB Reporting</section>
+        </sections>
+        <sections>
+            <label><!-- Kontakdaten --></label>
+            <section>Kontakdaten</section>
+        </sections>
+        <sections>
+            <label>Pochodzenie leadu</label>
+            <section>Lead Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Tankstelleninfo --></label>
+            <section>Tankstelleninfo</section>
+        </sections>
+        <sections>
+            <label><!-- Unternehmen --></label>
+            <section>Unternehmen</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Lotos Lead Layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Authorization --></label>
+            <section>Authorization</section>
+        </sections>
+        <sections>
+            <label><!-- Bedarfsanalyse --></label>
+            <section>Bedarfsanalyse</section>
+        </sections>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Click to Call --></label>
+            <section>Click to Call</section>
+        </sections>
+        <sections>
+            <label><!-- Email-to-Lead --></label>
+            <section>Email-to-Lead</section>
+        </sections>
+        <sections>
+            <label><!-- Inbound/JITB Information --></label>
+            <section>Inbound/JITB Information</section>
+        </sections>
+        <sections>
+            <label><!-- JITB Reporting --></label>
+            <section>JITB Reporting</section>
+        </sections>
+        <sections>
+            <label><!-- Kontakdaten --></label>
+            <section>Kontakdaten</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Source Information --></label>
+            <section>Lead Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Tankstelleninfo --></label>
+            <section>Tankstelleninfo</section>
+        </sections>
+        <sections>
+            <label><!-- Unternehmen --></label>
+            <section>Unternehmen</section>
+        </sections>
+        <sections>
+            <label><!-- Winback --></label>
+            <section>Winback</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>AllStar-ShellUC Lead Layout</layout>
+        <sections>
+            <label><!-- Address --></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label><!-- Bedarfsanalyse --></label>
+            <section>Bedarfsanalyse</section>
+        </sections>
+        <sections>
+            <label><!-- Beschreibung --></label>
+            <section>Beschreibung</section>
+        </sections>
+        <sections>
+            <label><!-- Kontakdaten --></label>
+            <section>Kontakdaten</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Source Information --></label>
+            <section>Lead Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Unternehmen --></label>
+            <section>Unternehmen</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Russian Lead Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Company Information --></label>
+            <section>Company Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description Information --></label>
+            <section>Description Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Information --></label>
+            <section>Lead Information</section>
+        </sections>
+        <sections>
+            <label><!-- Lead Source Information --></label>
+            <section>Lead Source Information</section>
+        </sections>
+        <sections>
+            <label><!-- Product Diagnostic Questions --></label>
+            <section>Product Diagnostic Questions</section>
+        </sections>
+        <sections>
+            <label><!-- Shell NHF --></label>
+            <section>Shell NHF</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Возврат в воронку --></label>
+            <section>Возврат в воронку</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- AllStar --></label>
+        <name>AllStar</name>
+    </recordTypes>
+    <recordTypes>
+        <label>CCS Sales Process</label>
+        <name>CCS_Sales_process</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type for Carnet records. --></description>
+        <label><!-- Carnet --></label>
+        <name>Carnet</name>
+    </recordTypes>
+    <recordTypes>
+        <label>euroShell Sales Process</label>
+        <name>Endkunde</name>
+    </recordTypes>
+    <recordTypes>
+        <label>euroShell PL, HU</label>
+        <name>Endkunde_PL_and_HU</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Flexcard --></label>
+        <name>Flexcard</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Lotos --></label>
+        <name>Lotos</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Retailer --></label>
+        <name>Retailer</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Russian Sales --></label>
+        <name>Russian_Sales</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Shell Universal Card --></label>
+        <name>ShellUniversalCard</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You don&apos;t have ability to change Owner of Lead --></errorMessage>
+        <name>Ability_to_change_OwnerId</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You don&apos;t have ability to change Sec. Channel and Channel fields --></errorMessage>
+        <name>Ability_to_change_Sec_Channel_Channel</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- &quot;Sent to Shell&quot; quali status is available only for Shell CE: HU, SK, CZ, PL, NL, BE-NL. --></errorMessage>
+        <name>Access_to_Sent_to_Shell_Quali_status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pflichtfelder Anzahl der Fahrzeuge --></errorMessage>
+        <name>Anzahl_der_Fahrzeuge</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter an estimated Close Date for your Customer. --></errorMessage>
+        <name>CCS_Close_Date_mandatory_for_SME</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please update Company Name. In case of physical person, you can use First Name Surname. In case of legal entity, use official Company Name according to the Business Register. --></errorMessage>
+        <name>CCS_Company_ID_NICHT_VORHANDEN</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pole IČO je povinné! --></errorMessage>
+        <name>CCS_Company_ID_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a competitor. --></errorMessage>
+        <name>CCS_Competition_Other</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select a Competition. --></errorMessage>
+        <name>CCS_Competition_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pole &quot;Důvod diskvalifikace&quot; je povinné! --></errorMessage>
+        <name>CCS_Quali_Status_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a reason. --></errorMessage>
+        <name>CCS_Service_mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot select &quot;Converted lead&quot; Status before conversion! --></errorMessage>
+        <name>Converted_Value_restricted</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please, select Country. --></errorMessage>
+        <name>Country_Mandatory</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t change Owner for E2E lead. Please contact your system administrator. --></errorMessage>
+        <name>Do_not_change_from_E2E_User</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Use new button for creating a record: &quot;New Lead (New)&quot;. --></errorMessage>
+        <name>Dont_Use_Standard_Create_Button</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Industry (NACE) &amp; Employee is mandatory fields --></errorMessage>
+        <name>Industry_NACE_and_Employee</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Bitte Land eingeben! --></errorMessage>
+        <name>Laenderkennung</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- &quot;Why not interested?&quot; is required --></errorMessage>
+        <name>Mandatory_Why_Not_Interested</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Quali Status &quot;No reply – Quick Process&quot; is only available for Poland, Sec. channel: JITB. --></errorMessage>
+        <name>No_reply_Quick_Process_only_for_PL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Quali Status &quot;Not reached – SMS sent&quot; available only for Poland. --></errorMessage>
+        <name>Not_reached_SMS_sent_only_for_PL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pflichtfelder Number of vehicles --></errorMessage>
+        <name>Number_of_vehicles</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- New Leads with Sec. Channel “Inbound” and Channel “Email” should be created in Status “Open” --></errorMessage>
+        <name>Only_Open_Leads_Inbound_Email</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pole &quot;Jiný důvod nezájmu&quot; je povinné. --></errorMessage>
+        <name>Other_Reason_Disqualified</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Lead is currently in the queue. Please assign it to a User before changing the Status. --></errorMessage>
+        <name>Owner_is_Queue</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- It is necessary fill the INN, Region, Source of Lead and Primary Fueling Method. --></errorMessage>
+        <name>PPR_Convert_to_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR: LEAD011. Необходимо внести ИНН и Регион! --></errorMessage>
+        <name>PPR_INN_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR: LEAD033.
+Для статуса &quot;Запрос Карты Партнера&quot;:
+1) Источник интереса должен быть = &quot;Petrolcards.ru - АГГРЕГАТОР&quot;
+2) Поля &quot;Карта Партнера&quot; и &quot;Комментарий по карте партнера&quot; должны быть заполнены --></errorMessage>
+        <name>PPR_LeadStatus_Request_Partner_Card</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please state the reason --></errorMessage>
+        <name>PPR_Other_Reason_Disqualified_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ERROR: LEAD022-2. Укажите Тип записи интереса = Российские продажи --></errorMessage>
+        <name>PPR_RecordType_for_RU_leads2</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- ИНН должен содержать только цифры! ERROR: LEAD001. --></errorMessage>
+        <name>PPR_Valid_INN_IS_not_NUMBER</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Некорректный ИНН! ERROR: LEAD002. --></errorMessage>
+        <name>PPR_Valid_Len_INN</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Bitte Partner &amp; OBN eintragen! --></errorMessage>
+        <name>Partner_Name</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Bitte OBN des Partners eintragen! --></errorMessage>
+        <name>Partner_OBN</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- CCS users must enter a 9 digit phone number. --></errorMessage>
+        <name>Phone_9_Digits</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter correct phone/mobile number.
+1) Possible characters : 0-9 + - ( )
+2) The phone must not contains &quot;0&quot; after &quot;49&quot;. --></errorMessage>
+        <name>Phone_Number_JITB</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- &quot;Quick Process&quot; Status is only available for Poland and 1 card. --></errorMessage>
+        <name>Quick_Process_only_for_PL</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can change &quot;Partner-Name&quot; or &quot;Partner-OBN&quot; if &quot;Number of Days&quot; is less than 100. --></errorMessage>
+        <name>Salesteam_Outbound_profile_Sales</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Pflichtfeld: Service: Sonstiges (specific) --></errorMessage>
+        <name>Service_Sonstiges</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Wrong phone number format. Only &apos;+&apos;, &apos;0-9&apos; and spaces are allowed. Use &apos;#&apos; for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: &apos;+49 5545555#045&apos; --></errorMessage>
+        <name>Valid_MobilePhone_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Wrong phone number format. Only &apos;+&apos;, &apos;0-9&apos; and spaces are allowed. Use &apos;#&apos; for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: &apos;+49 5545555#045&apos; --></errorMessage>
+        <name>Valid_PPRPhone_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Wrong phone number format. Only &apos;+&apos;, &apos;0-9&apos; and spaces are allowed. Use &apos;#&apos; for entering an extension number. Phone number length: 8 to 15 digits (russian number length is 11 digits). Example: &apos;+49 5545555#045&apos; --></errorMessage>
+        <name>Valid_Phone_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid phone list format. Only &apos;+&apos;, 0-9&apos;, &apos;#&apos; and &apos;.&apos; are allowed. Example: &apos;+4954225585.+7544244545#045.+485555514&apos; --></errorMessage>
+        <name>Valid_Phone_Numbers_List</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Check_duplicates --></label>
+        <name>Check_duplicates</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Check_duplicates_New --></label>
+        <name>Check_duplicates_New</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Check_duplicates_Rus --></label>
+        <name>Check_duplicates_Rus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Convert_now --></label>
+        <name>Convert_now</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Convert_now_CCS --></label>
+        <name>Convert_now_CCS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Convert_now_Rus --></label>
+        <name>Convert_now_Rus</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Edit_Personal_Data --></label>
+        <name>Edit_Personal_Data</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Lead_Recycle --></label>
+        <name>Lead_Recycle</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mass_Recycle --></label>
+        <name>Mass_Recycle</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Dial_List_From_Lead_List_View --></label>
+        <name>NVMConnect__Create_Dial_List_From_Lead_List_View</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Lead --></label>
+        <name>New_Lead</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_To_E2E --></label>
+        <name>Send_To_E2E</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_to_Support --></label>
+        <name>Send_to_Support</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Set_to_Contacted --></label>
+        <name>Set_to_Contacted</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Sparkalkulator --></label>
+        <name>Sparkalkulator</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Station_Locator --></label>
+        <name>Station_Locator</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FLEETCOR</fullName>
+    <active>true</active>
+    <label>FLEETCOR</label>
+    <picklistValues>
+        <picklist>Family</picklist>
+        <values>
+            <fullName>Carnet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SHELL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>QuantityUnitOfMeasure</picklist>
+        <values>
+            <fullName>Je</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

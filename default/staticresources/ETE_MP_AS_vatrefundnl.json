@@ -1,0 +1,34 @@
+{
+    "translations": {
+        "title": {
+            "en": "International VAT refund program",
+            "nl": "Internationale btw teruggave programma"
+        },
+        "description": {
+            "en": "<p>Take advantage of our innovative service and get VAT refunded for your transactions abroad. FLEETCOR in cooperation with the Alfa Transport Service VOF (ATS) submits the application on behalf of your company to foreign tax authorities. ATS will take care of your tax refund based on your power of attorney and signed documents. You'll recieve your VAT refund precisely calculated on the basis of original VAT invoices directly to your bank account.</p>",
+            "nl": "<p>Profiteer van onze innovatieve service en ontvang btw terug voor uw transacties in het buitenland. FLEETCOR dient in samenwerking met de Alfa Transport Service VOF (ATS) de aanvraag namens uw bedrijf in bij de buitenlandse belastingdienst. ATS zorgt voor uw belastingteruggave op basis van uw volmacht en ondertekende documenten. U ontvangt uw btw-teruggave exact berekend op basis van de originele btw-facturen rechtstreeks op uw bankrekening.</p>"
+        },
+        "additional_checkbox_1": {
+            "en": "Yes, I want to participate in the VAT refund program and I confirm that I do not use the services of any other supplier dealing with VAT recovery in Europe.",
+            "nl": "Ja, ik wil deelnemen aan het btw-teruggaafprogramma en ik bevestig dat ik geen gebruik maak van de diensten van enige andere leverancier die zich bezighoudt met btw-terugvordering in Europa."
+        },
+        "additional_checkbox_1_error": {
+            "en": "This consent is required for provision of the service.",
+            "nl": "Deze toestemming is vereist om de service te kunnen leveren"
+        },
+        "additional_checkbox_2": {
+            "en": "Yes, I accept the provisions of the <a href='/etedocuments?doc=vatRecoveryTC$1$' target='_blank'>Agreement</a> and the <a href='/etedocuments?doc=priceList$1$' target='_blank'>Price List</a>. I understand that my data will be forwarded to Alfa Transport Service VOF (ATS) - a business partner of FLEETCOR Technologieën B.V. in order to provide VAT recovery services in accordance with the provisions of the Agreement.",
+            "nl": "Ja, ik accepteer de bepalingen van de <a href='/etedocuments?doc=vatRecoveryTC$1$' target='_blank'>overeenkomst</a> en de <a href='/etedocuments?doc=priceList$1$' target='_blank'>prijslijst</a>. En bevestig dat mijn gegevens worden doorgestuurd naar Alfa Transport Service VOF (ATS) - een zakenpartner van FLEETCOR Technologieën B.V. om btw-terugvorderingsdiensten te verlenen in overeenstemming met de bepalingen van de overeenkomst."
+        },
+        "additional_checkbox_2_error": {
+            "en": "This consent is required for provision of the service.",
+            "nl": "Deze toestemming is vereist om de service te kunnen leveren"
+        }
+    },
+    "settings": {
+        "bgImage": "/resource/ete_images/bgInfoCardMoney1.png",
+        "show_more": "false",
+        "show_checkbox_1": "true",
+        "show_checkbox_2": "true"
+    }
+}

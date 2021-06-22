@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_Size__c</fullName>
+    <description>Company size based on number of employees</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Company size based on number of employees
+            New range value which should replace the field Employee* in the future</inlineHelpText>
+    <label>Company Size</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Micro (1-9)</fullName>
+                <default>false</default>
+                <label>Micro (1-9)</label>
+            </value>
+            <value>
+                <fullName>Small (10-19)</fullName>
+                <default>false</default>
+                <label>Small (10-19)</label>
+            </value>
+            <value>
+                <fullName>Medium (20-49)</fullName>
+                <default>false</default>
+                <label>Medium (20-49)</label>
+            </value>
+            <value>
+                <fullName>Corporate (50-249)</fullName>
+                <default>false</default>
+                <label>Corporate (50-249)</label>
+            </value>
+            <value>
+                <fullName>Strategic (250+)</fullName>
+                <default>false</default>
+                <label>Strategic (250+)</label>
+            </value>
+            <value>
+                <fullName>Information not available</fullName>
+                <default>false</default>
+                <label>Information not available</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

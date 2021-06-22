@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Paste a valid image URL. Images should be a minimum of 60x60 pixels to ensure adequate resolution (larger sizes will take longer to display). Images should also be square to avoid image distortion --></help>
+    <label><!-- Image URL --></label>
+    <name>success__Image_URL__c</name>
+</CustomFieldTranslation>

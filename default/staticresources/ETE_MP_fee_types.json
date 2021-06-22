@@ -1,0 +1,712 @@
+{
+    "Bank Transfer Fee": {
+        "default_impl": {
+            "en": "Bank transfer fee",
+            "nl": "Bank transfer fee",
+            "pl": "Metoda płatności – przelew bankowy",
+            "de": "DE Metoda płatności – przelew bankowy"
+        }
+    },
+    "Bank Transfer Fee (International)": {
+        "default_impl": {
+            "en": "Monthly fuel card costs per card with bank transfer (international)",
+            "fr": "Frais mensuel par carte si virement bancaire (international)",
+            "nl": "Maandelijkse tankkaartkosten per kaart met bankoverschrijving (international)"
+        },
+        "France": {
+            "en": "Monthly card fee from 5th month (bank transfer, international card)",
+            "fr": "Frais mensuel par carte internationale (si paiement par virement bancaire) à partir du 5ème mois"
+        },
+        "Luxembourg": {
+            "en": "Monthly card fee from 4th month (bank transfer, international card)",
+            "fr": "Frais mensuel par carte internationale (si paiement par virement bancaire) à partir du 4ème mois"
+        }
+    },
+    "Card Issuance Fee": {
+        "default_impl": {
+            "en": "Card issuance and delivery",
+            "fr": "Émission et livraison de carte",
+            "nl": "Card issuance and delivery",
+            "pl": "Wydawanie i dostarczanie karty",
+            "de": "DE Wydawanie i dostarczanie karty"
+        },
+        "Luxembourg": {
+            "en": "Card issuing and delivery",
+            "fr": "Émission et livraison de carte"
+        }
+    },
+    "Card blocking": {
+        "default_impl": {
+            "en": "Card blocking",
+            "cs": "Blokace karty",
+            "de": "Kartensperrung",
+            "fr": "Blocage de carte",
+            "nl": "Blokkering van de pas"
+        }
+    },
+    "Card management": {
+        "default_impl": {
+            "en": "Card management",
+            "fr": "Frais de gestion",
+            "nl": "Beheerkosten",
+            "de": "Kartenverwaltung"
+        },
+        "Netherlands": {
+            "en": "Administrative costs",
+            "nl": "Administratiekosten"
+        },
+        "Austria": {
+            "en": "Administrative costs",
+            "de": "Verwaltungsgebühr"
+        },
+        "Czech Republic CCS": {
+            "en": "Card management - electric vehicles (monthly fee)",
+            "cs": "Vedení karty - Elektrovozidla (měsíční paušál)"
+        }
+    },
+    "Card replacement": {
+        "default_impl": {
+            "en": "Card replacement",
+            "de": "Ersatzkarte",
+            "fr": "Remplacement de carte",
+            "nl": "Vervangende pas"
+        },
+        "Czech Republic CCS": {
+            "en": "Card replacement (after standard expiration date)",
+            "cs": "Obnova karty (po uplynutí standardní doby platnosti)"
+        }
+    },
+    "Carwash discount on Lotos stations (national)": {
+        "default_impl": {
+            "en": "Carwash discount at LOTOS stations",
+            "pl": "Zniżka na myjnie na stacjach LOTOS",
+            "de": "DE Zniżka na myjnie na stacjach LOTOS"
+        }
+    },
+    "Customer account creation": {
+        "default_impl": {
+            "en": "Customer account creation",
+            "fr": "Création de compte",
+            "de": "Accounterstellung",
+            "nl": "Aanmaken van het account"
+        }
+    },
+    "Digital invoice via email and online portal": {
+        "default_impl": {
+            "en": "Digital invoices via e-mail and at the online portal",
+            "hu": "Elektronikus számla",
+            "fr": "Facture électronique par email et portail client",
+            "nl": "Onlinefactuur",
+            "de": "Digitale Rechnung per E-Mail und über Onlineportal"
+        },
+        "France": {
+            "en": "Digital invoices via e-mail",
+            "fr": "Facture électronique par email"
+        },
+        "Luxembourg": {
+            "en": "Digital invoices via e-mail",
+            "fr": "Facture électronique par email"
+        }
+    },
+    "Direct Debit Fee": {
+        "default_impl": {
+            "en": "Direct debit fee",
+            "nl": "Direct debit fee",
+            "pl": "Metoda płatności – polecenie zapłaty",
+            "de": "DE Metoda płatności – polecenie zapłaty"
+        }
+    },
+    "Direct Debit Fee (International)": {
+        "default_impl": {
+            "en": "Monthly fuel card costs per card with direct debit (international)",
+            "fr": "Frais mensuel par carte si paiement par domiciliation (international)",
+            "nl": "Maandelijkse tankkaartkosten per kaart met domiciliëring (international)"
+        },
+        "France": {
+            "en": "Monthly card fee from 5th month (direct debit, international card)",
+            "fr": "Frais mensuel par carte internationale (si paiement par domiciliation) à partir du 5ème mois"
+        }
+    },
+    "Discount at Home Site": {
+        "default_impl": {
+            "en": "Discount at Home Site",
+            "nl": "Discount at Home Site"
+        }
+    },
+    "Discount at Lotos Stations (LPG)": {
+        "default_impl": {
+            "en": "Discount for LPG at LOTOS stations",
+            "pl": "Zniżka na LPG na stacjach LOTOS",
+            "de": "DE Zniżka na LPG na stacjach LOTOS"
+        }
+    },
+    "Discount at Lotos Stations (fuel)": {
+        "default_impl": {
+            "en": "Discount at LOTOS stations in Poland - fuel",
+            "pl": "Zniżka na stacjach LOTOS w Polsce - paliwo",
+            "de": "DE Zniżka na stacjach LOTOS w Polsce - paliwo"
+        }
+    },
+    "Discount at Shell Stations (LPG)": {
+        "default_impl": {
+            "en": "Discount at Shell stations  in Poland  - LPG",
+            "pl": "Zniżka na stacjach Shell w Polsce - LPG",
+            "de": "DE Zniżka na stacjach Shell w Polsce - LPG"
+        }
+    },
+    "Discount at Shell Stations (cardwash national)": {
+        "default_impl": {
+            "en": "Carwash discount at Shell stations in Poland",
+            "pl": "Zniżka na myjnie na stacjach Shell w Polsce",
+            "de": "DE Zniżka na myjnie na stacjach Shell w Polsce"
+        }
+    },
+    "Discount at Shell Stations (fuel)": {
+        "default_impl": {
+            "en": "Discount at Shell stations - fuel",
+            "pl": "Zniżka na stacjach Shell - paliwo",
+            "de": "DE Zniżka na stacjach Shell - paliwo"
+        }
+    },
+    "E-invoice": {
+        "default_impl": {
+            "en": "E-invoice",
+            "sk": "Elektronická faktúra",
+            "cs": "Elektronická faktura",
+            "nl": "NL E-invoice",
+            "pl": "Opłata za fakturę elektroniczną",
+            "fr": "Facture électronique par email et portail client",
+            "de": "Online-Rechnung"
+        }
+    },
+    "Exchange rate": {
+        "default_impl": {
+            "en": "Commission for currency conversion",
+            "pl": "Prowizja za przewalutowanie",
+            "de": "DE Prowizja za przewalutowanie"
+        }
+    },
+    "Fleet management system configuration": {
+        "default_impl": {
+            "en": "Fleet management system configuration",
+            "fr": "Installation du système de gestion du parc de véhicules",
+            "de": "Aufsetzen des Flottenmanagementsystems",
+            "nl": "Opzetten van het wagenparkbeheersysteem"
+        }
+    },
+    "Late Payment / DD Return (Manual Fee)": {
+        "default_impl": {
+            "en": "Late payment / direct debit reject",
+            "sk": "Poplatok za omeškanie platby / neúspešné inkaso",
+            "cs": "Poplatek za pozdní platbu / neúspěšné inkaso",
+            "hu": "Késedelmi díj (áfa mentes tétel)",
+            "nl": "Late payment / direct debit reject",
+            "pl": "Opłata za zwłokę w płatności / odrzucenie polecenia zapłaty",
+            "de": "Verzugsgebühr oder Rücklastschrift, pro Fall"
+        },
+        "Luxembourg": {
+            "en": "Late payment / direct debit reject",
+            "fr": "Frais de paiement tardif"
+        }
+    },
+    "Lotos automotive products discount (oils...)": {
+        "default_impl": {
+            "en": "Discount on LOTOS oils, fluids and accessories",
+            "pl": "Zniżka na oleje, płyny i akcesoria LOTOS",
+            "de": "DE Zniżka na oleje, płyny i akcesoria LOTOS"
+        }
+    },
+    "Manual Fee (Late Payment or Direct Debit Return)": {
+        "default_impl": {
+            "en": "Late payment or direct debit return fee, per occurrence",
+            "nl": "Kosten wegens achterstallige betaling of terugboeking, per geval"
+        }
+    },
+    "Monthly Account Management Fee": {
+        "default_impl": {
+            "en": "Monthly account management fee",
+            "fr": "Gestion de compte, mensuellement",
+            "sk": "Mesačný poplatok za vedenie účtu",
+            "cs": "Měsíční poplatek za vedení účtu",
+            "hu": "Havi számlavezetési díj",
+            "pl": "Miesięczna opłata za zarządzanie kontem",
+            "de": "Kontoführung, monatlich"
+        },
+        "Netherlands": {
+            "en": "Account management, monthly",
+            "nl": "Rekeningbeheer, maandelijks"
+        },
+        "Austria": {
+            "en": "Account management, monthly",
+            "de": "Kontoführung, monatlich"
+        }
+    },
+    "Monthly Card Fee": {
+        "default_impl": {
+            "en": "Monthly card fee",
+            "sk": "Mesačný poplatok za kartu",
+            "cs": "Měsíční poplatek za kartu",
+            "hu": "Havi kártyadíj",
+            "pl": "Miesięczna opłata za kartę",
+            "de": "DE Miesięczna opłata za kartę"
+        },
+        "Luxembourg": {
+            "en": "Monthly card fee from 4th month (direct debit, international card)",
+            "fr": "Frais mensuel par carte internationale (si paiement par domiciliation) à partir du 4ème mois"
+        }
+    },
+    "Monthly card fee per key fob": {
+        "default_impl": {
+            "en": "Monthly card fee per key fob",
+            "de": "Monatliche Kartengebühr pro Schlüsselanhänger"
+        }
+    },
+    "Monthly card fee with bank transfer": {
+        "default_impl": {
+            "en": "Monthly card fee with bank transfer",
+            "fr": "Frais mensuel par carte si virement bancaire",
+            "sk": "Poplatok pri platbe bankovým prevodom",
+            "cs": "Poplatek při platbě bankovním převodem",
+            "de": "Monatliche Kartengebühr bei Banküberweisung"
+        },
+        "Hungary": {
+            "en": "Payment method - bank transfer",
+            "hu": "Fizetési mód – banki átutalás"
+        },
+        "Netherlands": {
+            "en": "Monthly fuel card costs per card with bank transfer",
+            "nl": "Paskosten, overschrijving per bankgiro, maandelijks"
+        },
+        "Belgium-NL": {
+            "en": "Monthly fuel card costs per card with bank transfer",
+            "fr": "Frais mensuel par carte si virement bancaire",
+            "nl": "Maandelijkse tankkaartkosten per kaart met bankoverschrijving"
+        },
+        "Belgium-FR": {
+            "en": "Monthly fuel card costs per card with bank transfer",
+            "fr": "Frais mensuel par carte si virement bancaire",
+            "nl": "Maandelijkse tankkaartkosten per kaart met bankoverschrijving"
+        },
+        "France": {
+            "en": "Monthly card fee from 5th month (bank transfer, national card)",
+            "fr": "Frais mensuel par carte nationale (si paiement par virement bancaire) à partir du 5ème mois"
+        },
+        "Austria": {
+            "en": "Monthly fuel card costs per card with bank transfer",
+            "de": "Kartengebühr per Banküberweisung, monatlich"
+        },
+        "Luxembourg": {
+            "en": "Monthly card fee from 4th month (bank transfer, national card)",
+            "fr": "Frais mensuel par carte nationale (si paiement par virement bancaire) à partir du 4ème mois"
+        }
+    },
+    "Monthly card fee with direct debit": {
+        "default_impl": {
+            "en": "Monthly card fee with direct debit",
+            "fr": "Frais mensuel par carte si paiement par domiciliation",
+            "sk": "Poplatok pri platbe inkasom",
+            "cs": "Poplatek při platbě inkasem",
+            "de": "Monatliche Kartengebühr bei SEPA-Lastschrift"
+        },
+        "Hungary": {
+            "en": "Payment method - direct debit",
+            "hu": "Fizetési mód – azonnali beszedés"
+        },
+        "Netherlands": {
+            "en": "Monthly fuel card costs per card with direct debit",
+            "nl": "Paskosten, automatische afschrijving, maandelijks"
+        },
+        "Belgium-NL": {
+            "en": "Monthly fuel card costs per card with direct debit",
+            "fr": "Frais mensuel par carte si paiement par domiciliation",
+            "nl": "Maandelijkse tankkaartkosten per kaart met domiciliëring"
+        },
+        "Belgium-FR": {
+            "en": "Monthly fuel card costs per card with direct debit",
+            "fr": "Frais mensuel par carte si paiement par domiciliation",
+            "nl": "Maandelijkse tankkaartkosten per kaart met domiciliëring"
+        },
+        "France": {
+            "en": "Monthly card fee from 5th month (direct debit, national card)",
+            "fr": "Frais mensuel par carte nationale (si paiement par domiciliation) à partir du 5ème mois"
+        },
+        "Austria": {
+            "en": "Monthly fuel card costs per card with direct debit",
+            "de": "Kartengebühr per Lastschriftverfahren, monatlich"
+        },
+        "Luxembourg": {
+            "en": "Monthly card fee from 4th month (direct debit, national card)",
+            "fr": "Frais mensuel par carte nationale (si paiement par domiciliation) à partir du 4ème mois"
+        }
+    },
+    "Online portal account creation": {
+        "default_impl": {
+            "en": "Online portal account creation",
+            "fr": "Mise en place du compte en ligne",
+            "de": "Einrichten des Onlineaccounts",
+            "nl": "Inrichten van het onlineaccount"
+        }
+    },
+    "Transaction Fee at Lotos Stations (national)": {
+        "default_impl": {
+            "en": "Transaction fee at all LOTOS stations",
+            "pl": "Opłata za transakcje na wszystkich stacjach LOTOS",
+            "de": "DE Opłata za transakcje na wszystkich stacjach LOTOS"
+        }
+    },
+    "Transaction Fee at Partner Network Stations": {
+        "default_impl": {
+            "en": "Transaction Fee at Partner Network Stations",
+            "nl": "Transactiekosten op partner stations",
+            "pl": "Opłata za transakcje na stacjach partnerskich",
+            "de": "Transaktionsgebühr an Partner-Tankstellen"
+        },
+        "Slovakia": {
+            "en": "Transaction fee at partner stations in Slovakia",
+            "sk": "Poplatok za transakcie na partnerských čerpacích staniciach na Slovensku"
+        },
+        "Czech Republic": {
+            "en": "Transaction fee at partner stations in Czech Republic",
+            "cs": "Transakční poplatek na partnerských stanicích v ČR"
+        },
+        "Hungary": {
+            "en": "Transaction fee at partner stations in Hungary",
+            "hu": "Belföldi üzemanyag tranzakciós díj partnerkutakon"
+        },
+        "Netherlands": {
+            "en": "Transaction costs at partner stations, per transaction",
+            "nl": "Transactiekosten, partnerstations, per transactie"
+        },
+        "Belgium-NL": {
+            "en": "Fuel transactions at partner stations in Belgium",
+            "nl": "Transactiekosten op partner stations in België",
+            "fr": "Transactions carburant dans les stations partenaires en Belgique"
+        },
+        "Belgium-FR": {
+            "en": "Transaction costs at partner stations in Belgium",
+            "nl": "Transactiekosten op partner stations in België",
+            "fr": "Transactions carburant dans les stations partenaires en Belgique"
+        },
+        "Austria": {
+            "en": "Transaction costs at partner stations",
+            "de": "Partnertankstellen, pro Transaktion"
+        },
+        "France": {
+            "en": "Transaction fee at partner stations in France",
+            "fr": "Frais de transaction sur les stations partenaires en France"
+        },
+        "Luxembourg": {
+            "en": "Transaction fee at partner stations in Luxembourg from 4th month",
+            "fr": "Frais de transaction sur les stations partenaires au Luxembourg à partir du 4ème mois"
+        }
+    },
+    "Transaction Fee at Shell Stations (national)": {
+        "default_impl": {
+            "en": "Transaction fee at Shell stations in Poland",
+            "nl": "Transaction fee at Shell stations in Poland",
+            "pl": "Opłata za transakcje na stacjach Shell w Polsce",
+            "de": "DE Opłata za transakcje na stacjach Shell w Polsce"
+        },
+        "Slovakia": {
+            "en": "Transaction fee at Shell stations in Slovakia",
+            "sk": "Poplatok za transakcie na čerpacích staniciach Shell na Slovensku"
+        },
+        "Czech Republic": {
+            "en": "Transaction fee at Shell stations in Czech Republic",
+            "cs": "Transakční poplatek na čerpacích stanicích Shell v ČR"
+        },
+        "Hungary": {
+            "en": "Transaction fee at Shell stations in Hungary",
+            "hu": "Belföldi üzemanyag tranzakciós díj Shell kutakon"
+        },
+        "Netherlands": {
+            "en": "Transaction costs at other Shell stations, per transaction",
+            "nl": "Transactiekosten, andere Shell-stations, per transactie"
+        },
+        "Belgium-NL": {
+            "en": "Transaction costs at Shell stations in Belgium",
+            "nl": "Transactiekosten op Shell stations in België",
+            "fr": "Transactions carburant dans les stations Shell en Belgique"
+        },
+        "Belgium-FR": {
+            "en": "Fuel transactions at Shell stations in Belgium",
+            "nl": "Transactiekosten op Shell stations in België",
+            "fr": "Transactions carburant dans les stations Shell en Belgique"
+        },
+        "Switzerland-DE": {
+            "en": "Fuel transactions at Shell stations in Switzerland",
+            "de": "Shell Stationen, pro Transaktion",
+            "fr": "Stations Shell, par transaction"
+        },
+        "Switzerland-FR": {
+            "en": "Fuel transactions at Shell stations in Switzerland",
+            "de": "Shell Stationen, pro Transaktion",
+            "fr": "Stations Shell, par transaction"
+        },
+        "Austria": {
+            "en": "Fuel transactions at Shell stations",
+            "de": "Weitere Shell Stationen, pro Transaktion"
+        },
+        "France": {
+            "en": "Transaction fee at non Home Station from 5th month",
+            "fr": "Frais de transaction sur les stations Shell (hormis la station préférentielle) à partir du 5ème mois"
+        },
+        "Luxembourg": {
+            "en": "Transaction fee at non Home Station from 4th month",
+            "fr": "Frais de transaction sur les stations Shell (hormis la station préférentielle) à partir du 4ème mois"
+        }
+    },
+    "Transaction Fee for Fuel and Non-fuel (international)": {
+        "default_impl": {
+            "en": "International transaction fees (fuel & non-fuel)",
+            "sk": "Poplatok za medzinárodné transakcie (palivové a nepalivové)",
+            "cs": "Poplatek za mezinárodní transakce (palivové i nepalivové)",
+            "pl": "Oplata za transakcje międzynarodowe (paliwowe i inne)",
+            "fr": "Transactions internationales",
+            "de": "Internationale Transaktion"
+        },
+        "Hungary": {
+            "en": "International fuel and non-fuel transaction fee",
+            "hu": "Nemzetközi üzemanyag és nem üzemanyag tranzakciós díj"
+        },
+        "Belgium-NL": {
+            "en": "Transaction costs at sites outside Belgium",
+            "nl": "Transactiekosten op transacties buiten België",
+            "fr": "Transactions carburant à l'étranger"
+        },
+        "Belgium-FR": {
+            "en": "Fuel transactions abroad",
+            "nl": "Transactiekosten op transacties buiten België",
+            "fr": "Transactions carburant à l'étranger"
+        },
+        "France": {
+            "en": "International transaction fee",
+            "fr": "Frais de transaction internationale"
+        },
+        "Luxembourg": {
+            "en": "International transaction fee",
+            "fr": "Frais de transaction internationale"
+        }
+    },
+    "Transaction Fee for Non-fuel Products (national)": {
+        "default_impl": {
+            "en": "Transaction fee (non-fuel products)",
+            "pl": "Opłata za transakcje niepaliwowe krajowe",
+            "fr": "Transaction «non carburant»",
+            "de": "Transaktion «non fuel»"
+        },
+        "Slovakia": {
+            "en": "Non-fuel transaction fee in Slovakia",
+            "sk": "Poplatok za nákup iného tovaru/služby ako PH zakúpených na Slovensku"
+        },
+        "Czech Republic": {
+            "en": "Non-fuel transaction fee in Czech Republic",
+            "cs": "Poplatek za nákup produktu/služby jiné než pohonné hmoty v ČR"
+        },
+        "Hungary": {
+            "en": "Non-fuel transaction fee in Hungary",
+            "hu": "Belföldi nem üzemanyag tranzakciós díj"
+        },
+        "Netherlands": {
+            "en": "Non-fuel purchases (shop and services)",
+            "nl": "Transactie  ̔non fuel’"
+        },
+        "Belgium-NL": {
+            "en": "Non-fuel purchases (shop and services)",
+            "nl": "Niet-brandstof aankopen (shop en diensten)",
+            "fr": "Achats en boutiques de stations, lavage et services"
+        },
+        "Belgium-FR": {
+            "en": "Purchases at site shops, carwash and services",
+            "nl": "Niet-brandstof aankopen (shop en diensten)",
+            "fr": "Achats en boutiques de stations, lavage et services"
+        },
+        "Austria": {
+            "en": "Non-fuel transaction fee",
+            "de": "Transaktion  ̔non fuel’"
+        },
+        "France": {
+            "en": "Transaction fee non fuel product in France",
+            "fr": "Frais de transaction \"non carburant\" en France"
+        },
+        "Luxembourg": {
+            "en": "Transaction fee for non-fuel product in Luxembourg",
+            "fr": "Frais de transaction \"non carburant\" au Luxembourg"
+        }
+    },
+    "Transaction fee at Shell stations in Germany": {
+        "default_impl": {
+            "en": "Transaction fee at Shell stations in Germany",
+            "de": "Transaktionsgebühr an deutschen Shell Stationen"
+        }
+    },
+    "Transaction fee at all international stations": {
+        "default_impl": {
+            "en": "Transaction fee at all international stations",
+            "de": "Transaktionsgebühr an allen internationalen Stationen"
+        }
+    },
+    "Transaction fee at home or office charging point": {
+        "default_impl": {
+            "en": "Transaction fee at home or office charging point",
+            "fr": "Frais de transaction à domicile ou au travail",
+            "nl": "Transactiekosten bij thuis- of kantoorlaadpunt",
+            "de": "Transaktionsgebühr an der Ladestation zu Hause oder im Büro"
+        },
+        "France": {
+            "en": "Transaction fee at Home Station from 5th month",
+            "fr": "Frais de transaction à la station préférentielle à partir du 5ème mois"
+        },
+        "Luxembourg": {
+            "en": "Transaction fee at Home Station from 4th month",
+            "fr": "Frais de transaction à la station préférentielle à partir du 4ème mois"
+        }
+    },
+    "Transaction fee for non-fuel products": {
+        "default_impl": {
+            "en": "Transaction fee for non-fuel products",
+            "pl": "Opłata za transakcje niepaliwowe krajowe",
+            "de": "Transaktionsgebühr bei Bezahlung von Shopartikeln und Serviceleistungen "
+        }
+    },
+    "Transaction fee per charging transaction": {
+        "default_impl": {
+            "en": "Transaction fee per charging transaction",
+            "fr": "Frais de transaction par recharge",
+            "nl": "Transactiekosten per laadtransactie",
+            "de": "Transaktionsgebühr pro Ladevorgang"
+        }
+    },
+    "Sending reports to the provided e-mail address": {
+        "default_impl": {
+            "en": "Sending reports to the provided e-mail address",
+            "pl": "Wysyłanie raportów na wskazany adres e-mail"
+        }
+    },
+    "Monthly fee - Carnet Unit (national)": {
+        "default_impl": {
+            "en": "Monthly fee for trips to Europe (charged automatically when the OBD device travels abroad)",
+            "pl": "Miesięczna opłata za wyjazdy do Europy (pobierana automatycznie, kiedy urządzenie OBD wyjeżdża za granicę)"
+        }
+    },
+    "Monthly fee - Carnet Unit (international)": {
+        "default_impl": {
+            "en": "Monthly fee for trips to Europe outside the EU (charged automatically when the OBD device travels outside the EU)",
+            "pl": "Miesięczna opłata za wyjazdy do Europy do Europy poza UE (pobierana automatycznie,kiedy urzadzenie OBD wyjeżdża poza UE)"
+        }
+    },
+    "Annual fee - Carnet Unit (national)": {
+        "default_impl": {
+            "en": "Annual fee for trips to Europe (charged automatically when the OBD device travels abroad)",
+            "pl": "Roczna opłata za wyjazdy do Europy (pobierana automatycznie, kiedy urządzenie OBD wyjeżdża za granicę)"
+        }
+    },
+    "Annual fee - Carnet Unit (international)": {
+        "default_impl": {
+            "en": "Annual fee for trips to Europe outside the EU (charged automatically when the OBD device travels outside the EU)",
+            "pl": "Roczna opłata za wyjazdy do Europy do Europy poza UE (pobierana automatycznie,kiedy urzadzenie OBD wyjeżdża poza UE)"
+        }
+    },
+    "SMS with a request for the last location of the vehicle": {
+        "default_impl": {
+            "en": "SMS with a request for the last location of the vehicle",
+            "pl": "SMS z zapytaniem o ostatnie położenie pojazdu"
+        }
+    },
+    "Emergency email notifications from the app": {
+        "default_impl": {
+            "en": "Emergency email notifications from the app",
+            "pl": "E-mail zgłoszenie alarmowe z aplikacji"
+        }
+    },
+    "Request for immediate transmission of all data": {
+        "default_impl": {
+            "en": "Request for immediate transmission of all data",
+            "pl": "Żądanie o natychmiastową transmisję wszystkich danych"
+        }
+    },
+    "Additional data archiving (12 months)": {
+        "default_impl": {
+            "en": "Additional data archiving (12 months)",
+            "pl": "Dodatkowa archiwizacja danych (12 miesięcy)"
+        }
+    },
+    "Data transmission via web services": {
+        "default_impl": {
+            "en": "Data transmission via web services",
+            "pl": "Przesyłanie informacji przez usługi sieci web"
+        }
+    },
+    "Duplicate of invoice": {
+        "default_impl": {
+            "en": "Duplicate of invoice",
+            "pl": "Duplikat faktury"
+        }
+    },
+    "Electronic sending of a tax document with a list of purchases": {
+        "default_impl": {
+            "en": "Electronic sending of a tax document with a list of purchases (for each customer number)",
+            "cs": "Elektronické zasílání daňového dokladu s výpisem nákupů (na každé zákaznické číslo)"
+        }
+    },
+    "Fee for distribution of tax document by post": {
+        "default_impl": {
+            "en": "Fee for distribution of tax document by post (for each customer number)",
+            "cs": "Poplatek za distribuci daňového dokladu poštou (na každé zákaznické číslo)"
+        }
+    },
+    "Fee for changes to a tax document": {
+        "default_impl": {
+            "en": "Fee for changes to a tax document (if not communicated before the issue)",
+            "cs": "Poplatek za opravu daňového dokladu (při včasném nenahlášení změny)"
+        }
+    },
+    "Customer account blocking": {
+        "default_impl": {
+            "en": "Customer account blocking",
+            "cs": "Blokace zákaznického čísla"
+        }
+    },
+    "Change of the card settings": {
+        "default_impl": {
+            "en": "Change of the card settings (each time the data is changed)",
+            "cs": "Změna parametrů na kartě (při každé změně údajů)"
+        }
+    },
+    "Activation of a blocked PIN code": {
+        "default_impl": {
+            "en": "Activation of a blocked PIN code (each activation)",
+            "cs": "Aktivace blokovaného PIN kódu (při každé aktivaci)"
+        }
+    },
+    "PIN code letter resend": {
+        "default_impl": {
+            "en": "PIN code letter resend (regardless of the card type)",
+            "cs": "Opakovaný tisk PIN dopisu (bez rozdílu typu karty)"
+        }
+    },
+    "Fee for the second and every further dunning notice": {
+        "default_impl": {
+            "en": "Fee for the second and every further dunning notice",
+            "cs": "Poplatek za druhou a další upomínku"
+        }
+    },
+    "Mobile application Tank Navigator": {
+        "default_impl": {
+            "en": "Mobile application Tank Navigator",
+            "cs": "Mobilní aplikace Tank Navigator"
+        }
+    },
+    "Arrangement of e-stamp registration": {
+        "default_impl": {
+            "en": "Arrangement of e-stamp registration",
+            "cs": "Zprostředkování registrace e-známky"
+        }
+    },
+    "Increase of the monthly limit": {
+        "default_impl": {
+            "en": "Increase of the monthly limit",
+            "cs": "Navýšení měsíčního limitu"
+        }
+    }
+}

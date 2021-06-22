@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The amount of time required to complete the specified aggregate function --></help>
+    <label><!-- DEPRECATE - Time Limit --></label>
+    <name>success__Time_limit_in_days__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_RecordType_for_RU_leads2</fullName>
+    <active>true</active>
+    <description>Lead record type = Russian Sales</description>
+    <errorConditionFormula>OR(
+$Profile.Name = "Russian Sales Manager" ,
+$Profile.Name = "Russian Quality Control" ,
+$Profile.Name = "Russian Call Center" ,
+$Profile.Name = "Russian Team Leader" ) &amp;&amp;
+            ISBLANK( RecordType.DeveloperName )</errorConditionFormula>
+    <errorMessage>specify RecordType = Russian Sales</errorMessage>
+</ValidationRule>

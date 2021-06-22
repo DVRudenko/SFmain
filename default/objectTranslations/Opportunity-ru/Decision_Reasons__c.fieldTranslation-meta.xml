@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS_Decision Reasons --></label>
+    <name>Decision_Reasons__c</name>
+    <picklistValues>
+        <masterLabel>Auta jako benefit</masterLabel>
+        <translation><!-- Auta jako benefit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inkaso</masterLabel>
+        <translation><!-- Inkaso --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Je klient CCS</masterLabel>
+        <translation><!-- Je klient CCS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jiný důvod</masterLabel>
+        <translation><!-- Jiný důvod --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Konkurence</masterLabel>
+        <translation><!-- Konkurence --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Má asistenci_pojištění a další benefity jinde</masterLabel>
+        <translation><!-- Má asistenci_pojištění a další benefity jinde --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nechce sdělit důvod</masterLabel>
+        <translation><!-- Nechce sdělit důvod --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nedostatečná síť</masterLabel>
+        <translation><!-- Nedostatečná síť --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nelíbí se mu poplatek</masterLabel>
+        <translation><!-- Nelíbí se mu poplatek --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nemají finance</masterLabel>
+        <translation><!-- Nemají finance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nemají vozový park</masterLabel>
+        <translation><!-- Nemají vozový park --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nepotřebuje_nevyužije</masterLabel>
+        <translation><!-- Nepotřebuje_nevyužije --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nevyužívají vlastnosti produktu</masterLabel>
+        <translation><!-- Nevyužívají vlastnosti produktu --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nízký limit</masterLabel>
+        <translation><!-- Nízký limit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Odeslán e-mail - ozve se sám</masterLabel>
+        <translation><!-- Odeslán e-mail - ozve se sám --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platba paušálem</masterLabel>
+        <translation><!-- Platba paušálem --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Platba v hotovosti</masterLabel>
+        <translation><!-- Platba v hotovosti --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Poplatky</masterLabel>
+        <translation><!-- Poplatky --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Prodej T-Mobile</masterLabel>
+        <translation><!-- Prodej T-Mobile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sleva u stávajícího dodavatele</masterLabel>
+        <translation><!-- Sleva u stávajícího dodavatele --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Splatnost</masterLabel>
+        <translation><!-- Splatnost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ukončená činnost</masterLabel>
+        <translation><!-- Ukončená činnost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Záruka</masterLabel>
+        <translation><!-- Záruka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>objednávka Eso 2015</masterLabel>
+        <translation><!-- objednávka Eso 2015 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>objednávka FIX 97</masterLabel>
+        <translation><!-- objednávka FIX 97 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>objednávka Limit+</masterLabel>
+        <translation><!-- objednávka Limit+ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>objednávka Limit+ MINI</masterLabel>
+        <translation><!-- objednávka Limit+ MINI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>objednávka Moje síť</masterLabel>
+        <translation><!-- objednávka Moje síť --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Špatná zkušenost s CCS</masterLabel>
+        <translation><!-- Špatná zkušenost s CCS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

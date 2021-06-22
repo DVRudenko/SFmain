@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Aktivieren Sie dieses Kontrollkästchen, wenn Sie als zusätzlicher Empfänger/Signaturgeber für dieses Dokument hinzugefügt werden möchten.  Wenn dieses Kontrollkästchen nicht aktiviert ist, erhalten Sie zwar eine Benachrichtigung, dass der Kontakt per DocuSign signiert hat, aber Sie selbst können keine Signatur hinzufügen.</help>
+    <label><!-- I will also Sign --></label>
+    <name>dsfs__I_will_Sign__c</name>
+</CustomFieldTranslation>

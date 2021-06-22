@@ -1,0 +1,266 @@
+{
+    "translations": {
+        "step_title_cmpd": {
+            "default_impl": {
+                "en": "Help us to identify your company",
+                "de": "Helfen Sie uns Ihr Unternehmen zu finden",
+                "hu": "Segítsen vállalkozása beazonosításában"
+            }
+        },
+        "step_subtitle_cmpd": {
+            "default_impl": {
+                "en": "In order to provide a suitable credit limit for the selected products, we need to identify your company. You will be able to continue with your order once the credit report for your company is ready.",
+                "de": "Um ein ausreichendes Kreditlimit für die ausgewählten Produkte bereitstellen zu können, müssen wir Ihr Unternehmen identifizieren. Sie können mit Ihrer Bestellung fortfahren, sobald die Bonitätsauskunft für Ihr Unternehmen vorliegt.",
+                "hu": "A szolgáltatás nyújtásához és az elegendő hitelkeret megállapításához, be kell azonosítanunk az Ön vállalkozását. A megrendelést azt követően tudja folytatni, amint az Ön vállalkozásáról elkészült pénzügyi jelentés a rendelkezésünkre áll."
+            }
+        },
+        "selectedCompanyName_label_cmpd": {
+            "default_impl": {
+                "en": "Company Name",
+                "de": "Firmenname",
+                "hu": "Vállalkozás neve"
+            }
+        },
+        "selectedCompanyName_error_cmpd": {
+            "default_impl": {
+                "en": "Please enter a valid company name.",
+                "de": "Bitte geben Sie einen gültigen Firmennamen ein.",
+                "hu": "Kérjük, adja meg a vállalkozása nevét."
+            }
+        },
+        "taxId_label_cmpd": {
+            "default_impl": {
+                "en": "Tax Id",
+                "de": "Steuernummer",
+                "hu": "Adószám"
+            }
+        },
+        "taxId_error_cmpd": {
+            "default_impl": {
+                "en": "Please enter your Tax Id"
+            },
+            "Hungary": {
+                "en": "Please enter Tax ID in the valid format: 12345678-1-23",
+                "hu": "Adószámát az alábbi formátum szerint adja meg: 12345678-1-12"
+            },
+            "Germany": {
+                "en": "Please enter Tax ID in the valid format: 1234567890123",
+                "de": "Bitte geben Sie die Steuernummer im richtigen Format ein: 1234567890123"
+            }
+        },
+        "city_label_cmpd": {
+            "default_impl": {
+                "en": "City",
+                "de": "Ort",
+                "hu": "Település"
+            }
+        },
+        "city_error_cmpd": {
+            "default_impl": {
+                "en": "Please enter a valid city",
+                "de": "Bitte geben Sie eine gültigen Ort ein",
+                "hu": "Kérjük, adja meg a települést"
+            }
+        },
+        "street_label_cmpd": {
+            "default_impl": {
+                "en": "Street, house number",
+                "de": "Straße, Hausnummer",
+                "hu": "Utca és házszám"
+            }
+        },
+        "street_error_cmpd": {
+            "default_impl": {
+                "en": "Please enter a valid street and house number.",
+                "de": "Bitte geben Sie eine gültige Straße und Hausnummer an.",
+                "hu": "Kérjük, adja meg az utcanevet és a házszámot."
+            }
+        },
+        "postalCode_label_cmpd": {
+            "default_impl": {
+                "en": "Postal Code",
+                "de": "Postleitzahl",
+                "hu": "Irányítószám"
+            }
+        },
+        "postalCode_error_cmpd": {
+            "default_impl": {
+                "en": "Please enter a valid postal code",
+                "de": "Bitte geben Sie eine gültige Postleitzahl an",
+                "hu": "Kérjük, adja meg az irányítószámot"
+            }
+        },
+        "tradeRegisterNumber_label_cmpd": {
+            "default_impl": {
+                "en": "Company registration Nr.",
+                "de": "Handelsregisternummer"
+            }
+        },
+        "tradeRegisterNumber_error_cmpd": {
+            "default_impl": {
+                "en": "Please enter a Company registration Nr.",
+                "de": "Bitte geben Sie Ihre Handelsregisternummer"
+            }
+        },
+        "birthdate_label_cmpd": {
+            "default_impl": {
+                "en": "Owner's date of birth",
+                "de": "Geburtsdatum des Inhabers"
+            }
+        },
+        "birthdate_error_cmpd": {
+            "default_impl": {
+                "en": "Please enter an Owner's date of birth",
+                "de": "Bitte geben Sie ein gültiges Geburtsdatum an"
+            }
+        },
+        "vatId_label_cmpd": {
+            "default_impl": {
+                "en": "Vat Id",
+                "de": "Umsatzsteuer ID"
+            }
+        },
+        "vatId_error_cmpd": {
+            "default_impl": {
+                "en": "Please enter the Vat Id in valid format.",
+                "de": "Bitte geben Sie Ihre Umsatzsteuer ID im gültigen Format."
+            }
+        },
+        "company_registration_form_title_cmpd": {
+            "default_impl": {
+                "en": "Company registration form",
+                "de": "Gewerbeanmeldung"
+            }
+        },
+        "company_registration_form_sub_title_cmpd": {
+            "default_impl": {
+                "en": "Please attach a copy of your company's registration form.",
+                "de": "Bitte fügen Sie eine Kopie Ihrer Gewerbeanmeldung bei."
+            }
+        },
+        "choose_file_label_cmpd": {
+            "default_impl": {
+                "en": "Choose file",
+                "de": "Datei wählen"
+            }
+        },
+        "choose_file_error_cmpd": {
+            "default_impl": {
+                "en": "Your file exceeds the allowed size. The maximum allowed size is 5 MB.",
+                "de": "Ihre Datei überschreitet die zulässige Größe. Die maximal zulässige Größe ist 5 MB."
+            }
+        },
+        "file_remove_cmpd": {
+            "default_impl": {
+                "en": "Remove file",
+                "de": "Datei löschen"
+            }
+        },
+        "file_supported_formats_cmpd": {
+            "default_impl": {
+                "en": "Supported file formats",
+                "de": "Unterstützte Dateiformate"
+            }
+        }
+    },
+    "settings": {
+        "data_object": {
+            "Tax_ID__c": {
+                "Hungary": {
+                    "regex": "^\\d{8}-\\d{1}-\\d{2}$",
+                    "maxlength": "13",
+                    "mapto": "taxId",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "^((28|9|11|0|30|24|22|26|40|23|5|27|10|32|31|21|41|1|2){0,1}\\d{2,3}(0){0,1}\\d{3,4}\\d{3,4}\\d{1,1}$)",
+                    "maxlength": "13",
+                    "mapto": "taxId",
+                    "required": false
+                }
+            },
+            "Selected_Company_Name__c": {
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "120",
+                    "mapto": "selectedCompanyName",
+                    "required": true
+                }
+            },
+            "Registered_Street__c": {
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "street",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "street",
+                    "required": true
+                }
+            },
+            "Registered_Postal_Code__c": {
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "20",
+                    "mapto": "postalCode",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "20",
+                    "mapto": "postalCode",
+                    "required": true
+                }
+            },
+            "Registered_City__c": {
+                "Hungary": {
+                    "regex": "",
+                    "maxlength": "40",
+                    "mapto": "city",
+                    "required": true
+                },
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "40",
+                    "mapto": "city",
+                    "required": true
+                }
+            },
+            "Trade_Register_Number__c": {
+                "Germany" : {
+                    "regex": "^([Hh]{1}[Rr]{1}[AaBb]{1}[ ]{1}[0-9]{1,6}[ ]{0,1}[a-zA-Z]{0,5})+$",
+                    "maxlength": "50",
+                    "mapto": "tradeRegisterNumber",
+                    "required": false
+                }
+            },
+            "Vat_ID__c": {
+                "Germany": {
+                    "regex": "^([Dd]{1}[Ee]{1}[0-9]{9})+$",
+                    "maxlength": "11",
+                    "mapto": "vatId",
+                    "required": false
+                }
+            }
+        },
+        "ete_contact": {
+            "Birthdate__c": {
+                "Germany" : {
+                    "regex": "^\\d{2}.\\d{2}.\\d{4}",
+                    "maxlength": "10",
+                    "mapto": "birthdate",
+                    "required": true
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Coaching Plan Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- The user field must be populated --></errorMessage>
+        <name>success__A_user_must_be_assigned</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please make sure both End and Start date are filled. --></errorMessage>
+        <name>success__Date_validations</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a name for this record --></errorMessage>
+        <name>success__Name_must_be_present</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The start date must be before the end date --></errorMessage>
+        <name>success__Start_Date_cannot_be_after_the_end_date</name>
+    </validationRules>
+</CustomObjectTranslation>

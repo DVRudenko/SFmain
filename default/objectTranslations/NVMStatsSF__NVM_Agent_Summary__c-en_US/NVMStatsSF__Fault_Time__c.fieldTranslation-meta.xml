@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Sum of times in Fault on Line and Network Congestion states in seconds --></help>
+    <label><!-- Fault Time --></label>
+    <name>NVMStatsSF__Fault_Time__c</name>
+</CustomFieldTranslation>

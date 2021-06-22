@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>click_to_call__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK("sip:"&amp; IF(LEFT(Phone , 3)="049", "0"&amp; Phone ,
+            IF(LEFT(Phone , 2)="00", Phone ,
+            IF(LEFT(Phone , 2) ="04", Phone ,
+            IF(LEFT(Phone , 2)="49", "00"&amp; Phone ,
+            IF(LEFT(Phone , 3)="+49", "0049"&amp; RIGHT(Phone , LEN(Phone )-3) ,
+            IF(LEFT(Phone , 2)="+4", "004"&amp; RIGHT(Phone , LEN(Phone )-2) ,
+            IF(LEFT(Phone , 3)="+04", "0"&amp; RIGHT(Phone , LEN(Phone )-1) ,
+            IF(LEFT(Phone , 1)="+", "00"&amp; RIGHT(Phone , LEN(Phone )-1) ,"0049"&amp; Phone )))))))), Phone)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>click-to-call</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

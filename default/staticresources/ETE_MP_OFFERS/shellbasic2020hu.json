@@ -1,0 +1,95 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "Wait until you receive your Shell cards and PIN numbers by post.",
+                "hu": "Várja meg, amíg a Shell kártyák és a hozzájuk tartozó PIN-kódok kézbesítésre kerülnek."
+            },
+            {
+                "en": "You can now use your card(s) for the first time while refueling at a Shell Station.",
+                "hu": "Már használhatja is a kártyákat bármelyik Shell állomáson."
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "discount at Shell sites in Hungary",
+                    "hu": "kedvezményt Shell területek Magyarországon"
+                },
+                "value": {
+                    "en": "5 HUF/liter",
+                    "hu": "5 Ft/liter"
+                }
+            },
+            {
+                "label": {
+                    "en": "car wash discount at Shell sites in Hungary",
+                    "hu": "autómosó kedvezményt Shell területek Magyarországon"
+                },
+                "value": {
+                    "en": "5%",
+                    "hu": "5%"
+                }
+            },
+            {
+                "label": {
+                    "en": "card issuing and delivery",
+                    "hu": "kártya kibocsátó és szállítás"
+                },
+                "value": {
+                    "en": "FREE",
+                    "hu": "INGYENES"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "Shell Basic 2020 HU"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "hu": "SHELL CARD"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/shellkarte_eu.jpg"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "Shell fuel card for business guarantees your company stable and permanent fuel discounts, a convenient online customer portal and a dense network of stations.",
+            "hu": "Shell üzemanyag kártya üzleti ügyfeleknek garantálja a vállalkozása stabilitását az állandó üzemanyag kedvezményekkel, széleskörő elfogadóhelyekkels és hozzáféréssel online ügyfélszolgálati portálhoz."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "hu": "SHELL CARD"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "SHELL CARDS",
+            "hu": "SHELL CARDS"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "SHELL CARD",
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "1",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "monthlyFuelConsumption_max": "5000",
+            "monthlyFuelConsumption_min": "50",
+            "order": 4
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Hungary": "/resource/ETE_DOCUMENTS_1/tariffSheets_shellbasic2020hu.jpg"
+    }
+}

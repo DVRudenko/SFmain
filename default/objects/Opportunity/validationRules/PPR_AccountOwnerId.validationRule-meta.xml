@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_AccountOwnerId</fullName>
+    <active>true</active>
+    <description>Creation of a new opportunity only if the organization is assigned to the user</description>
+    <errorConditionFormula>AND(
+    OR(AND ( $Profile.Name = "Russian Sales Manager",
+              $User.ID__c &lt;&gt; Account.OwnerId  ),
+       AND ( $Profile.Name = "Russian Team Leader",
+              AND( $User.ID__c &lt;&gt; Account.Owner.Manager.ID__c,
+                   $User.ID__c &lt;&gt; Account.Owner.ID__c ))
+       ),
+    ISNEW()
+   )</errorConditionFormula>
+    <errorMessage>ERROR:RU-OPTY001. Contact Account.Owner or send a request to the RU SF Administrator.</errorMessage>
+</ValidationRule>

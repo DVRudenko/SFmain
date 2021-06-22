@@ -1,0 +1,1363 @@
+{
+  "CountryCode": {
+    "Germany": "DE",
+    "Austria": "AT",
+    "Belgium": "BE",
+    "Netherlands": "NL",
+    "France": "FR",
+    "Hungary": "HU",
+    "Poland": "PL",
+    "Luxembourg": "LU",
+    "Switzerland": "CH",
+    "Czech Republic": "CZ",
+    "Slovakia": "SK"
+  },
+  "CultureCode": {
+    "Germany": "de-DE",
+    "Austria": "de-DE",
+    "Belgium": "nl-NL",
+    "Belgium-NL": "nl-NL",
+    "Belgium-FR": "fr-FR",
+    "Netherlands": "nl-NL",
+    "France": "fr-FR",
+    "Hungary": "hu-HU",
+    "Poland": "pl-PL",
+    "Luxembourg": "fr-FR",
+    "Switzerland": "de-DE",
+    "Switzerland-DE": "de-DE",
+    "Switzerland-FR": "fr-FR",
+    "Switzerland-IT": "it-it",
+    "Czech Republic": "cs-CZ",
+    "Slovakia": "sk-SK"
+  },
+  "LanguageCode": {
+    "German": "DE",
+    "English": "EN",
+    "French": "FR",
+    "Dutch": "NL",
+    "Hungarian": "hu",
+    "Polish": "pl",
+    "Italian": "it",
+    "Czech": "cs",
+    "Slovak": "sk"
+  },
+  "CompanyId": {
+    "Germany": 1,
+    "Austria": 2,
+    "Belgium": 3,
+    "Netherlands": 4,
+    "France": 5,
+    "Hungary": 6,
+    "Poland": 7,
+    "Luxembourg": 79,
+    "Switzerland": 80,
+    "Czech Republic": 81,
+    "Slovakia": 82
+  },
+  "LineOfBusinessId": {
+    "Euroshell": null,
+    "Euroshell Starts": null,
+    "Lotos": 83
+  },
+  "OutputTypeId": {
+    "Print": 6,
+    "Link": 28,
+    "PDF": 1
+  },
+  "PaymentTermsId": {
+    "7": 1,
+    "10": 2,
+    "14": 3,
+    "21": 12,
+    "27": 14,
+    "30": 8,
+    "35": 13,
+    "45": 10
+  },
+  "PaymentMethodId": {
+    "DE": {
+      "Bank transfer": 6,
+      "Direct debit": {
+        "Core": 9,
+        "B2B": 8
+      }
+    },
+    "AT": {
+      "Bank transfer": 6,
+      "Direct debit": {
+        "Core": 9,
+        "B2B": 8
+      }
+    },
+    "CH": {
+      "Bank transfer": 2,
+      "Direct debit": {
+        "Core": 10,
+        "B2B": 11
+      }
+    },
+    "BE": {
+      "Bank transfer": 6,
+      "Direct debit": {
+        "Core": 9,
+        "B2B": 8
+      }
+    },
+    "LU": {
+      "Bank transfer": 6,
+      "Direct debit": {
+        "Core": 9,
+        "B2B": 8
+      }
+    },
+    "HU": {
+      "Bank transfer": 6,
+      "Direct debit": {
+        "Core": 6,
+        "B2B": 6
+      }
+    },
+    "NL": {
+      "Bank transfer": 6,
+      "Direct debit": {
+        "Core": 9,
+        "B2B": 8
+      }
+    },
+    "FR": {
+      "Bank transfer": 6,
+      "Direct debit": {
+        "Core": 9,
+        "B2B": 8
+      }
+    },
+    "PL": {
+      "Bank transfer": 6,
+      "Direct debit": {
+        "Core": 6,
+        "B2B": 6
+      }
+    },
+    "CZ": {
+      "Bank transfer": 2,
+      "Direct debit": {
+        "Core": 12,
+        "B2B": 12
+      }
+    },
+    "SK": {
+      "Bank transfer": 2,
+      "Direct debit": {
+        "Core": 14,
+        "B2B": 13
+      }
+    }
+  },
+  "PaymentFrequencyId": {
+    "DE": {
+      "7 days": 9,
+      "15 days": 89,
+      "30 days": 11
+    },
+    "AT": {
+      "15 days": 41,
+      "30 days": 40
+    },
+    "CH": {
+      "30 days": 40
+    },
+    "BE": {
+      "7 days": 80,
+      "15 days": 84,
+      "30 days": 10
+    },
+    "LU": {
+      "7 days": 80,
+      "15 days": 84,
+      "30 days": 10
+    },
+    "HU": {
+      "7 days": 80,
+      "15 days": 84,
+      "30 days": 10
+    },
+    "NL": {
+      "7 days": 91,
+      "15 days": 50,
+      "30 days": 12
+    },
+    "FR": {
+      "7 days": 92,
+      "15 days": 94,
+      "30 days": 13
+    },
+    "PL": {
+      "7 days": 150,
+      "15 days": 88,
+      "30 days": 11
+    },
+    "CZ": {
+      "7 days": 107,
+      "15 days": 120,
+      "30 days": 40
+    },
+    "SK": {
+      "7 days": 107,
+      "15 days": 120,
+      "30 days": 40
+    }
+  },
+  "CardCategoryId": {
+    "Vehicle": 1,
+    "Driver": 2
+  },
+  "EmbossingId": {
+    "Vehicle": 2,
+    "Driver": 1
+  },
+  "CardTypeId": {
+    "DE": {
+      "LKW": {
+        "Multi Network Card -- International": 34,
+        "Multi Network Card -- National": 2,
+        "Single Network Card -- National": 1,
+        "Single Network Card -- International": 33
+      },
+      "PKW": {
+        "Multi Network Card -- International": 36,
+        "Multi Network Card -- National": 4,
+        "Single Network Card -- National": 3,
+        "Single Network Card -- International": 35
+      },
+      "EV Fob": 91
+    },
+    "AT": {
+      "LKW": {
+        "Multi Network Card -- International": 54,
+        "Multi Network Card -- National": 6,
+        "Single Network Card -- National": 5
+      },
+      "PKW": {
+        "Multi Network Card -- International": 56,
+        "Multi Network Card -- National": 8,
+        "Single Network Card -- National": 7
+      }
+    },
+    "CH": {
+      "LKW": {},
+      "PKW": {
+        "Single Network Card -- National": 65,
+        "Single Network Card -- International": 71
+      }
+    },
+    "BE": {
+      "LKW": {
+        "Multi Network Card -- International": 38,
+        "Multi Network Card -- National": 10,
+        "Single Network Card -- National": 9,
+        "Single Network Card -- International": 37
+      },
+      "PKW": {
+        "Multi Network Card -- International": 40,
+        "Multi Network Card -- National": 12,
+        "Single Network Card -- National": 11,
+        "Single Network Card -- International": 39
+      },
+      "EV Fob": 93
+    },
+    "NL": {
+      "LKW": {
+        "Multi Network Card -- International": 42,
+        "Multi Network Card -- National": 14,
+        "Single Network Card -- National": 13,
+        "Single Network Card -- International": 41
+      },
+      "PKW": {
+        "Multi Network Card -- International": 44,
+        "Multi Network Card -- National": 16,
+        "Single Network Card -- National": 15,
+        "Single Network Card -- International": 43
+      },
+      "EV Fob": 92
+    },
+    "FR": {
+      "LKW": {
+        "Multi Network Card -- International": 58,
+        "Multi Network Card -- National": 18
+      },
+      "PKW": {
+        "Multi Network Card -- International": 60,
+        "Multi Network Card -- National": 20
+      }
+    },
+    "LU": {
+      "LKW": {
+        "Multi Network Card -- International": 68,
+        "Multi Network Card -- National": 62,
+        "Single Network Card -- National": 61,
+        "Single Network Card -- International": 67
+      },
+      "PKW": {
+        "Multi Network Card -- International": 70,
+        "Multi Network Card -- National": 64,
+        "Single Network Card -- National": 63,
+        "Single Network Card -- International": 69
+      }
+    },
+    "PL": {
+      "LKW": {
+        "Multi Network Card -- International": 50,
+        "Multi Network Card -- National": 30,
+        "Single Network Card -- National": 29,
+        "Single Network Card -- International": 49,
+        "Lotos Biznes": 90
+      },
+      "PKW": {
+        "Multi Network Card -- International": 52,
+        "Multi Network Card -- National": 32,
+        "Single Network Card -- National": 31,
+        "Single Network Card -- International": 51,
+        "Lotos Biznes": 90
+      }
+    },
+    "HU": {
+      "LKW": {
+        "Multi Network Card -- International": 46,
+        "Multi Network Card -- National": 26,
+        "Single Network Card -- National": 25,
+        "Single Network Card -- International": 45
+      },
+      "PKW": {
+        "Multi Network Card -- International": 48,
+        "Multi Network Card -- National": 28,
+        "Single Network Card -- National": 27,
+        "Single Network Card -- International": 47
+      }
+    },
+    "CZ": {
+      "LKW": {
+        "Multi Network Card -- International": 78,
+        "Single Network Card -- International": 77
+      },
+      "PKW": {
+        "Multi Network Card -- International": 80,
+        "Multi Network Card -- National": 76,
+        "Single Network Card -- National": 75,
+        "Single Network Card -- International": 79
+      }
+    },
+    "SK": {
+      "LKW": {
+        "Multi Network Card -- International": 86,
+        "Multi Network Card -- National": 82,
+        "Single Network Card -- National": 81,
+        "Single Network Card -- International": 85
+      },
+      "PKW": {
+        "Multi Network Card -- International": 88,
+        "Multi Network Card -- National": 84,
+        "Single Network Card -- National": 83,
+        "Single Network Card -- International": 87
+      }
+    }
+  },
+  "PurchaseCategoryId": {
+    "DE": {
+      "0 Diesel, tunnel-, highway- and ferry toll fees": 1,
+      "1 All fuels, tunnel-, highway- and ferry toll fees": 2,
+      "2 Category 1 plus vehicle-related goods and services (oils, car wash)": 3,
+      "3 Category 2 plus all shop items": {
+        "National": 4,
+        "International": 6
+      },
+      "EV Fob": 31
+    },
+    "AT": {
+      "0 Diesel, tunnel-, highway- and ferry toll fees": 1,
+      "1 All fuels, tunnel-, highway- and ferry toll fees": 2,
+      "2 Category 1 plus vehicle-related goods and services (oils, car wash)": 3,
+      "3 Category 2 plus all shop items": {
+        "National": 4,
+        "International": 7
+      }
+    },
+    "CH": {
+      "0 Diesel, tunnel-, highway- and ferry toll fees": 1,
+      "1 All fuels, tunnel-, highway- and ferry toll fees": 2,
+      "2 Category 1 plus vehicle-related goods and services (oils, car wash)": 3,
+      "3 Category 2 plus all shop items": 4
+    },
+    "BE": {
+      "0 Diesel, tunnel-, highway- and ferry toll fees": 3,
+      "1 All fuels, tunnel-, highway- and ferry toll fees": 8,
+      "2 Category 1 plus vehicle-related goods and services (oils, car wash)": 9,
+      "3 Category 2 plus all shop items": {
+        "National": 10,
+        "International": 17
+      },
+      "EV Fob": 31
+    },
+    "NL": {
+      "0 Diesel, tunnel-, highway- and ferry toll fees": 1,
+      "1 All fuels, tunnel-, highway- and ferry toll fees": 2,
+      "2 Category 1 plus vehicle-related goods and services (oils, car wash)": 3,
+      "3 Category 2 plus all shop items": {
+        "National": 4,
+        "International": 14
+      },
+      "EV Fob": 31
+    },
+    "FR": {
+      "0 Diesel, tunnel-, highway- and ferry toll fees": 1,
+      "1 All fuels, tunnel-, highway- and ferry toll fees": 2,
+      "2 Category 1 plus vehicle-related goods and services (oils, car wash)": 3,
+      "3 Category 2 plus all shop items": {
+        "National": 4,
+        "International": 6
+      }
+    },
+    "LU": {
+      "0 Diesel, tunnel-, highway- and ferry toll fees": 3,
+      "1 All fuels, tunnel-, highway- and ferry toll fees": 8,
+      "2 Category 1 plus vehicle-related goods and services (oils, car wash)": 9,
+      "3 Category 2 plus all shop items": {
+        "National": 10,
+        "International": 17
+      }
+    },
+    "PL": {
+      "0 Diesel, tunnel-, highway- and ferry toll fees": 1,
+      "1 All fuels, tunnel-, highway- and ferry toll fees": 2,
+      "2 Category 1 plus vehicle-related goods and services (oils, car wash)": 3,
+      "3 Category 2 plus all shop items": 5,
+      "Lotos Diesel": 28,
+      "Lotos All Fuel": 29,
+      "Lotos All Products": 30
+    },
+    "HU": {
+      "0 Diesel, tunnel-, highway- and ferry toll fees": 1,
+      "1 All fuels, tunnel-, highway- and ferry toll fees": 2,
+      "2 Category 1 plus vehicle-related goods and services (oils, car wash)": 3,
+      "3 Category 2 plus all shop items": {
+        "National": 4,
+        "International": 5
+      }
+    },
+    "CZ": {
+      "0 Diesel, tunnel-, highway- and ferry toll fees": 18,
+      "1 All fuels, tunnel-, highway- and ferry toll fees": 19,
+      "2 Category 1 plus vehicle-related goods and services (oils, car wash)": 20,
+      "3 Category 2 plus all shop items": 22
+    },
+    "SK": {
+      "0 Diesel, tunnel-, highway- and ferry toll fees": 23,
+      "1 All fuels, tunnel-, highway- and ferry toll fees": 24,
+      "2 Category 1 plus vehicle-related goods and services (oils, car wash)": 25,
+      "3 Category 2 plus all shop items": 27
+    }
+  },
+  "CreditRatingId": {
+    "Low": 1,
+    "Medium": 2,
+    "High": 3,
+    "Very": 4
+  },
+  "CreditSystemRating": {
+    "0–EX": "0EX",
+    "5-EX": "5EX",
+    "Keine Bonität": "0"
+  },
+  "SalutationId": {
+    "Frau": 2,
+    "Frau Dr.": 2,
+    "Frau Prof.": 2,
+    "Slečna": 2,
+    "Herr": 1,
+    "Herr Dr.": 1,
+    "Herr Prof.": 1,
+    "Mrs.": 2,
+    "Mr.": 1
+  },
+  "LegalEntityId": {
+    "DE": 20,
+    "AT": 100,
+    "CH": 800,
+    "BE": 200,
+    "NL": 300,
+    "FR": 400,
+    "LU": 700,
+    "PL": 600,
+    "HU": 500,
+    "CZ": 824,
+    "SK": 825
+  },
+  "CustomerSegmentationId": {
+    "0": 1,
+    "1": 2,
+    "2": 2,
+    "3": 2,
+    "4": 3,
+    "5": 3,
+    "6": 3,
+    "7": 3,
+    "8": 3,
+    "9": 3,
+    "10": 3,
+    "11": 4
+  },
+  "MarketingSegmentationId": {
+    "5 Cent Neujahrs-Angebot": 29,
+    "6 Cent Neujahrs-Angebot": 30,
+    "7 Cent Neujahrs-Angebot": 31,
+    "EuroShell Standard RTL": 27,
+    "FREE 7": 16,
+    "FREE 8": 17,
+    "HOME 1": 20,
+    "HOME 3": 19,
+    "HOMESTATION MOBIL": 18,
+    "Inbound Typ A": 23,
+    "Inbound Typ B": 24,
+    "Inbound Typ C": 25,
+    "Inbound Type A": 23,
+    "Inbound Type B": 24,
+    "Inbound Type C": 25,
+    "Gold": 36,
+    "Platin": 37,
+    "Platinum": 37,
+    "Sales no fee promo Feb 2016": 6,
+    "Swiss Pro": 34,
+    "Swiss Star": 35,
+    "No Fee CH": 6,
+    "Swiss Pro CH": 34,
+    "Swiss Star CH": 35,
+    "Swiss Pro 5 CH": 41,
+    "Shell Standard 2019": 38,
+    "Sales standard": 9,
+    "Middle Class": 14,
+    "Shell Promo 2019": 39,
+    "Home Station offer (v.1)": 9,
+    "Home Station FR": 9,
+    "Home Station LU": 9,
+    "No Fee LU": 6,
+    "SME (BNF 0,025 € + fixed fee)": 14,
+    "SME (BNF 0,025 € + % fee)": 14,
+    "Shell Summer 2019": 40,
+    "Swiss Pro 5": 41,
+    "Smart": 42,
+    "Shell enjoy summer 2019": 2,
+    "Shell PL Partnership": 67,
+    "EV DE": 44,
+    "EV DE + Inbound Type C": 46,
+    "EV DE + Inbound Type B": 45,
+    "EV DE + Inbound Typ C": 46,
+    "EV DE + Inbound Typ B": 45,
+    "EV DE + Platin": 48,
+    "EV DE + Platinum": 48,
+    "EV DE + Sales no fee promo Feb 2016": 47,
+    "Carnet Standard 2019": 49,
+    "Carnet OBD": 50,
+    "Shell Digital PL (3 month)" : 68,
+    "Shell Digital PL (6 month)" : 69,
+    "Shell Basic 2020": 51,
+    "Shell Basic 2020 HU": 51,
+    "Shell Basic 2020 SK": 51,
+    "Shell Basic 2020 CZ": 51,
+    "Shell No fee 2020": 52,
+    "Shell No Fee HU": 52,
+    "Shell No Fee 2020 SK": 52,
+    "Shell No Fee 2020 CZ": 52,
+    "LOTOS Biznes Standard": 43,
+    "LOTOS Biznes No fee": 43,
+    "LOTOS Biznes Classic": 65,
+    "LOTOS Biznes Special": 65,
+    "EV NL": 55,
+    "EV NL + SME (BNF 0,025 € + % fee)": 53,
+    "EV NL + SME (BNF 0,025 € + fixed fee)": 53,
+    "EV NL + HOME 1": 54,
+    "EV DE Promo": 56,
+    "EV DE Promo + Inbound Type B": 57,
+    "EV DE Promo + Inbound Type C": 58,
+    "EV DE Promo + Inbound Typ B": 57,
+    "EV DE Promo + Inbound Typ C": 58,
+    "EV DE Promo + Sales no fee promo Feb 2016": 59,
+    "EV DE Promo + Platin": 60,
+    "EV DE Promo + Platinum": 60,
+    "Shell Outbound 2020": 66,
+    "Outbound 2021 DE No fee": 70,
+    "Outbound 2021 PL No fee": 70,
+    "EV BE + Middle Class 2,5 Cent BE": 63,
+    "EV BE + Middle Class 2,5 % BE": 63,
+    "EV BE + 5 Cent Offer BE": 62,
+    "EV BE + No Fee Offer BE": 61,
+    "EV BE": 64,
+    "Middle Class 2,5 Cent BE": 14,
+    "Middle Class 2,5 % BE": 14,
+    "5 Cent Offer BE": 9,
+    "No Fee Offer BE": 6,
+    "Home Station AT": 9,
+    "No Fee AT": 6
+  },
+  "FeeGroupId": {
+    "DE": {
+      "Sales no fee promo Feb 2016": 13,
+      "Inbound Typ B": {
+        "Bank transfer": 40,
+        "Direct debit": 41
+      },
+      "Inbound Typ C": {
+        "Bank transfer": 42,
+        "Direct debit": 43
+      },
+      "Inbound Type B": {
+        "Bank transfer": 40,
+        "Direct debit": 41
+      },
+      "Inbound Type C": {
+        "Bank transfer": 42,
+        "Direct debit": 43
+      },
+      "Platin": 49,
+      "Platinum": 49,
+      "EV DE": {
+        "Bank transfer": 52,
+        "Direct debit": 51
+      },
+      "EV DE + Inbound Type C": {
+        "Bank transfer": 54,
+        "Direct debit": 53
+      },
+      "EV DE + Inbound Type B": {
+        "Bank transfer": 51,
+        "Direct debit": 52
+      },
+      "EV DE + Inbound Typ C": {
+        "Bank transfer": 54,
+        "Direct debit": 53
+      },
+      "EV DE + Inbound Typ B": {
+        "Bank transfer": 51,
+        "Direct debit": 52
+      },
+      "Outbound 2021 DE No fee": 55,
+      "EV DE + Platin": 56,
+      "EV DE + Platinum": 56,
+      "EV DE + Sales no fee promo Feb 2016": 55,
+      "EV DE Promo": {
+        "Bank transfer": 59,
+        "Direct debit": 58
+      },
+      "EV DE Promo + Sales no fee promo Feb 2016": 62,
+      "EV DE Promo + Platin": 63,
+      "EV DE Promo + Platinum": 63,
+      "EV DE Promo + Inbound Typ B": {
+        "Bank transfer": 59,
+        "Direct debit": 58
+      },
+      "EV DE Promo + Inbound Typ C": {
+        "Bank transfer": 61,
+        "Direct debit": 60
+      },
+      "EV DE Promo + Inbound Type B": {
+        "Bank transfer": 59,
+        "Direct debit": 58
+      },
+      "EV DE Promo + Inbound Type C": {
+        "Bank transfer": 61,
+        "Direct debit": 60
+      }
+    },
+    "AT": {
+      "Home Station offer (v.1)": 9,
+      "Sales no fee promo Feb 2016": 4,
+	  "Home Station AT": 9,
+	  "No Fee AT": 4
+    },
+    "CH": {
+      "Sales no fee promo Feb 2016": 4,
+      "Swiss Pro": 7,
+      "Swiss Star": 6,
+      "Swiss Pro 5": 7,
+      "No Fee CH": 4,
+      "Swiss Pro CH": 7,
+      "Swiss Star CH": 6,
+      "Swiss Pro 5 CH": 7
+    },
+    "BE": {
+      "Home Station offer (v.1)": {
+        "Bank transfer": 21,
+        "Direct debit": 22
+      },
+      "Sales no fee promo Feb 2016": 9,
+      "SME (BNF 0,025 € + fixed fee)": 33,
+      "SME (BNF 0,025 € + % fee)": 33,
+      "Smart": {
+        "Bank transfer": 40,
+        "Direct debit": 39
+      },
+      "EV BE + Middle Class 2,5 Cent BE": 33,
+      "EV BE + Middle Class 2,5 % BE": 33,
+      "EV BE + 5 Cent Offer BE": {
+        "Bank transfer": 21,
+        "Direct debit": 22
+      },
+      "EV BE + No Fee Offer BE": 9,
+      "EV BE": 9,
+      "Middle Class 2,5 Cent BE": 33,
+      "Middle Class 2,5 % BE": 33,
+      "5 Cent Offer BE": {
+        "Bank transfer": 21,
+        "Direct debit": 22
+      },
+      "No Fee Offer BE": 9
+    },
+    "NL": {
+      "SME (BNF 0,025 € + % fee)": 40,
+      "SME (BNF 0,025 € + fixed fee)": 40,
+      "HOME 1": {
+        "Bank transfer": 43,
+        "Direct debit": 42
+      },
+      "EV NL": {
+        "Bank transfer": 43,
+        "Direct debit": 42
+      },
+      "EV NL + SME (BNF 0,025 € + % fee)": 40,
+      "EV NL + SME (BNF 0,025 € + fixed fee)": 40,
+      "EV NL + HOME 1": {
+        "Bank transfer": 43,
+        "Direct debit": 42
+      }
+    },
+    "FR": {
+      "Home Station offer (v.1)": 12,
+      "Home Station FR": 12,
+      "Sales no fee promo Feb 2016": 5
+    },
+    "LU": {
+      "Home Station offer (v.1)": 7,
+      "Home Station LU": 7,
+      "Sales no fee promo Feb 2016": 4,
+      "No Fee LU": 4
+    },
+    "PL": {
+      "Shell Standard 2019": {
+        "Bank transfer": 39,
+        "Direct debit": 41
+      },
+      "Shell Promo 2019": {
+        "Bank transfer": 40,
+        "Direct debit": 42
+      },
+      "Shell Summer 2019": {
+        "Bank transfer": 43,
+        "Direct debit": 44
+      },
+      "Shell enjoy summer 2019": {
+        "Bank transfer": 43,
+        "Direct debit": 44
+      },
+      "Shell PL Partnership": {
+        "Bank transfer": 43,
+        "Direct debit": 44
+      },
+      "Carnet Standard 2019": 45,
+      "Carnet OBD": 45,
+      "Shell Basic 2020": 50,
+      "Shell Digital PL (3 month)": 56,
+      "Shell Digital PL (6 month)" : 56,
+      "Shell No fee 2020": 51,
+      "Outbound 2021 PL No fee": 57,
+      "LOTOS Biznes Standard": {
+        "true": 46,
+        "false": 47
+      },
+      "LOTOS Biznes No fee": {
+        "true": 49,
+        "false": 48
+      },
+      "LOTOS Biznes Classic": {
+        "true": 52,
+        "false": 53
+      },
+      "LOTOS Biznes Special": {
+        "true": 54,
+        "false": 55
+      }
+    },
+    "HU": {
+      "Shell Standard 2019": {
+        "Bank transfer": 6,
+        "Direct debit": 8
+      },
+      "Shell Promo 2019": {
+        "Bank transfer": 7,
+        "Direct debit": 9
+      },
+      "Shell Summer 2019": {
+        "Bank transfer": 10,
+        "Direct debit": 11
+      },
+      "Shell enjoy summer 2019": {
+        "Bank transfer": 10,
+        "Direct debit": 11
+      },
+      "Shell Basic 2020": 12,
+      "Shell Basic 2020 HU": 12,
+      "Shell No fee 2020": 13,
+      "Shell No Fee HU": 13,
+      "Shell Outbound 2020": 13
+    },
+    "CZ": {
+      "Shell Standard 2019": {
+        "Bank transfer": 33,
+        "Direct debit": 35
+      },
+      "Shell Promo 2019": {
+        "Bank transfer": 34,
+        "Direct debit": 36
+      },
+      "Shell Summer 2019": {
+        "Bank transfer": 37,
+        "Direct debit": 38
+      },
+      "Shell Basic 2020": 39,
+      "Shell Basic 2020 CZ": 39,
+      "Shell No fee 2020": 40,
+      "Shell No Fee 2020 CZ": 40
+    },
+    "SK": {
+      "Shell Standard 2019": {
+        "Bank transfer": 27,
+        "Direct debit": 29
+      },
+      "Shell Promo 2019": {
+        "Bank transfer": 28,
+        "Direct debit": 30
+      },
+      "Shell Summer 2019": {
+        "Bank transfer": 31,
+        "Direct debit": 32
+      },
+      "Shell Basic 2020": 33,
+      "Shell Basic 2020 SK": 33,
+      "Shell No fee 2020": 34,
+      "Shell No Fee 2020 SK": 34
+    }
+  },
+  "PriceProfileId": {
+    "DE": {
+      "Sales no fee promo Feb 2016": 8,
+      "Inbound Typ B": {
+        "Bank transfer": 3,
+        "Direct debit": 4
+      },
+      "Inbound Typ C": {
+        "Bank transfer": 8,
+        "Direct debit": 8
+      },
+      "Inbound Type B": {
+        "Bank transfer": 3,
+        "Direct debit": 4
+      },
+      "Inbound Type C": {
+        "Bank transfer": 8,
+        "Direct debit": 8
+      },
+      "Platin": 12,
+      "Platinum": 12,
+      "EV DE": 3,
+      "EV DE + Inbound Type C": 8,
+      "EV DE + Inbound Type B": 4,
+      "EV DE + Inbound Typ C": 8,
+      "EV DE + Inbound Typ B": 4,
+      "EV DE + Platin": 12,
+      "EV DE + Platinum": 12,
+      "EV DE + Sales no fee promo Feb 2016": 1,
+      "EV DE Promo": 3,
+      "EV DE Promo + Inbound Type B": 3,
+      "EV DE Promo + Inbound Type C": 8,
+      "EV DE Promo + Inbound Typ B": 3,
+      "EV DE Promo + Inbound Typ C": 8,
+      "EV DE Promo + Sales no fee promo Feb 2016": 1,
+      "EV DE Promo + Platin": 12,
+      "EV DE Promo + Platinum": 12,
+      "Outbound 2021 DE No fee": 14
+    },
+    "AT": {
+      "Home Station offer (v.1)": {
+        "Bank transfer": 1,
+        "Direct debit": 1
+      },
+      "Home Station AT": {
+        "Bank transfer": 1,
+        "Direct debit": 1
+      },
+      "Sales no fee promo Feb 2016": 1,
+      "No Fee AT": 1
+    },
+    "CH": {
+      "Sales no fee promo Feb 2016": 1,
+      "Swiss Pro": 4,
+      "Swiss Star": 3,
+      "Swiss Pro 5": 5,
+      "No Fee CH": 1,
+      "Swiss Pro CH": 4,
+      "Swiss Star CH": 3,
+      "Swiss Pro 5 CH": 5
+    },
+    "BE": {
+      "Home Station offer (v.1)": {
+        "Bank transfer": 3,
+        "Direct debit": 3
+      },
+      "Sales no fee promo Feb 2016": 1,
+      "SME (BNF 0,025 € + fixed fee)": 2,
+      "SME (BNF 0,025 € + % fee)": 2,
+      "Smart": 1,
+      "EV BE + Middle Class 2,5 Cent BE": 2,
+      "EV BE + Middle Class 2,5 % BE": 2,
+      "EV BE + 5 Cent Offer BE": 3,
+      "EV BE + No Fee Offer BE": 1,
+      "EV BE": 1,
+      "Middle Class 2,5 Cent BE": 2,
+      "Middle Class 2,5 % BE": 2,
+      "5 Cent Offer BE": {
+        "Bank transfer": 3,
+        "Direct debit": 3
+      },
+      "No Fee Offer BE": 1
+    },
+    "NL": {
+      "SME (BNF 0,025 € + % fee)": 2,
+      "SME (BNF 0,025 € + fixed fee)": 2,
+      "HOME 1": {
+        "Bank transfer": 1,
+        "Direct debit": 1
+      },
+      "EV NL": 1,
+      "EV NL + SME (BNF 0,025 € + % fee)": 2,
+      "EV NL + SME (BNF 0,025 € + fixed fee)": 2,
+      "EV NL + HOME 1": {
+        "Bank transfer": 1,
+        "Direct debit": 1
+      }
+    },
+    "FR": {
+      "Home Station offer (v.1)": {
+        "Bank transfer": 1,
+        "Direct debit": 1
+      },
+      "Home Station FR": {
+        "Bank transfer": 1,
+        "Direct debit": 1
+      },
+      "Sales no fee promo Feb 2016": 1
+    },
+    "LU": {
+      "Home Station offer (v.1)": {
+        "Bank transfer": 1,
+        "Direct debit": 1
+      },
+      "Home Station LU": {
+        "Bank transfer": 1,
+        "Direct debit": 1
+      },
+      "Sales no fee promo Feb 2016": 1,
+      "No Fee LU": 1
+    },
+    "PL": {
+      "Shell Standard 2019": {
+        "Bank transfer": 8,
+        "Direct debit": 8
+      },
+      "Shell Promo 2019": {
+        "Bank transfer": 1,
+        "Direct debit": 1
+      },
+      "Shell Summer 2019": {
+        "Bank transfer": 10,
+        "Direct debit": 10
+      },
+      "Shell enjoy summer 2019": {
+        "Bank transfer": 11,
+        "Direct debit": 11
+      },
+      "Shell PL Partnership": {
+        "Bank transfer": 11,
+        "Direct debit": 11
+      },
+      "Carnet Standard 2019": 1,
+      "Carnet OBD": 1,
+      "Shell Basic 2020": 13,
+      "Shell Digital PL (3 month)": 18,
+      "Shell Digital PL (6 month)" : 18,
+      "Shell No fee 2020": 14,
+      "LOTOS Biznes Standard": 15,
+      "LOTOS Biznes No fee": 12,
+      "LOTOS Biznes Classic": 16,
+      "LOTOS Biznes Special": 17,
+      "Outbound 2021 PL No fee": 19
+    },
+    "HU": {
+      "Shell Standard 2019": {
+        "Bank transfer": 4,
+        "Direct debit": 4
+      },
+      "Shell Promo 2019": {
+        "Bank transfer": 1,
+        "Direct debit": 1
+      },
+      "Shell Summer 2019": {
+        "Bank transfer": 4,
+        "Direct debit": 4
+      },
+      "Shell enjoy summer 2019": {
+        "Bank transfer": 5,
+        "Direct debit": 5
+      },
+      "Shell Basic 2020": 6,
+      "Shell Basic 2020 HU": 6,
+      "Shell No fee 2020": 7,
+      "Shell No Fee HU": 7,
+      "Shell Outbound 2020": 8
+    },
+    "CZ": {
+      "Shell Standard 2019": {
+        "Bank transfer": 6,
+        "Direct debit": 6
+      },
+      "Shell Promo 2019": {
+        "Bank transfer": 1,
+        "Direct debit": 1
+      },
+      "Shell Summer 2019": {
+        "Bank transfer": 6,
+        "Direct debit": 6
+      },
+      "Shell Basic 2020": 7,
+      "Shell Basic 2020 CZ": 7,
+      "Shell No fee 2020": 8,
+      "Shell No Fee 2020 CZ": 8
+    },
+    "SK": {
+      "Shell Standard 2019": {
+        "Bank transfer": 6,
+        "Direct debit": 6
+      },
+      "Shell Promo 2019": {
+        "Bank transfer": 1,
+        "Direct debit": 1
+      },
+      "Shell Summer 2019": {
+        "Bank transfer": 6,
+        "Direct debit": 6
+      },
+      "Shell Basic 2020": 7,
+      "Shell Basic 2020 SK": 7,
+      "Shell No fee 2020": 8,
+      "Shell No Fee 2020 SK": 8
+    }
+  },
+  "ConclusionOffer": {
+    "DE": {
+      "Inbound Typ C": "Manual Discount on Home Site (Bonus Fee)",
+      "Inbound Type C": "Manual Discount on Home Site (Bonus Fee)"
+    },
+    "AT": {
+      "Home Station offer (v.1)": "Manual Discounts (HS, Shell) + Manual postponed Card Fee, Transaction Fee and Eco fee"
+    },
+    "BE": {
+      "SME (BNF 0,025 € + fixed fee)": "Manual Account Management Fee",
+      "SME (BNF 0,025 € + % fee)": "Manual Account Management Fee"
+    },
+    "NL": {
+      "SME (BNF 0,025 € + % fee)": "Manual Account Management Fee",
+      "SME (BNF 0,025 € + fixed fee)": "Manual Account Management Fee",
+      "EV NL + SME (BNF 0,025 € + % fee)": "Manual Account Management Fee + Manual postponed EV monthly Card Fee",
+      "EV NL + SME (BNF 0,025 € + fixed fee)": "Manual Account Management Fee + Manual postponed EV monthly Card Fee",
+      "HOME 1": "Manual Discount at Home Station",
+      "EV NL": "Manual postponed EV monthly Card Fee",
+      "EV NL + HOME 1": "Manual postponed EV monthly Card Fee"
+    },
+    "FR": {
+      "Home Station offer (v.1)": "Manual Discount (+postpone) + Manual postponed Card Fee and Transaction Fee",
+      "Home Station FR": "Manual Discount (+postpone) + Manual postponed Card Fee and Transaction Fee"
+    },
+    "LU": {
+      "Home Station offer (v.1)": "Manual Discount at all Shell stations (+postpone) + Manual postponed Card Fee and Shell Transaction Fee"
+    },
+    "CZ": {
+      "Shell No fee 2020": "HS Manual Discount 12 months 1,20 after 0,80"
+    },
+    "SK": {
+      "Shell No fee 2020": "HS Manual Discount 12 months 0,031 after 0,025"
+    },
+    "PL": {
+      "LOTOS Biznes Standard": "Lotos Manual Discount Home Station",
+      "LOTOS Biznes No fee": "Lotos Manual Discount Home Station"
+    }
+  },
+  "AcquisitionChannelId": {
+    "DE": {
+      "Migrated": 3,
+      "Inbound": 10,
+      "Outbound": 19,
+      "JITB": 20,
+      "Partner Vimcar": 56,
+      "Field": 57,
+      "Partner BVK": 58,
+      "Partner IVD": 59,
+      "Partner sevDesk": 62,
+      "Partner BDS/BVMU": 63,
+      "Partner Billomat": 64,
+      "Partner FleetGo": 65,
+      "Partner ABVP": 66
+    },
+    "AT": {
+      "Migrated": 3,
+      "JITB": 21,
+      "Inbound": 22,
+      "Outbound": 23
+    },
+    "CH": {
+      "Migrated": 3,
+      "Inbound": 39,
+      "Outbound": 40,
+      "JITB": 41
+    },
+    "BE": {
+      "Migrated": 3,
+      "Inbound": 24,
+      "JITB": 25,
+      "Outbound": 26
+    },
+    "NL": {
+      "Migrated": 3,
+      "Inbound": 27,
+      "JITB": 28,
+      "Outbound": 29
+    },
+    "FR": {
+      "Migrated": 3,
+      "Inbound": 30,
+      "JITB": 31
+    },
+    "LU": {
+      "Migrated": 3,
+      "Inbound": 42,
+      "JITB": 44
+    },
+    "PL": {
+      "Migrated": 3,
+      "Inbound": 36,
+      "Outbound": 37,
+      "JITB": 38,
+      "Partner Fleetmatics": 52,
+      "Partner": 67
+    },
+    "HU": {
+      "Migrated": 3,
+      "Inbound": 33,
+      "Outbound": 34,
+      "JITB": 35,
+      "Partner": 68
+    },
+    "CZ": {
+      "Migrated": 3,
+      "Inbound": 45,
+      "JITB": 49,
+      "Partner": 69,
+      "Outbound": 47
+    },
+    "SK": {
+      "Migrated": 3,
+      "Inbound": 46,
+      "Outbound": 48,
+      "JITB": 50,
+      "Partner": 70
+    }
+  },
+  "SecurityTypeId": {
+    "Deposit": 4,
+    "Bank guarantee": 1,
+    "Personal guarantee": 3,
+    "Parent/cross corporate guarantee": 2,
+    "Promissory note/ Weksel": 5
+  },
+  "ServiceId": {
+    "VAT Recovery": 3
+  },
+  "NumberOfCardsSelfService": {
+    "DE": 30,
+    "AT": 30,
+    "CH": 30,
+    "BE": 30,
+    "NL": 30,
+    "FR": 30,
+    "LU": 30,
+    "PL": 30,
+    "HU": 30,
+    "CZ": 30,
+    "SK": 30
+  },
+  "PhoneCodes": {
+    "DE": "00049",
+    "AT": "00043",
+    "CH": "00041",
+    "BE": "00032",
+    "NL": "00031",
+    "FR": "00033",
+    "LU": "000352",
+    "PL": "00048",
+    "HU": "00036",
+    "CZ": "000420",
+    "SK": "000421"
+  },
+  "DirectDebitMandateTypeID": {
+    "Core": 1,
+    "B2B": 2
+  },
+  "SpecialCharacters": {
+    "ä": "A",
+    "ö": "O",
+    "ü": "U",
+    "ß": "SS",
+    "à": "A",
+    "â": "A",
+    "æ": "AE",
+    "ç": "C",
+    "è": "E",
+    "é": "E",
+    "ê": "E",
+    "ë": "E",
+    "í": "I",
+    "î": "I",
+    "ï": "I",
+    "ñ": "N",
+    "ò": "O",
+    "ó": "O",
+    "ô": "O",
+    "œ": "OE",
+    "ù": "U",
+    "ú": "U",
+    "û": "U",
+    "ý": "Y",
+    "ÿ": "Y",
+    "ů": "U",
+    "ě": "E",
+    "ž": "Z",
+    "š": "S",
+    "č": "C",
+    "ř": "R",
+    "ď": "D",
+    "ť": "T",
+    "ň": "N",
+    "á": "A",
+    "ű": "U",
+    "ő": "O",
+    "ì": "I",
+    "ą": "A",
+    "ę": "E",
+    "ż": "Z",
+    "ź": "Z",
+    "ś": "S",
+    "ń": "N",
+    "ł": "L",
+    "ć": "C",
+    "ĺ": "L",
+    "ľ": "L",
+    "ŕ": "R",
+    "Ä": "A",
+    "Ö": "O",
+    "Ü": "U",
+    "À": "A",
+    "Â": "A",
+    "Æ": "AE",
+    "Ç": "C",
+    "È": "E",
+    "É": "E",
+    "Ê": "E",
+    "Ë": "E",
+    "Ì": "I",
+    "Í": "I",
+    "Î": "I",
+    "Ï": "I",
+    "Ñ": "N",
+    "Ò": "O",
+    "Ó": "O",
+    "Ô": "O",
+    "Œ": "OE",
+    "Ù": "U",
+    "Ú": "U",
+    "Û": "U",
+    "Ý": "Y",
+    "Ÿ": "Y",
+    "Ů": "U",
+    "Ě": "E",
+    "Ž": "Z",
+    "Š": "S",
+    "Č": "C",
+    "Ř": "R",
+    "Ď": "D",
+    "Ť": "T",
+    "Ň": "N",
+    "Á": "A",
+    "Ű": "U",
+    "Ő": "O",
+    "Ą": "A",
+    "Ę": "E",
+    "Ż": "Z",
+    "Ź": "Z",
+    "Ś": "S",
+    "Ń": "N",
+    "Ł": "L",
+    "Ć": "C",
+    "Ĺ": "L",
+    "Ľ": "L",
+    "Ŕ": "R",
+    "Ã": "A",
+    "ã": "A",
+    "Ă": "A",
+    "ă": "A",
+    "B": "B",
+    "b": "B",
+    "C": "C",
+    "c": "C",
+    "Ẽ": "E",
+    "ẽ": "E",
+    "Ĩ": "I",
+    "ĩ": "I",
+    "J": "J",
+    "j": "J",
+    "L": "L",
+    "l": "L",
+    "M": "M",
+    "m": "M",
+    "Õ": "O",
+    "õ": "O",
+    "T": "T",
+    "t": "T",
+    "Ũ": "U",
+    "ũ": "U",
+    "Ỹ": "Y",
+    "ỹ": "Y",
+    "Z": "Z",
+    "z": "Z",
+    "Ş": "S",
+    "ş": "S",
+    "Ǎ": "A",
+    "ǎ": "A",
+    "A": "A",
+    "a": "A"
+  },
+  "AddressTypeId": [
+    2,
+    10,
+    13
+  ],
+  "CEEPaymentPolicy": [
+    "PL",
+    "HU",
+    "CH"
+  ]
+}

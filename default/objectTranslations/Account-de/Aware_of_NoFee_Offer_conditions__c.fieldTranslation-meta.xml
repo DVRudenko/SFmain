@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Retailer is aware of  NoFee offer that he should promote among his customers --></help>
+    <label>Informiert über NoFee Konditionen</label>
+    <name>Aware_of_NoFee_Offer_conditions__c</name>
+</CustomFieldTranslation>

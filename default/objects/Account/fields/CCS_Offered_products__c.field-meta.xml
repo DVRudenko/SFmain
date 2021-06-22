@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Offered_products__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Offered products</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>karty</fullName>
+                <default>false</default>
+                <label>karty</label>
+            </value>
+            <value>
+                <fullName>monitoring</fullName>
+                <default>false</default>
+                <label>monitoring</label>
+            </value>
+            <value>
+                <fullName>aukce</fullName>
+                <default>false</default>
+                <label>aukce</label>
+            </value>
+            <value>
+                <fullName>bonus</fullName>
+                <default>false</default>
+                <label>bonus</label>
+            </value>
+            <value>
+                <fullName>trucks</fullName>
+                <default>false</default>
+                <label>trucks</label>
+            </value>
+            <value>
+                <fullName>mýto</fullName>
+                <default>false</default>
+                <label>mýto</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

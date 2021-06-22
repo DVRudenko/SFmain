@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Auftragsvolumen__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(RecordType.DeveloperName = 'AllStar', Requested_monthly_Company_Credit_Spend__c,
+Total_consumption_l_month__c * CASE(Account.BillingCountry,
+"Germany", 1.25,
+"Austria", 1.15,
+"Luxembourg", 1.05,
+"Slovakia", 1.2,
+"Netherlands", 1.45,
+"Belgium-FR", 1.35,
+"Belgium-NL", 1.35,
+"France", 1.35,
+"Czech Republic", 29,
+"Poland", 5,
+"Hungary", 400,
+"Switzerland-DE", 1.6,
+"Switzerland-FR", 1.6,
+"Switzerland-IT", 1.6,
+1.4) +
+Non_fuel_exposure__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Auftragsvolumen</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

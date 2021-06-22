@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Karty CCS Bonus. --></help>
+    <label><!-- Objednávka CCS Bonus --></label>
+    <name>Objednavka_CCS_Bonus__c</name>
+    <relationshipLabel><!-- Karta CCS Bonus --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,185 @@
+<apex:page controller="AccountKamReportCtrl" action="{! init }">
+	<apex:form >
+        <style>
+            .homeTab .div1 .tertiaryPalette {
+                background: #000000;
+            }
+            .homeTab .div2 .tertiaryPalette {
+                background: #000000;
+            }
+            .homeTab .div3 .tertiaryPalette {
+                background: #000000;
+            }
+        </style>
+        <apex:pageMessages />     
+        
+        <h1 style="margin: 15px 0; font-size: 17px; display: block;">Account without meeting tasks ({! startDatePeriodString } - {! endDatePeriodString })</h1>
+        
+        <apex:pageBlock title="Report by: {! currentUser.Name} ({! quantityAllAccounts })" id="block">
+            <apex:outputPanel id="div1" styleClass="div1">
+                <apex:pageBlockSection title="Germany ({! quantityAccountsGermany })" collapsible="true" columns="1" id="section1">
+                    <apex:pageBlockTable value="{! finalAccountsGermanyList }" var="accGermanyList" rows="1000">
+                        <apex:column >
+							<apex:facet name="header">
+						    	<apex:outputText value="Account Name"/>
+							</apex:facet>
+							<apex:outputLink value="/{! accGermanyList.Id }" target="_blank">{! accGermanyList.Name }</apex:outputLink>
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.OwnerId.Label }"/>
+							</apex:facet>
+							<apex:outputLink value="/{! accGermanyList.OwnerId }" target="_blank">{! accGermanyList.Owner.Name }</apex:outputLink>
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.BillingCountry.Label }"/>
+							</apex:facet>
+							{! accGermanyList.BillingCountry }
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.CreatedDate.Label }"/>
+							</apex:facet>
+							{! accGermanyList.CreatedDate }
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.OBN__c.Label }"/>
+							</apex:facet>
+							{! accGermanyList.OBN__c }
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.Last_contact_date__c.Label }"/>
+							</apex:facet>
+							{! accGermanyList.Last_contact_date__c }
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.Last_contact_results__c.Label }"/>
+							</apex:facet>
+							{! accGermanyList.Last_contact_results__c }
+						</apex:column>
+                    </apex:pageBlockTable>    
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            
+            <apex:outputPanel id="div2" styleClass="div2">
+                <apex:pageBlockSection title="Austria ({! quantityAccountsAustria })" collapsible="true" columns="1" id="section2">
+                    <apex:pageBlockTable value="{! finalAccountsAustriaList }" var="accAustriaList" rows="1000">
+                        <apex:column >
+							<apex:facet name="header">
+						    	<apex:outputText value="Account Name"/>
+							</apex:facet>
+							<apex:outputLink value="/{! accAustriaList.Id }" target="_blank">{! accAustriaList.Name }</apex:outputLink>
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.OwnerId.Label }"/>
+							</apex:facet>
+							<apex:outputLink value="/{! accAustriaList.OwnerId }" target="_blank">{! accAustriaList.Owner.Name }</apex:outputLink>
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.BillingCountry.Label }"/>
+							</apex:facet>
+							{! accAustriaList.BillingCountry }
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.CreatedDate.Label }"/>
+							</apex:facet>
+							{! accAustriaList.CreatedDate }
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.OBN__c.Label }"/>
+							</apex:facet>
+							{! accAustriaList.OBN__c }
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.Last_contact_date__c.Label }"/>
+							</apex:facet>
+							{! accAustriaList.Last_contact_date__c }
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.Last_contact_results__c.Label }"/>
+							</apex:facet>
+							{! accAustriaList.Last_contact_results__c }
+						</apex:column>
+                    </apex:pageBlockTable>    
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel id="div3" styleClass="div3">
+                <apex:pageBlockSection title="Switzerland-DE ({! quantityAccountsSwitzerlandDE })" collapsible="true" columns="1" id="section3">
+                    <apex:pageBlockTable value="{! finalAccountsSwitzerlandDEList }" var="accSwitzerlandDEList" rows="1000">
+                        <apex:column >
+							<apex:facet name="header">
+						    	<apex:outputText value="Account Name"/>
+							</apex:facet>
+							<apex:outputLink value="/{! accSwitzerlandDEList.Id }" target="_blank">{! accSwitzerlandDEList.Name }</apex:outputLink>
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.OwnerId.Label }"/>
+							</apex:facet>
+							<apex:outputLink value="/{! accSwitzerlandDEList.OwnerId }" target="_blank">{! accSwitzerlandDEList.Owner.Name }</apex:outputLink>
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.BillingCountry.Label }"/>
+							</apex:facet>
+							{! accSwitzerlandDEList.BillingCountry }
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.CreatedDate.Label }"/>
+							</apex:facet>
+							{! accSwitzerlandDEList.CreatedDate }
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.OBN__c.Label }"/>
+							</apex:facet>
+							{! accSwitzerlandDEList.OBN__c }
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.Last_contact_date__c.Label }"/>
+							</apex:facet>
+							{! accSwitzerlandDEList.Last_contact_date__c }
+						</apex:column>
+
+						<apex:column >
+							<apex:facet name="header">
+						    	<apex:outputLabel value="{!$ObjectType.Account.fields.Last_contact_results__c.Label }"/>
+							</apex:facet>
+							{! accSwitzerlandDEList.Last_contact_results__c }
+						</apex:column>
+                    </apex:pageBlockTable>    
+                </apex:pageBlockSection>
+            </apex:outputPanel>        
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

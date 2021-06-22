@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Leady_1_3_pokus</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.LAST_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.CITY</columns>
+    <columns>LEAD.ZIP</columns>
+    <columns>CCS_First_Contact_Inbound_Outbound__c</columns>
+    <columns>CCS_Date_of_next_call__c</columns>
+    <columns>LEAD.LAST_UPDATE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.EMAIL</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>contains</operation>
+        <value>pokus</value>
+    </filters>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.CCS_Sales_process</value>
+    </filters>
+    <label>CCS - Leady 1.-3.pokus</label>
+    <language>cs</language>
+    <sharedTo>
+        <role>CCS_Administrator</role>
+        <role>CCS_CZ_Contact_Center</role>
+        <role>CCS_CZ_KAM</role>
+        <role>CCS_CZ_KAM_Team_Lead</role>
+        <role>CCS_CZ_LAM</role>
+        <role>CCS_CZ_SME</role>
+        <role>CCS_Contact_Center_Team_Lead</role>
+        <role>CCS_SK_Contact_Center</role>
+        <role>CCS_SK_SME</role>
+        <role>CCS_SME_Team_Lead</role>
+    </sharedTo>
+</ListView>

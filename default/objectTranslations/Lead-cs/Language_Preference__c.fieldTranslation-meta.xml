@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Bitte wählen Sie die Sprachpräferenz des Ansprechpartners aus. --></help>
+    <label>Preferovaný jazyk</label>
+    <name>Language_Preference__c</name>
+    <picklistValues>
+        <masterLabel>Czech</masterLabel>
+        <translation>Čeština</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dutch</masterLabel>
+        <translation>Holandština</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>English</masterLabel>
+        <translation>Angličtina</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>French</masterLabel>
+        <translation>Francouzština</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>German</masterLabel>
+        <translation>Němčina</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hungarian</masterLabel>
+        <translation>Maďarština</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Italian</masterLabel>
+        <translation>Italština</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Polish</masterLabel>
+        <translation>Polština</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slovak</masterLabel>
+        <translation>Slovenština</translation>
+    </picklistValues>
+</CustomFieldTranslation>

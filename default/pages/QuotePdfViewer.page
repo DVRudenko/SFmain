@@ -1,0 +1,104 @@
+<apex:page id="QuotePdfViewer" showHeader="false"
+                                standardStylesheets="false"
+                                sidebar="false"
+                                docType="html-5.0"
+                                applyBodyTag="false"
+                                applyHtmlTag="false"
+                                controller="QuotePdfViewerController"
+                                action="{! init }">
+    <apex:form>
+        <html lang="en">
+            <head>
+                <style>
+                    body{
+                        font-family: 'Arial Unicode MS';
+                        background-color: #fafafa;
+                        background: url(/resource/ete_images/bg.jpg) no-repeat;
+                        background-size: 100%;
+                        margin: 0;
+                        padding: 1rem;
+                    }
+
+                    .app{
+                        width: 100%;
+                        display: flex;
+                    }
+
+                    .app__navigator{
+                        width: calc(100% - 1000px);
+                        flex: 1 0 calc(100% - 1000px);
+                        text-align: center;
+                    }
+
+                    .app__pdf{
+                        width: 1000px;
+                        flex: 1 0 1000px;
+                    }
+
+                    .app__pdf iframe{
+                        min-height: calc(100vh - 2.5rem);
+                    }
+
+                    .app__button{
+                        display: inline-block;
+                        background-color: #80D3DD;
+                        cursor: pointer;
+                        border-radius: 50px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        color: #212E35;
+                        outline: none;
+                        user-select: none;
+                        transition: background-color 0.3s, color 0.3s;
+                        font-size: 14px;
+                        line-height: 14px;
+                        margin: .5rem .25rem;
+                        padding: 8px 12px;
+                        appearance: none;
+                        border: 0;
+                        min-width: 110px;
+                        font-weight: 600;
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                    }
+
+                    .app__button:hover{
+                        background-color: #A5DDE4;
+                    }
+
+                    .app__title{
+                        font-size: 20px;
+                        color: #101010;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+
+                    .container{
+                        max-width: 1280px;
+                        margin: 0 auto;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="app">
+                        <div class="app__navigator">
+                            <h3 class="app__title">Quote PDF</h3>
+                            <apex:commandButton styleClass="app__button" value="Cancel" action="{! doCancel }"/>
+                            <apex:commandButton styleClass="app__button" value="Save PDF" action="{! savePDF }"/>
+                        </div>
+                        <div class="app__pdf">
+                            <apex:iframe width="100%" src="/apex/CreateQuotePDF?id={! qoute.Id }" />
+                        </div>
+                    </div>
+                </div>
+
+               
+
+                
+            </body>
+        </html>
+    </apex:form>
+</apex:page>

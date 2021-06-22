@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Prize</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Prizes</value>
+    </caseValues>
+    <layouts>
+        <layout>Prize Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel><!-- Prise Name --></nameFieldLabel>
+    <recordTypes>
+        <label><!-- Germany --></label>
+        <name>Germany</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Russian --></label>
+        <name>Russian</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Russian GPC --></label>
+        <name>Russian_GPC</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

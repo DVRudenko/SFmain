@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Attrition</fullName>
+    <columns>CCS_Company_ID__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <columns>CCS_Attrition_Flag__c</columns>
+    <columns>CCS_Monitoring__c</columns>
+    <columns>Gesamtanzahl_Fahrzeuge__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>CCS_Lead_Source__c</columns>
+    <columns>CCS_US_instance_owner_name__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>CCS_Attrition_Flag__c</field>
+        <operation>contains</operation>
+        <value>neznámo</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT_SOURCE</field>
+        <operation>notContain</operation>
+        <value>waftcom,qb,ALTEVIDA,CRIBIS</value>
+    </filters>
+    <filters>
+        <field>CCS_Lead_Source__c</field>
+        <operation>notContain</operation>
+        <value>waftcom,qb,ALTEVIDA,CRIBIS</value>
+    </filters>
+    <label>CCS Attrition</label>
+    <language>cs</language>
+    <sharedTo>
+        <roleAndSubordinates>CCS_Administrator</roleAndSubordinates>
+    </sharedTo>
+</ListView>

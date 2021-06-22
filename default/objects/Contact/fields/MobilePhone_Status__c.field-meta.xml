@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MobilePhone_Status__c</fullName>
+    <description>Status for the "MobilePhone" field</description>
+    <externalId>false</externalId>
+    <label>Mobile Phone Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>PhoneStatus</valueSetName>
+    </valueSet>
+</CustomField>

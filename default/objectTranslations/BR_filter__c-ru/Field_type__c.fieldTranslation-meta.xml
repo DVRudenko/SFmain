@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Тип поля</label>
+    <name>Field_type__c</name>
+    <picklistValues>
+        <masterLabel>Checkbox</masterLabel>
+        <translation>Чекбокс</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Currency</masterLabel>
+        <translation>Валюта</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Date</masterLabel>
+        <translation>Дата</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Date/Time</masterLabel>
+        <translation>Дата и время</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email</masterLabel>
+        <translation>Электронная почта</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Encrypted text</masterLabel>
+        <translation>Зашифрованный текс</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multi picklist</masterLabel>
+        <translation>Выпадающий список (множественный выбор)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Number</masterLabel>
+        <translation>Число</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Percent</masterLabel>
+        <translation>Процент</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Phone</masterLabel>
+        <translation>Телефон</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Picklist</masterLabel>
+        <translation>Выпадающий список</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Record ID</masterLabel>
+        <translation>Идентификатор записи</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reference</masterLabel>
+        <translation>Ссылка на объект</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Text</masterLabel>
+        <translation>Текст</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Text area</masterLabel>
+        <translation>Текст (с переносом строки)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Time</masterLabel>
+        <translation>Время</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>URL</masterLabel>
+        <translation>Веб ссылка</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Предварительно одобрен кредит на основе данных 2014 года. Требуется подтверждение по отчетности 2015 года --></help>
+    <label>Пре-скоринг</label>
+    <name>Pre_scoring__c</name>
+</CustomFieldTranslation>

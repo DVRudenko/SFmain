@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Opp_Start_Status_to_Ready_for_GFN</fullName>
+    <active>true</active>
+    <description>Only users with Card Processing profile can change Opportunity Starts Status to "0.9 Ready for GFN"</description>
+    <errorConditionFormula>AND($Profile.Name != "System Administrator",
+        $Profile.Name != 'API Only',
+$Profile.Name != "Systemadministrator",
+$Profile.Name != "CardProcessing",
+$Profile.Name != "Service Manager",
+$Profile.Name != "Service Agent",
+$Profile.Name != "Retention Manager",
+$Profile.Name != "Retention Agent",
+$Profile.Name != "E2E Profile",
+OR(RecordType.Name = 'Euroshell',
+RecordType.Name = 'Euroshell Starts'),
+(ISCHANGED(Starts_Status__c) &amp;&amp;
+ISPICKVAL(Starts_Status__c, "0.9 Ready for GFN")))</errorConditionFormula>
+    <errorMessage>You don't have the ability to change Opportunity Starts: Status to "0.9 Ready for GFN"</errorMessage>
+</ValidationRule>

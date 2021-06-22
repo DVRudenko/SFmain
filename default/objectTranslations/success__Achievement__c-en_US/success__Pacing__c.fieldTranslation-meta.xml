@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Pacing --></label>
+    <name>success__Pacing__c</name>
+    <picklistValues>
+        <masterLabel>Back Loaded</masterLabel>
+        <translation><!-- Back Loaded --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Constant</masterLabel>
+        <translation><!-- Constant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Front Loaded</masterLabel>
+        <translation><!-- Front Loaded --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Late Push</masterLabel>
+        <translation><!-- Late Push --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

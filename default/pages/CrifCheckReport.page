@@ -1,0 +1,4 @@
+<apex:page controller="CrifCheckReportController" action="{!actionReport}">
+    <!--{!fields}-->
+    <script>window.location = '/{!account}';</script>
+</apex:page>

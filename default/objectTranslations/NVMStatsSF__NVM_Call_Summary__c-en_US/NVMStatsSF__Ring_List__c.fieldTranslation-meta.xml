@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Delimited list of Agents and Ring times for each from which we derive number of agents tried and last ring time. --></help>
+    <label><!-- Ring List --></label>
+    <name>NVMStatsSF__Ring_List__c</name>
+</CustomFieldTranslation>

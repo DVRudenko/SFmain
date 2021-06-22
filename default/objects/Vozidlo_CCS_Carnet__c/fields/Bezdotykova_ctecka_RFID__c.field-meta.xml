@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bezdotykova_ctecka_RFID__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Bezdotyková čtečka RFID.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Bezdotyková čtečka RFID.</inlineHelpText>
+    <label>Bezdotyková čtečka RFID</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

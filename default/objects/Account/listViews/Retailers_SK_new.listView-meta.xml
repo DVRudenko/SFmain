@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retailers_SK_new</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Retailzuordnung_Land__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>Email_retailer__c</columns>
+    <columns>Passwort__c</columns>
+    <columns>Cluster_password__c</columns>
+    <columns>Cluster_ID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Retailer</value>
+    </filters>
+    <filters>
+        <field>Retailzuordnung_Land__c</field>
+        <operation>equals</operation>
+        <value>Slovakia</value>
+    </filters>
+    <label>Retailers SK</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>Salesteam_Inbound</role>
+        <role>Salesteam_Inbound_2</role>
+        <roleAndSubordinates>CCS_CZ_Telesales</roleAndSubordinates>
+        <roleAndSubordinates>CCS_Telesales_Team_Lead</roleAndSubordinates>
+        <roleAndSubordinates>Teamleiter</roleAndSubordinates>
+    </sharedTo>
+</ListView>

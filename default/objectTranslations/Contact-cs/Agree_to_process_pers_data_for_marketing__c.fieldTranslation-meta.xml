@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Customer agrees that his personal information can be processed for marketing purposes --></help>
+    <label>Souhlasím s nabídkami produktů a služeb</label>
+    <name>Agree_to_process_pers_data_for_marketing__c</name>
+</CustomFieldTranslation>

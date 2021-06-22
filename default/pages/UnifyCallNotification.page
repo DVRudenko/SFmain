@@ -1,0 +1,16 @@
+<apex:page showHeader="false" title="Incoming Call">
+    <apex:slds />
+        <apex:pageBlock mode="edit" tabStyle="Case">
+            <apex:pageBlockSection >
+                <div style="text-align: justify">
+                    <apex:outputText style="font-weight:800; color:red; font-size:24px" value="***** You have incoming call *****"/>
+                </div>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection >
+                <div style="text-align: justify">
+                    <apex:outputText style="font-weight:800; color:red; font-size:28px" value="Please check Salesforce tab"/>
+                </div>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+
+</apex:page>

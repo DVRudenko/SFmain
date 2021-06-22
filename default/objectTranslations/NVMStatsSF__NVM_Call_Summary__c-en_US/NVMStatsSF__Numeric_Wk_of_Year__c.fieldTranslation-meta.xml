@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Simple numeric week of the year - useful for grouping in reports and charts --></help>
+    <label><!-- Numeric Wk of Year --></label>
+    <name>NVMStatsSF__Numeric_Wk_of_Year__c</name>
+</CustomFieldTranslation>

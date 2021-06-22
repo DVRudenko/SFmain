@@ -1,0 +1,6 @@
+<aura:event type="COMPONENT" description="Popup open event">
+    <aura:attribute name="isResendInvoicePopupOpened" type="Boolean"/>
+    <aura:attribute name="docNumberList" type="List"/>
+    <aura:attribute name="cards" type="List"/>
+    <aura:attribute name="popupType" type="String"/>
+</aura:event>

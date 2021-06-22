@@ -1,0 +1,195 @@
+<apex:page docType="html-5.0" id="mainPage" controller="SiteDuplicatesReportRuCtrl">
+    <apex:includeScript value="{!$Resource.download_files_js }"/>
+
+    <script>
+        function shapingValue() {
+            var dataLeadToLeadTable = document.getElementById("mainPage:leadToLeadTable").outerHTML;
+            var dataLeadToOppTable = document.getElementById("mainPage:leadToOppTable").outerHTML;
+            var body = "<html><head><meta charset=\"utf-8\"></head><body>" +  dataLeadToLeadTable + "<br></br>" + dataLeadToOppTable + "</body></html>";
+            return body;
+        }
+
+         function saveCurrentPage() {
+            var body = shapingValue();
+            download(body, 'duplicates.xls', 'application/vnd.ms-excel');
+         }
+
+
+    </script>
+    <style>
+        .dataRow {
+            height: 55px;
+        }
+
+    </style>
+
+    <apex:form >
+        <apex:pageMessages id="msgInfo"></apex:pageMessages>
+        <apex:outputPanel layout="block" id="filterbar">
+            <table class="detailList" border="0" cellpadding="1" cellspacing="1">
+                <tr>
+                    <td class="labelCol">Select Created Date</td>
+                    <td>
+                        <apex:outputPanel id="dateFrom">
+                            <apex:input label="from" type="date" value="{! createdDateFrom }"/>
+                        </apex:outputPanel>
+                    </td>
+                    <td>
+                        <apex:outputPanel id="dateTo">
+                            <apex:input label="to" type="date" value="{! createdDateTo }"/>
+                        </apex:outputPanel>
+                    </td>
+                </tr>
+                <tr><p></p></tr>
+                <tr>
+                    <td>
+                        <apex:commandButton action="{! applyFilter }"
+                                            reRender="leadToLeadTable1, leadToLeadTable2, leadToOppTable1, leadToOppTable2"
+                                            status="FilterStatus"
+                                            value="Применить фильтры" style="size : 20"/>
+                        <apex:actionStatus id="FilterStatus">
+                            <apex:facet name="start"><img src="/img/loading.gif" alt=""/></apex:facet>
+                            <apex:facet name="stop"></apex:facet>
+                        </apex:actionStatus>
+                    </td>
+                    <td></td>
+                    <td>
+                        <apex:commandButton value="Выгрузить в Excel" onClick="saveCurrentPage(); return false;"/>
+                    </td>
+                </tr>
+            </table>
+        </apex:outputPanel>
+    </apex:form>
+    <apex:pageBlock id="leadToLeadTable">
+        <table class="detailList" border="0" cellpadding="1" cellspacing="1">
+            <td>
+                <apex:pageBlockTable id="leadToLeadTable1" value="{! keyLeadToLeadList }" var="bundle1">
+                    <apex:facet name="header">Дубликаты(Интересы)</apex:facet>
+                    <apex:column value="{! bundle1.Id }">
+                        <apex:facet name="header">Код интереса</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Дата создания" value="{! bundle1.CreatedDate }">
+                        <apex:facet name="header">Дата создания</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Источник Интереса" value="{! bundle1.Source_of_Lead__c }">
+                        <apex:facet name="header">Источник Интереса</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Имя роли ответственного" value="{! bundle1.Owner.UserRole.Name }">
+                        <apex:facet name="header">Имя роли ответственного</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Ответственный за интерес" value="{! bundle1.Owner.Name }">
+                        <apex:facet name="header">Ответственный за интерес</apex:facet>
+                    </apex:column>
+                    <apex:column value="{! bundle1.Lead_Source_Type__c }"></apex:column>
+                    <apex:column headerValue="Статус интереса" value="{! bundle1.Status }">
+                        <apex:facet name="header">Статус интереса</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Причина дисквалификации" value="{! bundle1.Lead_Status_Specific__c }">
+                        <apex:facet name="header">Причина дисквалификации</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Дней в работе" value="{! bundle1.Duration_work__c }">
+                        <apex:facet name="header">Дней в работе</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Код оригинальной записи" value="{! bundle1.Master_Record_ID__c }">
+                        <apex:facet name="header">Код оригинальной записи</apex:facet>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </td>
+            <td>
+                <apex:pageBlockTable id="leadToLeadTable2" value="{! keyLeadToLeadList }" var="bundle2">
+                    <apex:facet name="header">Оригиналы(Интересы)</apex:facet>
+                    <apex:column value="{! bundleLeadToLeadMap[bundle2].Id }">
+                        <apex:facet name="header">Код интереса</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Дата создания" value="{! bundleLeadToLeadMap[bundle2].CreatedDate }">
+                        <apex:facet name="header">Дата создания</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Источник Интереса"
+                                 value="{! bundleLeadToLeadMap[bundle2].Source_of_Lead__c }">
+                        <apex:facet name="header">Источник Интереса</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Имя роли ответственного"
+                                 value="{! bundleLeadToLeadMap[bundle2].Owner.UserRole.Name }">
+                        <apex:facet name="header">Имя роли ответственного</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Ответственный за интерес"
+                                 value="{! bundleLeadToLeadMap[bundle2].Owner.Name }">
+                        <apex:facet name="header">Ответственный за интерес</apex:facet>
+                    </apex:column>
+                    <apex:column value="{! bundle2.Lead_Source_Type__c }"></apex:column>
+                    <apex:column headerValue="Статус интереса" value="{! bundleLeadToLeadMap[bundle2].Status }">
+                        <apex:facet name="header">Статус интереса</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Причина дисквалификации"
+                                 value="{! bundleLeadToLeadMap[bundle2].Lead_Status_Specific__c }">
+                        <apex:facet name="header">Причина дисквалификации</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Дней в работе" value="{! bundleLeadToLeadMap[bundle2].Duration_work__c }">
+                        <apex:facet name="header">Дней в работе</apex:facet>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </td>
+        </table>
+    </apex:pageBlock>
+    <apex:pageBlock id="leadToOppTable">
+        <table class="detailList" border="0" cellpadding="1" cellspacing="1">
+            <td>
+                <apex:pageBlockTable id="leadToOppTable1" value="{! keyLeadToOppList }" var="bundle3">
+                    <apex:facet name="header">Дубликаты(Интересы)</apex:facet>
+                    <apex:column value="{! bundle3.Id }">
+                        <apex:facet name="header">Код интереса</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Дата создания" value="{! bundle3.CreatedDate }">
+                        <apex:facet name="header">Дата создания</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Источник Интереса" value="{! bundle3.Source_of_Lead__c }">
+                        <apex:facet name="header">Источник Интереса</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Имя роли ответственного" value="{! bundle3.Owner.UserRole.Name }">
+                        <apex:facet name="header">Имя роли ответственного</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Ответственный за интерес" value="{! bundle3.Owner.Name }">
+                        <apex:facet name="header">Ответственный за интерес</apex:facet>
+                    </apex:column>
+                    <apex:column value="{! bundle3.Lead_Source_Type__c }"></apex:column>
+                    <apex:column headerValue="Статус интереса" value="{! bundle3.Status }">
+                        <apex:facet name="header">Статус интереса</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Причина дисквалификации" value="{! bundle3.Lead_Status_Specific__c }">
+                        <apex:facet name="header">Причина дисквалификации</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Дней в работе" value="{! bundle3.Duration_work__c }">
+                        <apex:facet name="header">Дней в работе</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Код оригинальной записи" value="{! bundle3.Master_Record_ID__c }">
+                        <apex:facet name="header">Код оригинальной записи</apex:facet>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </td>
+            <td>
+                <apex:pageBlockTable id="leadToOppTable2" value="{! keyLeadToOppList }" var="bundle4">
+                    <apex:facet name="header">Оригиналы(Возможности)</apex:facet>
+                    <apex:column value="{! bundleLeadToOpportunityMap[bundle4].Id }">
+                        <apex:facet name="header">Код возможности</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Дата создания"
+                                 value="{! bundleLeadToOpportunityMap[bundle4].CreatedDate }">
+                        <apex:facet name="header">Дата создания</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Источник Интереса"
+                                 value="{! bundleLeadToOpportunityMap[bundle4].Source_of_Lead_o__c }">
+                        <apex:facet name="header">Источник Возможности</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Имя роли ответственного"
+                                 value="{! bundleLeadToOpportunityMap[bundle4].Owner.UserRole.Name }">
+                        <apex:facet name="header">Имя роли ответственного</apex:facet>
+                    </apex:column>
+                    <apex:column headerValue="Ответственный за интерес"
+                                 value="{! bundleLeadToOpportunityMap[bundle4].Owner.Name }">
+                        <apex:facet name="header">Ответственный за возможность</apex:facet>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </td>
+        </table>
+    </apex:pageBlock>
+</apex:page>

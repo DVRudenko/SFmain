@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- For BackOffice to update the GFN number on the Opportunity and the Account will automatically be updated. --></help>
+    <label>Starts: GFN Nr.</label>
+    <name>GFN_number_for_starts__c</name>
+</CustomFieldTranslation>

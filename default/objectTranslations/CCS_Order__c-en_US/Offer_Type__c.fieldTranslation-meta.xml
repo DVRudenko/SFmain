@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Offer Type --></label>
+    <name>Offer_Type__c</name>
+    <picklistValues>
+        <masterLabel>Limit+ Mini</masterLabel>
+        <translation><!-- Limit+ Mini --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

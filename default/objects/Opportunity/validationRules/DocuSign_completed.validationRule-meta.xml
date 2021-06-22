@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DocuSign_completed</fullName>
+    <active>true</active>
+    <description>You can move Opportunity to Closed Won only on "Completed" DocuSign Status.</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = "Carnet",
+$Profile.Name != "System Administrator",
+$Profile.Name != 'API Only',
+$Profile.Name != "CCS API System Admin",
+$Profile.Name != "CCS Administrator",
+ISPICKVAL(StageName, 'Closed Won'),
+ISPICKVAL(Type, 'New GFN'),
+NOT(DocuSign_Status__c = 'Completed')
+)</errorConditionFormula>
+    <errorMessage>You need to send DocuSign documents! (DocuSign Status must be Completed. If Contract scan was uploaded manually, ask Admin to update the DocuSign Status field.)</errorMessage>
+</ValidationRule>

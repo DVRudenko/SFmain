@@ -1,0 +1,42 @@
+<style>
+    .how-to-pay {
+        font-size: 11px;
+    }
+
+    .how-to-pay__table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .how-to-pay__table tr {
+        margin-top: 5px;
+    }
+
+    .how-to-pay__table tr td {
+        width: 50%;
+        padding: 4px 0 0;
+        border-bottom: 1px solid rgb(196, 196, 196);
+    }
+</style>
+
+<div class="how-to-pay">
+    <p class="doc-header">Kauci je možné převést na následující číslo účtu společnosti FLEETCOR Czech Republic s.r.o.:</p>
+    <table class="how-to-pay__table">
+        <tr>
+            <td>Částka k úhradě:</td>
+            <td>{!securityAmountToPay} Kč</td>
+        </tr>
+        <tr>
+            <td>Majitel účtu:</td>
+            <td>FLEETCOR Czech Republic s.r.o.</td>
+        </tr>
+        <tr>
+            <td>Číslo účtu:</td>
+            <td>2553010400/2600</td>
+        </tr>
+        <tr>
+            <td>Účel platby:</td>
+            <td>uveďte IČ společnosti</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salesforce Consulting</fullName>
+    <description>Consulting Support Process (INTERCODEC).</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>BACKLOG</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>CANCELLED</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>DONE</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>IN PROGRESS</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>TO DO</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>WAITING ON</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

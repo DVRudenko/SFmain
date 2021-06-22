@@ -1,0 +1,26 @@
+<apex:page docType="html-5.0"
+           sideBar="false"
+           showHeader="false"
+           standardStylesheets="false"
+           controller="OpportunityExtension"
+           cache="false">
+
+    <style>
+        body {
+            font-family: Courier, serif;
+            font-size: 12pt;
+        }
+
+        p {
+            margin-bottom: 4px;
+            margin-top: 4px;
+        }
+    </style>
+
+    <apex:outputPanel >
+        <p>Перевод в КО. Данные были введены вручную = {!IF(Opportunity.Manual_Entry__c, 'Да', 'Нет')}</p>
+        <p>Количество карт = {!IF(Opportunity.Number_of_Cards__c != null, TEXT(Opportunity.Number_of_Cards__c), 'none')}</p>
+        <apex:outputLink value="{!$CurrentPage.parameters.domain + Opportunity.Id}" target="_blank">Ссылка на возможность </apex:outputLink>
+    </apex:outputPanel>
+
+</apex:page>

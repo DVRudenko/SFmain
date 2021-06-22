@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Req_Num_MZK__c</fullName>
+    <description>Номер заявки в Модуле Заказа Карт</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Номер заявки в Модуле Заказа Карт</inlineHelpText>
+    <label>Request number MZK</label>
+    <length>25</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

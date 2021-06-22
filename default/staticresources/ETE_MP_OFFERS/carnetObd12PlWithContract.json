@@ -1,0 +1,103 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "Wait for the Carnet OBD units to be delivered by courier.",
+                "pl": "Poczekaj na dostarczenie jednostek Carnet OBD kurierem."
+            },
+            {
+                "en": "Connect each unit to your vehicles OBD connector as per the instructions in the box.",
+                "pl": "Podłącz każdą jednostkę do złącza OBD swoich pojazdów, zgodnie z instrukcjami w pudełku."
+            },
+            {
+                "en": "Login details will be sent to you from the e-mail noreply@fleetcor.pl.",
+                "pl": "Dane do logowania zostaną wysłane z e-maila: noreply@fleetcor.pl."
+            },
+            {
+                "en": "You can log in to the web portal at carnet.fleetcor.pl or download the Carnet application from the home page.",
+                "pl": "Zaloguj się na carnet.fleetcor.pl lub pobierz aplikację Carnet ze strony głównej."
+            },
+            {
+                "en": "You are ready to go!",
+                "pl": "Jesteś gotowy do drogi!"
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "plug and play soulution",
+                    "pl": "\"podłącz i używaj\""
+                },
+                "value": {
+                    "en": "0 PLN FOR INSTALLATION",
+                    "pl": "0 ZŁ ZA INSTALACJĘ"
+                }
+            },
+            {
+                "label": {
+                    "en": "with 12 month contract",
+                    "pl": "z umową na 12 miesięcy"
+                },
+                "value": {
+                    "en": "19.90 PLN PER MONTH",
+                    "pl": "19.90 ZŁ ZA MIESIĄC"
+                }
+            },
+            {
+                "label": {
+                    "en": "for unit",
+                    "pl": "za urządzenie"
+                },
+                "value": {
+                    "en": "249 PLN",
+                    "pl": "249 ZŁ"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "Carnet OBD 12 PL (with contract)"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "Name of the Unit",
+            "pl": "Nazwa Urządzenia"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/carnet_obd_2.png"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "Carnet OBD live GPS TRACKER is a small GPS tracking device that plugs directly into the OBD port of ANY vehicle. No tools or wiring required. Simply plug the tracker in and you’re set to go.",
+            "pl": "Carnet OBD to małe urządzenie monitorujące GPS, które podłącza się bezpośrednio do złącza OBD dowolnego pojazdu. Nie wymaga narzędzi ani okablowania. Po prostu podłącz i używaj."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "CARNET OBD",
+            "pl": "CARNET OBD"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "CARNET OBDs",
+            "pl": "CARNET OBDs"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "CARNET unit",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "1",
+            "cardsCountMax": "50",
+            "order": 5
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Poland": "/resource/ETE_DOCUMENTS_1/tariffSheets_carnetObd12PlNoContract.png"
+    }
+}

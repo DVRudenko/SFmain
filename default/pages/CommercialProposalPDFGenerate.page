@@ -1,0 +1,299 @@
+<apex:page controller="CreateCommercialProposalController" standardStylesheets="false" showHeader="false" sidebar="false"  
+    applyBodyTag="false">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <style>
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+            }
+
+            body {
+                font-family: 'Arial Unicode MS';
+                background: url('https://c.{!orgDomain}.visual.force.com/resource/1472650769000/CommercialProposalFooter') bottom repeat-x;
+                position: relative;     
+            }
+
+            @page {
+                margin: 0;
+                padding: 0;
+                size: 800px {! pdfHeight }px;
+            }
+
+            .wrapperTable {
+                width: 800px;
+                /*margin-bottom: 80px;*/
+            }
+
+            .content {
+                margin: 0;
+                padding: 0;
+            }
+
+            .pdfContentText {
+                font-size: 14px !important;
+                padding: 40px;
+                color: #1b1c20;
+                line-height: 130%;
+            }
+
+            .pdfContentText ul {
+                margin: 20px 0;
+            }
+
+            .pdfContentText ul li {
+                font-size: 14px;
+                line-height: 130%;
+                margin: 0 0 10px 0;
+                padding: 0;
+                list-style-position: inside;
+            }
+
+            .pdfContentText h1,
+            .pdfContentText h2,
+            .pdfContentText h3,
+            .pdfContentText h4 {
+                color: #3f7dc0;
+            }
+
+            .redline {
+                background: #dd1d21;
+                height: 4px;
+                width: 100px;
+            }
+
+            .maplist {
+                padding: 40px;
+                display: block;
+            }
+
+            .pdffooter {
+                background-image: repeat-x;
+                color: white;
+                bottom: 20px;
+                font-size: 14px !important;
+                width: 100%;
+            }
+
+            .pdffooter p {
+                margin: 0 0 5px 0;
+            }
+
+            .pdffooter .inner {
+                margin: 0 40px;
+                padding-top: 5px;
+            }
+        </style>
+        <script>
+            window.onload = function() {
+                var body = document.body,
+                    html = document.documentElement;
+
+                var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+                document.getElementById("{!$Component.formid.pdfheight}").value = height + 50;
+                returnToCreate();
+            };
+        </script>
+    </head>
+    <div style="background: white;position: absolute;height: 100%; width: 100%;"></div>
+    <apex:form id="formid">
+    <apex:actionFunction action="{! returnToCreate }" name="returnToCreate"/>
+
+    <table border="0" width="100%" cellpadding="0" cellspacing="0" style="height: 100%; margin-bottom: 60px; {! IF(isGenerate, 'background:transparent;', '') }" class="wrapperTable">
+        <tr>
+            <td>
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=01520000004IzM5&oid={! $Organization.Id }&lastMod=1476793809000"
+                    style="width: 100%;" rendered="{! CONTAINS(user.UserRole.Name,'Harte') }"/>
+
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=01520000004686t&oid={! $Organization.Id }&lastMod=1472651101000"
+                    style="width: 100%;" rendered="{! AND(NOT(CONTAINS(user.UserRole.Name,'Harte')), opportunity.Account.BillingCountry == 'Germany') }"/>
+                
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=0153E0000006sRO&oid={! $Organization.Id }&lastMod=1502455622000"
+                    style="width: 100%;" rendered="{! AND(NOT(CONTAINS(user.UserRole.Name,'Harte')), opportunity.Account.BillingCountry == 'Netherlands') }"/>
+
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=0153E0000006tYB&oid={! $Organization.Id }&lastMod=1502695360000"
+                    style="width: 100%;" rendered="{! AND(NOT(CONTAINS(user.UserRole.Name,'Harte')), opportunity.Account.BillingCountry == 'France') }"/>
+
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=0153E0000006z6r&oid={! $Organization.Id }&lastMod=1503320440000"
+                    style="width: 100%;" rendered="{! AND(NOT(CONTAINS(user.UserRole.Name,'Harte')), opportunity.Account.BillingCountry == 'Belgium-FR') }"/>
+
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=0153E0000006tYG&oid={! $Organization.Id }&lastMod=1502695455000"
+                    style="width: 100%;" rendered="{! AND(NOT(CONTAINS(user.UserRole.Name,'Harte')), opportunity.Account.BillingCountry == 'Belgium-NL') }"/>
+
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=0153E0000006tYL&oid={! $Organization.Id }&lastMod=1502695533000"
+                    style="width: 100%;" rendered="{! AND(NOT(CONTAINS(user.UserRole.Name,'Harte')), opportunity.Account.BillingCountry == 'Poland') }"/>
+
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=0153E0000006tYQ&oid={! $Organization.Id }&lastMod=1502695596000"
+                    style="width: 100%;" rendered="{! AND(NOT(CONTAINS(user.UserRole.Name,'Harte')), opportunity.Account.BillingCountry == 'Hungary') }"/>
+
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=0153E0000006tZ9&oid={! $Organization.Id }&lastMod=1502695678000"
+                    style="width: 100%;" rendered="{! AND(NOT(CONTAINS(user.UserRole.Name,'Harte')), opportunity.Account.BillingCountry == 'Czech Republic') }"/>
+
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=0153E0000006taX&oid={! $Organization.Id }&lastMod=1502695737000"
+                    style="width: 100%;" rendered="{! AND(NOT(CONTAINS(user.UserRole.Name,'Harte')), opportunity.Account.BillingCountry == 'Slovakia') }"/>
+
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=0153E0000006tfg&oid={! $Organization.Id }&lastMod=1502695792000"
+                    style="width: 100%;" rendered="{! AND(NOT(CONTAINS(user.UserRole.Name,'Harte')), opportunity.Account.BillingCountry == 'Luxembourg') }"/>
+
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=0153E0000006tiG&oid={! $Organization.Id }&lastMod=1502695853000"
+                    style="width: 100%;" rendered="{! AND(NOT(CONTAINS(user.UserRole.Name,'Harte')), opportunity.Account.BillingCountry == 'Switzerland-DE') }"/>
+
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=0153E0000006teX&oid={! $Organization.Id }&lastMod=1502695930000"
+                    style="width: 100%;" rendered="{! AND(NOT(CONTAINS(user.UserRole.Name,'Harte')), opportunity.Account.BillingCountry == 'Switzerland-FR') }"/>
+
+                <apex:image value="https://c.{!orgDomain}.content.force.com/servlet/servlet.ImageServer?id=0153E0000006tcK&oid={! $Organization.Id }&lastMod=1502695989000"
+                    style="width: 100%;" rendered="{! AND(NOT(CONTAINS(user.UserRole.Name,'Harte')), opportunity.Account.BillingCountry == 'Switzerland-IT') }"/>
+                <apex:inputText value="{! pdfHeight }" style="display: none;" id="pdfheight"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="pdfContentText">
+                    <apex:outputText value="{! pdfBody }" escape="false"/>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="margin: 5px 0 40px 0;" border="0" width="100%">
+                    <tr>
+                        <td class="redline"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="100%" cellspacing="0" cellpadding="0" style="width: 720px; margin: 0 auto;">
+                    <tr>
+                        <td valign="top">
+                            <apex:image url="https://c.{!orgDomain}.content.force.com/servlet/servlet.FileDownload?file={! attachmentId }" 
+                                style="width: 100%; margin-top: 5px;"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 70px;"></td>
+                    </tr>
+                </table>
+                
+                <table style="margin: 0 0 40px 0;" border="0" width="100%">
+                    <tr>
+                        <td class="redline"></td>
+                    </tr>
+                </table>
+
+                <table width="100%" class="stationsTable" 
+                    cellspacing="0" cellpadding="0" style="width: 720px; margin: 0 auto;font-family: 'Arial Unicode MS';font-size: 12px !important">
+                    <tr>
+                        <th style="background: #f6d036;font-weight: bold;padding: 5px;"></th>
+                        <th style="background: #f6d036;font-weight: bold;padding: 5px;">{! translateFillingStationColumnsMap[opportunity.Account.BillingCountry][0] }</th>
+                        <th style="background: #f6d036;font-weight: bold;padding: 5px;">{! translateFillingStationColumnsMap[opportunity.Account.BillingCountry][1] }</th>
+                        <th style="background: #f6d036;font-weight: bold;padding: 5px;">{! translateFillingStationColumnsMap[opportunity.Account.BillingCountry][2] }</th>
+                    </tr>
+                    <apex:repeat value="{! StationsWrapperList }" var="key">
+                        <tr>
+                            <td valign="middle" width="40px" style="padding: 5px;">
+                                <apex:image style="margin-right: 5px;" url="{!URLFOR($Resource.CommercialProposalIcons, key.station.brand.Name + '.png')}" width="30" height="30"/>
+                            </td>
+                            <td valign="middle" style="padding: 5px;">{! key.station.brand.Name }</td>
+                            <td valign="middle" style="padding: 5px;">
+                                <span style="font-family: 'Arial Unicode MS';">{! key.station.address }</span>
+                            </td>
+                            <td width="200px" valign="middle" align="center" style="padding: 5px;">
+                                <span style="font-family: 'Arial Unicode MS';">{! key.station.distanceToFuelStation }</span>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                    <tr>
+                        <td colspan="2" style="height: 140px;"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="pdffooter" style="padding: 0;">
+        <div class="inner">
+            <apex:outputPanel rendered="{! opportunity.Account.BillingCountry = 'Germany' }">
+                <h2 style="display: block;margin-bottom: 15px;">FLEETCOR Deutschland GmbH</h2>
+                <p>Königstorgraben 11</p>
+                <p>90402 Nürnberg</p>
+                <p></p>
+                <p></p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! opportunity.Account.BillingCountry = 'Netherlands' }">
+                <h2 style="display: block;margin-bottom: 15px;">FLEETCOR Technologieën B.V.</h2>
+                <p>Strawinskylaan 3127</p>
+                <p>Atrium Building, 8th floor</p>
+                <p>1077 ZX Amsterdam</p>
+                <p></p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! opportunity.Account.BillingCountry = 'France' }">
+                <h2 style="display: block;margin-bottom: 15px;">epyx France SAS</h2>
+                <p>Le Cézanne, Paris Nord II</p>
+                <p>35 allée des Impressionnistes</p>
+                <p>BP 58233</p>
+                <p>93420 Villepinte cedex France</p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! opportunity.Account.BillingCountry = 'Belgium-FR' }">
+                <h2 style="display: block;margin-bottom: 15px;">FLEETCOR Belgium sprl</h2>
+                <p>c/o TMF</p>
+                <p>Avenue du Port 86c Boite 204</p>
+                <p>1000 Bruxelles</p>
+                <p></p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! opportunity.Account.BillingCountry = 'Belgium-NL' }">
+                <h2 style="display: block;margin-bottom: 15px;">FLEETCOR Belgium bvba</h2>
+                <p>c/o TMF</p>
+                <p>Havenlaan 86c bus 204</p>
+                <p>1000 Brussel</p>
+                <p></p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! opportunity.Account.BillingCountry = 'Poland' }">
+                <h2 style="display: block;margin-bottom: 15px;">FLEETCOR Poland Sp. z o. o.</h2>
+                <p>Al. Jerozolimskie 56c</p>
+                <p>00-803 Warszawa</p>
+                <p></p>
+                <p></p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! opportunity.Account.BillingCountry = 'Hungary' }">
+                <h2 style="display: block;margin-bottom: 15px;">FLEETCOR Hungary Kft.</h2>
+                <p>1062 Budapest</p>
+                <p>Andrássy út 100</p>
+                <p></p>
+                <p></p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! opportunity.Account.BillingCountry = 'Czech Republic' }">
+                <h2 style="display: block;margin-bottom: 15px;">FLEETCOR Czech Republic s.r.o.</h2>
+                <p>Chlumčanského 497/5</p>
+                <p>Libeň</p>
+                <p>180 00 Praha 8</p>
+                <p></p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! opportunity.Account.BillingCountry = 'Slovakia' }">
+                <h2 style="display: block;margin-bottom: 15px;">FLEETCOR Slovakia s.r.o.</h2>
+                <p>Galvaniho 15/C</p>
+                <p>Bratislava - Ružinov 821 04</p>
+                <p></p>
+                <p></p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! opportunity.Account.BillingCountry = 'Luxembourg' }">
+                <h2 style="display: block;margin-bottom: 15px;">Venturo Technologies S.à r.l.</h2>
+                <p>15, rue Edward Steichen</p>
+                <p>L -2540</p>
+                <p></p>
+                <p></p>
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{! CONTAINS(opportunity.Account.BillingCountry, 'Switzerland') }">
+                <h2 style="display: block;margin-bottom: 15px;">Venturo Technologien Swiss GmbH</h2>
+                <p>c/o Vistra Zug AG</p>
+                <p>Grafenaustrasse 5</p>
+                <p>6304 Zug</p>
+                <p></p>
+            </apex:outputPanel>
+        </div>
+    </div>
+    </apex:form>
+</apex:page>

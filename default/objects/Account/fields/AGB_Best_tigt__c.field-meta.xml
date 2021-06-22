@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AGB_Best_tigt__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Accepted T&amp;Cs (Yes/No) - always Yes</inlineHelpText>
+    <label>AGB-Bestätigt</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ja</fullName>
+                <default>true</default>
+                <label>Ja</label>
+            </value>
+            <value>
+                <fullName>Nein</fullName>
+                <default>false</default>
+                <label>Nein</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

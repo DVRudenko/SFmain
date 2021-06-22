@@ -1,0 +1,66 @@
+<apex:page showheader="true" sidebar="true" controller="WorkcomRatingTableController" >
+    <style type="text/css">
+        .inputLabel {
+            font: 10pt sans-serif;
+            border-collapse: collapse;
+            margin: 10px;
+            color: darkslategray;
+            font-weight: bold;
+        }
+        .selectItem {
+            font: 12pt sans-serif;
+            margin-left: 10px;
+        }
+        body .bPageBlock .pbBody .pbBlock .pbSubheader{
+            background-color: darkslategray;
+
+        }
+        .styleForm {
+            font-size: 18px;
+            font-family: Arial;
+            margin: 10px 0 10px 30px;
+            float: left;
+            width: 100%;
+       }
+       .paginationBtn:hover {
+            background-color: #ddd;
+            color: black;
+       }
+
+        .paginationBtn {
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+
+    </style>
+    <apex:form >
+        <apex:pageBlock title="{!$Label.RU_0027_Rating }: {!NOW()}">
+            <apex:outputPanel styleClass="pbBlock" layout="block">
+                <apex:pageBlockTable id="table" value="{!userList}" var="user" columnsWidth="30%, 30%, 30%">
+                    <apex:column >
+                        <apex:outputLink value="{!url}/{!user.Id}">
+                            <apex:image value="{!user.smallphotourl}"/>
+                        </apex:outputLink>
+                    </apex:column>
+                    <apex:column headerValue="{!$ObjectType.User.fields.Name.label}">
+                        <apex:outputLink value="{!url}/{!user.Id}">{!user.Name}</apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!user.UserRole.Name}" />
+                    <apex:column headerValue="Points">
+                            {!IF((user.Earned_Points__c<0),"0",user.Earned_Points__c)}
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:outputPanel>
+        </apex:pageBlock>
+        <apex:panelGrid columns="4">
+            <apex:commandLink action="{!first}" styleClass="paginationBtn">First</apex:commandlink>
+            <apex:commandLink action="{!previous}" rendered="{!hasPrevious}" styleClass="paginationBtn">Previous</apex:commandlink>
+            <apex:commandLink action="{!next}" rendered="{!hasNext}" styleClass="paginationBtn">Next</apex:commandlink>
+            <apex:commandLink action="{!last}" styleClass="paginationBtn">Last</apex:commandlink>
+        </apex:panelGrid>
+    </apex:form>
+</apex:page>

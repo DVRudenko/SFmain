@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Account_Price_Book</fullName>
+    <active>true</active>
+    <description>Users can&#39;t change Account Price Book after choosing one.</description>
+    <errorConditionFormula>AND(
+NOT(ISBLANK(PRIORVALUE(Account_Price_Book__c))),
+ISCHANGED(Account_Price_Book__c),
+NOT(ISNEW())
+)</errorConditionFormula>
+    <errorDisplayField>Account_Price_Book__c</errorDisplayField>
+    <errorMessage>You cannot change Account Price Book on Additional Hardware once it has been assigned.</errorMessage>
+</ValidationRule>

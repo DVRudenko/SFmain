@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Internal flag used to highlight existing summaries for whom new events have materialised --></help>
+    <label><!-- New Events --></label>
+    <name>NVMStatsSF__New_Events__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_FS</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>ALL_Cards__c</columns>
+    <columns>Lead_Owner_Role__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Last_Owner_Change_Date_RUS__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Lead_Owner_Role__c</field>
+        <operation>startsWith</operation>
+        <value>PPR Teamleader Fieldsales,PPR Field Sales</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Moved to Start</value>
+    </filters>
+    <label>PPR Field Sales</label>
+    <language>ru</language>
+    <sharedTo>
+        <role>PPR_Field_Sales_Team_Leaders</role>
+    </sharedTo>
+</ListView>

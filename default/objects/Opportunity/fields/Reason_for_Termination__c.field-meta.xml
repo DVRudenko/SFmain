@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Termination__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Reason why Customer wants to terminate his contract with FLEETCOR</inlineHelpText>
+    <label>Reason for Termination</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Starts_Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Incorrect product category</fullName>
+                <default>false</default>
+                <label>Incorrect product category</label>
+            </value>
+            <value>
+                <fullName>Discount</fullName>
+                <default>false</default>
+                <label>Discount</label>
+            </value>
+            <value>
+                <fullName>Fees</fullName>
+                <default>false</default>
+                <label>Fees</label>
+            </value>
+            <value>
+                <fullName>Customer never ordered Cards</fullName>
+                <default>false</default>
+                <label>Customer never ordered Cards</label>
+            </value>
+            <value>
+                <fullName>Incorrect information on the Card</fullName>
+                <default>false</default>
+                <label>Incorrect information on the Card</label>
+            </value>
+            <value>
+                <fullName>Closed by credit</fullName>
+                <default>false</default>
+                <label>Closed by credit</label>
+            </value>
+            <value>
+                <fullName>Better offer from competitor</fullName>
+                <default>false</default>
+                <label>Better offer from competitor</label>
+            </value>
+            <value>
+                <fullName>Customer does not accept T&amp;Cs</fullName>
+                <default>false</default>
+                <label>Customer does not accept T&amp;Cs</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Network</fullName>
+                <default>false</default>
+                <label>Network</label>
+            </value>
+            <value>
+                <fullName>1. Wrong information from Sales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>1. Wrong information from Sales</label>
+            </value>
+            <value>
+                <fullName>1.4. Customer wanted only information</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>1.4. Customer wanted only information</label>
+            </value>
+            <value>
+                <fullName>4.1. Customer not reached, call-limit reached</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>4.1. Customer not reached, call-limit reached</label>
+            </value>
+            <value>
+                <fullName>4.2. Customer not reached, wrong contact details</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>4.2. Customer not reached, wrong contact details</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>2.4 First Check: Winback</controllingFieldValue>
+            <controllingFieldValue>5.4 Final Check: Winback</controllingFieldValue>
+            <controllingFieldValue>3.4 Volume Check 1: Winback</controllingFieldValue>
+            <controllingFieldValue>5.5 Winback Failed</controllingFieldValue>
+            <controllingFieldValue>4.4 Volume Check 2: Winback</controllingFieldValue>
+            <valueName>Incorrect product category</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2.4 First Check: Winback</controllingFieldValue>
+            <controllingFieldValue>5.4 Final Check: Winback</controllingFieldValue>
+            <controllingFieldValue>3.4 Volume Check 1: Winback</controllingFieldValue>
+            <controllingFieldValue>5.5 Winback Failed</controllingFieldValue>
+            <controllingFieldValue>4.4 Volume Check 2: Winback</controllingFieldValue>
+            <valueName>Discount</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2.4 First Check: Winback</controllingFieldValue>
+            <controllingFieldValue>5.4 Final Check: Winback</controllingFieldValue>
+            <controllingFieldValue>3.4 Volume Check 1: Winback</controllingFieldValue>
+            <controllingFieldValue>5.5 Winback Failed</controllingFieldValue>
+            <controllingFieldValue>4.4 Volume Check 2: Winback</controllingFieldValue>
+            <valueName>Fees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2.4 First Check: Winback</controllingFieldValue>
+            <controllingFieldValue>5.4 Final Check: Winback</controllingFieldValue>
+            <controllingFieldValue>3.4 Volume Check 1: Winback</controllingFieldValue>
+            <controllingFieldValue>5.5 Winback Failed</controllingFieldValue>
+            <controllingFieldValue>4.4 Volume Check 2: Winback</controllingFieldValue>
+            <valueName>Customer never ordered Cards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2.4 First Check: Winback</controllingFieldValue>
+            <controllingFieldValue>5.4 Final Check: Winback</controllingFieldValue>
+            <controllingFieldValue>3.4 Volume Check 1: Winback</controllingFieldValue>
+            <controllingFieldValue>5.5 Winback Failed</controllingFieldValue>
+            <controllingFieldValue>4.4 Volume Check 2: Winback</controllingFieldValue>
+            <valueName>Incorrect information on the Card</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2.4 First Check: Winback</controllingFieldValue>
+            <controllingFieldValue>5.4 Final Check: Winback</controllingFieldValue>
+            <controllingFieldValue>3.4 Volume Check 1: Winback</controllingFieldValue>
+            <controllingFieldValue>5.5 Winback Failed</controllingFieldValue>
+            <controllingFieldValue>4.4 Volume Check 2: Winback</controllingFieldValue>
+            <valueName>Closed by credit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2.4 First Check: Winback</controllingFieldValue>
+            <controllingFieldValue>5.4 Final Check: Winback</controllingFieldValue>
+            <controllingFieldValue>3.4 Volume Check 1: Winback</controllingFieldValue>
+            <controllingFieldValue>5.5 Winback Failed</controllingFieldValue>
+            <controllingFieldValue>4.4 Volume Check 2: Winback</controllingFieldValue>
+            <valueName>Better offer from competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2.4 First Check: Winback</controllingFieldValue>
+            <controllingFieldValue>5.4 Final Check: Winback</controllingFieldValue>
+            <controllingFieldValue>3.4 Volume Check 1: Winback</controllingFieldValue>
+            <controllingFieldValue>5.5 Winback Failed</controllingFieldValue>
+            <controllingFieldValue>4.4 Volume Check 2: Winback</controllingFieldValue>
+            <valueName>Customer does not accept T&amp;Cs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2.4 First Check: Winback</controllingFieldValue>
+            <controllingFieldValue>5.4 Final Check: Winback</controllingFieldValue>
+            <controllingFieldValue>3.4 Volume Check 1: Winback</controllingFieldValue>
+            <controllingFieldValue>5.5 Winback Failed</controllingFieldValue>
+            <controllingFieldValue>4.4 Volume Check 2: Winback</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>2.4 First Check: Winback</controllingFieldValue>
+            <controllingFieldValue>5.4 Final Check: Winback</controllingFieldValue>
+            <controllingFieldValue>3.4 Volume Check 1: Winback</controllingFieldValue>
+            <controllingFieldValue>5.5 Winback Failed</controllingFieldValue>
+            <controllingFieldValue>4.4 Volume Check 2: Winback</controllingFieldValue>
+            <valueName>Network</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

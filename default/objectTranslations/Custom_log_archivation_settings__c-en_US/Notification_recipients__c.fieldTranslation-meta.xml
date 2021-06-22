@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Emails of the users who will be notified once operation is complete. Must be separated by ; --></help>
+    <label><!-- Notification recipients --></label>
+    <name>Notification_recipients__c</name>
+</CustomFieldTranslation>

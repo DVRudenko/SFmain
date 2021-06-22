@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Financni_naboj_karty_v_Kc__c</fullName>
+    <description>Finanční náboj karty v Kč.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Finanční náboj karty v Kč.</inlineHelpText>
+    <label>Finanční náboj karty v Kč</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

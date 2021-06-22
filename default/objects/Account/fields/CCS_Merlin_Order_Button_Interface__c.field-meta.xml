@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Merlin_Order_Button_Interface__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+OR(
+$User.UserRoleId = '00E0O0000016ESI',
+$User.UserRoleId = '00E0O0000016EpM',
+$User.ProfileId = '00e0O000001IV85',
+$User.ProfileId = '00e0O000001IVOc',
+$User.ProfileId = '00e20000001R2TS',
+$User.ProfileId = '00e0O000001IVOh'),
+'admin',
+'login')</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>CCS Merlin Order Button Interface</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

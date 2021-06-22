@@ -1,0 +1,110 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "Wait until you receive your Shell cards and PIN numbers by post.",
+                "fr": "Veuillez attendre la livraison de vos cartes Shell et vos codes PIN par la poste.",
+                "de": "Sie erhalten Ihre Shell Card und Ihre PIN-Nummer in Kürze per Post."
+            },
+            {
+                "en": "Once received, your cards are automatically active and you can start using the cards! Enjoy a care-free refueling experience with your Shell Cards.",
+                "fr": "Dès réception de vos cartes déjà activées et codes pin, vous pouvez en faire l’usage immédiat et vous ravitailler en toute tranquillité.",
+                "de": "Nach Erhalt sind Ihre Karten automatisch aktiv und Sie können die Karten verwenden! Genießen Sie mit Ihren Shell Karten ein sorgenfreies Auftanken."
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "discount at all Shell stations in Switzerland",
+                    "fr": "Rabais dans les stations Shell en Suisse",
+                    "de": "Rabatt an allen Shell Stationen in der Schweiz"
+                },
+                "value": {
+                    "en": "3.5 CENTS/LITER",
+                    "fr": "3.5 CENTIMES/LITRE",
+                    "de": "3.5 RAPPEN/LITER"
+                }
+            },
+            {
+                "label": {
+                    "en": "for all transactions",
+                    "fr": "pour toutes les transactions",
+                    "de": "für alle Transaktionen"
+                },
+                "value": {
+                    "en": "SINGLE INVOICE",
+                    "fr": "FACTURE UNIQUE",
+                    "de": "NUR EINE RECHNUNG"
+                }
+            },
+            {
+                "label": {
+                    "en": "card issuing and delivery",
+                    "fr": "Émission et livraison de carte",
+                    "de": "Kartenproduktion und Einrichtung"
+                },
+                "value": {
+                    "en": "FREE",
+                    "fr": "GRATUIT",
+                    "de": "KOSTENLOS"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "Swiss Star CH"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "fr": "CARTE SHELL",
+            "de": "SHELL CARD"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/shellkarte_eu.jpg"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "Shell fuel card for business guarantees your company stable and permanent fuel discounts, a convenient online customer portal and a dense network of stations.",
+            "fr": "La carte carburant Shell vous garantit que votre entreprise bénéficiera de réductions stables et constantes sur le carburant, d’un portail client en ligne facile à utiliser et d’un réseau étendu de stations-service.",
+            "de": "Die Shell Firmentankkarte garantiert Ihrem Unternehmen stabile und permanente Rabatte auf Kraftstoffe, ein bequem zu nutzendes persönliches Konto und ein dichtes Stationsnetz."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "fr": "CARTE SHELL",
+            "de": "SHELL CARD"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "SHELL CARDS",
+            "fr": "CARTES SHELL",
+            "de": "SHELL KARTEN"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "SHELL CARD",
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "1",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "monthlyFuelConsumption_max": "5000",
+            "monthlyFuelConsumption_min": "50",
+            "showEuroLocatorTab": false,
+            "euroLocatorProductNumber": "4",
+            "order": 4
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Switzerland-DE": "/resource/ETE_DOCUMENTS_1/tariffSheets_swissStarCHDE.jpg",
+        "Switzerland-FR": "/resource/ETE_DOCUMENTS_1/tariffSheets_swissStarCHFR.jpg"
+    }
+}

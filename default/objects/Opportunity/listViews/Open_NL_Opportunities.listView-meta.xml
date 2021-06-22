@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_NL_Opportunities</fullName>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Anzahl_der_Karten__c</columns>
+    <columns>Total_consumption_l_month__c</columns>
+    <columns>Auftragsvolumen__c</columns>
+    <columns>CF_Stage__c</columns>
+    <columns>Notes__c</columns>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Registered_Country__c</field>
+        <operation>equals</operation>
+        <value>Netherlands</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSE_DATE</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2018</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CLOSED</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Open - NL Opportunities</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>CCS_Administrator</role>
+        <role>Role_Up</role>
+        <roleAndSubordinates>Salesteam_Inbound</roleAndSubordinates>
+        <roleAndSubordinates>Salesteam_Inbound_2</roleAndSubordinates>
+        <roleAndSubordinates>Teamleiter_Inbound</roleAndSubordinates>
+        <roleAndSubordinates>Teamleiter_Inbound_2</roleAndSubordinates>
+    </sharedTo>
+</ListView>

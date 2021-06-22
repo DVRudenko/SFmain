@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product__c</fullName>
+    <externalId>false</externalId>
+    <label>Product</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product_Country__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CCS Limit</fullName>
+                <default>false</default>
+                <label>CCS Limit</label>
+            </value>
+            <value>
+                <fullName>CCS Limit SK</fullName>
+                <default>false</default>
+                <label>CCS Limit SK</label>
+            </value>
+            <value>
+                <fullName>CCS Limit+</fullName>
+                <default>false</default>
+                <label>CCS Limit+</label>
+            </value>
+            <value>
+                <fullName>CCS Limit+ SK</fullName>
+                <default>false</default>
+                <label>CCS Limit+ SK</label>
+            </value>
+            <value>
+                <fullName>CCS Bonus</fullName>
+                <default>false</default>
+                <label>CCS Bonus</label>
+            </value>
+            <value>
+                <fullName>CCS Bonus SK</fullName>
+                <default>false</default>
+                <label>CCS Bonus SK</label>
+            </value>
+            <value>
+                <fullName>CCS Bonus+</fullName>
+                <default>false</default>
+                <label>CCS Bonus+</label>
+            </value>
+            <value>
+                <fullName>CCS Bonus+ SK</fullName>
+                <default>false</default>
+                <label>CCS Bonus+ SK</label>
+            </value>
+            <value>
+                <fullName>CCS Bonus Fleet</fullName>
+                <default>false</default>
+                <label>CCS Bonus Fleet</label>
+            </value>
+            <value>
+                <fullName>CCS Bonus Fleet SK</fullName>
+                <default>false</default>
+                <label>CCS Bonus Fleet SK</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet</fullName>
+                <default>false</default>
+                <label>CCS Carnet</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet SK</fullName>
+                <default>false</default>
+                <label>CCS Carnet SK</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet OBD2</fullName>
+                <default>false</default>
+                <label>CCS Carnet OBD2</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet OBD2 SK</fullName>
+                <default>false</default>
+                <label>CCS Carnet OBD2 SK</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet Služba</fullName>
+                <default>false</default>
+                <label>CCS Carnet Služba</label>
+            </value>
+            <value>
+                <fullName>CCS Carnet Služba SK</fullName>
+                <default>false</default>
+                <label>CCS Carnet Služba SK</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>CZ</controllingFieldValue>
+            <valueName>CCS Limit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CZ</controllingFieldValue>
+            <valueName>CCS Limit+</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CZ</controllingFieldValue>
+            <valueName>CCS Bonus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CZ</controllingFieldValue>
+            <valueName>CCS Bonus+</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CZ</controllingFieldValue>
+            <valueName>CCS Bonus Fleet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CZ</controllingFieldValue>
+            <valueName>CCS Carnet</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CZ</controllingFieldValue>
+            <valueName>CCS Carnet OBD2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CZ</controllingFieldValue>
+            <valueName>CCS Carnet Služba</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SK</controllingFieldValue>
+            <valueName>CCS Limit SK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SK</controllingFieldValue>
+            <valueName>CCS Limit+ SK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SK</controllingFieldValue>
+            <valueName>CCS Bonus SK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SK</controllingFieldValue>
+            <valueName>CCS Bonus+ SK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SK</controllingFieldValue>
+            <valueName>CCS Bonus Fleet SK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SK</controllingFieldValue>
+            <valueName>CCS Carnet SK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SK</controllingFieldValue>
+            <valueName>CCS Carnet OBD2 SK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SK</controllingFieldValue>
+            <valueName>CCS Carnet Služba SK</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

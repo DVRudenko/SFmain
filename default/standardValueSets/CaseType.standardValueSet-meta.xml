@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Change Request</fullName>
+        <default>false</default>
+        <label>Change Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Moved to Start</fullName>
+        <default>false</default>
+        <label>Moved to Start</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Changing the record owner</fullName>
+        <default>false</default>
+        <label>Changing the record owner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Changing the record owner (request to SF mail)</fullName>
+        <default>false</default>
+        <label>Changing the record owner (request to SF mail)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Question about working in SF</fullName>
+        <default>false</default>
+        <label>Question about working in SF</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Preparation and queries DB</fullName>
+        <default>false</default>
+        <label>Preparation and queries DB</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Pinning the CC operator</fullName>
+        <default>false</default>
+        <label>Pinning the CC operator</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer verification</fullName>
+        <default>false</default>
+        <label>Customer verification</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Creating and deleting new users</fullName>
+        <default>false</default>
+        <label>Creating and deleting new users</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Delete data</fullName>
+        <default>false</default>
+        <label>Delete data</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reset password</fullName>
+        <default>false</default>
+        <label>Reset password</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Functionality</fullName>
+        <default>false</default>
+        <label>New Functionality</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bug</fullName>
+        <default>false</default>
+        <label>Bug</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Re-request</fullName>
+        <default>false</default>
+        <label>Re-request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>E2E error on form</fullName>
+        <default>false</default>
+        <label>E2E error on form</label>
+    </standardValue>
+    <standardValue>
+        <fullName>E2E error after launch</fullName>
+        <default>false</default>
+        <label>E2E error after launch</label>
+    </standardValue>
+</StandardValueSet>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Zde např. CCS Bonus, Bonus+, Bonus Fleet. --></help>
+    <label><!-- Typ objednávky --></label>
+    <name>Typ_objednavky__c</name>
+    <picklistValues>
+        <masterLabel>CCS Bonus</masterLabel>
+        <translation><!-- CCS Bonus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Bonus Fleet</masterLabel>
+        <translation><!-- CCS Bonus Fleet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Bonus+</masterLabel>
+        <translation><!-- CCS Bonus+ --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

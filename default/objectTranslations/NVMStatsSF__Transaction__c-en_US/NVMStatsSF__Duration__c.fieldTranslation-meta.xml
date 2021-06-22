@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Transaction duration (elapsed time not CPU time) --></help>
+    <label><!-- Duration(ms) --></label>
+    <name>NVMStatsSF__Duration__c</name>
+</CustomFieldTranslation>

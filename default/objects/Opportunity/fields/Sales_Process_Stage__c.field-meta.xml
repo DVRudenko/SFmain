@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Process_Stage__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(OR(
+ISPICKVAL(StageName, "Qualify"),
+ISPICKVAL(StageName, "Prospecting")
+),"2. Qualify",
+
+IF(OR(
+ISPICKVAL(StageName, "Propose"),
+ISPICKVAL(StageName, "Follow Up Termin")
+),"3. Propose",
+
+IF(OR(
+ISPICKVAL(StageName, "Negotiate"),
+ISPICKVAL(StageName, "Entscheidung anstehend"),
+ISPICKVAL(StageName, "CC In Progress"),
+ISPICKVAL(StageName, "Pending Sales – Deposit"),
+ISPICKVAL(StageName, "Pending Sales – Information"),
+ISPICKVAL(StageName, "Waiting for cash security"),
+ISPICKVAL(StageName, "Kundenantrag FC eingetroffen"),
+ISPICKVAL(StageName, "CreditCheck"),
+ISPICKVAL(StageName, "Pending Sales – PIT/CIT"),
+ISPICKVAL(StageName, "Waiting for signed pdf"),
+ISPICKVAL(StageName, "Waiting for Card order form"),
+ISPICKVAL(StageName, "Pending Sales – AML doc."),
+ISPICKVAL(StageName, "Pending Credit AML"),
+ISPICKVAL(StageName, "Pending Credit Check"),
+ISPICKVAL(StageName, "Pending Sales - Token payment"),
+ISPICKVAL(StageName, "Pending Credit - Token payment"),
+ISPICKVAL(StageName, "Pending Credit"),
+ISPICKVAL(StageName, "Credit approved"),
+ISPICKVAL(StageName, "Pending Credit Report"),
+ISPICKVAL(StageName, "Pending Sales - SEPA Confirmation"),
+ISPICKVAL(StageName, "Credit Report Generated"),
+ISPICKVAL(StageName, "Pending Credit - Contract Check")
+),"4. Negotiate",
+
+IF(OR(
+ISPICKVAL(StageName, "Order entered"),
+ISPICKVAL(StageName, "Order entered - Approved"),
+ISPICKVAL(StageName, "Order entered - deposit"),
+ISPICKVAL(StageName, "Order entered - more often DD"),
+ISPICKVAL(StageName, "Waiting for power of attorney"),
+ISPICKVAL(StageName, "Waiting for deposit"),
+ISPICKVAL(StageName, "Waiting for PIT/CIT"),
+ISPICKVAL(StageName, "Waiting for MANDAT"),
+ISPICKVAL(StageName, "Waiting for Credit decision"),
+ISPICKVAL(StageName, "Waiting for DD confirmation"),
+ISPICKVAL(StageName, "Waitiing for components"),
+ISPICKVAL(StageName, "Pending Sales"),
+ISPICKVAL(StageName, "Waiting for card issuance"),
+ISPICKVAL(StageName, "Waiting for amendment"),
+ISPICKVAL(StageName, "Waiting for order signature")
+),"5. Merlin",
+
+IF(OR(
+ISPICKVAL(StageName, "Closed Won")
+),"6. Won",
+
+IF(OR(
+ISPICKVAL(StageName, "Closed Lost"),
+ISPICKVAL(StageName, "CreditCheck abgelehnt")
+),"7. Lost",
+
+IF(OR(
+ISPICKVAL(StageName, "Duplicate"),
+ISPICKVAL(StageName, "Already FleetCor customer"),
+ISPICKVAL(StageName, "Not a legal entity"),
+ISPICKVAL(StageName, "Spam")
+),"8. Not Oppty",
+
+"9. To be cleaned")))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Sales Process Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

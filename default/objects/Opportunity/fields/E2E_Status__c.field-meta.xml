@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>E2E Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>In progress</fullName>
+                <default>false</default>
+                <label>In progress</label>
+            </value>
+            <value>
+                <fullName>Abandoned (soft)</fullName>
+                <default>false</default>
+                <label>Abandoned (soft)</label>
+            </value>
+            <value>
+                <fullName>Abandoned (hard)</fullName>
+                <default>false</default>
+                <label>Abandoned (hard)</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Finished</fullName>
+                <default>false</default>
+                <label>Finished</label>
+            </value>
+            <value>
+                <fullName>Клиент Активен</fullName>
+                <default>false</default>
+                <label>Клиент Активен</label>
+            </value>
+            <value>
+                <fullName>Клиент не активен</fullName>
+                <default>false</default>
+                <label>Клиент не активен</label>
+            </value>
+            <value>
+                <fullName>Отказ от E2E</fullName>
+                <default>false</default>
+                <label>Отказ от E2E</label>
+            </value>
+            <value>
+                <fullName>Клиент завершил</fullName>
+                <default>false</default>
+                <label>Клиент завершил</label>
+            </value>
+            <value>
+                <fullName>Introduction</fullName>
+                <default>false</default>
+                <label>Introduction</label>
+            </value>
+            <value>
+                <fullName>Drop off</fullName>
+                <default>false</default>
+                <label>Drop off</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

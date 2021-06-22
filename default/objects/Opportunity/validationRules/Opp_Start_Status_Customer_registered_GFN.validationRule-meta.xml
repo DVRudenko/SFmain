@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_Start_Status_Customer_registered_GFN</fullName>
+    <active>true</active>
+    <description>Only users with Card Processing profile can change Opportunity Starts Status to &quot;0.9 Ready for GFN&quot;</description>
+    <errorConditionFormula>AND($Profile.Name != &quot;System Administrator&quot;,
+        $Profile.Name != &#39;API Only&#39;,
+        $Profile.Name != &quot;Systemadministrator&quot;,
+        $Profile.Name != &quot;CardProcessing&quot;,
+        $Profile.Name != &quot;Service Manager&quot;,
+        $Profile.Name != &quot;Service Agent&quot;,
+        $Profile.Name != &quot;Retention Manager&quot;,
+        $Profile.Name != &quot;Retention Agent&quot;,
+        $Profile.Name != &quot;E2E Profile&quot;,
+        $Profile.Name != &quot;API Only&quot;,
+        $Profile.Name != &quot;Credit&quot;,
+        OR(RecordType.Name = &#39;Euroshell&#39;,
+        RecordType.Name = &#39;Euroshell Starts&#39;),
+        (ISCHANGED(Starts_Status__c) &amp;&amp;
+        ISPICKVAL(Starts_Status__c, &quot;1. Customer registered in GFN (card issued &amp; delivered)&quot;)))</errorConditionFormula>
+    <errorMessage>You have no permissions to change Opportunity starts: status to 1. Customer registered in GFN Cards issued and delivered</errorMessage>
+</ValidationRule>

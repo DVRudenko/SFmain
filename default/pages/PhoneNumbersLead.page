@@ -1,0 +1,219 @@
+<apex:page standardController="Lead" extensions="PhoneNumbersController" docType="html-5.0" showChat="false" showHeader="false" showQuickActionVfHeader="false">
+    <apex:form >
+          <apex:actionFunction name="refreshPhoneFields " action="{!refreshPhoneFields}" reRender="PhonesLayoutBlock"/> 
+          <apex:actionFunction name="refreshIrrelevantPhonesList" action="{!refreshIrrelevantPhonesList}" rerender="IrrelevantList"/> 
+          <apex:actionFunction name="toEdit" action="{!toEdit}"/>
+          <apex:actionFunction name="toView" action="{!toView}"/>
+          
+          <apex:actionFunction name="refreshAdditionalPhones" action="{!refreshAdditionalPhones}" reRender="AdditionalList"/>  
+          <apex:actionFunction name="toEditMode_AdditionalPhones" action="{!toEditMode_AdditionalPhones}" reRender="AdditionalList"/>
+          <apex:actionFunction name="toViewMode_AdditionalPhones" action="{!toViewMode_AdditionalPhones}" reRender="AdditionalList"/>  
+          
+      <apex:pageBlock id="PageBlock">
+
+          <apex:outputPanel id="PageMsgs">
+              <apex:pageMessages />
+          </apex:outputPanel>
+          
+          <apex:pageBlockSection title="Phones" columns="1" id="PhonesLayoutBlock">
+          
+             <apex:outputPanel >
+                 <apex:commandButton value="{!$Label.btn_Save}" action="{!save_PhoneFields}" oncomplete="refreshIrrelevantPhonesList(); refreshAdditionalPhones()" reRender="PhonesLayoutBlock, PageMsgs" status="phoneFieldsStatus"/>
+                 &nbsp;
+                 <apex:actionStatus id="phoneFieldsStatus">
+                    <apex:facet name="start">
+                        <apex:outputPanel >
+                            <img src="/img/loading32.gif" width="16" height="16" />
+                            <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                        </apex:outputPanel>            
+                    </apex:facet>
+                 </apex:actionStatus>
+             </apex:outputPanel>
+             <apex:pageBlockTable value="{!phoneRowWrappers}" var="phoneRow">
+                <apex:column >
+                    <apex:commandLink value="Edit" action="{!phoneRow.editRow}" oncomplete="toEdit()" rendered="{!NOT(phoneRow.editView)}"/>
+                    <apex:commandLink value="Cancel" action="{!phoneRow.cancelEditRow}" oncomplete="toView()" rendered="{!phoneRow.editView}"/>
+                </apex:column>
+                <apex:column value="{!phoneRow.phoneFieldLabel}" >
+                    <apex:facet name="header">{!$Label.header_PhoneLabel}</apex:facet>
+                </apex:column>    
+                <apex:column >
+                    <apex:facet name="header">{!$ObjectType.Lead.fields.Phone.Label}</apex:facet>
+                    <a href="{!phoneRow.clickToCallLink}" target="_blank"><apex:outputLabel value="{!phoneRow.phoneFieldVal}" rendered="{!NOT(phoneRow.editView)}"/></a>
+                    <apex:input value="{!phoneRow.phoneFieldVal}" rendered="{!phoneRow.editView}"/>
+                </apex:column>
+                <apex:column >
+                    <apex:facet name="header">{!$ObjectType.Lead.fields.Phone_Status__c.Label}</apex:facet>
+                    <apex:selectList value="{!phoneRow.statusFieldVal}" size="1" rendered="{!OR(NOT(ISBLANK(phoneRow.phoneFieldVal)), phoneRow.editView)}">
+                        <apex:selectOptions value="{!phoneRow.statusesValues}"/>
+                    </apex:selectList>
+                </apex:column> 
+                <apex:column >
+                    <apex:facet name="header">{!$ObjectType.Lead.fields.Phone_StatusModifiedDate__c.Label}</apex:facet>
+                    <apex:outputLabel value="{!phoneRow.statusModifiedDateFieldVal}" rendered="{!NOT(phoneRow.editView)}"/>
+                </apex:column> 
+             </apex:pageBlockTable>
+           </apex:pageBlockSection>
+           
+           
+           
+        <apex:pageblockSection columns="2">
+          <apex:outputPanel id="AdditionalList">
+            <h5>{!$ObjectType.Lead.fields.Additional_Phones__c.Label}</h5>
+            &nbsp;
+            <apex:commandButton value="{!$Label.btn_Save}" action="{!saveAdditionalPhones}" reRender="AdditionalList" rendered="{!editView_AdditionalPhones}" status="saveAdditionalPhonesStatus"/>
+            &nbsp;
+                 <apex:actionStatus id="saveAdditionalPhonesStatus">
+                    <apex:facet name="start">
+                        <apex:outputPanel >
+                            <img src="/img/loading32.gif" width="16" height="16" />
+                            <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                        </apex:outputPanel>            
+                    </apex:facet>
+                 </apex:actionStatus>
+            <apex:pageBlockTable value="{!additionalPhonesList}" var="item">
+                <apex:column >
+                    <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null && item.makeIrrelevant == false}">
+                        <apex:outputPanel >
+                            <apex:commandLink value="Edit" action="{!item.editAdditionalPhone}" oncomplete="toEditMode_AdditionalPhones()" rendered="{!NOT(item.editView)}" reRender="AdditionalList"/>
+                            <apex:commandLink value="Cancel" action="{!item.cancelEditAdditionalPhone}" oncomplete="toViewMode_AdditionalPhones()" rendered="{!item.editView}" reRender="AdditionalList"/>
+                            &nbsp;
+                            <apex:commandLink value="Del" action="{!item.makeIrrelevant}" reRender="AdditionalList" rendered="{!NOT(item.editView)}"/>
+                            &nbsp;
+                            <apex:outputLabel value="{!item.phoneNumber}" rendered="{!NOT(item.editView)}"/>
+                            <apex:input value="{!item.phoneNumber}" rendered="{!item.editView}"/>
+                            &nbsp;
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!item.currentPhoneFieldAPI != null && item.currentPhoneFieldValue == null}">
+                        {!item.msgText}
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!item.currentPhoneFieldAPI != null && item.currentPhoneFieldValue != null}">
+                        {!item.msgText}
+                        <apex:outputPanel rendered="{!item.isMoved != true}">
+                            <br/>
+                            <apex:commandButton value="{!$Label.btn_Cancel}" action="{!item.cancelMoveToField}"/>
+                            &nbsp;
+                            <apex:commandButton value="{!$Label.btn_Continue}" action="{!item.continueMoveToField}" oncomplete="refreshPhoneFields(); refreshIrrelevantPhonesList();" rerender="AdditionalList, PageMsgs" status="additionalMoveToStatus"/>
+                        </apex:outputPanel>
+                        &nbsp;
+                         <apex:actionStatus id="additionalMoveToStatus">
+                            <apex:facet name="start">
+                                <apex:outputPanel >
+                                    <img src="/img/loading32.gif" width="16" height="16" />
+                                    <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                </apex:outputPanel>            
+                            </apex:facet>
+                         </apex:actionStatus>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{!item.makeIrrelevant == true}">
+                        {!item.msgText}
+                        <br/>
+                        <apex:outputPanel rendered="{!item.movedToIrrelevant != true}">
+                            <apex:outputPanel rendered="{!item.sObjType != 'Contact'}">
+                                <apex:commandButton value="{!$Label.btn_ThisRecord}" action="{!item.moveToIrrelevant_Record}" reRender="AdditionalList, PageMsgs" onComplete="refreshIrrelevantPhonesList()" status="additionalPhone_MoveToIrrelevant"/>
+                                &nbsp;
+                            </apex:outputPanel>
+                            <apex:outputPanel rendered="{!item.sObjType == 'Contact'}">
+                                <apex:commandButton value="{!$Label.btn_ThisRecordContact}" action="{!item.moveToIrrelevant_Record}" reRender="AdditionalList, PageMsgs" oncomplete="refreshIrrelevantPhonesList()" status="additionalPhone_MoveToIrrelevant"/>
+                                &nbsp;
+                                <apex:commandButton value="{!$Label.btn_ParentRecordAccount}" action="{!item.moveToIrrelevant_Parent}" reRender="AdditionalList, PageMsgs" status="additionalPhone_MoveToIrrelevant"/>
+                                &nbsp;
+                            </apex:outputPanel>
+                            <apex:commandButton value="{!$Label.btn_AllRecords}" action="{!item.moveToIrrelevant_Global}" reRender="AdditionalList, PageMsgs" status="additionalPhone_MoveToIrrelevant"/>
+                            &nbsp;
+                             <apex:actionStatus id="additionalPhone_MoveToIrrelevant">
+                                <apex:facet name="start">
+                                    <apex:outputPanel >
+                                        <img src="/img/loading32.gif" width="16" height="16" />
+                                        <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                    </apex:outputPanel>            
+                                </apex:facet>
+                             </apex:actionStatus>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:column>
+                <apex:column >
+                    <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null && item.makeIrrelevant == false}">
+                        <apex:outputLabel value="{!$Label.label_phonesList_Moveto}"/>
+                        &nbsp;
+                        <apex:selectList value="{!item.currentPhoneFieldAPI}" size="1">
+                            <apex:selectOptions value="{!phoneFieldAPIs_ToMoveAdditionalPhone}"/>
+                            <apex:actionSupport event="onchange" action="{!item.moveToPhoneField}" oncomplete="refreshPhoneFields();" reRender="AdditionalList, PageMsgs"/>
+                        </apex:selectList>
+                    </apex:outputPanel>
+                </apex:column>
+            </apex:pageBlockTable>
+            <br/>
+            <apex:outputPanel id="AddnewPhoneBlock">
+               <apex:input value="{!newAdditionalPhoneNumber}" id="newPhoneNumberInput"/>
+               &nbsp;
+               <apex:commandButton value="{!$Label.btn_Add}" action="{!addAdditionalPhone}" oncomplete="refreshAdditionalPhones()" reRender="PageMsgs" status="AddPhoneStatus"/>
+               &nbsp;
+                 <apex:actionStatus id="AddPhoneStatus">
+                    <apex:facet name="start">
+                        <apex:outputPanel >
+                            <img src="/img/loading32.gif" width="16" height="16" />
+                            <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                        </apex:outputPanel>            
+                    </apex:facet>
+                 </apex:actionStatus>
+            </apex:outputPanel>
+         </apex:outputPanel>
+         
+         <apex:outputPanel >
+                <h5>{!$ObjectType.Lead.fields.Irrelevant_Phones__c.Label}</h5>
+                <apex:pageBlockTable value="{!irrelevantPhonesList}" var="item" id="IrrelevantList">
+                    <apex:column >
+                        <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null}">
+                           <apex:commandLink rendered="{!AND(item.canDelete)}" value="Del" action="{!item.deleteIrrelevantPhoneNumber}" oncomplete="refreshIrrelevantPhonesList()"/>
+                           &nbsp;
+                        </apex:outputPanel>
+                        <apex:outputLabel value="{!item.PhoneNumber}"/>
+                   </apex:column>
+                   <apex:column >
+                       <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null}">
+                            <apex:outputLabel value="{!item.statusModifiedDate}"/>
+                            &nbsp;
+                            <apex:outputLabel value="{!item.statusReason}"/>
+                       </apex:outputPanel>
+                   </apex:column>
+                   <apex:column >
+                        <apex:outputPanel rendered="{!item.currentPhoneFieldAPI == null}">
+                            <apex:outputLabel value="{!$Label.label_phonesList_Moveto}"/>
+                            &nbsp;
+                            <apex:selectList value="{!item.currentPhoneFieldAPI}" size="1">
+                                <apex:selectOptions value="{!phoneFieldAPIs_ToMoveIrrelevantItem}"/>
+                                <apex:actionSupport event="onchange" action="{!item.moveToPhoneField}" reRender="IrrelevantList" oncomplete="refreshPhoneFields();"/>
+                            </apex:selectList>
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel rendered="{!item.currentPhoneFieldAPI != null && item.currentPhoneFieldValue == null}">
+                            {!item.msgText}
+                        </apex:outputPanel>
+                        <apex:outputPanel rendered="{!item.currentPhoneFieldAPI != null && item.currentPhoneFieldValue != null}">
+                            {!item.msgText}
+                            <br/>
+                            <apex:outputPanel rendered="{!item.isMoved != true}">
+                                <apex:commandButton value="{!$Label.btn_Cancel}" action="{!item.cancelMoveToField}"/>
+                                &nbsp;
+                                <apex:commandButton value="{!$Label.btn_Continue}" action="{!item.continueMoveToField}" oncomplete="refreshPhoneFields(); refreshIrrelevantPhonesList();" status="irrelevantMoveToStatus"/>
+                                &nbsp;
+                                 <apex:actionStatus id="irrelevantMoveToStatus">
+                                    <apex:facet name="start">
+                                        <apex:outputPanel >
+                                            <img src="/img/loading32.gif" width="16" height="16" />
+                                            <apex:outputLabel value="{!$Label.label_PleaseWait}"/>
+                                        </apex:outputPanel>            
+                                    </apex:facet>
+                                 </apex:actionStatus>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                    </apex:column>
+                </apex:pageBlockTable>
+          </apex:outputPanel>  
+            
+          </apex:pageblockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

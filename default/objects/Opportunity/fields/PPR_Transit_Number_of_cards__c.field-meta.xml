@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Transit_Number_of_cards__c</fullName>
+    <description>PPR Transit number of cards. Representing  number of cards that were bought at the first client request. Gathering from Transit3 DB by Talend job. Field created in scope of W-000044.</description>
+    <externalId>false</externalId>
+    <label>PPR_Transit_Number_of_cards</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,25 @@
+<template>
+    <template if:true={isModalOpen}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true"
+             aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                    <lightning-icon icon-name="utility:close" size="medium">
+                    </lightning-icon>
+                    <span class="slds-assistive-text">{labels.CLOSE_MODAL}</span>
+                </button>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <center><h2><b>{labels.DELETE_MESSAGE}</b></h2><br/>
+                </center>
+            </div>
+            <footer class="slds-modal__footer">
+                <lightning-button label={labels.CANCEL} variant="neutral" onclick={closeModal}></lightning-button>
+                <lightning-button label={labels.RESULT_OK} variant="brand" onclick={deleteRecord}></lightning-button>
+            </footer>
+        </div>
+    </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

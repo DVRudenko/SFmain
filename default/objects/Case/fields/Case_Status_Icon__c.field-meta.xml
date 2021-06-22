@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Status_Icon__c</fullName>
+    <description>STCP1-41/display icon for Case statuses</description>
+    <externalId>false</externalId>
+    <formula>IMAGE(
+Case(Status ,
+'New', '/resource/1559219251000/CaseStatusNew',
+'Internally waiting', '/resource/1559219313000/CaseStatusInternallyWaiting',
+'Internally updated', '/resource/1559219288000/CaseStatusInternallyUpdated',
+'Customer waiting','/resource/1559219275000/CaseStatusWaitingForCustomer',
+'Customer updated','/resource/1560526909000/CaseStatusCustomerUpdated',
+'Resolved','/resource/1560526947000/CaseStatusResolved',
+'Closed','/resource/1559219301000/CaseStatusClosed',
+'Reopened','/resource/1588757147000/CaseStatusReopened',
+NULL),
+'Status'
+)</formula>
+    <label>Case Status Icon</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

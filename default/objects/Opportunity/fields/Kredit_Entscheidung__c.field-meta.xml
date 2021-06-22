@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kredit_Entscheidung__c</fullName>
+    <externalId>false</externalId>
+    <label>Kredit Entscheidung</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Genehmigt</fullName>
+                <default>false</default>
+                <label>Genehmigt</label>
+            </value>
+            <value>
+                <fullName>Sicherheit verlangt</fullName>
+                <default>false</default>
+                <label>Sicherheit verlangt</label>
+            </value>
+            <value>
+                <fullName>Abgelehnt</fullName>
+                <default>false</default>
+                <label>Abgelehnt</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Genehmigt, Sicherheit geliefert</fullName>
+                <default>false</default>
+                <label>Genehmigt, Sicherheit geliefert</label>
+            </value>
+            <value>
+                <fullName>Pending mit Kredit</fullName>
+                <default>false</default>
+                <label>Pending mit Kredit</label>
+            </value>
+            <value>
+                <fullName>falscher Empfang</fullName>
+                <default>false</default>
+                <label>falscher Empfang</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,19 @@
+
+{
+    "translations": {
+        "title": {
+            "en": "Paper invoice",
+            "cs": "Papírová faktura"
+        },
+        "description": {
+            "en": "<p>All invoices are delivered in electronic format per email or customer online portal for free. However, if you want to receive a paper invoice, we will deliver it to you for 110 CZK per invoice.</p>",
+            "cs": "<p>Všechny faktury jsou doručovány v elektronické podobě na e-mail nebo prostřednictvím zákaznického online portálu zdarma. Pokud si přejete dostávat papírové faktury poštou, budeme Vám je zasílat za 110 Kč za fakturu.</p>"
+        }
+    },
+    "settings": {
+        "bgImage": "/resource/ete_images/bgInfoCardLetter.png",
+        "show_more": "false",
+        "show_checkbox_1": "false",
+        "show_checkbox_2": "false"
+    }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CR_Type --></label>
+    <name>CR_Type__c</name>
+    <picklistValues>
+        <masterLabel>MW</masterLabel>
+        <translation><!-- MW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Specified</masterLabel>
+        <translation><!-- Not Specified --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SPAR express</masterLabel>
+        <translation><!-- SPAR express --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell (Select)</masterLabel>
+        <translation><!-- Shell (Select) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell (Select) NSC</masterLabel>
+        <translation><!-- Shell (Select) NSC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell (Select) NSC Light</masterLabel>
+        <translation><!-- Shell (Select) NSC Light --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>not branded</masterLabel>
+        <translation><!-- not branded --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

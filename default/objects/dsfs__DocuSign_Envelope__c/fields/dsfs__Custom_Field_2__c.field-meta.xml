@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__Custom_Field_2__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Custom Field to pass data via Envelope</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Custom Field to pass data via Envelope</inlineHelpText>
+    <label>Custom Field 2</label>
+    <length>100</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

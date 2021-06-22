@@ -1,0 +1,45 @@
+<!--
+ - Created by Andrei.Katunin on 25.07.2018.
+ -->
+
+<apex:component id="E2EComponentTariffPills">
+
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map" />
+
+    <ul class="nav nav-pills nav-justified" id="TariffPills">
+        <apex:repeat var="tariff" value="{! pageMap }" id="listRepeat1">
+
+            <li class="nav-item">
+                <a class="nav-link mobile" data-toggle="tab" href="#{! tariff }" role="tab" name="tariff">
+                    {! pageMap[tariff].tariffLabel }
+                </a>
+            </li>
+        </apex:repeat>
+    </ul>
+
+    <div class="tab-content clearfix tariff-mobile" style="padding-top:10px;">
+        <apex:repeat var="tariff" value="{! pageMap }" id="listRepeat2">
+
+            <div class="tab-pane" id="{! tariff }">
+
+                <apex:repeat var="property" value="{! pageMap[tariff].properties }">
+                    <!--<h3>Content's background color is the same for the tab</h3>-->
+                    <strong>{! pageMap[tariff].properties[property].propertyValue  }</strong>
+                    <br/>
+                    <apex:repeat var="item" value="{! pageMap[tariff].properties[property].propertyItems }" id="listRepeat2">
+                        <apex:outputPanel layout="block" styleClass="propertyItem-element">
+                            <span>&#8226; </span>
+                            <apex:outputText escape="false" value="{!IF(item.Value__c == null, '', item.Value__c)}"/>
+                            <br/>
+                        </apex:outputPanel>
+                    </apex:repeat>
+                </apex:repeat>
+
+            </div>
+
+        </apex:repeat>
+    </div>
+
+</apex:component>

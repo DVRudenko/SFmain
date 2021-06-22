@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>List of users and their acquired prizes</description>
+    <label>Users prizes list</label>
+    <motif>Custom48: Trophy</motif>
+    <page>WorkcomUserPrizesReportTable</page>
+</CustomTab>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Merlin_Partner__c</fullName>
+    <description>Partner name from Merlin.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Partner name which is automatically transferred from Merlin.</inlineHelpText>
+    <label>Merlin Partner</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CCS/FLEETCOR</fullName>
+                <default>false</default>
+                <label>CCS/FLEETCOR</label>
+            </value>
+            <value>
+                <fullName>CESKAPOSTA</fullName>
+                <default>false</default>
+                <label>CESKAPOSTA</label>
+            </value>
+            <value>
+                <fullName>INNOGY</fullName>
+                <default>false</default>
+                <label>INNOGY</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

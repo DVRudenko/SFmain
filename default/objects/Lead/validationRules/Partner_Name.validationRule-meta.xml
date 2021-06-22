@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Name</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL( LeadSource , "Partner") &amp;&amp; Partner__c = null &amp;&amp; RecordType.Name &lt;&gt; "Russian Sales" &amp;&amp;  $User.ID__c &lt;&gt; "005200000041rKJ"</errorConditionFormula>
+    <errorDisplayField>Partner__c</errorDisplayField>
+    <errorMessage>Bitte Partner &amp; OBN eintragen!</errorMessage>
+</ValidationRule>

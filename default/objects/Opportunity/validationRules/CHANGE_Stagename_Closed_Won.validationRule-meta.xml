@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CHANGE_Stagename_Closed_Won</fullName>
+    <active>true</active>
+    <description>Запрет на изменения этапа Closed_Won на прочее</description>
+    <errorConditionFormula>IF(
+        OR(
+        $Profile.Id = "00e20000001nSOB",
+        $Profile.Name = 'API Only',
+        $Profile.Id = "00e20000001Aiij",
+        $Profile.Id = "00e0O000001VEUW",
+        $Profile.Id = "00e0O000001pjky",
+        RecordType.Name = 'Carnet',
+        RecordType.Name = "CCS Opportunity Layout",
+        $Profile.Name = "Salesteamleiter Inbound",
+        $Profile.Name = "Sales Inbound",
+        $Profile.Name = "Salesteamleiter",
+        $Profile.Name = "Sales",
+        $Profile.Name = "Credit",
+        $Profile.Name = "Service Agent",
+        $Profile.Name = "Service Manager",
+        $Profile.Name = "Retention Agent",				
+        $Profile.Name = "Retention Manager"),
+        false,
+        AND(ISPICKVAL(PRIORVALUE(StageName),
+        "Closed Won"),ISCHANGED(StageName),
+        NOT(ISCHANGED(Reopen_Log__c)),
+        Name != 'TO DELETE',
+        OR(RecordType.Name = 'AllStar',
+        RecordType.Name = 'CCS Opportunity Layout',
+        RecordType.Name = 'Euroshell',
+        RecordType.Name = 'Euroshell Starts',
+        RecordType.Name = 'Flexcard')))
+    </errorConditionFormula>
+    <errorMessage>You can't change an opportunity "Closed Won". Contact your Salesforce administrator.
+    </errorMessage>
+</ValidationRule>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_JITB_converted_leads</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5 AND 6 AND 7 AND 8 AND 9 AND 10</booleanFilter>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>Channel__c</columns>
+    <columns>Anzahl_der_Karten__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>Partner</value>
+    </filters>
+    <filters>
+        <field>Sec_Channel__c</field>
+        <operation>equals</operation>
+        <value>JITB</value>
+    </filters>
+    <filters>
+        <field>Channel__c</field>
+        <operation>contains</operation>
+        <value>Fax,Internet</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>7/13/2018 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>Registered_Country__c</field>
+        <operation>equals</operation>
+        <value>Germany</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Closed Lost,Closed Won</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Pending Sales – Deposit,Pending Sales – Information</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Pending Sales - SEPA Confirmation,CreditCheck</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Pending Credit AML,Pending Credit Check,Pending Credit - Token payment</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Pending Credit - Contract Check</value>
+    </filters>
+    <label>E2E JITB converted leads (Fax, Retailer)</label>
+    <language>de</language>
+    <sharedTo>
+        <role>Credit</role>
+        <role>Role_Up</role>
+        <roleAndSubordinatesInternal>Service_Manager</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>START</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>CCS_Administrator</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Harte_Hank</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Pardot</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Salesmanager</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Salesmanager_2</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Starts_Team_Manager</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>TR_Callcenter_TeamLead</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Teamleader_Call_Center_Outbound</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

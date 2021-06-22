@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Breitengrad (Registrierte Adresse)</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Breitengrade (Registrierte Adresse)</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <name>billing_latitude_account</name>
+</CustomFieldTranslation>

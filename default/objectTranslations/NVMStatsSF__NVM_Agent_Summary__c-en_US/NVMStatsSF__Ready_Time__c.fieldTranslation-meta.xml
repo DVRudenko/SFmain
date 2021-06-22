@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Ready Time in seconds --></help>
+    <label><!-- Ready Time --></label>
+    <name>NVMStatsSF__Ready_Time__c</name>
+</CustomFieldTranslation>

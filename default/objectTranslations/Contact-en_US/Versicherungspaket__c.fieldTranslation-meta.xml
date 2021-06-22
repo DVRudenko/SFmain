@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Insurance package</label>
+    <name>Versicherungspaket__c</name>
+    <picklistValues>
+        <masterLabel>Gold</masterLabel>
+        <translation><!-- Gold --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Silber-Plus</masterLabel>
+        <translation><!-- Silber-Plus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Silber-Standard</masterLabel>
+        <translation><!-- Silber-Standard --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

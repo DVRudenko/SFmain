@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Time required to complete the case. Calculated in man-days. --></help>
+    <label><!-- Dev-t time estimate (man-days) --></label>
+    <name>Dev_t_time_estimate_man_days__c</name>
+</CustomFieldTranslation>

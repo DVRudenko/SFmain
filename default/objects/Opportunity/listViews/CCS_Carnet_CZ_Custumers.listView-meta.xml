@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Carnet_CZ_Custumers</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.NEXT_STEP</columns>
+    <columns>Number_of_GPS_units__c</columns>
+    <columns>CCS_GFN_number__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Telefon_Phone__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>OPPORTUNITY.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>CCS Carnet CZ Custumers</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Qualified Lead,Kvalifikovaný lead</value>
+    </filters>
+    <label>CCS Carnet CZ Custumers</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>CCS_Records</group>
+    </sharedTo>
+</ListView>

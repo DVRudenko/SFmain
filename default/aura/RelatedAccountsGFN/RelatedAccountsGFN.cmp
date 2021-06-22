@@ -1,0 +1,65 @@
+<aura:component>
+    <aura:attribute name="gfnParams" type="String"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="relatedAccountTableHead" type="List"/>
+    <aura:attribute name="relatedAccountList" type="List"/>
+    <aura:attribute name="isClassic" type="Boolean"/>
+    <aura:attribute name="lineOfBusiness" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <lightning:accordion allowMultipleSectionsOpen="true">
+        <lightning:accordionSection name="A" label="{!'Related Accounts (' + v.relatedAccountList.length + ' of hidden accounts)'}">
+            <aura:if isTrue="{!not(empty(v.relatedAccountList))}">
+                <aura:set attribute="body">
+                    <lightning:card iconName="standard:account">
+                        <aura:set attribute="title">
+                            <span class="slds-float_left">Related Accounts</span>
+                        </aura:set>
+                        <div class="slds-card__body_inner">
+                            <table class="slds-table slds-no-row-hover slds-card_boundary">
+                                <thead>
+                                    <tr class="slds-text-title_caps">
+                                        <aura:iteration items="{!v.relatedAccountTableHead}" var="columnName">
+                                            <th>
+                                                <div class="slds-truncate" title="Column 1">{!columnName}</div>
+                                            </th>
+                                        </aura:iteration>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.relatedAccountList}" var="relatedAccount">
+                                        <aura:if isTrue="{!relatedAccount.Status == 'Active'}">
+                                            <tr class="slds-hint-parent">
+                                                <td><a href="javascript:void(0);" onclick="{!c.openGFNDashboard}" class=" slds-text-link">{!relatedAccount.CustomerERP}</a></td>
+                                                <td>
+                                                    <div class="slds-text-align_left slds-text-title slds-text-color_default">{!relatedAccount.ShortName}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="slds-text-title slds-text-color_default">
+                                                        <aura:if isTrue="{!relatedAccount.Parent}">
+                                                            Parent
+                                                            <aura:set attribute="else">SubAcc</aura:set>    
+                                                        </aura:if>
+                                                        
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="slds-text-align_left slds-text-title slds-text-color_default">{!relatedAccount.City}</div>
+                                                </td>
+                                                <td>
+                                                    <div class="slds-text-title slds-text-color_default">{!relatedAccount.Status}</div>
+                                                </td>
+                                            </tr>
+                                        </aura:if>
+                                    </aura:iteration>
+                                </tbody>
+                            </table>
+                        </div>
+                    </lightning:card>
+                </aura:set>
+            </aura:if>
+        </lightning:accordionSection>
+    </lightning:accordion>
+</aura:component>

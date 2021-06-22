@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Лимит по картам для формы E2E Business --></help>
+    <label><!-- E2E Bus card num limit --></label>
+    <name>E2EBUS_CardNumLimit__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,110 @@
+<aura:component controller="CaseCreationPageController" implements="flexipage:availableForRecordHome,force:hasRecordId,lightning:actionOverride,lightning:isUrlAddressable" access="global" >
+    <aura:attribute name="layoutData" type="Object[]"/>
+    <aura:attribute name="recordTypeId" type="String" />
+    <aura:attribute name="recordTypeName" type="String" />
+    <aura:attribute name="display" type="Boolean" />
+    <aura:attribute name="filesToUpload" type="List"/>
+    <aura:attribute name="file" type="Object"/>
+    <aura:attribute name="attachmentError" type="Boolean" default="false"/>
+    <aura:attribute name="attachmentsToReload" type="List" default="[]"/>
+    <aura:attribute name="newCaseId" type="String"/>
+    <aura:attribute name="loading" type="Boolean"/>
+    <aura:attribute name="parentAccountId" type="String" />
+    <aura:attribute name="parentErpId" type="String" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <lightning:workspaceAPI aura:id="workspace"/>
+
+    <aura:if isTrue="{!v.display}">
+        <div style="margin:auto;width:60%;position: relative;">
+            <aura:if isTrue="{!v.loading}">
+                <lightning:spinner alternativeText="Loading" size="large" />                
+            </aura:if>
+            <lightning:card title="Case: New Case">
+                <lightning:recordEditForm aura:id="CaseCreationForm" objectApiName="Case" recordTypeId="{!v.recordTypeId}" onerror="{!c.handleError}" onsuccess="{!c.handleSuccess}">
+                    <div class="slds-m-around_small">
+                        <lightning:messages aura:id="caseMessage"/>
+                        <aura:iteration items="{!v.layoutData}" var="layoutSection">
+                            <aura:if isTrue="{!layoutSection.editHeading}">
+                                <h3 class="slds-section__title slds-theme--shade test-id__section-header-container slds-p-around_xx-small">{!layoutSection.label}</h3>
+                                <div class="slds-p-horizontal--small slds-grid slds-gutters slds-p-around_medium">
+                                    <aura:iteration items="{!layoutSection.layoutColumns}" var="column" indexVar="columnIndex">
+                                        <div class="{!layoutSection.style=='OneColumn' ? 'slds-col slds-size_1-of-1':'slds-col slds-size_1-of-2'}">
+                                            <aura:iteration items="{!column.layoutItems}" var="item">
+                                                <aura:if isTrue="{!not(item.Hidden)}">
+                                                    <aura:if isTrue="{!not(or(item.field=='RecordTypeId', item.field=='OwnerId'))}">
+                                                        <aura:if isTrue="{!item.HasCustomLabel}">
+                                                            <span class="slds-form-element__label">{!item.CustomLabel}</span>
+                                                        </aura:if>
+                                                        <lightning:inputField aura:id="caseField" fieldName="{!item.field}" 
+                                                            value="{!item.field=='AccountId' ? v.parentAccountId : (item.field=='Status' ? 'New' : (item.field=='ERP__c' ? v.parentErpId : item.value))}" required="{!item.behavior=='Required'}" variant="{!item.HasCustomLabel ? 'label-hidden' : 'standard'}"/>
+                                                    </aura:if>
+                                                    <!--RECORD Type-->
+                                                    <aura:if isTrue="{!item.field=='RecordTypeId'}">
+                                                        <div class="slds-form-element slds-form-element_stacked">
+                                                            <aura:if isTrue="{!item.HasCustomLabel}">
+                                                                <span class="slds-form-element__label">{!item.CustomLabel}</span>
+                                                            </aura:if>
+                                                            <div class="slds-form-element__control">
+                                                                <span class="slds-form-element__static">{!v.recordTypeName}</span>
+                                                            </div>
+                                                        </div>
+                                                    </aura:if>                                                    
+                                                    <!--Owner id-->
+                                                    <aura:if isTrue="{!item.field=='OwnerId'}">
+                                                        <aura:if isTrue="{!item.HasCustomLabel}">
+                                                            <span class="slds-form-element__label">{!item.CustomLabel}</span>
+                                                        </aura:if>
+                                                        <div class="output-lookup-field">
+                                                            <lightning:outputField fieldName="{!item.field}" readonly="true" variant="{!item.HasCustomLabel ? 'label-hidden' : 'standard'}"/>
+                                                        </div>
+                                                    </aura:if>
+                                                    <!-- ERP(GFN) -->
+                                                    <aura:if isTrue="{!item.field=='AccountId'}">
+                                                        <lightning:inputField aura:id="caseField" fieldName="ERP__c" value="{!v.parentErpId}" variant="standard"></lightning:inputField>
+                                                    </aura:if>
+                                                </aura:if>
+                                            </aura:iteration>
+                                        </div>
+                                    </aura:iteration>
+                                </div>                    
+                            </aura:if>
+                        </aura:iteration>
+                        <div class="slds-p-horizontal_medium">
+
+                            <lightning:input aura:id="fileUploader" name="attachment-uploader" type="file" label="Attachment" multiple="true" files="{!v.file}" onchange="{!c.handleFilesChange}"/>
+
+                            <aura:if isTrue="{!v.attachmentError}">
+
+                                <aura:iteration items="{!v.filesToUpload}" var="file" indexVar="index">
+                                    <div class="slds-text-body_small slds-text-color_error">{!file.name}</div>
+                                    <a name="{!index}" onclick="{!c.removeFile}">Remove</a>
+                                </aura:iteration>
+
+                                <div class="slds-p-bottom_xx-large" style="margin: auto; width: 30%;">
+                                    <lightning:button label="Go to created case" variant="neutral" onclick="{!c.goToCasePage}"/>
+                                    <lightning:button variant="brand" class="slds-m-top_bottom" label="Try again" onclick="{!c.uploadErrorAttachments}"/>
+                                </div>
+
+                                <aura:set attribute="else">
+
+                                    <aura:iteration items="{!v.filesToUpload}" var="file" indexVar="index">
+                                        <div class="slds-text-body_small slds-text-color_error">{!file.name}</div>
+                                        <a name="{!index}" onclick="{!c.removeFile}">Remove</a>
+                                    </aura:iteration>
+
+                                    <div class="slds-p-bottom_xx-large" style="margin: auto; width: 30%;">
+                                        <lightning:button label="Cancel" variant="neutral" onclick="{!c.closePage}"/>
+                                        <lightning:button variant="brand" class="slds-m-top_bottom" type="submit" label="Save" onclick="{!c.handleClick}"/>
+                                    </div>
+
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                    </div>
+                </lightning:recordEditForm>
+            </lightning:card>
+        </div>
+    </aura:if>
+</aura:component>

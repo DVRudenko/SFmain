@@ -1,0 +1,72 @@
+<apex:page showheader="false" sidebar="false" controller="WorkBadgeReceivedPageController" >
+    <style type="text/css">
+        .inputLabel {
+            font: 10pt sans-serif;
+            border-collapse: collapse;
+            margin: 10px;
+            color: darkslategray;
+            font-weight: bold;
+        }
+        .selectItem {
+            font: 12pt sans-serif;
+            margin-left: 10px;
+        }
+        body .bPageBlock .pbBody .pbBlock .pbSubheader{
+                background-color: darkslategray;
+
+        }
+        .styleForm {
+          font-size: 18px;
+          font-family: Arial;
+          margin: 10px 0 10px 30px;
+          float: left;
+          width: 100%;
+       }
+    </style>
+
+    <script type="text/javascript">
+        function popupwindow(id)
+        {
+            var newWindow = window.open('/apex/WorkcomBadgeReceivedEdit?id=' + id + '&userId=' + '{!currentUser.userObj.Id}'
+                                        , 'Call Report','height=250,width=700,scrollbars=no,toolbar=no,status=no');
+
+            if(window.focus) {
+                newWindow.focus();
+            }
+            return false;
+        }
+    </script>
+
+    <apex:pageMessages id="msgInfo"></apex:pageMessages>
+    <apex:pageBlock title="{! $Label.RU_0016_PointsStatus }" rendered="{! currentUser.isWorkcomUser }">
+        <apex:outputPanel styleClass="pbBlock" layout="block">
+            <apex:pageBlockSection id="ps" title="{! $Label.RU_0016_PointsStatus }">
+                <apex:outputText label="{! $Label.RU_0014_ReceivedPoints }:" value="{!IF((currentUser.receivedPoints < 0),"0",currentUser.receivedPoints)}" styleClass="inputLabel"/>
+                <apex:outputText label="{! $Label.RU_0023_SpentPoints }:" value="{!currentUser.spentPoints }" rendered="{! OR(currentUser.userObj.Id == $User.Id, $Profile.Name == 'Systemadministrator' )}" styleClass="inputLabel"/>
+                <apex:outputText label="{! $Label.RU_0019_CurrentBalance }:" value="{!IF((currentUser.endPoints<0),"0",currentUser.endPoints)}" rendered="{! OR(currentUser.userObj.Id == $User.Id, $Profile.Name == 'Systemadministrator' )}" styleClass="inputLabel"/>
+            </apex:pageBlockSection>
+        </apex:outputPanel>
+    </apex:pageBlock>
+    <apex:pageBlock title="{! $Label.RU_0024_Thanks } " rendered="{! currentUser.isWorkcomUser }">
+        <apex:pageBlockTable id="table1" value="{!workBadgeList}" var="badge" columnsWidth="20%, 15%, 15%, 15%, 15%, 10%">
+            <apex:column width="60px">
+                <apex:image id="theImage" value="{!badge.ImageUrl}" width="60px" height="60px" alt="Description of image here"/>
+            </apex:column>
+            <apex:column value="{!badge.Definition.Name}" />
+            <apex:column headerValue="{! $ObjectType.WorkBadge.fields.Message.label }" value="{!messageMap[badge.Id]}" />
+            <apex:column headerValue="{! $Label.RU_0021_GiverBy }">
+                <apex:outputLink value="/{!badge.GiverId}">{!badge.Giver.Name}</apex:outputLink>
+            </apex:column>
+            <apex:column value="{!badge.DateOfAppointment__c}" />
+            <apex:column headerValue="{! $Label.RU_0029_FleerCorMonth }">
+                <apex:outputText value="{! MONTH(badge.DateOfAppointment__c)}/{! YEAR(badge.DateOfAppointment__c)}" />
+            </apex:column>
+            <apex:column headerValue="{!$Label.RU_0022_Action}" rendered="{!roleName == 'PPR_Fleetcor'}">
+                <apex:form >
+                    <apex:commandButton value="Edit" onclick="return popupwindow('{!badge.Id}')"/>
+                </apex:form>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+
+</apex:page>

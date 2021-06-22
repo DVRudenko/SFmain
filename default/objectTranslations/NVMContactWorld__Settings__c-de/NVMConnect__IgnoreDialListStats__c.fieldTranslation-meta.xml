@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Disables calculating stats for dial list when the agents uses the list (recommended when more than 100 agents works with single list at the same time) --></help>
+    <label><!-- Ignore dial list stats --></label>
+    <name>NVMConnect__IgnoreDialListStats__c</name>
+</CustomFieldTranslation>

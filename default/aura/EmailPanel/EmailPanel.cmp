@@ -1,0 +1,29 @@
+<aura:component>
+
+    <aura:attribute name="email" type="Object"/>
+    <aura:attribute name="validity" type="Boolean"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.email.from}" action="{!c.validateFields}" />
+    <aura:handler name="change" value="{!v.email.to}" action="{!c.validateFields}" />
+
+    <div>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-3 slds-p-around_xx-small">
+                <lightning:input type="email" aura:id="input-address" id="email-from-input" label="From: " value="{!v.email.from}" required="true"/>
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-p-around_xx-small">
+                <lightning:input type="email" aura:id="input-address" id="email-to-input" label="To: " value="{!v.email.to}" required="true"/>
+            </div>
+            <div class="slds-col slds-size_1-of-3 slds-p-around_xx-small">
+                <lightning:input type="text" aura:id="input-address" id="email-cc-input" label="CC: " value="{!v.email.cc}"/>
+            </div>
+        </div>
+        <div class=" slds-p-around_xx-small">
+            <lightning:input type="text" id="email-subject-input" label="Subject: " value="{!v.email.subject}"/>
+        </div>
+        <div class=" slds-p-around_xx-small">
+            <lightning:inputRichText value="{!v.email.body}" class="text-area_nowrap"/>
+        </div>
+    </div>
+
+</aura:component>

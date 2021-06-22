@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-Case</defaultLandingTab>
+    <description>CCS app for sales reps.</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>CCS - Sales</label>
+    <logo>CCS/ccs_logo2.png</logo>
+    <tabs>standard-Case</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>CCS_Limit__c</tabs>
+    <tabs>CCS_Bonus__c</tabs>
+    <tabs>CCS_Carnet__c</tabs>
+    <tabs>Russian_Sales_Dashboard</tabs>
+    <tabs>ContactedLeadsReportPPR</tabs>
+    <tabs>OverdueOpportunities</tabs>
+    <tabs>Activities</tabs>
+    <tabs>Health_Check__c</tabs>
+</CustomApplication>

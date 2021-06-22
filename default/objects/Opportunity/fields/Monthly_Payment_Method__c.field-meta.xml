@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monthly_Payment_Method__c</fullName>
+    <externalId>false</externalId>
+    <label>Monthly Payment Method</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bank transfer</fullName>
+                <default>false</default>
+                <label>Bank transfer</label>
+            </value>
+            <value>
+                <fullName>Your existing payment method</fullName>
+                <default>false</default>
+                <label>Your existing payment method</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>New GFN</controllingFieldValue>
+            <valueName>Bank transfer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <controllingFieldValue>Existing GFN</controllingFieldValue>
+            <valueName>Your existing payment method</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

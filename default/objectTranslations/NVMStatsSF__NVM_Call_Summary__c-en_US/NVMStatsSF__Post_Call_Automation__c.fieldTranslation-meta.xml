@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Duration of Applet events which took place after the agent left a Call (Especially Caller engaged in post Call survey. Tip: Label such Applets as POSTCALL in Call Plan Architect) --></help>
+    <label><!-- Post Call Automation Segment --></label>
+    <name>NVMStatsSF__Post_Call_Automation__c</name>
+</CustomFieldTranslation>

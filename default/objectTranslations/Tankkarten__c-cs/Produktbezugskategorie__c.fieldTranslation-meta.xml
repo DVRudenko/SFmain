@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Produktová kategorie</label>
+    <name>Produktbezugskategorie__c</name>
+    <picklistValues>
+        <masterLabel>0 Diesel, Tunnel-, Maut- und Fährgebühren</masterLabel>
+        <translation>0 Diesel, tunely, mosty a mýtné, adBlue</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1 Alle Kraftstoffe, Tunnel-, Maut- und Fährgebühren</masterLabel>
+        <translation>1 Kategorie č. 0 + všechna paliva (diesel, benzín, plynová paliva)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>2 Kategorie 1 plus fahrzeugbezogene Waren und Dienstleistungen (Öle, Autowäsche)</masterLabel>
+        <translation>2 Kategorie č. 1 + produkty a služby související s vozem (motorový olej, myčka)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>3 Kategorie 2 plus alle Shopartikel</masterLabel>
+        <translation>3 Kategorie č. 2 + produkty na čerpací stanici</translation>
+    </picklistValues>
+</CustomFieldTranslation>

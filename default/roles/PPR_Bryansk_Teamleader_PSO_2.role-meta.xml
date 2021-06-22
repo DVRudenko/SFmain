@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>PPR Teamleader Telesales PSO 2</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>PPR Teamleader Telesales PSO 2</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>PPR_Mentor_SME</parentRole>
+</Role>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Territory__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+            OR (
+            CONTAINS( BillingStreet, 'ЕКАТЕРИНБУРГ'),
+            CONTAINS( BillingStreet, 'Екатеринбург'),
+            CONTAINS( Region__c, 'ЕКАТЕРИНБУРГ'),
+            CONTAINS( Region__c, 'Екатеринбург'),
+            CONTAINS( BillingCity, 'Екатеринбург'),
+            CONTAINS( BillingCity, 'ЕКАТЕРИНБУРГ')
+            ),
+            'Екатеринбург',
+            IF(
+            OR (
+            CONTAINS( BillingStreet, 'г. Оренбург'),
+            CONTAINS( BillingStreet, 'Г. ОРЕНБУРГ'),
+            CONTAINS( BillingStreet, 'г Оренбург'),
+            CONTAINS( BillingStreet, 'Г ОРЕНБУРГ'),
+            BillingCity = 'ОРЕНБУРГ',
+            BillingCity = 'Оренбург',
+            AND ( LEFT(BillingStreet, 4)='4600',
+            OR( CONTAINS(BillingStreet,'Оренбург'),
+            CONTAINS(BillingStreet,'ОРЕНБУРГ')))
+            ),
+            'Оренбургская область',
+            IF(
+            OR (
+            CONTAINS( BillingStreet, 'г. Владимир.'),
+            CONTAINS( BillingStreet, 'Г. ВЛАДИМИР.'),
+            CONTAINS( BillingStreet, 'г Владимир.'),
+            CONTAINS( BillingStreet, 'Г ВЛАДИМИР.'),
+            BillingCity = 'ВЛАДИМИР',
+            BillingCity = 'Владимир',
+            AND ( LEFT(BillingStreet, 4)='6000',
+            OR( CONTAINS(BillingStreet,'Владимир'),
+            CONTAINS(BillingStreet,'ВЛАДИМИР')))
+            ),
+            'Владимирская область',
+            IF(
+            OR (
+            CONTAINS( BillingStreet, 'САНКТ-ПЕТЕРБУРГ'),
+            CONTAINS( BillingStreet, 'Санкт-Петербург'),
+            CONTAINS( Region__c, 'Санкт-Петербург'),
+            CONTAINS( Region__c, 'САНКТ-ПЕТЕРБУРГ'),
+            CONTAINS( BillingCity, 'Санкт-Петербург'),
+            CONTAINS( BillingCity, 'САНКТ-ПЕТЕРБУРГ'),
+            AND ( LEFT(BillingStreet, 4)='1910',
+            OR( CONTAINS(BillingStreet,'Петербург'),
+            CONTAINS(BillingStreet,'ПЕТЕРБУРГ')))
+            ),
+            'Ленинградская область',
+            IF(
+            OR (
+            CONTAINS( BillingStreet, 'СВЕРДЛОВСКАЯ ОБ'),
+            CONTAINS( BillingStreet, 'Свердловская об'),
+            CONTAINS( Region__c, 'СВЕРДЛОВСКАЯ'),
+            CONTAINS( Region__c, 'Свердловская'),
+            AND(LEFT(BillingStreet, 2) = '62',
+            OR (
+            CONTAINS( BillingStreet, 'СВЕРДЛОВСКАЯ'),
+            CONTAINS( BillingStreet, 'Свердловская')
+            )
+            )
+            ),
+            'Свердловская область', ''
+            )
+            ))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Territory</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

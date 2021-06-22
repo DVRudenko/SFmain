@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MobilePhone_StatusModifiedDate__c</fullName>
+    <description>Last Modified Date for MobilePhone_Status__c field</description>
+    <externalId>false</externalId>
+    <label>Mobile Phone Status Modified Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

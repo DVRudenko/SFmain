@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Completed</masterLabel>
+        <translation>Dokončeno</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Emailed</masterLabel>
+        <translation>Email odeslaný</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Escalated</masterLabel>
+        <translation><!-- Escalated --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Fraud</masterLabel>
+        <translation><!-- Fraud --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>In Bearbeitung</masterLabel>
+        <translation>Probíhá</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>In Progress</masterLabel>
+        <translation><!-- In Progress --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ineligible</masterLabel>
+        <translation><!-- Ineligible --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Not Started</masterLabel>
+        <translation><!-- Not Started --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Unreached</masterLabel>
+        <translation><!-- Unreached --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting on someone else</masterLabel>
+        <translation><!-- Waiting on someone else --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

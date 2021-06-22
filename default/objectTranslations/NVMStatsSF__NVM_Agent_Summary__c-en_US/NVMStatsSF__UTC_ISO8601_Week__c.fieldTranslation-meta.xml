@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Week number in ISO8601 form of the date in UTC --></help>
+    <label><!-- UTC ISO8601 Week --></label>
+    <name>NVMStatsSF__UTC_ISO8601_Week__c</name>
+</CustomFieldTranslation>

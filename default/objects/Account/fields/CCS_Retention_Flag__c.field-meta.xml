@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Retention_Flag__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Retention Flag</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>neznámo</fullName>
+                <default>false</default>
+                <label>neznámo</label>
+            </value>
+            <value>
+                <fullName>důvod neuveden</fullName>
+                <default>false</default>
+                <label>důvod neuveden</label>
+            </value>
+            <value>
+                <fullName>kreditní důvody</fullName>
+                <default>false</default>
+                <label>kreditní důvody</label>
+            </value>
+            <value>
+                <fullName>změna subjektu</fullName>
+                <default>false</default>
+                <label>změna subjektu</label>
+            </value>
+            <value>
+                <fullName>reorganizace</fullName>
+                <default>false</default>
+                <label>reorganizace</label>
+            </value>
+            <value>
+                <fullName>konkurence</fullName>
+                <default>false</default>
+                <label>konkurence</label>
+            </value>
+            <value>
+                <fullName>neaktivní smlouva</fullName>
+                <default>false</default>
+                <label>neaktivní smlouva</label>
+            </value>
+            <value>
+                <fullName>jiné</fullName>
+                <default>false</default>
+                <label>jiné</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

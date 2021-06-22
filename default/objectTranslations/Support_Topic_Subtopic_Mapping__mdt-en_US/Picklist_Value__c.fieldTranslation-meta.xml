@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A value from a Case Topic or Subtopic picklist field (should be strict as Case Topic or Subtopic API field names on Case object) --></help>
+    <label><!-- Picklist Value --></label>
+    <name>Picklist_Value__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,21 @@
+<template>
+    <div tabindex="0" class={computedPicklistClass} onclick={toggleMemuHandler} onblur={blurHandle}>
+        <span class="fltbase-picklist-square__text-overflow">
+            <img if:true={withIcons} src={selectedItem.icon} class="fltbase-picklist-square__text-overflow-icon" alt={selectedItem.label}>
+            <span class="fltbase-picklist-square__text-overflow-label">{selectedItem.label}</span> 
+        </span>
+        <div class={computedDropdownClass} style={computedDropdownStyle}>
+            <template for:each={optionsList} for:item="next">
+                <span 
+                    key={next.index}
+                    onclick={selectMenuItemHandler}
+                    data-active={next.active} 
+                    data-index={next.index} 
+                    class={computedDropdownOptionClass}>
+                    <img if:true={withIcons} src={next.icon} class="fltbase-picklist-square__dropdown-option-icon" alt={next.label}>
+                    <span class="fltbase-picklist-square__dropdown-option-label">{next.label}</span> 
+                </span>
+            </template>
+        </div>
+    </div>
+</template>

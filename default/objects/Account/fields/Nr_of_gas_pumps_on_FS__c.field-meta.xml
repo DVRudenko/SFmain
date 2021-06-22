@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nr_of_gas_pumps_on_FS__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of gas pumps on the fuel station</inlineHelpText>
+    <label>Nr. of gas pumps on FS</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

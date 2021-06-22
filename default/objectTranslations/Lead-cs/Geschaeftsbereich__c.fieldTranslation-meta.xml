@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Obchodní segment</label>
+    <name>Geschaeftsbereich__c</name>
+    <picklistValues>
+        <masterLabel>Automobil-Gewerbe (KFZ)</masterLabel>
+        <translation><!-- Automobil-Gewerbe (KFZ) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Energie-Versorgung</masterLabel>
+        <translation>Zásobování energií</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Handwerker (Maler, Lackierer, etc.)</masterLabel>
+        <translation>Živnostník</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Produzierendes Gewerbe</masterLabel>
+        <translation>Výrobný podnik</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sonstiges</masterLabel>
+        <translation>Jiné</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Soziale Dienstleistung</masterLabel>
+        <translation>Sociální služby</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technische Dienstleistung</masterLabel>
+        <translation>Technické služby</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transport (Fracht)</masterLabel>
+        <translation>Nákladní doprava</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transport (Personen)</masterLabel>
+        <translation>Osobní doprava</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verarbeitendes Gewerbe</masterLabel>
+        <translation>Výrobný podnik</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vertrieb und Beratung</masterLabel>
+        <translation>Prodej a poradenství</translation>
+    </picklistValues>
+</CustomFieldTranslation>

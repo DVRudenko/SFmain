@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If Activity had attachment this field should be TRUE, else FALSE --></help>
+    <label><!-- Attachments Exist --></label>
+    <name>Attachments_Exist__c</name>
+</CustomFieldTranslation>

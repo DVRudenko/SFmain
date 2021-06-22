@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- New order --></label>
+    <name>New_order__c</name>
+    <picklistValues>
+        <masterLabel>Flyer</masterLabel>
+        <translation><!-- Flyer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flyer+Flyer-Box</masterLabel>
+        <translation><!-- Flyer+Flyer-Box --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flyer-Box</masterLabel>
+        <translation><!-- Flyer-Box --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Postcard</masterLabel>
+        <translation><!-- Postcard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sticker</masterLabel>
+        <translation><!-- Sticker --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

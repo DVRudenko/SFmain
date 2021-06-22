@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CR_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>CR_Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>MW</fullName>
+                <default>false</default>
+                <label>MW</label>
+            </value>
+            <value>
+                <fullName>not branded</fullName>
+                <default>false</default>
+                <label>not branded</label>
+            </value>
+            <value>
+                <fullName>Not Specified</fullName>
+                <default>false</default>
+                <label>Not Specified</label>
+            </value>
+            <value>
+                <fullName>Shell (Select)</fullName>
+                <default>false</default>
+                <label>Shell (Select)</label>
+            </value>
+            <value>
+                <fullName>Shell (Select) NSC</fullName>
+                <default>false</default>
+                <label>Shell (Select) NSC</label>
+            </value>
+            <value>
+                <fullName>Shell (Select) NSC Light</fullName>
+                <default>false</default>
+                <label>Shell (Select) NSC Light</label>
+            </value>
+            <value>
+                <fullName>SPAR express</fullName>
+                <default>false</default>
+                <label>SPAR express</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

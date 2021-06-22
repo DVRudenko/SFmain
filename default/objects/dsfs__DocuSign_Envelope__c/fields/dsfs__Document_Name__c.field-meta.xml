@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__Document_Name__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Document Name</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This is a list of PDF Documents located in your Organization's Salesforce "Documents Tab".  In order to send with DocuSign you must add a PDF to any of the folders within your Documents Tab in Salesforce.  To Send with other Formats click "Learn More'.</inlineHelpText>
+    <label>Document Name</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

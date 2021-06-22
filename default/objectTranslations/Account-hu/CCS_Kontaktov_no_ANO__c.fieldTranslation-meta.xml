@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS Kontaktováno ANO --></label>
+    <name>CCS_Kontaktov_no_ANO__c</name>
+    <picklistValues>
+        <masterLabel>email</masterLabel>
+        <translation><!-- email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>telefon</masterLabel>
+        <translation><!-- telefon --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

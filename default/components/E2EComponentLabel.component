@@ -1,0 +1,28 @@
+<!--
+ - Created by Andrei.Katunin on 16.07.2018.
+ -->
+
+<apex:component id="E2EComponentLabel">
+
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map" />
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="value of outputPanel" />
+
+    <apex:attribute name="labelClass"
+                    type="String"
+                    description="class for label" />
+
+    <apex:attribute name="forElement"
+                    type="String"
+                    description="elements id" />
+
+    <apex:outputLabel for="{!IF(forElement == null, '', forElement)}"
+                      value="{!pageMap[field].elementItemsMap['LABEL'].value}"
+                      styleClass="{!IF(labelClass == null, '', labelClass)}"
+            />
+
+</apex:component>

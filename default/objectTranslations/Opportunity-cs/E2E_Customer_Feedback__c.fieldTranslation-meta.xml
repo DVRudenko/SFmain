@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Reason why Customer dropped off the E2E form. --></help>
+    <label><!-- E2E Customer Feedback (English) --></label>
+    <name>E2E_Customer_Feedback__c</name>
+</CustomFieldTranslation>

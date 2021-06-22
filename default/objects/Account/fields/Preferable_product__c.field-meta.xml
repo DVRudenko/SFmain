@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferable_product__c</fullName>
+    <externalId>false</externalId>
+    <label>Preferable product</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Allstar mondo</fullName>
+                <default>false</default>
+                <label>Allstar mondo</label>
+            </value>
+            <value>
+                <fullName>euroShell card</fullName>
+                <default>false</default>
+                <label>euroShell card</label>
+            </value>
+            <value>
+                <fullName>CCS cards</fullName>
+                <default>false</default>
+                <label>CCS cards</label>
+            </value>
+            <value>
+                <fullName>euroShell card and Allstar mondo</fullName>
+                <default>false</default>
+                <label>euroShell card and Allstar mondo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

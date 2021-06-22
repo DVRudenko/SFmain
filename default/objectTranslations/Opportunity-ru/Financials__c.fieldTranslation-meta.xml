@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Реакция на первый Winback контакт</label>
+    <name>Financials__c</name>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation>нейтральная</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Negative</masterLabel>
+        <translation>негативная реакция</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ok</masterLabel>
+        <translation>заинтересованность</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The telephone number dialled by the Caller for inbound calls; the number presented for outbound calls --></help>
+    <label><!-- NVM Telephone Number --></label>
+    <name>NVMStatsSF__NVM_Telephone_Number__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_PPR__c</fullName>
+    <externalId>false</externalId>
+    <label>Product PPR</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Супер 2020 с карты</fullName>
+                <default>false</default>
+                <label>Супер 2020 с карты</label>
+            </value>
+            <value>
+                <fullName>Супер 2020 с договора</fullName>
+                <default>false</default>
+                <label>Супер 2020 с договора</label>
+            </value>
+            <value>
+                <fullName>Лайт 2020 с карты</fullName>
+                <default>false</default>
+                <label>Лайт 2020 с карты</label>
+            </value>
+            <value>
+                <fullName>Лайт 2020 с договора</fullName>
+                <default>false</default>
+                <label>Лайт 2020 с договора</label>
+            </value>
+            <value>
+                <fullName>Избранный - Газпромнефть 2020 с карты</fullName>
+                <default>false</default>
+                <label>Избранный - Газпромнефть 2020 с карты</label>
+            </value>
+            <value>
+                <fullName>Избранный - Газпромнефть 2020 с договора</fullName>
+                <default>false</default>
+                <label>Избранный - Газпромнефть 2020 с договора</label>
+            </value>
+            <value>
+                <fullName>Шелл Сайт_АИ</fullName>
+                <default>false</default>
+                <label>Шелл Сайт_АИ</label>
+            </value>
+            <value>
+                <fullName>Шелл Сайт_ДТ</fullName>
+                <default>false</default>
+                <label>Шелл Сайт_ДТ</label>
+            </value>
+            <value>
+                <fullName>Избранный+ 2020 с карты</fullName>
+                <default>false</default>
+                <label>Избранный+ 2020 с карты</label>
+            </value>
+            <value>
+                <fullName>Избранный+ 2020 с договора</fullName>
+                <default>false</default>
+                <label>Избранный+ 2020 с договора</label>
+            </value>
+            <value>
+                <fullName>Оптимальный+ 2020</fullName>
+                <default>false</default>
+                <label>Оптимальный+ 2020</label>
+            </value>
+            <value>
+                <fullName>Газпром+ 2020 с карты</fullName>
+                <default>false</default>
+                <label>Газпром+ 2020 с карты</label>
+            </value>
+            <value>
+                <fullName>Газпром+ 2020 с договора</fullName>
+                <default>false</default>
+                <label>Газпром+ 2020 с договора</label>
+            </value>
+            <value>
+                <fullName>ГАЗПРОМ 2020 с карты</fullName>
+                <default>false</default>
+                <label>ГАЗПРОМ 2020 с карты</label>
+            </value>
+            <value>
+                <fullName>ГАЗПРОМ 2020 с договора</fullName>
+                <default>false</default>
+                <label>ГАЗПРОМ 2020 с договора</label>
+            </value>
+            <value>
+                <fullName>Оптимальный 2020 с карты</fullName>
+                <default>false</default>
+                <label>Оптимальный 2020 с карты</label>
+            </value>
+            <value>
+                <fullName>Оптимальный 2020 с договора</fullName>
+                <default>false</default>
+                <label>Оптимальный 2020 с договора</label>
+            </value>
+            <value>
+                <fullName>Шелл Кард "АЗС"</fullName>
+                <default>false</default>
+                <label>Шелл Кард "АЗС"</label>
+            </value>
+            <value>
+                <fullName>Winback 1</fullName>
+                <default>false</default>
+                <label>Winback 1</label>
+            </value>
+            <value>
+                <fullName>Winback 2</fullName>
+                <default>false</default>
+                <label>Winback 2</label>
+            </value>
+            <value>
+                <fullName>Командировки</fullName>
+                <default>false</default>
+                <label>Командировки</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

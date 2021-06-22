@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shell_Universal_Card</fullName>
+    <active>true</active>
+    <label>Shell Universal Card</label>
+    <picklistValues>
+        <picklist>AGB_Best_tigung_Ja_Nein_ist_immer_Ja__c</picklist>
+        <values>
+            <fullName>Ja</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Nein</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>AssistantPhone_Status__c</picklist>
+        <values>
+            <fullName>Dial out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs validation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Successful dialing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ausweisart__c</picklist>
+        <values>
+            <fullName>Personalausweis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reisepass</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Bargeldabhebung_Ja_Nein__c</picklist>
+        <values>
+            <fullName>Ja</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nein</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_GFN_Contact_type__c</picklist>
+        <values>
+            <fullName>Additional Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Authorization</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCS Plus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Card Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debt Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Invoice Recipient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Jen v SF</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Office</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pin Delivery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Primary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Responsible person 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iMonitor contact</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCS_Level__c</picklist>
+        <values>
+            <fullName>B-1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B-2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B-3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Board%2FČlen představenstva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CEO%2FGenerální ředitel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Člen dozorčí rady</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HomePhone_Status__c</picklist>
+        <values>
+            <fullName>Dial out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs validation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Successful dialing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Allstar Mondo Contact Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allstar Mondo Web Long Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Allstar Mondo Web Short Form</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Emailmarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Empfehlung</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incomplete Web Form Step 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incomplete Web Form Step 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shell Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Site Agg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stationskunde</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telesales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>MobilePhone_Status__c</picklist>
+        <values>
+            <fullName>Dial out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs validation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Successful dialing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Bc%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Damen und Herren</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dis%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frau</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frau Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Frau Prof%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Herr</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Herr Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Herr Prof%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ing%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>JUDr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MUDr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MVDr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mgr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mgr%2EIng%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RNDr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slečna</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>plk%2EIng%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>plk%2EMgr%2EBc%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Nutzungsart__c</picklist>
+        <values>
+            <fullName>Bürobedarf%2C Reisekosten und Nutzung an Tankstellen und Werkstätten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keine Einschränkungen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nutzung nur an Tankstellen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nutzung nur an Tankstellen und Werkstätten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reisekosten und Nutzung an Tankstellen und Werkstätten</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>OtherPhone_Status__c</picklist>
+        <values>
+            <fullName>Dial out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs validation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Successful dialing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PPR_Contact_Phone_Status__c</picklist>
+        <values>
+            <fullName>Dial out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs validation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Successful dialing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Phone_Status__c</picklist>
+        <values>
+            <fullName>Dial out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs validation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Successful dialing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A0</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wrong number%3A2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sprachpraeferenz__c</picklist>
+        <values>
+            <fullName>deutsch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>französisch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>niederländisch</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Versicherungspaket__c</picklist>
+        <values>
+            <fullName>Gold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Silber-Plus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Silber-Standard</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+</RecordType>

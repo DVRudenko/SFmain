@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- AGB-Bestätigt (Ja/Nein) - ist immer Ja --></help>
+    <label><!-- AGB-Bestätigt --></label>
+    <name>AGB_Best_tigt__c</name>
+    <picklistValues>
+        <masterLabel>Ja</masterLabel>
+        <translation><!-- Ja --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nein</masterLabel>
+        <translation><!-- Nein --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

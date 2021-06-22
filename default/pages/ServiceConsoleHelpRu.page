@@ -1,0 +1,41 @@
+<apex:page controller="ServiceConsoleHelpRuCtrl">
+    <apex:includeScript value="/support/console/40.0/integration.js"/>
+
+    <apex:form >
+        <apex:outputPanel layout="block" style="5px 5px 0px 5px">
+            <apex:outputPanel layout="block" style="padding-top:10px">
+                <apex:outputPanel style="font-size:15px;" >Ссылка или ID :</apex:outputPanel>
+                <apex:inputText styleClass="sourceText" value="{!sourceText}" onClick="this.select();" style="width:99%; height:30px;" ></apex:inputText>
+            </apex:outputPanel>
+            <apex:outputPanel layout="block">
+                <apex:commandButton style="text-decoration:none; width:100%; height:30px; font-size:15px;"
+                                    onclick="prepareTabParamsFunc(); return false;" value="Открыть новую вкладку"></apex:commandButton>
+            </apex:outputPanel>
+
+            <apex:actionFunction name="prepareTabParamsFunc" action="{!prepareTabParams}" onComplete="openConsoleTab('{!tabLink}','{!tabName}')"></apex:actionFunction>
+            <script type="text/javascript">
+                function openConsoleTab(link, name) {
+                    if(link != ''){
+                        sforce.console.openPrimaryTab(
+                            null,
+                            '/'+link,
+                            true,
+                            name,
+                            function openResult(result) {  });
+                        document.getElementsByClassName('sourceText')[0].value = '';
+                    }
+                }
+
+
+             </script>
+        </apex:outputPanel>
+
+        <apex:outputPanel layout="block" style="padding-top:5px; background-color:#0070d2; margin-top:10px;"> </apex:outputPanel>
+
+        <apex:outputPanel layout="block" style="padding-top:10px">
+            <apex:commandButton style="text-decoration:none; width:100%; height:30px; font-size:15px;"
+                                onclick="openConsoleTab('apex/FindDuplicatesRu','Поиск дубликатов'); return false;" value="Открыть 'Поиск дубликатов'"></apex:commandButton>
+        </apex:outputPanel>
+    </apex:form>
+
+</apex:page>

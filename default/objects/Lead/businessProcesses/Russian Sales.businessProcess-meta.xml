@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Russian Sales</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Disqualified</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>IN PROCESS - 1st Attempt</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>IN PROCESS - 2nd Attempt</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>IN PROCESS - 3rd Attempt</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>IN PROCESS - 4th Attempt</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>IN PROCESS - 5th Attempt</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>NEW - Not Yet Contacted</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>QUALIFIED - Convert to Opportunity</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Waiting INN</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

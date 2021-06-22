@@ -1,0 +1,26 @@
+<template>
+    <div class="form-container">
+        <lightning-card>        
+            <template class="slds-var-m-around_medium" for:each={fields} for:item="field">
+                <div class="lightning-input-container" key={field.name}>
+                    <label class="input-label" for={field.name}>
+                        <span class="test-span-label">{field.label}</span>
+                    </label>
+                    <input id={field.name} key={field.name} name={field.name} maxlength={field.maxLength} class="contact-field contact-name-fields" value=""></input>
+                </div>
+            </template>
+            <div class="lightning-input-container">
+                <label class="input-label" for="companyName">Název společnosti</label>
+                <input id="companyName" name="companyName" maxlength="80" class='contact-field' onchange={handleChangeInputValue} value=""></input>
+            </div>
+            <div class="lightning-input-container">
+                <label class="input-label" for="ico">IČO</label>
+                <input id="ico" name="ico" maxlength="80" class='contact-field' onchange={handleChangeInputValue} value=""></input>
+            </div>
+            <!-- <lightning-input name="companyName" label="Název společnosti" value={companyName} max-length="80" onchange={handleChangeInputValue}></lightning-input>
+            <lightning-input name="ico" label="IČO" value={ico} max-length="8" onchange={handleChangeInputValue}></lightning-input> -->
+        </lightning-card>
+        <button title={startChatLabel} onclick={handleStartChat} class="button-place lightning-button-brand lightning-button">{startChatLabel}
+        </button>
+    </div>
+</template>

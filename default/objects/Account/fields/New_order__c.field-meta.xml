@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_order__c</fullName>
+    <description>Nuremberg Team has requested this field to the Accounts with Record Type = Retailer</description>
+    <externalId>false</externalId>
+    <label>New order</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Flyer</fullName>
+                <default>false</default>
+                <label>Flyer</label>
+            </value>
+            <value>
+                <fullName>Flyer-Box</fullName>
+                <default>false</default>
+                <label>Flyer-Box</label>
+            </value>
+            <value>
+                <fullName>Flyer+Flyer-Box</fullName>
+                <default>false</default>
+                <label>Flyer+Flyer-Box</label>
+            </value>
+            <value>
+                <fullName>Sticker</fullName>
+                <default>false</default>
+                <label>Sticker</label>
+            </value>
+            <value>
+                <fullName>Postcard</fullName>
+                <default>false</default>
+                <label>Postcard</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

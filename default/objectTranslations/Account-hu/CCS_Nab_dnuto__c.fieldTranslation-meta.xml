@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS Nabídnuto --></label>
+    <name>CCS_Nab_dnuto__c</name>
+    <picklistValues>
+        <masterLabel>Automatické pojištění</masterLabel>
+        <translation><!-- Automatické pojištění --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bonus</masterLabel>
+        <translation><!-- Bonus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cestovní pojištění AIG</masterLabel>
+        <translation><!-- Cestovní pojištění AIG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cestovní pojištění ERV</masterLabel>
+        <translation><!-- Cestovní pojištění ERV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>E-shop</masterLabel>
+        <translation><!-- E-shop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parkování</masterLabel>
+        <translation><!-- Parkování --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Síť CNG</masterLabel>
+        <translation><!-- Síť CNG --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TankNavigator</masterLabel>
+        <translation><!-- TankNavigator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zrušení skupiny zboží 5 a 6</masterLabel>
+        <translation><!-- Zrušení skupiny zboží 5 a 6 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

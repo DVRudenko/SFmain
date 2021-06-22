@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Checkbox</fullName>
+    <active>true</active>
+    <description>Can't change E2E checkbox</description>
+    <errorConditionFormula>ISCHANGED(E2E__c) &amp;&amp;
+        NOT(ISNEW()) &amp;&amp;
+        E2E__c = FALSE &amp;&amp;
+        (RecordType.Name = 'Euroshell' || RecordType.Name = 'Euroshell Starts')
+        &amp;&amp; $User.Alias != 'guest' &amp;&amp;
+        $Profile.Name != 'System Administrator' &amp;&amp;
+        $Profile.Name != 'API Only' &amp;&amp;
+        $Profile.Id != '00e20000001nSOB'
+    </errorConditionFormula>
+    <errorMessage>You can't change E2E checkbox</errorMessage>
+</ValidationRule>

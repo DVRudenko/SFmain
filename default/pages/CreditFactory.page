@@ -1,0 +1,14 @@
+<apex:page standardController="Opportunity">
+    <apex:includeLightning />
+
+    <div id="lightning"></div>
+
+    <script>
+        $Lightning.use("c:CreditFactoryApp", function() {
+            $Lightning.createComponent("c:CreditFactory", 
+                {opportunityId: '{! opportunity.Id }'}, 
+                'lightning'
+            );
+        });
+    </script>
+</apex:page>

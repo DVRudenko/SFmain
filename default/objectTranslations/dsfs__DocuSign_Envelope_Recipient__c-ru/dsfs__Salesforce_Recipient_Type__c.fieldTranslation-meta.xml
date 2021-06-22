@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>ТИП ПОЛУЧАТЕЛЯ SALESFORCE</help>
+    <label><!-- Salesforce Recipient Type --></label>
+    <name>dsfs__Salesforce_Recipient_Type__c</name>
+    <picklistValues>
+        <masterLabel>Contact</masterLabel>
+        <translation>КОНТАКТНОЕ ЛИЦО</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lead</masterLabel>
+        <translation>ПОТЕНЦИАЛЬНЫЙ КЛИЕНТ</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User</masterLabel>
+        <translation>ПОЛЬЗОВАТЕЛЬ</translation>
+    </picklistValues>
+</CustomFieldTranslation>

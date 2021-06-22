@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Region of allocation --></label>
+    <name>Region_of_allocation__c</name>
+    <picklistValues>
+        <masterLabel>CE</masterLabel>
+        <translation><!-- CE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EE</masterLabel>
+        <translation><!-- EE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shared</masterLabel>
+        <translation><!-- Shared --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WE</masterLabel>
+        <translation><!-- WE --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

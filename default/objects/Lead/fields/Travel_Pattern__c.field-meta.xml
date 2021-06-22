@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Travel_Pattern__c</fullName>
+    <description>Product fit my vary depending on whether drivers follow a regular route or have random routes</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Product fit my vary depending on whether drivers follow a regular route or have random routes</inlineHelpText>
+    <label>Travel Pattern</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Area_Traveled__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Regular Route</fullName>
+                <default>false</default>
+                <label>Regular Route</label>
+            </value>
+            <value>
+                <fullName>Random Route</fullName>
+                <default>false</default>
+                <label>Random Route</label>
+            </value>
+            <value>
+                <fullName>Regular &amp; Random</fullName>
+                <default>false</default>
+                <label>Regular &amp; Random</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <controllingFieldValue>National</controllingFieldValue>
+            <valueName>Regular Route</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <controllingFieldValue>National</controllingFieldValue>
+            <valueName>Random Route</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Local</controllingFieldValue>
+            <controllingFieldValue>Statewide</controllingFieldValue>
+            <controllingFieldValue>Regional</controllingFieldValue>
+            <controllingFieldValue>National</controllingFieldValue>
+            <valueName>Regular &amp; Random</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

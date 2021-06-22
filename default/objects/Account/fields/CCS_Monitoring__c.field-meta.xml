@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Monitoring__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Monitoring</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CCS Carnet</fullName>
+                <default>false</default>
+                <label>CCS Carnet</label>
+            </value>
+            <value>
+                <fullName>O2 Car Control</fullName>
+                <default>false</default>
+                <label>O2 Car Control</label>
+            </value>
+            <value>
+                <fullName>Princip</fullName>
+                <default>false</default>
+                <label>Princip</label>
+            </value>
+            <value>
+                <fullName>Level</fullName>
+                <default>false</default>
+                <label>Level</label>
+            </value>
+            <value>
+                <fullName>T-Cars</fullName>
+                <default>false</default>
+                <label>T-Cars</label>
+            </value>
+            <value>
+                <fullName>Oni system</fullName>
+                <default>false</default>
+                <label>Oni system</label>
+            </value>
+            <value>
+                <fullName>Radium</fullName>
+                <default>false</default>
+                <label>Radium</label>
+            </value>
+            <value>
+                <fullName>GX Solutions (Axitech)</fullName>
+                <default>false</default>
+                <label>GX Solutions (Axitech)</label>
+            </value>
+            <value>
+                <fullName>ECS System</fullName>
+                <default>false</default>
+                <label>ECS System</label>
+            </value>
+            <value>
+                <fullName>Sherlog</fullName>
+                <default>false</default>
+                <label>Sherlog</label>
+            </value>
+            <value>
+                <fullName>Patriot</fullName>
+                <default>false</default>
+                <label>Patriot</label>
+            </value>
+            <value>
+                <fullName>K-Elektronik</fullName>
+                <default>false</default>
+                <label>K-Elektronik</label>
+            </value>
+            <value>
+                <fullName>Kapsch</fullName>
+                <default>false</default>
+                <label>Kapsch</label>
+            </value>
+            <value>
+                <fullName>Comtes</fullName>
+                <default>false</default>
+                <label>Comtes</label>
+            </value>
+            <value>
+                <fullName>R-Altra</fullName>
+                <default>false</default>
+                <label>R-Altra</label>
+            </value>
+            <value>
+                <fullName>My Systems</fullName>
+                <default>false</default>
+                <label>My Systems</label>
+            </value>
+            <value>
+                <fullName>F&amp;B COMP Olomouc</fullName>
+                <default>false</default>
+                <label>F&amp;B COMP Olomouc</label>
+            </value>
+            <value>
+                <fullName>Sixt</fullName>
+                <default>false</default>
+                <label>Sixt</label>
+            </value>
+            <value>
+                <fullName>Milk Computers</fullName>
+                <default>false</default>
+                <label>Milk Computers</label>
+            </value>
+            <value>
+                <fullName>Evotech</fullName>
+                <default>false</default>
+                <label>Evotech</label>
+            </value>
+            <value>
+                <fullName>Fons</fullName>
+                <default>false</default>
+                <label>Fons</label>
+            </value>
+            <value>
+                <fullName>Altas</fullName>
+                <default>false</default>
+                <label>Altas</label>
+            </value>
+            <value>
+                <fullName>Protank</fullName>
+                <default>false</default>
+                <label>Protank</label>
+            </value>
+            <value>
+                <fullName>RC System</fullName>
+                <default>false</default>
+                <label>RC System</label>
+            </value>
+            <value>
+                <fullName>WebEye</fullName>
+                <default>false</default>
+                <label>WebEye</label>
+            </value>
+            <value>
+                <fullName>Torola</fullName>
+                <default>false</default>
+                <label>Torola</label>
+            </value>
+            <value>
+                <fullName>TomTom</fullName>
+                <default>false</default>
+                <label>TomTom</label>
+            </value>
+            <value>
+                <fullName>Autoawacs</fullName>
+                <default>false</default>
+                <label>Autoawacs</label>
+            </value>
+            <value>
+                <fullName>Echoton</fullName>
+                <default>false</default>
+                <label>Echoton</label>
+            </value>
+            <value>
+                <fullName>Echo Tract</fullName>
+                <default>false</default>
+                <label>Echo Tract</label>
+            </value>
+            <value>
+                <fullName>Ostatní</fullName>
+                <default>false</default>
+                <label>Ostatní</label>
+            </value>
+            <value>
+                <fullName>Volvo</fullName>
+                <default>false</default>
+                <label>Volvo</label>
+            </value>
+            <value>
+                <fullName>IZS</fullName>
+                <default>false</default>
+                <label>IZS</label>
+            </value>
+            <value>
+                <fullName>CDS</fullName>
+                <default>false</default>
+                <label>CDS</label>
+            </value>
+            <value>
+                <fullName>Parot</fullName>
+                <default>false</default>
+                <label>Parot</label>
+            </value>
+            <value>
+                <fullName>Secar</fullName>
+                <default>false</default>
+                <label>Secar</label>
+            </value>
+            <value>
+                <fullName>Commander</fullName>
+                <default>false</default>
+                <label>Commander</label>
+            </value>
+            <value>
+                <fullName>Infocar</fullName>
+                <default>false</default>
+                <label>Infocar</label>
+            </value>
+            <value>
+                <fullName>Autopark</fullName>
+                <default>false</default>
+                <label>Autopark</label>
+            </value>
+            <value>
+                <fullName>Vodafone</fullName>
+                <default>false</default>
+                <label>Vodafone</label>
+            </value>
+            <value>
+                <fullName>ALIn</fullName>
+                <default>false</default>
+                <label>ALIn</label>
+            </value>
+            <value>
+                <fullName>RADOM</fullName>
+                <default>false</default>
+                <label>RADOM</label>
+            </value>
+            <value>
+                <fullName>TO2</fullName>
+                <default>false</default>
+                <label>TO2</label>
+            </value>
+            <value>
+                <fullName>vlastní</fullName>
+                <default>false</default>
+                <label>vlastní</label>
+            </value>
+            <value>
+                <fullName>GPS DE</fullName>
+                <default>false</default>
+                <label>GPS DE</label>
+            </value>
+            <value>
+                <fullName>Tranis</fullName>
+                <default>false</default>
+                <label>Tranis</label>
+            </value>
+            <value>
+                <fullName>leasing</fullName>
+                <default>false</default>
+                <label>leasing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

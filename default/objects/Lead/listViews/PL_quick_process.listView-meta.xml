@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PL_quick_process</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Quali_Status__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <columns>CCS_number_of_cards__c</columns>
+    <columns>Monatlicher_Kraftstoffverbrauch_in_Liter__c</columns>
+    <columns>Number_of_days__c</columns>
+    <columns>Anzahl_PKW__c</columns>
+    <columns>Anzahl_der_Fahrzeuge__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.COUNTRY_CODE</field>
+        <operation>equals</operation>
+        <value>PL</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Quick Process</value>
+    </filters>
+    <label>PL_quick_process</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>CCS_Administrator</role>
+        <role>Salesteam_Inbound</role>
+        <role>Salesteam_Inbound_2</role>
+    </sharedTo>
+</ListView>

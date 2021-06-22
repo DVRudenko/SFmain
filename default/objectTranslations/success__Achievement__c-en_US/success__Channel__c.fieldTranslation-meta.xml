@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Rewards earned for the behaviour will be broadcast on Inspire displays showing the specified channel --></help>
+    <label><!-- DEPRECATE - Channel --></label>
+    <name>success__Channel__c</name>
+    <relationshipLabel><!-- Base Behaviours --></relationshipLabel>
+</CustomFieldTranslation>

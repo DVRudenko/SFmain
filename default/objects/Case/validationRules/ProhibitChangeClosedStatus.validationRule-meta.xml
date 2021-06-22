@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProhibitChangeClosedStatus</fullName>
+    <active>true</active>
+    <description>STCP1-162/ STCP1-407 - prevent users from changing 'closed' status in cases with 'support' record type</description>
+    <errorConditionFormula>AND( 
+ISCHANGED(Status), 
+ISPICKVAL(PRIORVALUE(Status),'Closed'), 
+OR(RecordType.DeveloperName = 'Support',
+RecordType.DeveloperName = 'Support_CCS'), 
+$Profile.Name != 'System Administrator', 
+$Profile.Name != "Systemadministrator", 
+$Profile.Name != 'API Only',
+$Profile.Name != "CCS Service Agent",
+$Profile.Name != "CCS Service Manager",
+$Profile.Name != "Service Agent",
+$Profile.Name != "Service Manager",
+$Profile.Name != "Retention Agent",
+$Profile.Name != "Retention Manager",
+$Profile.Name != "Credit",
+$User.Alias != 'autoproc'
+)</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>The case is closed. You cannot change its status.</errorMessage>
+</ValidationRule>

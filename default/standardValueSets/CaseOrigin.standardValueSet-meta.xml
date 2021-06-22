@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Chat</fullName>
+        <default>false</default>
+        <label>Chat</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Chatter Answers</fullName>
+        <default>false</default>
+        <label>Chatter Answers</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email</fullName>
+        <default>true</default>
+        <label>Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Phone</fullName>
+        <default>false</default>
+        <label>Phone</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Post</fullName>
+        <default>false</default>
+        <label>Post</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Report</fullName>
+        <default>false</default>
+        <label>Report</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TaskPool</fullName>
+        <default>false</default>
+        <label>TaskPool</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </standardValue>
+</StandardValueSet>

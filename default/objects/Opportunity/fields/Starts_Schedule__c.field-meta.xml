@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Starts_Schedule__c</fullName>
+    <description>Calculated Date on which the next Starts Status step is due.  When this date is in the past the Starts: SLA will be checked as Expired</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Automatically calculated Date on which the next Starts Status step is due.  When this date is in the past the Starts: SLA will be checked as Expired</inlineHelpText>
+    <label>Starts: Schedule</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Records the total value of the aggregate function specified on the behaviour --></help>
+    <label><!-- Function Value Total --></label>
+    <name>success__Number_of_occurrences__c</name>
+</CustomFieldTranslation>

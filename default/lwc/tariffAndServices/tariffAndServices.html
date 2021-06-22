@@ -1,0 +1,104 @@
+<template>
+  <lightning-card variant="base">
+    <h3 slot="title" class="header exportable-header">{labels.TARIFF_AND_SERVICES}</h3>
+
+    <lightning-combobox
+      name="selectedTariff"
+      class="field exportable-field"
+      label={labels.TARIFF}
+      options={tariffs}
+      value={tariffAndServices.selectedTariff}
+      placeholder={labels.CHOOSE_TARIFF}
+      onchange={handelChange}
+    >
+    </lightning-combobox>
+
+    <lightning-input
+      name="cardsAmount"
+      class="field exportable-field"
+      label={labels.CARD_SAMOUNT}
+      required
+      max-length="4"
+      min="0"
+      max="1998"
+      value={tariffAndServices.cardsAmount}
+      onchange={handelChange}
+      type="number"
+    >
+    </lightning-input>
+    <lightning-input
+      name="cardsAmountTK"
+      class="field exportable-field"
+      label={labels.CARDS_AMOUNT_TK}
+      required
+      max-length="3"
+      min="0"
+      max="999"
+      value={tariffAndServices.cardsAmountTK}
+      onchange={handelChange}
+      type="number"
+    >
+    </lightning-input>
+    <lightning-input
+      name="cardsAmountBK"
+      class="field exportable-field"
+      label={labels.CARDS_AMOUNT_BK}
+      required
+      max-length="3"
+      min="0"
+      max="999"
+      value={tariffAndServices.cardsAmountBK}
+      onchange={handelChange}
+      type="number"
+    >
+    </lightning-input>
+
+    <lightning-combobox
+      name="selectedPromocode"
+      class="field exportable-field"
+      label={labels.PROMO_CODE}
+      options={promocodes}
+      value={tariffAndServices.selectedPromocode}
+      placeholder={labels.CHOOSE_PROMO_CODE}
+      onchange={handelChange}
+    >
+    </lightning-combobox>
+    <lightning-combobox
+      name="selectedAdditionalPromocode"
+      class="field exportable-field"
+      label={labels.ADDITIONAL_PROMO_CODE}
+      options={additionalPromocodes}
+      value={tariffAndServices.selectedAdditionalPromocode}
+      placeholder={labels.CHOOSE_ADDITIONAL_PROMO_CODE}
+      onchange={handelChange}
+    >
+    </lightning-combobox>
+
+    <lightning-input
+      name="virtualCardsSelected"
+      class="toggle exportable-field exportable-boolean"
+      label={labels.VIRTUAL_CARDS}
+      type="toggle"
+      checked={tariffAndServices.virtualCardsSelected}
+      onchange={handelChange}
+    ></lightning-input>
+
+    <lightning-input
+      name="personalConsultantSelected"
+      class="toggle exportable-field exportable-boolean"
+      label={labels.PERSONAL_CONSULTANT}
+      type="toggle"
+      checked={tariffAndServices.personalConsultantSelected}
+      onchange={handelChange}
+    ></lightning-input>
+
+    <lightning-input
+      name="documentsExpressDeliverySelected"
+      class="toggle exportable-field exportable-boolean"
+      label={labels.REPORT_DOCUMENTS_EXPRESS_DELIVERY}
+      type="toggle"
+      checked={tariffAndServices.documentsExpressDeliverySelected}
+      onchange={handelChange}
+    ></lightning-input>
+  </lightning-card>
+</template>

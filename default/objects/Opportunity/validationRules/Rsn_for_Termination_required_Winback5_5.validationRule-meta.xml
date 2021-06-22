@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rsn_for_Termination_required_Winback5_5</fullName>
+    <active>true</active>
+    <description>"Reason for Termination" field is required if "5.5 Winback Failed" Starts Status is selected</description>
+    <errorConditionFormula>AND( ISCHANGED(Starts_Status__c), ISPICKVAL(Starts_Status__c, '5.5 Winback Failed'), ISBLANK(Reason_for_Termination__c))</errorConditionFormula>
+    <errorMessage>"Reason for Termination" field is required for "5.5 Winback failed" Starts Status.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,6 @@
+<aura:component controller="TaskController" implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName" access="global">
+    <aura:attribute name="recordId" type="String" />
+    <lightning:workspaceAPI aura:id="workspace"/>
+
+    <lightning:button variant="neutral" label="Create Related Case" title="Create Case" onclick="{! c.createCase }"/>
+</aura:component>

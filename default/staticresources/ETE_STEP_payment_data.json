@@ -1,0 +1,1031 @@
+{
+    "translations": {
+        "title_1_pd": {
+            "default_impl": {
+                "en": "Set up your payment details",
+                "nl": "Geeft uw betaalgegevens in",
+                "fr": "Entrer vos données de paiement",
+                "de": "Richten Sie Ihre Zahlungsdaten ein"
+            },
+            "Czech Republic CCS": {
+                "en": "Set up bank account for recurring payments",
+                "cs": "Zadejte číslo účtu pro pravidelné platby"
+            },
+            "Slovakia CCS": {
+                "en": "Bank account for recurring payments",
+                "sk": "Bank account for recurring payments"
+            }
+        },
+        "title_2_pd": {
+            "default_impl": {
+                "en": "SEPA direct debit mandate",
+                "nl": "SEPA Core incasso machtiging",
+                "fr": "Mandat de domiciliation SEPA",
+                "de": "SEPA-Lastschriftmandat"
+            },
+            "Belgium-NL": {
+                "en": "SEPA direct debit mandate",
+                "fr": "Mandat de domiciliation SEPA",
+                "nl": "SEPA Core domiciliëring machtiging"
+            },
+            "Belgium-FR": {
+                "en": "SEPA direct debit mandate",
+                "fr": "Mandat de domiciliation SEPA",
+                "nl": "SEPA Core domiciliëring machtiging"
+            },
+            "Switzerland-DE": {
+                "en": "Business Direct Debit mandate (BDD)",
+                "fr": "Prélèvement BDD (Business Direct Debit)",
+                "de": "Firmenlastschrift-Mandat BDD (Business Direct Debit)"
+            },
+            "Switzerland-FR": {
+                "en": "Business Direct Debit mandate (BDD)",
+                "fr": "Prélèvement BDD (Business Direct Debit)",
+                "de": "Firmenlastschrift-Mandat BDD (Business Direct Debit)"
+            },
+            "Czech Republic CCS": {
+                "en": "SEPA direct debit mandate",
+                "cs": "SEPA direct debit mandate"
+            },
+            "Slovakia CCS": {
+                "en": "SEPA direct debit mandate",
+                "sk": "SEPA direct debit mandate"
+            }
+        },
+        "title_2_b2b_pd": {
+            "default_impl": {
+                "en": "SEPA B2B direct debit mandate",
+                "nl": "SEPA B2B incasso machtiging",
+                "fr": "Mandat de domiciliation SEPA B2B",
+                "de": "SEPA-Firmenlastschrift-Mandat"
+            },
+            "Belgium-NL": {
+                "en": "SEPA B2B direct debit mandate",
+                "fr": "Mandat de domiciliation SEPA B2B",
+                "nl": "SEPA B2B domiciliëring machtiging"
+            },
+            "Belgium-FR": {
+                "en": "SEPA B2B direct debit mandate",
+                "fr": "Mandat de domiciliation SEPA B2B",
+                "nl": "SEPA B2B domiciliëring machtiging"
+            },
+            "Czech Republic CCS": {
+                "en": "SEPA B2B direct debit mandate",
+                "cs": "SEPA B2B direct debit mandate"
+            },
+            "Slovakia CCS": {
+                "en": "SEPA B2B direct debit mandate",
+                "sk": "SEPA B2B direct debit mandate"
+            }
+        },
+        "account_holder_name_pd": {
+            "default_impl": {
+                "en": "Name of the bank account holder",
+                "nl": "Naam rekeninghouder",
+                "fr": "Titulaire du compte bancaire",
+                "de": "Kontoinhaber"
+            },
+            "Czech Republic CCS": {
+                "en": "Name of the bank account holder",
+                "cs": "Name of the bank account holder"
+            },
+            "Slovakia CCS": {
+                "en": "Name of the bank account holder",
+                "sk": "Name of the bank account holder"
+            }
+        },
+        "account_holder_name_error_pd": {
+            "default_impl": {
+                "en": "Please enter the name of the bank account owner.",
+                "nl": "Geef de naam van de rekeninghouder in",
+                "fr": "Veuillez entrer le titulaire du compte bancaire.",
+                "de": "Bitte geben Sie den Namen des Kontoinhabers ein."
+            },
+            "Czech Republic CCS": {
+                "en": "Please enter the name of the bank account owner.",
+                "cs": "Please enter the name of the bank account owner."
+            },
+            "Slovakia CCS": {
+                "en": "Please enter the name of the bank account owner.",
+                "sk": "Please enter the name of the bank account owner."
+            }
+        },
+        "iban_name_pd": {
+            "default_impl": {
+                "en": "IBAN",
+                "nl": "IBAN",
+                "fr": "IBAN",
+                "de": "IBAN"
+            },
+            "Czech Republic CCS": {
+                "en": "IBAN",
+                "cs": "IBAN"
+            },
+            "Slovakia CCS": {
+                "en": "IBAN",
+                "sk": "IBAN"
+            }
+        },
+        "iban_name_error_pd": {
+            "default_impl": {
+                "en": "Please enter the IBAN in valid format.",
+                "nl": "Geef een geldig IBAN-nummer in",
+                "fr": "Veuillez entrer l'IBAN dans un format correct.",
+                "de": "Bitte geben Sie die IBAN in einem gültigen Format ein."
+            },
+            "Czech Republic CCS": {
+                "en": "Please enter the IBAN in valid format.",
+                "cs": "Please enter the IBAN in valid format."
+            },
+            "Slovakia CCS": {
+                "en": "Please enter the IBAN in valid format.",
+                "sk": "Please enter the IBAN in valid format."
+            }
+        },
+        "iban_name_server_error_pd": {
+            "default_impl": {
+                "en": "Please enter valid IBAN.",
+                "de": "Bitte gültige IBAN eingeben."
+            }
+        },
+        "vatId_label_pd": {
+            "default_impl": {
+                "en": "Vat Id",
+                "de": "Umsatzsteuer ID"
+            }
+        },
+        "vatId_error_pd": {
+            "default_impl": {
+                "en": "Please enter the Vat Id in valid format.",
+                "de": "Bitte geben Sie Ihre Umsatzsteuer ID im gültigen Format."
+            }
+        },
+        "taxId_label_pd": {
+            "default_impl": {
+                "en": "Tax Id",
+                "de": "Steuernummer"
+            }
+        },
+        "taxId_error_pd": {
+            "default_impl": {
+                "en": "Please enter the Tax Id in valid format.",
+                "de": "Bitte geben Sie Ihre Steuernummer im gültigen Format."
+            }
+        },
+        "next_button_please_wait_error_ds": {
+            "default_impl": {
+                "en": "Please wait...",
+                "de": "Bitte warten..."
+            }
+        },
+        "swift_label_pd": {
+            "default_impl": {
+                "en": "SWIFT",
+                "de": "SWIFT"
+            }
+        },
+        "swift_label_error_pd": {
+            "default_impl": {
+                "en": "Please enter the SWIFT in valid format.",
+                "de": "Bitte geben Sie die SWIFT in einem gültigen Format ein."
+            }
+        },
+        "document_title_pd": {
+            "default_impl": {
+                "en": "SEPA direct debit mandate",
+                "nl": "SEPA Core incasso machtiging",
+                "fr": "Mandat de domiciliation SEPA",
+                "de": "SEPA-Lastschriftmandat"
+            },
+            "Belgium-NL": {
+                "en": "SEPA direct debit mandate",
+                "fr": "Mandat de domiciliation SEPA",
+                "nl": "SEPA Core domiciliëring machtiging"
+            },
+            "Belgium-FR": {
+                "en": "SEPA direct debit mandate",
+                "fr": "Mandat de domiciliation SEPA",
+                "nl": "SEPA Core domiciliëring machtiging"
+            },
+            "Switzerland-DE": {
+                "en": "Business Direct Debit mandate (BDD)",
+                "fr": "Prélèvement BDD (Business Direct Debit)",
+                "de": "Firmenlastschrift-Mandat BDD (Business Direct Debit)"
+            },
+            "Switzerland-FR": {
+                "en": "Business Direct Debit mandate (BDD)",
+                "fr": "Prélèvement BDD (Business Direct Debit)",
+                "de": "Firmenlastschrift-Mandat BDD (Business Direct Debit)"
+            },
+            "Czech Republic CCS": {
+                "en": "Business Direct Debit",
+                "cs": "Business Direct Debit"
+            },
+            "Slovakia CCS": {
+                "en": "SEPA direct debit mandate",
+                "sk": "SEPA direct debit mandate"
+            }
+        },
+        "document_title_b2b_pd": {
+            "default_impl": {
+                "en": "SEPA B2B direct debit mandate",
+                "nl": "SEPA B2B incasso machtiging",
+                "de": "SEPA-Firmenlastschrift-Mandat"
+            },
+            "Belgium-NL": {
+                "en": "SEPA B2B direct debit mandate",
+                "fr": "Mandat de domiciliation SEPA B2B",
+                "nl": "SEPA B2B domiciliëring machtiging"
+            },
+            "Belgium-FR": {
+                "en": "SEPA B2B direct debit mandate",
+                "fr": "Mandat de domiciliation SEPA B2B",
+                "nl": "SEPA B2B domiciliëring machtiging"
+            },
+            "Czech Republic CCS": {
+                "en": "SEPA B2B direct debit mandate",
+                "cs": "SEPA B2B direct debit mandate"
+            },
+            "Slovakia CCS": {
+                "en": "SEPA B2B direct debit mandate",
+                "sk": "SEPA B2B direct debit mandate"
+            }
+        },
+        "document_description_pd": {
+            "default_impl": {
+                "en": "Please sign the authorization and present it to your bank (if your bank allows it, you can also do this online.) Note: Your bank needs information that a valid SEPA direct debit mandate between FLEETCOR and your company exists. If the bank is not informed, the debit can be refused, which can lead to a restriction of the services.",
+                "fr": "Nous vous remercions de signer le mandat et de le présenter à votre banque (vous pouvez le faire en ligne, si votre banque le permet). Remarque: votre banque doit être informée sur l'existence d'un mandat de prélèvement SEPA B2B valide entre FLEETCOR et votre entreprise. Si la banque n'en est pas informée, le prélèvement risque d'être rejeté, ce qui peut entraîner une restriction des services de vos cartes carburant.",
+                "de": "Bitte unterschreiben Sie die Ermächtigung und lassen Sie diese Ihrer Bank vorliegen (Falls dies Ihre Bank ermöglicht, können Sie dieses auch on-line durchführen.) Bemerkung: Ihre Bank benötigt eine Information, dass ein gültiges SEPA-Lastschrift-Mandat zwischen FLEETCOR und Ihrer Firma existiert. Falls die Bank nicht informiert wird, kann die Abbuchung abgelehnt werden, was zur Einschränkung der Leistungen führen kann."
+            },
+            "Netherlands":{
+                "en": "Please sign the authorization and present it to your bank (if your bank allows it, you can also do this online.) Note: Your bank needs information that a valid SEPA direct debit mandate between FLEETCOR and your company exists. If the bank is not informed, the debit can be refused, which can lead to a restriction of the services.",
+                "nl": "Onderteken de machtiging en toon deze aan uw bank (als uw bank dit toestaat, kunt u dit ook online doen). Let op: Uw bank heeft informatie nodig dat er een geldige SEPA B2B-machtiging voor automatische incasso tussen FLEETCOR en uw bedrijf bestaat. Als de bank niet op de hoogte wordt gebracht, kan de afschrijving worden geweigerd, wat kan leiden tot een beperking van de dienstverlening."
+            },
+            "Belgium-NL":{
+                "en": "Please sign the authorization and present it to your bank (if your bank allows it, you can also do this online.) Note: Your bank needs information that a valid SEPA direct debit mandate between FLEETCOR and your company exists. If the bank is not informed, the debit can be refused, which can lead to a restriction of the services.",
+                "nl": "Onderteken de machtiging en toon deze aan uw bank (als uw bank dit toestaat, kunt u dit ook online doen). Let op: Uw bank heeft informatie nodig dat er een geldige SEPA B2B-machtiging voor domiciliëring tussen FLEETCOR en uw bedrijf bestaat. Als de bank niet op de hoogte wordt gebracht, kan de afschrijving worden geweigerd, wat kan leiden tot een beperking van de dienstverlening.",
+                "fr": "Nous vous remercions de signer le mandat et de le présenter à votre banque (vous pouvez le faire en ligne, si votre banque le permet). Remarque: votre banque doit être informée sur l'existence d'un mandat de prélèvement SEPA B2B valide entre FLEETCOR et votre entreprise. Si la banque n'en est pas informée, le prélèvement risque d'être rejeté, ce qui peut entraîner une restriction des services de vos cartes carburant."
+            },
+            "Belgium-FR":{
+                "en": "Please sign the authorization and present it to your bank (if your bank allows it, you can also do this online.) Note: Your bank needs information that a valid SEPA direct debit mandate between FLEETCOR and your company exists. If the bank is not informed, the debit can be refused, which can lead to a restriction of the services.",
+                "nl": "Onderteken de machtiging en toon deze aan uw bank (als uw bank dit toestaat, kunt u dit ook online doen). Let op: Uw bank heeft informatie nodig dat er een geldige SEPA B2B-machtiging voor domiciliëring tussen FLEETCOR en uw bedrijf bestaat. Als de bank niet op de hoogte wordt gebracht, kan de afschrijving worden geweigerd, wat kan leiden tot een beperking van de dienstverlening.",
+                "fr": "Nous vous remercions de signer le mandat et de le présenter à votre banque (vous pouvez le faire en ligne, si votre banque le permet). Remarque: votre banque doit être informée sur l'existence d'un mandat de prélèvement SEPA B2B valide entre FLEETCOR et votre entreprise. Si la banque n'en est pas informée, le prélèvement risque d'être rejeté, ce qui peut entraîner une restriction des services de vos cartes carburant."
+            },
+            "Switzerland-DE":{
+                "en": "Please sign the authorization and present it to your bank (if your bank allows it, you can also do this online.) Note: Your bank needs information that a valid BDD mandate between FLEETCOR and your company exists. If the bank is not informed, the debit can be refused, which can lead to a restriction of the services.",
+                "de": "Bitte unterschreiben Sie die Ermächtigung und lassen Sie diese Ihrer Bank vorliegen (Falls dies Ihre Bank ermöglicht, können Sie dieses auch on-line durchführen.) Bemerkung: Ihre Bank benötigt eine Information, dass ein gültiges Firmenlastschrift-Mandat (BDD) zwischen FLEETCOR und Ihrer Firma existiert. Falls die Bank nicht informiert wird, kann die Abbuchung abgelehnt werden, was zur Einschränkung der Leistungen führen kann.",
+                "fr": "Nous vous remercions de signer le formulaire de prélèvement, de le présenter à votre banque et de nous renvoyer l’exemplaire pour le bénéficiaire, dûment complété et signé avec timbre de la banque."
+            },
+            "Switzerland-FR":{
+                "en": "Please sign the authorization and present it to your bank (if your bank allows it, you can also do this online.) Note: Your bank needs information that a valid BDD mandate between FLEETCOR and your company exists. If the bank is not informed, the debit can be refused, which can lead to a restriction of the services.",
+                "de": "Bitte unterschreiben Sie die Ermächtigung und lassen Sie diese Ihrer Bank vorliegen (Falls dies Ihre Bank ermöglicht, können Sie dieses auch on-line durchführen.) Bemerkung: Ihre Bank benötigt eine Information, dass ein gültiges Firmenlastschrift-Mandat (BDD) zwischen FLEETCOR und Ihrer Firma existiert. Falls die Bank nicht informiert wird, kann die Abbuchung abgelehnt werden, was zur Einschränkung der Leistungen führen kann.",
+                "fr": "Nous vous remercions de signer le formulaire de prélèvement, de le présenter à votre banque et de nous renvoyer l’exemplaire pour le bénéficiaire, dûment complété et signé avec timbre de la banque."
+            },
+            "Czech Republic CCS": {
+                "en": "Please sign the authorization and present it to your bank (if your bank allows it, you can also do this online.)<br/>Note: Your bank needs information that a valid SEPA direct debit mandate between FLEETCOR and your company exists. If the bank is not informed, the debit can be refused, which can lead to a restriction of the services.",
+                "cs": "Please sign the authorization and present it to your bank (if your bank allows it, you can also do this online.)<br/>Note: Your bank needs information that a valid SEPA direct debit mandate between FLEETCOR and your company exists. If the bank is not informed, the debit can be refused, which can lead to a restriction of the services."
+            },
+            "Slovakia CCS": {
+                "en": "Please sign the authorization and present it to your bank (if your bank allows it, you can also do this online.)<br/>Note: Your bank needs information that a valid SEPA direct debit mandate between FLEETCOR and your company exists. If the bank is not informed, the debit can be refused, which can lead to a restriction of the services.",
+                "sk": "Please sign the authorization and present it to your bank (if your bank allows it, you can also do this online.)<br/>Note: Your bank needs information that a valid SEPA direct debit mandate between FLEETCOR and your company exists. If the bank is not informed, the debit can be refused, which can lead to a restriction of the services."
+            }
+        },
+        "document_link_pd": {
+            "default_impl": {
+                "en": "/etedocuments?doc=documentsAgreement_core",
+                "de": "/etedocuments?doc=documentsAgreement_core",
+                "fr": "/etedocuments?doc=documentsAgreement_core",
+                "nl": "/etedocuments?doc=documentsAgreement_core",
+                "lu": "/etedocuments?doc=documentsAgreement_core"
+            },
+            "Switzerland-DE": {
+                "en": "/etedocuments?doc=mandateAcceptance",
+                "de": "/etedocuments?doc=mandateAcceptance",
+                "fr": "/etedocuments?doc=mandateAcceptance"
+            },
+            "Switzerland-FR": {
+                "en": "/etedocuments?doc=mandateAcceptance",
+                "de": "/etedocuments?doc=mandateAcceptance",
+                "fr": "/etedocuments?doc=mandateAcceptance"
+            },
+            "Czech Republic CCS": {
+                "en": "/etedocuments?doc=documentsAgreement",
+                "cs": "/etedocuments?doc=documentsAgreement"
+            }
+        },
+        "document_link_b2b_pd": {
+            "default_impl": {
+                "en": "/etedocuments?doc=documentsAgreement",
+                "cs": "/etedocuments?doc=documentsAgreement",
+                "sk": "/etedocuments?doc=documentsAgreement",
+                "de": "/etedocuments?doc=documentsAgreement",
+                "fr": "/etedocuments?doc=documentsAgreement",
+                "nl": "/etedocuments?doc=documentsAgreement",
+                "lu": "/etedocuments?doc=documentsAgreement"
+            }
+        },
+        "checkbox_html_pd": {
+            "default_impl": {
+                "en": "I authorize (A) FLEETCOR Deutschland GmbH to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn on my account by FLEETCOR Deutschland GmbH. I can request reimbursement of the debited amount within eight weeks, starting with the debit date. The terms and conditions agreed with my bank apply.",
+                "de": "Ich ermächtige (A) FLEETCOR Deutschland GmbH, Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich (B) weise ich mein Kreditinstitut an, die von FLEETCOR Deutschland GmbH auf mein Konto gezogenen Lastschriften einzulösen. Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrages verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen."
+            },
+            "Austria": {
+                "en": "I authorize (A) FLEETCOR Tankkarten GmbH to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn on my account by FLEETCOR Tankkarten GmbH. I can request reimbursement of the debited amount within eight weeks, starting with the debit date. The terms and conditions agreed with my bank apply.",
+                "de": "Ich ermächtige (A) FLEETCOR Tankkarten GmbH, Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich (B) weise ich mein Kreditinstitut an, die von FLEETCOR Tankkarten GmbH auf mein Konto gezogenen Lastschriften einzulösen. Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrages verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen."
+            },
+            "Netherlands":{
+                "en": "I authorize (A) FLEETCOR Technologieën B.V. to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn on my account by FLEETCOR Technologieën B.V.. I can request reimbursement of the debited amount within eight weeks, starting with the debit date. The terms and conditions apply.",
+                "nl": "Ik geeft toestemming aan (A) FLEETCOR Technologieën B.V. een opdracht te sturen aan de bank om mijn rekening te debiteren en aan (B) mijn bank mijn rekening te debiteren conform de opdracht van FLEETCOR Technologieën B.V..\nU heeft onder meer het recht op terugboeking door uw bank conform de met uw bank overeengekomen voorwaarden. Een verzoek tot terugboeking moet ingediend worden binnen 8 weken vanaf de datum waarop uw rekening werd gedebiteerd."
+            },
+            "Belgium-NL":{
+                "en": "I authorize (A) FLEETCOR Belgium BV to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn on my account by FLEETCOR Belgium BV. I can request reimbursement of the debited amount within eight weeks, starting with the debit date. The terms and conditions apply.",
+                "nl": "Ik geef toestemming aan (A) FLEETCOR Belgium BV een opdracht te sturen naar de bank om een bedrag van mijn rekening te debiteren en (B) mijn bank om een bedrag van mijn rekening te debiteren overeenkomstig de opdracht van FLEETCOR Belgium BV.\nU kunt een Europese domiciliëring laten terugbetalen. Vraag uw eigen bank naar de voorwaarden. Een verzoek tot terugbetaling moet binnen 8 weken na de datum van debitering van het bedrag van uw rekening worden ingediend.",
+                "fr": "J’autorise (A) FLEETCOR Belgium SRL à envoyer des instructions à ma banque pour débiter mon compte, et (B) ma banque à débiter mon compte conformément aux instructions de FLEETCOR Belgium SRL.\nVous bénéficiez d’un droit à un remboursement par votre banque selon les conditions décrites dans la convention que vous avez passée avec elle. Toute demande de remboursement doit être présentée dans les 8 semaines suivant la date de débit de votre compte."
+            },
+            "Belgium-FR":{
+                "en": "I authorize (A) FLEETCOR Belgium SRL to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn on my account by FLEETCOR Belgium SRL. I can request reimbursement of the debited amount within eight weeks, starting with the debit date. The terms and conditions apply.",
+                "nl": "Ik geef toestemming aan (A) FLEETCOR Belgium BV een opdracht te sturen naar de bank om een bedrag van mijn rekening te debiteren en (B) mijn bank om een bedrag van mijn rekening te debiteren overeenkomstig de opdracht van FLEETCOR Belgium BV.\nU kunt een Europese domiciliëring laten terugbetalen. Vraag uw eigen bank naar de voorwaarden. Een verzoek tot terugbetaling moet binnen 8 weken na de datum van debitering van het bedrag van uw rekening worden ingediend",
+                "fr": "J’autorise (A) FLEETCOR Belgium SRL à envoyer des instructions à ma banque pour débiter mon compte, et (B) ma banque à débiter mon compte conformément aux instructions de FLEETCOR Belgium SRL.\nVous bénéficiez d’un droit à un remboursement par votre banque selon les conditions décrites dans la convention que vous avez passée avec elle. Toute demande de remboursement doit être présentée dans les 8 semaines suivant la date de débit de votre compte."
+            },
+            "France":{
+                "en": "I authorize (A) epyx France SAS (FLEETCOR) to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn on my account by epyx France SAS (FLEETCOR). I can request reimbursement of the debited amount within eight weeks, starting with the debit date. The terms and conditions apply.",
+                "fr": "J’autorise (A) epyx France SAS (FLEETCOR) à envoyer des instructions à ma banque pour débiter mon compte, et (B) ma banque à débiter mon compte conformément aux instructions d'epyx France SAS (FLEETCOR).\nVous bénéficiez d’un droit à un remboursement par votre banque selon les conditions décrites dans la convention que vous avez passée avec elle. Toute demande de remboursement doit être présentée dans les 8 semaines suivant la date de débit de votre compte."
+            },
+            "Luxembourg":{
+                "en": "I authorize (A) Venturo Technologies S.a.r.l. (FLEETCOR) to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn on my account by Venturo Technologies S.a.r.l. (FLEETCOR). I can request reimbursement of the debited amount within eight weeks, starting with the debit date. The terms and conditions apply.",
+                "fr": "J’autorise (A) Venturo Technologies S.a.r.l. (FLEETCOR) à envoyer des instructions à ma banque pour débiter mon compte, et (B) ma banque à débiter mon compte conformément aux instructions de Venturo Technologies S.a.r.l. (FLEETCOR).\nVous bénéficiez d’un droit à un remboursement par votre banque selon les conditions décrites dans la convention que vous avez passée avec elle. Toute demande de remboursement doit être présentée dans les 8 semaines suivant la date de débit de votre compte."
+            },
+            "Switzerland-DE":{
+                "en": "I authorize my bank to deduct debits in CHF from Venturo Technologien Swiss GmbH (FLEETCOR) directly from my account until this authorization is revoked.",
+                "de": "Ich ermächtige meine Bank bis auf Widerruf, die ihr von Venturo Technologien Swiss GmbH (FLEETCOR) vorgelegten Lastschriften in CHF meinem Konto zu belasten.",
+                "fr": "J'autorise ma banque, sous réserve de révocation, à débiter sur notre compte les recouvrements directs en CHF émis par Venturo Technologien Swiss GmbH (FLEETCOR)."
+            },
+            "Switzerland-FR":{
+                "en": "I authorize my bank to deduct debits in CHF from Venturo Technologien Swiss GmbH (FLEETCOR) directly from my account until this authorization is revoked.",
+                "de": "Ich ermächtige meine Bank bis auf Widerruf, die ihr von Venturo Technologien Swiss GmbH (FLEETCOR) vorgelegten Lastschriften in CHF meinem Konto zu belasten.",
+                "fr": "J'autorise ma banque, sous réserve de révocation, à débiter sur notre compte les recouvrements directs en CHF émis par Venturo Technologien Swiss GmbH (FLEETCOR)."
+            },
+            "Czech Republic CCS": {
+                "en": "I authorize (A) FLEETCOR Technologieën B.V. to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn by FLEETCOR Technologieën B.V. from my account.",
+                "cs": "I authorize (A) FLEETCOR Technologieën B.V. to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn by FLEETCOR Technologieën B.V. from my account."
+            },
+            "Slovakia CCS": {
+                "en": "I authorize (A) FLEETCOR Technologieën B.V. to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn by FLEETCOR Technologieën B.V. from my account.",
+                "sk": "I authorize (A) FLEETCOR Technologieën B.V. to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn by FLEETCOR Technologieën B.V. from my account."
+            }
+        },
+        "checkbox_html_b2b_pd": {
+            "default_impl": {
+                "en": "I authorize (A) FLEETCOR Deutschland GmbH to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn from my account by FLEETCOR Deutschland GmbH. This direct debit mandate is only used to collect direct debits that have been drawn on the company accounts. I cannot request a reimbursement of the debited amount after the payment has taken place. I can instruct my bank not to redeem the direct debits before the due date of the payment.",
+                "de": "Ich ermächtige (A) FLEETCOR Deutschland GmbH, Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich (B) weise ich mein Kreditinstitut an, die von FLEETCOR Deutschland GmbH auf mein Konto gezogenen Lastschriften einzulösen. Dieses Lastschriftmandatdient nur dem Einzug von Lastschriften, die auf Konten von Unternehmern gezogen sind. Ich bin nicht berechtigt, nach der erfolgten Einlösung eine Erstattung des belasteten Betrages zu verlangen. Ich bin berechtigt, mein Kreditinstitut bis zum Fälligkeitstag anzuweisen, Lastschriften nicht einzulösen."
+            },
+            "Austria": {
+                "en": "I authorize (A) FLEETCOR Tankkarten GmbH to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn on my account by FLEETCOR Tankkarten GmbH. I can request reimbursement of the debited amount within eight weeks, starting with the debit date. The terms and conditions agreed with my bank apply.",
+                "de": "Ich ermächtige (A) FLEETCOR Tankkarten GmbH, Zahlungen von meinem Konto mittels Lastschrift einzuziehen. Zugleich (B) weise ich mein Kreditinstitut an, die von FLEETCOR Tankkarten GmbH auf mein Konto gezogenen Lastschriften einzulösen. Ich kann innerhalb von acht Wochen, beginnend mit dem Belastungsdatum, die Erstattung des belasteten Betrages verlangen. Es gelten dabei die mit meinem Kreditinstitut vereinbarten Bedingungen."
+            },
+            "Netherlands":{
+                "en": "I authorize (A) FLEETCOR Technologieën B.V. to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn from my account by FLEETCOR Technologieën B.V..\nThis direct debit mandate is only used to collect direct debits that have been drawn on the company accounts. I cannot request a reimbursement of the debited amount after the payment has taken place. I can instruct my bank not to redeem the direct debits before the due date of the payment.",
+                "nl": "Ik geef toestemming aan (A) FLEETCOR Technologieën B.V. een opdracht te sturen aan de bank om mijn rekening te debiteren en aan (B) mijn bank mijn rekening te debiteren conform de opdracht van FLEETCOR Technologieën B.V..\nDeze machtiging is uitsluitend bedoeld voor zakelijke incassotransacties tussen bedrijven. Na afschrijving heeft u geen recht om het bedrag terug te laten boeken, maar u hebt tot en met de vervaldatum van de betaling wel het recht uw bank te vragen uw rekening niet te debiteren. Vraag uw bank naar de voorwaarden in dat geval."
+            },
+            "Belgium-NL":{
+                "en": "I authorize (A) FLEETCOR Belgium BV to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn from my account by FLEETCOR Belgium BV. \nThis direct debit mandate is only used to collect direct debits that have been drawn on the company accounts. I cannot request a reimbursement of the debited amount after the payment has taken place. I can instruct my bank not to redeem the direct debits before the due date of the payment.",
+                "nl": "Ik geef toestemming aan (A) FLEETCOR Belgium BV een opdracht te sturen naar de bank om een bedrag van mijn rekening te debiteren en (B) mijn bank om een bedrag van mijn rekening te debiteren overeenkomstig de opdracht van FLEETCOR Belgium BV. Dit mandaat is uitsluitend bedoeld voor betalingen tussen bedrijven. U hebt geen recht op terugbetaling nadat uw rekening is gedebiteerd, maar u hebt tot de vervaldag het recht om uw bank te verzoeken uw rekening niet te debiteren.",
+                "fr": "J’autorise (A) FLEETCOR Belgium SRL à envoyer des instructions à ma banque pour débiter mon compte, et (B) ma banque à débiter mon compte conformément aux instructions de FLEETCOR Belgium SRL.\nCe mandat est destiné uniquement aux transactions business-to-business. Vous ne bénéficiez pas d’un droit à un remboursement par votre banque après le débit de votre compte, mais jusqu’à la date d’échéance vous avez le droit de demander à votre banque de ne pas débiter votre compte."
+            },
+            "Belgium-FR":{
+                "en": "I authorize (A) FLEETCOR Belgium SRL to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn from my account by FLEETCOR Belgium SRL.\nThis direct debit mandate is only used to collect direct debits that have been drawn on the company accounts. I cannot request a reimbursement of the debited amount after the payment has taken place. I can instruct my bank not to redeem the direct debits before the due date of the payment.",
+                "nl": "Ik geef toestemming aan (A) FLEETCOR Belgium BV een opdracht te sturen naar de bank om een bedrag van mijn rekening te debiteren en (B) mijn bank om een bedrag van mijn rekening te debiteren overeenkomstig de opdracht van FLEETCOR Belgium BV. Dit mandaat is uitsluitend bedoeld voor betalingen tussen bedrijven. U hebt geen recht op terugbetaling nadat uw rekening is gedebiteerd, maar u hebt tot de vervaldag het recht om uw bank te verzoeken uw rekening niet te debiteren.",
+                "fr": "J’autorise (A) FLEETCOR Belgium SRL à envoyer des instructions à ma banque pour débiter mon compte, et (B) ma banque à débiter mon compte conformément aux instructions de FLEETCOR Belgium SRL.\nCe mandat est destiné uniquement aux transactions business-to-business. Vous ne bénéficiez pas d’un droit à un remboursement par votre banque après le débit de votre compte, mais jusqu’à la date d’échéance vous avez le droit de demander à votre banque de ne pas débiter votre compte."
+            },
+            "France":{
+                "en": "I authorize (A) epyx France SAS (FLEETCOR) to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn from my account by epyx France SAS (FLEETCOR).\nThis direct debit mandate is only used to collect direct debits that have been drawn on the company accounts. I cannot request a reimbursement of the debited amount after the payment has taken place. I can instruct my bank not to redeem the direct debits before the due date of the payment.",
+                "fr": "J’autorise (A) epyx France SAS (FLEETCOR) à envoyer des instructions à ma banque pour débiter mon compte, et (B) ma banque à débiter mon compte conformément aux instructions d'epyx France SAS (FLEETCOR).\nCe mandat est destiné uniquement aux transactions business-to-business. Vous ne bénéficiez pas d’un droit à un remboursement par votre banque après le débit de votre compte, mais jusqu’à la date d’échéance vous avez le droit de demander à votre banque de ne pas débiter votre compte."
+            },
+            "Luxembourg":{
+                "en": "I authorize (A) Venturo Technologies S.a.r.l. (FLEETCOR) to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn from my account by Venturo Technologies S.a.r.l. (FLEETCOR).\nThis direct debit mandate is only used to collect direct debits that have been drawn on the company accounts. I cannot request a reimbursement of the debited amount after the payment has taken place. I can instruct my bank not to redeem the direct debits before the due date of the payment.",
+                "fr": "J’autorise (A) Venturo Technologies S.a.r.l. (FLEETCOR) à envoyer des instructions à ma banque pour débiter mon compte, et (B) ma banque à débiter mon compte conformément aux instructions de Venturo Technologies S.a.r.l. (FLEETCOR).\nCe mandat est destiné uniquement aux transactions business-to-business. Vous ne bénéficiez pas d’un droit à un remboursement par votre banque après le débit de votre compte, mais jusqu’à la date d’échéance vous avez le droit de demander à votre banque de ne pas débiter votre compte."
+            },
+            "Czech Republic CCS": {
+                "en": "I authorize (A) FLEETCOR Technologieën B.V. to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn by FLEETCOR Technologieën B.V. from my account.",
+                "cs": "I authorize (A) FLEETCOR Technologieën B.V. to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn by FLEETCOR Technologieën B.V. from my account."
+            },
+            "Slovakia CCS": {
+                "en": "I authorize (A) FLEETCOR Technologieën B.V. to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn by FLEETCOR Technologieën B.V. from my account.",
+                "sk": "I authorize (A) FLEETCOR Technologieën B.V. to collect payments from my account by direct debit. At the same time (B) I instruct my bank to redeem the direct debits drawn by FLEETCOR Technologieën B.V. from my account."
+            }
+        },
+        "next_button_error_ds": {
+            "default_impl": {
+                "en": "Please fill out all required fields.",
+                "nl": "Vul alle noodzakelijke velden in",
+                "hu": "Kérjük, töltse ki az összes kötelező mezőt.",
+                "fr": "Veuillez remplir tous les champs requis.",
+                "de": "Bitte füllen Sie alle erforderlichen Felder aus."
+            },
+            "Czech Republic CCS": {
+                "en": "Please fill out all required fields.",
+                "cs": "Prosím vyplňte všechna povinná pole."
+            },
+            "Slovakia CCS": {
+                "en": "Please fill out all required fields.",
+                "sk": "Please fill out all required fields."
+            }
+        },
+        "bankAccountPrefix_pd": {
+            "default_impl": {
+                "en": "Prefix",
+                "cs": "Předčíslí"
+            }
+        },
+        "bankAccountPrefix_error_pd": {
+            "default_impl": {
+                "en": "Please enter the Prefix in valid format."
+            }
+        },
+        "bankAccountNumber_pd": {
+            "default_impl": {
+                "en": "Account number",
+                "cs": "Číslo účtu"
+            }
+        },
+        "bankAccountNumber_error_pd": {
+            "default_impl": {
+                "en": "Please enter the Account number in valid format.",
+                "cs": "Zadejte prosím číslo účtu v platném formátu."
+            }
+        },
+        "bankCodeOrName_pd": {
+            "default_impl": {
+                "en": "Bank code or name",
+                "cs": "Bank code or name"
+            }
+        },
+        "bankCodeOrName_error_pd": {
+            "default_impl": {
+                "en": "Please select a Bank."
+            }
+        },
+        "termsAndConditionsAgreement_pd": {
+            "default_impl": {
+                "en": "I confirm that I have read and understood the <a href='/resource/ETE_DOCUMENTS_2/Terms_and_Conditions_CCS_Limit_CZ.pdf' target='_blank'>Terms & Conditions</a> and <a href='/resource/ETE_DOCUMENTS_1/tariffSheets_CCS_Limit_CZ.pdf' target='_blank'>Tariff sheet</a> and I agree to them.",
+                "cs": "Potvrzuji, že jsem četla a rozumím <a href='/resource/ETE_DOCUMENTS_2/Terms_and_Conditions_CCS_Limit_CZ.pdf' target='_blank'>Obchodním podmínkám</a> a <a href='/resource/ETE_DOCUMENTS_1/tariffSheets_CCS_Limit_CZ.pdf' target='_blank'>ceníku</a> a souhlasím s nimi."
+            },
+            "Slovakia CCS": {
+                "en": "I confirm that I have read and understood the <a href='/resource/ETE_DOCUMENTS_2/Terms_and_Conditions_CCS_Limit_SK.pdf' target='_blank'>Terms & Conditions</a> and <a href='/resource/ETE_DOCUMENTS_2/tariffSheets_CCS_Limit_SK.pdf' target='_blank'>Tariff sheet</a> and I agree to them."
+            }
+        },
+        "termsAndConditionsAgreement_error_pd": {
+            "default_impl": {
+                "en": "This consent is required for provision of the service."
+            },
+            "Czech Republic CCS": {
+                "en": "This consent is required for provision of the service.",
+                "cs": "This consent is required for provision of the service."
+            },
+            "Slovakia CCS": {
+                "en": "This consent is required for provision of the service.",
+                "sk": "This consent is required for provision of the service."
+            }
+        },
+        "acceptSepa_pd": {
+            "default_impl": {
+                "en": "I confirm that I will establish a direct debit authorization with my bank for the $1$ limit in favor of CCS bank account within 2 working days."
+            }
+        },
+        "acceptSepa_error_pd": {
+            "default_impl": {
+                "en": "This consent is required for provision of the service.",
+                "nl": "Deze toestemming is vereist om de service te kunnen leveren",
+                "fr": "Ce consentement est requis pour fournir le service.",
+                "de": "Diese Zustimmung ist für die Erbringung der Dienstleistung erforderlich."
+            },
+            "Czech Republic CCS": {
+                "en": "This consent is required for provision of the service.",
+                "cs": "This consent is required for provision of the service."
+            },
+            "Slovakia CCS": {
+                "en": "This consent is required for provision of the service.",
+                "sk": "This consent is required for provision of the service."
+            }
+        },
+        "saveFormForPayLater_title_pd": {
+            "default_impl": {
+                "en": "SAVE THE FORM FOR LATER",
+                "cs": "ULOŽIT FORMULÁŘ NA POZDĚJI",
+                "sk": "ULOŽIŤ FORMULÁR NA NESKÔR"
+            }
+        },
+        "saveFormForPayLater_description_pd": {
+            "default_impl": {
+                "en": "If you want to return and complete your order later, you can save it by sending it to your e-mail.",
+                "cs": "Chcete-li se k rozpracovanému formuláři v budoucnu vrátit, můžete si jej uložit zasláním na Váš e-mail.",
+                "sk": "Chcete-li se k rozpracovanému formuláři v budoucnu vrátit, můžete si jej uložit zasláním na Váš e-mail."
+            }
+        },
+        "saveFormForPayLater_description2_pd": {
+            "default_impl": {
+                "en": "Please enter your e-mail address to which you want to send the form.",
+                "cs": "Zadejte prosím Vaši e-mailovou adresu, na kterou chcete formulář zaslat.",
+                "sk": "Zadejte prosím Vaši e-mailovou adresu, na kterou chcete formulář zaslat."
+            }
+        },
+        "saveFormForPayLater_saveButton_pd": {
+            "default_impl": {
+                "en": "Send",
+                "cs": "Odeslat",
+                "sk": "Odeslat"
+            }
+        }
+    },
+    "settings": {
+        "data_object": {
+            "Current_Language__c": {
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "2",
+                    "mapto": "currentLang"
+                }
+            },
+            "Account_Holder__c": {
+                "Germany": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff\\s'-]+$",
+                    "maxlength": "100",
+                    "mapto": "accountHolder",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff\\s'-]+$",
+                    "maxlength": "100",
+                    "mapto": "accountHolder",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff\\s'-]+$",
+                    "maxlength": "100",
+                    "mapto": "accountHolder",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff\\s'-]+$",
+                    "maxlength": "100",
+                    "mapto": "accountHolder",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff\\s'-]+$",
+                    "maxlength": "100",
+                    "mapto": "accountHolder",
+                    "required": true
+                },
+                "France": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff\\s'-]+$",
+                    "maxlength": "100",
+                    "mapto": "accountHolder",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff\\s'-]+$",
+                    "maxlength": "100",
+                    "mapto": "accountHolder",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff\\s'-]+$",
+                    "maxlength": "100",
+                    "mapto": "accountHolder",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "^[a-zA-ZÀ-ž\\x7f-\\xff\\s'-]+$",
+                    "maxlength": "100",
+                    "mapto": "accountHolder",
+                    "required": true
+                }
+            },
+            "IBAN__c": {
+                "Germany": {
+                    "regex": "^[Dd]{1}[Ee]{1}[0-9]{2}\\s?[0-9]{4}\\s?[0-9]{4}\\s?[0-9]{4}\\s?[0-9]{4}\\s?[0-9]{2}?$",
+                    "maxlength": "26",
+                    "mapto": "iban",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "^[Aa]{1}[Tt]{1}[0-9]{2}\\s?[0-9]{4}\\s?[0-9]{4}\\s?[0-9]{4}\\s?[0-9]{4}?$",
+                    "maxlength": "26",
+                    "mapto": "iban",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "^[Nn]{1}[Ll]{1}[0-9]{2}[A-Za-z]{4}[0-9]{10}?$",
+                    "maxlength": "26",
+                    "mapto": "iban",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "^[Bb]{1}[Ee]{1}[0-9]{14}?$",
+                    "maxlength": "26",
+                    "mapto": "iban",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "^[Bb]{1}[Ee]{1}[0-9]{14}?$",
+                    "maxlength": "26",
+                    "mapto": "iban",
+                    "required": true
+                },
+                "France": {
+                    "regex": "^[Ff]{1}[Rr]{1}[0-9]{12}[A-Za-z0-9]{11}[0-9]{2}?$",
+                    "maxlength": "27",
+                    "mapto": "iban",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "^[Cc]{1}[Hh]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{1}?$",
+                    "maxlength": "21",
+                    "mapto": "iban",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "^[Cc]{1}[Hh]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{1}?$",
+                    "maxlength": "21",
+                    "mapto": "iban",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "^[Ll]{1}[Uu]{1}[0-9]{2}[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}?$",
+                    "maxlength": "21",
+                    "mapto": "iban",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "^[Ss]{1}[Kk]{1}[0-9]{2}[0-9]{20}$",
+                    "maxlength": "24",
+                    "mapto": "iban",
+                    "required": true
+                }
+            },
+            "Bank_Account_Prefix__c": {
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "6",
+                    "mapto": "bankAccountPrefix",
+                    "required": false
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "6",
+                    "mapto": "bankAccountPrefix",
+                    "required": false
+                }
+            },
+            "Bank_Account_Number__c": {
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "bankAccountNumber",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "10",
+                    "mapto": "bankAccountNumber",
+                    "required": true
+                }
+            },
+            "Bank_Code__c": {
+                "Czech Republic CCS": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "4",
+                    "mapto": "bankCode",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "4",
+                    "mapto": "bankCode",
+                    "required": true
+                }
+            },
+            "Bank_Name__c": {
+                "Czech Republic CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "bankName",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "",
+                    "maxlength": "255",
+                    "mapto": "bankName",
+                    "required": true
+                }
+            },
+            "Terms_And_Conditions_Agreement__c": {
+                "Czech Republic CCS" : {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                },
+                "Slovakia CCS" : {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "termsAndConditionsAgreement",
+                    "required": true
+                }
+            },
+            "Tax_ID__c": {
+                "Germany": {
+                    "regex": "^((28|9|11|0|30|24|22|26|40|23|5|27|10|32|31|21|41|1|2){0,1}\\d{2,3}(0){0,1}\\d{3,4}\\d{3,4}\\d{1,1}$)",
+                    "maxlength": "13",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "10",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "8",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "^([0]{0,1}[0-9]{9})+$",
+                    "maxlength": "10",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "^([0]{0,1}[0-9]{9})+$",
+                    "maxlength": "10",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "France": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "9",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "10",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "10",
+                    "mapto": "taxId",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "^[0-9]+$",
+                    "maxlength": "10",
+                    "mapto": "taxId",
+                    "required": false
+                }
+            },
+            "Vat_ID__c": {
+                "Germany": {
+                    "regex": "^([Dd]{1}[Ee]{1}[0-9]{9})+$",
+                    "maxlength": "11",
+                    "mapto": "vatId",
+                    "required": false
+                },
+                "Austria": {
+                    "regex": "^([Aa]{1}[Tt]{1}[Uu]{1}[0-9]{8})+$",
+                    "maxlength": "11",
+                    "mapto": "vatId",
+                    "required": false
+                },
+                "Netherlands": {
+                    "regex": "^([Nn]{1}[Ll]{1}[0-9]{9}[Bb]{1}[0-9]{2})+$",
+                    "maxlength": "14",
+                    "mapto": "vatId",
+                    "required": false
+                },
+                "Belgium-NL": {
+                    "regex": "^([Bb]{1}[Ee]{1}[0]{0,1}[0-9]{9})+$",
+                    "maxlength": "12",
+                    "mapto": "vatId",
+                    "required": false
+                },
+                "Belgium-FR": {
+                    "regex": "^([Bb]{1}[Ee]{1}[0]{0,1}[0-9]{9})+$",
+                    "maxlength": "12",
+                    "mapto": "vatId",
+                    "required": false
+                },
+                "France": {
+                    "regex": "^([Ff]{1}[Rr]{1}[0-9a-hj-np-zA-HJ-NP-Z]{2}[0-9]{9})+$",
+                    "maxlength": "13",
+                    "mapto": "vatId",
+                    "required": false
+                },
+                "Switzerland-FR": {
+                    "regex": "^([Cc]{1}[Hh]{1}[Ee]{1}[0-9]{9})+$",
+                    "maxlength": "12",
+                    "mapto": "vatId",
+                    "required": false
+                },
+                "Switzerland-DE": {
+                    "regex": "^([Cc]{1}[Hh]{1}[Ee]{1}[0-9]{9})+$",
+                    "maxlength": "12",
+                    "mapto": "vatId",
+                    "required": false
+                },
+                "Luxembourg": {
+                    "regex": "^([Ll]{1}[Uu]{1}[0-9]{8})+$",
+                    "maxlength": "10",
+                    "mapto": "vatId",
+                    "required": false
+                }
+            },
+            "SWIFT__c": {
+                "Germany": {
+                    "regex": "^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$",
+                    "maxlength": "11",
+                    "mapto": "swift",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$",
+                    "maxlength": "11",
+                    "mapto": "swift",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$",
+                    "maxlength": "11",
+                    "mapto": "swift",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$",
+                    "maxlength": "11",
+                    "mapto": "swift",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$",
+                    "maxlength": "11",
+                    "mapto": "swift",
+                    "required": true
+                },
+                "France": {
+                    "regex": "^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$",
+                    "maxlength": "11",
+                    "mapto": "swift",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$",
+                    "maxlength": "11",
+                    "mapto": "swift",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$",
+                    "maxlength": "11",
+                    "mapto": "swift",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$",
+                    "maxlength": "11",
+                    "mapto": "swift",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "^[A-Za-z]{4}[A-Za-z]{2}[A-Za-z0-9]{2}([A-Za-z0-9]{3})?$",
+                    "maxlength": "11",
+                    "mapto": "swift",
+                    "required": true
+                }
+            },
+            "Accept_Sepa__c": {
+                "Germany": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "acceptSepa",
+                    "required": true
+                },
+                "Austria": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "acceptSepa",
+                    "required": true
+                },
+                "Netherlands": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "acceptSepa",
+                    "required": true
+                },
+                "Belgium-NL": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "acceptSepa",
+                    "required": true
+                },
+                "Belgium-FR": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "acceptSepa",
+                    "required": true
+                },
+                "France": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "acceptSepa",
+                    "required": true
+                },
+                "Switzerland-FR": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "acceptSepa",
+                    "required": true
+                },
+                "Switzerland-DE": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "acceptSepa",
+                    "required": true
+                },
+                "Luxembourg": {
+                    "regex": "",
+                    "maxlength": "5",
+                    "mapto": "acceptSepa",
+                    "required": true
+                },
+                "Czech Republic CCS": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "acceptSepa",
+                    "required": true
+                },
+                "Slovakia CCS": {
+                    "regex": "^(?i)(true|false)$",
+                    "maxlength": "5",
+                    "mapto": "acceptSepa",
+                    "required": true
+                }
+            }
+        }
+    }
+}

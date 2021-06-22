@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Checked if a Case was associated with an Account while email-to-case creation --></help>
+    <label><!-- Is Account associated --></label>
+    <name>Is_account_associated__c</name>
+</CustomFieldTranslation>

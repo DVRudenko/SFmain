@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>MIT DER DOCUSIGN-EMPFÄNGERROLLE VERKNÜPFTER WERT. DIESER WERT WIRD VERWENDET, UM STANDARD-ANKERTAGS IN DOKUMENTEN ZUZUORDNEN.</help>
+    <label><!-- RoleValue --></label>
+    <name>dsfs__RoleValue__c</name>
+</CustomFieldTranslation>

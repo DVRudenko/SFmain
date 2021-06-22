@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of Applets run in the Interaction or Call flow --></help>
+    <label><!-- Number of Applets --></label>
+    <name>NVMStatsSF__Number_of_Applets__c</name>
+</CustomFieldTranslation>

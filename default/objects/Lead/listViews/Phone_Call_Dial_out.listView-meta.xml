@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Call_Dial_out</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>Lead_Source_Type__c</columns>
+    <columns>Phone_Status__c</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Disqualified,Дисквалификация</value>
+    </filters>
+    <filters>
+        <field>Phone_Status__c</field>
+        <operation>equals</operation>
+        <value>Dial out</value>
+    </filters>
+    <label>Phone_Call_Недозвон</label>
+    <language>ru</language>
+    <queue>PPR_Email_to_Lead</queue>
+    <sharedTo>
+        <group>PPR_Quality_Control</group>
+        <role>PPR_Bryansk</role>
+        <role>PPR_Bryansk_PSO_3</role>
+        <role>PPR_Marketing</role>
+        <role>PPR_Teamleader_Telesales_PSI</role>
+    </sharedTo>
+</ListView>

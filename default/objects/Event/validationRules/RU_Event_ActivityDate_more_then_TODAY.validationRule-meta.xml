@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RU_Event_ActivityDate_more_then_TODAY</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+RecordType.DeveloperName  = &#39;Russian_Sales_Event&#39;,
+DATEVALUE(ActivityDateTime) &gt; TODAY(),
+OR ( ISPICKVAL( Event_Status__c , &#39;Completed&#39;),
+ ISPICKVAL( Event_Status__c , &#39;Cancellation&#39;)))</errorConditionFormula>
+    <errorDisplayField>StartDateTime</errorDisplayField>
+    <errorMessage>StartDate must meet or precede the present day.</errorMessage>
+</ValidationRule>

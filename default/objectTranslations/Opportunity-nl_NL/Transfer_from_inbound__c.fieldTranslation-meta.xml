@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Перевод входящих в PSO1 по БК --></help>
+    <label><!-- Transfer from inbound (business card) --></label>
+    <name>Transfer_from_inbound__c</name>
+</CustomFieldTranslation>

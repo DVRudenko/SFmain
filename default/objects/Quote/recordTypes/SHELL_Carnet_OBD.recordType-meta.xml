@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SHELL_Carnet_OBD</fullName>
+    <active>true</active>
+    <label>SHELL / Carnet OBD</label>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Abgelehnt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Akzeptiert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entwurf</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Genehmigt</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Herausgegeben</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Muss überprüft werden</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Verweigert</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wird überprüft</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

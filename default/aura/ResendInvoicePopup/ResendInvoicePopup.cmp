@@ -1,0 +1,137 @@
+<aura:component controller="GFNI_ResendInvoicePopupController">
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="objectName" type="String"/>
+    <aura:attribute name="selectedCase" type="Case"/>
+    <aura:attribute name="backupCase" type="Case"/>
+    <aura:attribute name="isCaseSelected" type="Boolean"/>
+    <aura:attribute name="caseList" type="Case[]"/>
+    <aura:attribute name="isNewCase" type="Boolean" default="false"/>
+    <aura:attribute name="emailContent" type="Object"/>
+    <aura:attribute name="newCaseParameters" type="Object"/>
+    <aura:attribute name="queueEmailList" type="List"/>
+    <aura:attribute name="loaded" type="Boolean" default="true"/>
+    <aura:attribute name="docNumberList" type="List"/>
+    <aura:attribute name="invoices" type="List"/>
+    <aura:attribute name="isInvoicesLoaded" type="Boolean" default="true"/>
+    <aura:attribute name="isEmailValid" type="Boolean"/>
+    <aura:attribute name="gfnParams" type="String"/>
+    <aura:attribute name="relatedAccountId" type="String"/>
+    <aura:attribute name="relatedERP" type="String"/>
+    <aura:attribute name="contactList" type="Contact[]"/>
+    <aura:attribute name="accParams" type="String"/>
+    <aura:attribute name="caseLoaded" type="Boolean"/>
+    <aura:attribute name="templateLoaded" type="Boolean"/>
+    <aura:attribute name="type" type="String"/>
+    <aura:attribute name="cards" type="List"/>
+    <aura:attribute name="existingDocumentList" type="List"/>
+    <aura:attribute name="address" type="Object"/>
+    <aura:attribute name="companyName" type="String"/>
+    <aura:attribute name="recordType" type="String"/>
+    <aura:attribute name="documentListOpened" type="Boolean"/>
+
+
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.selectedCase}" action="{!c.handleCaseChanging}" />
+    <aura:handler name="change" value="{!v.docNumberList}" action="{!c.handleDocNumberListChanging}" />
+
+    <aura:handler name="closeDocumentList" event="c:closeDocumentList" action="{!c.closeDocumentList}"/>
+
+    <aura:registerEvent name="ResendInvoiceButtonEvent" type="c:ResendInvoiceButtonEvent"/>
+
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <lightning:buttonIcon iconName="utility:close"
+                                        onclick="{! c.closeModel }"
+                                        alternativeText="close"
+                                        variant="bare-inverse"
+                                        class="slds-modal__close"/>
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Select Case</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <div class="slds-form-element">
+                    <div style="display: inline-block;">
+                        <lightning:input type="toggle" 
+                            name="createNewCaseCheck" 
+                            id="is-new-case" 
+                            checked="{!v.isNewCase}" 
+                            onchange="{!c.updateCase}"
+                            messageToggleActive=""
+                            messageToggleInactive=""
+                            disabled="{!!v.templateLoaded}"
+                        />
+                    </div>
+                    <span class="slds-form-element__label toggle-button-label">Create New Case</span>
+                </div>
+                <div class="spinner-container">
+                    <aura:if isTrue="{!!and(v.caseLoaded,v.templateLoaded)}">
+                        <lightning:spinner alternativeText="Loading..." size="small"/>
+                    </aura:if>
+                    <aura:if isTrue="{!v.isNewCase}">
+                        <c:CaseCreationPanel newCase="{!v.selectedCase}" queueEmailList="{!v.queueEmailList}" emailSender="{!v.emailContent.from}" contactList="{!v.contactList}" emailTo="{!v.emailContent.to}" emailCc="{!v.emailContent.cc}" type="{!v.type}"/>
+                        <aura:set attribute="else">
+                            <c:CaseSelectionPanel   selectedCase="{!v.selectedCase}" caseList="{!v.caseList}" isSelected="{!v.isCaseSelected}" 
+                                                    email="{!v.emailContent}" objectName="{!v.objectName}" contactList="{!v.contactList}" emailTo="{!v.emailContent.to}" emailCc="{!v.emailContent.cc}" type="{!v.type}"/>
+                        </aura:set>
+                    </aura:if>
+                </div>
+                <div class="spinner-container">
+                    <aura:if isTrue="{!!v.templateLoaded}">
+                        <lightning:spinner alternativeText="Loading..." size="small"/>
+                    </aura:if>
+                    <c:EmailPanel email="{!v.emailContent}" validity="{!v.isEmailValid}"/>
+                </div>
+                <!-- INVOICES -->
+                <aura:iteration items="{!v.invoices}" var="invoice">
+                    <div class="slds-p-left_medium">
+                        <a href="{!or(invoice.isError, invoice.loading) ? '' : invoice.url}" target="_blank" download="{!invoice.name + '.pdf'}" class="{!or(invoice.isError, invoice.loading) ? 'disabled-doc-link' : ''}">{!invoice.name + '.pdf'}</a>
+                        <aura:if isTrue="{!or(invoice.isError)}">
+                            <span class='document-loading-error'>Error!</span>   
+                            <button onclick="{! c.getDocument }" name="{!invoice.name}" class="slds-button slds-button_icon slds-p-left_small" title="Settings">
+                                <lightning:icon iconName="utility:rotate" alternativeText="Try again" size="xx-small"/>
+                            </button>
+                        </aura:if>
+                        <aura:if isTrue="{!invoice.loading}">
+                            <span class='document-loading-error'>Loading...</span>                               
+                        </aura:if>
+                    </div>
+                </aura:iteration>
+                <div class="spinner-container">
+                    <aura:if isTrue="{!!v.isInvoicesLoaded}">
+                        <lightning:spinner alternativeText="Loading..." size="small"/>
+                    </aura:if>
+                </div>
+                <!-- INVOICES END -->
+
+                <!-- DOCUMENTS -->
+                <lightning:fileUpload label="Uplad documents"
+                    name="fileUploader"
+                    multiple="true"
+                    onuploadfinished="{!c.handleUploadFinished}" />
+
+
+                <lightning:button onclick="{! c.openDocumentList }">Add From Library</lightning:button>
+                <aura:iteration items="{!v.existingDocumentList}" var="doc">
+                    <div class="slds-p-left_medium">
+                        <a href="#" target="_blank" download="">{!doc.Title}</a>
+                        <button onclick="{! c.removeDocFromList }" name="{!doc.Id}" class="slds-button slds-button_icon slds-p-left_small" title="Settings">
+                            <lightning:icon iconName="utility:close" alternativeText="close" size="xx-small"/>
+                        </button>
+                    </div>
+                </aura:iteration>
+                <aura:if isTrue="{! v.documentListOpened }">
+                    <c:documentList/>
+                </aura:if>
+                <!-- DOCUMENTS END -->
+            </div>
+            <footer class="slds-modal__footer">
+                <lightning:button variant="brand" label="Send" title="Send" onclick="{! c.sendEmail }" disabled="{! or(or(or(!v.isEmailValid, !v.isCaseSelected), !v.isInvoicesLoaded), empty(v.selectedCase)) }"/>
+            </footer>
+            <aura:if isTrue="{!!v.loaded}">
+                <lightning:spinner alternativeText="Loading..." size="xx-small"/>
+            </aura:if>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</aura:component>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- SalesPitch - Level2: Features --></label>
+    <name>SalesPitch__c</name>
+    <picklistValues>
+        <masterLabel>Aktionen oder Rabatte - Alle</masterLabel>
+        <translation><!-- Aktionen oder Rabatte - Alle --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aktionen oder Rabatte - Hotel</masterLabel>
+        <translation><!-- Aktionen oder Rabatte - Hotel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aktionen oder Rabatte - Priority Pass</masterLabel>
+        <translation><!-- Aktionen oder Rabatte - Priority Pass --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flexibilität - universelle Akzeptanz</masterLabel>
+        <translation><!-- Flexibilität - universelle Akzeptanz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Flexibilität - über vorhandenes Konto</masterLabel>
+        <translation><!-- Flexibilität - über vorhandenes Konto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kosten - billiger aktuelles Zahlungsart</masterLabel>
+        <translation><!-- Kosten - billiger aktuelles Zahlungsart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Liquidität - Planungssicherheit</masterLabel>
+        <translation><!-- Liquidität - Planungssicherheit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Liquidität - gute Zahlungsbedingungen</masterLabel>
+        <translation><!-- Liquidität - gute Zahlungsbedingungen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sicherheit - Online-Shopping Sicherheit</masterLabel>
+        <translation><!-- Sicherheit - Online-Shopping Sicherheit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sicherheit - Schutz vor Betrug</masterLabel>
+        <translation><!-- Sicherheit - Schutz vor Betrug --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sicherheit - Sicherer als Bargeld</masterLabel>
+        <translation><!-- Sicherheit - Sicherer als Bargeld --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sonstige (bitte angeben!)</masterLabel>
+        <translation><!-- Sonstige (bitte angeben!) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C - Kartenlimit</masterLabel>
+        <translation><!-- T&amp;C - Kartenlimit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C - Kontrolle über Ausgaben</masterLabel>
+        <translation><!-- T&amp;C - Kontrolle über Ausgaben --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C - einfache Buchführung/weniger Admin</masterLabel>
+        <translation><!-- T&amp;C - einfache Buchführung/weniger Admin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C - einstellbare Warengruppen</masterLabel>
+        <translation><!-- T&amp;C - einstellbare Warengruppen --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>zusätzliche Funktion - Versicherung</masterLabel>
+        <translation><!-- zusätzliche Funktion - Versicherung --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

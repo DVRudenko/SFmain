@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Date &amp; time of last deduplication process --></help>
+    <label><!-- Last deduplication time --></label>
+    <name>Last_deduplication_time__c</name>
+</CustomFieldTranslation>

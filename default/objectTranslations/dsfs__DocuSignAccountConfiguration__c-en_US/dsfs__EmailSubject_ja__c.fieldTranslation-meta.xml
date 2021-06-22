@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Change this default Email Subject text and it will appear as the Subject Line in the notification to Sign for your DocuSign Recipients.</help>
+    <label><!-- EmailSubject_ja --></label>
+    <name>dsfs__EmailSubject_ja__c</name>
+</CustomFieldTranslation>

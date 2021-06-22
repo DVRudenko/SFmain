@@ -1,0 +1,259 @@
+<apex:page controller="DashboardCardsAndGPSUnitsSoldCCSctrl" action="{! init }" sidebar="false" showHeader="false">
+	<apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+    <apex:form >
+        <style>
+            .card {
+                border: 1px solid #ededed;
+                width: 120px;
+                margin: 0 auto;
+                text-align: center; 
+                padding: 5px;
+                border-radius: 3px;
+                box-shadow: 0 3px 3px 0 #ccc;
+                color: #3f3f3f;
+            }
+            .accountSizeValue {
+                color: black;
+                font-family: "Salesforce Sans", sans-serif;
+                font-size: 36px;
+            }
+        </style>
+        <div id="accountSize" style="width: 10%; float: left; height: auto;">
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" style="height: 300px;">
+                <tr>
+                    <td>
+                        <div class="card">
+                            <span class="accountSizeValue">{! accountSizeCards }</span>
+                            <p><strong>Avg. account size (Cards)</strong></p>
+                        </div> 
+                    </td>    
+                </tr>
+                <tr>
+                    <td>
+                        <div class="card">
+                            <span class="accountSizeValue">{! accountSizeCarnet }</span>
+                            <p><strong>Avg. account size (Carnet)</strong></p>
+                        </div>
+                    </td>    
+                </tr>    
+            </table>
+        </div>
+        <div id="dashboard" style="width: 90%; float: left;">
+            <apex:pageBlock >
+                <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td>
+                            <h1 style="margin-bottom: 10px; font-size: 15px; display: block;">Cards and GPS units sold for 
+                                <apex:selectList value="{! selectedPeriod }" size="1" multiselect="false" style="margin-left: 5px;">
+                                    <apex:selectOptions value="{! periodsList }"/>
+                                    <apex:actionSupport action="{! init }" event="onchange"/>
+                                </apex:selectList>
+                                <apex:selectList value="{! selectedYear }" size="1" multiselect="false" style="margin: 0 5px;">
+                                    <apex:selectOptions value="{! yearsList }"/>
+                                    <apex:actionSupport action="{! changeYear }" event="onchange"/>
+                                </apex:selectList>({! startDateOfMonthString } - {! endDateOfMonthString })
+                            </h1>
+                        </td>
+                        <!-- <td style="text-align: right;">
+                            <apex:outputLink value="/articles/Knowledge/Help-page-for-Top-10-deals-in-progress-dashboard" target="_blank" id="theLink">Help</apex:outputLink>
+                        </td> -->
+                    </tr>
+                </table>
+                <apex:pageMessages />
+                <div>
+                    <apex:outputPanel rendered="{! OR(currentUser.UserRole.Name == 'CCS Telesales Team Lead',
+                                                      currentUser.UserRole.Name == 'CCS SME Team Lead',
+                                                      currentUser.UserRole.Name == 'CCS CZ KAM Team Lead',
+                                                      currentUser.UserRole.Name == 'CCS CZ LAM Team Lead') }">
+
+                        <div id="salesteamleader" style="width: 100%; float: right; height: 550px;"></div>
+                    </apex:outputPanel>
+                    <apex:outputPanel rendered="{! OR(currentUser.UserRole.Name == 'CCS CZ Telesales',  
+                                                      currentUser.UserRole.Name == 'CCS CZ SME',
+                                                      currentUser.UserRole.Name == 'CCS SK SME',
+                                                      currentUser.UserRole.Name == 'CCS CZ KAM',
+                                                      currentUser.UserRole.Name == 'CCS CZ LAM') }">
+                        <div id="sales" style="width: 100%; float: right; height: 250px;"></div>
+                    </apex:outputPanel>
+                    <div style="clear: both;"></div>
+                </div>
+            </apex:pageBlock>    
+        </div>
+        <script>
+            $(function () { 
+                var cardsTLToday = {};
+                var gpsUnitsTLToday = {};
+                var cardsForCurrentUserToday = {};
+                var gpsUnitsForCurrentUserToday = {}; 
+                cardsForCurrentUserToday["{!currentUser.Name}"] = "{! numberOfCardsTodayMap[currentUser.Id] }";
+                gpsUnitsForCurrentUserToday["{!currentUser.Name}"] = "{! numberOfGPSunitsTodayMap[currentUser.Id] }";
+                <apex:repeat value="{! salesTeamMap }" var="key">
+                    cardsTLToday["{! salesTeamMap[key].Name }"] = "{! numberOfCardsTodayMap[key] }";
+                    gpsUnitsTLToday["{! salesTeamMap[key].Name }"] = "{! numberOfGPSunitsTodayMap[key] }"; 
+                </apex:repeat> 
+                $('#salesteamleader').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                        <apex:repeat value="{! finalList }" var="key">
+                            '{!salesTeamMap[key.Id].Name }',
+                        </apex:repeat>
+                        ],
+                        labels: {
+                            useHTML: true
+                        }
+                    },
+                    yAxis: [{
+                        min: 0,
+                        title: {
+                            text: ''
+                        },
+                        stackLabels: {
+                            enabled: true,
+                            style: {
+                                fontWeight: 'bold',
+                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        }
+                    }],
+                    legend: {
+                        shadow: false,
+                        labelFormatter: function() {
+                          var total = 0;
+                          for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+                          return this.name + ' - Total: ' + total;
+                        }
+                    },
+                    exporting: { enabled: false },
+                    credits: {
+                          enabled: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    },
+                    plotOptions: {
+                        series: {
+                            stacking: 'normal',
+                            dataLabels: {
+                                enabled: true,
+                                color: 'black',
+                                formatter: function () {
+                                    if (this.series.name == 'Number of cards' && this.y != 0) {
+                                        return Math.round(this.y) + ' (' + cardsTLToday[this.x] + ' today)';    
+                                    } else if (this.series.name == 'Number of GPS units' && this.y != 0) {
+                                        return Math.round(this.y) + ' (' + gpsUnitsTLToday[this.x] + ' today)';  
+                                    }
+                                },
+                                style: {
+                                    textShadow: false 
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'Number of GPS units',
+                        color: '#ccc',
+                        data: [<apex:repeat value="{! finalList }" var="key">
+                        {! numberOfGPSunitsMap[key.Id] },
+                        </apex:repeat>],
+                        pointPadding: -0.1,
+                        pointPlacement: 0.0    
+                    }, {
+                        name: 'Number of cards',
+                        color: 'rgba(126,86,134,.9)',
+                        data: [<apex:repeat value="{! finalList }" var="key">
+                        {! numberOfCardsMap[key.Id] },
+                        </apex:repeat>],
+                        pointPadding: -0.1,
+                        pointPlacement: 0.0
+                    }]
+                });
+                $('#sales').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                            '{! currentUser.Name }',
+                        ],
+                        labels: {
+                            useHTML: true
+                        }
+                    },
+                    yAxis: [{
+                        min: 0,
+                        title: {
+                            text: ''                                
+                        }, 
+                        stackLabels: {
+                            enabled: true,
+                            style: {
+                                fontWeight: 'bold',
+                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        }
+                    }],
+                    legend: {
+                        shadow: false,
+                        labelFormatter: function() {
+                          var total = 0;
+                          for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+                          return this.name + ' - Total: ' + total;
+                        }
+                    },
+                    exporting: { enabled: false },
+                    credits: {
+                          enabled: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    },
+                    plotOptions: {
+                        series: {
+                            stacking: 'normal',
+                            dataLabels: {
+                                enabled: true,
+                                color: 'black',
+                                formatter: function () {
+                                    if (this.series.name == 'Number of cards' && this.y != 0) {
+                                        return Math.round(this.y) + ' (' + cardsForCurrentUserToday[this.x] + ' today)';    
+                                    } else if (this.series.name == 'Number of GPS units' && this.y != 0) {
+                                        return Math.round(this.y) + ' (' + gpsUnitsForCurrentUserToday[this.x] + ' today)';  
+                                    }
+                                },
+                                style: {
+                                    textShadow: false 
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'Number of GPS units',
+                        color: '#ccc',
+                        data: [{! numberOfGPSunitsMap[currentUser.Id] }],
+                    }, {
+                        name: 'Number of cards',
+                        color: 'rgba(126,86,134,.9)',
+                        data: [{! numberOfCardsMap[currentUser.Id] }],   
+                    }]
+                });
+            });
+        </script> 
+	</apex:form>
+</apex:page>

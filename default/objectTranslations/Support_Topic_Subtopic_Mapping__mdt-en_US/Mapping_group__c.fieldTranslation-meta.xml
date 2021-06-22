@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Using to map the searching words in groups --></help>
+    <label><!-- Mapping group --></label>
+    <name>Mapping_group__c</name>
+    <picklistValues>
+        <masterLabel>Support</masterLabel>
+        <translation><!-- Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Support CCS</masterLabel>
+        <translation><!-- Support CCS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__Expire_Void_Envelope__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>At times, you may need to encourage your recipients to complete an envelope more rapidly. . After an envelope expires, DocuSign Professional voids the envelope and sends a notification to both sender and recipient.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>At times, you may need to encourage your recipients to complete an envelope more rapidly. After an envelope expires, DocuSign for Salesforce voids the envelope and sends a notification to both sender and recipient.</inlineHelpText>
+    <label>Expire/Void Envelope</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

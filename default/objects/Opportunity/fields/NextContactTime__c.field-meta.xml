@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NextContactTime__c</fullName>
+    <description>NVM: This field will be auto filled when using the NVM Dialler Quick Action.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field determines how a call is prioritised in a Dial List</inlineHelpText>
+    <label>Next Contact Time</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Legitimation: Post-Ident (PI), Corp. Ident (CI) --></help>
+    <label>Legitimation</label>
+    <name>Legitimation__c</name>
+    <picklistValues>
+        <masterLabel>CI</masterLabel>
+        <translation><!-- CI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PI</masterLabel>
+        <translation><!-- PI --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

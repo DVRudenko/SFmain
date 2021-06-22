@@ -1,0 +1,64 @@
+<apex:page controller="AccountExtension"
+           docType="html-5.0"
+           sideBar="false"
+           showHeader="false"
+           standardStylesheets="false"
+           cache="false">
+
+    <style>
+        td {
+            border-width: 1px;
+            padding: 4px;
+            border-style: solid;
+            border-color: #000000;
+            background-color: #FFEECC;
+        }
+
+        th {
+            color: #000000;
+            border-width: 1px;
+            padding: 4px;
+            border-style: solid;
+            border-color: #000000;
+            background-color: #FFFFF0;
+        }
+
+        .itemData{
+            min-width: 150px;
+            min-height: 30px;
+            text-align: center;
+        }
+
+        .itemLabel{
+            min-width: 100px;
+            min-height: 30px;
+        }
+    </style>
+
+    <p>Ваш потенциальный клиент обратился через E2Е, свяжитесь с ним и продолжайте работу в своей Возможности.</p>
+
+    <apex:pageBlock >
+        <apex:pageBlockSection collapsible="false" columns="1">
+            <apex:pageBlockSectionItem labelStyleClass="itemLabel" dataStyleClass="itemData">
+                <apex:outputLabel value="ИНН:"/>
+                <apex:outputText value="{!Account.INN__c}"/>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem labelStyleClass="itemLabel" dataStyleClass="itemData">
+                <apex:outputLabel value="Name:"/>
+                <apex:outputLink value="{!$CurrentPage.parameters.domain + Account.Id}" target="_blank">{!Account.Name}</apex:outputLink>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem labelStyleClass="itemLabel" dataStyleClass="itemData">
+                <apex:outputLabel value="Телефон:"/>
+                <apex:outputText value="{!$CurrentPage.parameters.phone}"/>
+            </apex:pageBlockSectionItem>
+
+            <apex:pageBlockSectionItem labelStyleClass="itemLabel" dataStyleClass="itemData">
+                <apex:outputLabel value="Email:"/>
+                <apex:outputText value="{!$CurrentPage.parameters.email}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+</apex:page>

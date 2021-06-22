@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_transfer_Acc__c</fullName>
+    <description>если id_user_Acc = id_user_Opp, то дата перевода Организации, в противном случ дата перевода Возможности.</description>
+    <externalId>false</externalId>
+    <formula>IF(Owner_Opp__c =  Account.Owner_User_Id__c  , Account.Date_Change_Owner__c ,Day_transfer_Opp__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Date transfer Acc</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

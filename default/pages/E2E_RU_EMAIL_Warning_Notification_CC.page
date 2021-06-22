@@ -1,0 +1,27 @@
+<apex:page docType="html-5.0"
+           sideBar="false"
+           showHeader="false"
+           standardStylesheets="false"
+           controller="OpportunityExtension"
+           cache="false">
+
+    <style>
+        body {
+            font-family: Courier, serif;
+            font-size: 12pt;
+        }
+
+        p {
+            margin-bottom: 4px;
+            margin-top: 4px;
+        }
+    </style>
+
+    <apex:outputPanel >
+        <p>Уважаемый менеджер.</p>
+        <p>
+            <span>Необходимо Ваше участие для решения сложностей с E2E возможностью: </span>
+            <apex:outputLink target="_blank" value="{!$CurrentPage.parameters.domain + Opportunity.Id}">{!Opportunity.Name}</apex:outputLink>
+        </p>
+    </apex:outputPanel>
+</apex:page>

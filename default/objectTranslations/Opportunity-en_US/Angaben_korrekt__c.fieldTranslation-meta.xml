@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Details correct</label>
+    <name>Angaben_korrekt__c</name>
+    <picklistValues>
+        <masterLabel>BIC stimmt nicht</masterLabel>
+        <translation>Wrong BIC</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IBAN stimmt nicht</masterLabel>
+        <translation>Wrong IBAN</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ja</masterLabel>
+        <translation>Yes</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Name der Firma stimmt nicht</masterLabel>
+        <translation>Wrong company name</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nein, sieh Notes</masterLabel>
+        <translation>No, see notes</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Registrierte Adresse stimmt nicht</masterLabel>
+        <translation>Wrong address</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Steuernummer falsch</masterLabel>
+        <translation>Wrong Tax ID</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ust – IdNr. stimmt nicht</masterLabel>
+        <translation>Wrong VAT</translation>
+    </picklistValues>
+</CustomFieldTranslation>

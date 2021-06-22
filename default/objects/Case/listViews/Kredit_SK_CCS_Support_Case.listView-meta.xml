@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kredit_SK_CCS_Support_Case</fullName>
+    <columns>CASES.CASE_NUMBER</columns>
+    <columns>Case_Status_Icon__c</columns>
+    <columns>CASES.PRIORITY</columns>
+    <columns>CASES.SUBJECT</columns>
+    <columns>Topic__c</columns>
+    <columns>Sub_topic__c</columns>
+    <columns>CASES.CREATED_DATE_DATE_ONLY</columns>
+    <columns>CASES.LAST_UPDATE_DATE_ONLY</columns>
+    <columns>CASES.EMAIL</columns>
+    <filterScope>Queue</filterScope>
+    <label>Kredit CCS SK</label>
+    <language>en_US</language>
+    <queue>Kredit_SK_CCS_Support</queue>
+    <sharedTo>
+        <group>CCS_Support_Kredit_SK</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Cache size for dynamic dial lists (default is 20 if field is empty) --></help>
+    <label><!-- Cache size --></label>
+    <name>NVMConnect__CacheSize__c</name>
+</CustomFieldTranslation>

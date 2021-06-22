@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Hidden switch used to warn the owner of an unauthorized vehicle being set in motion, sending an SMS to any two phone numbers. --></help>
+    <label><!-- Guarding the vehicle - one switch --></label>
+    <name>Guarding_the_vehicle_one_switch_Amount__c</name>
+</CustomFieldTranslation>

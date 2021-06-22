@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>PPR_Fieldsales_Team_Leaders</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>доступ Nataliya.Kopaneva к обучению группы FS</description>
+        <label>PPR Fieldsales Team Leaders</label>
+        <sharedTo>
+            <role>PPR_Field_Sales_Team_Leaders</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>PPR_Field_Sales_Team_Leaders</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

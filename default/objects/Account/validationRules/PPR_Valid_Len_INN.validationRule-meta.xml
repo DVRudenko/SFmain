@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Valid_Len_INN</fullName>
+    <active>true</active>
+    <description>Должен содержать только цифры:
+            12 цифр - ИП;
+            10 цифр - юр. лицо.</description>
+    <errorConditionFormula>IF(
+AND( RecordType.Name = "Russian" ,
+CONTAINS( $Profile.Name , "Russian"),
+NOT(ISCHANGED( OwnerId )),
+NOT(ISCHANGED( Rating_FS_Penalty__c)),
+NOT(ISCHANGED( PenaltyScoringRu__c )),
+NOT(ISCHANGED( Account_Status__c)),
+NOT(ISCHANGED( ColCo__c)),
+NOT(ISCHANGED( GFN_Nr__c)),
+NOT(ISCHANGED( Vouchers_Sent__c)),
+Nonresident__c = false,
+NOT(ISBLANK(INN__c )),
+LEN( INN__c) &lt;&gt; 12 ,
+LEN( INN__c) &lt;&gt; 10),
+true ,false)</errorConditionFormula>
+    <errorDisplayField>INN__c</errorDisplayField>
+    <errorMessage>ERROR: ACCT002.Incorrect INN!</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Financials --></label>
+    <name>Financials__c</name>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Negative</masterLabel>
+        <translation><!-- Negative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ok</masterLabel>
+        <translation><!-- ok --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

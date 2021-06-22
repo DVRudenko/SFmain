@@ -1,0 +1,29 @@
+<apex:page standardController="Contact" extensions="DuplicatesContactsController" action="{! init }" lightningStylesheets="true">
+	<apex:pageBlock title="{! currentContact.FirstName } {! currentContact.LastName }">
+		<apex:pageMessages />
+		<apex:pageBlockButtons location="bottom">
+			<apex:outputLink style="color: black; text-decoration: none;" styleClass="btn" value="/{! currentContact.Id }">Back to Contact</apex:outputLink>
+		</apex:pageBlockButtons>
+		<apex:pageBlockSection >
+			<apex:pageBlockSectionItem >
+				<apex:outputLabel value="Name"/>
+				<div>
+					{! currentContact.FirstName } {! currentContact.LastName }
+				</div>
+			</apex:pageBlockSectionItem>
+			<apex:outputField value="{! currentContact.Phone }"/>
+			<apex:outputField value="{! currentContact.Email }"/>
+		</apex:pageBlockSection>
+		<h2>Duplicates</h2>
+		<apex:outputPanel layout="block" rendered="{! finalDupesContactsList.size == 0 }">
+			No duplicates in Contacts.
+		</apex:outputPanel>
+		<apex:pageBlockTable value="{! finalDupesContactsList }" var="dup" rendered="{! finalDupesContactsList.size > 0 }">
+			<apex:column headerValue="Contact Name">
+				<a href="/{! dup.Id }" target="_blank">{! dup.FirstName } {! dup.LastName }</a>
+			</apex:column>
+			<apex:column value="{! dup.Phone }"/>
+			<apex:column value="{! dup.Email }"/>
+		</apex:pageBlockTable>
+	</apex:pageBlock>
+</apex:page>

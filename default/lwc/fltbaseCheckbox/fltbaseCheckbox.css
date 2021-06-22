@@ -1,0 +1,84 @@
+.fltbase-checkbox {
+    display: inline-flex;
+    /* cursor: pointer; */
+}
+
+.fltbase-checkbox__input {
+    display: none;
+}
+
+.fltbase-checkbox__label {
+    cursor: pointer;
+}
+
+.fltbase-checkbox-span {
+    height: 20px;
+    min-width: 20px;
+    margin-right: 16px;
+    position: relative;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.fltbase-checkbox-span_gray { background: #F8F8F8; }
+.fltbase-checkbox-span_white { background: #FFFFFF; }
+.fltbase-checkbox-span_error { 
+    border-color: #ED123D; 
+    background: #FFFFFF;
+}
+
+.fltbase-checkbox-span_required::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #ED123D;
+    border-radius: 50%;
+    right: -10px;
+    top:0;
+}
+
+.fltbase-checkbox-span::after {
+    content: "";
+    width: 45%;
+    height: 30%;
+    margin-bottom: 15%;
+    margin-left: 5%;
+
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    box-sizing: border-box;
+
+    transform: rotate(-45deg);
+    transition: border-color 0.3s;
+}
+
+.fltbase-checkbox__input:checked + .fltbase-checkbox-span::after {
+    border-left: 3px solid #ED123D;
+    border-bottom: 3px solid #ED123D;
+}
+
+.fltbase-checkbox__error-message {
+    color: #ED123D;
+    cursor: default;
+    margin: 0;
+    display: block;
+    overflow: hidden;
+    padding-left: 36px;
+    opacity: 0;
+
+    font-size: 12px;
+    line-height: 0px;
+
+    transition: all 0.3s ease-in;
+}
+
+.fltbase-checkbox__error-message_active {
+    opacity: 1;
+    line-height: 14px;
+}

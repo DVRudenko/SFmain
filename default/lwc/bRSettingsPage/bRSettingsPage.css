@@ -1,0 +1,19 @@
+.form {
+    margin: 0 20% 0 10%;
+    width: 70%;
+}
+
+.field {
+    width: 40%;
+    padding: 12px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25%;
+}
+
+.btn {
+    margin-right: 10px;
+}

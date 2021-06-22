@@ -1,0 +1,31 @@
+{
+    "settings": {
+        "active" : true,
+        "opportunityStageTriggers": 
+            [
+                "Qualified Lead",
+                "Client Negotiations",
+                "Check Credit History",
+                "Agreement Terms and Conditions",
+                "Contract Under Signing",
+                "Suspended Opportunity"
+            ]
+        ,
+        "notification": {
+            "sumPointsToSend": 6,
+            "notificationReceivers": 
+                [
+                    "a.syromyatnikov@fleetcor.ru"
+                ]
+        }
+        ,
+        "criteria": {
+            "sourceOfLead": 1,
+            "newLegalEntity": 3,
+            "newFounder": 5,
+            "massRegistrationAddress": 1,
+            "legalAddressDifferentFromPostal": 5,
+            "firstBill500000More":3
+        }
+    }
+}

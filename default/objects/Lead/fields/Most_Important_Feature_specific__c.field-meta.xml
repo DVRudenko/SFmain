@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Most_Important_Feature_specific__c</fullName>
+    <externalId>false</externalId>
+    <label>Most Important Feature (specific)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Most_Important_Feature__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Не устроили  предоставленные условия</fullName>
+                <default>false</default>
+                <label>Не устроили  предоставленные условия</label>
+            </value>
+            <value>
+                <fullName>Не готовы начать работать по предоплате</fullName>
+                <default>false</default>
+                <label>Не готовы начать работать по предоплате</label>
+            </value>
+            <value>
+                <fullName>Работа по предоплате, с последующей отсрочкой</fullName>
+                <default>false</default>
+                <label>Работа по предоплате, с последующей отсрочкой</label>
+            </value>
+            <value>
+                <fullName>Работает по предоставленным условиям</fullName>
+                <default>false</default>
+                <label>Работает по предоставленным условиям</label>
+            </value>
+            <value>
+                <fullName>Лукойл</fullName>
+                <default>false</default>
+                <label>Лукойл</label>
+            </value>
+            <value>
+                <fullName>Би Пи</fullName>
+                <default>false</default>
+                <label>Би Пи</label>
+            </value>
+            <value>
+                <fullName>Газпром</fullName>
+                <default>false</default>
+                <label>Газпром</label>
+            </value>
+            <value>
+                <fullName>Роснефть</fullName>
+                <default>false</default>
+                <label>Роснефть</label>
+            </value>
+            <value>
+                <fullName>Татнефть</fullName>
+                <default>false</default>
+                <label>Татнефть</label>
+            </value>
+            <value>
+                <fullName>ТНК</fullName>
+                <default>false</default>
+                <label>ТНК</label>
+            </value>
+            <value>
+                <fullName>Другое</fullName>
+                <default>false</default>
+                <label>Другое</label>
+            </value>
+            <value>
+                <fullName>Проиграли</fullName>
+                <default>false</default>
+                <label>Проиграли</label>
+            </value>
+            <value>
+                <fullName>Не участвовали</fullName>
+                <default>false</default>
+                <label>Не участвовали</label>
+            </value>
+            <value>
+                <fullName>Клиент не прошел по критериям</fullName>
+                <default>false</default>
+                <label>Клиент не прошел по критериям</label>
+            </value>
+            <value>
+                <fullName>Бензовоз</fullName>
+                <default>false</default>
+                <label>Бензовоз</label>
+            </value>
+            <value>
+                <fullName>Своя АЗС</fullName>
+                <default>false</default>
+                <label>Своя АЗС</label>
+            </value>
+            <value>
+                <fullName>Метан</fullName>
+                <default>false</default>
+                <label>Метан</label>
+            </value>
+            <value>
+                <fullName>Мало АЗС</fullName>
+                <default>false</default>
+                <label>Мало АЗС</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Отсрочка, кредит</controllingFieldValue>
+            <valueName>Не устроили  предоставленные условия</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отсрочка, кредит</controllingFieldValue>
+            <valueName>Не готовы начать работать по предоплате</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отсрочка, кредит</controllingFieldValue>
+            <valueName>Работа по предоплате, с последующей отсрочкой</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Отсрочка, кредит</controllingFieldValue>
+            <valueName>Работает по предоставленным условиям</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Тендер</controllingFieldValue>
+            <valueName>Проиграли</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Тендер</controllingFieldValue>
+            <valueName>Не участвовали</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Тендер</controllingFieldValue>
+            <valueName>Клиент не прошел по критериям</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Налив</controllingFieldValue>
+            <valueName>Бензовоз</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Налив</controllingFieldValue>
+            <valueName>Своя АЗС</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ГАЗовые АЗС</controllingFieldValue>
+            <valueName>Метан</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ГАЗовые АЗС</controllingFieldValue>
+            <valueName>Мало АЗС</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Бренд</controllingFieldValue>
+            <valueName>Лукойл</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Бренд</controllingFieldValue>
+            <valueName>Би Пи</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Бренд</controllingFieldValue>
+            <valueName>Газпром</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Бренд</controllingFieldValue>
+            <valueName>Роснефть</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Бренд</controllingFieldValue>
+            <valueName>Татнефть</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Бренд</controllingFieldValue>
+            <valueName>ТНК</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Бренд</controllingFieldValue>
+            <valueName>Другое</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

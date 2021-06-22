@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Steps_transition__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(From_Step__c = &#39;External source&#39;, &#39;0.1 External source&#39;, 
+	IF(From_Step__c = &#39;Contact details&#39;, &#39;0.2 Contact details&#39;, 
+		IF(From_Step__c = &#39;Search company&#39;, &#39;1.1. Search company&#39;,
+			IF(OR(From_Step__c = &#39;Enter Tax ID&#39;, From_Step__c = &#39;Enter VAT Number&#39;), &#39;1.2. &#39; + From_Step__c, 
+				IF(From_Step__c = &#39;Set total consumption&#39;, &#39;1.3. Set total consumption&#39;,
+					IF(From_Step__c = &#39;Additional Credit Scoring Allowance&#39;, &#39;1.4. Additional Credit Scoring Allowance&#39;, 
+						IF(From_Step__c = &#39;Calculating credit score&#39;, &#39;1.5. Calculating credit score&#39;, 
+							IF(From_Step__c = &#39;Card configuration&#39;, &#39;2.1. Card configuration&#39;, 
+								IF(From_Step__c = &#39;Choosing offer&#39;, &#39;2.2. Choosing offer&#39;, 
+									IF(From_Step__c = &#39;Technical parameters&#39;, &#39;2.3 Technical parameters&#39;, 
+										IF(From_Step__c = &#39;Enter VAT number&#39;, &#39;2.4 Enter VAT number&#39;, 
+											IF(From_Step__c = &#39;Additional services&#39;, &#39;3.1. Additional services&#39;,
+												IF(From_Step__c = &#39;Enter Date of Birth&#39;, &#39;3.2. Enter Date of Birth&#39;,
+													IF(From_Step__c = &#39;Documents&#39;, &#39;3.3. Documents&#39;, 
+														IF(From_Step__c = &#39;Docusign service&#39;, &#39;3.4. Docusign service&#39;, 
+															IF(OR(From_Step__c = &#39;DirectDebit&#39;, From_Step__c = &#39;BankTransfer&#39;), &#39;4.1. &#39; + From_Step__c, 
+																IF(OR(From_Step__c = &#39;DirectDebitDeposit&#39;, From_Step__c = &#39;BankTransferDeposit&#39;), &#39;4.2. &#39; + From_Step__c, 
+																	IF(From_Step__c = &#39;Payment Gateway Service&#39;, &#39;4.3 Payment Gateway&#39;, 
+																		IF(From_Step__c = &#39;Congratulations&#39;, &#39;5. Congratulations&#39;, &#39;6. Unknown step&#39;))))))))))))))))))) +
+&#39; -&gt; &#39; +
+IF(To_Step__c = &#39;External source&#39;, &#39;0.1 External source&#39;, 
+	IF(To_Step__c = &#39;Contact details&#39;, &#39;0.2 Contact details&#39;, 
+		IF(To_Step__c = &#39;Search company&#39;, &#39;1.1. Search company&#39;,
+			IF(OR(To_Step__c = &#39;Enter Tax ID&#39;, To_Step__c = &#39;Enter VAT Number&#39;), &#39;1.2. &#39; + To_Step__c, 
+				IF(To_Step__c = &#39;Set total consumption&#39;, &#39;1.3. Set total consumption&#39;,
+					IF(To_Step__c = &#39;Additional Credit Scoring Allowance&#39;, &#39;1.4. Additional Credit Scoring Allowance&#39;, 
+						IF(To_Step__c = &#39;Calculating credit score&#39;, &#39;1.5. Calculating credit score&#39;, 
+							IF(To_Step__c = &#39;Card configuration&#39;, &#39;2.1. Card configuration&#39;, 
+								IF(To_Step__c = &#39;Choosing offer&#39;, &#39;2.2. Choosing offer&#39;, 
+									IF(To_Step__c = &#39;Technical parameters&#39;, &#39;2.3 Technical parameters&#39;, 
+										IF(To_Step__c = &#39;Enter VAT number&#39;, &#39;2.4 Enter VAT number&#39;, 
+											IF(To_Step__c = &#39;Additional services&#39;, &#39;3.1. Additional services&#39;,
+												IF(To_Step__c = &#39;Enter Date of Birth&#39;, &#39;3.2. Enter Date of Birth&#39;,
+													IF(To_Step__c = &#39;Documents&#39;, &#39;3.3. Documents&#39;, 
+														IF(To_Step__c = &#39;Docusign service&#39;, &#39;3.4. Docusign service&#39;, 
+															IF(OR(To_Step__c = &#39;DirectDebit&#39;, To_Step__c = &#39;BankTransfer&#39;), &#39;4.1. &#39; + To_Step__c, 
+																IF(OR(To_Step__c = &#39;DirectDebitDeposit&#39;, To_Step__c = &#39;BankTransferDeposit&#39;), &#39;4.2. &#39; + To_Step__c, 
+																	IF(To_Step__c = &#39;Payment Gateway Service&#39;, &#39;4.3 Payment Gateway&#39;, 
+																		IF(To_Step__c = &#39;Congratulations&#39;, &#39;5. Congratulations&#39;, &#39;6. Unknown step&#39;)))))))))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Steps transition</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

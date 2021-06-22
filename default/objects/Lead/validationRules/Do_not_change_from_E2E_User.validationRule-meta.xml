@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_not_change_from_E2E_User</fullName>
+    <active>true</active>
+    <description>Remove ability to reassign Switched to E2E leads for Sales and Sales Inbound profiles</description>
+    <errorConditionFormula>(ISCHANGED(Quali_Status__c) || ISCHANGED(Status) || ISCHANGED(OwnerId)) &amp;&amp;  PRIORVALUE(OwnerId) == '0050O000007Drnn' &amp;&amp; ($Profile.Name == 'Sales' || $Profile.Name == 'Sales Inbound')</errorConditionFormula>
+    <errorMessage>You can't change Owner for E2E lead. Please contact your system administrator.</errorMessage>
+</ValidationRule>

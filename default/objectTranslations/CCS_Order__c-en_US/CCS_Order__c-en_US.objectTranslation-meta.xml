@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CCS Order</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CCS Orders</value>
+    </caseValues>
+    <layouts>
+        <layout>CCS Bonus</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCS Carnet</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CCS Limit</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- CCS Bonus Record Type for CCS Order. --></description>
+        <label><!-- CCS Bonus --></label>
+        <name>CCS_Bonus</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- CCS Carnet Record Type for CCS Order. --></description>
+        <label><!-- CCS Carnet --></label>
+        <name>CCS_Carnet</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- CCS Limit Record Type for CCS Order. --></description>
+        <label><!-- CCS Limit --></label>
+        <name>CCS_Limit</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

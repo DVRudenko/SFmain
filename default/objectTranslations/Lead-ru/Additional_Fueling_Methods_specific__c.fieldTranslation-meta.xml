@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Дополнительные способы заправки (детали)</label>
+    <name>Additional_Fueling_Methods_specific__c</name>
+    <picklistValues>
+        <masterLabel>ARCO</masterLabel>
+        <translation><!-- ARCO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amex</masterLabel>
+        <translation><!-- Amex --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Avtocard-Voronezh</masterLabel>
+        <translation>Автокарт-Воронеж</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BP</masterLabel>
+        <translation><!-- BP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CFN (Commercial Fueling Network)</masterLabel>
+        <translation><!-- CFN (Commercial Fueling Network) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chevron/Texaco</masterLabel>
+        <translation><!-- Chevron/Texaco --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Citgo</masterLabel>
+        <translation><!-- Citgo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Co-branded card</masterLabel>
+        <translation><!-- Co-branded card --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Comdata</masterLabel>
+        <translation><!-- Comdata --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Computer LTD-1</masterLabel>
+        <translation>Компьютер ЛТД-1</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conoco/Phillips 66/76</masterLabel>
+        <translation><!-- Conoco/Phillips 66/76 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Discover</masterLabel>
+        <translation><!-- Discover --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EKA-Processing</masterLabel>
+        <translation>ЕКА-Процессинг</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expense reimbursement</masterLabel>
+        <translation>Возмещение расходов</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Exxon/Mobil</masterLabel>
+        <translation><!-- Exxon/Mobil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FleetOne</masterLabel>
+        <translation><!-- FleetOne --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fuelman</masterLabel>
+        <translation><!-- Fuelman --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fully managed</masterLabel>
+        <translation><!-- Fully managed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gazpromneft&#39;</masterLabel>
+        <translation>Газпромнефть</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inforkom</masterLabel>
+        <translation>Инфорком</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Licard</masterLabel>
+        <translation>Ликард</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Local Cardlocks</masterLabel>
+        <translation><!-- Local Cardlocks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Local Mobile Refueler</masterLabel>
+        <translation><!-- Local Mobile Refueler --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MTK</masterLabel>
+        <translation>МНГК-Автокард</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Magystral</masterLabel>
+        <translation>Магистраль</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mastercard</masterLabel>
+        <translation>Mastercard</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Novatorrus-Invest</masterLabel>
+        <translation>Новаторрус-Инвест</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OTR Trucking</masterLabel>
+        <translation><!-- OTR Trucking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pacific Pride</masterLabel>
+        <translation><!-- Pacific Pride --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Petty cash</masterLabel>
+        <translation>Наличные</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional company</masterLabel>
+        <translation><!-- Regional company --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regional operator</masterLabel>
+        <translation>Региональный оператор</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rosneft</masterLabel>
+        <translation>Роснефть</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SKON</masterLabel>
+        <translation>СКОН</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell</masterLabel>
+        <translation><!-- Shell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell Russia</masterLabel>
+        <translation>Шелл</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Surgutneftegas</masterLabel>
+        <translation>Сургутнефтегаз</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tatneft</masterLabel>
+        <translation>Татнефть</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>U.S. Fleet (Quick Fuel)</masterLabel>
+        <translation><!-- U.S. Fleet (Quick Fuel) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visa</masterLabel>
+        <translation>Visa</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Voyager</masterLabel>
+        <translation><!-- Voyager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WEX</masterLabel>
+        <translation><!-- WEX --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

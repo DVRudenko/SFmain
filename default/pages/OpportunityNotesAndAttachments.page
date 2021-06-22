@@ -1,0 +1,69 @@
+<apex:page standardcontroller="Opportunity" extensions="OpportunityNotesAndAttachsExtensions" tabstyle="Opportunity">
+    <apex:form id="form">
+        <style>
+            .btn {
+                text-decoration: none;
+            }
+            .btn:hover { 
+                text-decoration: none;
+                color: #333;
+            }
+            .pbBody a {
+                color: #0c5db9; 
+                text-decoration: none;
+            }
+        </style>
+        <div>
+	        <apex:pageBlock rendered="{! objectToDeleteId = null }"> 
+	            <apex:pageMessages />
+	            <apex:pageBlockButtons location="top">
+	                <apex:outputLink value="" onclick="window.top.location.href = '/002/e?parent_id={! opptyId15digit }&retURL=%2F{!Opportunity.Id}'" styleClass="btn">New Note</apex:outputLink>
+	                <apex:outputLink value="" onclick="window.top.location.href = '/p/attach/NoteAttach?pid={! opptyId15digit }&parentname={!JSENCODE(Opportunity.Name)}&retURL=%2F{!Opportunity.Id}'" styleClass="btn">Attach File</apex:outputLink>
+	                <apex:outputLink value="" onclick="window.top.location.href = '/ui/content/ViewAllNotesPage?id={! opptyId15digit }&retURL=%2F{!Opportunity.Id}'" 
+	                	rendered="{! noteAndAttachsListNotEmpty = true && contains(cfProfilesStr, currentUser.Profile.Name) }" styleClass="btn">
+	                	View All
+	               	</apex:outputLink>
+	            </apex:pageBlockButtons>
+	            <apex:pageBlockTable value="{! allNotesAndAttachmentsMap }" var="key" rendered="{! noteAndAttachsListNotEmpty = true }"> 
+	                <apex:column headervalue="Action">
+	                    <apex:outputLink value="" onclick="window.top.location.href = '/{! allNotesAndAttachmentsMap[key].objectId }/e?retURL=%2F{!Opportunity.Id}'">Edit</apex:outputLink>
+	                    <span style="color: #0c5db9;"> | </span>
+	                    <apex:outputPanel rendered="{! LEFT(allNotesAndAttachmentsMap[key].objectId, 3) = '00P' }">
+	                        <apex:outputLink value="/servlet/servlet.FileDownload?file={! allNotesAndAttachmentsMap[key].objectId }" target="_blank">View</apex:outputLink>
+	                        <span style="color: #0c5db9;"> | </span>
+	                    </apex:outputPanel>
+	                    <apex:commandLink action="{! doDelete }" value="Del" onclick="return confirm('Are you sure?');">
+	                        <apex:param name="objId"
+	                            value="{! allNotesAndAttachmentsMap[key].objectId }"
+	                            assignTo="{! objectToDeleteId }"/>
+	                    </apex:commandLink>
+	                </apex:column>
+	                <apex:column headervalue="Type">
+	                    {! allNotesAndAttachmentsMap[key].type }
+	                </apex:column>
+	                <apex:column headervalue="Title">
+	                    <apex:outputLink value="" onclick="window.top.location.href = '/{! allNotesAndAttachmentsMap[key].objectId}'" style="color: #000; text-decoration: underline;">
+	                        {! allNotesAndAttachmentsMap[key].name }
+	                    </apex:outputLink>
+	                </apex:column>
+	                <apex:column headervalue="Last Modified">
+	                    {! allNotesAndAttachmentsMap[key].lastModifiedDate }
+	                </apex:column>
+	                <apex:column headervalue="Created By">
+	                    <apex:outputLink value="" onclick="window.top.location.href = '/{! allNotesAndAttachmentsMap[key].createdById}'" style="color: #000; text-decoration: underline;">
+	                        {! fileCreatorsMap[allNotesAndAttachmentsMap[key].createdById].Name }
+	                    </apex:outputLink>
+	                </apex:column>
+	            </apex:pageBlockTable>
+	            <apex:outputText rendered="{! noteAndAttachsListNotEmpty = false }">No records to display</apex:outputText>
+	        </apex:pageBlock> 
+            <script>
+                window.onload = function() {
+                    if ('{! objectToDeleteId }' != '') {
+                        window.top.location.href = '/{! opptyId15digit }';
+                    }
+                }
+            </script>
+        </div>
+    </apex:form> 
+</apex:page>

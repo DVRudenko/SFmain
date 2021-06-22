@@ -1,0 +1,207 @@
+<apex:page standardController="Lead" Title="Tankkarten Sparkalkulator" extensions="SparkalkulatorLeadController">
+  <apex:includeScript value="{!$Resource.jQuery}"/>
+  <apex:includeScript value="{!$Resource.TooltipJS}"/>
+  <style>
+    .tooltipsy
+    {
+        padding: 10px;
+        max-width: 200px;
+        color: #303030;
+        background-color: #f5f5b5;
+        border: 1px solid #deca7e;
+    }
+
+    .hastip {
+        cursor: help;
+        text-decoration: underline;
+    }
+  </style>
+
+  <apex:form >
+    <apex:pageBlock Title="Tankkarten Sparkalkulator Parameters">
+
+  <table border="0" style="font-color:#FF9966;">
+      <tr>
+          <th> <!-- parameter --></th>
+          <th> <!-- value --></th>
+      </tr>
+      <tr>
+  <th>
+  Accountname:</th><th>{!Lead.Company}
+  </th>
+  </tr><tr>
+  <p/>
+  <th>
+  Anzahl der Fahrzeuge:</th><th>
+      <apex:InputField value="{!lead.Anzahl_der_Fahrzeuge__c}" required="false" id="karten">
+          <apex:actionSupport event="onkeyup" reRender="total,controleffect,discounteffect,total_angebot,total_angebot_annual,total_angebot_annual_net,infoblock, zahlungsart, produkt"/>
+      </apex:InputField>
+  </th>
+  </tr><tr>
+  <p/>
+  <!-- 
+  Volume (annual):
+      <apex:InputText value="{!lead.Estimated_Start_Volume__c}" required="false"/>
+      <p/>
+  -->
+  <th>
+  Tankvolumen (Liter/Monat):</th><th>
+      <apex:InputField value="{!lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c}" required="false">
+          <apex:actionSupport event="onkeyup" reRender="total,controleffect,discounteffect,total_angebot,total_angebot_annual,total_angebot_annual_net,infoblock, zahlungsart, produkt"/>
+      </apex:InputField>
+  </th>
+  </tr>
+    <p/>
+    <tr>
+    <th>
+  Angebotsdauer in Monate:</th><th> 
+      <apex:inputField value="{! lead.Angebotsdauer_in_Monate__c }" required="false">
+          <apex:actionSupport event="onchange" reRender="total,controleffect,discounteffect,total_angebot,total_angebot_annual,total_angebot_annual_net,infoblock, zahlungsart, produkt"
+            action="{! calculatePricing }"/>
+      </apex:inputField>
+      </th>
+      </tr>
+    <p/>
+    <tr>
+    <th>
+    Aktuelle Zahlungsmethode:</th><th>
+    <apex:inputField id="fuelpaymentmethod" value="{!lead.Aktuelle_Zahlungsmethode__c}">
+          <apex:actionSupport event="onchange" reRender="total,controleffect,discounteffect,total_angebot,total_angebot_annual,total_angebot_annual_net,infoblock, zahlungsart, produkt"/>
+      </apex:inputField>
+          </th>
+      </tr>
+    <tr>
+    	<th>
+    		Zahlungsart:</th><th>
+    		<apex:inputField id="zahlungsart" value="{! lead.Zahlungsart__c }">
+          		<apex:actionSupport event="onchange" reRender="total,controleffect,discounteffect,total_angebot,total_angebot_annual,total_angebot_annual_net,infoblock, zahlungsart, produkt"
+                action="{! calculatePricing }"/>
+      		</apex:inputField>
+          </th>
+      </tr>
+    <tr>
+    	<th>
+    		Produkt:</th><th>
+    		<apex:inputField id="produkt" value="{! lead.Produkt__c }">
+          		<apex:actionSupport event="onchange" reRender="total,controleffect,discounteffect,total_angebot,total_angebot_annual,total_angebot_annual_net,infoblock, zahlungsart, produkt"
+                action="{! calculatePricing }"/>
+      		</apex:inputField>
+          </th>
+      </tr>
+    </table>
+    </apex:pageBlock>
+
+    <apex:pageBlock Title="Results">
+    <table border="0" width="100%">
+    <tr>
+    <th width="300px">
+    Erwarteter Gewinn durch Kontrolle:</th><th>
+        <apex:outputText id="controleffect" value="{! IF(lead.Aktuelle_Zahlungsmethode__c != "Tankkarte", ROUND(lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c * 0.05 * 1.20, 0), 0) }"/>
+        Euro / Monat
+              </th>
+      </tr>
+    <p/>
+    <tr>
+    <th>
+    Erwarteter Gewinn durch Rabatt:</th><th>
+        <apex:outputText id="discounteffect" value="{! ROUND(lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c * 0.05 * 1.20, 0) }"/>
+        Euro / Monat
+              </th>
+      </tr>
+    <p/>
+    <tr>
+    <th>
+    Kartengebühr NACH Angebotsphase:</th><th>
+        
+        <apex:outputText id="total" value="{0, number, 0.00}">
+            <apex:param value="{! lead.Anzahl_der_Fahrzeuge__c * cardPricing }"/>
+        </apex:outputText>
+        Euro / Monat
+              </th>
+      </tr>
+    <p/>
+    <tr>
+    <th>
+    Erwarteter Gewinn Angebotsdauer:</th><th>
+        <apex:outputText id="total_angebot" value="{0, number, 0.00}">
+            <apex:param value="{! IF(lead.Aktuelle_Zahlungsmethode__c != "Tankkarte", ROUND(lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c * 0.05 * 1.20, 0), 0) + 
+            ROUND(lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c * 0.05 * 1.20, 0) }"/>
+        </apex:outputText>
+        Euro / Monat
+              </th>
+      </tr>
+    <p/>
+    <tr>
+    
+    <th>
+    <hr/>
+    Erwarteter Gewinn insgesamt:</th><th><hr/>
+        <apex:outputText id="total_angebot_annual" value="{0, number, 0.00}">
+            <apex:param value="{! IF(lead.Aktuelle_Zahlungsmethode__c != "Tankkarte", ROUND(lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c * 0.05 * 1.20, 0), 0) * 12 + 
+            ROUND(lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c * 0.05 * 1.20, 0) * angebotsdauer- 
+            lead.Anzahl_der_Fahrzeuge__c * cardPricing * (12 - angebotsdauer) }"/>
+        </apex:outputText>
+        Brutto Euro / Jahr
+        (<apex:outputText id="total_angebot_annual_net" value="{0, number, 0.00}">
+            <apex:param value="{! (IF(lead.Aktuelle_Zahlungsmethode__c != "Tankkarte", ROUND(lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c * 0.05 * 1.20, 0), 0) * 12 + 
+            ROUND(lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c * 0.05 * 1.20, 0) * angebotsdauer- 
+            lead.Anzahl_der_Fahrzeuge__c * cardPricing * (12 - angebotsdauer))/1.19 }"/>
+        </apex:outputText>
+        Netto Euro /Jahr )
+        </th>
+        </tr>
+        </table>
+    </apex:pageBlock>
+
+    <apex:pageBlock Title="Info" id="infoblock">
+    <table border="0" width="100%">
+    <tr>
+    <th width="300px">
+    Erwarteter Gewinn durch Kontrolle:</th><th>
+        <span style="font-weight: normal;">Only for "Aktuelle Zahlungsmethode NOT Tankkarte": <span style="font-weight: bold;">"<a class="hastip" title="{! lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c }">Tankvolumen (Liter/Monat)</a>" * 0.05 * 1.2</span></span>
+              </th>
+      </tr>
+    <p/>
+    <tr>
+    <th>
+    Erwarteter Gewinn durch Rabatt:</th><th>
+        <span>"<a class="hastip" title="{! lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c }">Tankvolumen (Liter/Monat)</a>" * 0.05 * 1.2</span>
+              </th>
+      </tr>
+    <p/>
+    <tr>
+    <th>
+    Kartengebühr NACH Angebotsphase:</th><th>
+        <span>"<a class="hastip" title="{! lead.Anzahl_der_Fahrzeuge__c }">Anzahl der Fahrzeuge</a>" * <a class="hastip" title="{! cardPricing }">cardPricing</a></span>
+              </th>
+      </tr>
+    <p/>
+    <tr>
+    <th>
+    Erwarteter Gewinn Angebotsdauer:</th><th>
+        <span style="font-weight: normal;">Only for "Aktuelle Zahlungsmethode NOT Tankkarte": <span style="font-weight: bold;">"<a class="hastip" title="{! lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c }">Tankvolumen (Liter/Monat)</a>" * 0.05 * 1.2 + <br/> + "<a class="hastip" title="{! lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c }">Tankvolumen (Liter/Monat)</a>" * 0.05 * 1.2</span></span>
+              </th>
+      </tr>
+    <p/>
+    <tr>
+    
+    <th>
+    <hr/>
+    Erwarteter Gewinn insgesamt:</th><th><hr/>
+        <span style="font-weight: normal;">(Only for "Aktuelle Zahlungsmethode NOT Tankkarte": <span style="font-weight: bold;">"<a class="hastip" title="{! lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c }">Tankvolumen (Liter/Monat)</a>" * 0.05 * 1.2) * 12 + <br/>+ "<a class="hastip" title="{! lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c }">Tankvolumen (Liter/Monat)</a>" * 0.05 * 1.2 * "<a class="hastip" title="{! lead.Angebotsdauer_in_Monate__c }">Angebotsdauer in Monate</a>" - <br/>- "<a class="hastip" title="{! lead.Anzahl_der_Fahrzeuge__c }">Anzahl der Fahrzeuge</a>" * <a class="hastip" title="{! cardPricing }">cardPricing</a> * (12 - "<a class="hastip" title="{! lead.Angebotsdauer_in_Monate__c }">Angebotsdauer in Monate</a>")</span></span>
+        <span style="text-style: italic;">Brutto Euro / Jahr</span><br/>
+        (<span style=" ont-weight: normal;">(Only for "Aktuelle Zahlungsmethode NOT Tankkarte": <span style="font-weight: bold;">"<a class="hastip" title="{! lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c }">Tankvolumen (Liter/Monat)</a>" * 0.05 * 1.2) * 12 + <br/>"<a class="hastip" title="{! lead.Monatlicher_Kraftstoffverbrauch_in_Liter__c }">Tankvolumen (Liter/Monat)</a>" * 0.05 * 1.2 * "<a class="hastip" title="{! lead.Angebotsdauer_in_Monate__c }">Angebotsdauer in Monate</a>" - <br/>- "<a class="hastip" title="{! lead.Anzahl_der_Fahrzeuge__c }">Anzahl der Fahrzeuge</a>" * <a class="hastip" title="{! cardPricing }">cardPricing</a> * (12 - "<a class="hastip" title="{! lead.Angebotsdauer_in_Monate__c }">Angebotsdauer in Monate</a>"))/1.19</span></span>
+        <span style="text-style: italic;">Brutto Euro / Jahr</span>
+        Netto Euro /Jahr )
+        </th>
+        </tr>
+        </table>
+        <script type="text/javascript">
+        $('.hastip').tooltipsy();
+        </script>
+    </apex:pageBlock>
+  </apex:form>
+
+ 
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

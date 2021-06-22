@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CF_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>CF Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not launched</fullName>
+                <default>true</default>
+                <label>Not launched</label>
+            </value>
+            <value>
+                <fullName>Error (Report not generated)</fullName>
+                <default>false</default>
+                <label>Error (Report not generated)</label>
+            </value>
+            <value>
+                <fullName>Launched</fullName>
+                <default>false</default>
+                <label>Launched</label>
+            </value>
+            <value>
+                <fullName>Error (Report generated)</fullName>
+                <default>false</default>
+                <label>Error (Report generated)</label>
+            </value>
+            <value>
+                <fullName>Report generated</fullName>
+                <default>false</default>
+                <label>Report generated</label>
+            </value>
+            <value>
+                <fullName>Pending Credit Report - Order was sent</fullName>
+                <default>false</default>
+                <label>Pending Credit Report - Order was sent</label>
+            </value>
+            <value>
+                <fullName>Pending Credit Report - Need information</fullName>
+                <default>false</default>
+                <label>Pending Credit Report - Need information</label>
+            </value>
+            <value>
+                <fullName>Pending Credit Report - Additional information was sent</fullName>
+                <default>false</default>
+                <label>Pending Credit Report - Additional information was sent</label>
+            </value>
+            <value>
+                <fullName>Credit Report Generated</fullName>
+                <default>false</default>
+                <label>Credit Report Generated</label>
+            </value>
+            <value>
+                <fullName>SEPA Confirmation</fullName>
+                <default>false</default>
+                <label>SEPA Confirmation</label>
+            </value>
+            <value>
+                <fullName>Pending deposit</fullName>
+                <default>false</default>
+                <label>Pending deposit</label>
+            </value>
+            <value>
+                <fullName>Pending Credit - Contract Check</fullName>
+                <default>false</default>
+                <label>Pending Credit - Contract Check</label>
+            </value>
+            <value>
+                <fullName>Auto CW</fullName>
+                <default>false</default>
+                <label>Auto CW</label>
+            </value>
+            <value>
+                <fullName>Manual scoring</fullName>
+                <default>false</default>
+                <label>Manual scoring</label>
+            </value>
+            <value>
+                <fullName>Pending Credit Report</fullName>
+                <default>false</default>
+                <label>Pending Credit Report</label>
+            </value>
+            <value>
+                <fullName>Credit Report not available</fullName>
+                <default>false</default>
+                <label>Credit Report not available</label>
+            </value>
+            <value>
+                <fullName>Pending Advance Payment</fullName>
+                <default>false</default>
+                <label>Pending Advance Payment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

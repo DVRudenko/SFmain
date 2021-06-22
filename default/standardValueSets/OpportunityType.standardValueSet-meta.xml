@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Existing Business</fullName>
+        <default>false</default>
+        <label>Existing Business</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New Business</fullName>
+        <default>true</default>
+        <label>New Business</label>
+    </standardValue>
+    <standardValue>
+        <fullName>WinBack</fullName>
+        <default>false</default>
+        <label>WinBack</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Contract offer</fullName>
+        <default>false</default>
+        <label>Contract offer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>BAU</fullName>
+        <default>false</default>
+        <label>BAU</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Existing GFN</fullName>
+        <default>false</default>
+        <label>Existing GFN</label>
+    </standardValue>
+    <standardValue>
+        <fullName>New GFN</fullName>
+        <default>false</default>
+        <label>New GFN</label>
+    </standardValue>
+</StandardValueSet>

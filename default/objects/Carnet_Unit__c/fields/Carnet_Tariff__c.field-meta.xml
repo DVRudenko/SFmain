@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Carnet_Tariff__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Monthly flat fee for services FLEETCOR Carnet in Poland, include rental SIM card, data transmission (communication fees) and background maps.</inlineHelpText>
+    <label>Carnet Tariff</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard 12</fullName>
+                <default>false</default>
+                <label>Standard 12</label>
+            </value>
+            <value>
+                <fullName>Standard 24</fullName>
+                <default>false</default>
+                <label>Standard 24</label>
+            </value>
+            <value>
+                <fullName>Standard 36</fullName>
+                <default>false</default>
+                <label>Standard 36</label>
+            </value>
+            <value>
+                <fullName>Premium 24</fullName>
+                <default>false</default>
+                <label>Premium 24</label>
+            </value>
+            <value>
+                <fullName>Premium 36</fullName>
+                <default>false</default>
+                <label>Premium 36</label>
+            </value>
+            <value>
+                <fullName>Prepaid 12</fullName>
+                <default>false</default>
+                <label>Prepaid 12</label>
+            </value>
+            <value>
+                <fullName>Prepaid 24</fullName>
+                <default>false</default>
+                <label>Prepaid 24</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

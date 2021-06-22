@@ -1,0 +1,199 @@
+<apex:page showHeader="true" sidebar="true" controller="PD_MetaDataCacheController">
+    <style type="text/css">
+        .homeTab .pageTitleIcon {
+            background-image: url(/img/icon/cash32.png);
+            background-position: 0 0;
+            width: 32px;
+            height: 32px;
+        }
+        .resultMessage {
+            display: inline-block;
+            width: 16px;
+            margin-left: 3px;
+        }
+        .metadata {
+            margin-bottom: 5px;
+            position: relative;
+            height: 16px;
+        }
+        .error {
+            position: absolute;
+            top: 0px;
+            left: 19px;
+            background: #f9f4c0;
+            border: 1px solid #ff0000;
+            border-radius: 3px;
+            display:none;
+            z-index: 10;
+            padding: 5px;
+        }
+        .metaTypeName {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .processNote {
+            font-weight: bold;
+            font-size: 15px;
+            display:none;
+            margin: 10px 0;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+    <script type="text/javascript">
+        var profileNamesJSON = JSON.parse('{!profileNamesJSON}');
+        var layoutsJSON = JSON.parse('{!layoutsJSON}');
+        var metasList = [];
+
+        for (var i in profileNamesJSON){
+            metasList.push({id: i, name: profileNamesJSON[i]});
+        }
+        for (var i in layoutsJSON){
+            metasList.push({id: i, name: layoutsJSON[i]});
+        }
+
+        Visualforce.remoting.timeout = 20000;
+    </script>
+    <script type="text/javascript">
+        var cacheRead = 0;
+        var interv;
+        var processing = 0;
+        var currentMeta = 0;
+        Visualforce.remoting.timeout = 120000; // Set timeout at page level
+        $(function(){
+            $('.js-meta-list')
+            .on('mouseenter', '.js-result', function(){
+                $(this).parent().find('.error').fadeIn('fast');
+            })
+            .on('mouseleave', '.js-result', function(){
+                $(this).parent().find('.error').fadeOut('fast');
+            });
+        });
+
+        function processQueue() {
+            if (cacheRead == 0)  {
+                clearInterval(interv);
+                return;
+            }
+
+            if (processing > 6) {
+                return;
+            }
+            var iterations = Math.min(currentMeta + 8, metasList.length);
+            for (var j = currentMeta; j < iterations; j++, currentMeta++) {
+                fillMeta(metasList[j].id, metasList[j].name);
+            }
+        }
+
+        function fillOneItem(me, id) {
+            var $div = $(me).closest('div.metadata');
+            $(me).hide();
+            $div.find('span.js-result').html('<img width="25" src="{!URLFOR($Resource.PD_Icons, 'spinner.gif')}" class="js-loader"/>');
+            $('.js-processNote').show();
+
+            if (profileNamesJSON[id] !== undefined) {
+                name = profileNamesJSON[id];
+            } else if (layoutsJSON[id] !== undefined) {
+                name = layoutsJSON[id];
+            }
+            fillMeta(id, name);
+        }
+
+        function fillCache() {
+            $('input.js-updateButton').prop('disabled', true);
+            $('.js-result').html('<img width="25" src="{!URLFOR($Resource.PD_Icons, 'spinner.gif')}" class="js-loader"/>');
+            $('.js-processNote').show();
+            cacheRead = $('.js-loader').size();
+            interv = setInterval(processQueue, 1000);
+        }
+
+        function handleMetaResult(id, actionResult, event) {
+            if (typeof(actionResult) == 'string') {
+                actionResult = JSON.parse(actionResult);
+            }
+
+            if (actionResult === null || actionResult.result !== 'Success') {
+                var error =  event.type !== undefined && event.type.toLowerCase() == 'exception' ? event.message:'Unknown error';
+                actionResult = {"result": "Error", "message": error};
+            }
+
+            if (actionResult.result == 'Success') {
+                $('#meta' + id + ' .js-result').html('<img width="15" src="{!URLFOR($Resource.PD_Icons, 'ok.png')}" alt="OK"/>');
+            } else {
+                $('#meta' + id + ' .js-result').html('<img width="15" src="{!URLFOR($Resource.PD_Icons, 'fail.jpg')}" alt="Fail"/>');
+                $('#meta' + id).append('<div class="error">'+actionResult.message+'</div>');
+            }
+            cacheRead--;
+            processing--;
+            if (cacheRead == 0) {
+                $('input.js-updateButton').prop('disabled', false);
+            }
+        }
+
+        function fillMeta(id, name) {
+            var method = '';
+            if (profileNamesJSON[id] !== undefined) {
+                method = '{!$RemoteAction.PD_MetaDataCacheController.fillProfilesCache2}';
+            } else if (layoutsJSON[id] !== undefined) {
+                method = '{!$RemoteAction.PD_MetaDataCacheController.fillLayoutsCache2}';
+            }
+            processing++;
+            Visualforce.remoting.Manager.invokeAction(
+                method,
+                id,
+                name,
+                function(result, event){
+                    handleMetaResult(id, result, event);
+                },
+                {escape: false, buffer: false}
+            );
+        }
+
+    </script>
+    <apex:form id="form">
+        <div class="bPageTitle">
+            <div class="ptBody">
+                <div class="content">
+                    <img src="/s.gif" alt="Cache" class="pageTitleIcon"/>
+                    <h1 class="pageType"><span class="titleSeparatingColon">:</span>&nbsp;</h1>
+                    <h2 class="pageDescription">pd_metadata_cache_refresh</h2>
+                    <div class="blank">&nbsp;</div>
+                </div>
+                <div class="links"></div>
+            </div>
+        </div>
+        <div class="bEditBlock">
+            <apex:pageBlock >
+                <apex:pageBlockButtons >
+                    <apex:commandButton onclick="fillCache();" value="pd_update_cache" rerender="stub" id="updateButton" styleClass="js-updateButton"></apex:commandButton>
+                </apex:pageBlockButtons>
+                <div></div>
+                <div class="js-meta-list">
+                    <div class="processNote js-processNote">pd_metadata_process_note</div>
+                    <div class="metaTypeName">pd_metadata_profiles</div>
+                    <apex:repeat value="{!profileApiList}" var="profileApi" >
+                        <div id="meta{!profileApi.Id}" class="metadata">
+                            <span class="js-result resultMessage"></span>
+                            <span class="metaName">{!profileApi.Name}</span>
+                            <span class=""><button onclick="fillOneItem(this, '{!profileApi.Id}'); return false;">Обновить</button></span>
+                        </div>
+                    </apex:repeat>
+                    <div class="metaTypeName">pd_metadata_layouts</div>
+                    <apex:repeat value="{!layoutList}" var="layout" >
+                        <div id="meta{!layout.Id}" class="metadata">
+                            <span class="js-result resultMessage"></span>
+                            <span class="metaName">{!layout.displayName}</span>
+                            <span class=""><button onclick="fillOneItem(this, '{!layout.Id}'); return false;">Обновить</button></span>
+                        </div>
+                    </apex:repeat>
+                </div>
+            </apex:pageBlock>
+        </div>
+        <apex:outputPanel id="stub"></apex:outputPanel>
+    </apex:form>
+    <div style="display:none">
+        <img width="15" src="{!URLFOR($Resource.PD_Icons, 'ok.png') }"/>
+        <img width="15" src="{!URLFOR($Resource.PD_Icons, 'fail.jpg') }"/>
+        <img width="25" src="{!URLFOR($Resource.PD_Icons, 'spinner.gif')}"/>
+    </div>
+</apex:page>

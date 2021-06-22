@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Ausweisart --></label>
+    <name>Ausweisart__c</name>
+    <picklistValues>
+        <masterLabel>Personalausweis</masterLabel>
+        <translation><!-- Personalausweis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reisepass</masterLabel>
+        <translation><!-- Reisepass --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

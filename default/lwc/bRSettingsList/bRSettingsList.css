@@ -1,0 +1,35 @@
+.form {
+    margin-left: 10%;
+    margin-right: 30%;
+    width: 60%;
+}
+
+.field {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.small {
+    width: 3%;
+    justify-content: center;
+}
+
+.large {
+    width: 25%;
+    padding: 12px;
+}
+
+.slds-badge {
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
+}
+
+.btn-view {
+    margin-right: 15px;
+}
+
+.btn-add_new_setting {
+    margin-left: 36%;
+    position: relative;
+    top: -25px;
+}

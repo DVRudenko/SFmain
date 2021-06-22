@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Geschäftsbereich --></label>
+    <name>Geschaeftsbereich__c</name>
+    <picklistValues>
+        <masterLabel>Automobil-Gewerbe (KFZ)</masterLabel>
+        <translation><!-- Automobil-Gewerbe (KFZ) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Energie-Versorgung</masterLabel>
+        <translation><!-- Energie-Versorgung --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Handwerker (Maler, Lackierer, etc.)</masterLabel>
+        <translation><!-- Handwerker (Maler, Lackierer, etc.) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Produzierendes Gewerbe</masterLabel>
+        <translation><!-- Produzierendes Gewerbe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sonstiges</masterLabel>
+        <translation><!-- Sonstiges --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Soziale Dienstleistung</masterLabel>
+        <translation><!-- Soziale Dienstleistung --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technische Dienstleistung</masterLabel>
+        <translation><!-- Technische Dienstleistung --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transport (Fracht)</masterLabel>
+        <translation><!-- Transport (Fracht) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transport (Personen)</masterLabel>
+        <translation><!-- Transport (Personen) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Verarbeitendes Gewerbe</masterLabel>
+        <translation><!-- Verarbeitendes Gewerbe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vertrieb und Beratung</masterLabel>
+        <translation><!-- Vertrieb und Beratung --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

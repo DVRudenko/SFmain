@@ -1,0 +1,9 @@
+<apex:page standardController="Goal" extensions="RefreshMetricsOnGoalListViewCtrl" 
+	recordSetVar="Goal" action="{! init }">
+<apex:pageMessages />
+<apex:outputPanel rendered="{! isValid }">
+<div style="text-align:center;font-size:200%">Метрики обновлены!</div>
+</apex:outputPanel>
+<div style="text-align:center;padding-top:20px"><a href="/0WI/o">Вернуться к Целям</a></div>
+
+</apex:page>

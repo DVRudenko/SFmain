@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- SalesPitch - Level1: Product --></label>
+    <name>SalesPitch_Level1_Product__c</name>
+    <picklistValues>
+        <masterLabel>Flexible Kreditkarte</masterLabel>
+        <translation>Flexible Credit Card</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Universelle Flottenkarte</masterLabel>
+        <translation>Universal Fleet Card</translation>
+    </picklistValues>
+</CustomFieldTranslation>

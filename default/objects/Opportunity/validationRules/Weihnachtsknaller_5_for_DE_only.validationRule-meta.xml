@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weihnachtsknaller_5_for_DE_only</fullName>
+    <active>true</active>
+    <description>Product__c = "5 Cent Neujahrs-Angebot" is available only for Registered_Country__c = "Germany".</description>
+    <errorConditionFormula>AND(ISPICKVAL(Product__c, "5 Cent Weihnachtsknaller"), Registered_Country__c != "Germany")</errorConditionFormula>
+    <errorDisplayField>Product__c</errorDisplayField>
+    <errorMessage>Offer "5 Cent Neujahrs-Angebot" is available only for Germany.</errorMessage>
+</ValidationRule>

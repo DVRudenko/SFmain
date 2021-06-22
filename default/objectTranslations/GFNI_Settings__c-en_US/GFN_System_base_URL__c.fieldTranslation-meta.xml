@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The person that access the landing page functionality will need to have been set up as a GFN user with access to the Company the client resides in and access, either read-write or read-only, to the page being landed on. --></help>
+    <label><!-- GFN System base URL --></label>
+    <name>GFN_System_base_URL__c</name>
+</CustomFieldTranslation>

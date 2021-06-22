@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Received_materials__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Nuremberg Team has requested this field to the Accounts with Record Type = Retailer</description>
+    <externalId>false</externalId>
+    <label>Received materials</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

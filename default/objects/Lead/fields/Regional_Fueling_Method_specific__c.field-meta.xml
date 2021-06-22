@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Regional_Fueling_Method_specific__c</fullName>
+    <description>Regional Fleet Cards, Oil Company Cards, Leasing Company Cards</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Regional Fleet Cards, Oil Company Cards, Leasing Company Cards</inlineHelpText>
+    <label>Regional Fueling Method (specific)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>7-Eleven</fullName>
+                <default>false</default>
+                <label>7-Eleven</label>
+            </value>
+            <value>
+                <fullName>ARI Fleet</fullName>
+                <default>false</default>
+                <label>ARI Fleet</label>
+            </value>
+            <value>
+                <fullName>Donlen</fullName>
+                <default>false</default>
+                <label>Donlen</label>
+            </value>
+            <value>
+                <fullName>EFS (First Data)</fullName>
+                <default>false</default>
+                <label>EFS (First Data)</label>
+            </value>
+            <value>
+                <fullName>Emkay</fullName>
+                <default>false</default>
+                <label>Emkay</label>
+            </value>
+            <value>
+                <fullName>Enterprise/WEX</fullName>
+                <default>false</default>
+                <label>Enterprise/WEX</label>
+            </value>
+            <value>
+                <fullName>FTS (Fleet-Tech Transp)</fullName>
+                <default>false</default>
+                <label>FTS (Fleet-Tech Transp)</label>
+            </value>
+            <value>
+                <fullName>GE Fleet</fullName>
+                <default>false</default>
+                <label>GE Fleet</label>
+            </value>
+            <value>
+                <fullName>Hess</fullName>
+                <default>false</default>
+                <label>Hess</label>
+            </value>
+            <value>
+                <fullName>Penske/Ryder</fullName>
+                <default>false</default>
+                <label>Penske/Ryder</label>
+            </value>
+            <value>
+                <fullName>PHH Arval</fullName>
+                <default>false</default>
+                <label>PHH Arval</label>
+            </value>
+            <value>
+                <fullName>Pilot (Flying J)</fullName>
+                <default>false</default>
+                <label>Pilot (Flying J)</label>
+            </value>
+            <value>
+                <fullName>QuikTrip</fullName>
+                <default>false</default>
+                <label>QuikTrip</label>
+            </value>
+            <value>
+                <fullName>Rapid Fuel (Kangaroo)</fullName>
+                <default>false</default>
+                <label>Rapid Fuel (Kangaroo)</label>
+            </value>
+            <value>
+                <fullName>Sheetz</fullName>
+                <default>false</default>
+                <label>Sheetz</label>
+            </value>
+            <value>
+                <fullName>Speedway</fullName>
+                <default>false</default>
+                <label>Speedway</label>
+            </value>
+            <value>
+                <fullName>T-Chek</fullName>
+                <default>false</default>
+                <label>T-Chek</label>
+            </value>
+            <value>
+                <fullName>Valero</fullName>
+                <default>false</default>
+                <label>Valero</label>
+            </value>
+            <value>
+                <fullName>Wheels</fullName>
+                <default>false</default>
+                <label>Wheels</label>
+            </value>
+            <value>
+                <fullName>Other Regional/Local</fullName>
+                <default>false</default>
+                <label>Other Regional/Local</label>
+            </value>
+            <value>
+                <fullName>PC "Petrol Plyus"</fullName>
+                <default>false</default>
+                <label>PC "Petrol Plyus"</label>
+            </value>
+            <value>
+                <fullName>Neftika-Card</fullName>
+                <default>false</default>
+                <label>Neftika-Card</label>
+            </value>
+            <value>
+                <fullName>Avtodorstroy</fullName>
+                <default>false</default>
+                <label>Avtodorstroy</label>
+            </value>
+            <value>
+                <fullName>ASP Kholding</fullName>
+                <default>false</default>
+                <label>ASP Kholding</label>
+            </value>
+            <value>
+                <fullName>OPTAN-SMART</fullName>
+                <default>false</default>
+                <label>OPTAN-SMART</label>
+            </value>
+            <value>
+                <fullName>Processing-Servis</fullName>
+                <default>false</default>
+                <label>Processing-Servis</label>
+            </value>
+            <value>
+                <fullName>Arkhipelag</fullName>
+                <default>false</default>
+                <label>Arkhipelag</label>
+            </value>
+            <value>
+                <fullName>Tsentral'naya Processingovaya Kompaniya</fullName>
+                <default>false</default>
+                <label>Tsentral'naya Processingovaya Kompaniya</label>
+            </value>
+            <value>
+                <fullName>Grilen</fullName>
+                <default>false</default>
+                <label>Grilen</label>
+            </value>
+            <value>
+                <fullName>Tsentrnefteprodukt-servis</fullName>
+                <default>false</default>
+                <label>Tsentrnefteprodukt-servis</label>
+            </value>
+            <value>
+                <fullName>Motom</fullName>
+                <default>false</default>
+                <label>Motom</label>
+            </value>
+            <value>
+                <fullName>Statoyl Riteyl Opereyshns</fullName>
+                <default>false</default>
+                <label>Statoyl Riteyl Opereyshns</label>
+            </value>
+            <value>
+                <fullName>Gelios</fullName>
+                <default>false</default>
+                <label>Gelios</label>
+            </value>
+            <value>
+                <fullName>Assotsiatsiya GRAND</fullName>
+                <default>false</default>
+                <label>Assotsiatsiya GRAND</label>
+            </value>
+            <value>
+                <fullName>AZS-Servis</fullName>
+                <default>false</default>
+                <label>AZS-Servis</label>
+            </value>
+            <value>
+                <fullName>NK Arsenal</fullName>
+                <default>false</default>
+                <label>NK Arsenal</label>
+            </value>
+            <value>
+                <fullName>Smart Plyus</fullName>
+                <default>false</default>
+                <label>Smart Plyus</label>
+            </value>
+            <value>
+                <fullName>ASPEK-Nefteprodukt</fullName>
+                <default>false</default>
+                <label>ASPEK-Nefteprodukt</label>
+            </value>
+            <value>
+                <fullName>Nefko-kart</fullName>
+                <default>false</default>
+                <label>Nefko-kart</label>
+            </value>
+            <value>
+                <fullName>Trans Oyl</fullName>
+                <default>false</default>
+                <label>Trans Oyl</label>
+            </value>
+            <value>
+                <fullName>PORT ONE OU</fullName>
+                <default>false</default>
+                <label>PORT ONE OU</label>
+            </value>
+            <value>
+                <fullName>Yunikard-Oyl</fullName>
+                <default>false</default>
+                <label>Yunikard-Oyl</label>
+            </value>
+            <value>
+                <fullName>Ekoyl-Protsessing</fullName>
+                <default>false</default>
+                <label>Ekoyl-Protsessing</label>
+            </value>
+            <value>
+                <fullName>MNGK-AVTOKARD</fullName>
+                <default>false</default>
+                <label>MNGK-AVTOKARD</label>
+            </value>
+            <value>
+                <fullName>Banamex</fullName>
+                <default>false</default>
+                <label>Banamex</label>
+            </value>
+            <value>
+                <fullName>Bancomer</fullName>
+                <default>false</default>
+                <label>Bancomer</label>
+            </value>
+            <value>
+                <fullName>Banorte</fullName>
+                <default>false</default>
+                <label>Banorte</label>
+            </value>
+            <value>
+                <fullName>HSBC</fullName>
+                <default>false</default>
+                <label>HSBC</label>
+            </value>
+            <value>
+                <fullName>Propietary Card</fullName>
+                <default>false</default>
+                <label>Propietary Card</label>
+            </value>
+            <value>
+                <fullName>Santander</fullName>
+                <default>false</default>
+                <label>Santander</label>
+            </value>
+            <value>
+                <fullName>Scotia</fullName>
+                <default>false</default>
+                <label>Scotia</label>
+            </value>
+            <value>
+                <fullName>Universal Card</fullName>
+                <default>false</default>
+                <label>Universal Card</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

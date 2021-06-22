@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Checked if initial related Account was changed --></help>
+    <label><!-- Is Account Changed --></label>
+    <name>Is_Account_Changed__c</name>
+</CustomFieldTranslation>

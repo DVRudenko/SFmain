@@ -1,0 +1,28 @@
+.THIS .column-min-size{
+    min-width: 420px;
+    border-bottom: 1px ridge;
+}
+
+.THIS .column-min-size:hover{
+    background-color: aliceblue;
+    border-radius: 4px;
+}
+
+.THIS .parametr-heading-size_large{
+    font-size: 16px;
+}
+
+.THIS .parametr-heading-size_small{
+    font-size: 13px;
+    width: 210px;
+    min-width: 200px;
+}
+
+.THIS .parametr-value-size_small{
+    font-size: 12px;
+    height: 19px;
+}
+
+.THIS .red-detail-value{
+    color: tomato;
+}

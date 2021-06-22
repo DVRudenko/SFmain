@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVM_Set_callback__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If this field is left checked on NVM Tasks a follow up task will be automatically be created.</description>
+    <externalId>false</externalId>
+    <label>Don&#39;t Set callback</label>
+    <type>Checkbox</type>
+</CustomField>

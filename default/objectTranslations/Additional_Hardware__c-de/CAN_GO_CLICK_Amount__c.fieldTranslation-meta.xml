@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Cable for non-contact connection to the rail CAN. --></help>
+    <label><!-- CAN GO CLICK --></label>
+    <name>CAN_GO_CLICK_Amount__c</name>
+</CustomFieldTranslation>

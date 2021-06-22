@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Edit the formula to include state names for wrap or after call work and call completed states --></help>
+    <label><!-- isWrapAndComplete --></label>
+    <name>NVMStatsSF__isWrapAndComplete__c</name>
+</CustomFieldTranslation>

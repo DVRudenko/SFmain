@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Failed_Rewards</fullName>
+    <columns>NAME</columns>
+    <columns>success__User__c</columns>
+    <columns>success__Achievement__c</columns>
+    <columns>success__Collective__c</columns>
+    <columns>success__Number_of_occurrences__c</columns>
+    <columns>success__Started_Date_Time__c</columns>
+    <columns>success__Time_Limit_Date_Time__c</columns>
+    <columns>success__Last_Updated_Date_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>success__Reward_Status__c</field>
+        <operation>equals</operation>
+        <value>Failed</value>
+    </filters>
+    <label>Unsuccessful</label>
+    <language>en_US</language>
+</ListView>

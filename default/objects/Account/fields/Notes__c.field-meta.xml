@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Notes__c</fullName>
+    <description>Nuremberg Team has requested new field for Notes to the Accounts with Record Type = Retailer, so we re-use this old field origin for WinBack project.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Order comments</inlineHelpText>
+    <label>Notes</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__isWrapAndComplete__c</fullName>
+    <deprecated>false</deprecated>
+    <description>True for rows which can be included in Agent Handle Time calculations, e.g. because the agent is in a wrap state or in a completed state.</description>
+    <externalId>false</externalId>
+    <formula>OR(NVMStatsSF__State__c == &quot;0&quot;, CONTAINS(NVMStatsSF__State__c, &quot;Wrap Up&quot;))</formula>
+    <inlineHelpText>Edit the formula to include state names for wrap or after call work and call completed states</inlineHelpText>
+    <label>isWrapAndComplete</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

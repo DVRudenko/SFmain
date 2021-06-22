@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__EmailBody_pt_BR__c</fullName>
+    <deprecated>false</deprecated>
+    <description>DocuSign Email Body in Portuguese Brazilian</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Edit this Email Message Text (up to 2,000 characters) and it will appear in the notification to sign for your DocuSign Recipient.</inlineHelpText>
+    <label>EmailBody_pt_BR</label>
+    <length>2000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

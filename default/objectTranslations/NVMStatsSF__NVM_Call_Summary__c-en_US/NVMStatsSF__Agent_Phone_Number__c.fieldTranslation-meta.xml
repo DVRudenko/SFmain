@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Phone number Agent received Call on --></help>
+    <label><!-- Agent Phone Number --></label>
+    <name>NVMStatsSF__Agent_Phone_Number__c</name>
+</CustomFieldTranslation>

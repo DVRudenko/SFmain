@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manual_Entry__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Признак, что данные с формы E2E RU были введены клиентом вручную</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Клиент ввел данные с формы E2E вручную?</inlineHelpText>
+    <label>Manual entry</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

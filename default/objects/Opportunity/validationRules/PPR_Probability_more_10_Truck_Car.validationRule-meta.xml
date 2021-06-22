@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Probability_more_10_Truck_Car</fullName>
+    <active>true</active>
+    <description>fill field Number_of_cars__c or Number_of_trucks__c  if probability go up &gt; 0.1</description>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = 'Russian_Sales',
+$Profile.Name != "E2E RU Profile",
+$Profile.Name != "System Administrator",
+$Profile.Name != "RU_System_Administrator",
+$Profile.Name != 'API Only',
+$Profile.Name != "Russian Call Center",
+NOT(ISCHANGED( OwnerId )),
+NOT(ISCHANGED( Rating_attractive__c )),
+NOT(ISCHANGED( Last_Owner_Change_Date_RUS__c )),
+NOT(ISCHANGED( Number_of_open_tasks__c)),
+NOT(ISCHANGED( Open_Task__c )),
+Probability  &gt; 0.1,
+OR(ISNULL(Number_of_cars__c), Number_of_cars__c= 0),
+OR(ISNULL(Number_of_trucks__c), Number_of_trucks__c = 0)
+)</errorConditionFormula>
+    <errorMessage>fill field Number_of_cars__c or Number_of_trucks__c  if probability go up &gt; 0.1</errorMessage>
+</ValidationRule>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Close Case Layout</layout>
+        <layoutType>CaseClose</layoutType>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Close Salesforce Consulting</layout>
+        <layoutType>CaseClose</layoutType>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Closed Cases</layout>
+        <layoutType>CaseClose</layoutType>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Development</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Russian Cases</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Salesforce Consulting</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Shell Support Case Layout</layout>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Support Case Layout</layout>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Default --></label>
+        <name>Default</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Development --></label>
+        <name>Development</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Russian Cases --></label>
+        <name>Russian_Cases</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Salesforce Consulting Record Type (INTERCODEC). --></description>
+        <label><!-- Salesforce Consulting --></label>
+        <name>Salesforce_Consulting</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- the record type for cases handling by Shell Service Agents --></description>
+        <label><!-- Support --></label>
+        <name>Support</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- the record type for cases handling by CCS managers --></description>
+        <label><!-- Support CCS --></label>
+        <name>Support_CCS</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- You are not the owner of this case, you cannot resolve it. --></errorMessage>
+        <name>CloseCaseValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Обращение принято в работу, для правки обратитесь к Исполнителю! --></errorMessage>
+        <name>Edit_Case</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot use &apos;Closed&apos; status. For closing the case please choose &apos;Resolved&apos; status. --></errorMessage>
+        <name>LimitToSetStatusClosed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please, fill out the Subject field --></errorMessage>
+        <name>Mandatory_Subject</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You need to choose a topic and a subtopic for the case. --></errorMessage>
+        <name>Mandatory_Topic_And_Subtopic</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The case is closed. You cannot change its status. --></errorMessage>
+        <name>ProhibitChangeClosedStatus</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Not possible to save both ERP and Merchant/Terminal --></errorMessage>
+        <name>Separate_ERP_and_Merchant_Terminal_cases</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Not possible to save both ERP and Merchant/Terminal --></errorMessage>
+        <name>Separate_Merchant_Terminal_and_ERP_cases</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Только Исполнитель может закрыть Обращение! --></errorMessage>
+        <name>To_close_Case</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Обращение в статусе &quot;Закрыто&quot;. Нельзя редактировать. --></errorMessage>
+        <name>When_Case_is_closed</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Send_with_DocuSign --></label>
+        <name>dsfs__Send_with_DocuSign</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>e2eChatHU_LiveChatTranscript</fullName>
+    <columns>Name</columns>
+    <columns>LiveChatVisitor</columns>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <columns>Status</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>E2E_Step__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Country__c</field>
+        <operation>equals</operation>
+        <value>Hungary</value>
+    </filters>
+    <label>e2eChatHU</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>Salesteam_Inbound_2</role>
+    </sharedTo>
+</ListView>

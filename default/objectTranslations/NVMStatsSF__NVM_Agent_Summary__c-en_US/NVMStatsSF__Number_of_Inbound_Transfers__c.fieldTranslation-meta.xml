@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of Calls transferred to the agent directly from another Agent (not through a queue transfer) --></help>
+    <label><!-- Number of Inbound Transfers --></label>
+    <name>NVMStatsSF__Number_of_Inbound_Transfers__c</name>
+</CustomFieldTranslation>

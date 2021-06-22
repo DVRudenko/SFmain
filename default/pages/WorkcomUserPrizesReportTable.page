@@ -1,0 +1,118 @@
+<!--
+ - Created by A.Syromyatnikov on 17.01.2019.
+ -->
+
+<apex:page showheader="true" sidebar="true" controller="WorkcomUserPrizesReportTableController">
+    <apex:includeScript value="{!$Resource.download_files_js }"/>
+    <script>
+        function shapingValue() {
+            var dataTable = document.getElementById("dataTable").outerHTML;
+            var body = "<html><head><meta charset=\"utf-8\"></head><body>" +  dataTable + "</body></html>";
+            return body;
+        }
+
+        function saveCurrentPage() {
+           var body = shapingValue();
+           download(body, 'Work.com report.xls', 'application/vnd.ms-excel');
+        }
+
+    </script>
+    <style type="text/css">
+        .inputLabel {
+            font: 10pt sans-serif;
+            border-collapse: collapse;
+            margin: 10px;
+            color: darkslategray;
+            font-weight: bold;
+        }
+        .selectItem {
+            font: 12pt sans-serif;
+            margin-left: 10px;
+        }
+        body .bPageBlock .pbBody .pbBlock .pbSubheader{
+            background-color: darkslategray;
+
+        }
+        .styleForm {
+            font-size: 18px;
+            font-family: Arial;
+            margin: 10px 0 10px 30px;
+            float: left;
+            width: 100%;
+       }
+        .buttonStyle {
+            margin-bottom: 15px;
+            margin-top: 15px;
+            margin-left: 12px;
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 12px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .buttonStyle:hover {
+            background-color: #3e8e41
+        }
+
+        .buttonStyle:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+        .paginationBtn:hover {
+            background-color: #ddd;
+            color: black;
+       }
+
+        .paginationBtn {
+            text-decoration: none;
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+    </style>
+    <apex:form >
+        <input type="button" class="buttonStyle" value="Export excel" onclick="saveCurrentPage(); return false;"/>
+        <div id="dataTable">
+            <apex:pageBlock title="Report: {!NOW()}">
+                <apex:outputPanel styleClass="pbBlock" layout="block">
+                    <apex:pageBlockTable id="table" value="{!userPrizeAssociationList}" var="userPrizeAssociation"
+                                         columnsWidth="20%, 15%, 15%, 25%, 25%" rows="1000">
+                        <apex:column headerValue="{!$ObjectType.User.fields.Name.label}">
+                            <apex:outputLink value="{!url}/{!userPrizeAssociation.User__r.Id}">{!userPrizeAssociation.User__r.Name}
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Earned points">
+                            {!userPrizeAssociation.User__r.Earned_Points__c}
+                        </apex:column>
+                        <apex:column headerValue="Spent on a prize">
+                            {!userPrizeAssociation.Prize__r.Cost__c}
+                        </apex:column>
+                        <apex:column headerValue="Acquired prize">
+                            <apex:outputLink value="{!url}/{!userPrizeAssociation.Prize__r.Id}">{!userPrizeAssociation.Prize__r.Name}
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Acquirement date">
+                            {!userPrizeAssociation.CreatedDate}
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:outputPanel>
+            </apex:pageBlock>
+        </div>
+        <apex:panelGrid columns="4">
+            <apex:commandLink action="{!first}" styleClass="paginationBtn">First</apex:commandlink>
+            <apex:commandLink action="{!previous}" rendered="{!hasPrevious}" styleClass="paginationBtn">Previous</apex:commandlink>
+            <apex:commandLink action="{!next}" rendered="{!hasNext}" styleClass="paginationBtn">Next</apex:commandlink>
+            <apex:commandLink action="{!last}" styleClass="paginationBtn">Last</apex:commandlink>
+        </apex:panelGrid>
+    </apex:form>
+</apex:page>

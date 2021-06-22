@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Aus Sicht des Tankstellenbetreibers! --></help>
+    <label>Interesting target groups?</label>
+    <name>Interessante_Zielgruppen__c</name>
+    <picklistValues>
+        <masterLabel>Andere</masterLabel>
+        <translation>Other</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Automobil</masterLabel>
+        <translation>Automobile</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Banken</masterLabel>
+        <translation>Banking</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bauindustrie</masterLabel>
+        <translation>Construction Industry</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bekleidung</masterLabel>
+        <translation>Cltohing</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Beratung</masterLabel>
+        <translation>Advice</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bildung</masterLabel>
+        <translation>Education</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chemische Industrie</masterLabel>
+        <translation>Chemical Industry</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Elektronik</masterLabel>
+        <translation>Electronics</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Energie</masterLabel>
+        <translation>Energy</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finanzwirtschaft</masterLabel>
+        <translation>Finance</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gastgewerbe</masterLabel>
+        <translation>Hospitality</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gesundheitspflege</masterLabel>
+        <translation>Health Care</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Handwerker</masterLabel>
+        <translation>Craftsman</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Herstellung</masterLabel>
+        <translation>Production</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ingenieurwesen</masterLabel>
+        <translation>Engineering</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kommunikationstechnik</masterLabel>
+        <translation>Communication technology</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Landwirtschaft</masterLabel>
+        <translation>Agriculture</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Logistik</masterLabel>
+        <translation>Logistics</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Maschinenbau</masterLabel>
+        <translation>Mechanical engineering</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Medien</masterLabel>
+        <translation>Media</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not-For-Profit</masterLabel>
+        <translation>Not-for-Profit</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regierung</masterLabel>
+        <translation>Government</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transport</masterLabel>
+        <translation>Transportation</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Versicherung</masterLabel>
+        <translation>Insurance</translation>
+    </picklistValues>
+</CustomFieldTranslation>

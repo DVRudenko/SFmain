@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_reached__c</fullName>
+    <description>Nuremberg Team has requested this new field to the Accounts with Record Type = Retailer</description>
+    <externalId>false</externalId>
+    <label>Not reached</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

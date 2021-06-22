@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The value of this field will be copied from the Parent record to the Observation record --></help>
+    <label><!-- Tracked Field --></label>
+    <name>success__Tracked_Field__c</name>
+</CustomFieldTranslation>

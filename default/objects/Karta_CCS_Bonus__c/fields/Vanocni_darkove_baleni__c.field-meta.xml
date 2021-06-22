@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vanocni_darkove_baleni__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Vánoční dárkové balení.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Vánoční dárkové balení.</inlineHelpText>
+    <label>Vánoční dárkové balení</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

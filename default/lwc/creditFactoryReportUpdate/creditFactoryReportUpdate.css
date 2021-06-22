@@ -1,0 +1,27 @@
+.update__title {
+    background: #16325c;
+    padding: 0.5rem;
+    display: block;
+}
+
+.update__current-title {
+    color: #6b6d70;
+    font-size: .75rem;
+    padding-top: .25rem;
+    margin-bottom: .125rem;
+}
+
+.update__current-value {
+    font-size: .8125rem;
+    color: #6b6d70;
+    padding-top: .25rem;
+}
+
+.update__button-wrapper {
+    margin: 1rem 1.75rem;
+}
+
+.update__spinner-wrap {
+    position: relative;
+    min-height: 150px;
+}

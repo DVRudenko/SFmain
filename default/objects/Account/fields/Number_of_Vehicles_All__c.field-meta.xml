@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Vehicles_All__c</fullName>
+    <description>FORMULA FIELD:  Sum of the number of vehicles across ALL opportunities associated with this account.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>FORMULA FIELD:  Sum of the number of vehicles across ALL opportunities associated with this account.</inlineHelpText>
+    <label>Number of Vehicles (ALL)</label>
+    <summarizedField>Opportunity.Number_of_Vehicles__c</summarizedField>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

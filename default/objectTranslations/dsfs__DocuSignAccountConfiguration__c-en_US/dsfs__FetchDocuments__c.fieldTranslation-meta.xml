@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Supports large DocuSign envelopes by sending envelopes to DocuSign without document data and allowing DocuSign to fetch document data as needed. Turn on only if sending envelopes exceeds Salesforce callout limits.</help>
+    <label><!-- Fetch Documents --></label>
+    <name>dsfs__FetchDocuments__c</name>
+</CustomFieldTranslation>

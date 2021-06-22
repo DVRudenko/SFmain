@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__Parent_Status_Record__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>DocuSign Status Record</label>
+    <referenceTo>dsfs__DocuSign_Status__c</referenceTo>
+    <relationshipLabel>DocuSign Recipient Status</relationshipLabel>
+    <relationshipName>R00NS0000000WUO2MAO</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

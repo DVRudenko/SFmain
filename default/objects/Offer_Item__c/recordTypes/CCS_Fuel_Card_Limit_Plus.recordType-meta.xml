@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Fuel_Card_Limit_Plus</fullName>
+    <active>true</active>
+    <label>CCS Fuel Card Limit Plus</label>
+    <picklistValues>
+        <picklist>Category_of_products__c</picklist>
+        <values>
+            <fullName>Group 00</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group 01</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group 02</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group 03</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Group 04</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

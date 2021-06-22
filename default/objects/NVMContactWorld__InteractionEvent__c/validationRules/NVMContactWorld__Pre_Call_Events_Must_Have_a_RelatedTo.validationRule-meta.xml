@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMContactWorld__Pre_Call_Events_Must_Have_a_RelatedTo</fullName>
+    <active>true</active>
+    <description>Pre call events must have a &quot;RelatedTo&quot; field or they are useless</description>
+    <errorConditionFormula>NVMContactWorld__IsPreCallEvent__c = true &amp;&amp; ((ISNULL(NVMContactWorld__What__c) || NVMContactWorld__What__c = &#39;&#39;) &amp;&amp; (ISNULL(NVMContactWorld__Who__c) || NVMContactWorld__Who__c = &#39;&#39;) &amp;&amp; (ISNULL(NVMContactWorld__RelatedTask__c) || NVMContactWorld__RelatedTask__c = &#39;&#39;))</errorConditionFormula>
+    <errorMessage>A pre-call event must have a related object</errorMessage>
+</ValidationRule>

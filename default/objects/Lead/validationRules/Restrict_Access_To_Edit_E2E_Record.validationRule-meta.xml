@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Restrict_Access_To_Edit_E2E_Record</fullName>
+    <active>true</active>
+    <description>Restricting access to editing an E2E record.</description>
+    <errorConditionFormula>($Profile.Name &lt;&gt; 'System Administrator' &amp;&amp;
+$Profile.Name &lt;&gt; 'Systemadministrator' &amp;&amp;
+$Profile.Name &lt;&gt; 'E2E Profile' &amp;&amp;
+$Profile.Name &lt;&gt; 'API Only' &amp;&amp;
+$Profile.Name &lt;&gt; 'In-house Developer' &amp;&amp;
+NOT(AND( 
+   $Profile.Name = 'Russian Call Center', 
+   $UserRole.Name = 'PPR Bryansk Call Center Speed Up',
+   OR (
+       ISPICKVAL(Status,'Unprocessed'),
+       ISPICKVAL(Status,'NEW - Not Yet Contacted'),
+       ISPICKVAL(Status,'Disqualified') 
+   )
+))
+&amp;&amp;
+NOT($Permission.E2E_Admin) &amp;&amp;
+NOT(ISPICKVAL($User.UserType, 'AutomatedProcess')) &amp;&amp;
+Lead_Owner_Profile__c = 'API Only' &amp;&amp;
+ISNEW() = false &amp;&amp;
+NOT(ISCHANGED(Number_of_open_tasks__c)))</errorConditionFormula>
+    <errorMessage>You can't change E2E lead.</errorMessage>
+</ValidationRule>

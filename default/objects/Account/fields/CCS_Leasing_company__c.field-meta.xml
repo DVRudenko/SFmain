@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Leasing_company__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Leasing company</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ALD</fullName>
+                <default>false</default>
+                <label>ALD</label>
+            </value>
+            <value>
+                <fullName>Arval</fullName>
+                <default>false</default>
+                <label>Arval</label>
+            </value>
+            <value>
+                <fullName>Businesslease</fullName>
+                <default>false</default>
+                <label>Businesslease</label>
+            </value>
+            <value>
+                <fullName>ČSOB Leasing</fullName>
+                <default>false</default>
+                <label>ČSOB Leasing</label>
+            </value>
+            <value>
+                <fullName>Leaseplan</fullName>
+                <default>false</default>
+                <label>Leaseplan</label>
+            </value>
+            <value>
+                <fullName>ŠkoFin</fullName>
+                <default>false</default>
+                <label>ŠkoFin</label>
+            </value>
+            <value>
+                <fullName>Jiný</fullName>
+                <default>false</default>
+                <label>Jiný</label>
+            </value>
+            <value>
+                <fullName>SpeedLease</fullName>
+                <default>false</default>
+                <label>SpeedLease</label>
+            </value>
+            <value>
+                <fullName>sAutoleasing</fullName>
+                <default>false</default>
+                <label>sAutoleasing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

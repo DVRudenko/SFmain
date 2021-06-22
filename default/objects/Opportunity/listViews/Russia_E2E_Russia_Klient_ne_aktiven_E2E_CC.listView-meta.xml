@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Russia_E2E_Russia_Klient_ne_aktiven_E2E_CC</fullName>
+    <columns>INN_Opp__c</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Date_creation_Time__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>E2E_Last_Activity__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>E2E_Status__c</columns>
+    <columns>E2E_Sub_Status__c</columns>
+    <columns>E2E_Sales_Type__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Source_PP__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Source_of_Lead_o__c</field>
+        <operation>equals</operation>
+        <value>E2E Form RU</value>
+    </filters>
+    <filters>
+        <field>E2E_Status__c</field>
+        <operation>equals</operation>
+        <value>Клиент не активен</value>
+    </filters>
+    <filters>
+        <field>CORE.USERS.FULL_NAME</field>
+        <operation>contains</operation>
+        <value>Site Guest User,E2E RU</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Отказ,Moved to Start,Потерян в конкуренции</value>
+    </filters>
+    <filters>
+        <field>Source_PP__c</field>
+        <operation>equals</operation>
+        <value>E2ECallCenter</value>
+    </filters>
+    <label>Russia E2E Клиент не активен E2E КЦ</label>
+    <language>ru</language>
+    <sharedTo>
+        <group>Russian_Admins</group>
+    </sharedTo>
+</ListView>

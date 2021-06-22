@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Дни кредита</label>
+    <name>Credit_days_ppr__c</name>
+    <picklistValues>
+        <masterLabel>Предоплата</masterLabel>
+        <translation><!-- Предоплата --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>к14д</masterLabel>
+        <translation><!-- к14д --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>к30д</masterLabel>
+        <translation><!-- к30д --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>к7д</masterLabel>
+        <translation><!-- к7д --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

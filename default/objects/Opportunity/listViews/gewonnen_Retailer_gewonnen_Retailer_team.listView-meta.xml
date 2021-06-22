@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>gewonnen_Retailer_gewonnen_Retailer_team</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.LEAD_SOURCE</columns>
+    <columns>Anzahl_der_Karten__c</columns>
+    <columns>Registered_Country__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.WON</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CREATED_DATE</field>
+        <operation>greaterThan</operation>
+        <value>2/27/2017 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.LEAD_SOURCE</field>
+        <operation>equals</operation>
+        <value>Partner</value>
+    </filters>
+    <filters>
+        <field>Registered_Country__c</field>
+        <operation>contains</operation>
+        <value>Germany,Deutschland,Austria,Switzerland</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.CREATED_DATE</field>
+        <operation>lessThan</operation>
+        <value>3/26/2017 12:00 AM</value>
+    </filters>
+    <label>AAA_gewonnen Retailer-team-DACH</label>
+    <language>de</language>
+    <sharedTo>
+        <role>Teamleiter</role>
+    </sharedTo>
+</ListView>

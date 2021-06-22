@@ -1,0 +1,68 @@
+<apex:page controller="ContactedLeadReport" action="{!init}">
+    <apex:form >
+        <style>
+            .homeTab .div1 .tertiaryPalette {
+                background: #37BC9B;
+            }
+            .homeTab .div2 .tertiaryPalette {
+                background: #BA3C3D;
+            }
+        </style>
+        <apex:pageMessages />     
+        
+        <h1 style="margin: 15px 0; font-size: 17px; display: block;">Overdue contacted leads report</h1>
+        
+        <apex:pageBlock title="Report by: {! nameUser} ({! numberOfLeads})" id="block">
+                    <apex:outputPanel id="div1" styleClass="div1">
+                        <apex:pageBlockSection title="Overdue contacted leads with tasks ({!numberOfLeadsWithTasks})" collapsible="true" columns="1" id="section1">
+                            <apex:pageBlockTable value="{! finalLeadsWithTasksForUserList }" var="listWithTasks" rows="1000">
+                                <apex:column headerValue="Name">
+                                <apex:outputLink value="/{!listWithTasks.id}" target="_blank">{!listWithTasks.FirstName} {!listWithTasks.LastName}</apex:outputLink>
+                                </apex:column>
+                                <apex:column headerValue="Last Transfer Date"><apex:outputField value="{!listWithTasks.LastTransferDate}"/></apex:column>
+                                <apex:column headerValue="Converted"><apex:outputField value="{!listWithTasks.isConverted}"/></apex:column>
+                                <apex:column headerValue="Sec. Channel"><apex:outputField value="{!listWithTasks.Sec_Channel__c}"/></apex:column>
+                                <apex:column headerValue="Channel"><apex:outputField value="{!listWithTasks.Channel__c}"/></apex:column>
+                                <apex:column headerValue="Lead Source"><apex:outputField value="{!listWithTasks.LeadSource}"/></apex:column>
+                                <apex:column headerValue="Lead Status"><apex:outputField value="{!listWithTasks.Status}"/></apex:column>
+                                <apex:column headerValue="Quali Status"><apex:outputField value="{!listWithTasks.Quali_Status__c}"/></apex:column>
+                                <apex:column headerValue="Lead Owner"><apex:outputField value="{!listWithTasks.OwnerId}"/></apex:column>
+                                <apex:column headerValue="Lead #"><apex:outputField value="{!listWithTasks.Lead_Nr__c}"/></apex:column>
+                                <apex:column headerValue="Lead ID"><apex:outputField value="{!listWithTasks.id}"/></apex:column>
+                                <apex:column headerValue="Country"><apex:outputField value="{!listWithTasks.Country}"/></apex:column>
+                                <apex:column headerValue="Converted Opportunity">
+                                <apex:outputLink value="/{listWithTasks.ConvertedOpportunityId}" target="_blank">{!listWithTasks.ConvertedOpportunityId}</apex:outputLink>
+                                </apex:column>
+                            </apex:pageBlockTable>    
+                        </apex:pageBlockSection>
+                    </apex:outputPanel>
+                    <apex:outputPanel id="div2" styleClass="div2">
+                        <apex:pageBlockSection title="Overdue contacted leads without tasks ({!numberOfLeadsWithoutTasks})" collapsible="true" columns="1" id="section2">
+                            <apex:pageBlockTable value="{! finalLeadsWithoutTasksForUserList }" var="listWithoutTasks" rows="1000">
+                                <apex:column headerValue="Name">
+                                <apex:outputLink value="/{!listWithoutTasks.id}" target="_blank">{!listWithoutTasks.FirstName} {!listWithoutTasks.LastName}</apex:outputLink>
+                                </apex:column>
+                                <apex:column headerValue="Last Transfer Date"><apex:outputField value="{!listWithoutTasks.LastTransferDate}"/></apex:column>
+                                <apex:column headerValue="Converted"><apex:outputField value="{!listWithoutTasks.isConverted}"/></apex:column>
+                                <apex:column headerValue="Sec. Channel"><apex:outputField value="{!listWithoutTasks.Sec_Channel__c}"/></apex:column>
+                                <apex:column headerValue="Channel"><apex:outputField value="{!listWithoutTasks.Channel__c}"/></apex:column>
+                                <apex:column headerValue="Lead Source"><apex:outputField value="{!listWithoutTasks.LeadSource}"/></apex:column>
+                                <apex:column headerValue="Lead Status"><apex:outputField value="{!listWithoutTasks.Status}"/></apex:column>
+                                <apex:column headerValue="Quali Status"><apex:outputField value="{!listWithoutTasks.Quali_Status__c}"/></apex:column>
+                                <apex:column headerValue="Lead Owner"><apex:outputField value="{!listWithoutTasks.OwnerId}"/></apex:column>
+                                <apex:column headerValue="Lead #"><apex:outputField value="{!listWithoutTasks.Lead_Nr__c}"/></apex:column>
+                                <apex:column headerValue="Lead ID"><apex:outputField value="{!listWithoutTasks.id}"/></apex:column>
+                                <apex:column headerValue="Country"><apex:outputField value="{!listWithoutTasks.Country}"/></apex:column>
+                                <apex:column headerValue="Converted Opportunity">
+                                <apex:outputLink value="/{listWithoutTasks.ConvertedOpportunityId}" target="_blank">{!listWithoutTasks.ConvertedOpportunityId}</apex:outputLink>
+                                </apex:column>
+                            </apex:pageBlockTable>    
+                        </apex:pageBlockSection>
+                    </apex:outputPanel>        
+        </apex:pageBlock>
+        <script>
+            twistSection(document.getElementById('{!$Component.block.section1}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block.section2}').getElementsByTagName('img')[0]);
+        </script>
+    </apex:form>
+</apex:page>

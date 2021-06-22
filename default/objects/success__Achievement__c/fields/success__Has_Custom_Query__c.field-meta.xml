@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Has_Custom_Query__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>If true, this record is using a custom query</description>
+    <externalId>false</externalId>
+    <label>Has Custom Query</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of transfers made to PCI Payment services --></help>
+    <label><!-- Number of PCI Transfers --></label>
+    <name>NVMStatsSF__Number_of_PCI_Transfers__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Merlin_Response__c</fullName>
+    <description>Detailed response from Merlin, used for monitoring if the changes were transferred successfully.</description>
+    <externalId>false</externalId>
+    <label>Merlin Response</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

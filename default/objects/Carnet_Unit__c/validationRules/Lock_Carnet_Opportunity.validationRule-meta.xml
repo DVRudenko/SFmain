@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Carnet_Opportunity</fullName>
+    <active>true</active>
+    <description>Carnet Records are Locked after Closed Won/Lost.</description>
+    <errorConditionFormula>AND(
+OR(
+ISPICKVAL(Opportunity__r.StageName, &quot;Closed Won&quot;),
+ISPICKVAL(Opportunity__r.StageName, &quot;Closed Lost&quot;)),
+$Profile.Name = &quot;Sales Inbound&quot;)</errorConditionFormula>
+    <errorMessage>Record is Closed, you cannot modify it. Please contact your manager.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Additional tracking of the vehicle&apos;s position (more than 1x per minute). --></help>
+    <label><!-- On-line position above standard --></label>
+    <name>On_line_position_above_standard__c</name>
+</CustomFieldTranslation>

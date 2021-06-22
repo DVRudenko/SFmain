@@ -1,0 +1,456 @@
+<apex:page id="FieldSalesTerritory" controller="FieldSalesTerritoryCtrl" action="{!init}" sideBar="false" >
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <style>
+        .dataCell{
+            border: 1px solid #e0e3e5 !important;
+        }
+
+        .splashStatus {
+            display: none;
+            position: fixed;
+            top: 40%;
+            left: 48%;
+            z-index: 9999;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+         .splashStatus img {
+            width:50px;
+        }
+
+        .splashStatus .circle {
+            width: 32px;
+            margin: 0 auto;
+        }
+
+        .splashStatus .txt {
+            text-align: center;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            color: #171717;
+            text-shadow: 0 1px 0 #eee;
+        }
+
+        .lightbox {
+            display: none;
+            background: #000000;
+            opacity: 0.7;
+            filter: alpha(opacity=70);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 1000;
+        }
+
+        .paginationButton {
+            width:90px;
+        }
+
+        .standardButtonImg img{
+            border: 1px solid #b5b5b5;
+            border-bottom-color: #7f7f7f;
+            border-radius: 3px;
+            margin-bottom:5px;
+        }
+
+        .standardButtonImg img:hover{
+            background-color:#ced8de;
+            border: 1px solid #22a4f5;
+        }
+
+        .standardButtonImg img:active{
+            background-color:#c3c3c7;
+            border: 1px solid #22a4f5;
+        }
+
+        .standardButton{
+            border: 1px solid #b5b5b5;
+            border-bottom-color: #7f7f7f;
+            border-radius: 3px;
+            background: #e8e8e9 url(/img/alohaSkin/btn_sprite.png) repeat-x right top;
+            padding: 3px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+        }
+
+        .standardButton:hover{
+            cursor:pointer;
+            color: #5c62d1;
+            text-decoration: none;
+        }
+
+        .standardButton:active{
+            background-color:#ced8de;
+            border: 1.3px solid #22a4f5;
+            text-decoration: none;
+        }
+
+        .standardButton.viewButton{
+            background: #7cb579;
+            border: 1px solid #1f871a;
+            display: none;
+        }
+
+         .standardButton.viewButton:hover{
+            text-decoration: none;
+        }
+
+        .columnHeader{
+
+        }
+
+        .columnHeader:hover{
+            cursor:pointer;
+        }
+
+        .sortArrow{
+            margin: 0px 5px 0px 5px;
+        }
+
+        .sortArrow img{
+            vertical-align: middle;
+        }
+
+        .scoring-section{
+            display: inline-block;
+            float: right;
+        }
+    </style>
+
+    <apex:form >
+        <apex:actionStatus id="splashStatus" onstart="startSplash();" onstop="endSplash(); "/>
+        <div class="splashStatus" id="splashDiv" >
+            <div class="circle"><img src="{!URLFOR($Resource.e2eRu_images, 'spin.gif')}" alt="spin"/></div>
+        </div>
+        <div class="lightbox"></div>
+
+        <apex:pageBlock id="pageBlock">
+            <apex:outputPanel layout="block" styleClass="standardButtonImg">
+                <apex:commandLink onclick="refreshPageInformation();"
+                                  reRender="pageBlock">
+                    <apex:outputPanel >
+                        <apex:image value="{!URLFOR($Resource.FSTimages,'refresh.png')}" width="25" height="25"></apex:image>
+                    </apex:outputPanel>
+                </apex:commandLink>
+
+                <apex:outputPanel style="vertical-align: top; display: inline-block; margin: 5px 0px 0px 25px;" >Территория:</apex:outputPanel>
+                <apex:outputPanel >
+                    <apex:selectList value="{!currentTerritoryId}"
+                                     style="vertical-align:top; margin-left: 5px; height:25px;"
+                                     onChange="changeTerritory();"
+                                     multiSelect="false"
+                                     size="1">
+                        <apex:selectOptions value="{!listTerritories}"></apex:selectOptions>
+                    </apex:selectList>
+                </apex:outputPanel>
+
+                <apex:outputPanel style="vertical-align: top; display: inline-block; margin: 5px 0px 0px 25px;">Подтерритория:</apex:outputPanel>
+                <apex:outputPanel >
+                    <apex:selectList value="{!currentSubTerritoryId}"
+                                     style="vertical-align:top; margin-left: 5px; height:25px;"
+                                     onChange="changeSubTerritory();"
+                                     multiSelect="false"
+                                     size="1">
+                        <apex:selectOptions value="{!listSubTerritories}"></apex:selectOptions>
+                    </apex:selectList>
+                </apex:outputPanel>
+
+                <apex:outputPanel styleClass="scoring-section" style="margin-left:15px;">
+                    <apex:outputPanel style="display: inline-block; padding-top: 5px;">
+                            {!$ObjectType.FieldSalesTerritory__c.fields.Scoring_sections__c.Label}
+                    </apex:outputPanel>
+                    <apex:selectList value="{!currentSection}"
+                                     style="vertical-align:top; margin-left: 5px; height:25px;"
+                                     onChange="changeScoringSection();"
+                                     multiSelect="false"
+                                     size="1">
+                        <apex:selectOptions value="{!listScoringSections}"></apex:selectOptions>
+                    </apex:selectList>
+                </apex:outputPanel>
+
+                <apex:outputPanel styleClass="scoring-section">
+                    <apex:outputPanel style="display: inline-block; padding-top: 5px;">
+                            {!$ObjectType.FieldSalesTerritory__c.fields.RatingNew_Sections__c.Label}
+                    </apex:outputPanel>
+                    <apex:selectList value="{!currentRatingNew}"
+                                     style="vertical-align:top; margin-left: 5px; height:25px;"
+                                     onChange="changeScoringSection();"
+                                     multiSelect="false"
+                                     size="1">
+                        <apex:selectOptions value="{!listRatingNewSections}"></apex:selectOptions>
+                    </apex:selectList>
+                </apex:outputPanel>
+            </apex:outputPanel>
+
+            <apex:pageBlockTable id="recordsTable" value="{!sObjectsList}" var="record" styleClass="recordsTable">
+
+                <apex:column style="width:1px;">
+                    <apex:facet name="header">
+                        <apex:outputpanel layout="block" styleClass="columnHeader" onClick="sortByColumn('SummaryScoringRu__c');">
+                            {!$ObjectType.Account.fields.SummaryScoringRu__c.Label}
+                            <apex:outputPanel styleClass="sortArrow">
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_up.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'SummaryScoringRu__c' && sortGeneral == 'ASC'}">
+                                </apex:image>
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_down.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'SummaryScoringRu__c' && sortGeneral == 'DESC'}">
+                                </apex:image>
+                            </apex:outputPanel>
+                        </apex:outputpanel>
+                    </apex:facet>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'00Q')}">{!record.sObj['SummaryScoringRu__c']}</apex:outputPanel>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'006')}">{!record.sObj['Account.SummaryScoringRu__c']}</apex:outputPanel>
+                </apex:column>
+
+                <apex:column style="width:1px;">
+                    <apex:facet name="header">
+                        <apex:outputpanel layout="block" styleClass="columnHeader" onClick="sortByColumn('Rating_FS_New__c');">
+                        {!$ObjectType.Account.fields.Rating_FS_New__c.Label}
+                            <apex:outputPanel styleClass="sortArrow">
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_up.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'Rating_FS_New__c' && sortGeneral == 'ASC'}">
+                                </apex:image>
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_down.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'Rating_FS_New__c' && sortGeneral == 'DESC'}">
+                                </apex:image>
+                            </apex:outputPanel>
+                        </apex:outputpanel>
+                    </apex:facet>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'00Q')}" >{!round(record.sObj['Rating_FS_New__c'],2)}</apex:outputPanel>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'006')}">{!round(record.sObj['Account.Rating_FS_New__c'],2)}</apex:outputPanel>
+                </apex:column>
+
+                <apex:column style="width:1px; padding: 4px 0px 4px 0px;">
+                    <apex:commandLink styleClass="standardButton"
+                                      value="{!JSENCODE($Label.btn_Get_record)}"
+                                      action="{!getRecordOwnership}"
+                                      reRender="openNewTabBlock"
+                                      status="splashStatus"
+                                      onComplete="openNewTab(this);">
+                        <apex:param name="recordHashId" value="{!record.hashID}"></apex:param>
+                    </apex:commandLink>
+
+                    <apex:commandLink styleClass="standardButton viewButton"
+                                      value="{!JSENCODE($Label.btn_Show_record)}"
+                                      action="{!getRecordLink}"
+                                      reRender="openNewTabBlock"
+                                      status="splashStatus"
+                                      onComplete="openNewTab(this);">
+                        <apex:param name="recordHashId" value="{!record.hashID}"></apex:param>
+                    </apex:commandLink>
+                </apex:column>
+
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:outputpanel layout="block" styleClass="columnHeader" onClick="sortByColumn('Address');">
+                        {!JSENCODE($Label.col_Address)}
+                            <apex:outputPanel styleClass="sortArrow">
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_up.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'Address' && sortGeneral == 'ASC'}">
+                                </apex:image>
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_down.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'Address' && sortGeneral == 'DESC'}">
+                                </apex:image>
+                            </apex:outputPanel>
+                        </apex:outputpanel>
+                    </apex:facet>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'00Q')}" >{!IF(OR(CONTAINS(record.sObj['Street'],record.sObj['Area__c']),CONTAINS(record.sObj['City'],record.sObj['Area__c'])),'',record.sObj['Area__c']+',')} {!IF(CONTAINS(record.sObj['Street'],record.sObj['City']),'',record.sObj['City']+',')} {!record.sObj['Street']}</apex:outputPanel>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'006')}">{!IF(OR(CONTAINS(record.sObj['Account.BillingStreet'],record.sObj['Account.BillingArea__c']),CONTAINS(record.sObj['Account.BillingCity'],record.sObj['Account.BillingArea__c'])),'',record.sObj['Account.BillingArea__c']+',')} {!IF(CONTAINS(record.sObj['Account.BillingStreet'],record.sObj['Account.BillingCity']),'',record.sObj['Account.BillingCity']+',')} {!record.sObj['Account.BillingStreet']}</apex:outputPanel>
+                </apex:column>
+
+                <apex:column >
+                    <apex:facet name="header">
+                        <apex:outputpanel layout="block" styleClass="columnHeader" onClick="sortByColumn('Industry');">
+                        {!$ObjectType.Account.fields.Industry.Label}
+                            <apex:outputPanel styleClass="sortArrow">
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_up.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'Industry' && sortGeneral == 'ASC'}">
+                                </apex:image>
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_down.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'Industry' && sortGeneral == 'DESC'}">
+                                </apex:image>
+                            </apex:outputPanel>
+                        </apex:outputpanel>
+                    </apex:facet>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'00Q')}" >{!record.sObj['Industry']}</apex:outputPanel>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'006')}">{!record.sObj['Account.Industry']}</apex:outputPanel>
+                </apex:column>
+
+                <apex:column style="width:1px;">
+                    <apex:facet name="header">
+                        <apex:outputpanel layout="block" styleClass="columnHeader" onClick="sortByColumn('NumberOfEmployees');">
+                        {!JSENCODE($Label.col_Number_of_vehicles)}
+                            <apex:outputPanel styleClass="sortArrow">
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_up.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'NumberOfEmployees' && sortGeneral == 'ASC'}">
+                                </apex:image>
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_down.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'NumberOfEmployees' && sortGeneral == 'DESC'}">
+                                </apex:image>
+                            </apex:outputPanel>
+                        </apex:outputpanel>
+                    </apex:facet>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'00Q')}" >{!record.sObj['NumberOfEmployees']}</apex:outputPanel>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'006')}">{!record.sObj['Account.NumberOfEmployees']}</apex:outputPanel>
+                </apex:column>
+
+                <apex:column style="width:1px;">
+                    <apex:facet name="header">
+                        <apex:outputpanel layout="block" styleClass="columnHeader" onClick="sortByColumn('Number_of_Vehicles__c');">
+                        {!JSENCODE($Label.col_Employees_number)}
+                            <apex:outputPanel styleClass="sortArrow">
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_up.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'Number_of_Vehicles__c' && sortGeneral == 'ASC'}">
+                                </apex:image>
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_down.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'Number_of_Vehicles__c' && sortGeneral == 'DESC'}">
+                                </apex:image>
+                            </apex:outputPanel>
+                        </apex:outputpanel>
+                    </apex:facet>
+                    <apex:outputPanel >{!record.sObj['Number_of_Vehicles__c']}</apex:outputPanel>
+                </apex:column>
+
+                <apex:column style="width:1px;">
+                    <apex:facet name="header">
+                        <apex:outputpanel layout="block" styleClass="columnHeader" onClick="sortByColumn('Turnover');">
+                        {!JSENCODE($Label.col_Turnover)}
+                            <apex:outputPanel styleClass="sortArrow">
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_up.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'Turnover' && sortGeneral == 'ASC'}">
+                                </apex:image>
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_down.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'Turnover' && sortGeneral == 'DESC'}">
+                                </apex:image>
+                            </apex:outputPanel>
+                        </apex:outputpanel>
+                    </apex:facet>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'00Q')}" ></apex:outputPanel>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'006')}"></apex:outputPanel>
+                </apex:column>
+
+                <apex:column style="width:1px;">
+                    <apex:facet name="header">
+                        <apex:outputpanel layout="block" styleClass="columnHeader" onClick="sortByColumn('Revenue');">
+                        {!JSENCODE($Label.col_Revenue)}
+                            <apex:outputPanel styleClass="sortArrow">
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_up.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'Revenue' && sortGeneral == 'ASC'}">
+                                </apex:image>
+                                <apex:image value="{!URLFOR($Resource.FSTimages,'sort_down.png')}" width="10" height="10"
+                                            rendered="{!column1Sort == 'Revenue' && sortGeneral == 'DESC'}">
+                                </apex:image>
+                            </apex:outputPanel>
+                        </apex:outputpanel>
+                    </apex:facet>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'00Q')}" ></apex:outputPanel>
+                    <apex:outputPanel rendered="{!BEGINS(record.sObj['Id'],'006')}"></apex:outputPanel>
+                </apex:column>
+            </apex:pageBlockTable>
+            <apex:outputPanel layout="block" id="paginationButtonsTop"
+                              style="margin-left: auto; margin-top:5px; display: flex;">
+                <apex:outputPanel layout="block">
+                    <apex:commandButton value="{!JSENCODE($Label.btn_First)}" disabled="{!isPreviousDisabled}" action="{!startFirstPage}"
+                                        status="splashStatus"
+                                        styleClass="paginationButton"
+                                        reRender="pageBlock"/>
+                    <apex:commandButton value="{!JSENCODE($Label.btn_Previous)}" disabled="{!isPreviousDisabled}" action="{!previousPage}"
+                                        status="splashStatus"
+                                        styleClass="paginationButton"
+                                        reRender="pageBlock"/>
+                    <apex:commandButton value="{!JSENCODE($Label.btn_Next)}" disabled="{!isNextDisabled}" action="{!nextPage}"
+                                        status="splashStatus"
+                                        styleClass="paginationButton"
+                                        reRender="pageBlock"/>
+                    <apex:commandButton value="{!JSENCODE($Label.btn_Last)}" disabled="{!isNextDisabled}" action="{!lastPage}"
+                                        status="splashStatus"
+                                        styleClass="paginationButton"
+                                        reRender="pageBlock"/>
+                    <apex:outputLabel style="margin-left:5px;"
+                                      value="{!JSENCODE($Label.paginator_Page)} {!pageNumber} {!JSENCODE($Label.paginator_from)} {!totalPages}"/>
+                </apex:outputPanel>
+                <apex:outputPanel layout="block" style="margin-left: auto; margin-top:2px;">
+                {!JSENCODE($Label.paginator_Display)}
+                    <apex:selectList value="{!pageSize}" size="1" required="false" label="PageSize" title="PageSize" style="margin-left:5px;">
+                        <apex:selectOptions value="{!pageSizes}"/>
+                        <apex:actionSupport event="onchange" action="{!startFirstPage}"
+                                            reRender="pageBlock"
+                                            status="splashStatus"/>
+                    </apex:selectList>
+                        {!JSENCODE($Label.paginator_records)}
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:pageBlock>
+
+        <apex:actionFunction name="sortByColumn"
+                             action="{!sortListByColumn}"
+                             reRender="pageBlock"
+                             status="splashStatus">
+            <apex:param name="sortColumn" value=""></apex:param>
+        </apex:actionFunction>
+        <apex:actionFunction name="refreshPageInformation"
+                             action="{!refreshPageInformation}"
+                             status="splashStatus"
+                             reRender="pageBlock">
+        </apex:actionFunction>
+        <apex:actionFunction name="changeTerritory"
+                             action="{!changeTerritory}"
+                             status="splashStatus"
+                             reRender="pageBlock">
+        </apex:actionFunction>
+        <apex:actionFunction name="changeSubTerritory"
+                             action="{!changeSubTerritory}"
+                             status="splashStatus"
+                             reRender="pageBlock">
+        </apex:actionFunction>
+        <apex:actionFunction name="changeScoringSection"
+                             action="{!changeScoringSection}"
+                             status="splashStatus"
+                             reRender="pageBlock">
+        </apex:actionFunction>
+
+        <script>
+            //Function is used to get splash status bar when server side call is going on
+            function startSplash() {
+                document.getElementById('splashDiv').style.display='table-cell';
+                jQuery('.lightbox').fadeIn(50);
+                $('html, body').css({
+                    overflow: 'hidden',
+                    height: 'auto'
+                });
+                $("body").css("padding-right", "17px");
+            }
+
+            //Function will make the splash status to be stopped.
+            function endSplash() {
+                document.getElementById('splashDiv').style.display='none';
+                jQuery('.lightbox').fadeOut(50);
+                $('html, body').css({
+                    overflow: '',
+                    height: ''
+                });
+                $("body").css("padding-right", "");
+            }
+        </script>
+
+        <apex:outputPanel id="openNewTabBlock">
+            <script>
+                function openNewTab(button){
+                    button.parentElement.getElementsByClassName('standardButton')[0].style.display = 'none';
+                    if('{!tabLink}' != ''){
+                        button.parentElement.getElementsByClassName('viewButton')[0].style.display = 'block';
+                        window.open('{!tabLink}', '_blank');
+                    } else {
+                        button.parentElement.getElementsByClassName('viewButton')[0].style.display = 'none';
+                        alert('{!JSENCODE($Label.alert_record_changed_owner)}');
+                    }
+                }
+            </script>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

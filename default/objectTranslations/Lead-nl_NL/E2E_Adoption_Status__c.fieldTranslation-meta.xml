@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- E2E Adoption Status --></label>
+    <name>E2E_Adoption_Status__c</name>
+    <picklistValues>
+        <masterLabel>Adoption Email Sent</masterLabel>
+        <translation><!-- Adoption Email Sent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manual Process</masterLabel>
+        <translation><!-- Manual Process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Returned to Manual</masterLabel>
+        <translation><!-- Returned to Manual --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Successful Adoption</masterLabel>
+        <translation><!-- Successful Adoption --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

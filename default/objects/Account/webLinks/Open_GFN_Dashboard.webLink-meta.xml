@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_GFN_Dashboard</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Open GFN Dashboard</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>var url = 'apex/GFNDashboardContainer?colCo={!Account.ColCo__c}&amp;customerNumber={!Account.GFN_Nr__c}';
+window.open(url);</url>
+</WebLink>

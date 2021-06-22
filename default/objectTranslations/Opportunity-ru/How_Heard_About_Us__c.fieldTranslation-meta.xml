@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Selection made by applicant on website --></help>
+    <label>Как Вы узнали о нас?</label>
+    <name>How_Heard_About_Us__c</name>
+    <picklistValues>
+        <masterLabel>Associations</masterLabel>
+        <translation><!-- Associations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct Mail</masterLabel>
+        <translation>Директ-мэйл</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fleet Owner</masterLabel>
+        <translation>Владелец автопарка</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>From a FleetCards USA rep</masterLabel>
+        <translation><!-- From a FleetCards USA rep --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>From a Fuelman merchant</masterLabel>
+        <translation><!-- From a Fuelman merchant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>From a colleague</masterLabel>
+        <translation>От коллег</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Google</masterLabel>
+        <translation>Google</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing Campaign</masterLabel>
+        <translation>Маркетинговая кампания</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>News article or blog</masterLabel>
+        <translation><!-- News article or blog --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Другой</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner</masterLabel>
+        <translation><!-- Partner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Public Relations</masterLabel>
+        <translation><!-- Public Relations --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Referral - Employee</masterLabel>
+        <translation><!-- Referral - Employee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Referral - Sales Representative</masterLabel>
+        <translation><!-- Referral - Sales Representative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trade Show</masterLabel>
+        <translation><!-- Trade Show --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Application</masterLabel>
+        <translation><!-- Web Application --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web banner</masterLabel>
+        <translation><!-- Web banner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Word of mouth</masterLabel>
+        <translation><!-- Word of mouth --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yahoo</masterLabel>
+        <translation><!-- Yahoo --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

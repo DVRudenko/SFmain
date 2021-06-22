@@ -1,0 +1,137 @@
+<!--
+ - Created by Nikita.Mikhailov on 30.05.2018.
+ -->
+
+<apex:page id="DashboardOpenOpptysPPR" controller="DashboardOpenOpptysPPRCtrl" action="{! init }" sidebar="false" showHeader="false">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+    <apex:form >
+        <apex:pageBlock >
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <h1 style="margin-bottom: 10px; font-size: 15px; display: block;">Возможности без задач или с просроченным сроком исполнения.
+                            Роль
+                            <apex:selectList value="{!selectedRole}" size="1" multiSelect="false" style="margin-left: 5px;">
+                                <apex:selectOptions value="{!rolesList}"/>
+                                <apex:actionSupport action="{!changeRole}" event="onchange" onSubmit="smthgChanged()"/>
+                            </apex:selectList>
+                        </h1>
+                    </td>
+                    <td style="text-align: right;">
+                        <apex:outputLink value="/articles/Knowledge/DashboardOpenOpptysHelpPPR" target="_blank" id="theLink">Справка</apex:outputLink>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <apex:outputPanel >
+                    <div id="salesteamleader" style="width: 100%; float: left; height: 550px"></div>
+                </apex:outputPanel>
+                <div style="clear: both;"></div>
+            </div>
+        </apex:pageBlock>
+        <script>
+
+            $(document).ready(function() {
+                //console.log('loaded from ready');
+                var event = new CustomEvent('loaded', {detail:'openOpptys'});
+                window.parent.document.dispatchEvent(event);
+            });
+
+            function smthgChanged() {
+                //console.log('smthngChanged');
+                var event = new CustomEvent('smthngChanged', {detail:'openOpptys'});
+                window.parent.document.dispatchEvent(event);
+            };
+
+
+            $(function () {
+                $('#salesteamleader').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                        <apex:repeat value="{! finalList }" var="key">
+                '<a href="/apex/DashboardOpenOpptysReportPPR?userid={! salesTeamMap[key.Id].Id }" target="_blank">{! salesTeamMap[key.Id].Name }</a>',
+            </apex:repeat>
+            ],
+                labels: {
+                    useHTML: true
+                }
+            },
+                yAxis: [{
+                    min: 0,
+                    title: {
+                        text: ''
+                    },
+                    stackLabels: {
+                        enabled: true,
+                        style: {
+                            fontWeight: 'bold',
+                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                        }
+                    }
+                }],
+                        legend: {
+                    shadow: false,
+                            labelFormatter: function() {
+                        var total = 0;
+                        for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+                        return this.name + ' - Всего: ' + total;
+                    }
+                },
+                exporting: { enabled: false },
+                credits: {
+                    enabled: false
+                },
+                tooltip: {
+                    enabled: false
+                },
+                plotOptions: {
+                    series: {
+                        stacking: 'normal',
+                                dataLabels: {
+                            enabled: true,
+                                    color: 'white',
+                                    style: {
+                                textShadow: false
+                            },
+                            formatter:function() {
+                                if(this.y != 0) {
+                                    return this.y;
+                                }
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Возможности без открытых задач',
+                    color: 'rgba(186,60,61,1)',
+                    data: [<apex:repeat value="{! finalList }" var="key">
+                        {! quantityOpptysNoTaskForTeamlead[key.Id] },
+            </apex:repeat>],
+                pointPadding: -0.1,
+                        pointPlacement: 0.0
+            }, {
+                    name: 'Возможности с просроченными задачами',
+                            color: 'rgba(126,86,134,.9)',
+                            data: [<apex:repeat value="{! finalList }" var="key">
+                            {! quantityOpptysWithTaskForTeamlead[key.Id] },
+                </apex:repeat>],
+                    pointPadding: -0.1,
+                            pointPlacement: 0.0
+                }]
+            });
+            });
+        </script>
+        <br/>
+    </apex:form>
+</apex:page>

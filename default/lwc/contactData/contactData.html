@@ -1,0 +1,51 @@
+<template>
+  <lightning-card variant="base">
+    <h3 slot="title" align="center" class="exportable-header">{labels.CONTACT_DATA}</h3>
+
+    <lightning-input
+      name="phoneNumber"
+      class="field exportable-field"
+      required
+      label={labels.PHONE_NUMBER}
+      max-length="16"
+      value={contact.phoneNumber}
+      type="tel"
+      pattern={pattern.phone}
+      onchange={handleContactPhoneNumberChange}
+    ></lightning-input>
+    <lightning-input
+      name="email"
+      class="field exportable-field"
+      required
+      label={labels.EMAIL}
+      max-length="80"
+      type="email"
+      value={contact.email}
+      onchange={handleChange}
+      pattern={pattern.email}
+    >
+    </lightning-input>
+    <lightning-input
+      name="fullName"
+      class="field exportable-field"
+      label={labels.FULL_NAME}
+      pattern={pattern.text}
+      value={contact.fullName}
+      onchange={handleChange}
+      max-length="50"
+      type="text"
+    >
+    </lightning-input>
+    <lightning-input
+      name="position"
+      class="field exportable-field"
+      max-length="50"
+      pattern={pattern.text}
+      value={contact.position}
+      label={labels.POSITION}
+      onchange={handleChange}
+      type="text"
+    >
+    </lightning-input>
+  </lightning-card>
+</template>

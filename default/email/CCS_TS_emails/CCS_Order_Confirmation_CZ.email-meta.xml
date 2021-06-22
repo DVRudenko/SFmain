@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <available>true</available>
+    <description>Double opt-in process in E2E</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>ССS Order Сonfirmation CZ</name>
+    <style>none</style>
+    <subject>One-time security code</subject>
+    <type>visualforce</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

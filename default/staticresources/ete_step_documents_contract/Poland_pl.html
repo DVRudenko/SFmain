@@ -1,0 +1,541 @@
+<template id="page_break">
+    <div style="page-break-before: always;"></div>
+</template>
+
+<template id="header_image">
+    <img class="header-image" src="/resource/ete_images/fleetcor_logo.jpg" alt="Logo">
+</template>
+
+<template id="header_image_carnet">
+    <img class="header-image header-image_carnet" src="/resource/ete_images/carnet_logo.jpg" alt="Carnet">
+</template>
+
+<template id="shell_contract">
+    <div>
+        <h3 class="ta-center">POTWIERDZENIE ZAWARCIA UMOWY</h3>
+        <p>
+            Ja, niżej podpisany/podpisana, jako osoba upoważniona do reprezentowania przedsiębiorcy działającego pod
+            nazwą
+            <span class="underline-text underline-text_large">{!account.Name}</span> przy ulicy
+            <span class="underline-text underline-text_large">{!account.BillingStreet} </span>
+            kod pocztowy <span class="underline-text underline-text_large">{!account.BillingPostalCode}
+            </span>, miejscowość <span class="underline-text underline-text_large">{!account.BillingCity}</span>
+            z siedzibą w Polsce o numerze NIP: <span class="underline-text">{!account.Steuernummer__c}</span>,
+            numerze REGON: <span class="underline-text">{!account.HR_Abteilung_HRA_HRB_und_HR_Nummer__c}</span>
+            dalej "Klient",
+        </p>
+        <p>niniejszym oświadczam, iż Klient przeczytał oraz akceptuje warunki i postanowienia:</p>
+        <p>
+            1. Dokumentu "Zasady I Warunki Ogólne dla kart paliwowych wydane przez FleetCor Poland sp. z
+            o.o. (dalej "Zasady i Warunki Ogólne" lub "Umowa"), udostępnionych przez spółkę FleetCor
+            Poland sp. z o.o. z siedzibą w Warszawie: Generation Park Z, ul. Towarowa 28, 00-839 Warszawa (Polska),
+            wpisaną do rejestru
+            przedsiębiorców pod numerem KRS: 0000505365 (dalej "FleetCor"), oraz
+        </p>
+        <p>
+            2. Tabeli opłat.
+        </p>
+        <p>
+            Jako Klient FleetCor niniejszym wyrażam zgodę na nadesłanie na wskazany wyżej adres karty paliwowej
+            EuroShell, zgodnie ze złożonym
+            wnioskiem o kartę paliwową, dopiero po uzyskaniu pozytywnego wyniku oceny ryzyka zgodnie z postanowieniami
+            Umowy
+        </p>
+        <p>
+            W imieniu Klienta niniejszym potwierdzam, iż Klient w pełni akceptuje postanowienia i warunki zawarte w
+            jakichkolwiek dokumentach
+            udostępnionych Klientowi przez FleetCor a także potwierdzam zawarcie przez Klienta Umowy z FleetCor, na
+            dowód czego składam poniżej swój podpis.
+        </p>
+        <div>
+            <div class="underline-text underline-text_full">{!e2edataobject.First_Name__c} {!e2edataobject.Last_Name__c}
+            </div>
+            <div class="mb-05">Imię i nazwisko</div>
+
+            <div class="underline-text underline-text_full"></div>
+            <div class="mb-05">Stanowisko</div>
+
+            <div class="underline-text underline-text_full">{!params.today}, {!account.BillingCity}, POLSKA</div>
+            <div class="mb-05">Data, miejscowość, kraj</div>
+
+            <div class="underline-text underline-text_full"> </div>
+            <div>Podpis</div>
+        </div>
+    </div>
+
+</template>
+
+<template id="shell_deposit">
+    <div>
+        <div style="font-size: 12px;">
+            <div>FLEETCOR Poland Sp. z o.o.</div>
+            <div>Dział Kredytowy</div>
+            <div>Generation Park Z</div>
+            <div>ul. Towarowa 28</div>
+            <div>00-839 Warszawa</div>
+        </div>
+        <h3 class="ta-center">UMOWA O USTANOWIENIU KAUCJI PIENIĘŻNEJ</h3>
+        <p>Niniejszym {!account.Name} potwierdza zawarcie umowy:</p>
+
+        <p>
+            1. Składamy kaucję pieniężną w wysokości <span class="underline-text">{!params.amount}</span>zł
+            dla zabezpieczenia wszelkich roszczeń, które mogą wyniknąć z umowy handlowej zawartej pomiędzy FLEETCOR oraz
+            Spółką składającą kaucję pieniężną.
+        </p>
+        <p>
+            2. Kaucja pieniężna będzie zachowana na czas trwania naszego stosunku prawnego. Składający
+            kaucję pieniężną może ją zastąpić zabezpieczeniem innego rodzaju o tej samej wartości, o ile
+            zostanie to jednoznacznie zaakceptowane przez FLEETCOR.
+        </p>
+        <p>
+            3. W wypadku opóźnienia w płatnościach, FLEETCOR jest upoważniony do potrącenia z przedmiotu
+            kaucji należności na poczet zabezpieczenia wierzytelności.
+        </p>
+        <p>
+            4. Wpłacona kaucja pieniężna będzie w pierwszej kolejności wykorzystana do pokrycia
+            wierzytelności, dalej odsetek, opłat wynikających z procesu monitoringu płatności, w ostatniej
+            kolejności kosztów obsługi prawnej i kosztów postępowania sądowego.
+        </p>
+        <p>
+            5. Kaucję należy wpłacić na wskazane konto bankowe: 07 1240 1040 1111 0010 6484 1442, Bank
+            Polska Kasa Opieki Spółka Akcyjna, Grzybowska 53/57, 00-950 Warszawa.
+        </p>
+
+        <table width="100%" style="text-align: center; margin-top: 20px; ">
+            <tr>
+                <td width="48%">
+                    <span class="underline-text underline-text_full">{!params.today}, {!account.BillingCity},
+                        POLSKA</span>
+                </td>
+                <td width="4%"></td>
+                <td width="48%">
+                    <span class="underline-text underline-text_full"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Data i miejsce</td>
+                <td></td>
+                <td>Podpis i pieczęć Spółki składającej kaucję</td>
+            </tr>
+            <tr>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td> <span class="underline-text underline-text_full">{!e2edataobject.First_Name__c}
+                        {!e2edataobject.Last_Name__c}</span></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td>Imię i nazwisko*</td>
+            </tr>
+        </table>
+
+        <div style="font-style: italic; margin-top: 20px;">
+            *należy wypełnić czytelnie, drukowanymi literami
+        </div>
+    </div>
+</template>
+
+<template id="carnet_contract">
+    <h3 class="ta-center">POTWIERDZENIE ZAWARCIA UMOWY</h3>
+    <p>
+        Ja, niżej podpisany/podpisana, jako osoba upoważniona do reprezentowania przedsiębiorcy
+        działającego pod nazwą <span class="underline-text">{!account.Name}</span>
+        przy ulicy <span class="underline-text">{!account.BillingStreet}</span>
+        kod pocztowy <span class="underline-text">{!account.BillingPostalCode}</span>, miejscowość <span
+            class="underline-text">{!account.BillingCity}</span> z siedzibą w
+        Polsce
+        o numerze NIP: 
+        <span class="underline-text">{!account.Steuernummer__c}</span>, 
+        numerze REGON: <span class="underline-text">{!account.HR_Abteilung_HRA_HRB_und_HR_Nummer__c}</span> dalej
+        „Klient”, niniejszym oświadczam, iż Klient przeczytał oraz akceptuje warunki i postanowienia:
+    </p>
+    <p>
+        1. dokumentu „Warunki korzystania z usługi FLEETCOR CARNET dla klientów biznesowych“ wydanego przez FleetCor
+        Poland sp. z o.o. udostępnionego przez spółkę FleetCor Poland sp. z o.o. z siedzibą: Generation Park Z, ul.
+        Towarowa 28, 00-839 Warszawa, Polska, zarejestrowaną wRejestrze Przedsiębiorców Krajowego Rejestru Sądowego
+        (KRS) prowadzonym przez Sąd Rejonowy w Warszawie, XII Wydział Gospodarczy Krajowego Rejestru Sądowego pod
+        numerem 0000505365, NIP 5252584121, REGON 147190446, kapitał zakładowy 5000 PLN, reprezentowaną przez Jana
+        Polivkę, zwaną dalej „FLEETCOR”; oraz
+    </p>
+    <p>
+        2. tabeli opłat.
+        W imieniu Klienta niniejszym potwierdzam, iż Klient w pełni akceptuje postanowienia i warunki zawarte w
+        jakichkolwiek dokumentach udostępnionych Klientowi przez FLEETCOR a także potwierdzam zawarcie przez Klienta
+        Umowy z
+        FLEETCOR, na dowód czego składam poniżej swój podpis.
+    </p>
+    <table width="100%">
+        <tr>
+            <td width="48%"></td>
+            <td width="4%"></td>
+            <td width="48%"></td>
+        </tr>
+        <tr>
+            <td>
+                Sporządzono i podpisano w <span
+                    class="underline-text underline-text_small">{!account.BillingCity}</span><br>
+                w dniu <span class="underline-text">{!params.today}</span>
+            </td>
+            <td></td>
+            <td>Sporządzono i podpisano w Warszawie w dniu
+                <span class="underline-text">{!params.today}</span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="2"></td>
+            <td style="text-align: right;">
+                <img width="280" src="/resource/ete_images/contract_sign.jpg" alt="Sign">
+            </td>
+        </tr>
+        <tr>
+            <td>Podpisano w imieniu Klienta</td>
+            <td></td>
+            <td style="text-align: right;">
+                Podpisano w imieniu spółki: Jan Polívka
+            </td>
+        </tr>
+    </table>
+
+
+    <div style="page-break-before: always;"></div>
+    <img class="header-image header-image_carnet" src="/resource/ete_images/carnet_logo.jpg" alt="Carnet">
+    <h3 class="ta-center">UMOWA POWIERZENIA PRZETWARZANIA DANYCH</h3>
+    <h4>STRONY</h4>
+    <p>
+        <b>(1)</b>
+        <br>
+        <b>FleetCor Poland sp. z o.o.</b>, spółka utworzona i zarejestrowana w Polsce, z siedzibą w Warszawie,
+        adres: Generation Park Z, ul. Towarowa 28, 00-839 Warszawa, wpisana do rejestru przedsiębiorców Krajowego
+        Rejestru Sądowego prowadzonego przez Sąd Rejonowy w Warszawie, XII Wydział Gospodarczy Krajowego Rejestru
+        Sądowego pod nr KRS: 0000505365, NIP: 5252584121, REGON: 147190446, kapitał zakładowy: 5000,00 PLN (zwana dalej
+        „<b>Dostawcą</b>”), reprezentowana przez Jana Polivkę; oraz
+    </p>
+    <p>
+        <b>(2)</b>
+        <br>
+    <div class="underline-text underline-text_full">{!account.Name}</div>
+    polska spółka z siedzibą przy ul.
+    <span class="underline-text">{!account.BillingStreet}</span>,
+    <span class="underline-text underline-text_small">{!account.BillingPostalCode}</span>,
+    <span class="underline-text underline-text_small">{!account.BillingCity}</span>
+    Polska, wpisana do rejestru przedsiębiorców Krajowego Rejestru Sądowego prowadzonego przez
+    <span class="underline-text"></span>,
+    <span class="underline-text"></span>
+    Wydział Gospodarczy Krajowego Rejestru Sądowego pod nr KRS:<span class="underline-text"></span>
+    , NIP: <span class="underline-text">{!account.Steuernummer__c}</span>,
+    REGON: <span class="underline-text">{!account.HR_Abteilung_HRA_HRB_und_HR_Nummer__c}</span>,
+    kapitał zakładowy:<span class="underline-text underline-text_large"></span> (zwana dalej „<b>Klientem</b>”),
+    reprezentowana przez
+    <span class="underline-text underline-text_large"></span>;
+    </p>
+    <p>przy czym każda z nich z osobna będzie zwana Stroną, a łącznie będą zwane Stronami.</p>
+    <h4>INFORMACJE OGÓLNE</h4>
+    <p> Warunki określone w Warunkach korzystania z usługi FLEETCOR Carnet („Warunki”) będących częścią Umowy dotyczącej
+        korzystania z usługi FLEETCOR Carnet zawartej pomiędzy FleetCor Poland sp. z o.o. a Klientem („Umowa”) mają to
+        samo znaczenie w przypadku ich użycia w niniejszej Umowie powierzenia przetwarzania danych („Umowa powierzenia
+        przetwarzania danych”). w przypadku rozbieżności pomiędzy warunkami Umowy a warunkami niniejszej Umowy
+        powierzenia przetwarzania danych moc nadrzędną zachowują postanowienia niniejszej Umowy powierzenia
+        przetwarzania danych.</p>
+    <p> Niezależnie od postanowień przeciwnej treści Umowy w zakresie dotyczącym usług świadczonych w jej ramach, zapisy
+        Umowy podporządkowane są treści niniejszej Umowy powierzenia przetwarzania danych.</p>
+    <p> Celem niniejszej Umowy powierzenia przetwarzania danych jest i) opisanie prac, które mają zostać wykonane przez
+        Dostawcę w ramach Umowy, ii) uzupełnienie treści art. X (Przetwarzanie danych) obowiązujących Warunków oraz iii)
+        uwzględnienie w niniejszej Umowie powierzenia przetwarzania danych określonych informacji wymaganych w świetle
+        RODO.</p>
+    <p> Niniejsza Umowa powierzenia przetwarzania danych wchodzi w życie z dniem podpisania przez Strony („Dzień wejścia
+        w życie”) i zachowuje pełną moc obowiązującą do dnia wypowiedzenia Umowy.</p>
+    <p> Załącznik 1 stanowi część niniejszej Umowy powierzenia przetwarzania danych.</p>
+
+    <h4>1. DEFINICJE</h4>
+    <p>Poniższe definicje i zasady interpretacji znajdują zastosowanie w odniesieniu do Umowy powierzenia
+        przetwarzania
+        danych:</p>
+    <p><b>Podmiot powiązany</b> oznacza każdy podmiot, który – bezpośrednio lub pośrednio – kontroluje inny
+        podmiot,
+        jest przez
+        taki podmiot kontrolowany lub znajduje się z nim pod wspólną kontrolą.</p>
+    <p><b>Obowiązujące prawo</b> oznacza wszelkie obowiązujące ustawy, regulaminy, rozporządzenia, przepisy
+        wykonawcze i
+        inne,
+        niezależnie od ich źródła, w tym wszelkie ich interpretacje sądowe czy administracyjne obowiązujące w
+        danym
+        momencie w Polsce.</p>
+    <p><b>Przepisy prawa o ochronie danych</b> oznaczają wszelkie przepisy dotyczące ochrony prywatności i
+        ochrony
+        danych w
+        ramach Umowy, w tym, w stosownych przypadkach, brytyjską ustawę o ochronie danych z 2018 roku,
+        rozporządzenie
+        Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób
+        fizycznych w
+        związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia
+        dyrektywy 95/46/WE (wraz z wszelkimi ustawami, regulaminami i przepisami wykonawczymi) (ogólne
+        rozporządzenie o
+        ochronie danych lub RODO), dyrektywę o ochronie prywatności i komunikacji elektronicznej (2002/58/WE)
+        oraz
+        brytyjskie przepisy o ochronie prywatności i komunikacji elektronicznej z 2003 roku (SI 2003.2425).
+        Terminy
+        użyte w niniejszej Umowie, takie jak <b>Administrator, Osoba, której dane dotyczą, Dane osobowe,
+            Naruszenie
+            ochrony
+            danych osobowych, Przetwarzanie, Podmiot przetwarzający, Wniosek Osoby, której dane dotyczą, o
+            udostępnienie
+            danych</b> oraz <b>Organ nadzorczy</b>, mają znaczenie nadane im w Przepisach prawa o ochronie
+        danych.</p>
+
+    <p><b>Dalszy podmiot przetwarzający (sub-procesor)</b> oznacza osobę trzecią zaangażowaną przez Dostawcę lub
+        jeden z
+        Podmiotów powiązanych Dostawcy do wykonania niektórych bądź wszystkich obowiązków Dostawcy w ramach
+        Umowy, w
+        tym, między innymi, Przetwarzania Danych osobowych.</p>
+    <p><b>Standardowe klauzule umowne oznaczają Standardowe klauzule umowne</b> opracowane przez Komisję
+        Europejską na
+        potrzeby przekazywania Danych osobowych z obszaru Unii Europejskiej na rzecz Podmiotów przetwarzających
+        mających
+        siedzibę w krajach trzecich (przekazywanie danych przez Administratora na rzecz Podmiotu
+        przetwarzającego).</p>
+
+    <h4>2. PRZETWARZANIE DANYCH OSOBOWYCH</h4>
+    <p>2.1. Role Stron: strony przyjmują do wiadomości i uzgadniają, że w odniesieniu do Przetwarzania Danych
+        osobowych i na potrzeby Przepisów prawa o ochronie danych, Klient jest Administratorem, Dostawca
+        jest Podmiotem przetwarzającym, a Dostawca lub Podmioty powiązane Dostawcy mogą zatrudniać
+        Dalsze podmioty przetwarzające (sub-procesorów) z uwzględnieniem postanowień niniejszej Umowy
+        powierzenia przetwarzania danych.</p>
+    <p>2.2. Przetwarzanie Danych osobowych przez Klienta: w ramach korzystania z usług Klient będzie
+        Przetwarzać Dane osobowe zgodnie z wymogami Przepisów prawa o ochronie danych.</p>
+    <p>2.3. Przetwarzanie Danych osobowych przez Dostawcę: w ramach świadczenia usług Dostawca będzie
+        Przetwarzać Dane osobowe zgodnie z wymogami Przepisów prawa o ochronie danych oraz sprawi, żeby
+        Dalsze podmioty przetwarzające (sub-procesorzy) Przetwarzali Dane osobowe zgodnie z tymi
+        wymogami. Dostawca będzie Przetwarzać Dane osobowe w imieniu Klienta i zgodnie z jego
+        wskazówkami, w tym w ramach przekazywania Danych osobowych poza Europejski Obszar Gospodarczy
+        („EOG”). Dostawca nie będzie Przetwarzać Danych osobowych w żadnych innych celach i będzie
+        powiadamiać Klienta w sytuacji, gdy – w opinii Dostawcy– wskazówki Klienta będą naruszać
+        Przepisy prawa o ochronie danych.</p>
+    <p>2.4. Szczegółowe informacje nt. Przetwarzania: Przedmiotem Przetwarzania Danych osobowych przez
+        Dostawcę jest wykonywanie usług na mocy Umowy. Czas trwania Przetwarzania, charakter i cel
+        Przetwarzania, rodzaje Danych osobowych oraz kategorie Przetwarzanych Danych Osób, których dane
+        dotyczą, zostały określone w Aneksie 1 i są regulowane Umową.</p>
+    <h4>3. WNIOSKI O UDOSTĘPNIENIE DANYCH ORAZ SKARGI OSÓB, KTÓRYCH DANE DOTYCZĄ</h4>
+    <p>3.1 Dostawca będzie, w zakresie dopuszczonym prawem, powiadamiać Klienta w terminie 2 dni roboczych o otrzymaniu
+        wniosku od Osoby, której dane dotyczą, korzystającej z uprawnień przysługujących jej na mocy Przepisów prawa o
+        ochronie danych, w tym w celu uzyskania dostępu do Danych osobowych Osoby, której dane dotyczą, ich sprostowania
+        lub usunięcia; w sytuacji gdy Osoba, której dane dotyczą, sprzeciwia się Przetwarzaniu, taka Osoba, której dane
+        dotyczą, realizuje przysługujące jej prawo do sprostowania, ograniczenia Przetwarzania, usunięcia, przenoszenia
+        danych lub prawo do niepodlegania decyzjom opartym wyłącznie na zautomatyzowanym przetwarzaniu danych. Dostawca
+        będzie postępować wyłącznie zgodnie ze wskazówkami Klienta w ramach udzielania odpowiedzi na wnioski o
+        udostępnienie danych składane przez Osobę, której dane dotyczą (chyba że obowiązek ten w inny sposób wynika z
+        Obowiązującego prawa).</p>
+    <p>3.2 Dostawca powiadomi Klienta w przypadku otrzymania skargi, zawiadomienia czy korespondencji dotyczącej
+        przetwarzania Danych osobowych Klienta.</p>
+    <h4>4. POUFNOŚĆ, PRACOWNICY SPÓŁKI ORAZ DALSZE PODMIOTY PRZETWARZAJĄCE</h4>
+    <p>4.1 Dostawca nie będzie ujawniać Danych osobowych osobom trzecim, chyba że Klient lub niniejsza Umowa powierzenia
+        przetwarzania danych dopuszczają ich ujawnienie lub jest ono wymagane w świetle Obowiązującego prawa. Jeżeli
+        Obowiązujące prawo, sąd, urząd regulacyjny czy Organ nadzorczy wymagają od Dostawcy Przetwarzania lub ujawnienia
+        Danych osobowych, Dostawca poinformuje Klienta o takim prawnym lub regulacyjnym obowiązku i zapewni Klientowi
+        możliwość zgłoszenia sprzeciwu lub zakwestionowania takiego obowiązku, chyba że Obowiązujące prawo zabrania
+        przesyłania takiego zawiadomienia.</p>
+    <p>4.2 Dostawca zapewni, żeby pracownicy Dostawcy byli świadomi obowiązków Dostawcy i własnych obowiązków, oraz
+        zobowiązań w świetle Przepisów prawa o ochronie danych. Dostawca zapewni, żeby dostęp do Danych osobowych i ich
+        Przetwarzanie ograniczały się do pracowników i Dalszych podmiotów przetwarzających wykonujących usługi w ramach
+        Umowy i z uwzględnieniem wskazówek Klienta.</p>
+    <h4>5. DALSZE POWIERZENIE PRZETWARZANIA (SUB-PROCESSING)</h4>
+    <p>5.1 Dostawca powierza Dalszym podmiotom przetwarzającym (sub-procesorom) świadczenie określonych usług w swoim
+        imieniu. Klient wyraża zgodę na powierzenie przez Dostawcę Dalszym podmiotom przetwarzającym (sub-procesorom)
+        przetwarzania Danych osobowych w ramach Umowy. Dostawca może zezwolić niezależnemu Dalszemu podmiotowi
+        przetwarzającemu (sub-procesorowi) na Przetwarzanie Danych osobowych wyłącznie w sytuacji, gdy:</p>
+    <ol>
+        <li>
+            <p>Dostawca poinformuje Klienta na piśmie, w tym drogą elektroniczną, o zamiarze zatrudnienia Dalszego
+                podmiotu przetwarzającego (sub-procesora), przy czym Klient będzie miał prawo wniesienia sprzeciwu, wraz
+                z uzasadnieniem, wobec powołania nowego Dalszego podmiotu przetwarzającego (sub-procesora) w sytuacji,
+                gdy Klient ma merytoryczne i uzasadnione podstawy do wniesienia sprzeciwu wobec powołania konkretnego
+                Dalszego podmiotu przetwarzającego (sub-procesora), oraz powiadomi Dostawcę o takim sprzeciwie na piśmie
+                w terminie 5 dni od otrzymania od Dostawcy zawiadomienia dotyczącego takiego Dalszego podmiotu
+                przetwarzającego (sub-procesora);
+            </p>
+        </li>
+        <li>
+            <p>
+                Dostawca zawrze pisemną umowę z Dalszym podmiotem przetwarzającym (sub-procesorem) zawierającą
+                zobowiązania w zakresie ochrony danych zasadniczo identyczne z zobowiązaniami określonymi w Umowie;
+            </p>
+        </li>
+        <li>
+            <p>
+                Dostawca sprawuje kontrolę nad wszystkimi Danymi osobowymi powierzanymi Dalszemu podmiotowi
+                przetwarzającemu (sub-procesorowi); oraz
+            </p>
+        </li>
+        <li>
+            <p>
+                Dostawca ponosi pełną odpowiedzialność wobec Klienta za wykonanie zobowiązań przez Dalszy podmiot
+                przetwarzający (sub-procesora).
+            </p>
+        </li>
+    </ol>
+    <p>
+        5.2 Dalsze podmioty przetwarzające (sub-procesorzy) zatwierdzone na wstępie niniejszej Umowy powierzenia
+        przetwarzania danych zostały wskazane w Aneksie 1.
+    </p>
+
+    <h4>6. BEZPIECZEŃSTWO</h4>
+    <p>6.1 <b>Mechanizmy kontroli Ochrony Danych osobowych:</b> Dostawca wdroży i będzie stosował uzasadnione środki w
+        celu
+        zapewnienia stosowania przez Dostawcę i jego Dalszych podmiotów przetwarzających (sub- procesorów) odpowiednich
+        środków technicznych i organizacyjnych zapewniających ochronę bezpieczeństwa (w tym ochronę przed niedozwolonym
+        lub niezgodnym z prawem Przetwarzaniem Danych osobowych, dostępem do nich, ich ujawnieniem, kopiowaniem,
+        modyfikacją, przechowywaniem, odtwarzaniem, publikowaniem czy rozpowszechnianiem, przypadkowym lub niezgodnym z
+        prawem zniszczeniem, utratą, zmianą, ujawnieniem lub uszkodzeniem), poufności i integralności Danych osobowych.
+    </p>
+    <h4>7. NARUSZENIE OCHRONY DANYCH OSOBOWYCH</h4>
+    <p> 7.1 Dostawca będzie stosował polityki i procedury zarządzania zdarzeniami związanymi z bezpieczeństwem i
+        powiadomi Klienta bez zbędnej zwłoki (a w każdym razie w terminie 72 godzin po stwierdzeniu zdarzenia) o
+        domniemanym lub faktycznym Naruszeniu ochrony danych osobowych, przypadkowym, niedozwolonym lub niezgodnym z
+        prawem Przetwarzaniu Danych osobowych przez Dostawcę lub jego Dalsze podmioty przetwarzające (sub-procesorów)
+        stwierdzonym przez Dostawcę. Po stwierdzeniu naruszenia ochrony danych osobowych Dostawca: (a) podejmie
+        uzasadnione starania w celu określenia przyczyny takiego Naruszenia ochrony danych osobowych i wykona działania,
+        które uzna za konieczne i uzasadnione w celu usunięcia przyczyny takiego Naruszenia ochrony danych osobowych w
+        zakresie, w którym usunięcie takiej przyczyny jest realnie możliwe przez Dostawcę oraz (b) przekaże informacje
+        dotyczące Naruszenia ochrony danych osobowych oraz, w miarę możliwości, charakteru Naruszenia ochrony danych
+        osobowych, możliwych konsekwencji Naruszenia ochrony danych osobowych i środków zastosowanych w celu zaradzenia
+        Naruszeniu ochrony danych osobowych.</p>
+    <p> 7.2 Strony zobowiązują się wspólnie niezwłocznie zbadać każdorazowe niedozwolone lub niezgodne z prawem
+        Przetwarzanie Danych osobowych lub Naruszenie ochrony danych osobowych.</p>
+    <p>7.3 Dostawca i Klient wspólnie ustalą, czy należy powiadomić o Naruszeniu ochrony danych osobowych Osoby, których
+        dane dotyczą, Organy nadzorcze, urzędy regulacyjne, organy ścigania czy też inne instytucje, w trybie
+        przewidzianym przepisami prawa lub na wniosek stron, w tym określą treść i sposób powiadomienia, oraz ustalą,
+        czy należy zaproponować Osobom, których dane dotyczą, wdrożenie jakichkolwiek środków zaradczych, włącznie z
+        określeniem charakteru i zakresu takich środków zaradczych.</p>
+    <h4>8. ZWROT ORAZ USUNIĘCIE DANYCH OSOBOWYCH KLIENTA</h4>
+    <p>8.1 Z chwilą wypowiedzenia Umowy z dowolnej przyczyny lub wygaśnięcia okresu jej obowiązywania Dostawca w sposób
+        bezpieczny usunie lub zniszczy, lub, jeżeli otrzyma od Klienta stosowne polecenie na piśmie, zwróci wszelkie
+        Dane osobowe związane z Umową znajdujące się w posiadaniu Dostawcy lub pod jego kontrolą, i odstąpi od
+        zatrzymania takich Danych osobowych.</p>
+    <p>8.2 W sytuacji gdy Obowiązujące prawo, urząd państwowy lub Organ nadzorczy nakładają na Dostawcę obowiązek
+        zachowania jakichkolwiek dokumentów czy materiałów, które Dostawca byłby w przeciwnym razie zobowiązany zwrócić
+        lub zniszczyć, Dostawca powiadomi o tym fakcie Klienta.
+    <h4>9. DOKUMENTACJA</h4>
+    <p>9.1 Dostawca będzie dokumentować Przetwarzanie Danych osobowych dokonywane na rzecz Klienta, w tym dostęp do
+        Danych osobowych, sprawowanie nad nimi kontroli i ich zabezpieczenie, oraz będzie prowadzić ewidencję
+        zatwierdzonych Dalszych podmiotów przetwarzających (sub-procesorów) i podmiotów powiązanych, celów
+        Przetwarzania, kategorii Przetwarzania, przekazywania Danych osobowych do krajów trzecich i związanych z tym
+        zabezpieczeń, oraz przedstawi ogólny opis zabezpieczeń technicznych i organizacyjnych, o których jest mowa w
+        ust. 6.1.</p>
+    <p>9.2 Dostawca upewni się, że dokumentacja jest wystarczająca i umożliwia sporządzanie kopii na wniosek Organu
+        nadzorczego.</p>
+    <h4>10. AUDYT</h4>
+    <p>10.1 Dostawca umożliwi Klientowi i niezależnym przedstawicielom Klienta przeprowadzenie audytu wywiązywania się
+        przez Dostawcę z zobowiązań nałożonych Umową nie częściej niż raz do roku. Klient poinformuje Dostawcę o chęci
+        przeprowadzenia takiego audytu z co najmniej 30-dniowym wyprzedzeniem . Dostawca zobowiązuje się udzielić
+        Klientowi i niezależnym przedstawicielom Klienta wszelkiej uzasadnionej pomocy w przeprowadzaniu takich audytów.
+    </p>
+    <h4>11. ZARZĄDZANIE UMOWĄ</h4>
+    <p>11.1 Na wniosek Klienta Dostawca zobowiązuje się – na koszt Klienta – udzielać Klientowi pomocy w wykonywaniu
+        obowiązków Klienta wynikających z Przepisów prawa o ochronie danych w zakresie przeprowadzania ocen skutków dla
+        ochrony danych, zgłoszeń naruszeń i przestrzegania zasad bezpieczeństwa związanych z korzystaniem przez Klienta
+        z usług. Dostawca udzieli Klientowi wszelkiej uzasadnionej pomocy w ramach współpracy czy uprzednich konsultacji
+        z Organem nadzorczym w realizacji jego zadań związanych z Przetwarzaniem Danych osobowych na mocy Umowy, w
+        zakresie wymaganym w świetle Przepisów prawa o ochronie danych.</p>
+    <p>11.2 <b>Mechanizmy przekazywania danych:</b> Dostawca (lub dowolny Dalszy podmiot przetwarzający) zobowiązuje się
+        nie
+        przekazywać Danych osobowych poza EOG, chyba że następuje to za uprzednią zgodą Klienta. Dostawca może
+        Przetwarzać lub zezwalać na Przetwarzanie Danych osobowych poza EOG w następujących sytuacjach: (a) gdy Dostawca
+        Przetwarza Dane osobowe na obszarze, co do którego Komisja Europejska ustaliła w ramach Przepisów prawa o
+        ochronie danych, że prawo do ochrony prywatności osób fizycznych jest tam odpowiednio chronione. Dostawca jest
+        obowiązany wskazać w Aneksie 1 obszar będący przedmiotem ustaleń dotyczących odpowiedniego poziomu ochrony; lub
+        (b) gdy Dostawca uczestniczy w skutecznym mechanizmie transgranicznego przekazywania danych na mocy Przepisów
+        prawa o ochronie danych, przy czym Dostawca (oraz, w uzasadnionych przypadkach, Klient) jest w stanie wdrożyć
+        stosowne zabezpieczenia w celu zapewnienia odpowiedniego poziomu ochrony w odniesieniu do prawa do prywatności
+        osób fizycznych wymaganego na mocy art. 46 Ogólnego rozporządzenia o ochronie danych ((UE) 2016/679). Dostawca
+        jest obowiązany wskazać w Aneksie 1 mechanizm przekazywania danych, który umożliwia stronom przestrzeganie
+        takich postanowień w zakresie mechanizmu transgranicznego przekazywania danych, a Dostawca jest obowiązany
+        niezwłocznie poinformować Klienta o zmianie tego statusu; lub (c) gdy, w pozostałym zakresie, przekazywanie
+        danych następuje zgodnie z Przepisami prawa o ochronie danych.</p>
+    <h4>12. ZAWIADOMIENIA</h4>
+    <p>12.1 Grupa kapitałowa Dostawcy powołała Inspektora ochrony danych zgodnie z postanowieniami RODO. Osoba na tym
+        stanowisku czuwa nad przestrzeganiem postanowień tego rozporządzenia oraz innych stosownych międzynarodowych
+        przepisów prawa dotyczącego ochrony danych.</p>
+    <p>12.2 Klient, reprezentowany przez sygnatariusza wskazanego w Umowie, pełni rolę jedynej osoby kontaktowej dla
+        Dostawcy na potrzeby niniejszej Umowy powierzenia przetwarzania danych. Podobnie Dostawca pełni rolę jedynej
+        osoby kontaktowej dla Klienta w odniesieniu do jego obowiązków jako Podmiotu przetwarzającego w ramach
+        niniejszej Umowy powierzenia przetwarzania danych i upoważnia następujące osoby do działania w swoim imieniu w
+        zakresie akceptacji udokumentowanych wskazówek przewidzianych w RODO:</p>
+    <p>• Inspektor ochrony danych: Darren Pascoe, daneosobowe@fleetcor.pl</p>
+    <p>12.3 Postanowienia ust. 12.2 nie stosują się do doręczania pism procesowych czy innych dokumentów w ramach
+        postępowań sądowych ani, w zależności od sytuacji, postępowań arbitrażowych czy też innych metod rozstrzygania
+        sporów.</p>
+    <p>Niniejsza Umowa powierzenia przetwarzania danych została zawarta w dniu wskazanym na wstępie.</p>
+    <div style="display:inline-block; border: 1px solid black; padding:0 8px 8px; max-width: 320px;">
+        <h5>W imieniu i na rzecz
+            <br>
+            FleetCor Poland sp. z o.o.
+        </h5>
+        <img width="200" src="/resource/ete_images/contract_sign.jpg" alt="Sign">
+        <div>Podpisano w imieniu spółki: Jan Polívka</div>
+    </div>
+    <div style="display:inline-block; border: 1px solid black; padding:0 8px 8px; max-width: 320px; margin-left: 16px;">
+        <h5>W imieniu i na rzecz (nazwa Klienta):</h5>
+        <div class="underline-text underline-text_full" style="margin-bottom: 40px;">{!account.Name}</div>
+        <div>Osoba umocowana do składania podpisów</div>
+        <div>Podpis: <span class="underline-text"></span></div>
+        <div>Imię i nazwisko: <span class="underline-text">{!e2edataobject.First_Name__c} {!e2edataobject.Last_Name__c}</span></div>
+        <div>Stanowisko: <span class="underline-text">s</span></div>
+        <div>Data: <span class="underline-text">{!params.today}</span></div>
+    </div>
+    <div style="page-break-before: always;"></div>
+    <img class="header-image header-image_carnet" src="/resource/ete_images/carnet_logo.jpg" alt="Carnet">
+    <h4>Załącznik nr 1</h4>
+    <p>Szczegółowe informacje nt. Przetwarzania następującego w oparciu o postanowienia Umowy zostały podsumowane
+        poniżej:</p>
+    <h4>Rodzaje osób, których dane dotyczą</h4>
+    <ul>
+        <li>
+            <p>Klienci</p>
+        </li>
+        <li>
+            <p>Pracownicy klientów</p>
+        </li>
+        <li>
+            <p>Dostawcy</p>
+        </li>
+    </ul>
+    <h4>Kategorie danych osobowych</h4>
+    <ul>
+        <li>
+            <p>Dane kontaktowe (np. imię, nazwisko, telefon, adres poczty elektronicznej, adresy IP,)</p>
+        </li>
+        <li>
+            <p>Dane nt. pojazdów (w tym dane rejestracyjne czy tablice rejestracyjne, dokładne pozycjonowanie GPS, dane
+                dotyczące użytkowania i ruchu, pokonane odległości, czas jazdy, prędkość pojazdu, przekroczenia
+                prędkości, lokalizacja stacji paliw, historia tankowania)</p>
+        </li>
+    </ul>
+    <h4>Kategorie wrażliwych danych osobowych</h4>
+    <p>Nie dotyczy</p>
+    <h4>Cele przetwarzania</h4>
+    <ul>
+        <li>
+            <p>Instalacja, uruchomienie i korzystanie z usługi monitorowania pojazdu</p>
+        </li>
+        <li>
+            <p>Zarządzanie systemami informatycznymi w związku ze świadczoną usługą oraz zapewnienie ich działania</p>
+        </li>
+        <li>
+            <p>Zapewnienie wsparcia technicznego
+            </p>
+        </li>
+        <li>
+            <p>Przesyłanie sprawozdań i faktur za fakturowaną usługę</p>
+        </li>
+    </ul>
+    <h4>Charakter przetwarzania</h4>
+    <p>Do realizacji celu przetwarzania Dostawca jest uprawniony do wykonywania następujących operacji na Danych
+        osobowych: zbieranie, utrwalanie, organizowanie, porządkowanie, przechowywanie, pobieranie, przeglądanie,
+        wykorzystywanie, ujawnianie, usuwanie lub niszczenie (na życzenie Administratora danych).</p>
+    <h4>Czas trwania przetwarzania</h4>
+    <p>Od dnia zawarcia Umowy przez Strony („Dzień wejścia w życie”) do dnia wypowiedzenia Umowy.</p>
+</template>

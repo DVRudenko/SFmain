@@ -1,0 +1,18 @@
+{
+	"translations": {
+		"title": {
+			"en": "Reduce your business’s CO2 emissions",
+			"pl": "Zmniejsz emisję CO2 swojej firmy"
+		},
+		"description": {
+			"en": "<p>Help us to reduce CO2 emissions by supporting environmental projects by investing just 0.04 PLN per liter of fuel.</p><p>We reduce carbon dioxide emissions by investing in planting new trees, generating alternative energy sources and supporting other environmental projects.</p>",
+			"pl": "<p>Pomóż nam ograniczyć emisję CO2 poprzez wspieranie projektów ekologicznych inwestując tylko 0.04 zł za litr paliwa.</p><p>Ograniczamy emisję dwutlenku węgla inwestując w sadzenie nowych drzew, generowanie alternatywnych źródeł energii i wspierając inne projekty ochrony środowiska.</p>"
+		}
+	},
+	"settings": {
+		"bgImage": "/resource/ete_images/bgInfoCardFirst.png",
+		"show_more": "false",
+		"show_checkbox_1": "false",
+		"show_checkbox_2": "false"
+	}
+}

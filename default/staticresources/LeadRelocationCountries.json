@@ -1,0 +1,49 @@
+{
+    "regions" : {
+        "eu" : [
+            {
+                "name" : "Austria"
+            },
+            {
+                "name" : "Germany"
+            },
+            {
+                "name" : "France"
+            },
+            {
+                "name" : "Hungary"
+            },
+            {
+                "name" : "Netherlands"
+            },
+            {
+                "name" : "Poland"
+            },
+            {
+                "name" : "Belgium-NL"
+            },
+            {
+                "name" : "Belgium-FR"
+            },
+            {
+                "name" : "Switzerland-DE"
+            },
+            {
+                "name" : "Switzerland-IT"
+            },
+            {
+                "name" : "Switzerland-FR"
+            },
+            {
+                "name" : "Luxembourg"
+            },
+            {
+                "name" : "Czech Republic"
+            },
+            {
+                "name" : "Slovakia"
+            }
+        ],
+        "ru" : []
+    }
+}

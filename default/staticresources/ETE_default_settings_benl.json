@@ -1,0 +1,633 @@
+{
+    "phone": "+32 236 48965",
+    "partner_link": "https://www.shell.com/",
+    "partner_icon": "/resource/ete_images/shell_partner.png",
+    "google_play_link": "",
+    "google_play_icon": "/resource/ete_images/google_play.svg",
+    "apple_store_link": "",
+    "apple_store_icon": "/resource/ete_images/apple_store.svg",
+    "facebook": "",
+    "linkedIn": "",
+    "instagram": "",
+    "home_url": "https://fleetcorcards.be/",
+    "login_url": "https://selfserve.fleetcorcards.be/gfnsmebewww/pages/public/login.aspx",
+    "logo_url": null,
+    "showLanguagesDropDownInFooter": false,
+    "showLanguagesDropDownInHeader": false,
+    "showLanguagesDropDownInWelcome": true,
+    "showCountriesDropDownInWelcome": true,
+    "vfPageName": "etebenl",
+    "steps": [
+        {
+            "name": "products_and_services",
+            "order_data": true,
+            "optional": false,
+            "fields_dependencies": [],
+            "jobs_dependencies": [],
+            "stop_processes": {},
+            "jobs_to_run": [
+                {
+                    "checkBusinessObjects": {
+                        "trigger_to_launch_by_empty_fields": [
+                            "E2E_Data_Object__c.Id",
+                            "E2E_Data_Object__c.Client_Id__c"
+                        ]
+                    }
+                },
+                {
+                    "syncProductsAndServices": {
+                        "trigger_to_launch_by_updated_fields": [
+                            "E2E_Data_Product__c.Name",
+                            "E2E_Data_Offer_Item__c.Fleetcor_Offer_Item__c",
+                            "E2E_Data_Offer_Item__c.Category_Of_Products__c",
+                            "E2E_Data_Offer_Item__c.Company_Name__c",
+                            "E2E_Data_Offer_Item__c.Driver_Name__c",
+                            "E2E_Data_Offer_Item__c.License_Plate_Number__c",
+                            "E2E_Data_Offer_Item__c.Mileage_Data__c",
+                            "E2E_Data_Offer_Item__c.Type_Of_Card__c",
+                            "E2E_Data_Offer_Item__c.Type_Of_Vehicle__c"
+                        ]
+                    }
+                }
+            ],
+            "fields_to_clean_by_updated_fields": [
+                {
+                    "trigger_to_launch_cleaning": [
+                        "E2E_Data_Product__c.Type_ID__c"
+                    ],
+                    "cleared_fields": [
+                        "E2E_Data_Object__c.Direct_Debit_Mandate_Type__c",
+                        "E2E_Data_Object__c.Deposit_Reason__c",
+                        "E2E_Data_Object__c.Credit_System_Rating__c",
+                        "E2E_Data_Object__c.Credit_Limit__c",
+                        "E2E_Data_Object__c.Max_Credit_Limit__c",
+                        "E2E_Data_Object__c.Payment_Method__c",
+                        "E2E_Data_Object__c.Billing_Period__c",
+                        "E2E_Data_Object__c.Payment_Terms__c",
+                        "E2E_Data_Object__c.Security_Level__c",
+                        "E2E_Data_Object__c.E_Invoice__c",
+                        "E2E_Data_Object__c.Paper_Invoice__c",
+                        "E2E_Data_Object__c.Security_Amount_To_Pay__c",
+                        "E2E_Data_Object__c.Available_Min_Deposit__c",
+                        "E2E_Data_Object__c.Deposit_Agreement__c"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "contacts",
+            "order_data": true,
+            "optional": false,
+            "fields_dependencies": [],
+            "jobs_dependencies": [],
+            "stop_processes": {},
+            "jobs_to_run": [
+                {
+                    "reportRequest": {
+                        "trigger_to_launch_by_updated_fields": [
+                            "E2E_Data_Object__c.Selected_Company_Id__c"
+                        ]
+                    }
+                },
+                {
+                    "deduplication": {
+                        "trigger_to_launch_by_updated_fields": [
+                            "E2E_Data_Contact__c.First_Name__c",
+                            "E2E_Data_Contact__c.Last_Name__c",
+                            "E2E_Data_Contact__c.Phone__c",
+                            "E2E_Data_Contact__c.Email__c",
+                            "E2E_Data_Object__c.Selected_Company_Id__c"
+                        ]
+                    }
+                },
+                {
+                    "syncContactData": {
+                        "trigger_to_launch_by_updated_fields": [
+                            "E2E_Data_Contact__c.First_Name__c",
+                            "E2E_Data_Contact__c.Last_Name__c",
+                            "E2E_Data_Contact__c.Phone__c",
+                            "E2E_Data_Contact__c.Email__c",
+                            "E2E_Data_Object__c.Selected_Company_Id__c"
+                        ]
+                    }
+                }
+            ],
+            "fields_to_clean_by_updated_fields": [
+                {
+                    "trigger_to_launch_cleaning": [
+                        "E2E_Data_Object__c.Selected_Company_Id__c"
+                    ],
+                    "cleared_fields": [
+                        "E2E_Data_Object__c.Tax_ID__c",
+                        "E2E_Data_Object__c.Credit_Limit__c",
+                        "E2E_Data_Object__c.Max_Credit_Limit__c",
+                        "E2E_Data_Object__c.Payment_Method__c",
+                        "E2E_Data_Object__c.Billing_Period__c",
+                        "E2E_Data_Object__c.Payment_Terms__c",
+                        "E2E_Data_Object__c.Security_Level__c",
+                        "E2E_Data_Object__c.E_Invoice__c",
+                        "E2E_Data_Object__c.Paper_Invoice__c",
+                        "E2E_Data_Object__c.Security_Amount_To_Pay__c",
+                        "E2E_Data_Object__c.Available_Min_Deposit__c",
+                        "E2E_Data_Object__c.Deposit_Agreement__c",
+                        "E2E_Data_Object__c.Registered_Postal_Code__c",
+                        "E2E_Data_Object__c.Registered_Country__c",
+                        "E2E_Data_Object__c.Registered_City__c",
+                        "E2E_Data_Object__c.Registered_Street__c",
+                        "E2E_Data_Object__c.Risk_Category__c",
+                        "E2E_Data_Object__c.Direct_Debit_Mandate_Type__c"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "additional_services",
+            "order_data": true,
+            "optional": false,
+            "fields_dependencies": [],
+            "jobs_dependencies": [
+                "checkBusinessObjects"
+            ],
+            "stop_processes": {},
+            "jobs_to_run": [
+                {
+                    "syncAdditionalServices": {
+                        "trigger_to_launch_by_updated_fields": [
+                            "E2E_Data_Additional_Service__c.Name",
+                            "E2E_Data_Additional_Service__c.Selected__c"
+                        ]
+                    }
+                }
+            ],
+            "fields_to_clean_by_updated_fields": []
+        },
+        {
+            "name": "credit_line",
+            "order_data": true,
+            "optional": false,
+            "fields_dependencies": [
+                "E2E_Data_Object__c.Selected_Company_Id__c"
+            ],
+            "jobs_dependencies": [
+                "syncContactData"
+            ],
+            "stop_processes": {
+                "Report request limit exceeded": {
+                    "stageName": "Prospecting",
+                    "conditions": {}
+                },
+                "Already a customer": {
+                    "stageName": "Prospecting",
+                    "conditions": {}
+                },
+                "Already in process": {
+                    "stageName": "Closed Lost",
+                    "conditions": {}
+                },
+                "Too high limit": {
+                    "stageName": "Prospecting",
+                    "conditions": {}
+                },
+                "Black list": {
+                    "stageName": "Prospecting",
+                    "conditions": {}
+                },
+                "High e-mail risk": {
+                    "stageName": "Prospecting",
+                    "conditions": {}
+                },
+                "High risk industry": {
+                    "stageName": "Prospecting",
+                    "conditions": {}
+                },
+                "Empty address": {
+                    "stageName": "Prospecting",
+                    "conditions": {}
+                },
+                "Unknown credit factory error": {
+                    "stageName": "Prospecting",
+                    "conditions": {}
+                },
+                "Company is not in the list": {
+                    "stageName": "Prospecting",
+                    "conditions": {}
+                }
+            },
+            "jobs_to_run": [
+                {
+                    "syncCreditDecisionsData": {
+                        "trigger_to_launch_by_updated_fields": [
+                            "E2E_Data_Object__c.Credit_Limit__c",
+                            "E2E_Data_Object__c.Max_Credit_Limit__c",
+                            "E2E_Data_Object__c.Security_Level__c",
+                            "E2E_Data_Object__c.Payment_Method__c",
+                            "E2E_Data_Object__c.Security_Amount_To_Pay__c",
+                            "E2E_Data_Object__c.Billing_Period__c",
+                            "E2E_Data_Object__c.Payment_Terms__c",
+                            "E2E_Data_Object__c.E_Invoice__c"
+                        ]
+                    }
+                }
+            ],
+            "fields_to_clean_by_updated_fields": [
+                {
+                    "trigger_to_launch_cleaning": [
+                        "E2E_Data_Object__c.Security_Amount_To_Pay__c"
+                    ],
+                    "cleared_fields": [
+                        "E2E_Data_Object__c.Deposit_Agreement__c"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "payment_data",
+            "order_data": false,
+            "optional": false,
+            "fields_dependencies": [],
+            "jobs_dependencies": [],
+            "stop_processes": {},
+            "jobs_to_run": [
+                {
+                    "syncPaymentDetails": {
+                        "trigger_to_launch_by_updated_fields": [
+                            "E2E_Data_Object__c.IBAN__c",
+                            "E2E_Data_Object__c.SWIFT__c",
+                            "E2E_Data_Object__c.Risk_Category__c"
+                        ]
+                    }
+                }
+            ],
+            "fields_to_clean_by_updated_fields": []
+        },
+        {
+            "name": "pay_deposit",
+            "order_data": false,
+            "optional": true,
+            "trigger_to_display": {
+                "AND": [{
+                    "param": "data_object.securityAmountToPay",
+                    "regex": "^[1-9][0-9]*$"
+                }]
+            },
+            "fields_dependencies": [
+                "E2E_Data_Object__c.Selected_Company_Id__c",
+                "E2E_Data_Object__c.Credit_Limit__c",
+                "E2E_Data_Object__c.Max_Credit_Limit__c",
+                "E2E_Data_Object__c.Payment_Method__c",
+                "E2E_Data_Object__c.Security_Amount_To_Pay__c",
+                "E2E_Data_Object__c.Billing_Period__c"
+            ],
+            "jobs_dependencies": [
+                "reportRequest"
+            ],
+            "stop_processes": {},
+            "jobs_to_run": [
+                {
+                    "syncPaymentData": {
+                        "trigger_to_launch_by_updated_fields": [
+                            "E2E_Data_Object__c.Deposit_Agreement__c"
+                        ]
+                    }
+                }
+            ],
+            "fields_to_clean_by_updated_fields": [],
+            "redirection": "ingenico"
+        }
+    ],
+    "objects_mapping_to_sync": [
+        {
+            "syncProductsAndServices": {
+                "OpportunityLineItem": [
+                    "E2E_Data_Product__c"
+                ],
+                "Offer_Item__c": [
+                    "E2E_Data_Offer_Item__c"
+                ],
+                "Opportunity": [
+                    "E2E_Data_Object__c"
+                ]
+            },
+            "syncContactData": {
+                "Account": [
+                    "Credit_Factory_Report__c"
+                ],
+                "Opportunity": [
+                    "E2E_Data_Object__c",
+                    "Credit_Factory_Report__c"
+                ],
+                "Contact": [
+                    "E2E_Data_Contact__c",
+                    "Credit_Factory_Report__c"
+                ],
+                "Offer_Item__c": [
+                    "E2E_Data_Offer_Item__c"
+                ],
+                "OpportunityContactRole": []
+            },
+            "syncAdditionalServices": {
+                "Client_Offer_Additional_Service__c": [
+                    "E2E_Data_Additional_Service__c"
+                ],
+                "Opportunity": [
+                    "E2E_Data_Object__c"
+                ]
+            },
+            "syncCreditDecisionsData": {
+                "Opportunity": [
+                    "E2E_Data_Object__c"
+                ]
+            },
+            "syncPaymentDetails": {
+                "Opportunity": [
+                    "E2E_Data_Object__c"
+                ]
+            },
+            "syncPaymentData": {
+                "Opportunity": [
+                    "E2E_Data_Object__c"
+                ]
+            },
+            "syncFinishedDeal": {
+                "Opportunity": [
+                    "E2E_Data_Object__c"
+                ]
+            }
+        }
+    ],
+    "payment_system": {
+        "logo": {
+            "icon": "/resource/ete_images/payment_ingenico.png",
+            "xs": "margin-top: 0px;",
+            "sm": "margin-top: -5px;",
+            "md": "margin-top: -20px;",
+            "lg": "margin-top: -20px;"
+        },
+        "available_credit_cards": [
+            {
+                "pm": "CreditCard",
+                "brand": "Visa",
+                "icon": "/resource/ete_images/card_visa.png",
+                "xs": "max-width: 40px;",
+                "sm": "max-width: 50px;",
+                "md": "max-width: 50px;",
+                "lg": "max-width: 68px;"
+            },
+            {
+                "pm": "CreditCard",
+                "brand": "MasterCard",
+                "icon": "/resource/ete_images/card_mastercard.png",
+                "xs": "max-height: 28px",
+                "sm": "max-height: 32px",
+                "md": "max-height: 36px",
+                "lg": "max-height: 45px"
+            },
+            {
+                "pm": "CreditCard",
+                "brand": "Maestro",
+                "icon": "/resource/ete_images/card_maestro.png",
+                "xs": "max-height: 28px",
+                "sm": "max-height: 32px",
+                "md": "max-height: 36px",
+                "lg": "max-height: 45px"
+            },
+            {
+                "pm": "CreditCard",
+                "brand": "BCMC",
+                "icon": "/resource/ete_images/bcmc-logo.png",
+                "xs": "max-height: 28px",
+                "sm": "max-height: 32px",
+                "md": "max-height: 36px",
+                "lg": "max-height: 45px"
+            }
+        ],
+        "available_online_banks": [
+            {
+                "pm": "DirectEbankingDE",
+                "brand": "DirectEbankingDE",
+                "icon": "/resource/ete_images/bank_sofort.png",
+                "xs": "max-width: 32px;",
+                "sm": "max-width: 36px;",
+                "md": "max-width: 36px;",
+                "lg": "max-width: 50px;"
+            },
+            {
+                "pm": "Belfius Direct Net",
+                "brand": "Belfius Direct Net",
+                "icon": "/resource/e2e_images/belfius.png",
+                "xs": "max-width: 48px;",
+                "sm": "max-width: 56px;",
+                "md": "max-width: 60px;",
+                "lg": "max-width: 80px;"
+            },
+            {
+                "pm": "INGHomePay",
+                "brand": "INGHomePay",
+                "icon": "/resource/e2e_images/INGHomePay-logo.png",
+                "xs": "max-width: 56px;",
+                "sm": "max-width: 68px;",
+                "md": "max-width: 72px;",
+                "lg": "max-width: 100px;"
+            }
+        ]
+    },
+    "credit_factory": {
+        "payment_details": [
+            "7+7",
+            "15+7",
+            "30+7"
+        ],
+        "report_validations": [
+            "Contact",
+            "EmailRisk",
+            "BlackList",
+            "Industry",
+            "EmptyAddress"
+        ]
+    },
+    "menu": [
+        {
+            "content": "fuel_card",
+            "link": "https://fleetcorcards.be/tankkaart"
+        },
+        {
+            "content": "sell_card",
+            "link": "https://fleetcorcards.be/euroshell-card"
+        },
+        {
+            "content": "ev_charging_card",
+            "link": "https://fleetcorcards.be/laadkaart"
+        },
+        {
+            "content": "customer_service",
+            "link": "https://fleetcorcards.be/het-bieden-van-een-uitstekende-klantendienst"
+        },
+        {
+            "content": "network",
+            "link": "https://fleetcorcards.be/shell-tankstations-zoeker"
+        },
+        {
+            "content": "news",
+            "link": "https://fleetcorcards.be/news"
+        }
+    ],
+    "footerMenu": [
+        {
+            "content": "fuel_card",
+            "link": "https://fleetcorcards.be/tankkaart"
+        },
+        {
+            "content": "sell_card",
+            "link": "https://fleetcorcards.be/euroshell-card"
+        },
+        {
+            "content": "ev_charging_card",
+            "link": "https://fleetcorcards.be/laadkaart"
+        },
+        {
+            "content": "customer_service",
+            "link": "https://fleetcorcards.be/het-bieden-van-een-uitstekende-klantendienst"
+        },
+        {
+            "content": "network",
+            "link": "https://fleetcorcards.be/shell-tankstations-zoeker"
+        },
+        {
+            "content": "news",
+            "link": "https://fleetcorcards.be/news"
+        },
+        {
+            "content": "about_fleetcor",
+            "link": "https://fleetcorcards.be/welkom-bij-fleetcor"
+        },
+        {
+            "content": "privacy_policy",
+            "link": "https://fleetcorcards.be/sites/fleetcorcards.be/files/Fleetcor%20Europe%20Privacy%20Policy%20DU.pdf"
+        },
+        {
+            "content": "copyright_and_legal_notice",
+            "link": "https://fleetcorcards.be/auteursrecht-en-beperking-van-de-aansprakelijkheid"
+        },
+        {
+            "content": "cookie_policy",
+            "link": "https://fleetcorcards.be/cookie-richtlijnen"
+        },
+        {
+            "content": "rules_website",
+            "link": "https://fleetcorcards.be/gebruiksvoorwaarden-website"
+        }
+    ],
+    "countries": [
+        {
+            "value": "pl",
+            "link": "https://online.fleetcor.pl/etepl"
+        },
+        {
+            "value": "de",
+            "link": "https://online.fleetcor.de/etede"
+        },
+        {
+            "value": "at",
+            "link": "https://online.fleetcor.at/eteat"
+        },
+        {
+            "value": "nl",
+            "link": "https://online.fleetcor.nl/etenl"
+        },
+        {
+            "value": "benl",
+            "link": "https://online.fleetcorcards.be/etebenl"
+        },
+        {
+            "value": "befr",
+            "link": "https://online.fleetcorcards.be/etebefr"
+        },
+        {
+            "value": "chde",
+            "link": "https://online.fleetcor.ch/etechde"
+        },
+        {
+            "value": "chfr",
+            "link": "https://online.fleetcor.ch/etechfr"
+        },
+        {
+            "value": "hu",
+            "link": "https://online.fleetcor.hu/etehu"
+        },
+        {
+            "value": "fr",
+            "link": "https://online.fleetcor.fr/etefr"
+        },
+        {
+            "value": "sk",
+            "link": "https://online.fleetcor.sk/etesk"
+        },
+        {
+            "value": "cz",
+            "link": "https://online.fleetcor.cz/etecz"
+        },
+        {
+            "value": "lu",
+            "link": "https://online.fleetcor.lu/etelu"
+        }
+    ],
+    "langs": [
+        "en",
+        "nl",
+        "fr"
+    ],
+    "baseOfferItems": [
+        "evbe",
+        "5centOfferBE"
+    ],
+    "eteDocuments": {
+        "agreeToProcessPersDataForMarketing": {
+            "nl": "ETE_DOC_dataForMarketingBENL_NL",
+            "fr": "ETE_DOC_dataForMarketingBEFR_FR",
+            "en": "ETE_DOC_dataForMarketingBENL_NL"
+        },
+        "depositAgreement": {
+            "fr": "ETE_DOC_depositAgreementBENL",
+            "nl": "ETE_DOC_depositAgreementBENL",
+            "en": "ETE_DOC_depositAgreementBENL"
+        },
+        "documentsAgreement": {
+            "nl": "ETE_DOC_documentsAgreement_BE_NL",
+            "fr": "ETE_DOC_documentsAgreement_BE_FR",
+            "en": "ETE_DOC_documentsAgreement_BE_NL"
+        },
+        "documentsAgreement_core": {
+            "nl": "ETE_DOC_documentsAgreement_core_BE_NL",
+            "fr": "ETE_DOC_documentsAgreement_core_BE_FR",
+            "en": "ETE_DOC_documentsAgreement_core_BE_NL"
+        },
+        "documentsTermsAndConditions": {
+            "nl": "ETE_DOC_termsAndConditionsBE_NL",
+            "fr": "ETE_DOC_termsAndConditionsBE_FR",
+            "en": "ETE_DOC_termsAndConditionsBE_NL"
+        },
+        "howToPayDeposit": {
+            "nl": "ETE_DOC_howToPayDeposit_BE_NL",
+            "fr": "ETE_DOC_howToPayDeposit_BE_FR",
+            "en": "ETE_DOC_howToPayDeposit_BE_EN"
+        },
+        "priceList": {
+            "nl": "ETE_DOC_priceList_BE_NL",
+            "fr": "ETE_DOC_priceList_BE_FR",
+            "en": "ETE_DOC_priceList_BE_NL"
+        },
+        "vatRecoveryTC": {
+            "nl": "ETE_DOC_vatRecoveryTc_BENL",
+            "fr": "ETE_DOC_vatRecoveryTc_BEFR",
+            "en": "ETE_DOC_vatRecoveryTc_BENL"
+        }
+    },
+    "availableCheckboxesOnContacts": {
+        "agreementToPhoneContact": true,
+        "agreementToReceiveInfoByEmail": false,
+        "agreeToProcessPersDataForMarketing": true,
+        "agreementPrivacyPolicy": false,
+        "termsAndConditionsAgreement": true,
+        "authorizedSignatoryConfirmed": false
+    }
+}

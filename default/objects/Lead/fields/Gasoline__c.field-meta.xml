@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gasoline__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Number of vehicles if customer uses gasoline</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of vehicles if customer uses gasoline</inlineHelpText>
+    <label>Gasoline</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,218 @@
+<html>
+    <head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!--<link rel="stylesheet" href="style.css">-->
+        <style>
+			@font-face {
+			  font-family: Montserrat-Medium;
+			  src: url(fonts/Montserrat-Medium.ttf);
+			}
+
+			html, body {
+			  height: 100%;
+			  margin:0;
+			  padding:0;
+			  overflow: overlay;
+			}
+
+			.slider {
+			  width: 100%;
+			  height: 100%;
+			  position: fixed;
+			  left: 0;
+			  top: 0;
+			  background: #000;
+			  z-index: 100;
+			}
+
+			.default-button {
+			  position: fixed;
+			  bottom: 8px;
+			  right: 100px;
+			  padding: 5px 15px;
+			  z-index: 75;
+			  background:  #EE3A43;
+			  width: auto;
+			  height: auto;
+			  line-height: 25px;
+			  font-family: Montserrat-Medium;
+			  font-size: 12px;
+			  text-align: center;
+			  text-transform: uppercase;
+			  color: #fff;
+			  border-radius: unset;
+			  min-width: 125px;
+			  max-width: 200px;
+			  white-space: normal;
+			}
+
+			iframe {
+				position:fixed;
+				top:0;
+				left:0;
+				right:0;
+				left:0;
+				width: 100%;
+				height: calc(100% - 50px);
+				border: 0;
+			}
+			.white-space {
+			  height: 51px;
+			  background:#fff;
+			  z-index: 49;
+			  position:fixed;
+				bottom:0;
+				right:0;
+				left:0;
+				width: 100%;
+			}
+
+
+			.iframe {
+			  width: 100%;
+			  height: calc(100% - 50px);
+			  position: relative;
+			  left: 0;
+			  top: 0;
+			  z-index: 50;
+			}
+
+			.slider-img {
+			  display: block;
+			  max-width: 100%;
+			  max-height: 100%;
+			  width: auto;
+			  height: auto;
+			  text-align: center;
+			  margin-left: auto;
+			  margin-right: auto;
+			  position: fixed;
+			  top: 0;
+			  bottom: 0;
+			  right: 0;
+			  left: 0;
+			  margin: auto;
+			}
+
+			.hide {
+			  display: none;
+			}
+
+
+			.loading {
+			  position: fixed;
+			  z-index: 25;
+			}
+
+			.loading-background {
+			  position: fixed;
+			  width: 100%;
+			  height: 100%;
+			  background: #000;
+			  opacity: 0.7;
+			}
+
+			.loading-img {
+			  position: fixed;
+			  top: 0;
+			  left: 0;
+			  right: 0;
+			  bottom: 0;
+			  margin: auto;
+			  border-radius: 50%
+			}
+        </style>
+    </head>
+    <body>
+        <div class="slider">
+            <img class="slider-img" src=""/>
+        </div>
+
+        <div class="default-button cancel-button">Abbrechen</div>
+
+		<div class="iframe">
+            <iframe class="main-iframe" src=""></iframe>
+            <div class="white-space"></div>
+        </div>
+        
+		<div class="loading">
+			<div class="loading-background"></div>
+			<img class="loading-img" src="images/preloader-loop.gif"/>
+        </div>
+
+        <script>
+            // Loading all GET parameters into "params"
+            var params = (function(a) {
+                if (a == "") return {};
+                var b = {};
+                for (var i = 0; i < a.length; ++i)
+                {
+                    var p=a[i].split('=', 2);
+                    if (p.length == 1)
+                        b[p[0]] = "";
+                    else
+                        b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+                }
+                return b;
+            })(window.location.search.substr(1).split('&'));
+        </script>
+        <script>
+            // Settings
+            var images = ['1_3.png', '2_3.png', '3_3.png', '4_3.png'];
+            var imagePath = 'images/';
+            var sliderTimeout = 30000; // default value for GET parameter slider_timeout
+            var currentImage = 0; // current image (it is also a first image to display)
+            var url = "https://e2e-e2efleetcor.cs89.force.com/i?l"; // form link
+            var obnGetParameterName = "obn"; // name of GET parameter with OBN
+            var sldierTimeoutGetParameterName = "slider_timeout"; // name of GET parameter with OBN
+            var obn = 0; // default OBN (if wasn't set thru GET parameter, replaced if was)
+
+
+
+            // Loading GET parameters
+            if (params[obnGetParameterName] != null)
+                obn = params[obnGetParameterName]; // OBN
+            if (params[sldierTimeoutGetParameterName] != null)
+                sliderTimeout = params[sldierTimeoutGetParameterName]; // slider timeout
+
+
+            // Loading DOM elements
+            var imageDom = document.getElementsByClassName("slider-img")[0]; // a single <img> that is now showing image
+            var sliderDom = document.getElementsByClassName("slider")[0]; // slider's parent div
+            var cancelButton = document.getElementsByClassName("cancel-button")[0]; // cancel and return to the slider button
+            var mainIframe = document.getElementsByClassName("main-iframe")[0]; // iframe with form
+
+            // Funtion that turning on and off slider (depending on sliderShowed variable)
+            var sliderShowed = true; // current state of slider and iframe
+				sliderDom.onclick = function() {
+				if (sliderDom == null) return;
+
+				// if "sliderShowed == true" then we need to hide the slider and load our form
+				if (sliderShowed) {
+					sliderDom.style.display = 'none';
+					mainIframe.src = url + obn;
+				} else {
+					// if "sliderShowed == false" then we need to show our slider and close form 
+					sliderDom.style.display = 'block';
+					mainIframe.src = "";
+				}
+				sliderShowed = !sliderShowed;
+			};
+            cancelButton.onclick = sliderDom.onclick; // cancel button ("Abbrechen") have same behavior as clicking of the slider
+
+
+            // Function that change images in slider
+            function changeImage() {
+                if (imageDom == null) return;
+                var newCurrentImage = currentImage + 1;
+                if (newCurrentImage >= images.length) newCurrentImage = 0;
+                imageDom.src = imagePath + images[newCurrentImage];
+                currentImage = newCurrentImage;
+            }
+            // Set image once (for the first time)
+            imageDom.src = imagePath + images[currentImage];
+            // Change images every X seconds (where X is sliderTimeout variable)
+            setInterval(changeImage, sliderTimeout);
+        </script>
+    </body>
+</html>

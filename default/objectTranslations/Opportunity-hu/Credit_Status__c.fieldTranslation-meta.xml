@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS_Credit Status --></label>
+    <name>Credit_Status__c</name>
+    <picklistValues>
+        <masterLabel>Conditional Approval</masterLabel>
+        <translation><!-- Conditional Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Approved</masterLabel>
+        <translation><!-- Credit Approved --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Declined</masterLabel>
+        <translation><!-- Credit Declined --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total working duration of all participating agents (i.e. Agent Talk Time + Transfer Time + Wrap + Hold + Consult Times for Calls and Working + Wrap up for Cases; Agent Handling time for Internal &amp; Outbound Calls also counts Ring time of Agent who dialled) --></help>
+    <label><!-- Handle Time --></label>
+    <name>NVMStatsSF__Handle_Time__c</name>
+</CustomFieldTranslation>

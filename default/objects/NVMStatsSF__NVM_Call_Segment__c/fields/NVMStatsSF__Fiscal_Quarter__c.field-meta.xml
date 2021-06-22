@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__Fiscal_Quarter__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>CASE(MONTH( NVMStatsSF__Date__c ) , 
+1, &quot;Q1-&quot;+ TEXT(year( NVMStatsSF__Date__c )), 
+2, &quot;Q1-&quot;+ TEXT(year(NVMStatsSF__Date__c)), 
+3, &quot;Q1-&quot;+ TEXT(year(NVMStatsSF__Date__c)), 
+4, &quot;Q2-&quot;+ TEXT(year(NVMStatsSF__Date__c)), 
+5, &quot;Q2-&quot;+ TEXT(year(NVMStatsSF__Date__c)), 
+6, &quot;Q2-&quot;+ TEXT(year(NVMStatsSF__Date__c)), 
+7, &quot;Q3-&quot;+ TEXT(year(NVMStatsSF__Date__c)), 
+8, &quot;Q3-&quot;+ TEXT(year(NVMStatsSF__Date__c)), 
+9, &quot;Q3-&quot;+ TEXT(year(NVMStatsSF__Date__c)), 
+10, &quot;Q4-&quot;+ TEXT(year(NVMStatsSF__Date__c)), 
+11, &quot;Q4-&quot;+ TEXT(year(NVMStatsSF__Date__c)), 
+12, &quot;Q4-&quot;+ TEXT(year(NVMStatsSF__Date__c)), &quot; &quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Fiscal Quarter</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

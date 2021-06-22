@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chat_Topic__c</fullName>
+    <externalId>false</externalId>
+    <label>Chat Topic</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Contact details</fullName>
+                <default>false</default>
+                <label>Contact details</label>
+            </value>
+            <value>
+                <fullName>Company details</fullName>
+                <default>false</default>
+                <label>Company details</label>
+            </value>
+            <value>
+                <fullName>Credit scoring</fullName>
+                <default>false</default>
+                <label>Credit scoring</label>
+            </value>
+            <value>
+                <fullName>Card configuration</fullName>
+                <default>false</default>
+                <label>Card configuration</label>
+            </value>
+            <value>
+                <fullName>Price list</fullName>
+                <default>false</default>
+                <label>Price list</label>
+            </value>
+            <value>
+                <fullName>Special offers + VAS</fullName>
+                <default>false</default>
+                <label>Special offers + VAS</label>
+            </value>
+            <value>
+                <fullName>Payments</fullName>
+                <default>false</default>
+                <label>Payments</label>
+            </value>
+            <value>
+                <fullName>Card delivery</fullName>
+                <default>false</default>
+                <label>Card delivery</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

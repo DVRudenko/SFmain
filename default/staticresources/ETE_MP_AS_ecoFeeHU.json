@@ -1,0 +1,18 @@
+{
+	"translations": {
+		"title": {
+			"en": "Clean Advantage program",
+			"hu": "Clean Advantage program"
+		},
+		"description": {
+			"en": "<p>Contribute to reduction of CO2 emissions together with FLEETCOR! We offer you the Clean Advantage program for climate-neutral driving. Become a part of this project and actively protect our planet with every meter driven!</p><p>By participating in this program, you automatically donate 2.45 HUF per pumped liter of fuel to environmental protection projects. This way you can actively help to prevent climate catastrophes.</p>",
+			"hu": "<p>Hozzájárulás a CO2-kibocsátás csökkentéséhez a FLEETCOR-ral! Nálunk a Clean Advantage program klímasemleges vezetéshez. Legyen része ennek a projektnek, és járuljon hozzá bolygónk védelméhez minden levezetett kilométer után!</p><p>A programban való részvételével Ön hozzájárul, hogy automatikusan hozzájárul minden tankolt liter után 2,45 Ft-tal a környezetvédelmi projekteknek, amelyet arra fordítunk,  hogy közösen megakadályozzuk a klímakatasztrófát.</p>"
+		}
+	},
+	"settings": {
+		"bgImage": "/resource/ete_images/bgInfoCardFirst.png",
+		"show_more": "false",
+		"show_checkbox_1": "false",
+		"show_checkbox_2": "false"
+	}
+}

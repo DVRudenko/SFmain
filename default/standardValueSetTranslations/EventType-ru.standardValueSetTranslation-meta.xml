@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Akvizice</masterLabel>
+        <translation><!-- Akvizice --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Call</masterLabel>
+        <translation>Звонок</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Meeting</masterLabel>
+        <translation>Встреча</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Následná schůzka</masterLabel>
+        <translation><!-- Následná schůzka --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Online transfer call</masterLabel>
+        <translation>Он-лайн перевод</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ostatní</masterLabel>
+        <translation><!-- Ostatní --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Post</masterLabel>
+        <translation>КП</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>První schůzka</masterLabel>
+        <translation><!-- První schůzka --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Péče</masterLabel>
+        <translation><!-- Péče --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Retence</masterLabel>
+        <translation><!-- Retence --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Rozvoj</masterLabel>
+        <translation><!-- Rozvoj --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Trénink</masterLabel>
+        <translation><!-- Trénink --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

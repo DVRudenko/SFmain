@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Task_FS__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Только для группы Field Sales</inlineHelpText>
+    <label>Task FS</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Нет</fullName>
+                <default>true</default>
+                <label>Нет</label>
+            </value>
+            <value>
+                <fullName>Да</fullName>
+                <default>false</default>
+                <label>Да</label>
+            </value>
+            <value>
+                <fullName>Командировка</fullName>
+                <default>false</default>
+                <label>Командировка</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

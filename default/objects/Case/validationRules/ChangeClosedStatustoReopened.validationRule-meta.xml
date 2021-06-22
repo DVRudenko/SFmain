@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ChangeClosedStatustoReopened</fullName>
+    <active>true</active>
+    <description>STCP1-867 - prevent users with certain profiles from changing 'closed' status to any other status except for Reopened</description>
+    <errorConditionFormula>AND( 
+
+    ISCHANGED(Status), 
+ 
+    ISPICKVAL(PRIORVALUE(Status),'Closed'),
+
+    NOT (ISPICKVAL (Status, 'Reopened')),
+
+    OR(
+       RecordType.DeveloperName = 'Support',
+       RecordType.DeveloperName = 'Support_CCS'
+       ), 
+
+    $Profile.Name != 'System Administrator',
+    $Profile.Name != 'Systemadministrator',
+    $Profile.Name != 'API Only',
+    $User.Alias != 'autoproc',
+
+    OR (
+        $Profile.Name = 'CCS Service Agent',
+        $Profile.Name = 'CCS Service Manager',
+        $Profile.Name = 'Service Agent',
+        $Profile.Name = 'Service Manager',
+        $Profile.Name = 'Retention Agent',
+        $Profile.Name = 'Retention Manager',
+        $Profile.Name = 'Credit'
+        )
+    )</errorConditionFormula>
+    <errorDisplayField>Status</errorDisplayField>
+    <errorMessage>You can only reopen a closed Case</errorMessage>
+</ValidationRule>

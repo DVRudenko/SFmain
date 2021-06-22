@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Bug</masterLabel>
+        <translation>Ошибки SF</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Change Request</masterLabel>
+        <translation>Запрос на изменение данных</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Changing the record owner</masterLabel>
+        <translation>Изменение владельца записи</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Changing the record owner (request to SF mail)</masterLabel>
+        <translation>Изменение владельца записи (запрос на почту SF)</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Creating and deleting new users</masterLabel>
+        <translation>Создание и деактивация учетки пользователя</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Delete data</masterLabel>
+        <translation>Удаление данных</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Moved to Start</masterLabel>
+        <translation>Перевод на Старт</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Functionality</masterLabel>
+        <translation>Новая функциональность</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Preparation and queries DB</masterLabel>
+        <translation>Подготовка и запросы по БД</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Question about working in SF</masterLabel>
+        <translation>Вопрос по работе в SF</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Reset password</masterLabel>
+        <translation>Сброс пароля</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Pinning the CC operator</masterLabel>
+        <translation>Закрепление оператора КЦ</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Customer verification</masterLabel>
+        <translation>Проверка клиента сервиса/Создание доп. Возможности</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Re-request</masterLabel>
+        <translation>Повторная заявка</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>E2E error after launch</masterLabel>
+        <translation>E2E ошибка после запуска</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>E2E error on form</masterLabel>
+        <translation>E2E ошибка на форме</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

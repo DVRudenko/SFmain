@@ -1,0 +1,95 @@
+{
+    "title": {
+        "default_impl": {
+            "en": "CCS Limit WHOLE NETWORK",
+            "sk": "CCS Limit CELÁ SIEŤ"
+        }
+    },
+    "description": {
+        "default_impl": {
+            "en": "Get special discount per liter fuel at all stations in Slovakia.",
+            "sk": "Získajte špeciálnu zľavu na liter PHM na všetkých čerpacích staniciach v sieti CCS na Slovensku."
+        }
+    },
+    "promos": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Discount at all fuel stations in Slovakia (except Slovnaft)",
+                    "cs": "Zľava v rámci celej siete CCS (okrem Slovnaft)"
+                },
+                "value": {
+                    "en": "-1 cent per liter fuel without VAT",
+                    "cs": "-1 cent bez DPH"
+                }
+            },
+            {
+                "label": {
+                    "en": "Discount at Slovnaft",
+                    "sk": "Zľava v siete Slovnaft"
+                },
+                "value": {
+                    "en": "-0.4 Euro cents per liter fuel without VAT",
+                    "sk": "-0.4 centov bez DPH"
+                }
+            }
+        ]
+    },
+    "enableBulk": {
+        "default_impl": true
+    },
+    "enableLocator": {
+        "default_impl": false
+    },
+    "offerItemsMaxCount": {
+        "default_impl": 70
+    },
+    "brands": {
+        "default_impl": []
+    },
+    "driverName": {
+        "default_impl": {
+            "default": "KARTA",
+            "show": true
+        }
+    },
+    "dailyLimit": {
+        "default_impl": {
+            "default": null,
+            "show": true
+        }
+    },
+    "monthlyCardLimit": {
+        "default_impl": {
+            "default": null,
+            "show": true
+        }
+    },
+    "categoryOfProducts": {
+        "default_impl": {
+            "default": "Group 04",
+            "show": true
+        }
+    },
+    "lockedPinChange": {
+        "default_impl": {
+            "default": false,
+            "required": false,
+            "show": true
+        }
+    },
+    "mileageData": {
+        "default_impl": {
+            "default": false,
+            "required": false,
+            "show": true
+        }
+    },
+    "evCharging": {
+        "default_impl": {
+            "default": false,
+            "required": false,
+            "show": true
+        }
+    }
+}

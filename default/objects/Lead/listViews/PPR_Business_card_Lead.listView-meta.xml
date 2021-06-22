@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Business_card_Lead</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>PPR Business card</value>
+    </filters>
+    <filters>
+        <field>Lead_Status_Specific__c</field>
+        <operation>notEqual</operation>
+        <value>Switched to E2E</value>
+    </filters>
+    <label>PPR Business card</label>
+    <language>en_US</language>
+    <queue>PPR_Business_card</queue>
+    <sharedTo>
+        <role>PPRCommercialSales</role>
+        <role>PPR_Bryansk</role>
+        <role>PPR_Marketing</role>
+        <role>PPR_SME</role>
+        <roleAndSubordinates>PPR_Call_Center_Team_Leader</roleAndSubordinates>
+    </sharedTo>
+</ListView>

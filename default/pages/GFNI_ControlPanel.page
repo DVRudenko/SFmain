@@ -1,0 +1,195 @@
+<!--
+ - Created by Nikita.Mikhailov on 21.03.2019.
+ -->
+
+<apex:page id="GFNI_ControlPanel" controller="GFNI_ControlPanelCtrl" action="{!init}" docType="html-5.0">
+    <apex:form html-autocomplete="off">
+        <apex:outputPanel layout="block" id="topApplyButtonDiv" style="text-align: center;">
+            <apex:commandButton value="Apply" action="{!onApplyButtonClick}" reRender="IsForRobotControlTable"
+                                onClick="enableLoader()"
+                                onComplete="disableLoader()"/>
+        </apex:outputPanel>
+        <apex:pageBlock title="GFN Integration control panel" id="IsForRobotControl">
+            <apex:pageBlockTable value="{!countryList}" var="c" id="IsForRobotControlTable">
+                <apex:column headerValue="Country" value="{!c}" title="Country"/>
+                <apex:column headerValue="Is For robot?" value="{!countryIsForRobotMap[c]}" title="IsForRobotCheckbox"/>
+                <apex:column >
+                    <apex:inputCheckbox value="{!countryIsForRobotMap[c]}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:outputPanel layout="block">
+            <apex:outputLabel title="ApplicationStatusCheck" value="Application status check"
+                              style="font-size: 100%; font-weight:bold;"/>
+        </apex:outputPanel>
+        <apex:outputPanel layout="block" id="ApplicationStatusCheck">
+            <apex:outputPanel layout="inline" style="margin-left: auto; margin-top:2px; display: ruby;">
+                <apex:outputLabel title="CustomerId" value="Opportunity Id "/>
+                <apex:input id="idValue" type="text" value="{!idValue}" title="Opportunity Id"/>
+                <apex:commandButton value="Check" action="{!onCheckButtonClick}"
+                                    reRender="responseBody, rerenderMe"
+                                    onClick="enableDotsLoader();"
+                                    onComplete="disableDotsLoader();">
+                </apex:commandButton>
+                <div id="dotsLoader" class="saving" style="opacity: 0; font-size: 300%;">
+                    <span>.</span><span>.</span><span>.</span>
+                </div>
+            </apex:outputPanel>
+            <apex:outputPanel layout="block">
+                <pre id="myPre" style="font-size: 200%"></pre>
+            </apex:outputPanel>
+        </apex:outputPanel>
+        <apex:outputPanel id="rerenderMe">
+            <script>
+
+                function enableLoader() {
+                    var page = document.querySelector('[id$=IsForRobotControl]');
+                    page.style.opacity = "0.4";
+                    page.style.pointerEvents = "none";
+
+                    var loader = document.getElementById("loader");
+                    loader.style.opacity = "1.0";
+                }
+
+                function disableLoader() {
+                    var page = document.querySelector('[id$=IsForRobotControl]');
+                    page.style.opacity = "1.0";
+                    page.style.pointerEvents = "all";
+
+                    var loader = document.getElementById("loader");
+                    loader.style.opacity = "0.0";
+
+                    window.scrollTo(0, 0);
+                }
+
+                function enableDotsLoader() {
+                    var dotsLoader = document.getElementById("dotsLoader");
+                    dotsLoader.style.opacity = "1.0";
+
+                    var outPutTextField = document.getElementById("myPre");
+                    outPutTextField.textContent = '';
+                }
+
+                function disableDotsLoader() {
+                    var dotsLoader = document.getElementById("dotsLoader");
+                    dotsLoader.style.opacity = "0.0";
+
+                    var outPutTextField = document.getElementById("myPre");
+                    var jsonStr = '{!response}';
+
+                    console.log('{!response}');
+
+                    var jsonObj = JSON.parse(jsonStr);
+                    var jsonPretty = JSON.stringify(jsonObj, null, '\t');
+
+                    outPutTextField.textContent = jsonPretty;
+                }
+            </script>
+        </apex:outputPanel>
+    </apex:form>
+    <div id="loader" class="loader-main">
+        <div class="loader-quarter loader-quarter1"></div>
+        <div class="loader-quarter loader-quarter2"></div>
+        <div class="loader-quarter loader-quarter3"></div>
+        <div class="loader-quarter loader-quarter4"></div>
+        <div class="loader-quarter loader-quarter5"></div>
+    </div>
+    <style>
+        @keyframes blink {
+            0% {
+                opacity: .2;
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                opacity: .2;
+            }
+        }
+
+        .saving span {
+            animation-name: blink;
+            animation-duration: 1.4s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: both;
+        }
+
+        .saving span:nth-child(2) {
+            animation-delay: .2s;
+        }
+
+        .saving span:nth-child(3) {
+            animation-delay: .4s;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            80% {
+                transform: rotate(320deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loader-main {
+            width: 55px;
+            height: 55px;
+            opacity: 0.0;
+            -webkit-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+            position: fixed;
+            margin: auto;
+            transform-origin: left bottom;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        .loader-quarter {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .loader-quarter1 {
+            background-color: red;
+            border-radius: 0 100% 0 0;
+        }
+
+        .loader-quarter2 {
+            background-color: white;
+            border-radius: 0 100% 0 0;
+            top: 20%;
+            width: 80%;
+            height: 80%;
+        }
+
+        .loader-quarter3 {
+            background-color: red;
+            border-radius: 0 100% 0 0;
+            top: 40%;
+            width: 60%;
+            height: 60%;
+        }
+
+        .loader-quarter4 {
+            background-color: white;
+            border-radius: 0 100% 0 0;
+            top: 60%;
+            width: 40%;
+            height: 40%;
+        }
+
+        .loader-quarter5 {
+            background-color: red;
+            border-radius: 0 100% 0 0;
+            top: 80%;
+            width: 20%;
+            height: 20%;
+        }
+    </style>
+</apex:page>

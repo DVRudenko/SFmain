@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deactivated_Date__c</fullName>
+    <description>Automatically populated via User Process Builder Flow.</description>
+    <externalId>false</externalId>
+    <label>Deactivated Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Date</type>
+</CustomField>

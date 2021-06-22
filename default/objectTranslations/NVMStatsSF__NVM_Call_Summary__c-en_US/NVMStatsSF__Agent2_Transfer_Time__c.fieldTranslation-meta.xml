@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total transfer-in durations (talk events immediately following each transfer) --></help>
+    <label><!-- Agent2 Transfer Time --></label>
+    <name>NVMStatsSF__Agent2_Transfer_Time__c</name>
+</CustomFieldTranslation>

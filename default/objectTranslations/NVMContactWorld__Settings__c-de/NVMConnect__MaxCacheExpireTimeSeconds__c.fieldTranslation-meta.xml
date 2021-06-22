@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Max cache expire time for dynamic dial lists used for synchronous refresh as a fallback for refreshing by queueable job (default is 3600s if field is empty) --></help>
+    <label><!-- Max cache expire time (s) --></label>
+    <name>NVMConnect__MaxCacheExpireTimeSeconds__c</name>
+</CustomFieldTranslation>

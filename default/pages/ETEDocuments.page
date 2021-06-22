@@ -1,0 +1,66 @@
+<apex:page 
+    renderAs="pdf"
+    controller="ETEDocumentsCtrl"
+    showHeader="false"
+    sidebar="false"
+    applyBodyTag="false"
+    applyHtmlTag="false"
+    action="{!init}"
+>
+    <html>
+        <head>
+            <meta charset="utf-8"/>
+
+            <style>
+                @page {
+                    margin: {!pageMargin};
+                    size: A4;
+    
+                    @top-left {
+                        content: element(header);
+                    }
+                    @bottom-center {
+                        content: {!footer};
+                        font-size: 12px;
+                    }
+                }
+
+                body { 
+                    font-family: 'Arial Unicode MS'; 
+                    font-size: 11px;
+                }
+
+                div.header {
+                    position: running(header);
+                    padding: 20px 10px 0;
+                }
+
+                .header_product-logo {
+                    position: absolute; 
+                    right: 0;
+                }
+
+                .doc-header {
+                    text-align: center;
+                    font-size: 12px;
+                }
+
+                {!style}
+            </style>
+        </head>
+
+        
+
+        <body>
+            <apex:outputPanel rendered="{!showHeader}">
+                <div class="header">
+                    <img src="/resource/ete_images/fleetcor_logo.jpg" height="15"/>
+                    <span class="header_product-logo" rendered="{!productLogo != null}">
+                        <apex:outputText escape="false" value="{!productLogo}"></apex:outputText>
+                    </span>
+                </div>
+            </apex:outputPanel>
+            <apex:outputText value="{!content}" escape="false"></apex:outputText>
+        </body>
+    </html>
+</apex:page>

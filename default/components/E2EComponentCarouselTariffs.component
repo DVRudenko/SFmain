@@ -1,0 +1,180 @@
+<!--
+ - Created by Andrei.Katunin on 14.08.2018.
+ -->
+
+<apex:component id="E2EComponentCarouselTariffs">
+    <apex:stylesheet value="{!URLFOR($Resource.e2e_ppr_tariffs_css, 'e2e_ppr_tariffs_css.css')}"/>
+
+    <apex:attribute name="tariffs"
+                    type="LongFormTariff[]"
+                    description="list with tariffs"
+                    required="true"/>
+
+    <apex:attribute name="firstTariff"
+                    type="String"
+                    description="name of the first tariff"
+                    required="true"/>
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="name of field in parent page" />
+
+    <apex:attribute name="titleClass"
+                    type="String"
+                    description="class for title of condition"/>
+
+    <apex:attribute name="productID"
+                    type="String"
+                    description="parent map" />
+
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map 1" />
+
+    <div id="list-tariff" class="list-tariff" test="1">
+        <div class="list-tariff__list">
+            <apex:outputPanel rendered="{! If(firstTariff==null ,false,true) }">
+            <div class="list-tariff__item">
+                <div class="tariff tariff--best">
+                    <div class="tariff__header">
+                        <div class="tariff__row">
+                            <div class="tariff__col tariff__col--xl-6 d-block">
+                                <div class="tariff__picture"><img src="/resource/e2eRu_images_Tarif/{!pageMap[firstTariff].tariffName}.png" alt="Тариф {!pageMap[firstTariff].tariffLabel}"/></div>
+                            </div>
+                            <div class="tariff__col tariff__col--xl-6">
+                                <div class="tariff__main-content tariff__main-content--xs-center">
+                                    <div class="tariff__main-wrap">
+                                        <div class="field-radio">
+<!--                                            <div class="field-radio__input-wrap  field-radio__input-wrap--none">-->
+                                                <label class="field-radio__name">
+                                                    <input class="field-radio__input" type="radio" name="tariff" id="{!pageMap[firstTariff].tariffName}" value="{!pageMap[firstTariff].tariffLabel}"/><span class="field-radio__name-text">Выбрать</span>
+                                                </label>
+<!--                                            </div>-->
+                                        </div>
+                                        <h3 class="tariff__main-tariff">Тариф</h3>
+                                        <h2 class="tariff__title">{!pageMap[firstTariff].tariffLabel}</h2>
+                                    </div>
+<!--                                    <div class="tariff__main-wrap tariff__main-wrap__button">-->
+                                        <button class="btn tariff__btn js-btn-collapse" type="button"><span>Условия тарифа</span></button>
+<!--                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tariff__collapse">
+                        <div class="tariff__content tariff__content--center">
+                            <h3 class="tariff__content-title">Условия тарифа</h3>
+                            <apex:repeat var="property" value="{! pageMap[firstTariff].properties }">
+                                <div class="tariff__wrap-service"><strong>{!pageMap[firstTariff].properties[property].propertyValue}</strong>
+                                    <ul class="tariff__list-sentence">
+                                        <apex:repeat var="item" value="{! pageMap[firstTariff].properties[property].propertyItems }">
+                                            <li><apex:outputText escape="false" value="{!IF(item.Value__c == null, '', item.Value__c)}"/></li>
+                                        </apex:repeat>
+                                    </ul>
+                                </div>
+                            </apex:repeat>
+                        </div>
+                    </div>
+                </div>
+                <div class="error--text">Выберите один из тарифов</div>
+            </div>
+            </apex:outputPanel>
+            <div class="list-tariff__collapse list-tariff__collapse--active" style="display: none">
+            <apex:repeat var="tariff" value="{! tariffs }">
+                <apex:outputPanel rendered="{! If(tariff.tariffName==firstTariff ,false,true) }">
+                <div class="list-tariff__item">
+                    <div class="tariff">
+                        <div class="tariff__header">
+                            <div class="tariff__row">
+                                <div class="tariff__col tariff__col--tariff__col tariff__col--xl-6xl-6 d-none">
+                                    <div class="tariff__picture"><img src="/resource/e2eRu_images_Tarif/{!tariff.tariffName}.png" alt="Тариф {!tariff.tariffLabel}"/></div>
+                                </div>
+                                <div class="tariff__col tariff__col--xl-6">
+                                    <div class="tariff__main-content tariff__main-content--xs-center">
+                                        <div class="tariff__main-wrap">
+                                            <div class="field-radio">
+                                                <div class="field-radio__input-wrap  field-radio__input-wrap--none">
+                                                    <label class="field-radio__name">
+                                                        <input class="field-radio__input" type="radio" name="tariff" id="{!tariff.tariffName}" value="{!tariff.tariffLabel}" /><span class="field-radio__name-text">Выбрать</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <h3 class="tariff__main-tariff">Тариф</h3>
+                                            <h2 class="tariff__title">{!tariff.tariffLabel}</h2>
+                                        </div>
+                                        <div class="tariff__main-wrap tariff__main-wrap__button">
+                                            <button class="btn tariff__btn js-btn-collapse" type="button"><span>Условия тарифа</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tariff__collapse">
+                            <div class="tariff__content tariff__content--center">
+                                <h3 class="tariff__content-title">Условия тарифа</h3>
+                                <apex:repeat var="property" value="{! tariff.properties }">
+                                    <div class="tariff__wrap-service"><strong>{!tariff.properties[property].propertyValue}</strong>
+                                        <ul class="tariff__list-sentence">
+                                            <apex:repeat var="item" value="{! tariff.properties[property].propertyItems }">
+                                                <li><apex:outputText escape="false" value="{!IF(item.Value__c == null, '', item.Value__c)}"/></li>
+                                            </apex:repeat>
+                                        </ul>
+                                    </div>
+                                </apex:repeat>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="error--text">Выберите один из тарифов</div>
+                </div>
+                </apex:outputPanel>
+            </apex:repeat>
+            </div>
+            <div class="list-tariff__btn-wrap" style= "display: {!If(tariffs.size>1 ,'','none') }">
+                <b class="show_tariff_button js-collapse-list active"><span>Показать другие тарифы</span></b>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(".js-btn-collapse").on("click", function() {
+            console.log('js-btn-collapse start');
+            $(this).toggleClass("active");
+            $(this).parents(".tariff__row").find(".tariff__col").eq(0).toggleClass("d-none");
+            $(this).parents(".tariff__main-content").find(".field-radio__input-wrap").toggleClass("field-radio__input-wrap--none");
+
+            if($(this).hasClass("active")) {
+            $(this).find("span").text("Свернуть");
+            } else {
+            $(this).find("span").text("Условия тарифа");
+            }
+
+            $(this).parents(".tariff").find(".tariff__collapse").slideToggle();
+        })
+
+        $(".js-collapse-list").on("click", function() {
+            console.log(".js-collapse-list onClick");
+            $(this).toggleClass("active");
+
+            if($(this).hasClass("active")) {
+            $(this).find("span").text("Показать другие тарифы");
+            } else {
+            $(this).find("span").text("Свернуть");
+            }
+
+            $(this).parents(".list-tariff__list").find(".list-tariff__collapse").slideToggle();
+        })
+
+        $j('input[name=tariff][class=field-radio__input]').on('change' , function(){
+        
+            var id = $j(this).attr('id');
+            var value = $j(this).attr('value');
+            console.log('selected tariff');
+            console.log('id', id);
+            console.log('val', id);
+            $('.nav-pills a[href=#'+id+']').tab('show');
+            setActiveTariffBorder(id);
+            
+            putTariff(value, id);
+        });
+    </script>
+</apex:component>

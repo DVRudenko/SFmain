@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Standortangaben__c</fullName>
+    <externalId>false</externalId>
+    <label>Standortangaben</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Stadt</fullName>
+                <default>false</default>
+                <label>Stadt</label>
+            </value>
+            <value>
+                <fullName>Autobahn</fullName>
+                <default>false</default>
+                <label>Autobahn</label>
+            </value>
+            <value>
+                <fullName>ländliche Gegend</fullName>
+                <default>false</default>
+                <label>ländliche Gegend</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

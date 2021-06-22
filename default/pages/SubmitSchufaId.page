@@ -1,0 +1,104 @@
+<apex:page controller="SubmitSchufaIdCtrl" standardStylesheets="false" sidebar="false" showHeader="false">
+    <link rel="preconnect" href="https://fonts.gstatic.com"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"></link>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #555;
+        }
+
+        body {
+            background-color: #fafafa;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+
+        .logo {
+            display: inline-block;
+            max-width: 200px;
+        }
+
+        .form {
+            margin-top: 2rem;
+            padding: 1.5rem 2rem;
+            background-color: #fff;
+            box-shadow: 2px 4px 4px #eee;
+        }
+
+        .form-label {
+            margin-right: 0.5rem;
+        }
+
+        .form-submit {
+            padding: 0.5rem 1.25rem;
+            background: #EE3A43;
+            font-size: 12px;
+            color: #FFFFFF;
+            font-weight: 700;
+            text-transform: uppercase;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .form-submit:hover {
+            opacity: 0.9;
+        }
+
+        .form-button-wrapper {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .form-input {
+            border: 2px solid #9A9A9A;
+            padding: 6px 12px;
+            outline: none;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            font-size: 16px;
+        }
+
+        .message {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .message:empty {
+            display: none;
+        }
+
+        .message_error {
+            color: #EE3A43;
+        }
+
+        .message_confirm {
+            color: #259e23;
+        }
+
+    </style>
+    <div class="container">
+        <apex:image styleClass="logo" url="{!URLFOR($Resource.e2e_images, 'm-logo.png')}"/>
+        <apex:form styleClass="form" >
+            <div class="message message_error">{! errorMessage }</div>
+            <div class="message message_confirm">{! confirmMessage }</div>
+            <div align="center">
+                <apex:inputText value="{! orderReferenceNumber }" styleClass="form-input">
+                    <apex:outputLabel styleClass="form-label">Bitte, Schufa-ID einfügen:</apex:outputLabel>
+                </apex:inputText>
+            </div>
+            <div class="form-button-wrapper">
+                <apex:commandButton action="{! doUpdate }" value="Einreichen" styleClass="form-submit"></apex:commandButton>
+            </div>
+        </apex:form>
+    </div>
+</apex:page>

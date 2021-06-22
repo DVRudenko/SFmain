@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyTeam_PPR</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Lead_Owner_Role__c</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>Last_Owner_Change_Date_RUS__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Russian_Sales</value>
+    </filters>
+    <label>Все Возможности</label>
+    <language>ru</language>
+    <sharedTo>
+        <group>AllRussianRoles</group>
+    </sharedTo>
+</ListView>

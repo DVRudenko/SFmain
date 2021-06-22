@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Salesteam_Outbound_profile_Sales</fullName>
+    <active>true</active>
+    <description>As an Outbound Sales Rep with Profile "Sales" I need to be abled to edit Leads with Leadsource JITB and leave the Fields "Partner-Name" and "Partner-OBN" blank IF Number of Days is greater than 100.</description>
+    <errorConditionFormula>CONTAINS($UserRole.Name, "Outbound") &amp;&amp;
+$Profile.Name = "Sales" &amp;&amp;
+(ISCHANGED(Partner__c) || ISCHANGED(Partner_OBN__c)) &amp;&amp;
+Number_of_days__c &lt; 100</errorConditionFormula>
+    <errorMessage>You can change "Partner-Name" or "Partner-OBN" if "Number of Days" is less than 100.</errorMessage>
+</ValidationRule>

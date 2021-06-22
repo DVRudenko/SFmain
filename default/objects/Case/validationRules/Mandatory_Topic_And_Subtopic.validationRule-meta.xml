@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mandatory_Topic_And_Subtopic</fullName>
+    <active>true</active>
+    <description>STCP1-232/STCP1-400 - Mandatory Topic and Subtopic</description>
+    <errorConditionFormula>AND( 
+ISCHANGED(Status),
+ISPICKVAL(Status, 'Resolved'),
+OR(RecordType.DeveloperName = 'Support',
+RecordType.DeveloperName = 'Support_CCS'),
+$Profile.Name != 'System Administrator', 
+$Profile.Name != "Systemadministrator", 
+$Profile.Name != 'API Only',
+$User.Alias != 'autoproc',
+(ISBLANK(TEXT(Topic__c)) || ISBLANK(TEXT(Sub_topic__c)))
+)</errorConditionFormula>
+    <errorDisplayField>Sub_topic__c</errorDisplayField>
+    <errorMessage>You need to choose a topic and a subtopic for the case.</errorMessage>
+</ValidationRule>

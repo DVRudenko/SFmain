@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OMV_Fuel_Card</fullName>
+    <active>true</active>
+    <label>OMV Fuel Card</label>
+    <picklistValues>
+        <picklist>Category_of_products__c</picklist>
+        <values>
+            <fullName>0 Diesel%2C tunnel-%2C highway- and ferry toll fees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1 All fuels%2C tunnel-%2C highway- and ferry toll fees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 Category 1 plus vehicle-related goods and services %28oils%2C car wash%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GFNI_Status__c</picklist>
+        <values>
+            <fullName>Failed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Success</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warning</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Card__c</picklist>
+        <values>
+            <fullName>Multi Network Card -- International</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multi Network Card -- National</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Vehicle__c</picklist>
+        <values>
+            <fullName>LKW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PKW</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

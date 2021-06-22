@@ -1,0 +1,96 @@
+<apex:page controller="LeadProcessingTimeReportController" action="{! init }">
+    <style>
+        .homeTab .tertiaryPalette, .individualPalette .homeBlock .tertiaryPalette, 
+        .layoutEdit .individualPalette .homeBlock .tertiaryPalette {
+            background:  black;
+        }
+        .timeOfProcTable {
+            border-collapse: collapse;
+        }
+
+        .timeOfProcTable td, 
+        .timeOfProcTable th {
+            border: 1px solid #ccc;
+            padding: 5px;
+        }
+
+        .timeOfProcTable th {
+            background: #ededed;
+            color: grey;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .timeOfProcTable td {
+            color: #3f3f3f;
+            vertical-align: middle;
+        } 
+    </style>
+    <apex:pageBlock id="block1">
+        <apex:pageBlockSection title="Leads to process ({! leadsToProcessListWrapper.size })" collapsible="false"/>
+        <apex:pageBlockTable value="{! leadsToProcessListWrapper }" var="lead">
+            <apex:column headerValue="Name">
+                <a href="/{! lead.lead.Id }" target="_blank">{! lead.lead.Name }</a>
+            </apex:column>
+            <apex:column value="{! lead.lead.CreatedDate }"/>
+            <apex:column value="{! lead.lead.First_Call__c }"/>
+            <apex:column headerValue="Minutes unprocessed">
+                {! lead.diff }
+            </apex:column>
+            <apex:column value="{! lead.lead.OwnerId }"/>
+            <apex:column value="{! lead.lead.Channel__c }"/>
+            <apex:column value="{! lead.lead.Sec_Channel__c }"/>
+            <apex:column value="{! lead.lead.LeadSource }"/>
+            <apex:column value="{! lead.lead.Status }"/>
+            <apex:column value="{! lead.lead.IsConverted }"/>
+        </apex:pageBlockTable>
+        <apex:pageBlockSection title="Dashboard ({! leadsListWrapper.size })" collapsible="false"/>
+        <p>1) {! channelFilter }</p>
+        <p>2) First Call not equals to NULL</p>
+        <p>3) First Call in range</p>
+        <p>4) User owner is in Country queue</p>
+        <apex:pageBlockTable value="{! leadsListWrapper }" var="lead">
+            <apex:column headerValue="Name">
+                <a href="/{! lead.lead.Id }" target="_blank">{! lead.lead.Name }</a>
+            </apex:column>
+            <apex:column value="{! lead.lead.CreatedDate }"/>
+            <apex:column value="{! lead.lead.First_Call__c }"/>
+            <apex:column headerValue="Diff in munutes">
+                {! lead.diff }
+            </apex:column>
+            <apex:column value="{! lead.lead.OwnerId }"/>
+            <apex:column value="{! lead.lead.Channel__c }"/>
+            <apex:column value="{! lead.lead.Sec_Channel__c }"/>
+            <apex:column value="{! lead.lead.LeadSource }"/>
+            <apex:column value="{! lead.lead.Status }"/>
+            <apex:column value="{! lead.lead.IsConverted }"/>
+        </apex:pageBlockTable>  
+        <table width="15%" cellspacing="0" cellpadding="0" border="0" class="timeOfProcTable">
+            <tr>
+                <td>
+                    <apex:outputPanel >
+                        <strong>Total diff in minutes:</strong> {! timeofProcess }   
+                    </apex:outputPanel>
+                </td>
+            </tr>
+        </table>
+        <apex:pageBlockSection title="All Excluded Leads ({! numberExcludedLeads }) (max 1000 records)" collapsible="false"/>
+        <apex:pageBlockTable value="{! excludedLeadsMap }" var="key">
+            <apex:column headerValue="Name">
+                <a href="/{! excludedLeadsMap[key].Id }" target="_blank">{! excludedLeadsMap[key].Name }</a>
+            </apex:column>
+            <apex:column value="{! excludedLeadsMap[key].CreatedDate }"/>
+            <apex:column value="{! excludedLeadsMap[key].First_Call__c }"/>
+            <apex:column value="{! excludedLeadsMap[key].OwnerId }"/>
+            <apex:column value="{! excludedLeadsMap[key].Channel__c }"/>
+            <apex:column value="{! excludedLeadsMap[key].Sec_Channel__c }"/>
+            <apex:column value="{! excludedLeadsMap[key].LeadSource }"/>
+            <apex:column value="{! excludedLeadsMap[key].Status }"/>
+            <apex:column value="{! excludedLeadsMap[key].IsConverted }"/>
+            <apex:column value="{! excludedLeadsMap[key].Disable_for_Processing_Time__c }"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <script> 
+        twistSection(document.getElementById('{!$Component.block1.section1}').getElementsByTagName('img')[0]);
+    </script>
+</apex:page>

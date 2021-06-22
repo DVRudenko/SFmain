@@ -1,0 +1,283 @@
+<!--
+ - Created by Nikita.Mikhailov on 23.05.2018.
+ -->
+
+<apex:page id="DashboardIntensityOfSalesWorkRepPPRCtrl" controller="DashboardIntensityOfSalesWorkRepPPRCtrl" action="{! init }" readOnly="true">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+    <apex:includeScript value="{!$Resource.OverflowScrolling }"/>
+    <apex:includeScript value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/jquery-ui.min.js')  }"/>
+    <apex:includeScript value="{! URLFOR($Resource.Tablesorter,'jquery.tablesorter.min.js') }"/>
+    <apex:includeScript value="{!$Resource.StickyTableHeaders}"/>
+    <apex:form >
+        <apex:pageBlock >
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <h1 style="margin-bottom: 10px; font-size: 15px; display: block;">Детальный отчет интенсивности продаж за
+                    <apex:selectList value="{! selectedPeriod }" size="1" multiselect="false" style="margin-left: 5px;">
+                        <apex:selectOptions value="{! periodsList }"/>
+                        <apex:actionSupport action="{! init }" event="onchange"/>
+                    </apex:selectList>
+                    <apex:selectList value="{! selectedYear }" size="1" multiselect="false" style="margin: 0 5px;">
+                        <apex:selectOptions value="{! yearsList }"/>
+                        <apex:actionSupport action="{! changeYear }" event="onchange"/>
+                    </apex:selectList>({! startDateOfMonthString } - {! endDateOfMonthString })</h1>
+            </table>
+            <apex:pageMessages />
+        </apex:pageBlock>
+        <p>1) Все задачи с завершенными журналами вызовов в выбранный период</p>
+        <p>2) Все интересы и возможности с открытыми статусами ИЛИ изменены на закрытый статус в течение выбранного периода</p>
+        <p><strong><span style="color: red;">Интенсивность = </span> 1 / 2</strong></p>
+
+        <table class="infoTable" width="100%" border="1">
+            <tr>
+                <th style="width: 20%;">Имя</th>
+                <th style="width: 20%;">Задачи</th>
+                <th style="width: 20%;">{!$ObjectType.Opportunity.labelPlural}</th>
+                <th style="width: 20%;">{!$ObjectType.Lead.labelPlural}</th>
+                <th style="width: 20%;">Интенсивность</th>
+            </tr>
+            <tr>
+                <td>
+                    <apex:outputLink value="/{!currentUser.Id}">{!currentUser.Name}</apex:outputLink>
+                </td>
+                <td>{! numberTasks }</td>
+                <td>{! numberOppties } (открытые: {!numberOpenOpptys}, закрытые: {!numberClosedOpptys})</td>
+                <td>{! numberLeads } (открытые: {!numberOpenLeads}, закрытые: {!numberClosedLeads})</td>
+                <td>{! ROUND(IF(OR(numberOppties != 0, numberLeads != 0), numberTasks / (numberOppties + numberLeads), 0), 2)}</td>
+            </tr>
+        </table>
+        <div id="loader" class="loader"/>
+        <div id="pageBlock">
+            <apex:pageBlock title="{!$ObjectType.Opportunity.labelPlural} ({! numberOppties }) + {!$ObjectType.Lead.labelPlural} ({! numberLeads })">
+                <apex:outputPanel layout="block" style="display: inline-flex; width: 100%;">
+                    <apex:outputPanel layout="block" style="display: inline-flex">
+                        <apex:selectRadio value="{!radioValue}" layout="lineDirection">
+                            <apex:selectOptions value="{!radioValues}"/>
+                            <apex:actionSupport event="onchange" reRender="paginationButtonsTop, paginationButtonsBottom, table" onSubmit="enableLoader()" onComplete="disableLoader()"/>
+                        </apex:selectRadio>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="block"  id="paginationButtonsTop" style="margin-left: auto;">
+                        <apex:commandButton value="Начало" action="{!beginningPage}" disabled="{!disabledPrevious}" reRender="paginationButtonsTop, paginationButtonsBottom, table" onClick="enableLoader()" onComplete="disableLoader()"/>
+                        <apex:commandButton value="Предыдущая" action="{!previousPage}" disabled="{!disabledPrevious}" reRender="paginationButtonsTop, paginationButtonsBottom, table" onClick="enableLoader()" onComplete="disableLoader()"/>
+                        <apex:commandButton value="Следующая" action="{!nextPage}" disabled="{!disabledNext}" reRender="paginationButtonsTop, paginationButtonsBottom, table" onClick="enableLoader()" onComplete="disableLoader()"/>
+                        <apex:commandButton value="Конец" action="{!endPage}" disabled="{!disabledNext}" reRender="paginationButtonsTop, paginationButtonsBottom, table" onClick="enableLoader()" onComplete="disableLoader()"/>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+                <apex:outputPanel id="table">
+                    <apex:pageBlockTable id="opptyTable" value="{!opportunities}" var="opp" rendered="{!IF(radioValue == 'Opportunity', true, false)}">
+                        <apex:column headerValue="{!$ObjectType.Opportunity.Fields.Name.label}">
+                            <apex:outputLink value="/{!opp.Id}" target="_blank">{!opp.Name}</apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.Opportunity.Fields.StageName.label}">
+                                {!opp.StageName}
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.Opportunity.Fields.CreatedDate.label}">
+                            <apex:outputText value="{0, date, dd-MM-yyyy}">
+                                <apex:param value="{!opp.CreatedDate}"/>
+                            </apex:outputText>
+                        </apex:column>
+                        <apex:column headerValue="Дней с момента создания">
+                                {!mapOfIdsAndDaysCreation[opp.Id]}
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.Opportunity.Fields.Last_Owner_Change_Date_RUS__c.label}">
+                                <apex:outputText value="{0, date, dd-MM-yyyy}">
+                                    <apex:param value="{!opp.Last_Owner_Change_Date_RUS__c}"/>
+                                </apex:outputText>
+                        </apex:column>
+                        <apex:column headerValue="Дней с момента перевода">
+                                {!mapOfIdsAndDaysTransfer[opp.Id]}
+                        </apex:column>
+                        <apex:column headerValue="Дней с момента закрытия последней задачи">
+                                {!mapOfIdsAndDaysActivity[opp.Id]}
+                        </apex:column>
+                        <apex:column headerValue="Крайний срок открытой задачи">
+                            <apex:outputText value="{!IF(opp.Tasks.size == 0, '{0}', '{0, date, dd-MM-yyyy}')}">
+                                <apex:param value="{!IF(opp.Tasks.size == 0, 'Нет открытых задач', opp.Tasks[0].ActivityDate)}"/>
+                            </apex:outputText>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:pageBlockTable id="leadTable" value="{!leads}" var="lead" rendered="{!IF(radioValue == 'Lead', true, false)}">
+                        <apex:column headerValue="{!$ObjectType.Lead.Fields.Name.label}">
+                            <apex:outputLink value="/{!lead.Id}" target="_blank">{!lead.Name}</apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.Lead.Fields.Status.label}">
+                                {!lead.Status}
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.Lead.Fields.CreatedDate.label}">
+                            <apex:outputText value="{0, date, dd-MM-yyyy}">
+                                <apex:param value="{!lead.CreatedDate}"/>
+                            </apex:outputText>
+                        </apex:column>
+                        <apex:column headerValue="Дней с момента создания">
+                                {!mapOfIdsAndDaysCreation[lead.Id]}
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.Lead.Fields.LastTransferDate.label}">
+                            <apex:outputText value="{0, date, dd-MM-yyyy}">
+                                <apex:param value="{!lead.LastTransferDate}"/>
+                            </apex:outputText>
+                        </apex:column>
+                        <apex:column headerValue="Дней с момента перевода">
+                                {!mapOfIdsAndDaysTransfer[lead.Id]}
+                        </apex:column>
+                        <apex:column headerValue="Дней с момента момента закрытия последней задачи">
+                                {!mapOfIdsAndDaysActivity[lead.Id]}
+                        </apex:column>
+                        <apex:column headerValue="Крайний срок открытой задачи">
+                            <apex:outputText value="{!IF(lead.Tasks.size == 0, '{0}', '{0, date, dd-MM-yyyy}')}">
+                                <apex:param value="{!IF(lead.Tasks.size == 0, 'Нет открытых задач', lead.Tasks[0].ActivityDate)}"/>
+                            </apex:outputText>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:outputPanel>
+                <apex:outputPanel layout="block"  id="paginationButtonsBottom" style="display: inline-block; width: 100%; text-align:right">
+                    <apex:commandButton value="Начало" action="{!beginningPage}" disabled="{!disabledPrevious}" reRender="paginationButtonsTop, paginationButtonsBottom, table" onClick="enableLoader()" onComplete="disableLoader()"/>
+                    <apex:commandButton value="Предыдущая" action="{!previousPage}" disabled="{!disabledPrevious}" reRender="paginationButtonsTop, paginationButtonsBottom, table" onClick="enableLoader()" onComplete="disableLoader()"/>
+                    <apex:commandButton value="Следующая" action="{!nextPage}" disabled="{!disabledNext}" reRender="paginationButtonsTop, paginationButtonsBottom, table" onClick="enableLoader()" onComplete="disableLoader()"/>
+                    <apex:commandButton value="Конец" action="{!endPage}" disabled="{!disabledNext}" reRender="paginationButtonsTop, paginationButtonsBottom, table" onClick="enableLoader()" onComplete="disableLoader()"/>
+                </apex:outputPanel>
+            </apex:pageBlock>
+        </div>
+    </apex:form>
+    <script>
+
+        j$ = jQuery.noConflict();
+
+        function enableLoader()
+        {
+            var page = document.getElementById("pageBlock");
+            page.style.opacity = "0.4";
+            page.style.pointerEvents = "none";
+
+            var loader = document.getElementById("loader");
+            loader.style.opacity = "1.0";
+        };
+
+        function disableLoader()
+        {
+            var page = document.getElementById("pageBlock");
+            page.style.opacity = "1.0";
+            page.style.pointerEvents = "all";
+
+            var loader = document.getElementById("loader");
+            loader.style.opacity = "0.0";
+
+            window.scrollTo(0, 0);
+
+            enableSorter();
+            enableStickyHeaders();
+        };
+
+        j$(document).ready(function () {
+
+            console.log('ready');
+
+            enableSorter();
+            enableStickyHeaders();
+        });
+
+        function enableSorter() {
+            j$.tablesorter.addParser({
+                // set a unique id
+                id: 'grades',
+                is: function (s) {
+                    // return false so this parser is not auto detected
+                    return false;
+                },
+                format: function (s, table, cell, cellIndex) {
+                    // format your data for normalization
+                    return s.toString().replace(/true/, /a/).replace(/false/, /b/);
+                },
+                // set type, either numeric or text
+                type: 'text'
+            });
+
+            j$("table[id*='opptyTable']").tablesorter({
+                headers: {
+                    8: {
+                        sorter: 'grades'
+                    }
+                }
+            });
+
+            j$("table[id*='leadTable']").tablesorter({
+                headers: {
+                    8: {
+                        sorter: 'grades'
+                    }
+                }
+            });
+        };
+
+        function enableStickyHeaders() {
+            j$("table[id*='opptyTable']").stickyTableHeaders();
+            j$("table[id*='leadTable']").stickyTableHeaders();
+        }
+    </script>
+    <style>
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid blue;
+            border-right: 5px solid green;
+            border-bottom: 5px solid red;
+            width: 30px;
+            height: 30px;
+            opacity: 0.0;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+            position: fixed;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        body .pbBody .sorterStyle.list tr.headerRow th {
+            background-image: url({! URLFOR($Resource.Tablesorter,'blue/bg.gif') });
+            background-repeat: no-repeat;
+            background-position: center right;
+            cursor: pointer;
+            padding-right: 20px;
+        }
+
+        body .pbBody table.list tr.headerRow th.headerSortUp {
+            background: url({! URLFOR($Resource.Tablesorter,'blue/asc.gif') }) grey no-repeat center right;
+            color: white;
+            font-weight: bold;
+        }
+
+        body .pbBody table.list tr.headerRow th.headerSortDown {
+            background: url({! URLFOR($Resource.Tablesorter,'blue/desc.gif') }) grey no-repeat center right;
+            color: white;
+            font-weight: bold;
+        }
+
+        .legendbox {
+            display: inline-block;
+            height: 12px;
+            width: 12px;
+            margin-right: 5px;
+        }
+        .infoTable {
+            overflow:hidden;
+            border:1px solid #d3d3d3;
+            border-collapse: collapse;
+            width:100%;
+            margin:1% 0 0.5% 0;
+            -moz-border-radius:5px; /* FF1+ */
+            -webkit-border-radius:5px; /* Saf3-4 */
+            border-radius:5px;
+        }
+        .infoTable th {
+            background: -moz-linear-gradient(100% 20% 90deg, #f2f3f3, #ededed);
+            background: -webkit-gradient(linear, 0% 0%, 0% 20%, from(#ededed), to(#f2f3f3));
+        }
+    </style>
+</apex:page>

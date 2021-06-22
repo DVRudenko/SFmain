@@ -1,0 +1,21 @@
+<!--
+ - Created by Kirill.Abanin on 25.07.2018.
+ -->
+
+<apex:component id="E2EComponentHeader" controller="E2EComponentsCtrl">
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map" />
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="value of outputPanel" />
+
+    <apex:attribute name="headerClass"
+                    type="String"
+                    description="class for header" />
+
+    <div class="{! headerClass}">
+        {!pageMap[field].elementItemsMap['HEADER TEXT'].value}
+    </div>
+</apex:component>

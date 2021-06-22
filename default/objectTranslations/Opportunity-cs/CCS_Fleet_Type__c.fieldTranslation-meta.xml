@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Typ flotily</label>
+    <name>CCS_Fleet_Type__c</name>
+    <picklistValues>
+        <masterLabel>Cars and vans up to 3.5 t</masterLabel>
+        <translation><!-- Cars and vans up to 3.5 t --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other heavy machinery</masterLabel>
+        <translation><!-- Other heavy machinery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trucks over 12 t</masterLabel>
+        <translation><!-- Trucks over 12 t --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vans and trucks up to 12 t</masterLabel>
+        <translation><!-- Vans and trucks up to 12 t --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shell_SK_leads_In_Progress</fullName>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Quali_Status__c</columns>
+    <columns>Sec_Channel__c</columns>
+    <columns>Channel__c</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <columns>LEAD.LAST_ACTIVITY</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.Endkunde</value>
+    </filters>
+    <filters>
+        <field>LEAD.COUNTRY_CODE</field>
+        <operation>equals</operation>
+        <value>SK</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Open,Disqualified,Konvertierte Leads,Converted lead</value>
+    </filters>
+    <label>"Shell" - SK leads - In Progress</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>Altevida_Shell_Telesales</role>
+        <role>Altevida_Telesales_Team_Lead</role>
+        <role>CCS_Administrator</role>
+        <role>CCS_CZ_Telesales</role>
+        <role>CCS_Telesales_Team_Lead</role>
+        <role>Role_Up</role>
+    </sharedTo>
+</ListView>

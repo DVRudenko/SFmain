@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- &quot;Нет&quot; если не по Акции --></help>
+    <label>Промо по Акции</label>
+    <name>Promo_campaign__c</name>
+    <picklistValues>
+        <masterLabel>5Г01</masterLabel>
+        <translation><!-- 5Г01 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е05</masterLabel>
+        <translation><!-- 9Е05 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е06</masterLabel>
+        <translation><!-- 9Е06 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е07</masterLabel>
+        <translation><!-- 9Е07 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е08</masterLabel>
+        <translation><!-- 9Е08 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е09</masterLabel>
+        <translation><!-- 9Е09 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е10</masterLabel>
+        <translation><!-- 9Е10 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е11</masterLabel>
+        <translation><!-- 9Е11 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е12</masterLabel>
+        <translation><!-- 9Е12 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е13</masterLabel>
+        <translation><!-- 9Е13 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е14</masterLabel>
+        <translation><!-- 9Е14 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е15</masterLabel>
+        <translation><!-- 9Е15 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е16</masterLabel>
+        <translation><!-- 9Е16 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е17</masterLabel>
+        <translation><!-- 9Е17 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>9Е18</masterLabel>
+        <translation><!-- 9Е18 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PIU5</masterLabel>
+        <translation><!-- PIU5 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

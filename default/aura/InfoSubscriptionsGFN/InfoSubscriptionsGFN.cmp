@@ -1,0 +1,8 @@
+<aura:component controller="GFNI_DashboardCtrl" extends="c:BaseComponent">
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <c:CardWithTable iconName="standard:contact" name="Info Subscription (GFN)" 
+            tableHead="{!v.tableHead}" itemList="{!v.itemList}" link="{!v.landingPageLink}" errorMessage="{!v.errorMessage}"/>
+
+</aura:component>

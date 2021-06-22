@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eco_Fee__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Tick to set, to choose if the Customer want to take Eco Fee or not.</description>
+    <externalId>false</externalId>
+    <label>Eco Fee</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

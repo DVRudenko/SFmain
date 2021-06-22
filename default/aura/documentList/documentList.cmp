@@ -1,0 +1,106 @@
+<aura:component controller="GFNI_ResendInvoicePopupController">
+    <aura:attribute name="documentList" type="List"/>
+    <aura:attribute name="libraryList" type="List"/>
+    <aura:attribute name="ownedByMeDocs" type="List"/>
+
+    <aura:attribute name="selectedDocuments" type="List"/>
+
+    <aura:attribute name="ownedByMeDocsOpened" type="Boolean" default="true"/>
+    <aura:attribute name="librariesOpened" type="Boolean" default="false"/>
+    
+    <aura:attribute name="openedLibraryId" type="String"/>
+
+    <aura:registerEvent name="closeDocumentList" type="c:closeDocumentList"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container" style="width: 90%">
+            <header class="slds-modal__header">
+                <lightning:buttonIcon iconName="utility:close"
+                                        onclick="{! c.closeModal }"
+                                        alternativeText="close"
+                                        variant="bare-inverse"
+                                        class="slds-modal__close"/>
+                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Select Document</h2>
+            </header>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <div class="slds-vertical-tabs">
+
+                    <!-- NAV -->
+                    <ul class="slds-vertical-tabs__nav">
+                        <li class="{! 'slds-vertical-tabs__nav-item ' + (v.ownedByMeDocsOpened ? 'slds-is-active' : '') }">
+                            <a href="#" onclick="{!c.openMyDocs}" class="slds-nav-vertical__action" aria-current="true">Owned By Me</a>
+                        </li>
+                        <li class="{! 'slds-vertical-tabs__nav-item ' + (v.librariesOpened ? 'slds-is-active' : '')}">
+                            <a href="#" onclick="{!c.openLibraryList}" class="slds-nav-vertical__action">Library</a>
+                        </li>
+                    </ul>
+                    <!-- NAV END-->
+                    <!-- OWNED BY -->
+                    <div>
+                        <aura:if isTrue="{!v.ownedByMeDocsOpened}">
+                            <div class="slds-vertical-tabs__content">
+                                <aura:if isTrue="{! not(empty(v.ownedByMeDocs)) }">
+                                    <table>
+                                        <aura:iteration items="{! v.ownedByMeDocs }" var="doc">
+                                            <tr>
+                                                <td>
+                                                    <lightning:input aura:id="document-selection" value="{!doc.Id}" type="checkbox" name="{!doc.Title}"></lightning:input>
+                                                </td>
+                                                <td>
+                                                    {!doc.Title}
+                                                </td>
+                                            </tr>
+                                        </aura:iteration>
+                                    </table> 
+                                </aura:if>
+                            </div>
+                        </aura:if>
+                    </div>
+                    <!-- OWNED BY END-->
+                    <!-- LIBRARY LIST -->
+                    <div>
+                        <aura:if isTrue="{!v.librariesOpened}">
+                            <div class="slds-vertical-tabs__content" style="padding: 0px;">
+                                <aura:if isTrue="{! not(empty(v.libraryList)) }">
+                                    <div class="slds-vertical-tabs" style="border-radius:0px">
+                                        <ul class="slds-vertical-tabs__nav">
+                                            <aura:iteration items="{! v.libraryList }" var="library">
+                                                <li class="{! 'slds-vertical-tabs__nav-item ' + (v.openedLibraryId == library.Id ? 'slds-is-active' : '') }" style="padding: 0.5rem">
+                                                    <a onclick="{!c.openLibrary}" data-libid="{!library.Id}">{!library.Name}</a>
+                                                </li>
+                                            </aura:iteration>
+                                        </ul>
+
+                                        <div class="slds-vertical-tabs__content">
+                                            <table>
+                                                <aura:iteration items="{! v.documentList }" var="doc">
+                                                    <aura:if isTrue="{!v.openedLibraryId == doc.ContentWorkspaceId}">
+                                                        <tr>
+                                                            <td>
+                                                                <lightning:input aura:id="document-selection" type="checkbox" value="{!doc.ContentDocumentId}" name="{!doc.ContentDocument.Title}"></lightning:input>
+                                                            </td>
+                                                            <td>
+                                                                {!doc.ContentDocument.Title}
+                                                            </td>
+                                                        </tr>
+                                                    </aura:if>
+                                                </aura:iteration>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </aura:if>
+                            </div>
+                        </aura:if>
+                    </div>
+                </div>
+                <!-- LIBRARY -->
+                <footer class="slds-modal__footer">
+                    <lightning:button onclick="{!c.addDocumentToEmail}">Add</lightning:button>
+                </footer>
+            </div>
+        </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+</aura:component>

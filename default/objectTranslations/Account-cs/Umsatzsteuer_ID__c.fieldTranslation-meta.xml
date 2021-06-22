@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- DE: Umsatzsteuer-ID (DE123456789), NL: Btw-nummer (NL001435784B01), BE: Btw-nummer (NL) / TVA (FR) (BE0123456789), PL: VAT (PL5252584121), HU: Áfa (International VAT) (HU25487970), FR: TVA (FR 83 404833048) --></help>
+    <label>DIČ</label>
+    <name>Umsatzsteuer_ID__c</name>
+</CustomFieldTranslation>

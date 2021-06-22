@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Anruf - Entscheider</fullName>
+        <default>false</default>
+        <label>Anruf - Entscheider</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call</fullName>
+        <default>false</default>
+        <label>Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Outbound call - 1st try</fullName>
+        <default>false</default>
+        <label>CCS Outbound call - 1st try</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Outbound call - 2nd try</fullName>
+        <default>false</default>
+        <label>CCS Outbound call - 2nd try</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Outbound call - 3rd try</fullName>
+        <default>false</default>
+        <label>CCS Outbound call - 3rd try</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Retention Call - Cards</fullName>
+        <default>false</default>
+        <label>CCS Retention Call - Cards</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Retention Call - CarNet</fullName>
+        <default>false</default>
+        <label>CCS Retention Call - CarNet</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Final Call</fullName>
+        <default>false</default>
+        <label>Final Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Follow-up Phone Call</fullName>
+        <default>false</default>
+        <label>Follow-up Phone Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound</fullName>
+        <default>false</default>
+        <label>Inbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lost Account Call</fullName>
+        <default>false</default>
+        <label>Lost Account Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>quali. Termin vereinbart</fullName>
+        <default>false</default>
+        <label>quali. Termin vereinbart</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Outbound Call</fullName>
+        <default>false</default>
+        <label>Outbound Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Send Letter</fullName>
+        <default>false</default>
+        <label>Send Letter</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Send Quote</fullName>
+        <default>false</default>
+        <label>Send Quote</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting</fullName>
+        <default>false</default>
+        <label>Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound Call</fullName>
+        <default>false</default>
+        <label>Inbound Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>1st Call with Decision Maker</fullName>
+        <default>false</default>
+        <label>1st Call with Decision Maker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Send Fax</fullName>
+        <default>false</default>
+        <label>Send Fax</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Запрос документов для скоринга</fullName>
+        <default>false</default>
+        <label>Запрос документов для скоринга</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Отправка заявки в КФ</fullName>
+        <default>false</default>
+        <label>Отправка заявки в КФ</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Запрос реквизитов</fullName>
+        <default>false</default>
+        <label>Запрос реквизитов</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Отправка реквизитов в ZOHO</fullName>
+        <default>false</default>
+        <label>Отправка реквизитов в ZOHO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Назначение встречи</fullName>
+        <default>false</default>
+        <label>Назначение встречи</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Block Card</fullName>
+        <default>false</default>
+        <label>Block Card</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Retention</fullName>
+        <default>false</default>
+        <label>Retention</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Attrition</fullName>
+        <default>false</default>
+        <label>Attrition</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CCS Regular Care</fullName>
+        <default>false</default>
+        <label>CCS Regular Care</label>
+    </standardValue>
+</StandardValueSet>

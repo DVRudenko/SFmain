@@ -1,0 +1,243 @@
+/*** GENERAL ***/
+.b-form {
+    width: 70%;
+    margin: 0 10% 0 15%;
+}
+
+label {
+    font-weight: 600;
+    text-align: right;
+    vertical-align: middle;
+    display: inline-block;
+    width: 33%;
+    margin: 10px;
+}
+
+input[type="text"], textarea {
+   width: 31%;
+}
+
+textarea {
+    vertical-align: middle;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.b-step {
+    border: 2px solid #DEDEDE;
+    margin: 15px 0;
+    padding: 5px 10px;
+}
+
+.disabled-block {
+    pointer-events: none;
+    opacity: 0.4;
+    border: 2px solid #222;
+}
+
+.b-step-header {
+    text-align: center;
+    font-size: 20px;
+    color: #ffa500;
+    margin: 5px 30px;
+}
+
+.checkbox, .checkbox-address, .checkbox-executive {
+    margin-left: 36%;
+}
+
+.checkbox label, .checkbox-address label, .checkbox-executive label {
+    width: 45%;
+    min-width: 250px;
+    text-align: unset;
+    margin: 0px 10px 10px 10px;
+    vertical-align: text-top;
+}
+
+.product select {
+    width: 282px;
+}
+
+.homeTab .pageTitleIcon, .individualPalette .homeBlock .pageTitleIcon {
+    background-position: initial;
+    background-image: url('/img/icon/cash32.png');
+}
+
+.bPageBlock .pbTitle {
+    width: 50%;
+}
+
+body .btn {
+    color: #333;
+    margin: 10px;
+    padding: 6px 10px;
+    border: 1px solid #b5b5b5;
+    border-bottom-color: #7f7f7f;
+    background: #e8e8e9 url(/img/alohaSkin/btn_sprite.png) repeat-x right top;
+    font-weight: bold;
+    font-size: .9em;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.btn.process.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    color: #c0c0c0;
+    background-color: #ffffff;
+}
+
+.btn.save.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    color: #c0c0c0;
+    background-color: #ffffff;
+}
+
+.buttons {
+    margin: 5px 0 15px 0;
+}
+
+.bEditBlock .pbBottomButtons > table > tbody > tr > td,
+.bPageBlock .pbBottomButtons > table > tbody > tr > td{
+    height: 30px;
+    vertical-align: middle;
+}
+
+.data {
+    display: inline-block;
+    width: 45%;
+    vertical-align: text-top;
+}
+
+/*** CHECK MARK ***/
+.checkmark {
+    display: none;
+    float: right;
+    margin: 6px 4px;
+    width: 22px;
+    height: 22px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+.checkmark_circle {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-color: green;
+    border-radius: 11px;
+    left: 0;
+    top: 0;
+}
+
+.checkmark_stem {
+    position: absolute;
+    width: 3px;
+    height: 9px;
+    background-color: #fff;
+    left: 11px;
+    top: 6px;
+}
+
+.checkmark_kick {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: #fff;
+    left: 8px;
+    top: 12px;
+}
+
+/*** LOADER ***/
+.loader {
+    border: 10px solid #d9d9d9;
+    border-radius: 50%;
+    border-top: 10px solid #404040;
+    width: 60px;
+    height: 60px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*** DADATA ***/
+.bank-name-list .bank-name-item, .legal-address-list .legal-address-item, .document-address-list .document-address-item {
+    position: relative;
+    max-width: 340px;
+    min-width: 250px;
+    margin: 0 auto;
+    cursor: pointer;
+    padding: 10px 10px 10px 5px;
+}
+
+.bank-name-list, .legal-address-list, .document-address-list {
+    max-height: 300px;
+    max-width: 33%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.bank-name-list .bank-name-item strong, .legal-address-list .legal-address-item strong, .document-address-list .document-address-item strong {
+    line-height: 1;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.bank-name-list .bank-name-item span, .legal-address-list .legal-address-item span, .document-address-list .document-address-item span {
+    display: block;
+    color: #636363;
+}
+
+.bank-name-list .bank-name-item:hover, .legal-address-list .legal-address-item:hover, .document-address-list .document-address-item:hover {
+    background: #f0f0f0;
+}
+
+.mCSB_inside>.mCSB_container {
+    margin-right: 15px;
+}
+
+.mCustomScrollBox {
+    margin-left: 1.2em;
+}
+
+/*** COMPANY DETAILS ***/
+.check-message {
+    margin-bottom: 15px;
+}
+
+.check-message, .card-message, .promo-code-error, .validation-result {
+    max-width: 285px;
+    min-width: 190px;
+    margin-left: 35.5%;
+    color: red;
+}
+
+.verified-decision .data.refused, .scoring-decision .data.refused {
+    color: red;
+}
+
+.paid-overdraft {
+    display: none;
+}
+
+/*** ORDER & TARIFFS ***/
+.virtual-cards div {
+    margin-top: 5px;
+}
+.personal-manager {
+    margin-top: 5px;
+}

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Starts_Reason_for_Not_Fueling__c</fullName>
+    <description>Pick list of reasons for not fueling for Starts Team.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Pick list of reasons for not fueling for Starts Team.</inlineHelpText>
+    <label>Starts: Reason for Not Fueling</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Starts_Status__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Cards were not given to the drivers</fullName>
+                <default>false</default>
+                <label>Cards were not given to the drivers</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Did not receive PINs</fullName>
+                <default>false</default>
+                <label>Did not receive PINs</label>
+            </value>
+            <value>
+                <fullName>Forgot having Cards</fullName>
+                <default>false</default>
+                <label>Forgot having Cards</label>
+            </value>
+            <value>
+                <fullName>Customer never ordered Cards</fullName>
+                <default>false</default>
+                <label>Customer never ordered Cards</label>
+            </value>
+            <value>
+                <fullName>Wants to start pumping later (seasonality)</fullName>
+                <default>false</default>
+                <label>Wants to start pumping later (seasonality)</label>
+            </value>
+            <value>
+                <fullName>Competitor Cards</fullName>
+                <default>false</default>
+                <label>Competitor Cards</label>
+            </value>
+            <value>
+                <fullName>Shell fuel station too far away</fullName>
+                <default>false</default>
+                <label>Shell fuel station too far away</label>
+            </value>
+            <value>
+                <fullName>Winback customer</fullName>
+                <default>false</default>
+                <label>Winback customer</label>
+            </value>
+            <value>
+                <fullName>Did not receive Cards</fullName>
+                <default>false</default>
+                <label>Did not receive Cards</label>
+            </value>
+            <value>
+                <fullName>Missing information in Salesforce</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Missing information in Salesforce</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>5.3 Final Check: Delay</controllingFieldValue>
+            <controllingFieldValue>3.3 Volume Check 1: Delay</controllingFieldValue>
+            <controllingFieldValue>4.3 Volume Check 2: Delay</controllingFieldValue>
+            <controllingFieldValue>2.3 First Check: Delay</controllingFieldValue>
+            <valueName>Cards were not given to the drivers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>5.3 Final Check: Delay</controllingFieldValue>
+            <controllingFieldValue>3.3 Volume Check 1: Delay</controllingFieldValue>
+            <controllingFieldValue>4.3 Volume Check 2: Delay</controllingFieldValue>
+            <controllingFieldValue>2.3 First Check: Delay</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>5.3 Final Check: Delay</controllingFieldValue>
+            <controllingFieldValue>3.3 Volume Check 1: Delay</controllingFieldValue>
+            <controllingFieldValue>4.3 Volume Check 2: Delay</controllingFieldValue>
+            <controllingFieldValue>2.3 First Check: Delay</controllingFieldValue>
+            <valueName>Did not receive PINs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>5.3 Final Check: Delay</controllingFieldValue>
+            <controllingFieldValue>3.3 Volume Check 1: Delay</controllingFieldValue>
+            <controllingFieldValue>4.3 Volume Check 2: Delay</controllingFieldValue>
+            <controllingFieldValue>2.3 First Check: Delay</controllingFieldValue>
+            <valueName>Forgot having Cards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>5.3 Final Check: Delay</controllingFieldValue>
+            <controllingFieldValue>3.3 Volume Check 1: Delay</controllingFieldValue>
+            <controllingFieldValue>4.3 Volume Check 2: Delay</controllingFieldValue>
+            <controllingFieldValue>2.3 First Check: Delay</controllingFieldValue>
+            <valueName>Customer never ordered Cards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>5.3 Final Check: Delay</controllingFieldValue>
+            <controllingFieldValue>3.3 Volume Check 1: Delay</controllingFieldValue>
+            <controllingFieldValue>4.3 Volume Check 2: Delay</controllingFieldValue>
+            <controllingFieldValue>2.3 First Check: Delay</controllingFieldValue>
+            <valueName>Wants to start pumping later (seasonality)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>5.3 Final Check: Delay</controllingFieldValue>
+            <controllingFieldValue>3.3 Volume Check 1: Delay</controllingFieldValue>
+            <controllingFieldValue>4.3 Volume Check 2: Delay</controllingFieldValue>
+            <controllingFieldValue>2.3 First Check: Delay</controllingFieldValue>
+            <valueName>Competitor Cards</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>5.3 Final Check: Delay</controllingFieldValue>
+            <controllingFieldValue>3.3 Volume Check 1: Delay</controllingFieldValue>
+            <controllingFieldValue>4.3 Volume Check 2: Delay</controllingFieldValue>
+            <controllingFieldValue>2.3 First Check: Delay</controllingFieldValue>
+            <valueName>Shell fuel station too far away</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>5.3 Final Check: Delay</controllingFieldValue>
+            <controllingFieldValue>3.3 Volume Check 1: Delay</controllingFieldValue>
+            <controllingFieldValue>4.3 Volume Check 2: Delay</controllingFieldValue>
+            <controllingFieldValue>2.3 First Check: Delay</controllingFieldValue>
+            <valueName>Winback customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>5.3 Final Check: Delay</controllingFieldValue>
+            <controllingFieldValue>3.3 Volume Check 1: Delay</controllingFieldValue>
+            <controllingFieldValue>4.3 Volume Check 2: Delay</controllingFieldValue>
+            <controllingFieldValue>2.3 First Check: Delay</controllingFieldValue>
+            <valueName>Did not receive Cards</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

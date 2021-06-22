@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMContactWorld__TryRouteNewCaseToCaseOwner__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>When set, NewVoiceMedia will attempt to route new Cases to the Case owner. This does not affect updating cases, where NewVoiceMedia will always attempt to route to the Case owner.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When set, NewVoiceMedia will attempt to route new Cases to the Case owner. This does not affect updating cases, where NewVoiceMedia will always attempt to route to the Case owner.</inlineHelpText>
+    <label>TryRouteNewCaseToCaseOwner</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

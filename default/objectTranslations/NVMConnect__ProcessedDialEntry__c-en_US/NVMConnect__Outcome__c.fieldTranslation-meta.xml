@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Outcome of the call. --></help>
+    <label><!-- Outcome --></label>
+    <name>NVMConnect__Outcome__c</name>
+    <picklistValues>
+        <masterLabel>Completed</masterLabel>
+        <translation><!-- Completed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skipped</masterLabel>
+        <translation><!-- Skipped --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skipped - No Phone Number to Dial</masterLabel>
+        <translation><!-- Skipped - No Phone Number to Dial --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Skipped - The focus object was not available to the agent.</masterLabel>
+        <translation><!-- Skipped - The focus object was not available to the agent. --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

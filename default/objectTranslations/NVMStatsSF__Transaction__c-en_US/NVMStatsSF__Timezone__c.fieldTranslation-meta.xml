@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Timezone the transaction ran in and in which a subsequent one will run --></help>
+    <label><!-- Timezone --></label>
+    <name>NVMStatsSF__Timezone__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Retailer_Deutschland</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Vouchers_Sent__c</columns>
+    <columns>OBN__c</columns>
+    <columns>KAM__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>Email_retailer__c</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Retailer_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Retailer</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.ADDRESS1_COUNTRY_CODE</field>
+        <operation>equals</operation>
+        <value>DE</value>
+    </filters>
+    <label>Retailer Deutschland</label>
+    <language>de</language>
+    <sharedTo>
+        <role>Salesteam_Inbound</role>
+        <roleAndSubordinates>Teamleiter</roleAndSubordinates>
+    </sharedTo>
+</ListView>

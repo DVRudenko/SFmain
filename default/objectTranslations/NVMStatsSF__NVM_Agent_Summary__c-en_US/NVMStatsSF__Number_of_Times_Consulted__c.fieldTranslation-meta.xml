@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of times this Agent was invited to a consultation on an Interaction --></help>
+    <label><!-- Number of Times Consulted --></label>
+    <name>NVMStatsSF__Number_of_Times_Consulted__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Reservation and approval module in the online Carnet app. --></help>
+    <label><!-- Reservations --></label>
+    <name>Reservations__c</name>
+</CustomFieldTranslation>

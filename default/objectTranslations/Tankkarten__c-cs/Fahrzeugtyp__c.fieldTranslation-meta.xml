@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Druh vozidla</label>
+    <name>Fahrzeugtyp__c</name>
+    <picklistValues>
+        <masterLabel>LKW</masterLabel>
+        <translation>Nákladní vozidla nad 3,5 t.</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PKW</masterLabel>
+        <translation>Osobní vozidla pod 3,5 t.</translation>
+    </picklistValues>
+</CustomFieldTranslation>

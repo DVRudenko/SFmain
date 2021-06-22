@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Vehicle Card --></label>
+    <name>Vehicle_Card__c</name>
+    <picklistValues>
+        <masterLabel>Alternate Disclosure Group – no insurance</masterLabel>
+        <translation><!-- Alternate Disclosure Group – no insurance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Disclosure Group – no insurance</masterLabel>
+        <translation><!-- Disclosure Group – no insurance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home regions</masterLabel>
+        <translation><!-- Home regions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home site</masterLabel>
+        <translation><!-- Home site --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tage Alternate Disclosure Group – no insurance</masterLabel>
+        <translation><!-- Tage Alternate Disclosure Group – no insurance --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

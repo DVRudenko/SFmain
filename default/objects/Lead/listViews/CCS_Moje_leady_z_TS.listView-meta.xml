@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Moje_leady_z_TS</fullName>
+    <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>CCS_Company_ID__c</columns>
+    <columns>LEAD.STREET</columns>
+    <columns>LEAD.CITY</columns>
+    <columns>LEAD.ZIP</columns>
+    <columns>LEAD.COUNTRY_CODE</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Quali_Status__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.CCS_Sales_process</value>
+    </filters>
+    <filters>
+        <field>Quali_Status__c</field>
+        <operation>equals</operation>
+        <value>Sent to Acquisition - Not contacted</value>
+    </filters>
+    <filters>
+        <field>Quali_Status__c</field>
+        <operation>equals</operation>
+        <value>Sent to Acquisition - Contacted</value>
+    </filters>
+    <label>CCS_Moje leady z TS</label>
+    <language>cs</language>
+    <sharedTo>
+        <group>CCS_Admin_KAM_LAM_SME</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,74 @@
+<apex:page showHeader="false"
+            standardStylesheets="false"
+            sidebar="false"
+            docType="html-5.0"
+            applyBodyTag="false"
+            applyHtmlTag="false"
+            controller="ETERedirectionController"
+            action="{! checkStatus }">
+    <html>
+        <head>
+            <style>
+                .loader {
+                    display: flex;
+                    position: fixed;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #ffffff;
+                    height: 100%;
+                    width: 100%;
+                }
+                .loader__spinner {
+                    display: inline-block;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    border-width: 3px;
+                    border-style: solid;
+                    border-color: #80828A transparent #80828A #80828A;
+                    animation: rotate .8s linear infinite;
+                }
+                @media (min-width: 768px) {
+                    .loader__spinner {
+                        width: 48px;
+                        height: 48px;
+                        border-width: 4px;
+                    }
+                }
+                .loader__message{
+                    position: fixed;
+                    margin-top: -2.5rem;
+                    font-size: 16px;
+                    color: #80828A;
+                }
+                @media (min-width: 768px) {
+                    .loader__message {
+                        margin-top: -3rem;
+                        font-size: 18px;
+                    }
+                }
+                @keyframes rotate{
+                    0%{transform: rotate(0);}
+                    100%{transform: rotate(360deg);}
+                }
+            </style>
+        </head>
+
+        <body>
+            <apex:form id="form">
+                <apex:actionFunction name="checkStatus" action="{!checkStatus}" rerender="message"/>
+                <div class="loader ete-shadow">
+                    <div class="loader__spinner"></div>
+                    <apex:outputPanel id="message" styleClass="loader__message">
+                        {!message}
+                    </apex:outputPanel>
+                </div>
+            </apex:form>
+            <script>
+                setInterval(() => {
+                    checkStatus();
+                }, 2000);
+            </script>
+        </body>
+    </html>
+</apex:page>

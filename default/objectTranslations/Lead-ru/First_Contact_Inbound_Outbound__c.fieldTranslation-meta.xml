@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Укажите каким образом был осуществлен первый контакт с компанией (контактным лицом)</help>
+    <label>Первый контакт: Входящий/Исходящий</label>
+    <name>First_Contact_Inbound_Outbound__c</name>
+    <picklistValues>
+        <masterLabel>Direct App - Fax</masterLabel>
+        <translation><!-- Direct App - Fax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct App - Web</masterLabel>
+        <translation><!-- Direct App - Web --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Banner Ads</masterLabel>
+        <translation><!-- Inbound Banner Ads --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Call</masterLabel>
+        <translation>Входящий звонок</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Fax</masterLabel>
+        <translation>Чат</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Mail</masterLabel>
+        <translation>Входящая Почта</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound SMS</masterLabel>
+        <translation><!-- Inbound SMS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Website</masterLabel>
+        <translation>Веб анкета</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onsite Visit</masterLabel>
+        <translation>Посещение офиса</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound Call</masterLabel>
+        <translation>Исходящий звонок</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound e-mail</masterLabel>
+        <translation><!-- Outbound e-mail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>citypoint</masterLabel>
+        <translation><!-- citypoint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>omnicomm</masterLabel>
+        <translation><!-- omnicomm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Не контактировали</masterLabel>
+        <translation><!-- Не контактировали --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- report_week from GFN; to hold raw unformatted number coming from GFN and NOT to be exposed in the user views --></help>
+    <label><!-- GFN Report Week --></label>
+    <name>report_week__c</name>
+</CustomFieldTranslation>

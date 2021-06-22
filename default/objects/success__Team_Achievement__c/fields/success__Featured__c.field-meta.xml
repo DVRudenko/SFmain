@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Featured__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Allows the behaviour to be highlighted i.e. &#39;promoted&#39; within the application.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Promoted behaviours will be highlighted as such across the application</inlineHelpText>
+    <label>Promoted</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

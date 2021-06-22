@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Czasami możemy przesłać Ci pomocne dla Ciebie informacje drogą e-mail. Nie przekazujemy Twoich danych osobom trzecim. Zaznacz krzyżykiem, jeśli CHCESZ, by kontaktować się z Tobą przez e-mail. --></help>
+    <label><!-- Email Marketing --></label>
+    <name>Email_Marketing__c</name>
+</CustomFieldTranslation>

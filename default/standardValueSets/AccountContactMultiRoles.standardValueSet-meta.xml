@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Endorser</fullName>
+        <default>false</default>
+        <label>Endorser</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Decider</fullName>
+        <default>false</default>
+        <label>Decider</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Assessor</fullName>
+        <default>false</default>
+        <label>Assessor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>User</fullName>
+        <default>false</default>
+        <label>User</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Coach</fullName>
+        <default>false</default>
+        <label>Coach</label>
+    </standardValue>
+</StandardValueSet>

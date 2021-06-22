@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Most_Important_Feature__c</fullName>
+    <description>What is the most important feature in a fleet card for the prospect?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the most important feature in a fleet card for the prospect?</inlineHelpText>
+    <label>Most Important Feature</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Controls</fullName>
+                <default>false</default>
+                <label>Controls</label>
+            </value>
+            <value>
+                <fullName>Locations</fullName>
+                <default>false</default>
+                <label>Locations</label>
+            </value>
+            <value>
+                <fullName>Pricing</fullName>
+                <default>false</default>
+                <label>Pricing</label>
+            </value>
+            <value>
+                <fullName>Rebates</fullName>
+                <default>false</default>
+                <label>Rebates</label>
+            </value>
+            <value>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+                <label>Reporting</label>
+            </value>
+            <value>
+                <fullName>Terms</fullName>
+                <default>false</default>
+                <label>Terms</label>
+            </value>
+            <value>
+                <fullName>Volume Growth</fullName>
+                <default>false</default>
+                <label>Volume Growth</label>
+            </value>
+            <value>
+                <fullName>Eliminate AR Risk</fullName>
+                <default>false</default>
+                <label>Eliminate AR Risk</label>
+            </value>
+            <value>
+                <fullName>Simplicity</fullName>
+                <default>false</default>
+                <label>Simplicity</label>
+            </value>
+            <value>
+                <fullName>Cost Savings</fullName>
+                <default>false</default>
+                <label>Cost Savings</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Отсрочка, кредит</fullName>
+                <default>false</default>
+                <label>Отсрочка, кредит</label>
+            </value>
+            <value>
+                <fullName>Условия договора</fullName>
+                <default>false</default>
+                <label>Условия договора</label>
+            </value>
+            <value>
+                <fullName>Конкретные АЗС</fullName>
+                <default>false</default>
+                <label>Конкретные АЗС</label>
+            </value>
+            <value>
+                <fullName>Сервис</fullName>
+                <default>false</default>
+                <label>Сервис</label>
+            </value>
+            <value>
+                <fullName>НДС</fullName>
+                <default>false</default>
+                <label>НДС</label>
+            </value>
+            <value>
+                <fullName>Тендер</fullName>
+                <default>false</default>
+                <label>Тендер</label>
+            </value>
+            <value>
+                <fullName>Рекомендация</fullName>
+                <default>false</default>
+                <label>Рекомендация</label>
+            </value>
+            <value>
+                <fullName>Налив</fullName>
+                <default>false</default>
+                <label>Налив</label>
+            </value>
+            <value>
+                <fullName>ГАЗовые АЗС</fullName>
+                <default>false</default>
+                <label>ГАЗовые АЗС</label>
+            </value>
+            <value>
+                <fullName>Бренд</fullName>
+                <default>false</default>
+                <label>Бренд</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Transducer used for automatic guarding activation / deactivation of the vehicle according to the car lock. --></help>
+    <label><!-- Can Bus transducer MCB-02 --></label>
+    <name>Can_Bus_transducer_MCB_02_Amount__c</name>
+</CustomFieldTranslation>

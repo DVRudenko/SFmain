@@ -1,0 +1,68 @@
+<!--
+ - Created by Andrei.Katunin on 13.08.2018.
+ -->
+
+<apex:component id="E2EComponentPromocode" controller="E2EComponentsCtrl">
+
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map"
+                    required="false"/>
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="name of field in parent page"
+                    required="false"/>
+
+    <apex:attribute name="firstClass"
+                    type="String"
+                    description="class name of label and input div" />
+
+    <apex:attribute name="secondClass"
+                    type="String"
+                    description="class name of input div" />
+
+    <apex:attribute name="inputClass"
+                    type="String"
+                    description="input class" />
+
+    <apex:attribute name="split"
+                    type="String"
+                    assignTo="{!splitRegex}"
+                    description="" />
+
+    <apex:attribute name="list"
+                    type="String"
+                    assignTo="{!listValueSplitString}"
+                    description="" />
+
+    <apex:outputPanel layout="block" styleClass="block__inputs validations goods">
+        <label for="" class="promocode-label">{!pageMap[field].elementItemsMap['PROMOCODE LABEL'].value}</label>
+        <apex:outputPanel layout="block" styleClass="fake__inputs-text">
+            <apex:outputText escape="false" value="{!IF ((len(pageMap[field].elementItemsMap['PROMOCODE DESCRIPTION TITLE'].value) < 1), pageMap[field].elementItemsMap['PROMOCODE INVALID'].value, pageMap[field].elementItemsMap['PROMOCODE DESCRIPTION TITLE'].value )}"/>
+            <apex:outputText escape="false" value="{! pageMap[field].elementItemsMap['PROMOCODE DESCRIPTION BODY'].value }"/>
+        </apex:outputPanel>
+    </apex:outputPanel>
+
+    <apex:outputPanel layout="block" styleClass="{! firstClass }">
+        <label for="">{!pageMap[field].elementItemsMap['PROMOCODE ADDITIONAL LABEL'].value}</label>
+        <apex:outputPanel layout="block" styleClass="{! secondClass }">
+            <input id="inputID"
+                        class="{! inputClass }"
+                        type="text"
+                        value="{! FirstListValue }"/>
+
+            <apex:outputPanel layout="block" styleClass="list-promocode">
+
+                <apex:repeat var="item" value="{! Splits }" id="listRepeat1">
+                    <div class="promocode-item">
+                        {! item }
+                    </div>
+                </apex:repeat>
+
+            </apex:outputPanel>
+
+        </apex:outputPanel>
+    </apex:outputPanel>
+
+</apex:component>

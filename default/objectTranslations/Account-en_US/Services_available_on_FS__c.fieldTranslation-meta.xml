@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- List of additional services (car wash, shop, etc.) available on the fuel station --></help>
+    <label><!-- Services available on FS --></label>
+    <name>Services_available_on_FS__c</name>
+    <picklistValues>
+        <masterLabel>24H</masterLabel>
+        <translation><!-- 24H --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ATM</masterLabel>
+        <translation><!-- ATM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ad Blue</masterLabel>
+        <translation><!-- Ad Blue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Car Wash</masterLabel>
+        <translation><!-- Car Wash --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Repair</masterLabel>
+        <translation><!-- Repair --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Restaurant</masterLabel>
+        <translation><!-- Restaurant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shop</masterLabel>
+        <translation><!-- Shop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shower</masterLabel>
+        <translation><!-- Shower --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Truck-frienldy</masterLabel>
+        <translation><!-- Truck-frienldy --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

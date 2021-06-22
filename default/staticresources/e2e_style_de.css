@@ -1,0 +1,605 @@
+/* E2E Long Form styles */
+
+/* NEW --------------------------------------------------- */
+
+.bold {
+    font-weigh: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.b-h1 {
+
+}
+
+.b-h2 {
+
+}
+
+.b-h3 {
+    font-size: 16px;
+    margin: 15px 5px 5px 5px;
+}
+
+.b-h4 {
+    font-size: 13px;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.page-header {
+
+}
+
+.b-form-content {
+    border: 2px solid #403c3c;
+    background-color: white;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.b-details-content {
+    border: 2px solid #403c3c;
+    background-color: #ffe599;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+/* CARD CONFIGURATOR ================================================ */
+
+.i {
+    font-size: 13px;
+}
+
+.b-spinner {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.spinner {
+    width: 60px;
+}
+
+.spinner input {
+    text-align: right;
+}
+
+.input-group-btn-vertical {
+    position: relative;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.input-group-btn-vertical > .btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    margin-left: -1px;
+    position: relative;
+    border-radius: 0;
+}
+
+.input-group-btn-vertical > .btn:first-child {
+    border-top-right-radius: 4px;
+    outline: none;
+}
+
+.input-group-btn-vertical > .btn:last-child {
+    margin-top: -2px;
+    border-bottom-right-radius: 4px;
+    outline: none;
+}
+
+.input-group-btn-vertical i{
+    position: absolute;
+    left: 1px;
+}
+
+.b-cards-category {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.b-cards-category .diff-types {
+    margin: 20px 10px 5px 10px;
+}
+
+.cards-count {
+    margin: 5px 10px 5px 10px;
+}
+
+.categories-list {
+    margin: 0 50px;
+}
+
+.category {
+    background-color: #ccc;
+    position: relative;
+    margin-bottom: 30px;
+    height: 210px;
+}
+
+.category .b-content {
+    height: 100px;
+}
+
+.category .b-h3 {
+    padding: 10px 10px 5px 10px;
+    font-weight: 600;
+    height: 60px;
+}
+
+.category .category-desc {
+    font-size: 12px;
+    padding: 5px 15px 15px 15px;
+    height: 100px;
+}
+
+.category .btn {
+    margin: 0 15px 15px 15px;
+}
+
+/* OLD --------------------------------------------------- */
+
+/* GLOBAL ================================================ */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100%;
+    height: 100%;
+    margin-bottom: 120px;
+}
+
+.b-block {
+    padding: 10px;
+}
+
+.b-label {
+    font-weight: 700;
+}
+
+.b-label span {
+    margin-left: 5px;
+    font-weight: 100;
+}
+
+.f-label {
+    width: 140px;
+    text-align: right;
+}
+
+.f-required {
+    margin-left: -13px;
+    float: left;
+    font-size: 20px;
+    color: red;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.b-block-title{
+    font-size: 22px;
+    width: 700px;
+    text-align: center;
+}
+
+.container-non-responsive {
+  /* Margin/padding copied from Bootstrap */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    /* Set width to your desired site width */
+    width: 1170px !important;
+}
+
+.center-block.buttons{
+    width: 700px;
+    text-align: center;
+}
+
+.btn-yellow {
+    background-color: #FFD900;
+    border-color: #C0C0C0;
+    width: 180px;
+}
+
+a.btn.btn-yellow.btn-next{
+    color: #444;
+}
+
+select.btn.btn-default.dropdown-toggle {
+    background-color: #fff;
+    outline: none;
+    border-color: #d4d4d4;
+}
+
+option {
+    background-color: #fff;
+}
+
+.invalid-feedback {
+    display: none;
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 90%;
+    color: #dc3545;
+    margin: 2px 0px 0px 5px;
+}
+
+.i-helper {
+    color: #fff;
+    cursor: default;
+    background-color: #00B0F0;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    display: inline-block;
+    border-radius: 100%;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: inset -1px -1px 1px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset -1px -1px 1px 0px rgba(0,0,0,0.25);
+    box-shadow: inset -1px -1px 1px 0px rgba(0,0,0,0.25);
+}
+
+.i-helper-small {
+    color: #fff;
+    cursor: default;
+    background-color: #00B0F0;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px 0 5px;
+    display: inline-block;
+    border-radius: 100%;
+    font-size: 11px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: inset -1px -1px 1px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset -1px -1px 1px 0px rgba(0,0,0,0.25);
+    box-shadow: inset -1px -1px 1px 0px rgba(0,0,0,0.25);
+}
+
+/* MENU BLOCK ================================================ */
+
+.step-by-step {
+    padding: 20px;
+}
+
+ul.steps-list li button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+
+ul.steps-list{
+    margin: 0;
+    list-style: none;
+}
+
+#steps{
+    overflow: hidden;
+    width: 100%;
+}
+
+#steps li{
+    float: left;
+    margin: 0 1em 0 1em;
+}
+
+#steps a{
+    background: #F2F2F2;
+    padding: .7em 1em;
+    float: left;
+    text-decoration: none;
+    color: #444;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    position: relative;
+}
+
+#steps a::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5em;
+    border-width: 1.5em 0 1.5em 1em;
+    border-style: solid;
+    border-color: #F2F2F2 #F2F2F2 #F2F2F2 transparent;
+    left: -1em;
+}
+
+#steps a::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5em;
+    border-top: 1.5em solid transparent;
+    border-bottom: 1.5em solid transparent;
+    border-left: 1em solid #F2F2F2;
+    right: -1em;
+}
+
+/*#steps a:hover{
+    background: #FFD900;
+}
+
+#steps a:hover::before{
+    border-color: #FFD900 #FFD900 #FFD900 transparent;
+}
+
+
+#steps a:hover::after{
+    border-left-color: #FFD900;
+}*/
+
+#steps .current,
+#steps .current:hover{
+    font-weight: bold;
+    background: none;
+}
+
+#steps .current,
+#steps .current:hover{
+    background: #FFFF00;
+    padding: .7em 1em;
+    float: left;
+    text-decoration: none;
+    color: #444;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    position: relative;
+}
+
+#steps .current::before,
+#steps .current:hover::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5em;
+    border-width: 1.5em 0 1.5em 1em;
+    border-style: solid;
+    border-color: #FFFF00 #FFFF00 #FFFF00 transparent;
+    left: -1em;
+}
+
+#steps .current::after,
+#steps .current:hover::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -1.5em;
+    border-top: 1.5em solid transparent;
+    border-bottom: 1.5em solid transparent;
+    border-left: 1em solid #FFFF00;
+    right: -1em;
+}
+
+/* CONTACT DETAILS ================================================ */
+.salutation-select > tbody > tr > td:first-child {
+    padding-right: 10px;
+}
+
+.salutation-select input {
+    margin-right: 5px;
+}
+
+/* CONTACT CREDIT SCORING ================================================ */
+.security-info {
+    font-size: 12px;
+}
+
+/* LOCATOR ================================================ */
+
+.locator-error-message1,
+.locator-error-message2 {
+    font-size: 90%;
+    color: #dc3545;
+    margin-bottom: .25em;
+    margin-left: 7em;
+}
+
+/* MODALS ================================================ */
+
+.modal-body {
+    position: relative;
+    overflow-y: auto;
+    max-height: 500px;
+    padding: 15px;
+}
+
+.center-block.modal-buttons {
+    text-align: center;
+}
+
+.companies {
+    width: 80%;
+    padding: 15px 0 15px 0;
+}
+
+.companies fieldset table {
+    width: 100%;
+}
+
+.companies fieldset table > tbody > tr:hover {
+    background-color: #F2F2F2;
+}
+
+.companies fieldset table > tbody > tr > td {
+    word-break: break-word;
+    padding: 1.01em 11px;
+}
+
+.companies fieldset table > tbody > tr > td label {
+    width: 90%;
+}
+
+/* новый */
+.companies label {
+    width: 90%;
+    margin-top: -5px;
+    word-break: break-word;
+}
+
+.companies > tbody > tr > td:first-child {
+    padding-right: 10px;
+}
+
+.companies input {
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+.companies input {
+    margin: 0 10px 0 10px;
+    vertical-align: top;
+}
+
+.modal-link {
+    margin: 10px 10px 5px;
+}
+
+.current-pump {
+    width: 60%;
+    margin-bottom: 15px;
+}
+
+.new-pump {
+    width: 60%;
+}
+
+.billing-period {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.billing-period .period-val {
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.pay-method {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0 10px 0;
+}
+
+.pay-method .method-val {
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.pay-method .method-radio,
+.invoice-format .format-radio {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.pay-method .method-radio fieldset table > tbody > tr > td:first-child,
+.invoice-format .format-radio fieldset table > tbody > tr > td:first-child{
+    padding-right: 10px;
+}
+
+.pay-method .method-radio fieldset table input,
+.invoice-format .format-radio fieldset table input{
+    margin-right: 3px;
+}
+
+.invoice {
+    padding-top: 10px;
+}
+
+.invoice .invoice-delivery {
+    margin-bottom: 10px;
+}
+
+.invoice .invoice-format .format-val {
+    font-weight: 700;
+    margin: 0 10px 0 10px;
+}
+
+.dep-pay-method .method-val {
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.dep-pay-method .i-helper-small {
+    vertical-align: text-top;
+}
+
+.warning-message {
+    display: none;
+    color: red;
+}
+
+.comment {
+    font-size: 11px;
+    margin: -15px 0 10px 10px;
+}
+
+.detail {
+    margin-bottom: 10px;
+}
+
+.detail span {
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+.detail .desc{
+    width: 90%;
+}
+
+.vat {
+    color: #888888;
+    margin-bottom: 10px;
+}
+
+.deposit, .vat {
+    height: 20px;
+    border-bottom: 1px dashed #A5A5A5;
+    background-color: #f5f5f5;
+    margin-bottom: 5px;
+}
+
+.f-deposit, .f-vat,
+.deposit-val, .vat-val {
+    height: 22px;
+    background-color: #f5f5f5;
+}
+
+.deposit-val, .vat-val {
+    float: right;
+}
+
+.project-consumption {
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+.b-splitter {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.pay-frequency {
+    width: 100%;
+}
+
+.credit-info {
+    margin-top: 10px;
+}
+
+.credit-info .deposit-req .f-dep {
+    margin-right: 5px;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS Attrition Flag --></label>
+    <name>CCS_Attrition_Flag__c</name>
+    <picklistValues>
+        <masterLabel>Konkurence</masterLabel>
+        <translation><!-- Konkurence --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>důvod neuveden</masterLabel>
+        <translation><!-- důvod neuveden --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>jiné</masterLabel>
+        <translation><!-- jiné --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>kreditní důvody</masterLabel>
+        <translation><!-- kreditní důvody --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>nedovoláno</masterLabel>
+        <translation><!-- nedovoláno --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>nevoláno</masterLabel>
+        <translation><!-- nevoláno --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>neznámo</masterLabel>
+        <translation><!-- neznámo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>reorganizace</masterLabel>
+        <translation><!-- reorganizace --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>změna subjektu</masterLabel>
+        <translation><!-- změna subjektu --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

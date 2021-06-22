@@ -1,0 +1,8 @@
+.THIS .case-list-panel{
+    min-height: 160px;
+    max-height: 200px;
+}
+
+.THIS .case-item-color:hover{
+    background-color: azure;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Available_for_reassignment__c</fullName>
+    <description>If the opportunity is available for reassignmnent by Distribution Engine</description>
+    <externalId>false</externalId>
+    <formula>AND(OR(Number_of_open_tasks__c == 0, CASESAFEID(OwnerId) == "00520000005vRqsAAE", CASESAFEID(OwnerId) == "0050O000006sP8GQAU"),
+                !ISPICKVAL(StageName, "Closed Won"),
+                !ISPICKVAL(StageName, "Closed Lost"),
+                NOT(
+                                AND(
+                                                ISPICKVAL(Channel__c,"POS"),
+                                                OR(ISPICKVAL(LeadSource,"QR Code"),ISPICKVAL(LeadSource,"Tablet")),
+                                                E2E_Active_Step__c == 0)
+                )
+    )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>used by Distribution Engine</inlineHelpText>
+    <label>Available for reassignment</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>SurveyOnsite_MNI</fullName>
+        <ccEmails>FleetcorMarketing4U@gmail.com</ccEmails>
+        <description>SurveyOnsite_MNI</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Email</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>no-reply@fleetcor.eu</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/SurveyOnsite_MNI</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>SetReminderToTrue</fullName>
+        <field>IsReminderSet</field>
+        <literalValue>1</literalValue>
+        <name>SetReminderToTrue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Comments_summary_event_field</fullName>
+        <description>Updating the &quot;Comments summary&quot; field using the formula: LEFT(Description, 252)&amp;&quot;...&quot; 
+Description - it is Task field</description>
+        <field>Comments_summary__c</field>
+        <formula>IF ( LEN(Description) &gt;= 252, LEFT(Description, 252)&amp;&quot;...&quot;, LEFT(Description, 252)&amp;&quot;&quot; )</formula>
+        <name>Update &quot;Comments summary&quot; event field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>SetReminderFieldSales</fullName>
+        <actions>
+            <name>SetReminderToTrue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Event.IsReminderSet</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Event.Created_Role__c</field>
+            <operation>equals</operation>
+            <value>PPR FieldTerritory_Call Center</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Event.Event_Status__c</field>
+            <operation>equals</operation>
+            <value>In Progress</value>
+        </criteriaItems>
+        <description>SPG-40/ call center russia somitimes accidently set Reminder to false. We need to set it back to &#39;true&#39;. VR is not applicable for Reminder Set</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>SurveyOnsite_MNI</fullName>
+        <actions>
+            <name>SurveyOnsite_MNI</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Event.Visit_Done__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Update %22Comments summary%22 event field</fullName>
+        <actions>
+            <name>Update_Comments_summary_event_field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Updating the &quot;Comments summary&quot; field using the formula: LEFT(Description, 252)&amp;&quot;...&quot;
+Description - it is Event field</description>
+        <formula>true</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

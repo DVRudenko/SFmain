@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The time after which the job for calculating outstanding calls will be triggered --></help>
+    <label><!-- Outstanding calls expire time (s) --></label>
+    <name>NVMConnect__OutstandingCallsExpireTimeSeconds__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>NVM Agent Summary Detail Layout</layout>
+        <sections>
+            <label><!-- Agent Activity Table --></label>
+            <section>Agent Activity Table</section>
+        </sections>
+        <sections>
+            <label><!-- Agent Statistics --></label>
+            <section>Agent Statistics</section>
+        </sections>
+        <sections>
+            <label><!-- Agent Timeline --></label>
+            <section>Agent Timeline</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Durations Unconverted --></label>
+            <section>Durations Unconverted</section>
+        </sections>
+        <sections>
+            <label><!-- Segmentation --></label>
+            <section>Segmentation</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

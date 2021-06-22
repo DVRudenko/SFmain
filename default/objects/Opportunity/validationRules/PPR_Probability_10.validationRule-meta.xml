@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Probability_10</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+RecordType.DeveloperName = 'Russian_Sales',
+$Profile.Name != "E2E RU Profile",
+$Profile.Name != "System Administrator",
+$Profile.Name != "RU_System_Administrator",
+$Profile.Name != 'API Only',
+$Profile.Name != "Russian Call Center",
+NOT(ISCHANGED( OwnerId )),
+NOT(ISCHANGED( Rating_attractive__c )),
+NOT(ISCHANGED( Last_Owner_Change_Date_RUS__c )),
+NOT(ISCHANGED( Number_of_open_tasks__c)),
+NOT(ISCHANGED( Open_Task__c )),
+Probability &gt; 0.1,
+(
+ISBLANK( TEXT( Most_Important_Feature__c)) ||
+ISBLANK( TEXT( Area_Traveled__c )) ||
+ISBLANK( TEXT( Primary_Fueling_Method__c))||
+ISBLANK( TEXT( Insurance__c ))
+))</errorConditionFormula>
+    <errorMessage>Fill in the fields: Most Important Feature, Primary_Fueling_Method, Insurance, Geography of trips</errorMessage>
+</ValidationRule>

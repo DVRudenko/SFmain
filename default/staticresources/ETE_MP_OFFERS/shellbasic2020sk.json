@@ -1,0 +1,103 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "Wait until you receive your Shell cards and PIN numbers by post.",
+                "sk": "Počkajte, až poštou dostanete svoje palivové karty Shell a čísla PIN."
+            },
+            {
+                "en": "You can now use your card(s) for the first time while refueling at a Shell Station.",
+                "sk": "Teraz môžete svoje karty začať používať na staniciach Shell."
+            },
+            {
+                "en": "Your card has now been activated! Enjoy a care-free refueling experience with your Shell fuel cards.",
+                "sk": "Vaša karta bola teraz aktivovaná! Užite si bezstarostné tankovania s Vašimi palivovými kartami Shell."
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "discount at Shell gas stations in Slovakia",
+                    "sk": "zľava na čerpacích staniciach Shell na Slovensku"
+                },
+                "value": {
+                    "en": "2,5 cent/liter",
+                    "sk": "2,5 centu/liter"
+                }
+            },
+            {
+                "label": {
+                    "en": "discount on a car wash at Shell petrol stations in Slovakia",
+                    "sk": "zľava na autoumyváreň na čerpacích staniciach Shell na Slovensku"
+                },
+                "value": {
+                    "en": "10%",
+                    "sk": "10%"
+                }
+            },
+            {
+                "label": {
+                    "en": "card issuing and delivery",
+                    "sk": "vystavenie a doručenie karty"
+                },
+                "value": {
+                    "en": "FREE",
+                    "sk": "ZADARMO"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "Shell Basic 2020 SK"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "sk": "PALIVOVÝCH KARIET SHELL"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/shellkarte_eu.jpg"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "Shell fuel card for business guarantees your company stable and permanent fuel discounts, a convenient online customer portal and a dense network of stations.",
+            "sk": "Firemná palivová karta Shell zaručuje Vašej spoločnosti stabilné a trvalé zľavy na pohonné hmoty, ľahký a praktický zákaznícky online portál a širokú sieť čerpacích staníc."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "sk": "SHELL KARTA"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "SHELL CARDS",
+            "sk": [
+                "SHELL KARTA",
+                "SHELL karty",
+                "SHELL kariet"
+            ]
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "SHELL KARTA",
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "1",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "monthlyFuelConsumption_max": "5000",
+            "monthlyFuelConsumption_min": "50",
+            "order": 4
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Slovakia": "/resource/ETE_DOCUMENTS_1/tariffSheets_shellbasic2020sk.jpg"
+    }
+}

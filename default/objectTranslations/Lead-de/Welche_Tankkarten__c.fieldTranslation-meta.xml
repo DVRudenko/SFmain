@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Tankkarte Emittent</label>
+    <name>Welche_Tankkarten__c</name>
+    <picklistValues>
+        <masterLabel>ANWB</masterLabel>
+        <translation><!-- ANWB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ARGOS</masterLabel>
+        <translation><!-- ARGOS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>AVIA</masterLabel>
+        <translation><!-- AVIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Agip</masterLabel>
+        <translation><!-- Agip --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere</masterLabel>
+        <translation><!-- Andere --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Aral</masterLabel>
+        <translation><!-- Aral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>BP</masterLabel>
+        <translation><!-- BP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bamaka</masterLabel>
+        <translation><!-- Bamaka --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Benzina</masterLabel>
+        <translation><!-- Benzina --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DCB</masterLabel>
+        <translation><!-- DCB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DE HAAN</masterLabel>
+        <translation><!-- DE HAAN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DKV</masterLabel>
+        <translation><!-- DKV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Esso</masterLabel>
+        <translation><!-- Esso --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GULF</masterLabel>
+        <translation><!-- GULF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IDS</masterLabel>
+        <translation><!-- IDS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jet</masterLabel>
+        <translation><!-- Jet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MKB</masterLabel>
+        <translation><!-- MKB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOL</masterLabel>
+        <translation><!-- MOL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MULTI TANKCARD</masterLabel>
+        <translation><!-- MULTI TANKCARD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Novofleet</masterLabel>
+        <translation><!-- Novofleet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OMV</masterLabel>
+        <translation><!-- OMV --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>POST/SALLAND</masterLabel>
+        <translation><!-- POST/SALLAND --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Q8/TANGO</masterLabel>
+        <translation><!-- Q8/TANGO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ROUTEX</masterLabel>
+        <translation><!-- ROUTEX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RobinOil</masterLabel>
+        <translation><!-- RobinOil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell</masterLabel>
+        <translation><!-- Shell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TAMOIL</masterLabel>
+        <translation><!-- TAMOIL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TEXACO</masterLabel>
+        <translation><!-- TEXACO --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TINQ</masterLabel>
+        <translation><!-- TINQ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRAVELCARD</masterLabel>
+        <translation><!-- TRAVELCARD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TankOno</masterLabel>
+        <translation><!-- TankOno --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tankpool24</masterLabel>
+        <translation><!-- Tankpool24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Total</masterLabel>
+        <translation><!-- Total --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UTA</masterLabel>
+        <translation><!-- UTA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>bankovníkarta</masterLabel>
+        <translation><!-- bankovníkarta --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>hotovost</masterLabel>
+        <translation><!-- hotovost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>jiné</masterLabel>
+        <translation><!-- jiné --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>nesdělil</masterLabel>
+        <translation><!-- nesdělil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>tks</masterLabel>
+        <translation><!-- tks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>vlastníČS</masterLabel>
+        <translation><!-- vlastníČS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

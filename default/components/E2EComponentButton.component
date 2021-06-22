@@ -1,0 +1,49 @@
+<apex:component id="E2EComponentButton" controller="E2EComponentsCtrl">
+
+    <apex:attribute name="pageMap"
+                    type="map"
+                    description="parent map" />
+
+    <apex:attribute name="field"
+                    type="String"
+                    description="value of outputPanel" />
+
+    <apex:attribute name="value"
+                    type="String"
+                    description="value of command link" />
+
+    <apex:attribute name="firstClass"
+                    type="String"
+                    description="class name" />
+
+    <apex:attribute name="className"
+                    type="String"
+                    description="class name" />
+
+    <apex:attribute name="onclick"
+                    type="String"
+                    description="js event on button click" />
+
+    <apex:attribute name="reRenderList"
+                    type="String"
+                    description="list IDs for rerender divide by ','" />
+
+    <apex:attribute name="status"
+                    type="String"
+                    description="The controller for the page." />
+
+    <apex:attribute name="buttonClass"
+                    type="String"
+                    description="Class for a button"/>
+
+    <div class="{!firstClass}">
+        <div class="{! className }">
+            <apex:commandLink value="{! value }"
+                              onclick="{! onclick }"
+                              reRender="{! reRenderList }"
+                              styleClass="{! buttonClass}"
+                              status="{! status }"/>
+        </div>
+    </div>
+
+</apex:component>

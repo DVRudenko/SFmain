@@ -1,0 +1,218 @@
+<template>
+  <lightning-card variant="base">
+    <h3 slot="title" class="header exportable-header">{labels.COUNTERPARTY_DATA}</h3>
+    <lightning-input
+      name="name"
+      class="field exportable-field"
+      required
+      label={labels.ORGANIZATION_NAME}
+      max-length="50"
+      value={counterparty.name}
+      onchange={handelChange}
+      type="text"
+    >
+    </lightning-input>
+    <lightning-input
+      name="iNN"
+      class="field exportable-field"
+      label={labels.INN}
+      required
+      max-length="12"
+      pattern={pattern.iNN}
+      value={counterparty.iNN}
+      onchange={handelChange}
+      type="text"
+    >
+    </lightning-input>
+    <lightning-input
+      name="kPP"
+      class="field exportable-field"
+      label={labels.KPP}
+      required
+      max-length="9"
+      pattern={pattern.kPP}
+      value={counterparty.kPP}
+      onchange={handelChange}
+      type="text"
+    >
+    </lightning-input>
+    <lightning-input
+      name="oGRN"
+      class="field exportable-field"
+      label={labels.OGRN}
+      required
+      max-length="13"
+      pattern={pattern.oGRN}
+      value={counterparty.oGRN}
+      onchange={handelChange}
+      type="text"
+    >
+    </lightning-input>
+    <lightning-input
+      name="okVED"
+      class="field exportable-field"
+      label={labels.OKVD}
+      value={counterparty.okVED}
+      onchange={handelChange}
+      type="text"
+    >
+    </lightning-input>
+    <lightning-input
+      name="oKPO"
+      class="field exportable-field"
+      label={labels.OKPO}
+      required
+      pattern={pattern.oKPO}
+      value={counterparty.oKPO}
+      onchange={handelChange}
+      type="text"
+    >
+    </lightning-input>
+    <div>
+      <lightning-textarea
+        name="legalAddress"
+        class="field changeLegalAdress exportable-field"
+        label={labels.LEGAL_ADDRESS}
+        required
+        value={counterparty.legalAddress}
+        pattern={pattern.address}
+        onchange={handelLegalAdressChange}
+        type="text"
+      >
+      </lightning-textarea>
+      <ul class="legalAddress" if:true={showLegalAdress}>
+        <template
+          for:each={legalAdressSuggestions}
+          for:item="data"
+          for:index="index"
+        >
+          <li key={data.region_fias_id} onclick={handelClickСhangeLegalAdress}>
+            <strong>{data.unrestricted_value}</strong>
+          </li>
+        </template>
+      </ul>
+    </div>
+    <div>
+      <lightning-textarea
+        name="postalAddress"
+        class="field changePostalAdress exportable-field"
+        label={labels.POSTAL_ADDRESS}
+        required
+        pattern={pattern.address}
+        value={counterparty.postalAddress}
+        onchange={handelPostalAdressChange}
+        type="text"
+      >
+      </lightning-textarea>
+      <ul class="postalAddress" if:true={showPostalAdress}>
+        <template
+          for:each={postalAdressSuggestions}
+          for:item="data"
+          for:index="index"
+        >
+          <li
+            key={data.region_fias_id}
+            onclick={handelClickСhangePostalAdress}
+            
+          >
+            <strong>{data.unrestricted_value}</strong>
+          </li>
+        </template>
+      </ul>
+    </div>
+    <lightning-button
+      disabled={isButtonDisabled}
+      variant="brand"
+      label={labels.COINCIDES_WITH_LEGAL}
+      onclick={handleCopyAddressClick}
+      class="field"
+    >
+    </lightning-button>
+    <lightning-input
+      name="leaderFullName"
+      class="field exportable-field"
+      label={labels.FULL_NAME_HEAD}
+      required
+      pattern={pattern.text}
+      value={counterparty.leaderFullName}
+      onchange={handelChange}
+      type="text"
+    >
+    </lightning-input>
+    <lightning-input
+      name="leaderPosition"
+      class="field exportable-field"
+      label={labels.HEAD_POSITION}
+      required
+      pattern={pattern.text}
+      value={counterparty.leaderPosition}
+      onchange={handelChange}
+      type="text"
+    >
+    </lightning-input>
+    <lightning-input
+      type="toggle"
+      name="useSPARKData"
+      class="toggle exportable-field exportable-boolean"
+      label={labels.USE_SPARK_DATA}
+      checked={counterparty.useSPARKData}
+      onchange={handleUseSPARKDataChanged}
+    >
+    </lightning-input>
+    <lightning-input
+      name="litersPrediction"
+      class="field exportable-field"
+      label={labels.FORECAST_LITERS}
+      required
+      min-length="1"
+      max-length="10"
+      pattern={pattern.turnover}
+      value={counterparty.litersPrediction}
+      onchange={handleLitersPredictionChange}
+      type="text"
+    >
+    </lightning-input>
+    <lightning-input
+      name="carCount"
+      class="field exportable-field"
+      label={labels.CARS_AMOUNT}
+      min="0"
+      max="9999999999"
+      value={counterparty.carCount}
+      onchange={handelChange}
+      type="number"
+    >
+    </lightning-input>
+    <lightning-input
+      name="truckCount"
+      class="field exportable-field"
+      label={labels.TRUCKS_AMOUNT}
+      min="0"
+      max="9999999999"
+      value={counterparty.truckCount}
+      onchange={handelChange}
+      type="number"
+    >
+    </lightning-input>
+    <lightning-input
+      name="partnerProgram"
+      class="field exportable-field"
+      label={labels.PARTNER_PROGRAM}
+      max-length="255"
+      value={counterparty.partnerProgram}
+      onchange={handelChange}
+      type="text"
+    >
+    </lightning-input>
+    <lightning-combobox
+      name="searchChannel"
+      class="field exportable-field"
+      options={searchChannelOptions}
+      value={counterparty.searchChannel}
+      onchange={handelChange}
+      label={labels.SEARCH_CHANNEL_TYPE}
+      placeholder={labels.CHOOSE_SEARCH_CHANNEL_TYPE}
+    >
+    </lightning-combobox>
+  </lightning-card>
+</template>

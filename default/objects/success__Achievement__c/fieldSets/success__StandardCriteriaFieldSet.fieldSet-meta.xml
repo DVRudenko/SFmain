@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__StandardCriteriaFieldSet</fullName>
+    <description>To view achievement criteria</description>
+    <displayedFields>
+        <field>success__Maximum_number_of_rewards__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>success__Criteria_Logic__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Criteria</label>
+</FieldSet>

@@ -1,0 +1,161 @@
+<!-- pageMargin 0.4cm pageMargin -->
+<!-- hideHeader -->
+<!-- hideFooter -->
+<style></style>
+
+<div style="font-size: 12px;">
+    <div style="padding-left: 16px; padding-right: 150px; position: relative;">
+        <div style="font-size:20px; color: #004a8d;">POTVRZENÍ O ZPŘÍSTUPNĚNÍ ÚČTU PRO INKASA</div>
+        <div style="margin-top: 8px; background: #c5d5e8; padding: 2px 20px 18px 20px;">
+            <div style="color: #004a8d; font-size: 10px;">Nevyplňujte - pouze pro potřeby CCS: </div>
+            <div style="">
+                <table width="100%" style="margin-top: 0px; border-collapse: collapse;">
+                    <tr>
+                        <td width="20%"><div style="height: 20px; background: white;"></div></td>
+                        <td width="45%"><div style="height: 20px; background: white; margin-left: 32px;"></div></td>
+                        <td width="35%"><div style="height: 20px; background: white; margin-left: 12px;"></div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div style="position: absolute; right: 16px; top: 16px;">
+            <img src="/resource/ete_images/logo_ccs.png" height="50"/>
+        </div>
+    </div>
+
+    <p style="color: #004a8d;">
+        Vážený zákazníku, pro včasné vyřízení vaší objednávky je třeba před jejím odesláním na naši adresu dát příkaz vaší bance k proplácení inkasních příkazů (vyúčtování za vaše produkty CCS) ve prospěch našich účtů vedených u Komerční banky, a.s a Raiffeisen Bank.
+    </p>
+    <p style="color: #004a8d;">
+        Vyplněné potvrzení o zpřístupnění účtu zašlete do CCS společně s objednávkou. Bez tohoto potvrzení nelze objednávku vyřídit.
+    </p>
+
+    <div style="background: #ff2e37; color: white; padding: 0 24px; width: 35%;">
+        ÚDAJE O SPOLEČNOSTI
+    </div>
+    <div style="padding: 12px 24px; margin-bottom: 16px; background: #ffcbc2;">
+        <div style="color: #ff2e37;">Název společnosti / Jméno a příjmení fyzické osoby - podnikatele (1):</div>
+        <div style="padding: 2px 4px; background: white; margin-top: 4px;">{!currentOpportunity.Account.Name}</div>
+        <div style="margin-top: 10px;">
+            <span style="color: #ff2e37; line-height: 16px;">IČO (případně rodné číslo): </span>
+            <span style="text-align: center; padding: 2px 8px; background: white; width: 194px; display: inline-block; margin-left: 4px; height: 16px;">
+                <span style="visibility: hidden;">.</span>{!currentOpportunity.Account.Steuernummer__c}
+            </span>
+        </div>
+        <div style="margin-top: 10px;">
+            <span style="color: #ff2e37;">Kontaktní telefonní číslo zákazníka: </span>
+            <span style="text-align: center; padding: 2px 8px; background: white; width: 150px; display: inline-block; margin-left: 4px; height: 16px;">
+                <span style="visibility: hidden;">.</span>{!dataContactPrimary.Phone__c}
+            </span>
+        </div>
+    </div>
+
+
+    <div style="background: #ff2e37; color: white; padding: 0 24px; width: 35%;">
+        BANKOVNÍ ÚDAJE 
+    </div>
+    <div style="padding: 12px 24px; margin-bottom: 16px; background: #ffcbc2;">
+        <div style="color: #ff2e37; margin-bottom: 8px;">
+            Zákazník souhlasí s proplácením inkasních příkazů ve prospěch označeného účtu CCS České společnosti pro platební karty s.r.o.:
+        </div>
+        <div style="position: relative;">
+            <div style="display: inline-block; border: 1px solid black; width: 18px; height: 18px; background: white; text-align: center; position: absolute; top: 4px;"></div>
+            <div style="color: #ff2e37; font-size: 10px; display: inline-block; padding-left: 30px;">
+                <div>592140081/0100 pro úhradu transakcí a plateb spojených s používáním karet CCS</div>
+                <div>(CCS Limit, CCS Limit+, CCS Limit Exclusive, CCS Toll) a telematického systému CCS Carnet</div>
+            </div>
+        </div>
+        <div style="position: relative; margin-top: 8px;">
+            <div style="display: inline-block; border: 1px solid black; width: 18px; height: 18px; background: white; text-align: center; position: absolute; top: 4px;"></div>
+            <div style="color: #ff2e37; font-size: 10px; display: inline-block; padding-left: 30px;">
+                <div>5080107299/5500 pro úhradu transakcí a plateb spojených s používáním karet CCS</div>
+                <div>(CCS Limit, CCS Limit+, CCS Limit Exclusive, CCS Toll) a telematického systému CCS Carnet</div>
+            </div>
+        </div>
+        <div style="position: relative; margin-top: 8px;">
+            <div style="display: inline-block; border: 1px solid black; width: 18px; height: 18px; background: white; text-align: center; position: absolute; top: 4px;"></div>
+            <div style="color: #ff2e37; font-size: 10px; display: inline-block; padding-left: 30px; padding-top: 8px;">
+                <div>58300081/0100 pro úhradu transakcí a plateb spojených s používáním mezinárodních karet UTA/CCS</div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 16px;">
+            <span style="color: #ff2e37;">S platností ode dne: </span>
+            <span style="display: inline-block; width: 100px; height: 16px; background-color: white; padding: 2px 8px; margin-left: 8px; text-align: center;">
+                <span style="visibility: hidden;">.</span>
+            </span>
+
+            <span style="display: inline-block; color: #ff2e37; margin-left: 20px;">Inkasní limit účtu je povolen na částku: </span>
+            <span style="display: inline-block; width: 100px; height: 16px; background-color: white; padding: 2px 8px; margin-left: 8px; text-align: center;">
+                <span style="visibility: hidden;">.</span>{!creditLimit}
+            </span>
+            <span style="color: #ff2e37;">Kč</span>
+        </div>
+        <div style="margin-top: 8px;">
+            <span style="display: inline-block; color: #ff2e37;">Číslo účtu: </span>
+            <span style="display: inline-block; width: 150px; height: 16px; background-color: white; padding: 2px 8px; margin-left: 8px; text-align: center;">
+                <span style="visibility: hidden;">.</span>{!dataObject.Bank_Account_Number__c}
+            </span>
+
+            <span style="display: inline-block; color: #ff2e37; margin-left: 20px;">Směrový kód banky: </span>
+            <span style="display: inline-block; width: 50px; height: 16px; background-color: white; padding: 2px 8px; margin-left: 8px; text-align: center;">
+                <span style="visibility: hidden;">.</span>{!dataObject.Bank_Code__c}
+            </span>
+        </div>
+
+        <div style="margin-top: 16px;">
+            <span style="color: #ff2e37;">Zpřístupnění účtu bylo provedeno: </span>
+        </div>
+        <div style="position: relative; margin-top: 8px; display: inline-block;">
+            <div style="display: inline-block; border: 1px solid black; width: 18px; height: 18px; background: white; text-align: center; position: absolute; top: 4px;"></div>
+            <div style="color: #ff2e37; font-size: 10px; display: inline-block; padding-left: 30px; padding-top: 8px;">
+                <div>Přes internet</div>
+            </div>
+        </div>
+        <div style="position: relative; margin-top: 8px; display: inline-block; margin-left: 32px;">
+            <div style="display: inline-block; border: 1px solid black; width: 18px; height: 18px; background: white; text-align: center; position: absolute; top: 4px;"></div>
+            <div style="color: #ff2e37; font-size: 10px; display: inline-block; padding-left: 30px; padding-top: 8px;">
+                <div>V bance</div>
+            </div>
+        </div>
+        
+
+        <div style="margin-top: 20px; color: #ff2e37;">
+            <div>Čestné prohlášení:</div>
+            <div>Níže podepsaný zákazník tímto čestně prohlašuje, že uvedené údaje o zpřístupnění účtu jsou správné a pravdivé.</div>
+        </div>
+        <table width="100%" style="margin-top: 4px; border-collapse: collapse;">
+            <tr>
+                <td width="60%">
+                    <div style="height: 110px; background-color: white;">
+                        <div style="color: #ffcbc2; padding: 8px;">
+                            <div style="font-size: 10px;">Datum, razítko a podpis zákazníka</div>
+                            <div style="font-size: 10px;">(u právnických osob statutární orgán nebo prokurista dle OR)</div>
+                        </div>
+                    </div>
+                </td>
+                <td width="35%">
+                    <div style="height: 110px; background-color: white; margin-left: 20px;">
+                        <div style="color: #ffcbc2; padding: 8px;">
+                            <div style="font-size: 10px;">Datum, razítko a podpis banky</div>
+                            <div style="font-size: 10px;">(pouze při osobní návštěvě v bance)</div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="background-color: #004a8d; font-size: 14px; color: white; padding: 0 24px;  width: 35%;">
+        UPOZORNĚNÍ
+    </div>
+    <div style="padding: 12px 24px; margin-bottom: 16px; background-color: #bed0e5; color: #004a8d;">
+        <div>Zpřístupnění účtu musí umožnit realizaci více inkasních příkazů v měsíci.</div>
+        <div style="margin-top: 8px;">Je třeba, aby inkasní limit zohledňoval limit na kartách a skutečnost, že první platba budou poplatky za výrobu karet a peněžitá záruka v případě, že jsou vyžadovány.</div>
+    </div>
+    
+    <div style="color: #004a8d; text-align: center; font-size: 10px; margin-top: 32px;">
+        <div>Potvrzení se vystavuje pro potřeby společnosti CCS Česká společnost pro platební karty s.r.o.</div>
+        <div>CCS Česká společnost pro platební karty s.r.o., Voctářova 2500/20a, 180 00 Praha 8 • tel.: +420 266 108 108 • fax: +420 266 108 588 • e-mail: market@ccs.cz • www.ccs.cz</div>
+    </div>
+</div>

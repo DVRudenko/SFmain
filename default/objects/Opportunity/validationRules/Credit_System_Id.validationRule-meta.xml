@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_System_Id</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Datansatztyp_auto__c = "Euroshell", Credit_System_Id__c != null, OR(AND(Account.BillingCountry = "Austria", LEN(Credit_System_Id__c) != 10, LEN(Credit_System_Id__c) != 14), AND(Account.BillingCountry = "Germany", LEN(Credit_System_Id__c) != 7, LEN(Credit_System_Id__c) != 8), NOT(ISNUMBER(Credit_System_Id__c))))</errorConditionFormula>
+    <errorDisplayField>Credit_System_Id__c</errorDisplayField>
+    <errorMessage>Invalid Format</errorMessage>
+</ValidationRule>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Fields to display --></label>
+    <name>Fields_to_display__c</name>
+    <picklistValues>
+        <masterLabel>Category_of_products__c</masterLabel>
+        <translation><!-- Category_of_products__c --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Company_Name__c</masterLabel>
+        <translation><!-- Company_Name__c --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Driver_Name__c</masterLabel>
+        <translation><!-- Driver_Name__c --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>License_plate_number__c</masterLabel>
+        <translation><!-- License_plate_number__c --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mileage_data__c</masterLabel>
+        <translation><!-- Mileage_data__c --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Type_of_Card__c</masterLabel>
+        <translation><!-- Type_of_Card__c --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Type_of_Vehicle__c</masterLabel>
+        <translation><!-- Type_of_Vehicle__c --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

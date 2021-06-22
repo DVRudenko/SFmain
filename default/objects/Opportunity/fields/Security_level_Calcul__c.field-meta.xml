@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Security_level_Calcul__c</fullName>
+    <description>Нужна?????????</description>
+    <externalId>false</externalId>
+    <formula>VALUE( TEXT(Security_level_H_he_der_Sicherheit__c))</formula>
+    <label>Security level Calcul</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Frau</fullName>
+        <default>false</default>
+        <label>Frau</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Herr</fullName>
+        <default>false</default>
+        <label>Herr</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Frau Dr.</fullName>
+        <default>false</default>
+        <label>Frau Dr.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Herr Dr.</fullName>
+        <default>false</default>
+        <label>Herr Dr.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Frau Prof.</fullName>
+        <default>false</default>
+        <label>Frau Prof.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Herr Prof.</fullName>
+        <default>false</default>
+        <label>Herr Prof.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Slečna</fullName>
+        <default>false</default>
+        <label>Slečna</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mr.</fullName>
+        <default>false</default>
+        <label>Mr.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ms.</fullName>
+        <default>false</default>
+        <label>Ms.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mrs.</fullName>
+        <default>false</default>
+        <label>Mrs.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dr.</fullName>
+        <default>false</default>
+        <label>Dr.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prof.</fullName>
+        <default>false</default>
+        <label>Prof.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Ing.</fullName>
+        <default>false</default>
+        <label>Ing.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bc.</fullName>
+        <default>false</default>
+        <label>Bc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dis.</fullName>
+        <default>false</default>
+        <label>Dis.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mgr.</fullName>
+        <default>false</default>
+        <label>Mgr.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Mgr.Ing.</fullName>
+        <default>false</default>
+        <label>Mgr.Ing.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>plk.Ing.</fullName>
+        <default>false</default>
+        <label>plk.Ing.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>plk.Mgr.Bc.</fullName>
+        <default>false</default>
+        <label>plk.Mgr.Bc.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MUDr.</fullName>
+        <default>false</default>
+        <label>MUDr.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>JUDr.</fullName>
+        <default>false</default>
+        <label>JUDr.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RNDr.</fullName>
+        <default>false</default>
+        <label>RNDr.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MVDr.</fullName>
+        <default>false</default>
+        <label>MVDr.</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Damen und Herren</fullName>
+        <default>false</default>
+        <label>Damen und Herren</label>
+    </standardValue>
+</StandardValueSet>

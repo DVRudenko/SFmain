@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMConnect__Blended_List__c</fullName>
+    <deprecated>false</deprecated>
+    <description>The list which is the destination for the combined work</description>
+    <externalId>false</externalId>
+    <label>Blended List</label>
+    <referenceTo>NVMConnect__DialList__c</referenceTo>
+    <relationshipLabel>Aggregations</relationshipLabel>
+    <relationshipName>Aggregations</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

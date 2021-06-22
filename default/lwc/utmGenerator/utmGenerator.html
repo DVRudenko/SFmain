@@ -1,0 +1,99 @@
+<template>
+    <div class="utm-generator">
+        <article class="slds-card">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-account"
+                              title="account">
+                            <svg class="slds-icon slds-icon_small"
+                                 aria-hidden="true">
+                                <use
+                                     xlink:href="/apexpages/slds/latest/assets/icons/standard-sprite/svg/symbols.svg#link">
+                                </use>
+                            </svg>
+                            <span class="slds-assistive-text">UTM</span>
+                        </span>
+                    </div>
+                    <div class="slds-media__body">
+                        <h2 class="slds-card__header-title">
+                            <span
+                               class="slds-card__header-link slds-truncate"
+                               title="UTM URL GENERATOR">
+                                <span>UTM URL GENERATOR</span>
+                            </span>
+                        </h2>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-card__body_inner">
+                <template if:false={isReady}>
+                    <div class="slds-m-vertical_large">
+                        <c-loading-content text="Loading..."></c-loading-content>
+                    </div>
+                </template>
+                <template if:true={isReady}>
+                    <lightning-combobox class="slds-m-vertical_small"
+                                        value={currentCountry}
+                                        label="Select country"
+                                        placeholder="Select Country"
+                                        options={countries}
+                                        onchange={handleChangeCountry}>
+                    </lightning-combobox>
+
+                    <lightning-combobox if:true={countryNamespaces.length}
+                                        class="slds-m-vertical_small"
+                                        value={currentNamespace}
+                                        label="Select namespace"
+                                        placeholder="Select namespace"
+                                        options={countryNamespaces}
+                                        onchange={handleChangeNamespaces}>
+                    </lightning-combobox>
+
+                    <div class="slds-m-bottom_small">
+                        <lightning-combobox class="utm-family slds-m-bottom_xx-small"
+                                            label="Select family"
+                                            placeholder="Select Family"
+                                            options={notSelected}
+                                            onchange={handleChangeNotSelectedFamily}>
+                        </lightning-combobox>
+
+                        <lightning-pill-container if:true={selectedFamilyItems.length}
+                                                  items={selectedFamilyItems}
+                                                  onitemremove={handleItemRemove}></lightning-pill-container>
+                    </div>
+                    <lightning-dual-listbox name="languages"
+                                            class="slds-m-bottom_large"
+                                            label="Select products"
+                                            source-label="Available"
+                                            selected-label="Selected"
+                                            value={selectedProducts}
+                                            options={products}
+                                            onchange={handleChangeProducts}></lightning-dual-listbox>
+                    <template if:true={selectedProducts.length}>
+                        <div class="slds-text-align_center slds-m-bottom_large">
+                            <lightning-button variant="brand"
+                                              label="Generate"
+                                              title="Generate"
+                                              onclick={handleClickGenerate}></lightning-button>
+                        </div>
+                        <div if:true={link}
+                             class="slds-box slds-theme_shade">
+                            <div class="slds-p-vertical_xx-small overflow-dots">
+                                <a href={link}>{link}</a>
+                                <div class="temp-text-area"
+                                     lwc:dom="manual"></div>
+                            </div>
+                            <div class="slds-text-align_center">
+                                <lightning-button onclick={copyToClipboard}
+                                                  label="Copy"
+                                                  title="Copy"
+                                                  icon-name="utility:copy_to_clipboard"></lightning-button>
+                            </div>
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </article>
+    </div>
+</template>

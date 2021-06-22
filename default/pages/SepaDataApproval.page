@@ -1,0 +1,192 @@
+<apex:page controller="SepaDataApprovalController" action="{! init }" standardStylesheets="false" sidebar="false" showHeader="false">
+    <apex:form >
+        <style>
+            blockquote{quotes:none}:focus{outline:0}
+
+            body {
+                background-color: #f9f9f9;
+                color: #222;
+                font-family: Cantarell, Verdana, sans-serif;
+                font-size: 12px;
+            }
+
+            #container {
+                background-color: #f4f4f4;
+                border: 1px solid #ccc;
+                box-shadow: 0 10px 4px -4px rgba(0, 0, 0, .1);
+                width: 720px;
+                height: 590px;
+                margin: 5% auto;
+                overflow: hidden;
+                position: relative;
+            }
+
+            #container .form { margin: 6px 72px 0 72px; }
+            
+            #container h1{
+                font-size: Cantarell, Verdana, sans-serif;
+                text-align: center;
+                font-size: 24px;
+                text-shadow: 1px 1px 1px #222;
+                margin-top: 40px;
+            }
+            
+            #container .field {
+                color: #888;
+                border: 1px solid #ccc;
+                box-shadow: inset 0 0 20px 0 rgba(0, 0, 0, .2);
+                font-family: Cantarell, Verdana, sans-serif;
+                font-weight: bold;
+                font-size: 15px;
+                width: 280px;
+                height: 35px;
+                padding: 0 25px;
+                margin: 10px 0;
+                float: left;    
+                border-radius: 6px;
+                -moz-border-radius: 6px;
+                -webkit-border-radius: 6px;
+            }
+            #container input.submit:focus { border: none; }
+            
+            #container input:focus, #container select:focus {
+                border: 1px solid gray;
+                color: #a90329;
+            }
+
+            .tableForm td {
+                color: #666;
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 14px;
+                padding-right: 10px;
+                text-align: right;
+            }
+
+            .field::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+            .field::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+            .field:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+            .field:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+            .field:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+            .field:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+            .field:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+            .field:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+            .button {
+                text-align: center;     
+            }
+            .approveButton {
+                background-color: #f62930;
+                color: white;
+                width: 140px;
+                height: 35px;
+                font-family: Cantarell, Verdana, sans-serif;
+                font-size: 15px;
+                margin-top: 30px;
+                border-radius: 5px;
+            }
+            .approveButton:hover {
+                background-color: #af2335;
+                -webkit-transition: 0.5s;
+                -moz-transition: 0.5s;
+                -o-transition: 0.5s;
+                -ms-transition: 0.5s;
+                transition: 0.5s;
+            }
+            .approveButton:active {
+                color: white;
+            }
+
+            /*.message {
+                color: red;
+                font-weight: bold;
+            }*/
+
+            .message .messageTable {
+                margin: 0 auto !important;
+                font-weight: bold;
+                font-size: 15px;
+            }
+
+            .confirmM3,
+            .confirmMessage {
+                color: green;
+                text-align: center;
+                font-size: 18px;
+            }
+            .errorM3,
+            .errorMessage {
+                color: red;
+                text-align: center;
+                font-size: 18px;
+            }
+            .errorM3 h4 {
+                display: none;
+            }
+            .confirmM3 h4 {
+                display: none;
+            }
+        </style>    
+        <div id="container">
+            <div style="text-align: center;">
+                <apex:image width="100%" height="200px" value="{! 
+                    IF(convertOpp.Account.BillingCountry = 'Germany',
+                        URLFOR($Resource.Fleetcor_SEPA_Form, 'img/fltEuroshellCardLogo_DE.png'),
+                    IF(OR(convertOpp.Account.BillingCountry = 'Netherlands', convertOpp.Account.BillingCountry = 'Belgium-NL'),
+                        URLFOR($Resource.Fleetcor_SEPA_Form, 'img/fltEuroshellCardLogo_NL.png'), 
+                    IF(OR(convertOpp.Account.BillingCountry = 'France', convertOpp.Account.BillingCountry = 'Belgium-FR'),
+                        URLFOR($Resource.Fleetcor_SEPA_Form, 'img/fltEuroshellCardLogo_FR.png'),
+                    URLFOR($Resource.Fleetcor_SEPA_Form, 'img/fltEuroshellCardLogo_DE.png'))))}" />
+            </div>      
+            <h1>{! IF(convertOpp.Account.BillingCountry = 'Germany',
+                        'SEPA Bestätigungsanfrage',
+                    IF(OR(convertOpp.Account.BillingCountry = 'Netherlands', convertOpp.Account.BillingCountry = 'Belgium-NL'),
+                        'SEPA bevestigingsformulier',
+                    IF(OR(convertOpp.Account.BillingCountry = 'France', convertOpp.Account.BillingCountry = 'Belgium-FR'),
+                        'Confirmation du formulaire SEPA',
+                    'SEPA Bestätigungsanfrage')))}</h1>
+            <div class="message">
+                <div class="errorMessage">{! errorMessage }</div>
+                <div class="confirmMessage">{! confirmMessage }</div>
+            </div>
+            <div class="form">
+                <table class="tableForm" width="100%">
+                    <tr>
+                        <td>{! IF(convertOpp.Account.BillingCountry = 'Germany',
+                                    'Name des Zahlungspflichtigen*',
+                                IF(OR(convertOpp.Account.BillingCountry = 'Netherlands', convertOpp.Account.BillingCountry = 'Belgium-NL'),
+                                    'Naam van de betalingsplichtige*',
+                                IF(OR(convertOpp.Account.BillingCountry = 'France', convertOpp.Account.BillingCountry = 'Belgium-FR'),
+                                    'Nom du titulaire du compte*',
+                                'Name des Zahlungspflichtigen*')))}</td>
+                        <td>
+                            <apex:inputText styleClass="field" value="{! accountHolderName }" maxlength="100"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>IBAN*</td>
+                        <td>
+                            <apex:inputText styleClass="field" value="{! iban }" maxlength="34"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SWIFT BIC*</td>
+                        <td>
+                            <apex:inputText styleClass="field" value="{! swift }" maxlength="50"/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="button">
+                <apex:commandbutton id="approve" action="{! doDataApproval }" styleClass="approveButton" value="{! 
+                    IF(convertOpp.Account.BillingCountry = 'Germany',
+                        'Bestätigen',
+                    IF(OR(convertOpp.Account.BillingCountry = 'Netherlands', convertOpp.Account.BillingCountry = 'Belgium-NL'),
+                        'Bevestigen',
+                    IF(OR(convertOpp.Account.BillingCountry = 'France', convertOpp.Account.BillingCountry = 'Belgium-FR'),
+                        'Soumettre',
+                    'Bestätigen')))}" />
+            </div>             
+        </div>
+    </apex:form>
+</apex:page>

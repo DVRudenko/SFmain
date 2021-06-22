@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If it was from a Seek list, the name of the query that placed the record in the queue. --></help>
+    <label><!-- Query Name --></label>
+    <name>isdc_dialer_query_name__c</name>
+</CustomFieldTranslation>

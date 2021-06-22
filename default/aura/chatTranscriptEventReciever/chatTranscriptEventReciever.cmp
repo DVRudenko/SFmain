@@ -1,0 +1,13 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="timestamp" type="String"/>
+
+
+    <lightning:conversationToolkitAPI aura:id="conversationKit" />
+    <lightning:workspaceAPI aura:id="workspace"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:handler event="lightning:conversationChatEnded" action="{!c.onChatEnded}" />
+    <aura:handler event="lightning:conversationNewMessage" action="{!c.onNewMessage}" />
+</aura:component>	

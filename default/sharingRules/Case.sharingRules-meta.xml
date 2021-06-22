@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>CaseShareEurope</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>share access to all case with &#39;Support&#39; record type to service agents in europe</description>
+        <label>CaseShareEurope</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Service_Manager</roleAndSubordinatesInternal>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Support,Support CCS</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>NewRussian_Cases</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>NewRussian_Cases</label>
+        <sharedTo>
+            <group>AllRussianRoles</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Russian Cases</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Status</field>
+            <operation>equals</operation>
+            <value>New</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Russian_Cases</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Russian_Cases</label>
+        <sharedTo>
+            <group>AllRussianRoles</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Russian Cases</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Status</field>
+            <operation>notEqual</operation>
+            <value>New</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>PPR_Teamleader_KAM0</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Доступ к обращениям O.Yarygina</description>
+        <label>PPR Teamleader KAM</label>
+        <sharedTo>
+            <role>PPR_KAM_Teamleader</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000006srF1</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>sharing_with_CreditCaseManagement_Role</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>sharing with CreditCaseManagement Role</label>
+        <sharedTo>
+            <role>Credit_Managing_Cases</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Support,Support CCS</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>CSCaseShareAccess</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>access to cases not related to lead/contact/account and assigned on Customer Service Europe users or responsible for cases in Europe</description>
+        <label>CSCaseShareAccess</label>
+        <sharedTo>
+            <group>CaseManagementEurope</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>CaseManagementEurope</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CaseShareEuropeAll</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>share access to cases not related to lead/contact/account and assigned on  users not from Case Management group</description>
+        <label>CaseShareEuropeAll</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Role_Up</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Role_Up</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CaseShareEuropeAll2</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CaseShareEuropeAll</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Role_Up</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <group>CaseManagementEurope</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PPR_Telesales</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Доступ V.Polyakova к обращениям FS</description>
+        <label>PPR Telesales</label>
+        <sharedTo>
+            <role>PPR_Bryansk</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>PPR_Field_Sales_Team_Leaders</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PPR_Telesales_mentor</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Доступ к обращениям PPR &amp; GPC</description>
+        <label>PPR Telesales (mentor)</label>
+        <sharedTo>
+            <role>PPR_Telesales_mentor</role>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>PPRCommercialSales</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Russian_Admins</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Russian Admins</label>
+        <sharedTo>
+            <group>Russian_Admins</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>AllRussianRoles</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

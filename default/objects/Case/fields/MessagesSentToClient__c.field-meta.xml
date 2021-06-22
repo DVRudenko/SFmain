@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MessagesSentToClient__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>store the number of messages sent to a client in a case/updated in Process builder 'Update Support Case Fields'</description>
+    <externalId>false</externalId>
+    <label>MessagesSentToClient</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

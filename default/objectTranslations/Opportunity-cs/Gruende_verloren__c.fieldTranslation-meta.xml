@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Kategorie fáze</label>
+    <name>Gruende_verloren__c</name>
+    <picklistValues>
+        <masterLabel>AGB nicht aktzeptiert</masterLabel>
+        <translation>Finance/Kredit: Nesouhlasí s VOP</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>After Sales - Degussa</masterLabel>
+        <translation><!-- After Sales - Degussa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Already FLEETCOR Customer</masterLabel>
+        <translation><!-- Already FLEETCOR Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Bezahlmethode - Cash</masterLabel>
+        <translation>Jiný způsob platby - hotovost</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Bezahlmethode - EC/Kreditkarte</masterLabel>
+        <translation>Jiný způsob platby - kreditní karta</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Bezahlmethode - Tankkarte</masterLabel>
+        <translation>Jiný způsob platby - tankovací karta</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Andere Bezahlmethode - VISA</masterLabel>
+        <translation>Jiný způsob platby - VISA</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - bessere Zahlungsbeding</masterLabel>
+        <translation>Jiný produkt - lepší platební podmínky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - geringere Kosten</masterLabel>
+        <translation>Jiný produkt - nižší náklady</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - höheres Kreditlimit</masterLabel>
+        <translation>Jiný produkt - vyšší záruka</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - keine Garantien</masterLabel>
+        <translation>Jiný produkt - bez záruky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Anderes Produkt - mehr Features</masterLabel>
+        <translation>Jiný produkt - další funkce</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Angabenkorrektur nicht möglich</masterLabel>
+        <translation>Jiné: Není možné opravit detaily</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bearbeitung - Degussa</masterLabel>
+        <translation><!-- Bearbeitung - Degussa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bestellprozess zu lange</masterLabel>
+        <translation>Proces moc zdlouhavý</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Black List</masterLabel>
+        <translation><!-- Black List --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Brand</masterLabel>
+        <translation><!-- Brand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change his mind</masterLabel>
+        <translation><!-- Change his mind --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Competitors</masterLabel>
+        <translation>Konkurence</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Coverage/Acceptance</masterLabel>
+        <translation>Akceptace/Pokrytí</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Report not available</masterLabel>
+        <translation><!-- Credit Report not available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer not reached</masterLabel>
+        <translation><!-- Customer not reached --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deposit – not confirmed</masterLabel>
+        <translation>Depozit - nepotvrzeno</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Didn&apos;t confirm card order</masterLabel>
+        <translation>Nepotvrzeno</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct debit</masterLabel>
+        <translation>Inkaso</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Duplicate</masterLabel>
+        <translation>Duplicita</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Execution</masterLabel>
+        <translation>Finance/Kredit: Exekuce</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial/Credit</masterLabel>
+        <translation>Finance/Kredit</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Firma zu jung</masterLabel>
+        <translation><!-- Firma zu jung --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gebühren</masterLabel>
+        <translation>Finance/Kredit: Jiné poplatky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grundgebühr</masterLabel>
+        <translation>Finance/Kredit: Základní poplatky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kartenantrag zu umfangreich</masterLabel>
+        <translation>Proces moc rozsáhlý</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine Kaution als Sicherheit</masterLabel>
+        <translation>Záruka jako zajištění</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine MwSt.-fähige Rechnung / Tankdaten</masterLabel>
+        <translation>Bez daňových info na faktuře</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine Produktlevel-Kontrolle</masterLabel>
+        <translation>Nedostatečná kontrola na úrovni produktu</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine steuerbare Rechnung / Tankdaten</masterLabel>
+        <translation>Nelze žádat o vrácení DPH s fakturou</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kreditlimit zu gering</masterLabel>
+        <translation>Záruku moc nízká</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kunde meldet sich bei Interesse</masterLabel>
+        <translation>Zákazník zavolá zpátky sám</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lost to competition</masterLabel>
+        <translation>Lepší konkurenční nabídka</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mindestbestellwert nicht erfüllt</masterLabel>
+        <translation><!-- Mindestbestellwert nicht erfüllt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mit aktueller Lösung zufrieden</masterLabel>
+        <translation>Spokojený s platebními podmínky</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mitbewerber</masterLabel>
+        <translation>Lepší konkurenční nabídka</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mitbewerber besseres Angebot</masterLabel>
+        <translation><!-- Mitbewerber besseres Angebot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a Lead/Opportunity</masterLabel>
+        <translation>Nejedná se o Příležitost</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not a legal entity</masterLabel>
+        <translation>Jiné: Společnost zanikla</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not interested</masterLabel>
+        <translation><!-- Not interested --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Jiné (specifikujte)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Package Carnet - card exchange</masterLabel>
+        <translation>Balíček Carnet-záměna karet</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment Conditions</masterLabel>
+        <translation><!-- Payment Conditions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Potential fraud</masterLabel>
+        <translation>Jiné: Pravděpodobný podvod</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Preisvorteil zu gering</masterLabel>
+        <translation>Finance/Kredit: Nízká sleva</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Processing Too Long</masterLabel>
+        <translation>Nezpracováno včas</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product features</masterLabel>
+        <translation>Vlastnosti produktu</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refused Credit</masterLabel>
+        <translation>Finance/Kredit: Zamítnuto kreditem</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refused Credit H, Š</masterLabel>
+        <translation>Zamítnuto Kreditem H, Š</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sicherheit nicht bereitgestellt</masterLabel>
+        <translation>Finance/Kredit: Garance/Jistina/Záruka</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sonstige</masterLabel>
+        <translation>Jiné: Neurčeno</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sonstige Gebühren</masterLabel>
+        <translation><!-- Sonstige Gebühren --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spam</masterLabel>
+        <translation><!-- Spam --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C – Kartengebühr</masterLabel>
+        <translation><!-- T&amp;C – Kartengebühr --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T&amp;C – sonstige Kosten und Gebühren</masterLabel>
+        <translation><!-- T&amp;C – sonstige Kosten und Gebühren --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tanken nur in einem Netz / an einer Station</masterLabel>
+        <translation><!-- Tanken nur in einem Netz / an einer Station --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Too Small Price Advantage</masterLabel>
+        <translation><!-- Too Small Price Advantage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unterlagen zu umfangreich</masterLabel>
+        <translation><!-- Unterlagen zu umfangreich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vereinbarung zu umfangreich</masterLabel>
+        <translation><!-- Vereinbarung zu umfangreich --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wartezeit / Bearbeitung zu lange</masterLabel>
+        <translation><!-- Wartezeit / Bearbeitung zu lange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wartezeit zu lange</masterLabel>
+        <translation>Jiné: Trvá příliš dlouho</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wrong contact detail</masterLabel>
+        <translation><!-- Wrong contact detail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Young company (less than 18 months)</masterLabel>
+        <translation><!-- Young company (less than 18 months) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zahlungsbedingungen</masterLabel>
+        <translation>Finance/Kredit: Doba splatnosti</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zahlungsbedingungen zu kurz</masterLabel>
+        <translation><!-- Zahlungsbedingungen zu kurz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zu wenig Nachlässe</masterLabel>
+        <translation><!-- Zu wenig Nachlässe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zu wenig Rabatte</masterLabel>
+        <translation><!-- Zu wenig Rabatte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zusätzliche Sicherheit / Kontrolle nicht interessant</masterLabel>
+        <translation><!-- Zusätzliche Sicherheit / Kontrolle nicht interessant --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

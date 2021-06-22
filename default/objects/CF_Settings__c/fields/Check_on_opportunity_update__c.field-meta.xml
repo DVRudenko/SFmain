@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_on_opportunity_update__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checks record when it is updated</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checks record when it is updated</inlineHelpText>
+    <label>Check on opportunity update</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

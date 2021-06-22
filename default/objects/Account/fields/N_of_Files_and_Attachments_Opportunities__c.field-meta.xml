@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>N_of_Files_and_Attachments_Opportunities__c</fullName>
+    <externalId>false</externalId>
+    <label># of Files and Attachments Opportunities</label>
+    <summarizedField>Opportunity.Number_of_Files_and_Attachments__c</summarizedField>
+    <summaryForeignKey>Opportunity.AccountId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

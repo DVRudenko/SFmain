@@ -1,0 +1,83 @@
+<apex:page name="SharingAccount" standardController="Account" extensions="SharingAccountController" readOnly="true">
+    <apex:form >
+        <apex:sectionHeader title="{!$ObjectType.Account.Label}" subtitle="{!if(account.Id==null,'Account',account.Name)}"></apex:sectionHeader>
+        <apex:pageBlock mode="detail" id="accountPB">
+            <apex:pageBlockSection id="accountInformationPBS" title="{!$ObjectType.Account.Label}">
+                <apex:outputField value="{!account.OwnerId}"></apex:outputField>
+                <apex:outputField value="{!account.Name}"></apex:outputField>
+                <apex:outputField value="{!account.Phone}"></apex:outputField>
+                <apex:outputField value="{!account.Industry}"></apex:outputField>
+                <apex:outputField value="{!account.OKVED__c}"></apex:outputField>
+                <apex:outputField value="{!account.INN__c}"></apex:outputField>
+                <apex:outputField value="{!account.Company_Legal_Name1__c}"></apex:outputField>
+                <apex:outputField value="{!account.Organization_Type__c}"></apex:outputField>
+                <apex:outputField value="{!account.Type}"></apex:outputField>
+                <apex:outputField value="{!account.Website}"></apex:outputField>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+
+        <apex:pageBlock mode="detail" id="accountAI">
+            <apex:pageBlockSection id="accountInformationPBS" title="Адрес">
+                <apex:outputField value="{!account.BillingState}"></apex:outputField>
+                <apex:outputField value="{!account.BillingCity}"></apex:outputField>
+                <apex:outputField value="{!account.BillingStreet}"></apex:outputField>
+                <apex:outputField value="{!account.BillingPostalCode}"></apex:outputField>
+                <apex:outputField value="{!account.Region__c}"></apex:outputField>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+
+    <apex:pageBlock title="{!$ObjectType.OpenActivity.Label}">
+        <apex:pageBlockTable value="{!account.OpenActivities}" var="openActive">
+            <apex:column value="{!openActive.Subject}"/>
+            <apex:column value="{!openActive.Who.Name}"/>
+            <apex:column value="{!openActive.IsTask}"/>
+            <apex:column value="{!openActive.ActivityDate}"/>
+            <apex:column value="{!openActive.Status}"/>
+            <apex:column value="{!openActive.Priority}"/>
+            <apex:column value="{!openActive.OwnerId}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="{!$ObjectType.ActivityHistory.Label}">
+        <apex:pageBlockTable value="{!account.ActivityHistories}" var="historyActive">
+            <apex:column value="{!historyActive.Subject}"/>
+            <apex:column value="{!historyActive.Who.Name}"/>
+            <apex:column value="{!historyActive.Description}"/>
+            <apex:column value="{!historyActive.IsTask}"/>
+            <apex:column value="{!historyActive.ActivityDate}"/>
+            <apex:column value="{!historyActive.Status}"/>
+            <apex:column value="{!historyActive.Priority}"/>
+            <apex:column value="{!historyActive.OwnerId}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="{!$ObjectType.AccountHistory.Label}">
+        <apex:pageBlockTable value="{!accountHistory}" var="history">
+            <apex:column headerValue="Дата" value="{!history.theDate}"/>
+            <apex:column headerValue="Пользователь">
+                <apex:outputLink value="/{!history.userId}"> {!history.who} </apex:outputLink>
+            </apex:column>
+            <apex:column headerValue="Действие"><apex:outputText escape="false" value="{!history.action}"/></apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="{!$ObjectType.Opportunity.Label}">
+        <apex:pageBlockTable value="{!opportunityList}" var="opp">
+            <apex:column value="{!opp.Name}"/>
+            <apex:column value="{!opp.CreatedDate}"/>
+            <apex:column value="{!opp.StageName}"/>
+            <apex:column value="{!opp.Contract_Number__c}"/>
+            <apex:column value="{!opp.CloseDate}"/>
+            <apex:column value="{!opp.ALL_Cards__c}"/>
+            <apex:column value="{!opp.Number_of_Vehicles__c}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="{!$ObjectType.Contact.Label}">
+        <apex:pageBlockTable value="{!account.Contacts}" var="contact">
+            <apex:column value="{!contact.Name}"/>
+            <apex:column value="{!contact.Salutation}"/>
+            <apex:column value="{!contact.title}"/>
+            <apex:column value="{!contact.email}"/>
+            <apex:column value="{!contact.phone}"/>
+            <apex:column value="{!contact.mobilePhone}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

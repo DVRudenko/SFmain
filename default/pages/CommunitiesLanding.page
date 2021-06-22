@@ -1,0 +1,66 @@
+<apex:page  id="communitiesLandingPage"
+            title="{!$Label.site.site_login}"
+            showHeader="false"
+            standardStylesheets="false"
+            sidebar="false"
+            docType="html-5.0"
+            applyBodyTag="false"
+            applyHtmlTag="false">
+    <head>
+        <!-- PL -->
+        <meta name="facebook-domain-verification" content="h0f7fb2svbbvwy79qy3rk6jod0vd9i" />
+        <!-- DE -->
+        <meta name="facebook-domain-verification" content="ydi8hzibmrav57udz8xc93ok4avs5i" />
+        <!-- AT -->
+        <meta name="facebook-domain-verification" content="ffiphft7qoonohl4z0504dv17sjdhv" />
+        <!-- BE -->
+        <meta name="facebook-domain-verification" content="kdtkf6r1a2tps9q5frfts96f13hm1o" />
+        <!-- NL -->
+        <meta name="facebook-domain-verification" content="ddhhhr0zltoq9d6q3acrera9whye1g" />
+        <!-- CH -->
+        <meta name="facebook-domain-verification" content="zwqr7oay9upb3z8cxjeek32sa2tcd5" />
+        <!-- HU -->
+        <meta name="facebook-domain-verification" content="envguyd6tqhkazkcp7dbkvx7qdyql1" />
+        <!-- SK -->
+        <meta name="facebook-domain-verification" content="ppoi2u995qc8vzz6i07snza4abd521" />
+        <!-- FR -->
+        <meta name="facebook-domain-verification" content="9mnqc48zs8h96fog3bzs0tfallzu9y" />
+    </head>
+    <body>
+        <script>
+
+            function redirectOnLoad(path) {
+                if (this.SfdcApp && this.SfdcApp.projectOneNavigator) { 
+                    SfdcApp.projectOneNavigator.handleRedirect(path); 
+                }else {
+                    if (window.location.replace){ 
+                        window.location.replace(path);
+                    } else {
+                        window.location.href = path;
+                    } 
+                } 
+            }
+
+            var path = {
+                'online.fleetcor.de': '/etede',
+                'online.fleetcor.pl': '/etepl',
+                'online.fleetcor.at': '/eteat',
+                'online.fleetcor.nl': '/etenl',
+                'online.fleetcor.hu': '/etehu',
+                'online.fleetcor.fr': '/etefr',
+                'online.fleetcor.ch': '/etechde',
+                'online.fleetcorcards.be': '/etebefr',
+                'online.fleetcor.lu': '/etelu',
+                'online.fleetcor.cz': '/etecz',
+                'online.fleetcor.sk': '/etesk',
+                'online.fleetcorcards.be': '/etebenl'
+            };
+
+            var host = window.location.hostname;
+
+            if(path[host]){
+                redirectOnLoad(path[host]);
+            }
+        </script>
+    </body>
+</apex:page>

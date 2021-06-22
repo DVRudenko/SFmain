@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Support</fullName>
+    <description>Support process for Europe case management (11 countries)</description>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Closed</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Customer updated</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Customer waiting</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Internally updated</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Internally waiting</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>New</fullName>
+        <default>true</default>
+    </values>
+    <values>
+        <fullName>Reopened</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Resolved</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

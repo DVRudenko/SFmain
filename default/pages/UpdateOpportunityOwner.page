@@ -1,0 +1,18 @@
+<apex:page standardController="Opportunity" extensions="UpdateOpportunityOwnerCtrl" action="{! init }" recordSetVar="Opportunities">
+	<apex:form >
+		<apex:pageBlock >
+			<apex:pageMessages />
+
+			<apex:pageBlock id="PageBlock">
+				<apex:pageBlockSection columns="1" title="Select new Opportunity owner">
+	        		<apex:inputField id="Opportunity" value="{! opportunity.OwnerId }"/>
+				</apex:pageBlockSection>
+			</apex:pageBlock>
+
+			<apex:pageBlockButtons >
+                <apex:commandButton action="{! updateOppOwner }" value="Update"/>
+                <apex:commandButton action="{! cancel }" value="Cancel"/>
+            </apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

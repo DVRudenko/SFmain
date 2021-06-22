@@ -1,0 +1,14 @@
+<apex:page id="goToOrganizationRequisites" standardController="Opportunity"> 
+    <apex:includeLightning />
+    <body>
+        <div id="lightning"></div>
+        <script>
+            $Lightning.use("c:OrganizationRequisites", function () {
+                $Lightning.createComponent("c:scoringBtn", {}, "lightning", function (component) {
+                    component.set("v.recordType", "{!Opportunity.RecordTypeId}");
+                    component.set("v.opportunityId", "{!Opportunity.id}");
+                });
+            });
+        </script>
+    </body>
+</apex:page>

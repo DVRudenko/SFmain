@@ -1,0 +1,284 @@
+<!--
+ - Created by Nikita.Mikhailov on 28.05.2018.
+ -->
+
+<apex:page id="DashboardContactedLeadReportPPR" controller="DashboardContactedLeadReportPPRCtrl" action="{!init}"
+           readOnly="true">
+    <apex:includeScript value="{! $Resource.jQuery }"/>
+    <apex:includeScript value="{! URLFOR($Resource.jQueryUI,'jquery-ui-1.12.1/jquery-ui.min.js')  }"/>
+    <apex:includeScript value="{! URLFOR($Resource.Tablesorter,'jquery.tablesorter.min.js') }"/>
+    <apex:includeScript value="{!$Resource.StickyTableHeaders}"/>
+    <script type="text/javascript">
+        j$ = jQuery.noConflict();
+
+        j$(document).ready(function () {
+            enableSorting();
+            enableStickyHeaders();
+        });
+
+        function enableLoader(section) {
+            var page = document.querySelector('[id*="' + section + '"]');
+            page.style.opacity = "0.4";
+            page.style.pointerEvents = "none";
+
+            var loader = document.getElementById("loader");
+            loader.style.opacity = "1.0";
+        };
+
+        function disableLoader(section) {
+            var page = document.querySelector('[id*="' + section + '"]');
+            page.style.opacity = "1.0";
+            page.style.pointerEvents = "all";
+
+            var loader = document.getElementById("loader");
+            loader.style.opacity = "0.0";
+
+            //window.scrollTo(0, 0);
+
+            enableSorting();
+            enableStickyHeaders();
+        };
+
+        function enableStickyHeaders() {
+            j$("table[id$='noTasks']").stickyTableHeaders();
+            j$("table[id$='overDue']").stickyTableHeaders();
+        };
+
+        function enableSorting() {
+            j$.tablesorter.addParser({
+                // set a unique id
+                id: 'grades',
+                is: function (s) {
+                    // return false so this parser is not auto detected
+                    return false;
+                },
+                format: function (s, table, cell, cellIndex) {
+                    // format your data for normalization
+                    return s.toString().replace(/true/, /a/).replace(/false/, /b/);
+                },
+                // set type, either numeric or text
+                type: 'text'
+            });
+
+            j$("table[id*='noTasks']").tablesorter({
+                headers: {
+                    8: {
+                        sorter: 'grades'
+                    }
+                }
+            });
+
+            j$("table[id*='overDue']").tablesorter({
+                headers: {
+                    8: {
+                        sorter: 'grades'
+                    }
+                }
+            });
+        };
+    </script>
+    <style>
+
+        body .pbBody .sorterStyle.list tr.headerRow th {
+            background-image: url({! URLFOR($Resource.Tablesorter,'blue/bg.gif') });
+            background-repeat: no-repeat;
+            background-position: center right;
+            cursor: pointer;
+            padding-right: 20px;
+        }
+
+        body .pbBody table.list tr.headerRow th.headerSortUp {
+            background: url({! URLFOR($Resource.Tablesorter,'blue/asc.gif') }) grey no-repeat center right;
+            color: white;
+            font-weight: bold;
+        }
+
+        body .pbBody table.list tr.headerRow th.headerSortDown {
+            background: url({! URLFOR($Resource.Tablesorter,'blue/desc.gif') }) grey no-repeat center right;
+            color: white;
+            font-weight: bold;
+        }
+
+        .div2 .tertiaryPalette {
+            background: #7e5686 !important;
+        }
+
+        .div1 .tertiaryPalette {
+            background: #BA3C3D !important;
+        }
+
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid blue;
+            border-right: 5px solid green;
+            border-bottom: 5px solid red;
+            width: 30px;
+            height: 30px;
+            opacity: 0.0;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+            position: fixed;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <apex:form >
+        <apex:pageMessages />
+
+        <h1 style="margin: 15px 0; font-size: 17px; display: block;">Интересы без открытых задач или с просроченным
+            сроком исполнения</h1>
+
+        <apex:pageBlock >
+            <apex:facet name="header">
+                <apex:outputPanel layout="inline">
+                    <h1 style="margin: 15px 0; font-size: 15px; display: block;">Отчет по:&nbsp;<apex:outputLink value="/{!currentUser.Id}">{!currentUser.Name}</apex:outputLink>
+                        ({! leadNoTasksSsc.resultSize + leadOverDueSsc.resultSize})
+                    </h1>
+                </apex:outputPanel>
+            </apex:facet>
+            <div id="loader" class="loader"/>
+            <apex:outputPanel id="div1" styleClass="div1" layout="block">
+                <apex:pageBlockSection title="Интересы без открытых задач ({!leadNoTasksSsc.resultSize})"
+                                       collapsible="true" columns="1" id="section1">
+                    <apex:outputPanel layout="block" id="paginationButtonsNoTasksTop"
+                                      style="display: inline-block; width: 100%; text-align:right"
+                                      rendered="{!IF(leadsWithoutTasks.size < leadNoTasksSsc.resultSize, true, false)}">
+                        <apex:commandButton value="Начало" action="{!leadNoTasksSsc.first}"
+                                            disabled="{!NOT(leadNoTasksSsc.hasPrevious)}"
+                                            reRender="div1" onClick="enableLoader('section1')"
+                                            onComplete="disableLoader('section1')"/>
+                        <apex:commandButton value="Предыдущая" action="{!leadNoTasksSsc.previous}"
+                                            disabled="{!NOT(leadNoTasksSsc.hasPrevious)}"
+                                            reRender="div1" onClick="enableLoader('section1')"
+                                            onComplete="disableLoader('section1')"/>
+                        <apex:commandButton value="Следующая" action="{!leadNoTasksSsc.next}"
+                                            disabled="{!NOT(leadNoTasksSsc.hasNext)}"
+                                            reRender="div1" onClick="enableLoader('section1')"
+                                            onComplete="disableLoader('section1')"/>
+                        <apex:commandButton value="Конец" action="{!leadNoTasksSsc.last}"
+                                            disabled="{!NOT(leadNoTasksSsc.hasNext)}"
+                                            reRender="div1"
+                                            onClick="enableLoader('section1')" onComplete="disableLoader('section1')"/>
+                    </apex:outputPanel>
+                    <apex:pageBlockTable value="{! leadsWithoutTasks }" var="listWithoutTasks"
+                                         id="noTasks" style="table-layout: fixed;">
+                        <apex:column headerValue="{!$ObjectType.Lead.Fields.Name.label}">
+                            <apex:outputLink value="/{!listWithoutTasks.leadId}"
+                                             target="_blank">{!listWithoutTasks.name}</apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.Lead.Fields.CreatedDate.label}">
+                            <apex:outputText value="{!listWithoutTasks.createdDate}"/>
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.Lead.Fields.LastTransferDate.label}">
+                            <apex:outputText value="{!listWithoutTasks.lastTransferDate}"/>
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.Lead.Fields.Status.label}">
+                            <apex:outputText value="{!listWithoutTasks.status}"/>
+                        </apex:column>
+                        <apex:column headerValue="Дата закрытия последней задачи">
+                            <apex:outputText value="{!listWithoutTasks.taskDate}"/>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:outputPanel layout="block" id="paginationButtonsNoTasksBottom"
+                                      style="display: inline-block; width: 100%; text-align:right"
+                                      rendered="{!IF(leadsWithoutTasks.size < leadNoTasksSsc.resultSize, true, false)}">
+                        <apex:commandButton value="Начало" action="{!leadNoTasksSsc.first}"
+                                            disabled="{!NOT(leadNoTasksSsc.hasPrevious)}"
+                                            reRender="div1" onClick="enableLoader('section1')"
+                                            onComplete="disableLoader('section1')"/>
+                        <apex:commandButton value="Предыдущая" action="{!leadNoTasksSsc.previous}"
+                                            disabled="{!NOT(leadNoTasksSsc.hasPrevious)}"
+                                            reRender="div1" onClick="enableLoader('section1')"
+                                            onComplete="disableLoader('section1')"/>
+                        <apex:commandButton value="Следующая" action="{!leadNoTasksSsc.next}"
+                                            disabled="{!NOT(leadNoTasksSsc.hasNext)}"
+                                            reRender="div1" onClick="enableLoader('section1')"
+                                            onComplete="disableLoader('section1')"/>
+                        <apex:commandButton value="Конец" action="{!leadNoTasksSsc.last}"
+                                            disabled="{!NOT(leadNoTasksSsc.hasNext)}"
+                                            reRender="div1"
+                                            onClick="enableLoader('section1')" onComplete="disableLoader('section1')"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:outputPanel id="div2" styleClass="div2" layout="block">
+                <apex:pageBlockSection title="Интересы с просроченными открытыми задачами ({!leadOverDueSsc.resultSize})"
+                        collapsible="true" columns="1" id="section2">
+                    <apex:outputPanel layout="block" id="paginationButtonsOverDueTop"
+                                      style="display: inline-block; width: 100%; text-align:right"
+                                      rendered="{!IF(leadsWithOverdueTasks.size < leadOverDueSsc.resultSize, true, false)}">
+                        <apex:commandButton value="Начало" action="{!leadOverDueSsc.first}"
+                                            disabled="{!NOT(leadOverDueSsc.hasPrevious)}"
+                                            reRender="div2" onClick="enableLoader('section2')"
+                                            onComplete="disableLoader('section2')"/>
+                        <apex:commandButton value="Предыдущая" action="{!leadOverDueSsc.previous}"
+                                            disabled="{!NOT(leadOverDueSsc.hasPrevious)}"
+                                            reRender="div2" onClick="enableLoader('section2')"
+                                            onComplete="disableLoader('section2')"/>
+                        <apex:commandButton value="Следующая" action="{!leadOverDueSsc.next}"
+                                            disabled="{!NOT(leadOverDueSsc.hasNext)}"
+                                            reRender="div2" onClick="enableLoader('section2')"
+                                            onComplete="disableLoader('section2')"/>
+                        <apex:commandButton value="Конец" action="{!leadOverDueSsc.last}"
+                                            disabled="{!NOT(leadOverDueSsc.hasNext)}"
+                                            reRender="div2" onClick="enableLoader('section2')"
+                                            onComplete="disableLoader('section2')"/>
+                    </apex:outputPanel>
+                    <apex:pageBlockTable value="{! leadsWithOverdueTasks }" var="listWithTasks" rows="1000"
+                                         id="overDue" style="table-layout: fixed;">
+                        <apex:column headerValue="{!$ObjectType.Lead.Fields.Name.label}">
+                            <apex:outputLink value="/{!listWithTasks.leadId}"
+                                             target="_blank">{!listWithTasks.name}</apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.Lead.Fields.CreatedDate.label}">
+                            <apex:outputText value="{!listWithTasks.createdDate}"/>
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.Lead.Fields.LastTransferDate.label}">
+                            <apex:outputText value="{!listWithTasks.lastTransferDate}"/>
+                        </apex:column>
+                        <apex:column headerValue="{!$ObjectType.Lead.Fields.Status.label}">
+                            <apex:outputText value="{!listWithTasks.status}"/>
+                        </apex:column>
+                        <apex:column headerValue="Крайний срок открытой задачи">
+                            <apex:outputText value="{!listWithTasks.taskDate}"/>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:outputPanel layout="block" id="paginationButtonsOverDueBottom"
+                                      style="display: inline-block; width: 100%; text-align:right"
+                                      rendered="{!IF(leadsWithOverdueTasks.size < leadOverDueSsc.resultSize, true, false)}">
+                        <apex:commandButton value="Начало" action="{!leadOverDueSsc.first}"
+                                            disabled="{!NOT(leadOverDueSsc.hasPrevious)}"
+                                            reRender="div2" onClick="enableLoader('section2')"
+                                            onComplete="disableLoader('section2')"/>
+                        <apex:commandButton value="Предыдущая" action="{!leadOverDueSsc.previous}"
+                                            disabled="{!NOT(leadOverDueSsc.hasPrevious)}"
+                                            reRender="div2" onClick="enableLoader('section2')"
+                                            onComplete="disableLoader('section2')"/>
+                        <apex:commandButton value="Следующая" action="{!leadOverDueSsc.next}"
+                                            disabled="{!NOT(leadOverDueSsc.hasNext)}"
+                                            reRender="div2" onClick="enableLoader('section2')"
+                                            onComplete="disableLoader('section2')"/>
+                        <apex:commandButton value="Конец" action="{!leadOverDueSsc.last}"
+                                            disabled="{!NOT(leadOverDueSsc.hasNext)}"
+                                            reRender="div2" onClick="enableLoader('section2')"
+                                            onComplete="disableLoader('section2')"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Fáze kreditního procesu</label>
+    <name>CF_Stage__c</name>
+    <picklistValues>
+        <masterLabel>Auto CW</masterLabel>
+        <translation><!-- Auto CW --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Report Generated</masterLabel>
+        <translation><!-- Credit Report Generated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Credit Report not available</masterLabel>
+        <translation><!-- Credit Report not available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error (Report generated)</masterLabel>
+        <translation><!-- Error (Report generated) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Error (Report not generated)</masterLabel>
+        <translation><!-- Error (Report not generated) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Launched</masterLabel>
+        <translation><!-- Launched --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Manual scoring</masterLabel>
+        <translation><!-- Manual scoring --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not launched</masterLabel>
+        <translation><!-- Not launched --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Credit - Contract Check</masterLabel>
+        <translation><!-- Pending Credit - Contract Check --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Credit Report</masterLabel>
+        <translation><!-- Pending Credit Report --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Credit Report - Additional information was sent</masterLabel>
+        <translation><!-- Pending Credit Report - Additional information was sent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Credit Report - Need information</masterLabel>
+        <translation><!-- Pending Credit Report - Need information --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending Credit Report - Order was sent</masterLabel>
+        <translation><!-- Pending Credit Report - Order was sent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pending deposit</masterLabel>
+        <translation><!-- Pending deposit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Report generated</masterLabel>
+        <translation><!-- Report generated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SEPA Confirmation</masterLabel>
+        <translation><!-- SEPA Confirmation --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

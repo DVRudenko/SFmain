@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Kontaktn_Centrum_Ou_adov</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Note__c</columns>
+    <columns>CCS_Description__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CORE.USERS.ALIAS</field>
+        <operation>equals</operation>
+        <value>vouřa</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Uzavřeno,Disqualified,Diskvalifikován</value>
+    </filters>
+    <label>CCS - Kontaktní Centrum - Ouřadová</label>
+    <language>cs</language>
+    <sharedTo>
+        <roleAndSubordinates>CCS_Administrator</roleAndSubordinates>
+        <roleAndSubordinates>CCS_CZ_Contact_Center</roleAndSubordinates>
+        <roleAndSubordinates>CCS_Contact_Center_Team_Lead</roleAndSubordinates>
+    </sharedTo>
+</ListView>

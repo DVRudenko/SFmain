@@ -1,0 +1,95 @@
+<!--
+ - Created by marekhaken on 14.04.2021.
+ -->
+
+<aura:component controller="AccountQuickOpportunityButtonController" description="AccountQuickOpportunityButton" implements="force:LightningQuickActionWithoutHeader,force:hasRecordId,flexipage:availableForRecordHome">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:attribute name="showSpinner" type="Boolean" default="true"/>
+    <aura:attribute name="disabledBtn" type="Boolean" default="false"/>
+    <aura:attribute name="showError" type="Boolean" default="false"/>
+    <aura:attribute name="errorMessage" type="String" default=""/>
+
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="json" type="String" />
+    <aura:attribute name="fields" type="String" />
+
+    <aura:attribute name="selectedValues" type="String" />
+    <aura:attribute name="scenarioName" type="String" />
+
+    <aura:attribute name="optionsList" type="List" />
+    <aura:attribute name="value" type="String"/>
+
+    <aura:attribute name="Questions" type="List"/>
+    <aura:attribute name="radioGrpValue" type="List"/>
+
+    <aura:if isTrue="{!v.showError}">
+        <div class="slds-notify slds-notify_toast slds-theme_error slds-align_absolute-center">
+            <span class="slds-assistive-text">error</span>
+            <div class="slds-notify__content">
+                <h5 class="slds-text-heading_small slds-align_absolute-center">Error Message </h5>
+                <br/>
+                <p class="slds-align_absolute-center">{!v.errorMessage}</p>
+            </div>
+        </div>
+    </aura:if>
+
+
+
+
+    <aura:html tag="style">
+        .cuf-content {
+        padding: 0 0rem !important;
+        min-height: 12em;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        min-height: 12em;
+        }
+        .slds-modal__content{
+        overflow-y:hidden !important;
+        height:unset !important;
+        max-height:unset !important;
+        min-height: 25em;
+        }
+    </aura:html>
+
+    <header class="modal-header slds-modal__header slds-size_1-of-1">
+        <h2 class="title slds-text-heading_medium">Quick Opportunity</h2>
+    </header>
+
+    <div class="slds-modal__content slds-p-around–x-small slds-size_1-of-1 slds-is-relative" style="padding: 1rem !important">
+        <lightning:radioGroup class="customRadioCls" aura:id="options"
+                              name="radioButtonGroup"
+                              label="Available Scenarios"
+                              options="{!v.optionsList}"
+                              value="{!v.value}" onchange="{!c.selectedRecordType}"/>
+
+        <!-- Staré řešení - výpis možností -->
+        <!--
+        <form class="slds-form-stacked">
+            <aura:iteration items="{!v.Questions}" var="ques">
+                <lightning:radioGroup name="{!ques.question}"
+                                      label="{! ques.question}"
+                                      options="{!ques.answers}"
+                                      value=""
+                                      type="radio"
+                                      required="true" onchange="{!c.selectedVal}"/>
+            </aura:iteration>
+        </form>
+        -->
+        <aura:if isTrue="{!v.showSpinner}">
+            <div class="slds-is-relative">
+                <lightning:spinner alternativeText="Loading" size="medium" />
+            </div>
+        </aura:if>
+    </div>
+
+
+    <footer>
+        <div class="slds-col modal-footer slds-modal__footer">
+            <lightning:button class="slds-button slds-button_neutral" label="Cancel" title="Cancel" onclick="{! c.btnClose }"/>
+            <lightning:button class="slds-button slds-button_brand" label="Create Opportunity" title="Create Opportunity" onclick="{! c.btnClick }" disabled="{!v.disabledBtn}"/>
+        </div>
+    </footer>
+</aura:component>

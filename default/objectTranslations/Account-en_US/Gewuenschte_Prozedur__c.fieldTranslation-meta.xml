@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Desired procedure</label>
+    <name>Gewuenschte_Prozedur__c</name>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Online</masterLabel>
+        <translation>Online</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Papierform</masterLabel>
+        <translation>Paper</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>beides</masterLabel>
+        <translation>Both</translation>
+    </picklistValues>
+</CustomFieldTranslation>

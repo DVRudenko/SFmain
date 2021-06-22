@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SObject_status__c</fullName>
+    <description>the sObject status for which the settings are applied</description>
+    <externalId>false</externalId>
+    <inlineHelpText>the sObject status for which the settings are applied</inlineHelpText>
+    <label>SObject status</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Free</fullName>
+                <default>false</default>
+                <label>Free</label>
+            </value>
+            <value>
+                <fullName>In progress</fullName>
+                <default>false</default>
+                <label>In progress</label>
+            </value>
+            <value>
+                <fullName>Moved to start</fullName>
+                <default>false</default>
+                <label>Moved to start</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

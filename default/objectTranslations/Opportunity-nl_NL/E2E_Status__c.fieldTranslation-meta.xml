@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- E2E Status --></label>
+    <name>E2E_Status__c</name>
+    <picklistValues>
+        <masterLabel>Abandoned (hard)</masterLabel>
+        <translation><!-- Abandoned (hard) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Abandoned (soft)</masterLabel>
+        <translation><!-- Abandoned (soft) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Finished</masterLabel>
+        <translation><!-- Finished --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>In progress</masterLabel>
+        <translation><!-- In progress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Introduction</masterLabel>
+        <translation><!-- Introduction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected</masterLabel>
+        <translation><!-- Rejected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Клиент Активен</masterLabel>
+        <translation><!-- Клиент Активен --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Клиент завершил</masterLabel>
+        <translation><!-- Клиент завершил --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Клиент не активен</masterLabel>
+        <translation><!-- Клиент не активен --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Отказ от E2E</masterLabel>
+        <translation><!-- Отказ от E2E --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

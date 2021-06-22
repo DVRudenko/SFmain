@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The total number of hours between date/time opened and the date/time when the first interaction with a client has been made. --></help>
+    <label><!-- Reaction Time --></label>
+    <name>Reaction_Time__c</name>
+</CustomFieldTranslation>

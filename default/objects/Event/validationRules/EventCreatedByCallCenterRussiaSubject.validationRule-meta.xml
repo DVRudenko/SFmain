@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EventCreatedByCallCenterRussiaSubject</fullName>
+    <active>true</active>
+    <description>SFG-40/ field territory call center manager should only create events with specific subject</description>
+    <errorConditionFormula>AND(
+ISNEW(),
+$UserRole.DeveloperName  = &#39;PPR_FieldTerritory_Call_Center&#39;,
+Subject != &#39;Встреча КЦ&#39;
+)</errorConditionFormula>
+    <errorMessage>Please enter correct subject: Встреча КЦ.</errorMessage>
+</ValidationRule>

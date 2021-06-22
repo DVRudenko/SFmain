@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_length__c</fullName>
+    <description>Translate Contract term into numbers.</description>
+    <externalId>false</externalId>
+    <formula>CASE(Contract_term__c, &quot;12 months&quot;,
+12, &quot;24 months&quot;, 24, &quot;36 months&quot;, 36,0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Contract length</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

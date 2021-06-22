@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Reason why Customer wants to terminate his contract with FLEETCOR --></help>
+    <label>Starts: Kündigungsgrund</label>
+    <name>Reason_for_Termination__c</name>
+    <picklistValues>
+        <masterLabel>Better offer from competitor</masterLabel>
+        <translation>Besseres Angebot vom Mitbewerber</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed by credit</masterLabel>
+        <translation>Geschlossen durch Credit</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer does not accept T&amp;Cs</masterLabel>
+        <translation>Kunde akzeptiert die AGB&#39;s nicht</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer never ordered Cards</masterLabel>
+        <translation>Kunde hat die Karten nie bestellt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Discount</masterLabel>
+        <translation>Falsche Informationen über Rabatt</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fees</masterLabel>
+        <translation>Falsche Informationen über Gebühren</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect information on the Card</masterLabel>
+        <translation>Falsche Informationen über die Karte</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect product category</masterLabel>
+        <translation>Falsche Produktkategorie</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Network</masterLabel>
+        <translation><!-- Network --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation>Sonstiges</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Badges</fullName>
+    <columns>NAME</columns>
+    <columns>success__Background_Colour__c</columns>
+    <columns>success__Image_URL__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>success__Type__c</field>
+        <operation>equals</operation>
+        <value>Badge</value>
+    </filters>
+    <label>Badges</label>
+</ListView>

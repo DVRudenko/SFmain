@@ -1,0 +1,18 @@
+{
+    "translations": {
+        "title": {
+            "en": "Paper invoice",
+            "fr": "Facture papier"
+        },
+        "description": {
+            "en": "<p>All invoices are delivered in electronic format per email or customer online portal for free. However, if you want to receive a paper invoice, we will deliver it to you for 10 EUR per invoice.</p>",
+            "fr": "<p>Toutes les factures sont délivrées gratuitement sous forme électronique par e-mail ou portail client en ligne. Si vous souhaitez recevoir des factures sous format papier, nous vous les enverrons par la poste pour 10 € par facture.</p>"
+        }
+    },
+    "settings": {
+        "bgImage": "/resource/ete_images/bgInfoCardLetter.png",
+        "show_more": "false",
+        "show_checkbox_1": "false",
+        "show_checkbox_2": "false"
+    }
+}

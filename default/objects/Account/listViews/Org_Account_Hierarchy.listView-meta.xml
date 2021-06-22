@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Org_Account_Hierarchy</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>GFN_Nr__c</columns>
+    <columns>GFN_Customer_Status__c</columns>
+    <columns>Umsatzsteuer_ID__c</columns>
+    <columns>Steuernummer__c</columns>
+    <columns>ACCOUNT.ADDRESS1_COUNTRY_CODE</columns>
+    <columns>ColCo__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Org_Account_Hierarchy</label>
+    <language>ru</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Role_Up</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <errorMessage><!-- CallObjectIdentifier field is no longer used. Use IndexedCallObjectIdentifier. --></errorMessage>
+        <name>NVMContactWorld__Call_Object_Identifier_Deprecated</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Event type must be either &apos;Deliver&apos;, &apos;Transfer&apos; or &apos;Consult&apos; --></errorMessage>
+        <name>NVMContactWorld__Event_Type_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Event must have a timestamp, unless it&apos;s a pre-call event --></errorMessage>
+        <name>NVMContactWorld__In_Call_Events_Must_Have_a_Timestamp</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- A pre-call event must have a related object --></errorMessage>
+        <name>NVMContactWorld__Pre_Call_Events_Must_Have_a_RelatedTo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The RelatedTo field is deprecated and has been replaced by the Who and What. --></errorMessage>
+        <name>NVMContactWorld__RelatedTo_Field_Is_Deprecated</name>
+    </validationRules>
+</CustomObjectTranslation>

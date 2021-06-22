@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_BDM_Car_use__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Does the BDM use corporate cars himself?</description>
+    <externalId>false</externalId>
+    <label>PPR BDM Car use</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

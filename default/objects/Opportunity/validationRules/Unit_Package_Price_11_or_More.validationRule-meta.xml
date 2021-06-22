@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unit_Package_Price_11_or_More</fullName>
+    <active>true</active>
+    <description>False by default, True only if 11 or more Carnet Units are under Opportunity.</description>
+    <errorConditionFormula>IF(
+OR(
+AND(
+RecordTypeId = '0120O000000XMWa',
+ISCHANGED(Unit_Package_Price_Paid_monthly__c),
+PRIORVALUE(Unit_Package_Price_Paid_monthly__c) = False,
+Sales_Basic_Monthly_Fee_Discount__c &gt;= 0.01),
+AND(
+RecordTypeId = '0120O000000XMWa',
+ISCHANGED(Unit_Package_Price_Paid_monthly__c),
+PRIORVALUE(Unit_Package_Price_Paid_monthly__c) = False,
+Total_of_ordered_Units__c &lt; 11)),
+true,
+false
+)</errorConditionFormula>
+    <errorDisplayField>Unit_Package_Price_Paid_monthly__c</errorDisplayField>
+    <errorMessage>False by default, True only if 11 or more Carnet Units are under Opportunity.</errorMessage>
+</ValidationRule>

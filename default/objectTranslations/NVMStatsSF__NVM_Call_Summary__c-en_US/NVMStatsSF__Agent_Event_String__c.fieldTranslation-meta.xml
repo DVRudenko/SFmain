@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Agent events related to this call with timestamp, agenr Id and duration in seconds - helps show where consultations fited into the call.  Format yyyyMMddHHmmss-[Agent Id]-[duration],... --></help>
+    <label><!-- Agent Event String --></label>
+    <name>NVMStatsSF__Agent_Event_String__c</name>
+</CustomFieldTranslation>

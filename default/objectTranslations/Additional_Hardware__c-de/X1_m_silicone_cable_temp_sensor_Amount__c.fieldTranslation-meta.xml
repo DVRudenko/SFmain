@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- 1 m silicone cable to the temperature sensor - range of temperature measure -40 to 90°C. --></help>
+    <label><!-- 1 m silicone cable to the temp sensor --></label>
+    <name>X1_m_silicone_cable_temp_sensor_Amount__c</name>
+</CustomFieldTranslation>

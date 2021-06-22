@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Value indicating whether the disposition code should result in the agent moving to the next entry. --></help>
+    <label><!-- Progress to next record --></label>
+    <name>NVMContactWorld__Connected__c</name>
+</CustomFieldTranslation>

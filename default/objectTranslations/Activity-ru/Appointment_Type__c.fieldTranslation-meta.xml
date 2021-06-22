@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Identifies type of appointment so Subject field can be freed up to put in info appropriate for sending external invitation --></help>
+    <label><!-- Appointment Type --></label>
+    <name>Appointment_Type__c</name>
+    <picklistValues>
+        <masterLabel>CCS Care</masterLabel>
+        <translation><!-- CCS Care --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Development</masterLabel>
+        <translation><!-- CCS Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Retention</masterLabel>
+        <translation><!-- CCS Retention --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Training</masterLabel>
+        <translation><!-- CCS Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Driver/Online Training</masterLabel>
+        <translation><!-- Driver/Online Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field Sales Training</masterLabel>
+        <translation><!-- Field Sales Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follow-up Appointment</masterLabel>
+        <translation><!-- Follow-up Appointment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketer Touch Point - Face to Face</masterLabel>
+        <translation><!-- Marketer Touch Point - Face to Face --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketer Touch Point - Phone</masterLabel>
+        <translation><!-- Marketer Touch Point - Phone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Net New Appointment</masterLabel>
+        <translation><!-- Net New Appointment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Out of Office-Vacation/Personal/Holiday</masterLabel>
+        <translation><!-- Out of Office-Vacation/Personal/Holiday --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound Sales Training</masterLabel>
+        <translation><!-- Outbound Sales Training --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

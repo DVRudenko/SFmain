@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Канал общения</label>
+    <name>Pimary_Channel__c</name>
+    <picklistValues>
+        <masterLabel>Adressbroker</masterLabel>
+        <translation><!-- Adressbroker --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Google Ad-Words</masterLabel>
+        <translation><!-- Google Ad-Words --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Google Organic Search</masterLabel>
+        <translation><!-- Google Organic Search --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PR</masterLabel>
+        <translation><!-- PR --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner Channels</masterLabel>
+        <translation><!-- Partner Channels --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Print</masterLabel>
+        <translation><!-- Print --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell Customer</masterLabel>
+        <translation><!-- Shell Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Winback_distance selling</masterLabel>
+        <translation>Дистанционно</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Winback_personal meeting</masterLabel>
+        <translation>Личная встреча</translation>
+    </picklistValues>
+</CustomFieldTranslation>

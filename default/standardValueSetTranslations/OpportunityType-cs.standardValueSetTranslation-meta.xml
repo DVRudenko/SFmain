@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>BAU</masterLabel>
+        <translation><!-- BAU --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Contract offer</masterLabel>
+        <translation><!-- Contract offer --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Existing Business</masterLabel>
+        <translation>Existující</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Existing GFN</masterLabel>
+        <translation><!-- Existing GFN --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New Business</masterLabel>
+        <translation>Nová</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New GFN</masterLabel>
+        <translation><!-- New GFN --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>WinBack</masterLabel>
+        <translation>Vyhraný zpátky</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Zahlungssystem__c</fullName>
+    <externalId>false</externalId>
+    <label>Zahlungssystem</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Derzeitige_Zahlungsmethode__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mastercard</fullName>
+                <default>false</default>
+                <label>Mastercard</label>
+            </value>
+            <value>
+                <fullName>American Express</fullName>
+                <default>false</default>
+                <label>American Express</label>
+            </value>
+            <value>
+                <fullName>Visa</fullName>
+                <default>false</default>
+                <label>Visa</label>
+            </value>
+            <value>
+                <fullName>Andere</fullName>
+                <default>false</default>
+                <label>Andere</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Kreditkarte</controllingFieldValue>
+            <controllingFieldValue>Bankkarte</controllingFieldValue>
+            <valueName>Mastercard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kreditkarte</controllingFieldValue>
+            <controllingFieldValue>Bankkarte</controllingFieldValue>
+            <valueName>American Express</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kreditkarte</controllingFieldValue>
+            <controllingFieldValue>Bankkarte</controllingFieldValue>
+            <valueName>Visa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Kreditkarte</controllingFieldValue>
+            <controllingFieldValue>Bankkarte</controllingFieldValue>
+            <valueName>Andere</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

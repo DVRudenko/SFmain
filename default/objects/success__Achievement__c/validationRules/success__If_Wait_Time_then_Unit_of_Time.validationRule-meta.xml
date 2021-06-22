@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__If_Wait_Time_then_Unit_of_Time</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF(ISBLANK( success__Minimum_hours_between_actions__c ), NOT(ISPICKVAL(success__Minimum_time_unit__c, &#39;&#39;)), ISPICKVAL(success__Minimum_time_unit__c, &#39;&#39;))</errorConditionFormula>
+    <errorMessage>If a Wait Time is required, then both a value and a period must be specified.</errorMessage>
+</ValidationRule>

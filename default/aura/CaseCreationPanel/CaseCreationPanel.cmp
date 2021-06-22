@@ -1,0 +1,79 @@
+<aura:component>
+    <aura:attribute name="newCase" type="Case"/>
+    <aura:attribute name="queueEmailList" type="List"/>
+    <aura:attribute name="emailSender" type="String"/>
+    <aura:attribute name="contactList" type="Contact[]"/>
+    <aura:attribute name="emailTo" type="String"/>
+    <aura:attribute name="emailCc" type="String"/>
+    <aura:attribute name="type" type="String"/>
+    <aura:attribute name="emailAddress" type="String"/>
+
+    
+    <div class="slds-box">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-2">
+                <div class="slds-form-element_stacked">
+                    <lightning:select name="Origin" value="{!v.newCase.Origin}" label="Origin">
+                        <option value="Phone">Phone</option>
+                        <option value="Chatter Answers">Chatter Answers</option>
+                        <option value="Email">Email</option>
+                        <option value="Other">Other</option>
+                        <option value="Web">Web</option>
+                    </lightning:select>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <div class="slds-form-element_stacked">
+                    <lightning:select name="Origin" value="{!v.newCase.Queue_Email__c}" onchange="{! c.changeEmailSender }" label="Queue Email">
+                        <aura:iteration items="{!v.queueEmailList}" var="email">
+                            <option value="{!email}">{!email}</option>
+                        </aura:iteration>
+                    </lightning:select>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <div class="slds-form-element slds-form-element_stacked">
+                    <span class="slds-form-element__label">Topic</span>
+                    <div class="slds-form-element__control">
+                        <span class="slds-form-element__static">{!v.newCase.Topic__c}</span>                    
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <div class="slds-form-element slds-form-element_stacked">
+                    <span class="slds-form-element__label">Subtopic</span>
+                    <div class="slds-form-element__control">
+                        <span class="slds-form-element__static">{!v.newCase.Sub_topic__c}</span>                    
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <div class="slds-form-element slds-form-element_stacked">
+                    <span class="slds-form-element__label">Subject</span>
+                    <div class="slds-form-element__control">
+                        <span class="slds-form-element__static">{!v.newCase.Subject}</span>
+                    </div>
+                </div>
+                <aura:if isTrue="{!v.type == 'Resend Invoice'}">
+                    <div class="slds-form-element_stacked">
+                        <lightning:select name="Contact" value="{!v.emailAddress}" label="Contact">
+                            <option value="">---</option>                                    
+                            <aura:iteration items="{!v.contactList}" var="contact">
+                                <option value="{!contact.Email}">{!contact.FirstName + ' ' + contact.LastName}</option>                                    
+                            </aura:iteration>
+                        </lightning:select>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2 slds-grid slds-wrap slds-p-vertical_medium slds-p-horizontal_x-small">
+                        <a class="slds-col slds-size_1-of-1" onclick="{!c.addToToField}">Change 'To' field</a>
+                        <a class="slds-col slds-size_1-of-1" onclick="{!c.addToCcField}">Add to 'Cc' field</a>
+                    </div>
+                </aura:if>
+            </div>
+            <div class="slds-col slds-size_1-of-2">
+                <div class="slds-form-element_stacked">
+                    <lightning:textarea name="Description" label="Description" value="{!v.newCase.Description}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prio_Formula__c</fullName>
+    <description>SFP-75</description>
+    <externalId>false</externalId>
+    <formula>IF(
+Total_consumption_l_month__c &gt;= 2500,'A',
+IF(Total_consumption_l_month__c &gt;= 1000,'B',
+IF(Total_consumption_l_month__c &gt;=0,'C',
+NULL
+)))</formula>
+    <inlineHelpText>0-999 Liters = Prio C
+1000-2499 Liters = Prio B
+2500 Liters and more = Prio A</inlineHelpText>
+    <label>Prio Formula</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

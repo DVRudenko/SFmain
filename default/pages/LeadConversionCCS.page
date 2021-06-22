@@ -1,0 +1,43 @@
+<apex:page controller="LeadConversionCCSctrl" action="{! init }">
+    <apex:form >
+        <apex:pageMessages escape="false"/>
+        <style>
+            .ownerId select {
+                display: none;
+            }
+        </style>
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Majitel prodejního tipu"/>
+                    <apex:outputPanel styleClass="ownerId">
+                        <apex:inputField value="{! lead.OwnerId }"/>    
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+                <apex:inputField value="{! lead.FirstName }" required="true"/>
+                <apex:inputField value="{! lead.Company }" required="true"/>
+                <apex:inputField value="{! lead.CCS_Company_ID__c }" required="true"/>
+                <apex:inputField value="{! lead.CCS_Number_of_GPS_units__c }" required="true"/>
+                <apex:inputField value="{! lead.CCS_number_of_cards__c }" required="true"/>
+                <apex:inputField value="{! lead.Number_of_Vehicles__c }" required="true"/>
+                <apex:inputField value="{! lead.Produkt__c }" required="true"/>
+                <apex:inputField value="{! lead.Street }" required="true"/>
+                <apex:inputField value="{! lead.City }" required="true"/>
+                <apex:inputField value="{! lead.PostalCode }" required="true"/>
+                <apex:inputField value="{! lead.CCS_Close_Date__c}" required="true"/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Země"/>
+                    <apex:outputPanel >
+                        <apex:outputField value="{! lead.Country }"/><apex:commandLink action="{! backToLeadWithoutSavingFields }" value="[Změna]" style="margin-left: 5px;"/>
+                    </apex:outputPanel> 
+                </apex:pageBlockSectionItem>
+                <apex:inputField value="{! lead.Opportunity_Type__c}" required="true"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{! backToLeadWithoutSavingFields }" value="Storno" immediate="true"/>
+                <apex:commandButton action="{! backToLeadWithSavingFields }" value="Uložit & Zpět na lead"/>
+                <apex:commandButton action="{! continueConvert }" value="Převést"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

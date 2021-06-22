@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StageName__c</fullName>
+    <externalId>false</externalId>
+    <label>StageName</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Prospecting</fullName>
+                <default>false</default>
+                <label>Prospecting</label>
+            </value>
+            <value>
+                <fullName>Pending Sales – Information</fullName>
+                <default>false</default>
+                <label>Pending Sales – Information</label>
+            </value>
+            <value>
+                <fullName>Pending Sales – Deposit</fullName>
+                <default>false</default>
+                <label>Pending Sales – Deposit</label>
+            </value>
+            <value>
+                <fullName>Credit Approved</fullName>
+                <default>false</default>
+                <label>Credit Approved</label>
+            </value>
+            <value>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+                <label>Closed Won</label>
+            </value>
+            <value>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+                <label>Closed Lost</label>
+            </value>
+            <value>
+                <fullName>Qualify</fullName>
+                <default>false</default>
+                <label>Qualify</label>
+            </value>
+            <value>
+                <fullName>Propose</fullName>
+                <default>false</default>
+                <label>Propose</label>
+            </value>
+            <value>
+                <fullName>Negotiate</fullName>
+                <default>false</default>
+                <label>Negotiate</label>
+            </value>
+            <value>
+                <fullName>Pending Credit Report</fullName>
+                <default>false</default>
+                <label>Pending Credit Report</label>
+            </value>
+            <value>
+                <fullName>Pending Credit - E2E Check</fullName>
+                <default>false</default>
+                <label>Pending Credit - E2E Check</label>
+            </value>
+            <value>
+                <fullName>Credit Report Generated</fullName>
+                <default>false</default>
+                <label>Credit Report Generated</label>
+            </value>
+            <value>
+                <fullName>finish</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>finish</label>
+            </value>
+            <value>
+                <fullName>pending deposit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>pending deposit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

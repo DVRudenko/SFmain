@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Partners_Lead_Database</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>Source_PP__c</columns>
+    <columns>Date_of_Update_PPR__c</columns>
+    <columns>LEAD.LAST_TRANSFER</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Source_of_Lead__c</field>
+        <operation>equals</operation>
+        <value>Партнерская Программа</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>NEW - Not Yet Contacted,Новый - не контактировали</value>
+    </filters>
+    <label>Мои Интересы - ПП</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>PPR_Bryansk_PSO_1</role>
+        <role>PPR_Bryansk_PSO_2</role>
+        <role>PPR_Bryansk_Partner_Sales_1</role>
+        <role>PPR_Bryansk_Partner_Sales_2</role>
+        <role>PPR_Bryansk_Teamleader_PSO_1</role>
+        <role>PPR_Bryansk_Teamleader_PSO_2</role>
+        <role>PPR_Bryansk_Teamleader_Partner_1</role>
+        <role>PPR_Bryansk_Teamleader_Partner_2</role>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Was first contact inbound from the Lead, or outbound by the sales team?  This is particularly helpful to know when the Lead was included in a marketing campaign. --></help>
+    <label><!-- First Contact: Inbound/Outbound --></label>
+    <name>First_Contact_Inbound_Outbound__c</name>
+    <picklistValues>
+        <masterLabel>Direct App - Fax</masterLabel>
+        <translation><!-- Direct App - Fax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct App - Web</masterLabel>
+        <translation><!-- Direct App - Web --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Banner Ads</masterLabel>
+        <translation><!-- Inbound Banner Ads --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Call</masterLabel>
+        <translation><!-- Inbound Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Fax</masterLabel>
+        <translation><!-- Inbound Fax --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Mail</masterLabel>
+        <translation><!-- Inbound Mail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound SMS</masterLabel>
+        <translation><!-- Inbound SMS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound Website</masterLabel>
+        <translation><!-- Inbound Website --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onsite Visit</masterLabel>
+        <translation><!-- Onsite Visit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound Call</masterLabel>
+        <translation><!-- Outbound Call --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outbound e-mail</masterLabel>
+        <translation><!-- Outbound e-mail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>citypoint</masterLabel>
+        <translation><!-- citypoint --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>omnicomm</masterLabel>
+        <translation><!-- omnicomm --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Не контактировали</masterLabel>
+        <translation><!-- Не контактировали --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

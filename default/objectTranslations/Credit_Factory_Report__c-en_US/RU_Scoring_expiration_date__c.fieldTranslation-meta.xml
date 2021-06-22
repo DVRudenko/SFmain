@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Дата когда последний скоринг истекает --></help>
+    <label><!-- Scoring expiration date --></label>
+    <name>RU_Scoring_expiration_date__c</name>
+</CustomFieldTranslation>

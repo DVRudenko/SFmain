@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of times this Agent was invited to a Consultation but did not answer --></help>
+    <label><!-- No Answers to Consult --></label>
+    <name>NVMStatsSF__No_Answers_to_Consult__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UploadResultsRecievers_Emails__c</fullName>
+    <description>Emails to which upload results will be sent while uploading SF records to naumen autocall cases (Naumen Supervisor Panel uploading functionality)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>example: &quot;test1@test.com,test2@test.com&quot;</inlineHelpText>
+    <label>Upload Results Recievers Emails</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

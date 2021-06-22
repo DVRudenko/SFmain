@@ -1,0 +1,97 @@
+{
+    "firstTime": {
+        "default_impl": [
+            {
+                "en": "Wait until you receive your Shell cards and PIN numbers by post.",
+                "de": "Sie erhalten Ihre Shell Card und Ihre PIN-Nummer in Kürze per Post."
+            },
+            {
+                "en": "Once received, your cards are automatically active and you can start using the cards! Enjoy a care-free refueling experience with your Shell Cards.",
+                "de": "Nach Erhalt sind Ihre Karten automatisch aktiv und Sie können die Karten verwenden! Genießen Sie mit Ihren Shell Karten ein sorgenfreies Auftanken."
+            }
+        ]
+    },
+    "promo": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Fuel discount at all Shell sites in Germany",
+                    "de": "pro Liter, an allen deutschen Shell-Stationen"
+                },
+                "value": {
+                    "en": "5 CENT/LITER",
+                    "de": "5 Cent Rabatt"
+                }
+            },
+            {
+                "label": {
+                    "en": "Replaces the price at fuel station (for more transparency)",
+                    "de": "ersetzt den Säulenpreis (für mehr Transparenz)"
+                },
+                "value": {
+                    "en": "DAILY FIXED PRICE",
+                    "de": "Fixpreis"
+                }
+            },
+            {
+                "label": {
+                    "en": "Card issuing and delivery",
+                    "de": "Kartenproduktion und Einrichtung"
+                },
+                "value": {
+                    "en": "FREE",
+                    "de": "KOSTENLOS"
+                }
+            }
+        ]
+    },
+    "offerName": {
+        "default_impl": "Inbound Typ B"
+    },
+    "cardTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "de": "SHELL CARD"
+        }
+    },
+    "offerPreviewImage": {
+        "default_impl": "/resource/ete_images/shellkart_de.jpg"
+    },
+    "offerSubTitle": {
+        "default_impl": {
+            "en": "Shell fuel card for business guarantees your company stable and permanent fuel discounts, a convenient online customer portal and a dense network of stations.",
+            "de": "Beziehen Sie mit der Shell Card einfach, komfortabel und bargeldlos hochwertige Kraftstoffe von Shell. Sichern Sie sich stabile und permanente Rabatte pro Liter mit Zugang zu einem flächendeckenden Netzwerk."
+        }
+    },
+    "offerTitle": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "de": "SHELL CARD"
+        }
+    },
+    "offerTitleMoreOne": {
+        "default_impl": {
+            "en": "SHELL CARDS",
+            "de": "SHELL CARDS"
+        }
+    },
+    "settings": {
+        "default_impl": {
+            "driverName_default": "SHELL CARD",
+            "typeOfVehicle_default": "PKW",
+            "typeOfCard_default": "Multi Network Card -- International",
+            "cardsCount_default": "0",
+            "cardsCountMax": "50",
+            "monthlyFuelConsumption_default": "300",
+            "monthlyFuelConsumption_max": "5000",
+            "monthlyFuelConsumption_min": "50",
+            "showEuroLocatorTab": false,
+            "euroLocatorProductNumber": "4",
+            "order": 4
+        }
+    },
+    "tariffSheets": {
+        "default_impl": "",
+        "Germany": "/resource/ETE_DOCUMENTS_1/tariffSheets_inboundtypbde.jpg"
+    }
+}

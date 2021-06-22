@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Fuel Exception Filter --></label>
+    <name>Fuel_Exception_Filter__c</name>
+    <picklistValues>
+        <masterLabel>All fuel types</masterLabel>
+        <translation><!-- All fuel types --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diesel</masterLabel>
+        <translation><!-- Diesel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diesel (AGO Low Sulphur)</masterLabel>
+        <translation><!-- Diesel (AGO Low Sulphur) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diesel (AGO)</masterLabel>
+        <translation><!-- Diesel (AGO) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diesel (Bio)</masterLabel>
+        <translation><!-- Diesel (Bio) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diesel (Plus)</masterLabel>
+        <translation><!-- Diesel (Plus) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diesel (V-Power)</masterLabel>
+        <translation><!-- Diesel (V-Power) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diesel (all types)</masterLabel>
+        <translation><!-- Diesel (all types) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Diesel (for trucks)</masterLabel>
+        <translation><!-- Diesel (for trucks) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gas Fuel (CNG)</masterLabel>
+        <translation><!-- Gas Fuel (CNG) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gas Fuel (LPG)</masterLabel>
+        <translation><!-- Gas Fuel (LPG) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gas Fuel (all types)</masterLabel>
+        <translation><!-- Gas Fuel (all types) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOGAS (all types)</masterLabel>
+        <translation><!-- MOGAS (all types) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOGAS (leaded &amp; unleaded)</masterLabel>
+        <translation><!-- MOGAS (leaded &amp; unleaded) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOGAS (leaded)</masterLabel>
+        <translation><!-- MOGAS (leaded) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MOGAS (unleaded)</masterLabel>
+        <translation><!-- MOGAS (unleaded) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Petrol</masterLabel>
+        <translation><!-- Petrol --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

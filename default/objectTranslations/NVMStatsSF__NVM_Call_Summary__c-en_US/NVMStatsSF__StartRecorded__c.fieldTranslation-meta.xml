@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Checked if a Start Event was seen - this zero-duration event fixes the inbound Call/Case Start Time --></help>
+    <label><!-- StartRecorded --></label>
+    <name>NVMStatsSF__StartRecorded__c</name>
+</CustomFieldTranslation>

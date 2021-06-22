@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllStar</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>CreditCheck</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Credit - Token payment</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Credit AML</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Credit Check</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Sales %E2%80%93 AML doc%2E</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Sales %E2%80%93 Information</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Sales %E2%80%93 PIT%2FCIT</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending Sales - Token payment</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Prospecting</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Waiting for Card order form</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Waiting for signed pdf</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

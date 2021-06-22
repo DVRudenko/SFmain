@@ -1,0 +1,443 @@
+<apex:page id="OpportunityCreateCommercialCarnetPDF" standardController="Opportunity" extensions="CreateCommercialCarnetPDFController" showHeader="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false" language="pl" renderAs="PDF">
+
+<html>
+    <head>
+    <style type="text/css" media="print">
+        body {
+            font-family: 'Arial Unicode MS', sans-serif;
+       }
+        
+        @page {
+            margin-bottom: 2.2cm;
+            margin-right: 2cm;
+            margin-left: 2cm;
+            margin-top: 3cm;
+
+            @bottom-center {
+             content: element(footer);
+            }
+            @top-right {
+             content: element(header);
+            }
+        }
+        
+        table {
+          width: 100%;
+          table-layout: fixed;
+        }
+        
+        #ten {
+          width: 45%;
+        }
+
+        div.header {
+            display: block;
+            padding: 20px;
+            position: running(header);
+        }
+        
+        div.footer {
+            display: block;
+            margin-right: -7.8cm;
+            position: running(footer);
+        }
+        
+        h2 {
+          font-size: 18px;
+          text-align: center;
+        }
+        
+        h3 {
+          font-size: 16px;
+          color: #E10F29;
+        }
+        
+        h4 {
+          font-size: 14px;
+          color: #E10F29;
+        }
+        
+        p {
+          font-size: 13px;
+        }
+        
+        #customers {
+          font-size: 13px;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #customers td, #customers th {
+          padding: 2px;
+        }
+        
+        #customers th {
+          padding-top: 2px;
+          padding-bottom: 2px;
+          text-align: left;
+          color: black;
+          font-weight: normal;
+          widht: 30%;
+        }
+        
+        hr { 
+          display: block;
+          margin-top: 20px;
+          margin-bottom: 5px;
+          margin-left: auto;
+          border: 0.5px solid black;
+        }
+
+    </style>
+    </head>
+<body>
+    
+    <div class="header">
+    <img src="{!$Resource.carnet_Logo}" width="10%" align="right"/>
+    <img src="{!$Resource.carnet_Fleetcor}" width="30%" align="left"/>
+    </div>
+    
+    <div class='footer'>
+    <img src="{!$Resource.carnet_Fleetcor_corner}" width="80px" height="80px" align="right"/>
+    </div>
+    
+    <apex:outputPanel rendered="{!IF(opp.Product__c = 'Carnet OBD', true, false)}">
+        <h2 style="font-weight: 800" color="#FF0000">Podsumowanie zamówienia monitoringu pojazdów FLEETCOR Carnet OBD</h2>
+    </apex:outputPanel>
+    
+    <apex:outputPanel rendered="{!IF(opp.Product__c != 'Carnet OBD', true, false)}">
+        <h2 style="font-weight: 800" color="#FF0000">Podsumowanie zamówienia monitoringu pojazdów FLEETCOR Carnet</h2>
+    </apex:outputPanel>
+    
+    <br></br>
+    
+    <table id="customers">
+                <tr>
+                    <th><h3>Nazwa firmy</h3></th>
+                    <th><h3>Adres rejestracji firmy</h3></th>
+                    <th><h3>Adres do doręczeń</h3></th>
+                </tr>
+                 <tr>
+                    <td><apex:outputText value="{!acc.Name}"/></td>
+                    <td><apex:outputText value="{!acc.BillingStreet}"/></td>
+                    <td><apex:outputPanel rendered="{!IF(acc.ShippingStreet = null, true, false)}"><apex:outputText value="{!acc.BillingStreet}"/></apex:outputPanel>
+                    <apex:outputText value="{!acc.ShippingStreet}"/></td>
+                </tr>
+                <tr>
+                    <td><apex:outputText value="{!acc.Steuernummer__c}"/></td>
+                    <td><apex:outputText value="{!acc.BillingCity}"/></td>
+                    <td><apex:outputPanel rendered="{!IF(acc.ShippingCity = null, true, false)}"><apex:outputText value="{!acc.BillingCity}"/></apex:outputPanel>
+                    <apex:outputText value="{!acc.ShippingCity}"/></td>
+                </tr>
+                <tr>
+                    <td><apex:outputText value="{!con.Name}"/></td>
+                    <td><apex:outputText value="{!acc.BillingState}"/></td>
+                    <td><apex:outputPanel rendered="{!IF(acc.ShippingState = null, true, false)}"><apex:outputText value="{!acc.BillingState}"/></apex:outputPanel>
+                    <apex:outputText value="{!acc.ShippingState}"/></td>
+                </tr>
+                <tr>
+                    <td><apex:outputText value="{!con.Email}"/></td>
+                    <td><apex:outputText value="{!acc.BillingPostalCode}"/></td>
+                    <td><apex:outputPanel rendered="{!IF(acc.ShippingPostalCode = null, true, false)}"><apex:outputText value="{!acc.BillingPostalCode}"/></apex:outputPanel>
+                    <apex:outputText value="{!acc.ShippingPostalCode}"/></td>
+                </tr>
+                <tr>
+                    <td><apex:outputText value="{!con.Phone}"/></td>
+                    <td><apex:outputText value="{!acc.BillingCountry}"/></td>
+                    <td><apex:outputPanel rendered="{!IF(acc.ShippingCountry = null, true, false)}"><apex:outputText value="{!acc.BillingCountry}"/></apex:outputPanel>
+                    <apex:outputText value="{!acc.ShippingCountry}"/></td>
+                </tr>
+        </table>
+        
+        <p>Zamówienie z FLEETCOR Poland sp. z o.o. z siedzibą w Warszawie przy Generation Park Z, ul. Towarowa 28, 00-839 Warszawa, Polska, usługa FLEETCOR Carnet zgodnie z załącznikami do niniejszego zamówienia, oraz z warunkami określonymi w Ogólnych Warunkach korzystania z Usługi firmy FLEETCOR Carnet, których Klient zobowiązuje się przestrzegać. Integralną częścią tego zamówienia są jego załączniki, którymi są zamówienia na towary i usługi FLEETCOR Carnet.</p>
+    
+    <hr></hr>
+    
+    <apex:form >
+        <h3>Cenowe podsumowanie</h3>
+            <h4>Opłata jednorazowa - Urządzenia</h4>
+            <p>
+            <u><apex:outputlabel value="Opłaty jednorazowe - Urządzenia:"/></u>&nbsp;
+            <apex:outputText style="padding-left: 0.5%;" value="{0, number, ###,##0.00 PLN (z VAT)}">
+              <apex:param value="{!OneTimePaymentGoods}"/>
+            </apex:outputText><br/>
+            <u><apex:outputlabel value="Sposób płatności:"/></u>&nbsp;
+                <apex:outputText style="padding-left: 15.5%;">
+                </apex:outputText>
+            <apex:outputfield value="{!opp.Form_of_Payment__c}"/>
+            </p>
+
+            <apex:outputPanel rendered="{!IF(opp.Form_of_Payment__c == 'Advanced payment', true, false)}">
+            <p style="line-height:0.1;">Dane bankowe niezbędne do wpłaty:</p>
+                <p>
+                    <u><apex:outputlabel style="line-height:0.1" value="Nr rachunku bankowego:"/></u>&nbsp;
+                    <apex:outputText style="padding-left: 9%; line-height:0.1;" value="31 1240 1040 1111 0010 6484 1107">
+                    </apex:outputText><br/>
+                    <u><apex:outputlabel style="line-height:0.1" value="IBAN:"/></u>&nbsp;
+                    <apex:outputText style="padding-left: 26%; line-height:0.1;" value="PL31 1240 1040 1111 0010 6484 1107">
+                    </apex:outputText><br/>
+                    <u><apex:outputlabel style="line-height:0.1" value="BIC:"/></u>&nbsp;
+                    <apex:outputText style="padding-left: 27.3%; line-height:0.1;" value="PKOPPLPWXXX">
+                    </apex:outputText><br/>
+                    <u><apex:outputlabel style="line-height:0.1" value="Bank:"/></u>&nbsp;
+                    <apex:outputText style="padding-left: 26%; line-height:0.1;" value="Bank Polska Kasa Opieki Spółka Akcyjna">
+                    </apex:outputText><br/>
+                    <u><apex:outputlabel style="line-height:0.1" value="Tytuł płatności:"/></u>&nbsp;
+                    <apex:outputText style="padding-left: 17.8%; line-height:0.1;" value="NIP">
+                    </apex:outputText><br/>
+                Uprzejmie prosimy o uregulowanie kwoty za urządzenia i komponenty dodatkowe na wyżej podane konto bankowe. Po uregulowaniu kwoty urządzenie zostanie dostarczone na adres kontaktowy. Faktura zostanie przesłana e-mailowo po otrzymaniu potwierdzenia o dostarczeniu przesyłki. Prosimy już nie opłacać tej faktury.
+                </p>
+            </apex:outputPanel>
+
+            <h4>Opłata jednorazowa - Usługi</h4>
+            <p>
+            <u><apex:outputlabel value="Opłaty jednorazowe - Usługi:"/></u>&nbsp;
+            <apex:outputText style="padding-left: 5%;" value="{0, number, ###,##0.00 PLN (z VAT)}">
+                <apex:param value="{!OneTimePaymentServices}"/>
+            </apex:outputText><br/>
+            <apex:outputPanel rendered="{!IF(OneTimePaymentServices != 0, true, false)}">
+                <u><apex:outputlabel value="Sposób płatności:"/></u>&nbsp;
+                    <apex:outputText style="padding-left: 15.5%;">
+                    </apex:outputText>
+                    <apex:outputfield value="{!opp.Monthly_Payment_Method__c}"/><br/>
+                    Kwota za usługi zostanie uwzględniona w następnym fakturowaniu standardowym.
+                </apex:outputPanel>
+            </p>
+
+      <!--  <apex:outputPanel rendered="{!IF(opp.Total_Monthly_Payment_Formula__c = 0, true, false)}">
+            <br></br>
+            <br></br>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{!IF(opp.Total_Monthly_Payment_Formula__c != 0 && OneTimePaymentServices != 0, true, false)}">
+            <br></br>
+            <br></br>
+        </apex:outputPanel>-->
+
+        <h4>Opłata miesięczna</h4>
+            <p>
+            <u><apex:outputlabel value="Abonament miesięczny:"/></u>&nbsp;
+            <apex:outputText style="padding-left: 9.5%;" value="{0, number, ###,##0.00 PLN (z VAT)}">
+              <apex:param value="{!TotalMonthlyPaymentVAT}"/>
+            </apex:outputText><br/>
+            <apex:outputPanel rendered="{!IF(TotalMonthlyPaymentVAT != 0, true, false)}">
+                <u><apex:outputlabel value="Sposób płatności:"/></u>&nbsp;
+                <apex:outputText style="padding-left: 15.5%;">
+                </apex:outputText>
+                    <apex:outputfield value="{!opp.Monthly_Payment_Method__c}"/>
+                </apex:outputPanel>
+            </p>
+
+        <apex:outputPanel rendered="{!IF(opp.Total_Monthly_Payment_Formula__c != 0, true, false)}">
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            </apex:outputPanel>
+            
+            <apex:outputPanel rendered="{!IF(opp.Total_Monthly_Payment_Formula__c = 0, true, false)}">
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+            </apex:outputPanel>
+
+        <apex:outputPanel rendered="{!IF(opp.Total_Monthly_Payment_Formula__c != 0 && OneTimePaymentServices != 0, true, false)}">
+            <br></br>
+        </apex:outputPanel>
+        
+        <h3>Specyfikacja zamówienia</h3>
+            <h4>Opłaty jednorazowe - Urządzenia</h4>
+            <table id="customers">
+                 <tr>
+                    <th id="ten"><b>Pozycja cennika</b></th>
+                    <th><b>Liczba szt.</b></th>
+                    <th><b>Cena/szt.</b></th>
+                    <th><b>Cena</b></th>
+                    <th><b>Cena (z VAT)</b></th>
+                </tr>
+            <apex:repeat value="{!goods}" var="a">
+                <tr>
+                    <td id="ten">{!a.PLName__c}</td>
+                    <td>{!a.Amount__c}</td>
+                    <td>
+                    <apex:outputText value="{0, number, ###,##0.00 PLN}">
+                      <apex:param value="{!a.Price__c}"/>
+                    </apex:outputText><br></br>
+                    </td>
+                    <td><apex:outputText value="{0, number, ###,##0.00 PLN}">
+                            <apex:param value="{!a.Total_Amount__c}"/>
+                        </apex:outputText><br></br>
+                    </td>
+                    <td><apex:outputText value="{0, number, ###,##0.00 PLN}">
+                            <apex:param value="{!a.Total_Amount_VAT__c}"/>
+                        </apex:outputText><br></br>
+                    </td>
+                </tr>
+
+                <apex:outputText rendered="{!if(opp.Sales_Basic_Monthly_Fee_Discount__c >0 && a.isTariff__c,true,false)}">
+                    <tr>
+                        <td id="ten">Taryfa – ulga handlowa ({!a.Sales_Basic_Monthly_Fee_Discount__c}%)</td>
+                        <td>{!a.Amount__c}</td>
+                        <td>
+                            <apex:outputText value="{0, number, ###,##0.00 PLN}">
+                                <apex:param value="{!a.Discount_Amount__c}"/>
+                            </apex:outputText><br></br>
+                        </td>
+                        <td><apex:outputText value="{0, number, ###,##0.00 PLN}">
+                                <apex:param value="{!a.Total_Discount_Amount__c}"/>
+                            </apex:outputText><br></br></td>
+                        <td><apex:outputText value="{0, number, ###,##0.00 PLN}">
+                                <apex:param value="{!a.Total_Discount_Amount_VAT__c}"/>
+                            </apex:outputText><br></br></td>
+                    </tr>
+                </apex:outputText>
+        </apex:repeat>
+
+        <tr>
+                    <td><h4><apex:outputlabel value="Opłaty jednorazowe - Urządzenia"/></h4></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                    <apex:outputText value="{0, number, ###,##0.00 PLN}">
+                      <apex:param value="{!OneTimePaymentGoods}"/>
+                    </apex:outputText>
+                    </td>
+                </tr>
+
+            </table>
+
+                <h4>Opłaty jednorazowe - Usługi</h4>
+                <table id="customers">
+                    <tr>
+                        <th id="ten"><b>Pozycja cennika</b></th>
+                        <th><b>Liczba szt.</b></th>
+                        <th><b>Cena/szt.</b></th>
+                        <th><b>Cena</b></th>
+                        <th><b>Cena (z VAT)</b></th>
+                    </tr>
+                    <apex:repeat value="{!services}" var="a">
+                        <tr>
+                            <td id="ten">{!a.PLName__c}</td>
+                            <td>{!a.Amount__c}</td>
+                            <td>
+                                <apex:outputText value="{0, number, ###,##0.00 PLN}">
+                                    <apex:param value="{!a.Price__c}"/>
+                                </apex:outputText><br></br>
+                            </td>
+                            <td><apex:outputText value="{0, number, ###,##0.00 PLN}">
+                                    <apex:param value="{!a.Total_Amount__c}"/>
+                                </apex:outputText><br></br>
+                            </td>
+                            <td><apex:outputText value="{0, number, ###,##0.00 PLN}">
+                                    <apex:param value="{!a.Total_Amount_VAT__c}"/>
+                                </apex:outputText><br></br>
+                            </td>
+                        </tr>
+
+                        <apex:outputText rendered="{!if(opp.Sales_Basic_Monthly_Fee_Discount__c >0 && a.isTariff__c,true,false)}">
+                            <tr>
+                                <td id="ten">Taryfa – ulga handlowa ({!a.Sales_Basic_Monthly_Fee_Discount__c}%)</td>
+                                <td>{!a.Amount__c}</td>
+                                <td>
+                                    <apex:outputText value="{0, number, ###,##0.00 PLN}">
+                                        <apex:param value="{!a.Discount_Amount__c}"/>
+                                    </apex:outputText><br></br>
+                                </td>
+                                <td><apex:outputText value="{0, number, ###,##0.00 PLN}">
+                                        <apex:param value="{!a.Total_Discount_Amount__c}"/>
+                                    </apex:outputText><br></br></td>
+                                <td><apex:outputText value="{0, number, ###,##0.00 PLN}">
+                                        <apex:param value="{!a.Total_Discount_Amount_VAT__c}"/>
+                                    </apex:outputText><br></br></td>
+                            </tr>
+                        </apex:outputText>
+                    </apex:repeat>
+
+                <tr>
+                    <td><h4><apex:outputlabel value="Opłaty jednorazowe - Usługi"/></h4></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                    <apex:outputText value="{0, number, ###,##0.00 PLN}">
+                      <apex:param value="{!OneTimePaymentServices}"/>
+                    </apex:outputText>
+                    </td>
+                </tr>
+        </table>
+        
+            <h4>Abonament miesięczny</h4>
+            <table id="customers">
+                 <tr>
+                    <th id="ten"><b>Pozycja cennika</b></th>
+                    <th><b>Liczba szt.</b></th>
+                    <th><b>Cena/szt.</b></th>
+                    <th><b>Cena</b></th>
+                    <th><b>Cena (z VAT)</b></th>
+                </tr>
+            <apex:repeat value="{!monthlyItems}" var="a">
+                <tr>
+                    <td id="ten">{!a.PLName__c}</td>
+                    <td>{!a.Amount__c}</td>
+                    <td>
+                    <apex:outputText value="{0, number, ###,##0.00 PLN}">
+                      <apex:param value="{!a.Price__c}"/>
+                    </apex:outputText><br></br>
+                    </td>
+                    <td><apex:outputText value="{0, number, ###,##0.00 PLN}">
+                            <apex:param value="{!a.Total_Amount__c}"/>
+                        </apex:outputText><br></br></td>
+                    <td>
+                        <apex:outputText value="{0, number, ###,##0.00 PLN}">
+                            <apex:param value="{!a.Total_Amount_VAT__c}"/>
+                        </apex:outputText><br></br>
+                    </td>
+                </tr>
+
+
+                <apex:outputText rendered="{!if(opp.Sales_Basic_Monthly_Fee_Discount__c >0 && a.isTariff__c,true,false)}">
+                    <tr>
+                        <td id="ten">Taryfa – ulga handlowa ({!a.Sales_Basic_Monthly_Fee_Discount__c}%)</td>
+                        <td>{!a.Amount__c}</td>
+                        <td>
+                            <apex:outputText value="{0, number, ###,##0.00 PLN}">
+                                <apex:param value="{!a.Discount_Amount__c}"/>
+                            </apex:outputText><br></br>
+                        </td>
+                        <td><apex:outputText value="{0, number, ###,##0.00 PLN}">
+                                <apex:param value="{!a.Total_Discount_Amount__c}"/>
+                            </apex:outputText><br></br></td>
+                        <td><apex:outputText value="{0, number, ###,##0.00 PLN}">
+                                <apex:param value="{!a.Total_Discount_Amount_VAT__c}"/>
+                            </apex:outputText><br></br></td>
+                    </tr>
+                </apex:outputText>
+        </apex:repeat>
+                <tr>
+                    <td><h4><apex:outputlabel value="Abonament miesięczny"/></h4></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                    <apex:outputText value="{0, number, ###,##0.00 PLN}">
+                          <apex:param value="{!TotalMonthlyPaymentVAT}"/>
+                        </apex:outputText>
+                    </td>
+                </tr>
+        </table>
+         
+         <p>Uwaga: Nie chodzi o fakturę, to tylko cenowe podsumowanie zamówionych komponentów usługi FLEETCOR Carnet. Pełny przegląd wszystkich dostępnych komponentów w tym aktualne ceny, można znaleźć w aktualnym cenniku, który otrzymali Państwo poprzez e-mail.</p>
+    
+    </apex:form>
+    
+</body>
+</html> 
+
+</apex:page>

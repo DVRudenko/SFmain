@@ -1,0 +1,11 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickActionWithoutHeader">
+    <!--  this tag sets modal width -->
+    <aura:html tag="style">
+        .slds-modal__container {
+        min-width: 70vw;
+        }
+    </aura:html>     
+    <div class="slds-m-around_large">
+        <c:editEventRecordPage notifyViaAlerts="false" recordId="{!v.recordId}" onClose="{!c.closeModal}"/>
+    </div>
+</aura:component>	

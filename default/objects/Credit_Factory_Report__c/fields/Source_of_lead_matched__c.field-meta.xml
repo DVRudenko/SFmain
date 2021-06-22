@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Source_of_lead_matched__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Source of lead matched to conditions</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Source of lead matched to conditions</inlineHelpText>
+    <label>Source of lead matched</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

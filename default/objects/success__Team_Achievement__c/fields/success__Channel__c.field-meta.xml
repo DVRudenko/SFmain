@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Channel__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <inlineHelpText>Rewards earned for the behaviour will be broadcast on Inspire displays showing the specified channel</inlineHelpText>
+    <label>Channel</label>
+    <referenceTo>success__Channel__c</referenceTo>
+    <relationshipLabel>Behaviours</relationshipLabel>
+    <relationshipName>Behaviours</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

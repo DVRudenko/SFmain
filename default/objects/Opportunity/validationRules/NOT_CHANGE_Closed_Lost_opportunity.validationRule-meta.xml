@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NOT_CHANGE_Closed_Lost_opportunity</fullName>
+    <active>true</active>
+    <description>Sales Agents can't change an opportunity "Closed Lost".</description>
+    <errorConditionFormula>IF(
+ISPICKVAL(PRIORVALUE(StageName),"Closed Lost")
+&amp;&amp; ($Profile.Name = "Sales" ||  $Profile.Name = "Sales Inbound" ||  $Profile.Name = "CCIG")
+&amp;&amp; NOT(ISCHANGED(Number_of_open_tasks__c) || ISCHANGED(Primary_Contact_Phone__c) || ISCHANGED(Open_Task__c) || ISCHANGED(NextContactTime__c) || ISCHANGED(Credit_Factory_Errors__c) || ISCHANGED(Reopen__c) || ISCHANGED(Reopen_Log__c) || ISCHANGED(Credit_Factory_PDF_Report_Created__c)),
+true,
+false
+)</errorConditionFormula>
+    <errorMessage>You can't change an opportunity "Closed Lost". Contact your Salesforce administrator.</errorMessage>
+</ValidationRule>

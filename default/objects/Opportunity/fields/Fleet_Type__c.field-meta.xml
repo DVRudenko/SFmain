@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fleet_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Fleet Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Легковой</fullName>
+                <default>false</default>
+                <label>Легковой</label>
+            </value>
+            <value>
+                <fullName>Грузовой</fullName>
+                <default>false</default>
+                <label>Грузовой</label>
+            </value>
+            <value>
+                <fullName>Автобус</fullName>
+                <default>false</default>
+                <label>Автобус</label>
+            </value>
+            <value>
+                <fullName>Газель - микроавтобус</fullName>
+                <default>false</default>
+                <label>Газель - микроавтобус</label>
+            </value>
+            <value>
+                <fullName>Спецтехника</fullName>
+                <default>false</default>
+                <label>Спецтехника</label>
+            </value>
+            <value>
+                <fullName>Другое - указать в Описании</fullName>
+                <default>false</default>
+                <label>Другое - указать в Описании</label>
+            </value>
+            <value>
+                <fullName>Cars and vans up to 3.5 t</fullName>
+                <default>false</default>
+                <label>Cars and vans up to 3.5 t</label>
+            </value>
+            <value>
+                <fullName>Vans and trucks up to 12 t</fullName>
+                <default>false</default>
+                <label>Vans and trucks up to 12 t</label>
+            </value>
+            <value>
+                <fullName>Trucks over 12 t</fullName>
+                <default>false</default>
+                <label>Trucks over 12 t</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

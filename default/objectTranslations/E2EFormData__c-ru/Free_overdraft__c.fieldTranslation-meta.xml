@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Плата за обслуживание кредита не взымается. Сумма кредита 50000 рублей, срок кредита 7 дней (неделя), срок оплаты счета 3 дня</help>
+    <label>Овердрафт для ЕП</label>
+    <name>Free_overdraft__c</name>
+</CustomFieldTranslation>

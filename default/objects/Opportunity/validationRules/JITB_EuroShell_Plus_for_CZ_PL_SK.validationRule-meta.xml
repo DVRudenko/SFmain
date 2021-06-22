@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JITB_EuroShell_Plus_for_CZ_PL_SK</fullName>
+    <active>true</active>
+    <description>JITB EuroShell Plus product available for CZ, PL, SK only.</description>
+    <errorConditionFormula>AND(Free_choice_of_products__c = false, ISPICKVAL(Product__c, "JITB EuroShell Plus"),
+ISPICKVAL(Sec_Channel__c, "JITB"), NOT(OR(Account.BillingCountry = "Czech Republic",
+Account.BillingCountry = "Poland", Account.BillingCountry = "Slovakia")))</errorConditionFormula>
+    <errorMessage>JITB EuroShell Plus is available for Registered Countries "Czech Republic", "Poland", "Slovakia" and Sec. Channel "JITB". Please select the correct product.</errorMessage>
+</ValidationRule>

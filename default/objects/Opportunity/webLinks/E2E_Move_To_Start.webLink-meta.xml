@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>E2E_Move_To_Start</fullName>
+    <availability>online</availability>
+    <description>The button to push opportunity through the E2E Process (Russian button)</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>E2E Старт</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>if("{! User.Profile }" == "System Administrator" ||
+"{! User.Profile }" == "Системный администратор" ||   
+"{! User.Profile }" == "RU_System_Administrator" ||
+"{! User.Profile }" == "API Only" ||
+"{! User.Id }" == "005200000041rKJ"  ||
+"{! User.Id }" == "0050O000006srJj"  ||
+"{! User.Id }" == "0050O000006srJ8"  ||
+"{! User.Id }" == "0050O000006srED"  ||
+"{! User.Id }" == "0050O000008TcRK"  ||
+"{! User.Id }" == "0050O000006srGd"  ||
+"{! $UserRole.Name}" == "PPR Bryansk PSO 3"||
+"{! $UserRole.Name}" == "PPR Bryansk PSO 1"||
+"{! $UserRole.Name}" == "PPR Bryansk PSO 2"||
+"{! $UserRole.Name}" == "PPR Bryansk Partner Sales (1)"||
+"{! $UserRole.Name}" == "PPR Bryansk Partner Sales (2)"||
+"{! $UserRole.Name}" == "PPR Teamleader Fieldsales South"||
+"{! $UserRole.Name}" == "PPR Field Sales South"||
+"{! $UserRole.Name}" == "PPR Field Sales Expert"||
+"{! $UserRole.Name}" == "PPR Teamleader Fieldsales Central"||
+"{! $UserRole.Name}" == "PPR Field Sales Central"||
+"{! $UserRole.Name}" == "PPR Teamleader Fieldsales Saint-Petersburg"||
+"{! $UserRole.Name}" == "PPR Field Sales Saint-Petersburg"||
+"{! $UserRole.Name}" == "PPR Key Accounts Manager"||
+"{! $UserRole.Name}" == "PPR Teamleader KAM"
+){
+window.parent.location.href = "/apex/e2eMoveToStart?id="+'{! Opportunity.Id }';
+} else {
+alert("У Вас нет доступа к данной функциональности. Обратитесь к Вашему администратору.");
+}</url>
+</WebLink>

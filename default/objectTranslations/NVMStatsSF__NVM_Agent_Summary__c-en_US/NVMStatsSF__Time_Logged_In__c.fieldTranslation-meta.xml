@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Total State time for this Agent Day in seconds excluding Logged Out state --></help>
+    <label><!-- Total State Time --></label>
+    <name>NVMStatsSF__Time_Logged_In__c</name>
+</CustomFieldTranslation>

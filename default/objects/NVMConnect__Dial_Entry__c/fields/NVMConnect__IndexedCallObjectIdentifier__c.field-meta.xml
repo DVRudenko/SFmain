@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMConnect__IndexedCallObjectIdentifier__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Guid of the call made to this dial entry, if any</description>
+    <externalId>true</externalId>
+    <label>Indexed Call Object Identifier</label>
+    <length>38</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

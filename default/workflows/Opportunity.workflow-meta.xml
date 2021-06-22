@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>RU_KAM_notification</fullName>
+        <description>RU_KAM_notification</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>pavel.beltyukov@transitcard.ru</recipient>
+            <type>user</type>
+        </recipients>
+        <senderAddress>notreply@info.pprcard.ru</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>PPR_Email_Templates/RU_KAM_notification</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>NewOwnerAcct</fullName>
+        <description>assign to a pool</description>
+        <field>OwnerId</field>
+        <lookupValue>dmitrii.golman@fleetcor.ru</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>NewOwnerAcct</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <targetObject>AccountId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NewOwnerOppty</fullName>
+        <description>assign to a pool</description>
+        <field>OwnerId</field>
+        <lookupValue>dmitrii.golman@fleetcor.ru</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>NewOwnerOppty</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>RU_KAM_Probability_0</fullName>
+        <active>true</active>
+        <formula>AND(RecordType.DeveloperName = &#39;Russian_Sales&#39;
+            , Account.Last_pump_date__c &lt;  (TODAY() - 185)
+            , ISBLANK(Account.Parent.Name)
+            , Account.Opportunity_Sum__c = 1
+            , Probability = 0
+            , NOT(CONTAINS( TEXT(Promo_Code1__c) , &#39;Winback&#39;))
+            , DATEVALUE(Last_Owner_Change_Date_RUS__c) &lt; (TODAY() - 30)
+            , OR(Owner.UserRole.DeveloperName = &#39;PPR_KAM_Teamleader&#39;
+            , Owner.UserRole.DeveloperName = &#39;PPRKeyAccountsManager&#39;)
+            )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>RU_KAM_notification</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>NewOwnerAcct</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>NewOwnerOppty</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Opportunity.Date_of_last_change_of_stage__c</offsetFromField>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+    <rules>
+        <fullName>RU_Probability_0</fullName>
+        <active>true</active>
+        <formula>AND(RecordType.DeveloperName = &#39;Russian_Sales&#39;
+            , Account.Last_pump_date__c &lt;  (TODAY() - 185)
+            , ISBLANK(Account.Parent.Name)
+            , Account.Opportunity_Sum__c = 1
+            , Probability = 0
+            , NOT(BEGINS(Owner.Username, &#39;dmitrii.golman@fleetcor.ru&#39;))
+            , NOT(BEGINS(Owner.Username, &#39;tatianakim@transitcard.ru&#39;))
+            , NOT(CONTAINS( TEXT(Promo_Code1__c) , &#39;Winback&#39;))
+            , DATEVALUE(Last_Owner_Change_Date_RUS__c) &lt; (TODAY() - 30)
+            , Owner.UserRole.DeveloperName != &#39;PPR_KAM_Teamleader&#39;
+            , Owner.UserRole.DeveloperName != &#39;PPRKeyAccountsManager&#39;
+            )</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>NewOwnerAcct</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>NewOwnerOppty</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <offsetFromField>Opportunity.Date_of_last_change_of_stage__c</offsetFromField>
+            <timeLength>30</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>

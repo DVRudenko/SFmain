@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>dsfs__Recipient_Note__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Note for Recipient</description>
+    <externalId>false</externalId>
+    <inlineHelpText>NOTE FOR RECIPIENT</inlineHelpText>
+    <label>Recipient Note</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

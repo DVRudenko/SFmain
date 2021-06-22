@@ -1,0 +1,19 @@
+<!--
+ - Created by Andrei.Katunin on 09.07.2018.
+ -->
+
+<apex:component id="E2EComponentImage" controller="E2EComponentsCtrl">
+
+    <apex:attribute name="className"
+                    type="String"
+                    description="" />
+
+    <apex:attribute name="url"
+                    type="String"
+                    description="" />
+
+    <apex:outputPanel styleClass="{!className}">
+        <apex:image url="{!url}"/>
+    </apex:outputPanel>
+
+</apex:component>

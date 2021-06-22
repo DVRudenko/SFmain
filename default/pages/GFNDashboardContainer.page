@@ -1,0 +1,45 @@
+<apex:page showHeader="false">
+    <apex:includeLightning />
+    <div id='Con'/>
+    <script>
+        
+        var colCoId = '{!$CurrentPage.parameters.colCoId}';
+        if(!colCoId) {
+        
+            var colCo = '{!$CurrentPage.parameters.colCo}';
+            var colCoMapping = {
+                'DE': '1',
+                'AT': '2',
+                'BE': '3',
+                'NL': '4',
+                'FR': '5',
+                'HU': '6',
+                'PL': '7',
+                'LU': '79',
+                'CH': '80',
+                'CZ': '81',
+                'SK': '82'
+            };
+            colCoId = colCoMapping[colCo];
+        }
+        var gfnParams;
+        if(colCoId && '{!$CurrentPage.parameters.customerNumber}') {
+            gfnParams = colCoId + ',{!$CurrentPage.parameters.customerNumber}';
+        }
+        $Lightning.use('c:GFNDashboardApp', function() {
+           $Lightning.createComponent(
+                'c:GFNDashboard',
+                {
+                    isClassic: true,
+                    gfnParams: gfnParams,
+                    recordId: '{!$CurrentPage.parameters.Id}'
+                },
+                'Con',
+               function(cmp) {
+                   console.log('Component is created!');
+                   console.log(cmp);
+               }
+            );
+        });
+     </script>
+</apex:page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Initial value of status field in Cases from website --></help>
+    <label><!-- Case from web initial status --></label>
+    <name>Case_from_web_initial_status__c</name>
+</CustomFieldTranslation>

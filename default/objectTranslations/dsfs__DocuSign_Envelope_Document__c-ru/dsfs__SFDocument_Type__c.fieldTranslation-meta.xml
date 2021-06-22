@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Тип документа Saleforce</help>
+    <label><!-- Document Type --></label>
+    <name>dsfs__SFDocument_Type__c</name>
+    <picklistValues>
+        <masterLabel>Attachment</masterLabel>
+        <translation>Вложение</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Content</masterLabel>
+        <translation>Содержимое</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DSTemplate</masterLabel>
+        <translation>DSTemplate</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Document</masterLabel>
+        <translation>Документ</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quote</masterLabel>
+        <translation>Ценовое предложение</translation>
+    </picklistValues>
+</CustomFieldTranslation>

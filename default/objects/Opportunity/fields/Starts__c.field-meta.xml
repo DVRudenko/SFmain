@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Starts__c</fullName>
+    <externalId>false</externalId>
+    <label>Starts: Return to Sales</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Kundendaten falsch</fullName>
+                <default>false</default>
+                <label>Kundendaten falsch</label>
+            </value>
+            <value>
+                <fullName>Telefonnummer falsch</fullName>
+                <default>false</default>
+                <label>Telefonnummer falsch</label>
+            </value>
+            <value>
+                <fullName>Noch nicht getankt nach 3 Monaten</fullName>
+                <default>false</default>
+                <label>Noch nicht getankt nach 3 Monaten</label>
+            </value>
+            <value>
+                <fullName>Kunde möchte kündigen</fullName>
+                <default>false</default>
+                <label>Kunde möchte kündigen</label>
+            </value>
+            <value>
+                <fullName>nach mehrfachen anrufen nicht erreicht</fullName>
+                <default>false</default>
+                <label>nach mehrfachen anrufen nicht erreicht</label>
+            </value>
+            <value>
+                <fullName>Kunde nicht informiert über Gebühren</fullName>
+                <default>false</default>
+                <label>Kunde nicht informiert über Gebühren</label>
+            </value>
+            <value>
+                <fullName>Kunde nicht informiert über Angebot</fullName>
+                <default>false</default>
+                <label>Kunde nicht informiert über Angebot</label>
+            </value>
+            <value>
+                <fullName>nichtinformiert über Dauer des Angebotes</fullName>
+                <default>false</default>
+                <label>nichtinformiert über Dauer des Angebotes</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

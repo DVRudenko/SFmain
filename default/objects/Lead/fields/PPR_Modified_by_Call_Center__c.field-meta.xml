@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_Modified_by_Call_Center__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>PPR Russia field - используется КЦ при обработке лидов в выходные. Чтобы отделять те, которые были обработаны от вновь поступивших</description>
+    <externalId>false</externalId>
+    <label>Актуализировано КЦ</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

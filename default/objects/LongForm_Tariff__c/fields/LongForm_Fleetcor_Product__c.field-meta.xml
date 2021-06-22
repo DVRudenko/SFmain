@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LongForm_Fleetcor_Product__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>LongForm Fleetcor Product</label>
+    <referenceTo>LongForm_Fleetcor_Product__c</referenceTo>
+    <relationshipLabel>LongForm Tariffs</relationshipLabel>
+    <relationshipName>LongForm_Tariffs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

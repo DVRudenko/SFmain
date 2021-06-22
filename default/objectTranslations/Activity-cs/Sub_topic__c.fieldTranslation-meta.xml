@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sub topic --></label>
+    <name>Sub_topic__c</name>
+    <picklistValues>
+        <masterLabel>Address Change</masterLabel>
+        <translation><!-- Address Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bank Details Change</masterLabel>
+        <translation><!-- Bank Details Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Block my card(s)</masterLabel>
+        <translation><!-- Block my card(s) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Card other</masterLabel>
+        <translation><!-- Card Other Questions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carnet</masterLabel>
+        <translation><!-- Carnet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change Method of Invoice Distribution</masterLabel>
+        <translation><!-- Change Method of Invoice Distribution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment details change</masterLabel>
+        <translation><!-- Change of Payment Method --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ClubSmart</masterLabel>
+        <translation><!-- ClubSmart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Company Name Change</masterLabel>
+        <translation><!-- Company Name Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Person Change</masterLabel>
+        <translation><!-- Contact Person Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ECO Program</masterLabel>
+        <translation><!-- ECO Program --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forgotten PIN code</masterLabel>
+        <translation><!-- Forgotten PIN code --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FAQs/General queries</masterLabel>
+        <translation><!-- General Inquiry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guarantee</masterLabel>
+        <translation><!-- Guarantee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Internal 1</masterLabel>
+        <translation><!-- Internal 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invoice Dispute</masterLabel>
+        <translation><!-- Invoice Dispute --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invoice Resend</masterLabel>
+        <translation><!-- Invoice Resend --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Online Portals</masterLabel>
+        <translation><!-- My Online Portal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Customer Credentials</masterLabel>
+        <translation><!-- New Customer Credentials --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Order new card(s)</masterLabel>
+        <translation><!-- Order new card(s) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Others</masterLabel>
+        <translation><!-- Others --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Payment Confirmation</masterLabel>
+        <translation><!-- Payment Confirmation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Question about my Invoice</masterLabel>
+        <translation><!-- Question about my Invoice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Subaccount</masterLabel>
+        <translation><!-- Subaccount --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Termination</masterLabel>
+        <translation><!-- Termination --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>VAT Recovery</masterLabel>
+        <translation><!-- VAT Recovery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WPO</masterLabel>
+        <translation><!-- WPO --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

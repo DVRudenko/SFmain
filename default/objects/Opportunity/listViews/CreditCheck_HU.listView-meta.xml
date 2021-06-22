@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CreditCheck_HU</fullName>
+    <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Notes__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Credit_System_Number__c</columns>
+    <columns>bearbeitet_von__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Sec_Channel__c</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>Herkunft_Land__c</columns>
+    <columns>Registered_Country__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>CreditCheck,CC In Progress,Pending Credit,Credit Check - Pending Credit,Pending Credit - E2E Check</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Pending Credit - Contract Check</value>
+    </filters>
+    <filters>
+        <field>Registered_Country__c</field>
+        <operation>equals</operation>
+        <value>Hungary</value>
+    </filters>
+    <label>CreditCheck HU</label>
+    <language>de</language>
+    <sharedTo>
+        <role>Credit</role>
+    </sharedTo>
+</ListView>

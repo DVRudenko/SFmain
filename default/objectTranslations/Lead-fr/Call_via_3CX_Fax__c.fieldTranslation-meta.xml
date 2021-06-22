@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Clicking this link will launch a call to this lead&apos;s fax and connect it to your phone --></help>
+    <label><!-- Call fax via 3CX --></label>
+    <name>Call_via_3CX_Fax__c</name>
+</CustomFieldTranslation>

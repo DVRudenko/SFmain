@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The date/time when an agent sent the first response to client within a case --></help>
+    <label><!-- First Interaction Date --></label>
+    <name>First_Interaction_Date__c</name>
+</CustomFieldTranslation>

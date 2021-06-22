@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Checks record when it is created --></help>
+    <label><!-- Check on opportunity create --></label>
+    <name>Check_on_opportunity_create__c</name>
+</CustomFieldTranslation>

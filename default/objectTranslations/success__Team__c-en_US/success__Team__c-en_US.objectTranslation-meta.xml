@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Experience Group Layout</layout>
+        <sections>
+            <label><!-- Composition --></label>
+            <section>Composition</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- End Notification --></label>
+            <section>End Notification</section>
+        </sections>
+        <sections>
+            <label><!-- Notification Mechanism --></label>
+            <section>Notification Mechanism</section>
+        </sections>
+        <sections>
+            <label><!-- Start Notification --></label>
+            <section>Start Notification</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Targeted Layout</layout>
+        <sections>
+            <label><!-- Composition --></label>
+            <section>Composition</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- End Notification --></label>
+            <section>End Notification</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+        <sections>
+            <label><!-- Notification Mechanism --></label>
+            <section>Notification Mechanism</section>
+        </sections>
+        <sections>
+            <label><!-- Start Notification --></label>
+            <section>Start Notification</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Team Layout</layout>
+        <sections>
+            <label><!-- Composition --></label>
+            <section>Composition</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Intended to run continuously to build experience and promote mastery without direct comparison to colleagues. Drives personal growth and development. --></description>
+        <label><!-- Experience Group --></label>
+        <name>success__Group</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- DEPRECATED (no longer in use) --></description>
+        <label><!-- Objective --></label>
+        <name>success__Objective</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Intended to run for shorter periods of time to focus on targeted behaviours. Drives competition between participants via position rankings displayed on leaderboards. --></description>
+        <label><!-- Competition --></label>
+        <name>success__Targeted</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Collects together groups of Behaviours, Members and Levels that can be reused across both Experience Groups and Competitions. --></description>
+        <label><!-- Template --></label>
+        <name>success__Template</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- An existing Chatter Group must be linked to this Competition (or a new Group created) when Chatter notifications are enabled --></errorMessage>
+        <name>success__Chatter_notification_requires_group</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The start date must be before the end date --></errorMessage>
+        <name>success__Start_date_must_be_before_end_date</name>
+    </validationRules>
+</CustomObjectTranslation>

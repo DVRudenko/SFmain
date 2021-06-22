@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dont_Use_Standard_Create_Button</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISNEW(), RecordType.DeveloperName = 'Russian_Sales', OR($Profile.Name = 'Russian Sales Manager', AND($Profile.Name = 'Russian Team Leader',  $User.ID__c &lt;&gt;'0050O000008HVnA') , $Profile.Name = 'Russian Call Center', $Profile.Name = 'Russian Quality Control')
+    ,PD_Avaliable_LastName_Update__c = false
+    )</errorConditionFormula>
+    <errorMessage>Use new button for creating a record: "New Lead (New)".</errorMessage>
+</ValidationRule>

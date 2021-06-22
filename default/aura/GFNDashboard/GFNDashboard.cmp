@@ -1,0 +1,56 @@
+<aura:component implements="lightning:isUrlAddressable" controller="GFNI_DashboardCtrl">
+    <aura:attribute name="selectedTab" type="String" default="General-Information" />
+    <lightning:workspaceAPI aura:id="workspace" />
+
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="objectName" type="String" />
+    <aura:attribute name="gfnParams" type="String" />
+    <aura:attribute name="isResendInvoice" type="Boolean"/>
+    <aura:attribute name="relatedCaseList" type="List"/>
+    <aura:attribute name="accountId" type="String"/>
+    <aura:attribute name="popupCaseParameters" type="Object"/>
+    <aura:attribute name="docNumberList" type="List"/>
+    <aura:attribute name="accParams" type="String"/>
+    <aura:attribute name="popupType" type="String"/>
+    <aura:attribute name="cards" type="List"/>
+    <aura:attribute name="pinDeliveryAddress" type="Object"/>
+    <aura:attribute name="companyName" type="String"/>
+    <aura:attribute name="baseInfo" type="String"/>
+    <aura:attribute name="isClassic" type="Boolean" default="false"/>
+    <aura:attribute name="recordType" type="String" default="SME"/>
+    <aura:attribute name="currentTabName" type="String" default="General Information"/>
+    <aura:attribute name="uiSettings" type="Object"/>
+    <aura:attribute name="tabList" type="List"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="ResendInvoiceButtonEvent" event="c:ResendInvoiceButtonEvent" action="{!c.openResendInvoicePopup}"/>
+    <aura:handler name="ChangeAccParamsEvent" event="c:ChangeAccParamsEvent" action="{!c.changeAccParams}"/>
+    <aura:handler name="GetPinDeliveryAddressEvent" event="c:GetPinDeliveryAddressEvent" action="{!c.getPinDeliveryAddress}"/>
+
+    <div class="slds-tabs_default slds-scrollable" style="border-radius: 4px; background: white">
+        <ul class="slds-tabs_default__nav" role="tablist">
+            <aura:iteration items="{!v.tabList}" var="tab">
+                <li id="{!globalId + tab.Id}" class="{! 'slds-tabs_default__item ' + (v.currentTabName==tab.Name ? 'slds-is-active' : '') }">
+                    <a class="slds-tabs_default__link" href="javascript:void(0);" role="tab" onclick="{!c.openTab}" name="{!tab.Name}">
+                        <div class="slds-icon_container slds-m-right_x-small">
+                            <lightning:icon class="gray-on-white-icon" iconName="{!tab.Icon}" alternativeText="" size="small"/>
+                        </div>
+    
+                        <span>{!tab.Name}</span>
+                    </a>
+                </li>
+            </aura:iteration>
+
+            <span style="padding: 10px; font-weight: bold; margin-left:auto; margin-right:20px">
+                <a onclick="{!c.openAccountRecordPage}">
+                    {!v.baseInfo}
+                </a>
+            </span>
+        </ul>
+            {!v.body}
+        <aura:if isTrue="{!v.isResendInvoice}">
+            <c:ResendInvoicePopup recordId="{!v.recordId}" objectName="{!v.objectName}" newCaseParameters="{!v.popupCaseParameters}" 
+                docNumberList="{!v.docNumberList}" gfnParams="{#v.gfnParams}" accParams="{#v.accParams}" type="{!v.popupType}" cards="{!v.cards}" address="{!v.pinDeliveryAddress}" companyName="{!v.companyName}" recordType="{!v.recordType}"/>
+        </aura:if>
+    </div>
+</aura:component>

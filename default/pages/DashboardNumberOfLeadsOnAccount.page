@@ -1,0 +1,80 @@
+<apex:page standardController="Account" extensions="DashboardNumberOfLeadsOnAccountCtrl">
+	<apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+    <apex:form >
+   		<h1 style="margin-bottom: 10px; font-size: 15px; display: block;">Number of Leads</h1>
+        <apex:pageMessages />
+        <div id="salesteamleader" style="width: 100%; height: 280px;"></div>
+    <script>
+        $(function () {
+            $('#salesteamleader').highcharts({
+                chart: {
+                    type: 'bar'
+                },
+                title: {
+                    text: '',
+                    style: {
+                        display: 'none'
+                    }
+                },
+                xAxis: {
+                    categories: [<apex:repeat value="{! leadMapThisMonth }" var="key1">'<a href="/apex/NumberOfLeadsOnAccountReport?id={! currentId}" target="_blank">{! key1}</a>',</apex:repeat>
+                        <apex:repeat value="{! leadMapLastMonth }" var="key2">'<a href="/apex/NumberOfLeadsOnAccountReport?id={! currentId}" target="_blank">{! key2}</a>',</apex:repeat>
+                        <apex:repeat value="{! leadMapPenaltMonth }" var="key3">'<a href="/apex/NumberOfLeadsOnAccountReport?id={! currentId}" target="_blank">{! key3}</a>',</apex:repeat>
+                    ],
+                    labels: {
+                        useHTML: true
+                    }
+                },
+                yAxis: [{
+                    min: 0,
+                    title: {
+                        text: ''
+                    }, 
+                    style: {
+                        display: 'none'
+                    }
+                }, {
+                    title: {
+                        text: ''
+                    },
+                    opposite: true
+                }],
+                legend: {
+                    shadow: false
+                },
+                exporting: { enabled: false },
+                credits: {
+                      enabled: false
+                },
+                tooltip: {
+                    enabled: false
+                },
+                plotOptions: {
+                    column: {
+                        grouping: false,
+                        shadow: false,
+                        borderWidth: 0
+                    },
+                    bar: {
+                        dataLabels: {
+                            enabled: true,
+                            formatter: function () {
+                                return this.y;  
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Current Value',
+                    color: 'rgba(126,86,134,.9)',
+                    data: [<apex:repeat value="{! leadMapThisMonth }" var="key1">{! leadMapThisMonth[key1]},</apex:repeat>
+                    <apex:repeat value="{! leadMapLastMonth }" var="key2"> {! leadMapLastMonth[key2]},</apex:repeat>
+                    <apex:repeat value="{! leadMapPenaltMonth }" var="key3">{! leadMapPenaltMonth[key3]},</apex:repeat>]
+                }]
+            });
+        });
+    </script>
+    </apex:form>
+</apex:page>

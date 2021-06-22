@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__Transaction_Group__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(FLOOR ( MOD( CreatedDate - ($System.OriginDateTime),1) *24) &lt; 10,&#39;0&#39;,&#39;&#39;) &amp;
+TEXT(FLOOR ( MOD( CreatedDate - ($System.OriginDateTime),1) *24)) &amp; &#39; &#39; &amp;  NVMStatsSF__Type__c</formula>
+    <label>Transaction Group</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

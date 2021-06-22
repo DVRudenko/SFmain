@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>License_plate_or_Driver_name_mandatory</fullName>
+    <active>true</active>
+    <description>KFZ_Kennzeichen_oder_Fahrername__c or Driver_Name__c should not be empty to save fuel card.</description>
+    <errorConditionFormula>AND( ISBLANK( KFZ_Kennzeichen_oder_Fahrername__c ) , ( ISBLANK( Driver_Name__c ) ), NOT(Opportunity__r.E2E__c = true), $User.Alias != &quot;guest&quot;)</errorConditionFormula>
+    <errorMessage>Please enter a License plate number or Driver&#39;s name on the card.</errorMessage>
+</ValidationRule>

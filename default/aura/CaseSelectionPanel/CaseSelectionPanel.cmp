@@ -1,0 +1,99 @@
+<aura:component>
+    <aura:attribute name="caseList" type="Case[]"/>
+    <aura:attribute name="selectedCase" type="Case" default="{ 'sobjectType': 'Case' }"/>
+    <aura:attribute name="isSelected" type="Boolean"/>
+    <aura:attribute name="email" type="Object"/>
+    <aura:attribute name="objectName" type="String"/>
+    <aura:attribute name="contactList" type="Contact[]"/>
+    <aura:attribute name="emailTo" type="String"/>
+    <aura:attribute name="emailCc" type="String"/>
+    <aura:attribute name="type" type="String"/>
+    <aura:attribute name="emailAddress" type="String"/>
+
+    <div class="slds-box">
+        <div class="slds-grid slds-wrap">
+            <!-- <aura:if isTrue="{!v.objectName!='Case'}"> -->
+                <div class="slds-col slds-size_1-of-3 slds-box case-list-panel slds-scrollable_y">
+                    <aura:iteration items="{!v.caseList}" var="case">
+                        <div class="{!'slds-border_bottom '+ (case==v.selectedCase ? 'slds-theme_shade' : '')}">
+                            <a class="slds-grid case-item-color" onclick="{!c.openCase}" name="{!case.Id}">
+                                <div class="slds-col slds-size_1-of-2 slds-truncate">{!case.CaseNumber}</div>
+                                <div class="slds-col slds-size_1-of-2 slds-truncate">{!case.Subject}</div>
+                            </a>
+                        </div>
+                    </aura:iteration>        
+                </div>
+            <!-- </aura:if> -->
+            <div class="slds-col slds-size_2-of-3">
+                <aura:if isTrue="{!v.isSelected}">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="slds-form-element slds-form-element_stacked">
+                                <span class="slds-form-element__label">Case Number</span>
+                                <div class="slds-form-element__control">
+                                    <span class="slds-form-element__static">{!v.selectedCase.CaseNumber}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="slds-form-element slds-form-element_stacked">
+                                <span class="slds-form-element__label">Status</span>
+                                <div class="slds-form-element__control">
+                                    <span class="slds-form-element__static">{!v.selectedCase.Status}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="slds-form-element slds-form-element_stacked">
+                                <span class="slds-form-element__label">Topic</span>
+                                <div class="slds-form-element__control">
+                                    <span class="slds-form-element__static">{!v.selectedCase.Topic__c}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="slds-form-element slds-form-element_stacked">
+                                <span class="slds-form-element__label">Sub topic</span>
+                                <div class="slds-form-element__control">
+                                    <span class="slds-form-element__static">{!v.selectedCase.Sub_topic__c}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="slds-form-element slds-form-element_stacked">
+                                <span class="slds-form-element__label">Origin</span>
+                                <div class="slds-form-element__control">
+                                    <span class="slds-form-element__static">{!v.selectedCase.Origin}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <div class="slds-form-element slds-form-element_stacked">
+                                <span class="slds-form-element__label">Queue Email</span>
+                                <div class="slds-form-element__control">
+                                    <span class="slds-form-element__static">{!v.selectedCase.Queue_Email__c}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <aura:if isTrue="{!v.type == 'Resend Invoice'}">
+                            <div class="slds-col slds-size_1-of-2">
+                                <div class="slds-form-element_stacked">
+                                    <lightning:select name="Contact" value="{!v.emailAddress}" label="Contact">
+                                        <option value="">---</option>                                    
+                                        <aura:iteration items="{!v.contactList}" var="contact">
+                                            <option value="{!contact.Email}">{!contact.FirstName + ' ' + contact.LastName}</option>                                    
+                                        </aura:iteration>
+                                    </lightning:select>
+                                </div>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2 slds-grid slds-wrap slds-p-vertical_medium slds-p-horizontal_x-small">
+                                <a class="slds-col slds-size_1-of-1" onclick="{!c.addToToField}">Change 'To' field</a>
+                                <a class="slds-col slds-size_1-of-1" onclick="{!c.addToCcField}">Add to 'Cc' field</a>
+                            </div>
+                        </aura:if>
+                    </div>
+                </aura:if>
+            </div>
+        </div>
+    </div>
+</aura:component>

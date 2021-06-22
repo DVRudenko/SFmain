@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Produktbezugskategorie__c</fullName>
+    <externalId>false</externalId>
+    <label>Produktbezugskategorie</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0 Diesel, Tunnel-, Maut- und Fährgebühren</fullName>
+                <default>false</default>
+                <label>0 Diesel, Tunnel-, Maut- und Fährgebühren</label>
+            </value>
+            <value>
+                <fullName>1 Alle Kraftstoffe, Tunnel-, Maut- und Fährgebühren</fullName>
+                <default>false</default>
+                <label>1 Alle Kraftstoffe, Tunnel-, Maut- und Fährgebühren</label>
+            </value>
+            <value>
+                <fullName>2 Kategorie 1 plus fahrzeugbezogene Waren und Dienstleistungen (Öle, Autowäsche)</fullName>
+                <default>false</default>
+                <label>2 Kategorie 1 plus fahrzeugbezogene Waren und Dienstleistungen (Öle, Autowäsche)</label>
+            </value>
+            <value>
+                <fullName>3 Kategorie 2 plus alle Shopartikel</fullName>
+                <default>false</default>
+                <label>3 Kategorie 2 plus alle Shopartikel</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

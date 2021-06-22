@@ -1,0 +1,26 @@
+{
+    "translations": {
+        "title": {
+            "en": "International VAT refund program",
+            "pl": "Międzynarodowy program zwrotu podatku VAT"
+        },
+        "description": {
+            "en": "<p>FLEETCOR in cooperation with the Alfa Transport Service (ATS) submits the application on behalf of your company to foreign tax authorities. ATS will take care of your tax refund based on your power of attorney and signed documents. You'll recieve your VAT refund precisely calculated on the basis of original VAT invoices directly on your bank account.</p>",
+            "pl": "<p>FLEETCOR w ścisłej współpracy z Alfa Transport Service (ATS) prowadzi kompleksową obsługę procesu odzyskania podatku VAT za transakcje zagraniczne. Nasz partner zajmie się zwrotem podatku na podstawie Twojego pełnomocnictwa i podpisanych dokumentów. Otrzymasz zwrot podatku VAT, który jest precyzyjnie rozliczany na podstawie oryginałów faktur VAT, bezpośrednio na swoje konto bankowe.</p>"
+        },
+        "additional_checkbox_1": {
+            "en": "Yes, I want to use the VAT recovery service and I confirm that I do not use the services of any other supplier dealing with VAT recovery in Europe.",
+            "pl": "Tak, chcę skorzystać z usługi odzyskiwania podatku VAT i potwierdzam, że nie korzystam z usług żadnego innego dostawcy zajmującego się odzyskiwaniem podatku VAT w Europie."
+        },
+        "additional_checkbox_2": {
+            "en": "Yes, I accept the provisions of the <a href='/etedocuments?doc=vatRecoveryTC$1$' target='_blank'>Agreement</a> and the <a href='/etedocuments?doc=priceList$1$' target='_blank'>Price List</a>. I understand that my data will be forwarded to ATS - ALFA TRANSPORT SERVICE VOF - a business partner of FLEETCOR Poland sp. Z o.o. in order to provide VAT recovery services in accordance with the provisions of the Agreement.",
+            "pl": "Tak, akceptuję postanowienia <a href='/etedocuments?doc=vatRecoveryTC$1$' target='_blank'>Umowy</a> oraz <a href='/etedocuments?doc=priceList$1$' target='_blank'>Cennik</a>. Rozumiem, że moje dane zostaną przekazane ATS - ALFA TRANSPORT SERVICE V.O.F - partnerowi biznesowemu spółki FLEETCOR Poland sp. z o.o., w celu realizacji usługi odzyskiwania podatku VAT zgodnie z postanowieniami Umowy."
+        }
+    },
+    "settings": {
+        "bgImage": "/resource/ete_images/bgInfoCardMoney1.png",
+        "show_more": "false",
+        "show_checkbox_1": "true",
+        "show_checkbox_2": "true"
+    }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Stations --></label>
+    <name>Stations__c</name>
+    <picklistValues>
+        <masterLabel>Not specified yet</masterLabel>
+        <translation><!-- Not specified yet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell &amp; Partners</masterLabel>
+        <translation><!-- Shell &amp; Partners --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell (All Stations)</masterLabel>
+        <translation><!-- Shell (All Stations) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell (Home Station)</masterLabel>
+        <translation><!-- Shell (Home Station) --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

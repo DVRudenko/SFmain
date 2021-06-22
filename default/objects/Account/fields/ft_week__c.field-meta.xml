@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ft_week__c</fullName>
+    <description>The first week year and number in which the customer first used their card to pump any fuel volume as recorded in GFN.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The first week year and number in which the customer first used their card to pump any fuel volume as recorded in GFN.</inlineHelpText>
+    <label>GFN FT Week</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

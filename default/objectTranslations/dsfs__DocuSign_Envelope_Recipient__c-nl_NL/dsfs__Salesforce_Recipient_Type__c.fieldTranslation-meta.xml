@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>TYPE ONTVANGER SALESFORCE</help>
+    <label><!-- Salesforce Recipient Type --></label>
+    <name>dsfs__Salesforce_Recipient_Type__c</name>
+    <picklistValues>
+        <masterLabel>Contact</masterLabel>
+        <translation>CONTACT</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lead</masterLabel>
+        <translation>LEAD</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User</masterLabel>
+        <translation>GEBRUIKER</translation>
+    </picklistValues>
+</CustomFieldTranslation>

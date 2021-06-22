@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>HVS_Permission</name>
+    </customPermissions>
+    <description>Assigns users to Custom Permission &quot;HVS Permission&quot; to give permission to HVS features (such as HVS Lightning components)</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>HVS Features Permission</label>
+</PermissionSet>

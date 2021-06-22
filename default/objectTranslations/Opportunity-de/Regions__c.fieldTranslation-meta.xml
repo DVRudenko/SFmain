@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Regions --></label>
+    <name>Regions__c</name>
+    <picklistValues>
+        <masterLabel>Bayern–(Bayern+Baden-Württemberg)</masterLabel>
+        <translation><!-- Bayern–(Bayern+Baden-Württemberg) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hessen &amp; Thüringen – HE+TH</masterLabel>
+        <translation><!-- Hessen &amp; Thüringen – HE+TH --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Niedersachsen &amp; Vorpommern – NI+MV+SH+HB</masterLabel>
+        <translation><!-- Niedersachsen &amp; Vorpommern – NI+MV+SH+HB --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rhein &amp; Saar – NW+RP+SL</masterLabel>
+        <translation><!-- Rhein &amp; Saar – NW+RP+SL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sachsen &amp; Brandenburg – BB+ST+SN+BE</masterLabel>
+        <translation><!-- Sachsen &amp; Brandenburg – BB+ST+SN+BE --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

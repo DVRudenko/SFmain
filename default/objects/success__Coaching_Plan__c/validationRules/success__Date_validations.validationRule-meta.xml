@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>success__Date_validations</fullName>
+    <active>true</active>
+    <description>Start and End date must be present, or neither present</description>
+    <errorConditionFormula>IF(and(not(ISBLANK(success__End_Date__c)),ISBLANK(success__Start_Date__c)), true, IF(and(not(ISBLANK(success__Start_Date__c)),ISBLANK(success__End_Date__c)), true, false))</errorConditionFormula>
+    <errorMessage>Please make sure both End and Start date are filled.</errorMessage>
+</ValidationRule>

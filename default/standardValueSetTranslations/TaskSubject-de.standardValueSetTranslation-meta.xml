@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>1st Call with Decision Maker</masterLabel>
+        <translation><!-- 1st Call with Decision Maker --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Anruf - Entscheider</masterLabel>
+        <translation><!-- Anruf - Entscheider --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Block Card</masterLabel>
+        <translation><!-- Block Card --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Outbound call - 1st try</masterLabel>
+        <translation><!-- CCS Outbound call - 1st try --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Outbound call - 2nd try</masterLabel>
+        <translation><!-- CCS Outbound call - 2nd try --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Outbound call - 3rd try</masterLabel>
+        <translation><!-- CCS Outbound call - 3rd try --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Retention Call - CarNet</masterLabel>
+        <translation><!-- CCS Retention Call - CarNet --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CCS Retention Call - Cards</masterLabel>
+        <translation><!-- CCS Retention Call - Cards --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Call</masterLabel>
+        <translation>Anruf</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Final Call</masterLabel>
+        <translation><!-- Final Call --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Follow-up Phone Call</masterLabel>
+        <translation><!-- Follow-up Phone Call --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Inbound</masterLabel>
+        <translation><!-- Inbound --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Inbound Call</masterLabel>
+        <translation><!-- Inbound Call --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Lost Account Call</masterLabel>
+        <translation><!-- Lost Account Call --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Meeting</masterLabel>
+        <translation><!-- Meeting --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation>Sonstiges</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Outbound Call</masterLabel>
+        <translation><!-- Outbound Call --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Retention</masterLabel>
+        <translation><!-- Retention --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Send Fax</masterLabel>
+        <translation><!-- Send Fax --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Send Letter</masterLabel>
+        <translation>Brief schicken</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Send Quote</masterLabel>
+        <translation>Angebot schicken</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>quali. Termin vereinbart</masterLabel>
+        <translation><!-- quali. Termin vereinbart --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Запрос документов для скоринга</masterLabel>
+        <translation><!-- Запрос документов для скоринга --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Запрос реквизитов</masterLabel>
+        <translation><!-- Запрос реквизитов --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Назначение встречи</masterLabel>
+        <translation><!-- Назначение встречи --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Отправка заявки в КФ</masterLabel>
+        <translation><!-- Отправка заявки в КФ --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Отправка реквизитов в ZOHO</masterLabel>
+        <translation><!-- Отправка реквизитов в ZOHO --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

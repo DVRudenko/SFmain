@@ -1,0 +1,56 @@
+<apex:page controller="AccountExtension"
+           docType="html-5.0"
+           sideBar="false"
+           showHeader="false"
+           standardStylesheets="false"
+           cache="false">
+
+    <style>
+        body {
+            font-family: Courier, serif;
+            font-size: 12pt;
+        }
+
+        td {
+            border-width: 1px;
+            padding: 4px;
+            border-style: solid;
+            border-color: #000000;
+            background-color: #FFEECC;
+        }
+
+        th {
+            color: #000000;
+            border-width: 1px;
+            padding: 4px;
+            border-style: solid;
+            border-color: #000000;
+            background-color: #FFFFF0;
+        }
+    </style>
+
+    <p>
+        Через E2Е обратилась компания с дублем Email вашего потенциального клиента, свяжитесь с ним и продолжайте работу
+        в своей Возможности или с Е2Е Возможностью, если договор будет заключен на новое ИНН
+    </p>
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Account Name</th>
+        </tr>
+        <apex:variable value="{!1}" var="position"/>
+        <apex:repeat value="{!accounts}" var="acc">
+            <tr>
+                <td>
+                    <apex:outputText value="{!TEXT(position) + '. '}"/>
+                </td>
+                <td>
+                    <apex:outputLink value="{!$CurrentPage.parameters.domain + acc.Id}" target="_blank">{!acc.Name}</apex:outputLink><br/>
+                </td>
+            </tr>
+            <apex:variable value="{!position + 1}" var="position"/>
+        </apex:repeat>
+    </table>
+
+</apex:page>

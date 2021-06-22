@@ -1,0 +1,191 @@
+<apex:page controller="DashboardStartsSLAoverdueCtrl" action="{! init }" showHeader="false" sidebar="false">
+    <apex:includeScript value="{! $Resource.jQuery} "/>
+    <apex:includeScript value="{! URLFOR($Resource.Highcharts,'js/highcharts.js')} "/>
+    <apex:includeScript value="{! URLFOR($Resource.Highcharts,'js/modules/exporting.js')} "/>
+    <apex:form >
+        <apex:pageBlock >
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                        <h1 style="margin-bottom: 10px; font-size: 15px; display: block;">Starts SLA overdue</h1>
+                    </td>
+                </tr>
+            </table>
+            <apex:pageMessages />
+            <div>
+                <apex:outputPanel rendered="{! OR(currentUser.UserRole.Name == 'Teamleiter Inbound',
+                                                  currentUser.UserRole.Name == 'Teamleiter Inbound 2', 
+                                                  currentUser.UserRole.Name == 'Starts Team Manager',
+                                                  currentUser.UserRole.Name == 'Teamleiter Outbound 1',
+                                                  currentUser.UserRole.Name == 'Teamleiter Outbound 2',
+                                                  currentUser.UserRole.Name == 'Teamleiter Outbound 5') }">
+                    <div id="salesteamleader" style="width: 100%; float: right; height: 550px;"></div>
+                </apex:outputPanel>
+                <div>
+                    <apex:outputPanel rendered="{! OR(currentUser.UserRole.Name == 'Salesteam Inbound',  
+                                                      currentUser.UserRole.Name == 'Salesteam Inbound 2',
+                                                      currentUser.UserRole.Name == 'Starts Team Rep',
+                                                      currentUser.UserRole.Name == 'Salesteam Outbound 1',
+                                                      currentUser.UserRole.Name == 'Salesteam Outbound 2',
+                                                      currentUser.UserRole.Name == 'Salesteam Outbound 5') }">
+                        <div id="sales" style="width: 100%; float: right; height: 150px;"></div>
+                    </apex:outputPanel>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </apex:pageBlock>
+        <script>
+            $(function () { 
+                var percentExpiredOpportunitiesJS = {};
+                <apex:repeat value="{! salesUserMap }" var="userId">
+                    percentExpiredOpportunitiesJS['<a href="/apex/DashboardStartsSLAoverdueReport?userId={! userId }" target="_blank">{! salesUserMap[userId].Name }</a>'] = "{! percentExpiredOpportunitiesForUserMap[userId] }";
+                </apex:repeat>
+                $('#salesteamleader').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                            <apex:repeat value="{! salesUserMap }" var="userId">
+                                '<a href="/apex/DashboardStartsSLAoverdueReport?userId={! userId }" target="_blank">{! salesUserMap[userId].Name }</a>',
+                            </apex:repeat>
+                        ],
+                        labels: {
+                            useHTML: true
+                        }
+                    },
+                    yAxis: [{
+                        min: 0,
+                        title: {
+                            text: ''
+                        },
+                        stackLabels: {
+                            enabled: true,
+                            style: {
+                                fontWeight: 'bold',
+                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        }
+                    }],
+                    legend: {
+                        shadow: false,
+                        labelFormatter: function() {
+                          var total = 0;
+                          for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+                          return this.name + ': ' + total + ' (' + "{! totalPercentOfExpiredOpportunityForTeamLead }" + '%)';
+                        }
+                    },
+                    exporting: { enabled: false },
+                    credits: {
+                          enabled: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    },
+                    plotOptions: {
+                        column: {
+                            grouping: false,
+                            shadow: false,
+                            borderWidth: 0
+                        },
+                        bar: {
+                            dataLabels: {
+                                enabled: true,
+                                formatter: function () {
+                                    return Math.round(this.y) + ' (' + percentExpiredOpportunitiesJS[this.x] + '%)';  
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'Starts SLA overdue',
+                        color: 'rgba(126,86,134,.9)',
+                        data: [<apex:repeat value="{! salesUserMap }" var="userId">
+                                    {! finalExpiredOpportunitiesMap[userId] },
+                                </apex:repeat>
+                        ],
+                        pointPadding: -0.1,
+                        pointPlacement: 0.0
+                    }]
+                });
+                $('#sales').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                                '<a href="/apex/DashboardStartsSLAoverdueReport?userId={! currentUser.Id }" target="_blank">{! currentUser.Name }</a>',
+                        ],
+                        labels: {
+                            useHTML: true
+                        }
+                    },
+                    yAxis: [{
+                        min: 0,
+                        title: {
+                            text: ''
+                        },
+                        stackLabels: {
+                            enabled: true,
+                            style: {
+                                fontWeight: 'bold',
+                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        }
+                    }],
+                    legend: {
+                        shadow: false,
+                        labelFormatter: function() {
+                          var total = 0;
+                          for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+                          return this.name + ': ' + total;
+                        }
+                    },
+                    exporting: { enabled: false },
+                    credits: {
+                          enabled: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    },
+                    plotOptions: {
+                        column: {
+                            grouping: false,
+                            shadow: false,
+                            borderWidth: 0
+                        },
+                        bar: {
+                            dataLabels: {
+                                enabled: true,
+                                formatter: function () {
+                                    return Math.round(this.y) + ' (' + "{! percentOfExpiredOpportunityForSale }" + '%)';  
+                                }
+                            }
+                        }
+                    },
+                    series: [{
+                        name: 'Starts SLA overdue',
+                        color: 'rgba(126,86,134,.9)',
+                        data: [
+                            {! numberExpiredOpportunityForSale }
+                        ],
+                        pointPadding: -0.1,
+                        pointPlacement: 0.0
+                    }]
+                });
+            });
+        </script>
+    </apex:form>
+</apex:page>

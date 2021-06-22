@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Name</columns>
+    <columns>Subject</columns>
+    <columns>FeedbackType</columns>
+    <columns>DueDate</columns>
+    <columns>Recipient</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>FeedbackRequestState</columns>
+    <filterScope>Everything</filterScope>
+    <label>Sämtliches Feedback</label>
+</ListView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Status van DocuSign-ontvangers</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Status van DocuSign-ontvangers</value>
+    </caseValues>
+    <gender>Neuter</gender>
+    <layouts>
+        <layout>DocuSign Recipient Status Layout</layout>
+        <sections>
+            <label>Aangepaste koppelingen</label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label>Verwante objecten</label>
+            <section>Related Objects</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Naam DocuSign-ontvanger</nameFieldLabel>
+    <webLinks>
+        <label><!-- ResendDocuSignEmail --></label>
+        <name>dsfs__ResendDocuSignEmail</name>
+    </webLinks>
+</CustomObjectTranslation>

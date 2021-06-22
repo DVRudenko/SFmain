@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HU_Opportunities</fullName>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>Total_consumption_l_month__c</columns>
+    <columns>Anzahl_der_Karten__c</columns>
+    <columns>Zahlungsart__c</columns>
+    <columns>Auftragsvolumen__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Registered_Country__c</field>
+        <operation>equals</operation>
+        <value>Hungary</value>
+    </filters>
+    <filters>
+        <field>Sec_Channel__c</field>
+        <operation>equals</operation>
+        <value>JITB</value>
+    </filters>
+    <label>JITB Opportunities (HUN)</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>CCS_Administrator</role>
+        <role>Role_Up</role>
+        <roleAndSubordinates>Salesteam_Inbound</roleAndSubordinates>
+        <roleAndSubordinates>Salesteam_Inbound_2</roleAndSubordinates>
+        <roleAndSubordinates>Teamleiter_Inbound</roleAndSubordinates>
+        <roleAndSubordinates>Teamleiter_Inbound_2</roleAndSubordinates>
+    </sharedTo>
+</ListView>

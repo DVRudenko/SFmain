@@ -1,0 +1,9 @@
+{
+    "recordTypes":  [
+        "Russian_credit_check"
+    ],
+    "recordTypesForChangeOwner": [
+        "Russian_credit_check",
+        "Russian_FRAUD_check"
+    ]
+}

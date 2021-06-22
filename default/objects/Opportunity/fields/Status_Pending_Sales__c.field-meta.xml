@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Pending_Sales__c</fullName>
+    <externalId>false</externalId>
+    <label>Status Pending Sales</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>ASP nicht erreicht – Kautionsmail gesendet</fullName>
+                <default>false</default>
+                <label>ASP nicht erreicht – Kautionsmail gesendet</label>
+            </value>
+            <value>
+                <fullName>Kontakt aufgenommen – Kunde unschlüssig</fullName>
+                <default>false</default>
+                <label>Kontakt aufgenommen – Kunde unschlüssig</label>
+            </value>
+            <value>
+                <fullName>Kontakt aufgenommen – warten auf Bürgschaft</fullName>
+                <default>false</default>
+                <label>Kontakt aufgenommen – warten auf Bürgschaft</label>
+            </value>
+            <value>
+                <fullName>Kontakt aufgenommen – warten auf Kaution</fullName>
+                <default>false</default>
+                <label>Kontakt aufgenommen – warten auf Kaution</label>
+            </value>
+            <value>
+                <fullName>Warten auf fehlende Daten</fullName>
+                <default>false</default>
+                <label>Warten auf fehlende Daten</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Pending Sales – Deposit</controllingFieldValue>
+            <controllingFieldValue>Pending Sales – Information</controllingFieldValue>
+            <valueName>Kontakt aufgenommen – Kunde unschlüssig</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Sales – Deposit</controllingFieldValue>
+            <controllingFieldValue>Pending Sales – Information</controllingFieldValue>
+            <valueName>Kontakt aufgenommen – warten auf Kaution</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Sales – Deposit</controllingFieldValue>
+            <controllingFieldValue>Pending Sales – Information</controllingFieldValue>
+            <valueName>Kontakt aufgenommen – warten auf Bürgschaft</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Sales – Deposit</controllingFieldValue>
+            <controllingFieldValue>Pending Sales – Information</controllingFieldValue>
+            <valueName>Warten auf fehlende Daten</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pending Sales – Deposit</controllingFieldValue>
+            <controllingFieldValue>Pending Sales – Information</controllingFieldValue>
+            <valueName>ASP nicht erreicht – Kautionsmail gesendet</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

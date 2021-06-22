@@ -1,0 +1,310 @@
+<apex:page controller="DashboardFieldMeetingsPlanCCSctrl" action="{! init }" sidebar="false" showHeader="false">
+	<apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/highcharts.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Highcharts,'js/modules/exporting.js')}"/>
+    <apex:form >
+    	<apex:pageBlock >
+            <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td>
+                    	<h1 style="margin-bottom: 10px; font-size: 15px; display: block;">Field meetings plan for 
+                    		<apex:selectList value="{! selectedPeriod }" size="1" multiselect="false" style="margin-left: 5px;">
+        	                    <apex:selectOptions value="{! periodsList }"/>
+        	                    <apex:actionSupport action="{! init }" event="onchange"/>
+                            </apex:selectList>
+                         	<apex:selectList value="{! selectedYear }" size="1" multiselect="false" style="margin: 0 5px;">
+                                <apex:selectOptions value="{! yearsList }"/>
+                                <apex:actionSupport action="{! changeYear }" event="onchange"/>
+                            </apex:selectList>({! startDateOfMonthString } - {! endDateOfMonthString })
+                        </h1>
+                    </td>
+                    <!-- <td style="text-align: right;">
+                        <apex:outputLink value="/articles/Knowledge/Help-page-for-Top-10-deals-in-progress-dashboard" target="_blank" id="theLink">Help</apex:outputLink>
+                    </td> -->
+                </tr>
+            </table>
+            <apex:pageMessages />
+        	<div>
+                <apex:outputPanel rendered="{! OR(currentUser.UserRole.Name == 'CCS SME Team Lead',
+                                                  currentUser.UserRole.Name == 'CCS CZ KAM Team Lead',
+                                                  currentUser.UserRole.Name == 'CCS CZ LAM Team Lead') }">
+
+                    <div id="salesteamleader" style="width: 100%; float: right; height: 550px;"></div>
+                </apex:outputPanel>
+                <apex:outputPanel rendered="{! OR(currentUser.UserRole.Name == 'CCS CZ SME',  
+                                                  currentUser.UserRole.Name == 'CCS SK SME',
+                                                  currentUser.UserRole.Name == 'CCS CZ KAM',
+                                                  currentUser.UserRole.Name == 'CCS CZ LAM') }">
+                    <div id="sales" style="width: 100%; float: right; height: 150px;"></div>
+                </apex:outputPanel>
+                <div style="clear: both;"></div>
+            </div> 
+        </apex:pageBlock>
+        <script>
+    		$(function () { 
+                $('#salesteamleader').highcharts({
+				    chart: {
+				        type: 'bar'
+				    },
+				    title: {
+				        text: '',
+				        style: {
+				            display: 'none'
+				        }
+				    },
+				    xAxis: {
+				        categories: [
+                            <apex:repeat value="{! finalList }" var="key">
+                                '<a href="/apex/DashboardFieldMeetingsPlanCCSreport?userid={! salesTeamMap[key.Id].Id }&period={! selectedPeriod }&year={! selectedYear }" target="_blank">{! salesTeamMap[key.Id].Name }</a>',
+                            </apex:repeat>
+                        ],
+                        labels: {
+                            useHTML: true
+                        }
+				    },
+				    yAxis: [{
+				        min: 0,
+				        title: {
+				            text: ''
+				        },
+				        stackLabels: {
+				            enabled: true,
+				            style: {
+				                fontWeight: 'bold',
+				                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+				            }
+				        }
+				    }],
+				    legend: {
+				        shadow: false,
+				        labelFormatter: function() {
+				          	var total = 0;
+				          	for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+			          		if (this.name != 'Plan') {
+								return this.name + ' - Total: ' + total;
+			          		} else {
+			          			return 'Current Plan';
+			          		}  
+				        }
+				    },
+				    exporting: { enabled: false },
+				    credits: {
+				          enabled: false
+				    },
+				    tooltip: {
+				        enabled: false
+				    },
+				    plotOptions: {
+				        series: {
+				            stacking: 'normal',
+				            dataLabels: {
+				                enabled: true,
+				                color: 'black',
+				                formatter: function () {
+                                    if ((this.series.name == '"První schůzka" types' || this.series.name == '"Následná schůzka" types' || this.series.name == '"Retence" types' ||
+                                    	this.series.name == '"Rozvoj" types' || this.series.name == '"Péče" types' || this.series.name == '"Trénink" types' ||
+                                    	this.series.name == '"Akvizice" types') && this.y != 0) {
+                                        return Math.round(this.y);    
+                                    }
+                                },
+				                style: {
+				                    textShadow: false 
+				                }
+				            }
+				        }
+				    },
+				    series: [{
+				        name: '"První schůzka" types',
+				        color: '#fdc6d2',
+				        data: [<apex:repeat value="{! finalList }" var="key">
+				        {! finalEventTypesMap[key.Id].firstMeetingType },
+				        </apex:repeat>],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0    
+				    }, {
+				        name: '"Následná schůzka" types',
+				        color: '#ce7957',
+				        data: [<apex:repeat value="{! finalList }" var="key">
+				        {! finalEventTypesMap[key.Id].nextMeetingType },
+				        </apex:repeat>],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0
+				    }, {
+				        name: '"Retence" types',
+				        color: '#f6d0a6',
+				        data: [<apex:repeat value="{! finalList }" var="key">
+				        {! finalEventTypesMap[key.Id].retentionType },
+				        </apex:repeat>],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0
+				    }, {
+				        name: '"Rozvoj" types',
+				        color: '#eca49c',
+				        data: [<apex:repeat value="{! finalList }" var="key">
+				        {! finalEventTypesMap[key.Id].developmentType },
+				        </apex:repeat>],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0
+				    }, {
+				        name: '"Péče" types',
+				        color: '#db7286',
+				        data: [<apex:repeat value="{! finalList }" var="key">
+				        {! finalEventTypesMap[key.Id].careType },
+				        </apex:repeat>],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0
+				    }, {
+				        name: '"Trénink" types',
+				        color: '#9ca968',
+				        data: [<apex:repeat value="{! finalList }" var="key">
+				        {! finalEventTypesMap[key.Id].trainingType },
+				        </apex:repeat>],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0
+				    }, {
+				        name: '"Akvizice" types',
+				        color: '#ded1c9',
+				        data: [<apex:repeat value="{! finalList }" var="key">
+				        {! finalEventTypesMap[key.Id].acquisitionType },
+				        </apex:repeat>],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0
+				    }, {
+				        type: 'spline',
+				        name: 'Plan',
+				        data: [<apex:repeat value="{! finalList }" var="key">
+				        {! currentPlan },
+				        </apex:repeat>],
+				        marker: {
+				            lineWidth: 2,
+				            lineColor: Highcharts.getOptions().colors[3],
+				            fillColor: 'white'
+				        }
+				    }]
+				});
+				$('#sales').highcharts({
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: '',
+                        style: {
+                            display: 'none'
+                        }
+                    },
+                    xAxis: {
+                        categories: [
+                            '<a href="/apex/DashboardFieldMeetingsPlanCCSreport?userid={! currentUser.Id }&period={! selectedPeriod }&year={! selectedYear }" target="_blank">{! currentUser.FirstName } {! currentUser.LastName }</a>'
+                        ],
+                        labels: {
+                            useHTML: true
+                        }
+                    },
+                    yAxis: [{
+                        min: 0,
+                        title: {
+                            text: ''                                
+                        }, 
+                        stackLabels: {
+                            enabled: true,
+                            style: {
+                                fontWeight: 'bold',
+                                color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                            }
+                        }
+                    }],
+                    legend: {
+				        shadow: false,
+				        labelFormatter: function() {
+				          	var total = 0;
+				          	for(var i=this.yData.length; i--;) { total += this.yData[i]; };
+			          		if (this.name != 'Plan') {
+								return this.name + ' - Total: ' + total;
+			          		} else {
+			          			return 'Current Plan';
+			          		}  
+				        }
+				    },
+                    exporting: { enabled: false },
+                    credits: {
+                          enabled: false
+                    },
+                    tooltip: {
+                        enabled: false
+                    },
+                    plotOptions: {
+				        series: {
+				            stacking: 'normal',
+				            dataLabels: {
+				                enabled: true,
+				                color: 'black',
+				                formatter: function () {
+                                    if ((this.series.name == '"První schůzka" types' || this.series.name == '"Následná schůzka" types' || this.series.name == '"Retence" types' ||
+                                    	this.series.name == '"Rozvoj" types' || this.series.name == '"Péče" types' || this.series.name == '"Trénink" types' ||
+                                    	this.series.name == '"Akvizice" types') && this.y != 0) {
+                                        return Math.round(this.y);    
+                                    }
+                                },
+				                style: {
+				                    textShadow: false 
+				                }
+				            }
+				        }
+				    },
+					series: [{
+				        name: '"První schůzka" types',
+				        color: '#fdc6d2',
+				        data: [{! finalEventTypesMap[currentUser.Id].firstMeetingType }],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0    
+				    }, {
+				        name: '"Následná schůzka" types',
+				        color: '#ce7957',
+				        data: [{! finalEventTypesMap[currentUser.Id].nextMeetingType }],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0
+				    }, {
+				        name: '"Retence" types',
+				        color: '#f6d0a6',
+				        data: [{! finalEventTypesMap[currentUser.Id].retentionType }],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0
+				    }, {
+				        name: '"Rozvoj" types',
+				        color: '#eca49c',
+				        data: [{! finalEventTypesMap[currentUser.Id].developmentType }],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0
+				    }, {
+				        name: '"Péče" types',
+				        color: '#db7286',
+				        data: [{! finalEventTypesMap[currentUser.Id].careType }],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0
+				    }, {
+				        name: '"Trénink" types',
+				        color: '#9ca968',
+				        data: [{! finalEventTypesMap[currentUser.Id].trainingType }],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0
+				    }, {
+				        name: '"Akvizice" types',
+				        color: '#ded1c9',
+				        data: [{! finalEventTypesMap[currentUser.Id].acquisitionType }],
+				        pointPadding: -0.1,
+				        pointPlacement: 0.0
+				    }, {
+				        type: 'spline',
+				        name: 'Plan',
+				        data: [{! currentPlan }],
+				        marker: {
+				            lineWidth: 2,
+				            lineColor: Highcharts.getOptions().colors[3],
+				            fillColor: 'white'
+				        }
+				    }]
+                });            
+            });
+        </script>
+	</apex:form>
+</apex:page>

@@ -1,0 +1,17 @@
+.utm-generator{
+    display: flex;
+    padding: 2rem 0;
+    justify-content: center;
+}
+
+.slds-card { 
+    min-width: 600px;
+    max-width: 600px;
+}
+
+.overflow-dots { 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }

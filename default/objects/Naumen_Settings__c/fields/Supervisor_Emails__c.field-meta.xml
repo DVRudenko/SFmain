@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Supervisor_Emails__c</fullName>
+    <description>Supervisor Emails who will get info notifications in certain cases.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>example: &quot;test1@test.com,test2@test.com&quot;</inlineHelpText>
+    <label>Supervisor Emails</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

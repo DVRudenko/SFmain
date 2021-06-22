@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LeadAssignLotos_Lead</fullName>
+    <columns>Number_of_days__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE_CODE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Quali_Status__c</columns>
+    <columns>Date_time_of_created__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>LEAD.UNREAD</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>notEqual</operation>
+        <value>Disqualified</value>
+    </filters>
+    <label>LeadAssignLotos</label>
+    <language>en_US</language>
+    <queue>LeadAssignLotos</queue>
+    <sharedTo>
+        <role>CCS_Administrator</role>
+        <role>Teamleiter</role>
+        <roleAndSubordinatesInternal>Salesmanager_2</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

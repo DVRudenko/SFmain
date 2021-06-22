@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Modified__c</fullName>
+    <description>Was the price of Carnet Unit modified?</description>
+    <externalId>false</externalId>
+    <formula>false</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Was the price of Carnet Unit modified?</inlineHelpText>
+    <label>Price Modified</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

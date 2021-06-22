@@ -1,0 +1,161 @@
+{
+    "title": {
+        "default_impl": {
+            "en": "CCS LIMIT",
+            "cs": "CCS LIMIT",
+            "sk": "CCS LIMIT"
+        }
+    },
+    "description": {
+        "default_impl": {
+            "en": "CCS Limit is a card that you can tailor to your needs - all easily and online.",
+            "cs": "CCS Limit je karta, kterou přizpůsobíte svým potřebám - to vše jednoduše a online.",
+            "sk": "CCS Limit je karta, ktorú si prispôsobíte podľa svojich potrieb – to všetko jednoducho a online."
+        }
+    },
+    "defaultOfferIntagrationName": {
+        "default_impl": "ccsLimitMyNetwork",
+        "Slovakia CCS": "ccsLimitMyNetworkSk"
+    },
+    "categoryOfProducts": {
+        "default_impl": [
+            {
+                "label": {
+                    "en": "Group 00",
+                    "cs": "Skupina 00",
+                    "sk": "Skupina 00"
+                },
+                "description": {
+                    "en": "diesel • diesel plus • B100 - biodiesel • special diesel • additives • highway fees",
+                    "cs": "nafta • nafta plus • diesel plus • B100 - bionafta • nafta speciál • aditivum • dálniční poplatky",
+                    "sk": "NAFTA Diesel + AD blue"
+                },
+                "value": "Group 00"
+            },
+            {
+                "label": {
+                    "en": "Group 01",
+                    "cs": "Skupina 01",
+                    "sk": "Skupina 01"
+                },
+                "description": {
+                    "en": "goods of the group 00 • gasoline • gasoline plus • gasoline normal • special gasoline • super mix • LPG • fuel gas • biofuels • other fuels",
+                    "cs": "zboží skupiny 00 • natural • natural plus • natural normal • natural speciál • super mix • topný plyn – LPG • topný plyn • ekologická paliva • ostatní PHM",
+                    "sk": "OSTATNÉ PHM • Super Natural 91 - 96 • V-Power + Natural 98 • V-Power Racing + Natural 99 • Plyn LPG + CNG"
+                },
+                "value": "Group 01"
+            },
+            {
+                "label": {
+                    "en": "Group 02",
+                    "cs": "Skupina 02",
+                    "sk": "Skupina 02"
+                },
+                "description": {
+                    "en": "goods of the group 01 • oils • lubricants, antifreeze fluids • car fluids",
+                    "cs": "zboží skupiny 01 • oleje, tuky • mazadla, nemrznoucí kapaliny • provozní náplně",
+                    "sk": "PREVÁDZKOVÉ NÁPLNE Oleje, tuky, mazadlá • Prevádzkové náplne"
+                },
+                "value": "Group 02"
+            },
+            {
+                "label": {
+                    "en": "Group 03",
+                    "cs": "Skupina 03",
+                    "sk": "Skupina 03"
+                },
+                "description": {
+                    "en": "goods of the group 02 • car wash • car service and maintenance • waste collection and disposal • parking • towing • international transport • customs fees",
+                    "cs": "zboží skupiny 02 • mytí vozidel • oprava a údržba vozidel • sběr a likvidace odpadu • parkovací služby • odtah vozidla • mezinárodní přeprava • služby celního deklaranta",
+                    "sk": "PREVÁDZKA VOZIDLA (SLUŽBY) • Umývanie vozidiel • Diaľničný poplatok • Oprava a údržba vozidiel • Parkovacie služby "
+                },
+                "value": "Group 03"
+            },
+            {
+                "label": {
+                    "en": "Group 04",
+                    "cs": "Skupina 04",
+                    "sk": "Skupina 04"
+                },
+                "description": {
+                    "en": "goods of the group 03 • spare parts • car cosmetics • car accessories • pharmacy • paints • cartographic products • tires • car rent • mobile phone • EV charging, EV parking",
+                    "cs": "zboží skupiny 03 • náhradní díly • autokosmetika • autopříslušenství • drobné autodoplňky • lékárna • barvy, laky • kartografické zboží • pneumatiky • půjčovna aut • mobilní telefon • dobíjení elektro, parkovné elektro",
+                    "sk": "PREVÁDZKA VOZIDLA (TOVAR) • Náhradné diely • Autopríslušenstvo, Lekárnička • Kartografický tovar • Pneumatiky • Dobíjanie elektromo • Parkovne elektro "
+                },
+                "value": "Group 04"
+            }
+        ]
+    },
+    "services": {
+        "default_impl": [
+            {
+                "icon": "car-wash.svg",
+                "label": {
+                    "en": "Carwash",
+                    "cs": "Platby za mytí vozů",
+                    "sk": "Platby za umývanie vozidiel"
+                }
+            },
+            {
+                "icon": "gear.svg",
+                "label": {
+                    "en": "Service centres",
+                    "cs": "Platby v servisech",
+                    "sk": "Platby v servisech"
+                }
+            },
+            {
+                "icon": "iphone.svg",
+                "label": {
+                    "en": "Mobile application",
+                    "cs": "Mobilní aplikace",
+                    "sk": "Mobilná aplikácia"
+                }
+            },
+            {
+                "icon": "papers.svg",
+                "label": {
+                    "en": "Single invoice",
+                    "cs": "Souhrnná faktura",
+                    "sk": "Súhrnná faktúra"
+                }
+            },
+            {
+                "icon": "gps.svg",
+                "label": {
+                    "en": "Extensive network",
+                    "cs": "Rozsáhlá akceptační síť",
+                    "sk": "Rozsiahla akceptačná sieť"
+                }
+            },
+            {
+                "icon": "parking.svg",
+                "label": {
+                    "en": "Parking fee payment",
+                    "cs": "Platby parkovného",
+                    "sk": "Platby parkovného"
+                }
+            },
+            {
+                "icon": "phone.svg",
+                "label": {
+                    "en": "Infoline",
+                    "cs": "Infolinka",
+                    "sk": "Infolinka 7 dní v týždni"
+                }
+            }
+        ]
+    },
+    "order": {
+        "default_impl": 100
+    },
+    "integrationName": {
+        "default_impl": "ccsfuelcardlimit"
+    },
+    "image_path": {
+        "default_impl": "/resource/ete_images/"
+    },
+    "image": {
+        "default_impl": "ccsLimit.png"
+    }
+}

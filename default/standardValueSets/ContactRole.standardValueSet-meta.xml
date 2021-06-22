@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Account administrator</fullName>
+        <default>false</default>
+        <label>Account administrator</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Accounting (for invoices)</fullName>
+        <default>false</default>
+        <label>Accounting (for invoices)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Authorised signatory</fullName>
+        <default>false</default>
+        <label>Authorised signatory</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Decision Maker</fullName>
+        <default>true</default>
+        <label>Decision Maker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Executive assistant</fullName>
+        <default>false</default>
+        <label>Executive assistant</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Fleet manager</fullName>
+        <default>false</default>
+        <label>Fleet manager</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Implementation Contact</fullName>
+        <default>false</default>
+        <label>Implementation Contact</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Influencer</fullName>
+        <default>false</default>
+        <label>Influencer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Owner&#39;s relative</fullName>
+        <default>false</default>
+        <label>Owner&#39;s relative</label>
+    </standardValue>
+    <standardValue>
+        <fullName>UBO individual</fullName>
+        <default>false</default>
+        <label>UBO individual</label>
+    </standardValue>
+</StandardValueSet>

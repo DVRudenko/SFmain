@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Access_for_FleetcorEmea_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Access for FleetcorEmea User</label>
+        <sharedTo>
+            <group>FleetcorEmea_Site_User</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CCS Contact layout,Contact layout,AllStar</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Access_to_Integration_Contacts_for_Sales</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>0050O000006SFYdQAO - Integration Administrator</description>
+        <label>Access to Integration Contacts for Sales</label>
+        <sharedTo>
+            <group>Euroshell_Group_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000006SFYdQAO</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Access_to_Integration_Contacts_for_Teamleadres</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>0050O000006SFYdQAO - Integration Administrator</description>
+        <label>Access to Integration Contacts for Teamleadres</label>
+        <sharedTo>
+            <group>Euroshell_Group_Teamleaders</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000006SFYdQAO</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>AllStar_Contacts</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>AllStar_Contacts</label>
+        <sharedTo>
+            <group>AllStar</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>AllStar</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Altevida_Shell</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Shell Contacts for Altevida users.</description>
+        <label>Altevida_Shell</label>
+        <sharedTo>
+            <group>Shell_Records</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Contact layout</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CCS_Sales_Access_to_Integration_Contacts</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>0050O000006SFYdQAO - Integration Administrator</description>
+        <label>CCS Sales Access to Integration Contacts</label>
+        <sharedTo>
+            <group>CCS_Group_Sales</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000006SFYdQAO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CCS Contact layout</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CCS_Teamleaders_Access_to_Integration_Contacts</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>0050O000006SFYdQAO - Integration Administrator</description>
+        <label>CCS Teamleaders Access to Integration Contacts</label>
+        <sharedTo>
+            <group>CCS_Group_Teamleaders</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000006SFYdQAO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CCS Contact layout</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CCS_all</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Users from CCS can see records from all CCS users.</description>
+        <label>CCS_all</label>
+        <sharedTo>
+            <group>CCS_Records</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CCS Contact layout</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CSContactShareAccess</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>access to european contacts for Customer  Service Europe</description>
+        <label>CSContactShareAccess</label>
+        <sharedTo>
+            <group>CaseManagementEurope</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Russian</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Credit_Access_for_Con</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Credit_Access_for_Con</label>
+        <sharedTo>
+            <roleAndSubordinates>Credit</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Contact layout</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>E2E_RU_Contact</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Расшарить записи, которые принадлежать E2E RU Guest User для менеджеров группы</description>
+        <label>E2E RU Contact</label>
+        <sharedTo>
+            <group>PPR_E2E_Form_Managers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>equals</operation>
+            <value>0050O000008GFdp</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Pardot_Contacts</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Contacts sharing for CCS Record Type.</description>
+        <label>Pardot_Contacts</label>
+        <sharedTo>
+            <role>Pardot</role>
+        </sharedTo>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>CCS Contact layout</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Contact layout</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Starts_team_access_to_Contact_layout_record_type</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Starts team access to Contact layout record type</label>
+        <sharedTo>
+            <group>Starts_team</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Contact layout</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>E2E_RU_User_Contact</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Расшарить всех российских контактов для E2E RU Guest User для функции поиска дубликатов</description>
+        <label>E2E RU User Contact</label>
+        <sharedTo>
+            <group>PPR_E2E_Guest_User</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>PPR_Fleetcor</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PPR_Contact_3</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>PPR_Contact_3</label>
+        <sharedTo>
+            <group>PPR_Quality_Control</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>AllRussianRoles</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>PPR_Teamleader_KAM</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>PPR Teamleader KAM</label>
+        <sharedTo>
+            <role>PPR_KAM_Teamleader</role>
+        </sharedTo>
+        <sharedFrom>
+            <role>PPR_KAM_Teamleader</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>RU_Client_Service</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>RU Client Service</label>
+        <sharedTo>
+            <group>RU_Client_Service</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>AllRussianRoles</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Salesmanager2Teamleiters_Access_for_Con</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Salesmanager2Teamleiters_Access_for_Con</label>
+        <sharedTo>
+            <group>Teamleiters_2</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Salesmanager_2</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Salesmanager2Users_Access_for_Con</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Salesmanager2Users_Access_for_Con</label>
+        <sharedTo>
+            <roleAndSubordinates>Salesmanager_2</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Salesmanager_2</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>SalesmanagerTeamleiters_Access_for_Con</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>SalesmanagerTeamleiters_Access_for_Con</label>
+        <sharedTo>
+            <group>Teamleiters</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Salesmanager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>SalesmanagerUsers_Access_for_Con</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>SalesmanagerUsers_Access_for_Con</label>
+        <sharedTo>
+            <roleAndSubordinates>Salesmanager</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>Salesmanager</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

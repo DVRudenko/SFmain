@@ -1,0 +1,1 @@
+global class CreditFactoryException extends Exception {}

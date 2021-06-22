@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Tablet Type --></label>
+    <name>Tablet_Type__c</name>
+    <picklistValues>
+        <masterLabel>NEONTEK 14</masterLabel>
+        <translation><!-- NEONTEK 14 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Samsung Tab A 10.1</masterLabel>
+        <translation><!-- Samsung Tab A 10.1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell 14</masterLabel>
+        <translation><!-- Shell 14 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

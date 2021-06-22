@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>settings for object Custom_log__c archivation</description>
+    <enableFeeds>false</enableFeeds>
+    <label>Custom log archivation settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

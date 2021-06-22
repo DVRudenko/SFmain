@@ -1,0 +1,551 @@
+<apex:page id="RecordAssignCheckRu" controller="RecordAssignCheckRuCtrl" action="{!init}" showHeader="false" sideBar="false"  standardStylesheets="false" docType="html-5.0">
+    <apex:includeScript value="{!$Resource.jQuery}"/>
+    <apex:includeScript value="{!URLFOR($Resource.bootstrap_3_3_7,'bootstrap-3.3.7/js/bootstrap.min.js')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.bootstrap_3_3_7,'bootstrap-3.3.7/css/desktop_bootstrap.min.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.inputmaskJS, 'inputmaskjs/dist/jquery.inputmask.js') }"/> 
+    <apex:includeScript value="{!URLFOR($Resource.PDFormJS)}"/>
+    <!--apex:includeScript value="{!$Resource.jqueryInputMask}"/-->
+    <apex:includeScript value="{!$Resource.RecordAssignCheckRu_script}"/>
+    <style>
+        .splashStatus {
+            display: none;
+            position: fixed;
+            top: 40%;
+            left: 48%;
+            z-index: 9999;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+         .splashStatus img {
+            width:50px;
+        }
+
+        .splashStatus .circle {
+            width: 32px;
+            margin: 0 auto;
+        }
+
+        .splashStatus .txt {
+            text-align: center;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            color: #171717;
+            text-shadow: 0 1px 0 #eee;
+        }
+            .standardButtonImg img{
+            border: 1px solid #b5b5b5;
+            border-bottom-color: #7f7f7f;
+            border-radius: 3px;
+            margin-bottom:5px;
+        }
+
+        .standardButtonImg img:hover{
+            background-color:#ced8de;
+            border: 1px solid #22a4f5;
+        }
+
+        .standardButtonImg img:active{
+            background-color:#c3c3c7;
+            border: 1px solid #22a4f5;
+        }
+
+        .standardButton{
+            border: 1px solid #b5b5b5;
+            border-bottom-color: #7f7f7f;
+            border-radius: 3px;
+            background: #e8e8e9 url(/img/alohaSkin/btn_sprite.png) repeat-x right top;
+            padding: 3px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .standardButton:hover{
+            cursor:pointer;
+            color: #5c62d1;
+            text-decoration: none;
+        }
+
+        .standardButton:active{
+            background-color:#ced8de;
+            border: 1.3px solid #22a4f5;
+            text-decoration: none;
+        }
+
+        .standardButton.viewButton{
+            background: #7cb579;
+            border: 1px solid #1f871a;
+            display: none;
+        }
+
+         .standardButton.viewButton:hover{
+            text-decoration: none;
+        }
+
+        .lightbox {
+            display: none;
+            background: #000000;
+            opacity: 0.7;
+            filter: alpha(opacity=70);
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: 1000;
+        }
+
+        .mainBlock{
+            border: 5px solid #1797c0;
+            display:inline-block;
+            min-width: 450px;
+        }
+
+        .main-table{
+            width:100%;
+            text-align: left;
+        }
+
+        .row{
+            margin: 2px;
+        }
+
+        .container{
+            width:100%;
+            min-height: 100px;
+        }
+
+        .inputTextBlock{
+            width:200px;
+        }
+
+        .errorMessage{
+            color: #f03c3c;
+            margin: 10px 25%;
+            border: 2px solid;
+        }
+
+        .error{
+            display: none;
+            font-size: 11px;
+            color: red;
+        }
+
+        .input-error{
+            border: 1px solid red;
+        }
+
+        .show-error-block{
+            display: block;
+        }
+
+        .input-Minute{
+            font: 400 13.3333px Arial;
+            width:30px;
+            margin-left:4px;
+            padding: 2px 0px 3px 0px;
+        }
+
+        .input-Hour{
+            font: 400 13.3333px Arial;
+            width:30px;
+            margin-left:4px;
+            padding: 2px 0px 3px 0px;
+        }
+
+        .input-show{
+            display: block;
+        }
+
+        .input-hidden{
+            display: none;
+        }
+
+</style>
+    <apex:form id="pdRecordForm">
+        <!--  <apex:outputPanel id="rerenderParams">
+             {!params}
+        </apex:outputPanel> -->
+        <apex:actionFunction action="{!getRecordAccess}" name="getRecordAccess" rerender="mainContainer, errorMessage, BlockJS" 
+                             onComplete="setupPage(); return false;" status="splashStatus">
+            <apex:param name="CTIEnabled" value="false"/>
+        </apex:actionFunction>
+
+        <apex:actionStatus id="splashStatus" onstart="startSplash();" onstop="endSplash(); "/>
+        <div class="splashStatus" id="splashDiv" >
+            <div class="circle"><img src="{!URLFOR($Resource.e2eRu_images, 'spin.gif')}" alt="spin"/></div>
+        </div>
+        <div class="lightbox"></div>
+
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
+                    <apex:outputPanel id="headerBlock">
+                        <apex:inputText id="inputTextRecordId" value="{!inputRecordId}" styleClass="inputTextBlock"></apex:inputText>
+                        <apex:inputHidden id="inputCallCustomerId" value="{!callCustomerId}"/>
+                        
+                        <apex:outputPanel layout="block">
+                            <button class="standardButton" onclick="getRecordAccess(); return false;" style="width:200px;">Проверить запись</button>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel id="errorMessage">
+                        <apex:outputPanel layout="block" styleClass="errorMessage" rendered="{!IF(AND(params.recordStatus != 'Free', params != null), true, false)}" >
+                            <apex:outputPanel layout="block" style="border-bottom: 1px solid;">
+                                <apex:outputText value="Сообщение" />
+                            </apex:outputPanel>
+                            <apex:outputPanel layout="block" >
+                                <apex:outputText value="{!IF(params.recordStatus == 'InProgress', 'Запись в активной работе, пожалуйста, обновите данные и назначьте задачу на текущего ответственного.',
+                                                             IF(params.recordStatus == 'IncorrectId', 'Некорректный идентификатор записи',
+                                                                IF(params.recordStatus == 'MovedToStart', 'Запись переведена на старт, вы можете сохранить важную информацию в задаче или обновить контактную информацию!', '')))}" />
+                            </apex:outputPanel>
+                            <apex:outputPanel layout="block" >
+                                <apex:outputText value="{!IF(params.recordStatus == 'InProgress', '(Онлайн звонок нужно перевести на ответственного)','')}" />
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+
+                </div>
+            </div>
+
+            <apex:outputPanel id="mainContainer" layout="block" styleClass="row text-center" > <!-- for rerender -->
+                <apex:outputPanel id="mainBlock" layout="block" styleClass="mainBlock row" rendered="{!NOT(ISNULL(record))}">
+                    <!--<apex:inputHidden id="PD_ExternalId" value="{!params['contactPD_ExternalId']}"/> -->
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
+                            <apex:outputLabel value="Информация по текущей записи:" style="text-align:center; display:block; font-weight:bold;"></apex:outputLabel>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+                            <apex:outputLabel value="Идентификатор (ID) :" style="text-align:left; display:block; "></apex:outputLabel>
+                        </div>
+                        <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+                            <apex:outputLabel value="{!record['Id']}" style="text-align:left; display:block; "></apex:outputLabel>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+                            <apex:outputLabel value="ИНН : " style="text-align:left; display:block; "></apex:outputLabel>
+                        </div>
+                        <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+                            <apex:outputLabel rendered="{!BEGINS(record['Id'],'00Q')}" value="{!record['INN__c']}" style="text-align:left; display:block; "></apex:outputLabel>
+                            <apex:outputLabel rendered="{!BEGINS(record['Id'],'006')}" value="{!record['Account.INN__c']}" style="text-align:left; display:block;"></apex:outputLabel>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+                            <apex:outputLabel value="Наименование : " style="text-align:left; display:block; "></apex:outputLabel>
+                        </div>
+                        <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+                            <apex:outputLabel value="{!record['Name']}" style="text-align:left; display:block; "></apex:outputLabel>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+                            <apex:outputLabel value="Ответственный : " style="text-align:left; display:block; "></apex:outputLabel>
+                        </div>
+                        <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+                            <apex:outputLabel value="{!record['Owner.Name']}" style="text-align:left; display:block; "></apex:outputLabel>
+                        </div>
+                    </div>
+
+                    <apex:outputPanel rendered="{!IF(params.recordStatus != 'Free', true, false)}">
+                        <div class="row">
+                            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+                                <apex:outputLabel value="Телефон ответственного : " style="text-align:left; display:block; "></apex:outputLabel>
+                            </div>
+                            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6">
+                                <apex:outputLabel value="{!params.ownerPhoneCTI}" style="text-align:left; display:block; "></apex:outputLabel>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel >
+                        <div class="row" style="margin:0px;">
+                            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12" style="border-bottom: 2px solid #1797c0; border-top: 2px solid #1797c0;">
+                                <apex:outputPanel layout="block">
+                                    <apex:outputLabel value="Изменить информацию" style="text-align:center; display:block; font-weight:bold;"></apex:outputLabel>
+                                </apex:outputPanel>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel rendered="{!IF(params.recordStatus != 'MovedToStart', true, false)}">
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Регион:
+                            </div>
+                            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6" style="text-align:left">
+                                <apex:selectList value="{!params.currentRegion}"
+                                                 size="1"
+                                                 onChange="onChangeRegion();"
+                                                 style="font: 400 13.3333px Arial; width:100%;">
+                                    <apex:selectOptions value="{!listOfRegions}" />
+                                </apex:selectList>
+                                <apex:actionFunction name="onChangeRegion" action="{!refreshForm}" onComplete="changeKeyParameters();" reRender="regionFS, BlockJS"></apex:actionFunction>
+                            </div>
+                            <apex:outputPanel id="regionFS"
+                                              layout="block"
+                                              style="padding-left:0px;"
+                                              styleClass="col-xs-1 col-lg-1 col-md-1 col-sm-1">
+                                <apex:image rendered="{!params.currentRegionIsFS}" url="{!URLFOR($Resource.RecordAssignCheck, 'Accept.png')}" height="15" width="15" />
+                            </apex:outputPanel>
+                        </div>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel id="contactData">
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Фамилия:
+                            </div>
+                            <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7" style="text-align:left">
+                                <apex:input type="text" value="{!params.contact.lastName}" styleClass="input-LastName" style="font: 400 13.3333px Arial; width:100%;"></apex:input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Имя:
+                            </div>
+                            <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7" style="text-align:left">
+                                <apex:input type="text" value="{!params.contact.firstName}" styleClass="input-FirstName" style="font: 400 13.3333px Arial; width:100%;"></apex:input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Отчество:
+                            </div>
+                            <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7" style="text-align:left">
+                                <apex:input value="{!params.contact.middleName}" type="text" styleClass="input-MiddleName" style="font: 400 13.3333px Arial; width:100%;"></apex:input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Должность:
+                            </div>
+                            <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7" style="text-align:left">
+                                <apex:input type="text" value="{!params.contact.position}" styleClass="input-Title" style="font: 400 13.3333px Arial; width:100%;"></apex:input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Телефон:
+                            </div>
+                            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6" style="text-align:left; padding: 0px 5px 0px 15px;">
+                                <apex:input id="inputPhoneField" type="text" value="{!params.contact.phone}"  onkeyup="onChangeInputPhoneField(this)" styleClass="input-Phone" style="font: 400 13.3333px Arial; width:100%;"></apex:input>
+                                <div class="error">
+                                    Некорректные данные! <br/>
+                                    +7 или 8 | Длина 11 симв.
+                                </div>
+                            </div>
+                            <div class="col-xs-1 col-lg-1 col-md-1 col-sm-1" style="text-align:left; padding: 0px; height:19px;">
+                                <button class="additionalPhoneButton" type="button" style="height:21px;" onclick="showAdditionalPhone();" ><apex:image url="{!URLFOR($Resource.e2e_images, 'down.png')}" /></button>
+                            </div>
+                        </div>
+                        <div class="row input-hidden" >
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Доп. Телефон:
+                            </div>
+                            <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7" style="text-align:left;">
+                                <apex:input type="text" value="{!params.contact.phoneSecond}"  onkeyup="onChangeInputPhoneField(this)" styleClass="input-Phone2" style="font: 400 13.3333px Arial; width:100%;"></apex:input>
+                                <div class="error">
+                                    Некорректные данные! <br/>
+                                    +7 или 8 | Длина 11 симв.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Email:
+                            </div>
+                            <div class="col-xs-6 col-lg-6 col-md-6 col-sm-6" style="text-align:left; padding: 0px 5px 0px 15px;">
+                                <apex:input type="text" value="{!params.contact.email}" styleClass="input-Email" style="font: 400 13.3333px Arial; width:100%;"></apex:input>
+                                <div class="error">
+                                    Некорректные данные!
+                                </div>
+                            </div>
+                            <div class="col-xs-1 col-lg-1 col-md-1 col-sm-1" style="text-align:left; padding: 0px; height:19px;">
+                                <button class="additionalEmailButton"  type="button" style="height:21px;" onclick="showAdditionalEmail();" ><apex:image url="{!URLFOR($Resource.e2e_images, 'down.png')}" /></button>
+                            </div>
+                        </div>
+                        <div class="row input-hidden">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Доп. Email:
+                            </div>
+                            <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7" style="text-align:left;">
+                                <apex:input type="text" value="{!params.contact.emailSecond}" styleClass="input-Email2" style="font: 400 13.3333px Arial; width:100%;"></apex:input>
+                                <div class="error">
+                                    Некорректные данные!
+                                </div>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+
+
+                    <apex:outputPanel id="ExpectedVolume" rendered="{!IF(params.recordStatus != 'MovedToStart', true, false)}">
+                        <apex:actionFunction name="formChanged" action="{!refreshForm}" onComplete="changeKeyParameters();"  reRender="BlockJS" ></apex:actionFunction>
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Потенц. литры:
+                            </div>
+                            <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7" style="text-align:left">
+                                <apex:input type="text" value="{!params.expectedVolume.potential_Liters}" onBlur="formChanged(); return null;" onKeyUp="formChanged(); return null;" styleClass="input-Pot_Litri" style="font: 400 13.3333px Arial; width:100%;"></apex:input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Потенц. рубли:
+                            </div>
+                            <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7" style="text-align:left">
+                                <apex:input type="text" value="{!params.expectedVolume.potential_Rub}" onBlur="formChanged(); return null;" onKeyUp="formChanged(); return null;" styleClass="input-Pot_Rub" style="font: 400 13.3333px Arial; width:100%;"></apex:input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Потенц. легковые:
+                            </div>
+                            <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7" style="text-align:left">
+                                <apex:input type="text" value="{!params.expectedVolume.potential_Cars}"  onBlur="formChanged(); return null;" onKeyUp="formChanged(); return null;" styleClass="input-Pot_leg" style="font: 400 13.3333px Arial; width:100%;"></apex:input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Потенц. грузовые:
+                            </div>
+                            <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7" style="text-align:left">
+                                <apex:input type="text" value="{!params.expectedVolume.potential_Trucks}" onBlur="formChanged(); return null;" onKeyUp="formChanged(); return null;" styleClass="input-Pot_gruz" style="font: 400 13.3333px Arial; width:100%;"></apex:input>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel id="activityBlock" >
+                        <div class="row" style="margin:0px;">
+                            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12" style="border-bottom: 2px solid #1797c0; border-top: 2px solid #1797c0;">
+                                <apex:outputPanel layout="block">
+                                    <apex:outputLabel value="Задача/Событие" style="text-align:center; display:block; font-weight:bold;"></apex:outputLabel>
+                                </apex:outputPanel>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Тип:
+                            </div>
+                            <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7">
+                                <apex:outputPanel id="activityTypeId">
+                                    <apex:selectList styleClass="activityType" value="{!params.activity.type}" onChange="onChangeResultType();" style="width:100%;">
+                                        <apex:selectOptions value="{!resultTypesList}" />
+                                    </apex:selectList>
+                                </apex:outputPanel>
+                                <div class="error">
+                                    Некорректные данные! <br/>
+                                    Пожалуйста выберите тип события!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Время:
+                            </div>
+                            <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7">
+                                <apex:input type="date" value="{!params.activity.activityDate }" style="font: 400 13.3333px Arial;"></apex:input>
+                                <apex:outputText value="&nbsp;" escape="false" />
+                                <apex:input type="text" onClick="this.select();" value="{!params.activity.activityHour}" styleClass="input-Hour"></apex:input>
+                                :
+                                <apex:input type="text" onClick="this.select();" value="{!params.activity.activityMinute}" styleClass="input-Minute"></apex:input>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                Описание:
+                            </div>
+                            <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7">
+                                <apex:inputTextarea style="max-height:65px;max-width:225px; height: 65px; width:225px;" value="{!params.activity.description}"></apex:inputTextarea>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel id="ownerOfRecord" styleClass="ownerOfRecord">
+                        <apex:outputPanel >
+                            <div class="row" style="margin:0px;">
+                                <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12" style="border-bottom: 2px solid #1797c0; border-top: 2px solid #1797c0;">
+                                    <apex:outputPanel layout="block">
+                                        <apex:outputLabel value="Выберите ответственного" style="text-align:center; display:block; font-weight:bold;"></apex:outputLabel>
+                                    </apex:outputPanel>
+                                </div>
+                            </div>
+                            <div class="row" style="margin:5px 0px 0px 0px;">
+                                <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
+                                    <apex:outputPanel layout="block" styleClass="row">
+                                        <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                            Выберите группу:
+                                        </div>
+                                        <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7" style="text-align:left;">
+                                            <apex:outputPanel id="currentGroup" layout="block">
+                                                <apex:selectList value="{!params.currentGroup}"
+                                                                 style="width: 100%;">
+                                                    <apex:selectOptions value="{!listOfGroups}" />
+                                                    <apex:actionSupport event="onchange" action="{!changeCurrentGroup}" reRender="currentMember, rerenderParam" />
+                                                </apex:selectList>
+                                            </apex:outputPanel>
+                                        </div>
+                                    </apex:outputPanel>
+                                </div>
+                            </div>
+
+                            <div class="row" style="margin:0px;">
+                                <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12">
+                                    <apex:outputPanel layout="block" styleClass="row">
+                                        <div class="col-xs-5 col-lg-5 col-md-5 col-sm-5" style="text-align:center" >
+                                            Ответственный:
+                                        </div>
+                                        <div class="col-xs-7 col-lg-7 col-md-7 col-sm-7" style="text-align:left;">
+                                            <apex:outputPanel id="currentMember" layout="block" style="margin: 0px 10px 10px 0px;">
+                                                <apex:selectList value="{!params.currentMember}"
+                                                                 size="1"
+                                                                 styleClass="currentMember"
+                                                                 style="font: 400 13.3333px Arial; width: 100%;">
+                                                    <apex:selectOptions value="{!currentListOfMembers}"></apex:selectOptions>
+                                                </apex:selectList>
+                                                <div class="error">
+                                                    Не выбрано значение! <br/>
+                                                </div>
+                                            </apex:outputPanel>
+                                        </div>
+                                    </apex:outputPanel>
+                                </div>
+                            </div>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+
+                    <apex:outputPanel >
+                        <div class="row" style="margin:0px;">
+                            <div class="col-xs-12 col-lg-12 col-md-12 col-sm-12" style="border-bottom: 2px solid #1797c0; border-top: 2px solid #1797c0;">
+                                <apex:commandLink styleClass="standardButton saveButton"
+                                                  value="Сохранить"
+                                                  onClick="showSaveButton(false); startSubmitProcess(); return false;"
+                                                  style="margin: 5px 0px 5px 0px;">
+                                </apex:commandLink>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+                    <apex:actionFunction name="startSubmitProcess" action="{!refreshForm}" onComplete="submitProcess();" reRender="BlockJS" ></apex:actionFunction>
+
+                    <apex:actionFunction name="submitFormCtrl" action="{!submitForm}" reRender="mainContainer, headerBlock, errorMessage" status="splashStatus" >
+                        <apex:param name="CTIEnabled" value="false"/>
+                    </apex:actionFunction>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </div>
+
+        <apex:outputPanel id="BlockJS">
+            <apex:inputHidden id="params-region-fs" value="{!params.currentRegionIsFS}"/>
+            <apex:inputHidden id="params-record-status" value="{!params.recordStatus}"/>
+            <apex:inputHidden id="params-big-client" value="{!params.expectedVolume.bigClient}"/>
+        </apex:outputPanel>
+
+    </apex:form>
+
+</apex:page>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Datum poslední aktivity na Klientovi či Příležitostech (pouze Dokončené Úkoly + Události).</help>
+    <label>Datum poslední aktivity</label>
+    <name>Last_Activity_Date__c</name>
+</CustomFieldTranslation>

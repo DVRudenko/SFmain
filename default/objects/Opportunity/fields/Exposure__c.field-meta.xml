@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exposure__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Zahlungsziel_Credit_calculati__c + Rechnungsperiode_3__c != 0, Credit_Limit__c / (Zahlungsziel_Credit_calculati__c + Rechnungsperiode_3__c) * (Zahlungsziel_Credit_calculati__c + Rechnungsperiode_3__c + 10), 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Wir automatisch aus dem Verbrauch errechnet!</inlineHelpText>
+    <label>Exposure</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

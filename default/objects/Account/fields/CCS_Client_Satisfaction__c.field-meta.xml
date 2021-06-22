@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Client_Satisfaction__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Client Satisfaction</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>neznámo</fullName>
+                <default>false</default>
+                <label>neznámo</label>
+            </value>
+            <value>
+                <fullName>ano</fullName>
+                <default>false</default>
+                <label>ano</label>
+            </value>
+            <value>
+                <fullName>ne</fullName>
+                <default>false</default>
+                <label>ne</label>
+            </value>
+            <value>
+                <fullName>nevoláno</fullName>
+                <default>false</default>
+                <label>nevoláno</label>
+            </value>
+            <value>
+                <fullName>nedovoláno</fullName>
+                <default>false</default>
+                <label>nedovoláno</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Usage type</label>
+    <name>Nutzungsart__c</name>
+    <picklistValues>
+        <masterLabel>Bürobedarf, Reisekosten und Nutzung an Tankstellen und Werkstätten</masterLabel>
+        <translation>Office supplies, travel expenses, fuel stations and workshops</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keine Einschränkungen</masterLabel>
+        <translation>No restrictions</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nutzung nur an Tankstellen</masterLabel>
+        <translation>To be used only at fuel stations</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Nutzung nur an Tankstellen und Werkstätten</masterLabel>
+        <translation>To be used only at fuel stations and workshops</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reisekosten und Nutzung an Tankstellen und Werkstätten</masterLabel>
+        <translation>Travel expenses, fuel stations and workshops</translation>
+    </picklistValues>
+</CustomFieldTranslation>

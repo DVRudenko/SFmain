@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Not_reached_SMS_sent_only_for_PL</fullName>
+    <active>true</active>
+    <description>Quali Status "Not reached – SMS sent" available only for Country Poland</description>
+    <errorConditionFormula>AND(ISPICKVAL ( Quali_Status__c , "Not reached – SMS sent"),  Country != "Poland")</errorConditionFormula>
+    <errorDisplayField>Quali_Status__c</errorDisplayField>
+    <errorMessage>Quali Status "Not reached – SMS sent" available only for Poland.</errorMessage>
+</ValidationRule>

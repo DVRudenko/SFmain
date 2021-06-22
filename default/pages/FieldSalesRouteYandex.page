@@ -1,0 +1,36 @@
+<apex:page id="FieldsalesRouteYandex" sidebar="false" showHeader="false" standardStylesheets="false" controller="FieldSalesRouteYandexCtrl" action="{!init}" >
+    <head>
+        <apex:includeScript value="https://api-maps.yandex.ru/2.1/?apikey={!apikey}&lang=ru_RU" />
+        <apex:includeScript value="{!URLFOR($Resource.FieldSalesRouteYandexJS)}" />
+        <style>
+            body, html {
+                font-family: Arial;
+                font-size: 11pt;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                height: 95%;
+            }
+            p {
+                padding: 10px;
+            }
+            #map {
+                width: 100%;
+                height: 90%;
+            }
+        </style>
+    </head>
+    <body>
+    <div id="map"></div>
+    </body>
+
+    <script>
+        function initiateCreateRoute(){
+            createRoute("{!territory}","{!address}");
+        }
+    </script>
+    <div id="track1">
+
+    </div>
+
+</apex:page>

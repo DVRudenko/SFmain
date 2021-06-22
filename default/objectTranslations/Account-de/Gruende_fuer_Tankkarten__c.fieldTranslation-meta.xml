@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Aus Sicht des Ansprechpartners aufnehmen! --></help>
+    <label>Gründe für Tankkarten *</label>
+    <name>Gruende_fuer_Tankkarten__c</name>
+    <picklistValues>
+        <masterLabel>Andere</masterLabel>
+        <translation><!-- Andere --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kostenersparnis</masterLabel>
+        <translation><!-- Kostenersparnis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transparenz</masterLabel>
+        <translation><!-- Transparenz --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>bargeldloses Zahlungmittel</masterLabel>
+        <translation><!-- bargeldloses Zahlungmittel --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>vereinfachte Abrechnung</masterLabel>
+        <translation><!-- vereinfachte Abrechnung --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

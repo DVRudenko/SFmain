@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the function or function/field combination that you wish to aggregate --></help>
+    <label><!-- DEPRECATE - Aggregate Function --></label>
+    <name>success__Aggregate_Field__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,897 @@
+<apex:page controller="AllStarMondoFormController" action="{! init }" sidebar="false" showHeader="false" standardStylesheets="false">
+	<apex:form >
+		<apex:includeScript value="{!$Resource.jQuery}"/>
+			<apex:stylesheet value="{!URLFOR($Resource.AllstarFiles,'css/webtype.css')}"/>
+			<apex:stylesheet value="{!URLFOR($Resource.AllstarFiles,'css/font.css')}"/>
+			<apex:stylesheet value="{!URLFOR($Resource.AllstarFiles,'css/card_page.css')}"/>
+			<apex:stylesheet value="{!URLFOR($Resource.AllstarFiles,'css/DependencyHandler.css')}"/>
+			<apex:stylesheet value="{!URLFOR($Resource.AllstarFiles,'css/developers.css')}"/>
+			<apex:stylesheet value="{!URLFOR($Resource.AllstarFiles,'css/style.css')}"/>
+		<head>
+		    <meta name="viewport" content="width=device-width"/>
+		    <title>Zamów teraz | All Star Mondo</title>
+		  	<script type="text/javascript">
+				function clearFieldsBusAddressBlock(checkbox) {
+					if (checkbox.checked) {
+						document.getElementById('{!$Component.shipStreetId}').value = '';
+						document.getElementById('{!$Component.shipCityId}').value = '';
+						document.getElementById('{!$Component.shipPostCodeId}').value = '';
+						document.getElementById('{!$Component.shipCountryId}').value = '';
+					}	
+				}
+			</script>
+			<script type="text/javascript">
+				function clearBusAddressBlockFields(checkbox) {
+					if (checkbox.checked) {
+						document.getElementById('{!$Component.shipStreetId}').value = '';
+						document.getElementById('{!$Component.shipCityId}').value = '';
+						document.getElementById('{!$Component.shipPostCodeId}').value = '';
+						document.getElementById('{!$Component.shipCountryId}').value = '';
+					}	
+				}				
+			</script>			
+		</head>
+		<body class="node-type-subpage node-template-subpage html not-front not-logged-in no-sidebars page-node page-node- page-node-6 node-type-apply-now">
+			<style>		
+				#logo .showLogo {
+				    height: 83px;
+				    width: 202px;
+				    background: url("{!URLFOR($Resource.AllstarFiles,'img/alstar_mondo_pl.png')}") 0 0 no-repeat;
+				}
+				.node-type-apply-now #tabs .tabs li a.completed-step + span.step-number {
+				    text-indent: -9999px;
+				    white-space: nowrap;
+				    width: 26px;
+				    height: 26px;
+				    background: #fff url("{!URLFOR($Resource.AllstarFiles,'img/step-ok.png')}") 50% 50% no-repeat;
+				    border: 2px solid #ffc725;
+				    border-radius: 26px;
+				    font-family: Antenna RE Bd;
+				    font-weight: bold;
+				    font-size: 16px;
+				    display: inline-block;
+				    z-index: 10;
+				    position: relative;
+				    top: -15px;
+				}
+				#mega-footer {
+				    background: url("{!URLFOR($Resource.AllstarFiles,'img/allstar_carbon_extended.png')}") #000;
+				    background-repeat: repeat-y;
+				    color: #fff;
+				    min-height: 80px;
+				    overflow: hidden;
+				    padding: 0 50px 50px 10%;
+				    position: relative;
+				    font-size: 11px;
+				    background-size: cover;
+				}
+
+				.checkbox {
+					height: 18px;
+					font-size: 14px;
+					display: block;
+					position: relative;
+					padding: 0;
+					margin: 0;
+				}
+				
+				.checkbox input[type='checkbox'] {
+					position: absolute;
+					left: 0;
+				}
+
+				.checkbox span {
+				    margin: 0;
+				    position: absolute;
+				    left: 25px;
+				    font-family: Antenna RE Reg;
+				    font-size: 16px;
+				    font-weight: normal;
+				}
+
+				.message.confirmM3 {
+					width: 400px;
+				    padding: 20px;
+				    color: green !important;
+				    border: 1px solid green;
+				    margin: 0px auto;
+				}
+
+				.message.errorM3 {
+					width: 307px;
+				    padding: 20px;
+				    color: red !important;
+				    border: 1px solid red;
+				    margin: 0px auto;
+				}
+
+				.message.errorM3 h4,
+				.message.confirmM3 h4  {
+					display: none;
+				}
+
+				#toStepTwo { background: #000; border-width: 0; color: #fff; cursor: pointer; display: block; float: right; font-size: 16px; font-weight: bold; height: 50px; line-height: 33px; margin: 0 35px 0 0; padding: 0 50px;}
+
+				.node-type-apply-now .headerimage {background: rgba(0, 0, 0, 0) url("{!URLFOR($Resource.AllstarFiles,'img/header-box-without.png')}") no-repeat scroll 0 0 / cover ;  height: 370px; z-index: 1;overflow:hidden;}
+				@media screen and (max-width:1500px) {
+			  	.node-type-apply-now .headerimage {background: rgba(0, 0, 0, 0) url("{!URLFOR($Resource.AllstarFiles,'img/header-box-without.png')}") no-repeat scroll 0 0 / cover ;  height: 340px; z-index: 1;overflow:hidden;}
+				}
+				@media screen and (max-width:1200px) {
+		  		.node-type-apply-now .headerimage {background: rgba(0, 0, 0, 0) url("{!URLFOR($Resource.AllstarFiles,'img/header-box-without.png')}") no-repeat scroll 0 0 / cover ;  height: 300px; z-index: 1;overflow:hidden;}
+
+			</style>
+			<div id="page" class="container" style="align-content: center;">
+				 <div id="header">
+				   	<div id="logo-container">
+						<a id="logo" href="#" >
+			                <div class="showLogo" alt="Allstar fuel card services"></div>
+			            </a>
+					</div>
+			        <div class="header-top-account scrollhide">
+			            <div class="account-box">
+			                Infolinia dla nowych klientów
+			                <a href="tel:+48 12 334 97 69" class="header-phone">+48 12 334 97 69</a>
+			                <a href="mailto:nowyklient@allstarmondo.pl" class="header-mail">nowyklient@allstarmondo.pl</a>
+			            </div>
+			            <!-- left -->
+						<div class="account-box left-header-side">
+			                Dział Obsługi Klienta
+			                <a href="mailto:obslugaklienta@allstarmondo.pl" class="header-mail">obslugaklienta@allstarmondo.pl</a>
+			                <a href="https://selfserve.fleetcor.pl/GFNSMEPLWWW/Pages/Public/Login.aspx?ReturnUrl=%2fGFNSMEPLWWW%2fPages%2fcommon%2fhome.aspx" class="account-btn">Zaloguj się do Self-Serve</a>
+			            </div> 
+					</div>
+					<div class="clear"></div>
+			        <ul id="main-menu"> 
+						<li class="scrollhide">
+							<a href="http://www.allstarmondo.pl/wybierz-karte">Wybierz kartę</a>
+						</li>
+						<li class="scrollhide">
+			                <a href="http://www.allstarmondo.pl/o-nas">O nas</a>
+			            </li>
+				        <li class="scrollhide">
+			                <a href="http://www.allstarmondo.pl/najczesciej-zadawane-pytania">FAQ</a>
+			            </li>
+				        <li class="scrollhide">
+			                <a href="http://www.allstarmondo.pl/kontakt-z-nami">Kontakt z nami</a>
+			            </li>
+			        </ul><!-- /main-menu -->
+			        <div class="clear"></div>		
+				</div>
+				<div class="headerimage">
+					<h1 class="page-title">Zamów teraz</h1>
+				  	<div class="mondocard"><img class="img-responsive" src="{!URLFOR($Resource.AllstarFiles,'img/card-mondo.png')}" alt="Allstar Mondo card"/></div>
+				</div>
+				<apex:outputpanel id="formByStepOne">
+					<apex:outputpanel rendered="{! IF(currentStep =='Step 1' ,true,false) }">				
+						<div id="content">     
+						    <p class="sub-title"></p>
+						    <div class="main-content">
+						        <div id="tabs">	 	
+						            <ul class="tabs">		
+						                <li>
+						                    <a class="active">Twoja firma</a><span class="step-number">1</span>
+						                </li>		
+						                <li>
+						                    <a class="">O Tobie</a><span class="step-number">2</span>
+						                </li>		
+						                <li>
+						                    <a class="">Twoi przedstawiciele</a><span class="step-number">3</span>
+						                </li>	
+						            </ul>	 	 	
+						            <div class="content active">
+						            	<apex:pageMessages />	 		
+						                <div class="main-content form-content" id="application-form">
+						                    <div id="contact-form" class="about-you">			 	
+						                        <form action="?step=2" enctype="multipart/form-data" method="post" id="registration_form_step_1" class="about-company">				    
+						                            <div class="poland-only">
+						                                Produkt jest obecnie dostępny jedynie dla klientów z Polski / dla firm zarejestrowanych w Polsce  
+						                            </div>
+						                            <div class="left">
+						                                <div class="col">
+						                                    <label for="Name">
+						                                        Zarejestrowana nazwa firmy*: 
+						                                    </label>
+					                                        <apex:inputText html-placeholder="Proszę wpisać" value="{! registeredName }"/>
+					                                        <div class="tooltip">i                     
+											                    <span class="tooltiptext tooltip-right">
+											                      <h4>Zarejestrowana nazwa firmy</h4>
+											                      Oficjalna nazwa firmy zgodnie z zarejestrowaną w CEDIG / KRS.                    
+											                    </span>    
+										                  	</div>
+						                                </div>
+						                                <div class="col">
+						                                    <label for="Company">
+						                                        Nazwa firmowa*: 
+						                                    </label>
+						                                    <apex:inputText html-placeholder="Proszę wpisać" value="{! tradingName }"/>
+						                                    <div class="tooltip">i
+						                                        <span class="tooltiptext tooltip-right">
+						                                            <h4>Nazwa firmowa</h4>
+						                                            Proszę wypełniać wyłącznie, jeśli nazwa handlowa firmy różni się o nazwy zarejestrowanej
+						                                        </span>
+						                                    </div>
+						                                </div> 
+						                                <div class="col">
+						                                    <label for="Company">
+						                                        NIP*: 
+						                                    </label>
+						                                    <apex:inputText html-placeholder="Proszę wpisać" title="Tax ID Number must be 10 characters long and contains numbers only!" maxlength="10" value="{! taxIdNumber }"/>
+						                                    <div class="tooltip">i
+						                                        <span class="tooltiptext tooltip-right">
+						                                            <h4>NIP</h4>
+						                                            Number Identifikacji Podatkowej. Numer Identyfikacji Podatkowej składa się z 10 znaków i zawiera wyłącznie cyfry. Można go sprawdzić na oficjalnej stronie internetowej KRS.
+						                                        </span>
+						                                    </div> 
+						                                </div>
+						                                <div class="col">
+						                                    <label for="Company">
+						                                        REGON*: 
+						                                    </label>
+						                                    <apex:inputText html-placeholder="Proszę wpisać" maxlength="10" value="{! regon }"/>
+						                                    <div class="tooltip">i
+						                                        <span class="tooltiptext tooltip-right">
+						                                            <h4>REGON</h4>
+						                                            REGON (Rejestr Gospodarki Narodowej). Jest to numer dla krajowych celów statystycznych. REGON składa się z 9 do 10 znaków i zawiera wyłącznie cyfry. Można go sprawdzić na oficjalnej stronie internetowej KRS.
+						                                        </span>
+						                                    </div> 
+						                                </div>
+						                                <div class="col">
+						                                    <label for="Company">
+						                                        Numer KRS: 
+						                                    </label>
+						                                    <apex:inputText html-placeholder="Proszę wpisać" maxlength="10" value="{! krsNumber }"/> 
+						                                    <div class="tooltip">i
+						                                        <span class="tooltiptext tooltip-right">
+						                                            <h4>Numer KRS</h4>
+						                                            Krajowy Rejestr Sądowy (KRS) Numer składa się z 10 znaków i zawiera wyłącznie cyfry. Spółki jawne, spółki partnerskie z ograniczoną odpowiedzialnością, spółki z ograniczoną odpowiedzialnością oraz spółki akcyjne mają obowiązek rejestracji w Rejestrze prowadzonym przez Ministerstwo Sprawiedliwości, które emituje KRS. Jeśli Twoja firma została włączona przed rokiem 1996, możesz nie posiadać numeru KRS.
+						                                        </span>
+						                                    </div> 
+						                                </div>
+						                                <div class="col">
+						                                    <label for="Company">
+						                                        Adres e-mail: 
+						                                    </label>
+						                                    <apex:inputText html-placeholder="Proszę wpisać" value="{! emailAddress }"/>
+						                                </div>         
+						                            </div> <!-- left -->         
+		             
+						                            <div class="right">     
+						                                <div class="col">
+						                                    <label for="Company">
+						                                        Główny telefon służbowy*: 
+						                                    </label>
+						                                    <apex:inputText html-placeholder="Proszę wpisać" maxlength="13" value="{! primaryBusinessNumber }"/>
+						                                </div>
+						                                <div class="col">
+												            <label>
+						                                        Drugi telefon służbowy:
+						                                    </label>
+						                                    <apex:inputText html-placeholder="Proszę wpisać" maxlength="20" value="{! mobile }"/>
+						            					</div> 
+						                                <div class="col">
+						                                    <label for="Company">
+						                                        Adres siedziby - ulica*:
+						                                    </label>
+						                                    <apex:inputText html-placeholder="Proszę wpisać" value="{! streetAndHouseNumber }"/>
+						                                    <div class="tooltip">i                     
+											                    <span class="tooltiptext tooltip-left">
+											                      <h4>Adres siedziby</h4>
+											                      Zarejestrowany adres siedziby Twojej firmy
+											                    </span>    
+										                  	</div>
+						                                </div>  
+						                                <div class="col">
+						                                    <label for="Company">
+						                                        Miasto*:
+						                                    </label>
+						                                    <apex:inputText html-placeholder="Proszę wpisać" value="{! city }"/>
+						                                </div>  
+						                                <div class="col">
+						                                    <label for="Company">
+						                                        Kod pocztowy*: 
+						                                    </label>
+						                                    <apex:inputText html-placeholder="Proszę wpisać" maxlength="6" value="{! postcode }"/> 
+									                  		<div class="tooltip">i                     
+											                    <span class="tooltiptext tooltip-left">
+											                      	<h4>Kod pocztowy</h4>
+											                      	Proszę wpisać w formacie XXXXX   <!-- Kod pocztowy składa się z 5 cyfr oddzielonych myślnikiem po drugiej cyfrze. Proszę wpisać w formacie xx-xxx  -->                     
+											                    </span>    
+										                  	</div>     
+										                </div>  
+						                                <div class="col">
+						                                    <label for="Company">
+						                                        Państwo*:
+						                                    </label>
+						                                    <input name="country" value="Polska" readonly="1" type="text"/>
+						                                    <div class="tooltip">i
+						                                        <span class="tooltiptext tooltip-left">
+						                                            <h4>Państwo</h4>
+						                                            Produkt jest obecnie dostępny jedynie dla klientów z Polski / dla firm zarejestrowanych w Polsce 
+						                                        </span>
+						                                	</div> 
+						                            	</div> 
+						                            </div> <!-- right -->
+													
+						                            <div class="col no-border address-tooltip">  
+									                	<apex:inputcheckbox value="{! showBlockBusinessAddress }" onclick="clearBusAddressBlockFields(this)">
+																<apex:actionSupport event="onchange" reRender="addBusinessAddress"/>
+														</apex:inputcheckbox>   
+									                	<span>Czy adres handlowy jest taki sam jak adres siedziby?</span>    
+										                <div class="tooltip">i  
+										                  	<span class="tooltiptext tooltip-right">Proszę zaznaczyć, jeśli Twój adres handlowy (siedziba firmy, w której odbywają się codzienne czynności biznesowe) jest taki sam, jak adres siedziby (tak, jak zarejestrowano w KRS lub CEDIG)
+										                  	</span>  
+										                </div>
+								              		</div>
+
+													<apex:outputpanel id="addBusinessAddress">
+							                            <apex:outputPanel styleClass="trading_address_wrapper" rendered="{! NOT(showBlockBusinessAddress) }">
+							                                <h3 class="business" style="clear:both;padding-left:2%; padding-bottom:20px; font-family: Antenna RE Bd">Adres Handlowy:</h3>
+							                                <div class="left">
+							                                    <div class="col">
+							                                        <label for="Company">
+							                                            Ulica*:
+							                                        </label>
+							                                        <apex:inputText id="shipStreetId" html-placeholder="Proszę wpisać" value="{! shipStreet }"/> 
+							                                    </div>  
+							                                    <div class="col">
+							                                        <label for="Company">
+							                                            Miasto*: 
+							                                        </label>
+							                                        <apex:inputText id="shipCityId" styleClass="text-box single-line" html-placeholder="Proszę wpisać" value="{! shipCity }"/>
+							                                        <span class="field-validation-valid" data-valmsg-for="Company" data-valmsg-replace="true">
+							                                        </span>
+							                                    </div> 
+							                                </div>     
+							                                <div class="right">
+							                                    <div class="col">
+							                                        <label for="Company">
+							                                            Kod pocztowy*: 
+							                                        </label>
+							                                        <apex:inputText id="shipPostCodeId" styleClass="text-box single-line" html-placeholder="Proszę wpisać" value="{! shipPostCode }"/>
+							                                        <span class="field-validation-valid" data-valmsg-for="Company" data-valmsg-replace="true">
+							                                        </span>
+							                                    </div>
+							                                    <div class="col">
+							                                        <label for="Company">
+							                                            Państwo*: 
+							                                        </label>
+							                                        <apex:inputText id="shipCountryId" styleClass="text-box single-line" html-placeholder="Proszę wpisać" value="{! shipCountry }"/> 
+							                                    </div> 
+							                                </div>
+							                            </apex:outputPanel>
+						                            </apex:outputpanel>   
+
+						                            <div class="row" style="clear:both;float:right">					           
+					                                	<apex:commandbutton id="toStepTwo" value="Dalej" action="{! goToStepTwo }" rerender="formByStepOne,formByStepTwo,formByStepThree"/>
+				                                	</div>
+				                                	<script type="text/javascript">
+				                                		var error = {! error };
+				                                		$( document ).ready(function() {
+				                                			if (error) {
+																$('body').scrollTop(500);
+				                                			}
+				                                		});
+				                                	</script>             
+						                        </form>    
+						                    </div>        
+						                </div>  
+						            </div>
+						        </div>
+						    </div>
+						</div> <!-- /content -->
+					</apex:outputpanel>
+				</apex:outputpanel>
+
+
+				<apex:outputpanel id="formByStepTwo">
+					<apex:outputpanel rendered="{! IF(currentStep =='Step 2' ,true,false)  }">
+						<div id="content">
+				  			<p class="sub-title"></p>  
+				  			<div class="main-content">    
+				 				<div id="tabs">	 	       
+				      				<ul class="tabs">		         
+				        				<li>  
+				          					<a class=" completed-step">Twoja firma</a>
+				      						<span class="step-number">1</span>  
+				        				</li>		         
+				        				<li>  
+				          					<a class="active">O Tobie</a>
+				          					<span class="step-number">2</span>  
+				        				</li>		         
+				    					<li>  
+				          					<a class="">Twoi przedstawiciele</a>
+				          					<span class="step-number">3</span>  
+				        				</li>	       
+				      				</ul>	 	 	       
+				      				<div class="content active">
+				      					<apex:pageMessages />	 		         
+				       					 <div class="main-content form-content" id="application-form">    
+				      						<div id="contact-form" class="about-you">	
+												<div id="main_error_message" style="display:none; width: 400px; padding: 20px; color: red; border: 1px solid red;margin: 0 auto">  
+				            						<p style="color:red; margin:0">
+				              							Please fill in all mandatory fields marked by asterisk!
+				    								</p>
+				          						</div> 		              
+												<form action="?step=3" enctype="multipart/form-data" method="post" class="form-step-two" id="registration_form_step_2">   
+						          					<div class="row"><br/>
+						             		 		</div> 
+				              						<div class="left">   
+				                						<div class="col">    
+				                  							<label for="type_of_organisation">
+				                    							Rodzaj organizacji*:                   
+				                  							</label>				                  		
+				                  							<apex:selectList value="{! selectedTypeOfOrganization }" size="1" multiselect="false" styleClass="required">
+				                  								<apex:selectOptions value="{! typesOfOrganization }"/>
+				                  							</apex:selectList>   			                  							
+				                						</div> 
+				                						<div class="col">    
+				                  							<label>
+				                    							Adres internetowy:                    
+				                  							</label>
+				                  							<apex:inputText html-placeholder="Proszę wpisać" value="{! webAdress }"/>     
+				                						</div> 
+				        								<div class="col">    
+				                  							<label>
+				                    							Obrót w ostatnich 12 miesiącach*:                    
+				                  							</label>
+				                  							<apex:inputText html-placeholder="Proszę wpisać" value="{! turnover }"/>    
+				                  							<div class="tooltip">i                     
+				                    							<span class="tooltiptext tooltip-right">
+				                      								<h4>Obrót w ostatnich 12 miesiącach</h4>
+				                      								Łączny dochód Twojej firmy w ciągu ostatniego okresu rozliczeniowego w złotych                     
+				                    							</span>    
+				                  							</div>  
+				                						</div> 
+				                						<div class="col">    
+				                  							<label for="number_of_employees">
+				                    							Liczba pracowników*:                    
+				                  							</label>
+				                  							<apex:selectList value="{! selectedNumberOfEmployees }" size="1" multiselect="false" styleClass="required years">
+				                  								<apex:selectOptions value="{! numberOfEmployees }"/>
+				                  							</apex:selectList>   		        
+				                						</div>                 
+				              						</div>
+				              						<div class="right">                 
+				                						<div class="col">    
+				              								<label for="year_of_registration">
+				              									Rok rejestracji*:                    
+				                  							</label>
+				                  							<apex:selectList value="{! selectedYearOfRegistration }" size="1" multiselect="false" styleClass="required years">
+				                  								<apex:selectOptions value="{! yearOfRegistration }"/>
+				                  							</apex:selectList>   	    
+				                						</div> 
+				                						<div class="col">    
+				                  							<label>
+				                    							Rodzaj biznesu*:                    
+				                  							</label>
+				                  							<apex:selectList value="{! selectedIndustry }" size="1" multiselect="false" styleClass="text-box single-line">
+				                  								<apex:selectOptions value="{! industries }"/>
+				                  							</apex:selectList>     
+				                						</div>                
+				                						<div class="col">    
+				                  							<label>
+				                    							Wymagana ilość kart łącznie*:                    
+				                  							</label>
+				                  							<apex:inputText styleClass="numbers-only" html-placeholder="Proszę wpisać" maxlength="3" value="{! numberOfIndividualCards }"/>      
+				                						</div>   
+				                						<div class="col">    
+				                  							<label>
+				                    							Wnioskowany miesięczny limit kredytu*:                   
+				                  							</label>
+				                  							<apex:inputText styleClass="numbers-only" html-placeholder="Podaj kwotę w złotych" maxlength="7" value="{! companyCreditSpend }"/>    
+				                  							<div class="tooltip">i                     
+				                    							<span class="tooltiptext tooltip-left">
+					                      							<h4>Wnioskowany miesięczny limit kredytu</h4>
+					                        						Całkowity kredyt, jaki chciałbyś uzyskać dla swojej firmy (całkowity ze wszystkich kart, ta informacja może zostać zaktualizowana na późniejszym etapie lub podczas zamówienia większej ilości kart)                    
+				                    							</span>    
+				                  							</div>    
+				                						</div>  
+				              						</div> 
+				              						<div class="row">     
+				                						<div class="left-btn">
+				                                			<apex:commandbutton id="toStepOne" value="Wstecz" action="{! goToStepOne }" rerender="formByStepOne,formByStepTwo,formByStepThree"/>
+			                                			</div>  
+				                						<div class="right-btn">
+					                                		<apex:commandbutton id="toStepThree" value="Dalej" action="{! goToStepThree }" rerender="formByStepOne,formByStepTwo,formByStepThree"/>	
+				                						</div>     
+				              						</div>  
+				            					</form>    
+				          					</div>		         
+				    					</div>	       
+				      				</div>    
+				    			</div>  
+				  			</div>   
+						</div><!-- /content 2-->
+					</apex:outputpanel>
+				</apex:outputpanel>
+
+
+				<apex:outputpanel id="formByStepThree">
+					<apex:outputpanel rendered="{! IF(currentStep =='Step 3' ,true,false) }">		
+						<div id="content">
+							<p class="sub-title"></p>  
+							<div class="main-content">    
+								<div id="tabs">	 	       
+							  			<ul class="tabs">		         
+							    			<li>  
+							      				<a class=" completed-step">Twoja firma</a>
+							      				<span class="step-number">1</span>  
+							    			</li>		         
+							    			<li>  
+							      				<a class=" completed-step">O Tobie</a>
+							      				<span class="step-number">2</span>  
+							    			</li>		         
+							    			<li>  
+							      				<a class="active">Twoi przedstawiciele</a>
+							      				<span class="step-number">3</span>  
+							    			</li>	       
+							  			</ul>	 	       
+										<div class="content active">
+										<apex:pageMessages /> 		         
+										<div class="main-content form-content" id="application-form">    
+						  					<div id="contact-form" class="about-you">	
+						        				<div id="main_error_message" style="display:none; width: 400px; padding: 20px; color: red; border: 1px solid red;margin: 0 auto">  
+						            				<p style="color:red; margin:0">
+						              					Please fill in all mandatory fields marked by asterisk!
+						            				</p>
+						          				</div> 		              
+						 	             		<form action="?step=4" enctype="multipart/form-data" method="post" id="registration_form_step_3">				                                 
+						          					<div class="your-representative-wrapper" data-person-id="1">
+						          						<apex:outputPanel id="repsBlock">
+						          							<apex:variable var="index" value="{!1}"/>
+						          							<apex:repeat value="{! repsMap }" var="rep">
+								            					<div class="person-form">    
+								              						<div class="person-form-instance">
+								                						<h2>Przedstawiciel</h2>      
+																		<div class="left"> 
+																		  	<div class="col no-border person-tooltip">  
+																		    	<h6>ZAZNACZ, JEŚLI DOTYCZY*:</h6>
+																				<div class="checkbox">  	
+														                          	<div> 
+														                          		<apex:inputcheckbox value="{! repsMap[rep].authorisedSignatory }">
+																						</apex:inputcheckbox> 
+														                            	<span>
+														                              		Upoważniony sygnatariusz                             
+													                            		</span>
+														                          	</div> 
+														                        </div>   
+														                        <div class="tooltip">i                           
+														                          	<span class="tooltiptext tooltip-right">
+														                            	<h4>Upoważniony sygnatariusz</h4>
+														                            	Osoba ta jest upoważniona do zawierania umów w imieniu Twojej firmy, i będzie jednostką upoważnioną do zmian całkowitego limitu kredytu firmy lub do zamawiania bądź likwidowania kart                           
+														                          	</span>  
+														                        </div>
+														                        <div class="checkbox">
+																			    	<div>
+																			        	<apex:inputcheckbox value="{! repsMap[rep].accountAdministrator }">
+																						</apex:inputcheckbox>
+																			            <span>
+															                              	Administrator konta                             
+															                            </span>	     
+																			    	</div>
+																		    	</div>  
+																				<div class="tooltip">i                           
+																		      		<span class="tooltiptext tooltip-right">
+														                            	<h4>Administrator konta</h4>
+															                            Osobie tej wysyłać będziemy całą korespondencję oraz będzie ona miała przegląd potwierdzeń oraz aktywności konta używając samoobsługowego konta online. Osoba ta może wymagać oraz zmieniać informacje dotyczące konta.                           
+														                          	</span> 
+																		    	</div> 
+																		    	<div class="checkbox">  
+																			    	<div>
+																			        	<apex:inputcheckbox value="{! repsMap[rep].ubo }">
+																						</apex:inputcheckbox>
+																			            <span>    
+														                              		Beneficjent rzeczywisty                             
+															                            </span>      
+																					</div>
+																				</div>
+																				<div class="tooltip">i                           
+														                          	<span class="tooltiptext tooltip-right">
+														                            	<h4>Beneficjent rzeczywisty</h4>
+														                            	Prosimy o podanie nazwisk wszystkich jednostek, które posiadają kontrolę nad powyżej 25% udziałów Twojej firmy, lub prawo głosu lub sprawują kontrolę nad zarządem Twojej firmy.
+														                          	</span>  
+														                        </div>
+																		  	</div> 
+
+																		  	<div class="col">  
+																				<label>
+																					Tytuł                         
+																				</label>
+																				<apex:selectList value="{! repsMap[rep].selectedTitle }" size="1" multiselect="false" styleClass="years">
+																					<apex:selectOptions value="{! title }"/>
+																				</apex:selectList>   	  
+																			</div>
+																		  	<div class="col">  
+																				<label>
+																					Pozycja                        
+																				</label>
+																				<apex:inputText styleClass="text-box single-line" html-placeholder="Proszę wpisać" value="{! repsMap[rep].position }"/> 
+																			</div>     
+																			<div class="col">  
+																				<label>
+																					Imię*                        
+																				</label>
+																				<apex:inputText styleClass="text-box single-line" html-placeholder="Proszę wpisać" value="{! repsMap[rep].firstName }"/>  
+																			</div>     
+																			<div class="col">  
+																				<label>
+																					Drugie imię                        
+																				</label>
+																				<apex:inputText styleClass="text-box single-line" html-placeholder="Proszę wpisać" value="{! repsMap[rep].middleName }"/>  
+																			</div>     
+																			<div class="col">  
+																				<label>
+																			  		Nazwisko*                        
+																				</label>
+																				<apex:inputText styleClass="text-box single-line" html-placeholder="Proszę wpisać" value="{! repsMap[rep].lastName }"/>  
+																			</div>
+																			<div class="col">  
+																				<label>
+																			  		Nazwisko panieńskie matki*                   
+																				</label>
+																				<apex:inputText styleClass="text-box single-line" html-placeholder="Proszę wpisać" value="{! repsMap[rep].motherMaidenName }"/> 
+																			</div>  
+																			<div class="col">  
+																				<label>
+																			  		Adres e-mail*                         
+																				</label>
+																				<apex:inputText styleClass="text-box single-line" html-placeholder="Proszę wpisać" value="{! repsMap[rep].email }"/>  
+																			</div>                                                                                                                                                   
+																		</div> <!-- left --> 
+
+																		<div class="right">   
+																			<div class="col-blank">
+																		  	</div>   
+																		  	<div class="col">  
+																				<label>
+																					Data urodzenia*                         
+																				</label>
+																				<apex:inputText styleClass="text-box single-line" html-placeholder="RRRR/MM/DD" value="{! repsMap[rep].birthday }"/>  
+																			</div>
+																			<div class="col">  
+																				<label>
+																			  		PESEL                         
+																				</label>
+																				<apex:inputText styleClass="text-box single-line" maxlength="11" html-placeholder="Proszę wpisać" value="{! repsMap[rep].pesel }"/>  
+																				<div class="tooltip">i                     
+																			  		<span class="tooltiptext tooltip-left">
+																			    		<h4>PESEL</h4>
+																			    		Powszechny Elektroniczny System Ewidencji Ludności lub PESEL to 11-cyfrowy numer będący unikatową identyfikacją specyfikującą jednostkę zarejestrowaną w bazie danych PESEL (Powszechny Elektroniczny System Ewidencji Ludności).                     
+																			  		</span>    
+																				</div>
+																			</div> 
+																			<div class="col">  
+																				<label>
+																			  		Główny numer służbowy                         
+																				</label>
+																				<apex:inputText styleClass="text-box single-line" html-placeholder="Proszę wpisać" value="{! repsMap[rep].telephoneNumber }"/>   
+																			</div>
+																			<div class="col">
+																				<label>  
+																			  		Adres prywatny - Ulica*:                       
+																				</label>
+																				<apex:inputText html-placeholder="Proszę wpisać" value="{! repsMap[rep].mailingStreet }"/>
+																			</div>     
+																			<div class="col">  
+																				<label>
+																					Miasto*                         
+																				</label>
+																				<apex:inputText html-placeholder="Proszę wpisać" value="{! repsMap[rep].mailingCity }"/>    
+																			</div>     
+																			<div class="col">  
+																				<label>
+																					Kod pocztowy                         
+																				</label>
+																				<apex:inputText styleClass="postcode" maxlength="6" html-placeholder="Proszę wpisać" value="{! repsMap[rep].mailingPostcode }"/>   
+																			</div>
+																			<div class="col">  
+																				<label>
+																					Państwo                         
+																				</label>
+																				<apex:inputText styleClass="text-box single-line" html-placeholder="Proszę wpisać" value="{! repsMap[rep].mailingCountry }"/>   
+																			</div>
+																		</div> <!-- right -->
+
+																		<div class="row">
+																			<apex:commandLink styleClass="remove-person" value="Usunąć tego przedstawiciela" action="{! doDeleteContact }"
+																				rendered="{! repsMap[rep].contactId = null }">
+																	            <apex:param name="conToDelete" value="{! index }"/>
+																	        </apex:commandLink>
+
+																	        <div class="add-person-container"></div> 
+									                                		<apex:commandbutton id="addRepresent" value="+ Dodaj przedstawicieli" action="{! addRepresentative }" rerender="repsBlock"/>
+																        </div>
+													                    <apex:variable var="index" value="{! index + 1 }"/>
+												                  	</div>  
+												                </div> <!-- end of person form-->
+											                </apex:repeat>
+						          						</apex:outputPanel>
+
+						          						<div class="no-border address-tooltip">  
+										                	<apex:inputcheckbox value="{! showBlockEntityUBO }" onclick="clearBlockEntityUBOFields(this)">
+																<apex:actionSupport event="onchange" reRender="entityUBO"/>
+															</apex:inputcheckbox>   
+										                	<span>Moja firma posiada beneficjenta rzeczywistego</span>    
+										                	<div class="tooltip">i  
+										                  		<span class="tooltiptext tooltip-right">
+										                  			<h4>
+										                  				Jeśli Beneficjent Rzeczywisty jest firmą, poprosimy o:
+									                  				</h4>
+										                  			Świadectwo zarejestrowania spółki lub podobny dokument świadczący o założeniu firmy, np. umowę powierniczą lub umowę spółki 
+										                  		</span>  
+										                	</div>
+										              	</div>             	
+						      						</div><!-- /your-representative-wrapper -->
+
+						      						<apex:outputpanel id="entityUBO">
+							                            <apex:outputPanel rendered="{! NOT(showBlockEntityUBO) }">  
+	            											<div class="person-form">    
+	                  											<div class="person-form-instance">
+										      						<apex:outputPanel id="subAccBlock">
+										      							<apex:variable var="index" value="{!1}"/>
+								          								<apex:repeat value="{! subAccMap }" var="sa">
+												      						<div class="business-owners-wrapper">	   
+												            					<div class="person-form">    
+												          							<div class="person-form-instance">	 
+												          							<h2>Beneficjent Rzeczywisty – firma</h2>   
+																	                    <div class="left">     
+																                      		<div class="col">  
+																	                        	<label>
+																	                        		Nazwa Beneficjenta Rzeczywistego – firmy                          
+																	                        	</label>
+																	                        	<apex:inputText id="nameSubAccId" html-placeholder="Proszę wpisać" value="{! subAccMap[sa].nameSubAcc }"/>
+																	                      	</div>
+																                      		<div class="col">
+																	                        	<label>  
+																	                          		Ulica*:                       
+																	                        	</label>
+																	                        	<apex:inputText id="streetSubAccId" html-placeholder="Proszę wpisać" value="{! subAccMap[sa].streetSubAcc }"/>
+																	                      	</div>  
+																	                      	<div class="col">  
+																	                        	<label>
+																	                          		Miasto                        
+																	                        	</label>  
+																	                        	<apex:inputText id="citySubAccId" styleClass="text-box single-line" html-placeholder="Proszę wpisać" value="{! subAccMap[sa].citySubAcc }"/>
+																	                      	</div>    
+																	                    </div>
+																	                    <div class="right">     
+																	                      	<div class="col">    
+													              								<label for="year_of_registration">
+													              									Rok rejestracji*:                    
+													                  							</label>
+													                  							<apex:selectList id="yearOfRegistrationSubAccId" value="{! subAccMap[sa].yearOfRegistrationSubAcc }" size="1" multiselect="false" styleClass="required years">
+													                  								<apex:selectOptions value="{! yearOfRegistration }"/>
+													                  							</apex:selectList>   	    
+													                						</div>
+																	                      	<div class="col">  
+																	                        	<label>
+																	                          		Kod pocztowy                          
+																	                        	</label>  
+																	                        	<apex:inputText id="postcodeSubAccId" styleClass="postcode" maxlength="6" html-placeholder="Proszę wpisać" value="{! subAccMap[sa].postcodeSubAcc }"/>
+																	                      	</div>     
+																	                      	<div class="col">  
+																	                        	<label>
+																	                          		Państwo                         
+																	                        	</label>  
+																	                        	<apex:inputText id="countrySubAccId" html-placeholder="Proszę wpisać" value="{! subAccMap[sa].countrySubAcc }"/>
+																	                      	</div>
+																	                    </div> 
+																	                    <div class="row">
+																							<apex:commandLink styleClass="remove-person" value="Usuń Beneficjenta Rzeczywistego – firmę" action="{! doDeleteSubAccount }"
+																								rendered="{! subAccMap[sa].subAccountId = null }">
+																					            <apex:param name="accToDelete" value="{! index }"/>
+																					        </apex:commandLink>
+
+																				        	<div class="add-person-container"></div>     
+														            						<apex:commandbutton id="addSubAcc" value="+ Dodaj Beneficjenta Rzeczywistego – firmę" action="{! addSubAccount }" rerender="subAccBlock"/>
+																				        </div>
+																	                    <apex:variable var="index" value="{! index + 1 }"/>  											             
+												              						</div>     
+												            					</div>
+												            					<script type="text/javascript">
+																					function clearBlockEntityUBOFields(chkbox) {
+																						if (chkbox.checked) {
+																							document.getElementById('{!$Component.nameSubAccId}').value = '';
+																							document.getElementById('{!$Component.streetSubAccId}').value = '';
+																							document.getElementById('{!$Component.citySubAccId}').value = '';
+																							document.getElementById('{!$Component.yearOfRegistrationSubAccId}').value = 'Please select';
+																							document.getElementById('{!$Component.postcodeSubAccId}').value = '';
+																							document.getElementById('{!$Component.countrySubAccId}').value = '';
+																						}
+																					}
+																				</script>       
+												          					</div>
+										          						</apex:repeat>
+									          						</apex:outputPanel>
+								          						</div>
+							          						</div>	         						
+							                            </apex:outputPanel>
+						                            </apex:outputpanel>
+
+						          					<div class="row tems-and-conditions-block"> 
+									                	<div class="dp-act">        
+									                  		<h3>Akt Ochrony Danych Osobowych 1998*</h3>					 
+									                  		<p>
+									                    		<apex:inputcheckbox value="{! agreementDataProtection }"></apex:inputcheckbox> Podane przez Ciebie informacje mogą zostać ujawnione licencjonowanej agencji informacji kredytowej, która zachowa wyniki wyszukiwania. Mogą one zostać użyte przez innych pożyczkodawców podczas szacowania Twoich wniosków oraz wniosków innych członków Twojego gospodarstwa domowego, oraz w celu przypadkowego ścigania długów oraz zapobiegania nadużyciom.
+									                  		</p>        
+									                  		<hr class="divider"/>      
+									                	</div>      
+									                	<div class="authority">       
+									                  		<h3>Upoważnienie do złożenia wniosku*</h3>        
+									                  		<p>
+									                    		<apex:inputcheckbox value="{! agreementAuthorityToApply }"></apex:inputcheckbox> Potwierdzam, że jestem upoważniona/-y do złożenia wniosku o karty paliwowe oraz płatnicze w imieniu firmy, której dane podałam/-em w tym formularzu*
+									                  		</p>        
+									                  		<hr class="divider"/>      
+									                	</div>      
+									                	<div class="t-and-c">       
+									                  		<h3>Regulamin*</h3>       
+									                  		<p>
+									                    		<apex:inputcheckbox value="{! agreementTermsAndConditions }"></apex:inputcheckbox> Niniejszym wyrażam swoją zgodę z 
+									                    		<a class="popup ignore-hash cboxElement" href="#terms-conditions">regulaminem</a>. *
+									                  		</p>      
+									                	</div>       
+									                	<div class="e-marketing">       
+									                  		<h3>Email Marketing</h3>        
+									                  		<p>
+									                    		<apex:inputcheckbox value="{! agreementEmailMarketing }"></apex:inputcheckbox> Czasami możemy przesłać Ci pomocne dla Ciebie informacje drogą e-mail. Nie przekazujemy Twoich danych osobom trzecim. Zaznacz krzyżykiem, jeśli CHCESZ, by kontaktować się z Tobą przez e-mail.
+									                  		</p>        
+									                  		<hr class="divider"/>      
+									                	</div>     
+									              	</div>                      
+						          					<div class="row">     
+						            					<div class="left-btn">
+					                                		<apex:commandbutton id="toStep2" value="Wstecz" action="{! goToStepTwo }" rerender="formByStepOne,formByStepTwo,formByStepThree"/>
+						            					</div>  
+						            					<div class="right-btn">
+						            						<apex:commandbutton id="final" value="Zakończ" action="{! validationByStepThreeAndSave }"/>
+						            					</div>
+						            					<script type="text/javascript">
+					                                		var error = {! error };
+					                                		$( document ).ready(function() {
+					                                			if (error) {
+																	$('body').scrollTop(500);
+					                                			}
+					                                		});
+					                                	</script>     
+						          					</div> 
+						    					</form>    
+						  					</div>		         
+										</div>	       
+						  			</div>    
+								</div>  
+							</div>   
+						</div><!-- /content 3-->
+					</apex:outputpanel>
+				</apex:outputpanel>
+			</div> <!-- /container -->
+
+			<div id="footer" class="container">
+			    <div id="mega-footer">
+			        <div class="list">
+			            <h3>
+			                <a href="http://www.allstarmondo.pl/wybierz-karte">Wybierz kartę</a>
+			            </h3>
+			        </div>
+			        <div class="list">
+			            <h3><a href="http://www.allstarmondo.pl/najczesciej-zadawane-pytania">FAQ</a></h3>
+			        </div>
+			        <div class="list">
+			            <h3><a href="http://www.allstarmondo.pl/regulamin-kart">Regulamin Kart</a></h3>
+			        </div>
+			        <div id="mini-footer">
+			            <ul id="footer-menu">
+			                <li><a href="http://www.fleetcor.com" target="_blank">&copy; Copyright FLEETCOR 2017</a></li>
+			                <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/zasady-dotyczace-plikow-cookies">Zasady dotyczące plików cookies</a></li>
+			                <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/zasady-korzystania-z-witryny-internetowej">Zasady korzystania z witryny internetowej</a></li>
+			                <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/polityka-prywatnosci">Polityka prywatności</a></li>
+			                <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/prawa-autorskie-i-nota-prawna">Prawa autorskie i Nota prawna</a></li>
+			                <li><span class="delimiter">|</span><a href="http://www.allstarmondo.pl/zasady-dopuszczalnego-uzytkowania">Zasady dopuszczalnego użytkowania</a></li>
+			            </ul>
+			            <p>&nbsp;</p>
+			            <div class="clear"></div>
+			        </div>
+			    </div>
+			</div>
+		</body>
+	</apex:form>
+</apex:page>

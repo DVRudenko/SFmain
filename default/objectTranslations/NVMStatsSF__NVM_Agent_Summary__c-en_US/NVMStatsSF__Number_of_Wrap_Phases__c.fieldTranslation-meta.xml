@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Counts a series of consecutive wraps (e.g. Auto then Manual Wrap) as a single Wrap phase --></help>
+    <label><!-- Number of Wrap Phases --></label>
+    <name>NVMStatsSF__Number_of_Wrap_Phases__c</name>
+</CustomFieldTranslation>

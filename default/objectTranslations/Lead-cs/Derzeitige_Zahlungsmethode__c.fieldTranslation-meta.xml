@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Hlavní způsob platby za tankování</label>
+    <name>Derzeitige_Zahlungsmethode__c</name>
+    <picklistValues>
+        <masterLabel>Bankkarte</masterLabel>
+        <translation>Bankovní karta</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Barzahlung</masterLabel>
+        <translation>Hotovost</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kreditkarte</masterLabel>
+        <translation>Kreditní karta</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Stationskarte</masterLabel>
+        <translation><!-- Stationskarte --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tankkarte</masterLabel>
+        <translation>Palivová karta</translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Отредактированный здесь текст сообщения электронной почты (до 2000 символов) будет отображаться в уведомлении для получателя DocuSign о необходимости поставить подпись.</help>
+    <label><!-- EmailBody_ja --></label>
+    <name>dsfs__EmailBody_ja__c</name>
+</CustomFieldTranslation>

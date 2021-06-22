@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Высокий сезон: выбор</label>
+    <name>High_season_months__c</name>
+    <picklistValues>
+        <masterLabel>АВГУСТ</masterLabel>
+        <translation><!-- АВГУСТ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>АПРЕЛЬ</masterLabel>
+        <translation><!-- АПРЕЛЬ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ДЕКАБРЬ</masterLabel>
+        <translation><!-- ДЕКАБРЬ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ИЮЛЬ</masterLabel>
+        <translation><!-- ИЮЛЬ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ИЮНЬ</masterLabel>
+        <translation><!-- ИЮНЬ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>МАЙ</masterLabel>
+        <translation><!-- МАЙ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>МАРТ</masterLabel>
+        <translation><!-- МАРТ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>НОЯБРЬ</masterLabel>
+        <translation><!-- НОЯБРЬ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ОКТЯБРЬ</masterLabel>
+        <translation><!-- ОКТЯБРЬ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>СЕНТЯБРЬ</masterLabel>
+        <translation><!-- СЕНТЯБРЬ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ФЕВРАЛЬ</masterLabel>
+        <translation><!-- ФЕВРАЛЬ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ЯНВАРЬ</masterLabel>
+        <translation><!-- ЯНВАРЬ --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

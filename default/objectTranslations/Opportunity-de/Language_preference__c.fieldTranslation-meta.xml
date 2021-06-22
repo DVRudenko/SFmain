@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Bitte wählen Sie die Sprachpräferenz des Ansprechpartners aus. --></help>
+    <label>Sprachpräferenz *</label>
+    <name>Language_preference__c</name>
+    <picklistValues>
+        <masterLabel>Czech</masterLabel>
+        <translation>Tschechisch</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dutch</masterLabel>
+        <translation>Niederländisch</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>English</masterLabel>
+        <translation>Englisch</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>French</masterLabel>
+        <translation>Französisch</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>German</masterLabel>
+        <translation>Deutsch</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hungarian</masterLabel>
+        <translation>Ungarisch</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Italian</masterLabel>
+        <translation>Italienisch</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Polish</masterLabel>
+        <translation>Polnisch</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Russian</masterLabel>
+        <translation>Russisch</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Slovak</masterLabel>
+        <translation>Slowakisch</translation>
+    </picklistValues>
+</CustomFieldTranslation>

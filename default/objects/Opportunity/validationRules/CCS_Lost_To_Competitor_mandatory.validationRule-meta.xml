@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Lost_To_Competitor_mandatory</fullName>
+    <active>true</active>
+    <description>If Gruende_verloren__c = "Lost to competition", then Lost_To_Competitor__c is mandatory.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Gruende_verloren__c,"Lost to competition"),
+ISBLANK(Lost_To_Competitor__c))</errorConditionFormula>
+    <errorDisplayField>Lost_To_Competitor__c</errorDisplayField>
+    <errorMessage>Please select a Competition.</errorMessage>
+</ValidationRule>

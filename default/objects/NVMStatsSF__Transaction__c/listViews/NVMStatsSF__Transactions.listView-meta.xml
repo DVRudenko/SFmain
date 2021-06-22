@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMStatsSF__Transactions</fullName>
+    <columns>NAME</columns>
+    <columns>NVMStatsSF__Time__c</columns>
+    <columns>NVMStatsSF__Failed__c</columns>
+    <columns>NVMStatsSF__IsLast__c</columns>
+    <columns>NVMStatsSF__Bytes_Read__c</columns>
+    <columns>NVMStatsSF__Window_End__c</columns>
+    <columns>NVMStatsSF__Duration__c</columns>
+    <columns>NVMStatsSF__Type__c</columns>
+    <columns>NVMStatsSF__Channel__c</columns>
+    <columns>NVMStatsSF__Rows_Processed__c</columns>
+    <columns>NVMStatsSF__Heap__c</columns>
+    <columns>NVMStatsSF__Interval__c</columns>
+    <columns>NVMStatsSF__Summaries_Saved__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>NVMStatsSF__checked__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Transactions</label>
+</ListView>

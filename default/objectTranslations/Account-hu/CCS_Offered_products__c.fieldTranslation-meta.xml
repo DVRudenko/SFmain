@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS Offered products --></label>
+    <name>CCS_Offered_products__c</name>
+    <picklistValues>
+        <masterLabel>aukce</masterLabel>
+        <translation><!-- aukce --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>bonus</masterLabel>
+        <translation><!-- bonus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>karty</masterLabel>
+        <translation><!-- karty --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>monitoring</masterLabel>
+        <translation><!-- monitoring --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>mýto</masterLabel>
+        <translation><!-- mýto --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>trucks</masterLabel>
+        <translation><!-- trucks --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

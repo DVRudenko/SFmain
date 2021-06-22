@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS Names --></label>
+    <name>CCS_Names__c</name>
+    <picklistValues>
+        <masterLabel>Bronislava Štajerová</masterLabel>
+        <translation><!-- Bronislava Štajerová --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Iveta Baštářová</masterLabel>
+        <translation><!-- Iveta Baštářová --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Neznámo</masterLabel>
+        <translation><!-- Neznámo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vladimíra Ouřadová</masterLabel>
+        <translation><!-- Vladimíra Ouřadová --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

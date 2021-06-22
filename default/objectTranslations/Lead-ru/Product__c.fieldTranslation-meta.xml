@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Product * --></label>
+    <name>Product__c</name>
+    <picklistValues>
+        <masterLabel>Carnet OBD</masterLabel>
+        <translation><!-- Carnet OBD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Carnet Standard 2019</masterLabel>
+        <translation><!-- Carnet Standard 2019 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LOTOS Biznes No fee</masterLabel>
+        <translation><!-- LOTOS Biznes No fee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>LOTOS Biznes Standard</masterLabel>
+        <translation><!-- LOTOS Biznes Standard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell Basic 2020</masterLabel>
+        <translation><!-- Shell Basic 2020 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell No fee 2020</masterLabel>
+        <translation><!-- Shell No fee 2020 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shell Universal Card</masterLabel>
+        <translation><!-- Shell Universal Card --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

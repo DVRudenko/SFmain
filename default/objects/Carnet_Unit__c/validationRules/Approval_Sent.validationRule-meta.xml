@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Sent</fullName>
+    <active>true</active>
+    <description>Lock All Carnet Units when Approval is in progress.</description>
+    <errorConditionFormula>AND(
+(LastModifiedDate - Opportunity__r.LastModifiedDate) &gt; 0.00034,
+NOT(ISCHANGED(Pricing_Approval_Status__c)),
+ISPICKVAL(Opportunity__r.Pricing_Approval_Status__c, &quot;Pending Approval&quot;))</errorConditionFormula>
+    <errorMessage>You can&#39;t edit Carnet Units when Approval Process is In Progress.</errorMessage>
+</ValidationRule>

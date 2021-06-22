@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type of Card --></label>
+    <name>Type_of_Card__c</name>
+    <picklistValues>
+        <masterLabel>Multi Network Card -- International</masterLabel>
+        <translation><!-- Multi Network Card - -  International --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multi Network Card -- National</masterLabel>
+        <translation><!-- Multi Network Card - -  National --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Single Network Card -- International</masterLabel>
+        <translation><!-- Single Network Card - -  International --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Single Network Card -- National</masterLabel>
+        <translation><!-- Single Network Card - -  National --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

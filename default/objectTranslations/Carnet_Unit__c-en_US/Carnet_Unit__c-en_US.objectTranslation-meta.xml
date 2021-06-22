@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Carnet Unit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Carnet Units</value>
+    </caseValues>
+    <layouts>
+        <layout>Carnet OBD Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing --></label>
+            <section>Pricing</section>
+        </sections>
+        <sections>
+            <label><!-- Unit Details --></label>
+            <section>Unit Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Carnet Standard Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing --></label>
+            <section>Pricing</section>
+        </sections>
+        <sections>
+            <label><!-- Unit Details --></label>
+            <section>Unit Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Carnet Unit Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Pricing --></label>
+            <section>Pricing</section>
+        </sections>
+        <sections>
+            <label><!-- Unit Details --></label>
+            <section>Unit Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Record Type for Carnet OBD orders. --></description>
+        <label><!-- Carnet OBD --></label>
+        <name>Carnet_OBD</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type for Carnet Standard orders. --></description>
+        <label><!-- Carnet Standard --></label>
+        <name>Carnet_Standard</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You can&apos;t edit Carnet Units when Approval Process is In Progress. --></errorMessage>
+        <name>Approval_Sent</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change Account Price Book on Carnet Unit once it has been assigned. --></errorMessage>
+        <name>Lock_Account_Price_Book</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Record is Closed, you cannot modify it. Please contact your manager. --></errorMessage>
+        <name>Lock_Carnet_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change Opportunity on Carnet Unit once it has been assigned. --></errorMessage>
+        <name>Lock_Opportunity</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Monitoring in EU can be used only for Prepaid Carnet Units, because for Standard it is charged dynamically, when crossing the borders. --></errorMessage>
+        <name>Monitoring_in_EU_Prepaid</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Number of Units must be positive and bigger than 0. --></errorMessage>
+        <name>Number_of_Units_positive</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New_Carnet_Unit --></label>
+        <name>New_Carnet_Unit</name>
+    </webLinks>
+</CustomObjectTranslation>

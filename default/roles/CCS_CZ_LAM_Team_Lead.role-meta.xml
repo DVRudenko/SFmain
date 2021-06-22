@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Read</contactAccessLevel>
+    <description>CCS CZ LAM Team Lead</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>CCS CZ LAM Team Lead</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>CCS_CZ_KAM_Team_Lead</parentRole>
+</Role>

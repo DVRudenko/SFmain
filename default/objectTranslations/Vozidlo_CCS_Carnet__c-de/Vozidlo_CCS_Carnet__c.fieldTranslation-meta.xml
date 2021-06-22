@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Vozidlo CCS Carnet. --></help>
+    <label><!-- CCS Carnet --></label>
+    <name>Vozidlo_CCS_Carnet__c</name>
+    <relationshipLabel><!-- Vozidlo CCS Carnet --></relationshipLabel>
+</CustomFieldTranslation>

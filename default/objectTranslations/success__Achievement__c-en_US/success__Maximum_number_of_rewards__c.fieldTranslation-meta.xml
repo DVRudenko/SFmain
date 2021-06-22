@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The maximum number of rewards the player is allowed to receive --></help>
+    <label><!-- DEPRECATE - Max Rewards --></label>
+    <name>success__Maximum_number_of_rewards__c</name>
+</CustomFieldTranslation>

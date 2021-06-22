@@ -1,0 +1,39 @@
+<apex:page name="OpportunityCheckFields" standardController="Opportunity" extensions="OpportunityCheckFieldsCtrl"
+                       showHeader="true" action="{! init }" language="ru">
+    <apex:sectionHeader title="Возможности" subtitle="Чек-лист"/>
+    <apex:form html-novalidate="novalidate">
+        <apex:pageBlock title="{! opportunityPageTitle}" mode="edit" >
+            <apex:pageMessages />
+            <apex:pageBlockSection title="Поля чек-листа для заполнения" columns="1">
+                <apex:inputField value="{! currentOpportunity.Industry__c }" />
+                <apex:inputField value="{! currentOpportunity.Fleet_Type__c}" />
+                <apex:inputField value="{! currentOpportunity.Number_of_Vehicles__c}" />
+                <apex:inputField value="{! currentOpportunity.Area_Traveled__c}" />
+                <apex:inputField value="{! currentOpportunity.The_region__c}" />
+                <apex:inputField value="{! currentOpportunity.Projected_Liters_weekly__c}" />
+                <apex:inputField value="{! currentOpportunity.General_Projected_Liters_w__c}" />
+                <apex:inputField value="{! currentOpportunity.Percentage_of_General_projected_liters__c}"/>
+                <apex:inputField value="{! currentOpportunity.Primary_Fueling_Method__c}" />
+                <apex:inputField value="{! currentOpportunity.Primary_Fueling_Method_specific__c}"/>
+                <apex:inputField value="{! currentOpportunity.Additional_Fueling_Methods__c}" />
+                <apex:inputField value="{! currentOpportunity.PPR_Electronic_document_management__c}" />
+                <apex:inputField value="{! currentOpportunity.PPR_EDM_No__c}"/>
+                <apex:inputField value="{! currentOpportunity.PPR_Operator__c}"/>
+                <apex:inputField value="{! currentOpportunity.Paid_personal_manager__c}" />
+                <apex:inputField value="{! currentOpportunity.Traffic_tickets_monitoring_service__c}" />
+                <apex:inputField value="{! currentOpportunity.UPD__c}" />
+                <apex:inputField value="{! currentOpportunity.High_season__c}" />
+                <apex:inputField value="{! currentOpportunity.High_season_months__c}"/>
+                <apex:inputField value="{! currentOpportunity.Extra_terms__c}" />
+                <apex:inputField value="{! currentOpportunity.Product_PPR__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{! save }" value="Сохранить" rendered="{!OR(currentOpportunity.StageName == 'Contract Under Signing',
+                        currentOpportunity.StageName == 'Договор на проверке', currentOpportunity.StageName == 'Signing of a Contract', currentOpportunity.StageName == 'Awaiting payment')}"/>
+                <apex:commandButton value="Назад" action="{! back }" immediate="true"/>
+                <apex:commandButton value="Выгрузить в Excel" action="data:application/vnd.ms-excel;content-disposition:attachment;base64,{! base64Value }"
+                                    disabled="{! isOpportunitySaved }" onComplete="return false"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Transaction Shell Home Fuel</fullName>
+                <default>false</default>
+                <label>Transaction Shell Home Fuel</label>
+            </value>
+            <value>
+                <fullName>Transaction Shell Home Non-Fuel</fullName>
+                <default>false</default>
+                <label>Transaction Shell Home Non-Fuel</label>
+            </value>
+            <value>
+                <fullName>Transaction Shell Non-Home Fuel</fullName>
+                <default>false</default>
+                <label>Transaction Shell Non-Home Fuel</label>
+            </value>
+            <value>
+                <fullName>Transaction Shell Non-Home Non-Fuel</fullName>
+                <default>false</default>
+                <label>Transaction Shell Non-Home Non-Fuel</label>
+            </value>
+            <value>
+                <fullName>Transaction Shell Partner Fuel</fullName>
+                <default>false</default>
+                <label>Transaction Shell Partner Fuel</label>
+            </value>
+            <value>
+                <fullName>Transaction Shell Partner Non-Fuel</fullName>
+                <default>false</default>
+                <label>Transaction Shell Partner Non-Fuel</label>
+            </value>
+            <value>
+                <fullName>All: Fuel</fullName>
+                <default>false</default>
+                <label>All: Fuel</label>
+            </value>
+            <value>
+                <fullName>All: Non-Fuel</fullName>
+                <default>false</default>
+                <label>All: Non-Fuel</label>
+            </value>
+            <value>
+                <fullName>One Time Account Set Up</fullName>
+                <default>false</default>
+                <label>One Time Account Set Up</label>
+            </value>
+            <value>
+                <fullName>One Time Card Set Up</fullName>
+                <default>false</default>
+                <label>One Time Card Set Up</label>
+            </value>
+            <value>
+                <fullName>Regular Paper Invoice</fullName>
+                <default>false</default>
+                <label>Regular Paper Invoice</label>
+            </value>
+            <value>
+                <fullName>Regular Bank Transfer</fullName>
+                <default>false</default>
+                <label>Regular Bank Transfer</label>
+            </value>
+            <value>
+                <fullName>Monthly Direct Debit</fullName>
+                <default>false</default>
+                <label>Monthly Direct Debit</label>
+            </value>
+            <value>
+                <fullName>Monthly Bank Transfer</fullName>
+                <default>false</default>
+                <label>Monthly Bank Transfer</label>
+            </value>
+            <value>
+                <fullName>Monthly Account Management</fullName>
+                <default>false</default>
+                <label>Monthly Account Management</label>
+            </value>
+            <value>
+                <fullName>Duplicate Invoice</fullName>
+                <default>false</default>
+                <label>Duplicate Invoice</label>
+            </value>
+            <value>
+                <fullName>Late Invoice</fullName>
+                <default>false</default>
+                <label>Late Invoice</label>
+            </value>
+            <value>
+                <fullName>Eco Fee</fullName>
+                <default>false</default>
+                <label>Eco Fee</label>
+            </value>
+            <value>
+                <fullName>EV Monthly Fee</fullName>
+                <default>false</default>
+                <label>EV Monthly Fee</label>
+            </value>
+            <value>
+                <fullName>EV Management Fee</fullName>
+                <default>false</default>
+                <label>EV Management Fee</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

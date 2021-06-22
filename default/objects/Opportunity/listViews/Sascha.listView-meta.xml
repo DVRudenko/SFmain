@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sascha</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Starts_Status__c</columns>
+    <columns>Starts_Aufgabe__c</columns>
+    <columns>Starts_Fuel_Liters_Per_Mo_Target__c</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>OPPORTUNITY.CLOSED</columns>
+    <columns>Herkunft_Land__c</columns>
+    <columns>Starts_Close_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Starts_Aufgabe_Beschreibung__c</field>
+        <operation>notContain</operation>
+        <value>Finally Check</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Euroshell_Starts</value>
+    </filters>
+    <filters>
+        <field>Starts_Rep__c</field>
+        <operation>contains</operation>
+        <value>Menrath</value>
+    </filters>
+    <label>Sascha</label>
+    <language>de</language>
+    <sharedTo>
+        <role>START</role>
+    </sharedTo>
+</ListView>

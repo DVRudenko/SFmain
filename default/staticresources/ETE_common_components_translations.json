@@ -1,0 +1,1115 @@
+{
+    "apply_btn":{
+        "default_impl": {
+            "en": "Apply",
+            "cs": "Použít",
+            "sk": "Použiť"
+        }
+    },
+    "selected_btn":{
+        "default_impl": {
+            "en": "Selected",
+            "cs": "Vybrán",
+            "sk": "Vybraný"
+        }
+    },
+    "choose_btn":{
+        "default_impl": {
+            "en": "Choose",
+            "sk": "Vybrať",
+            "cs": "Vybrat"
+        }
+    },
+    "about_fleetcor": {
+        "default_impl": {
+            "en": "ABOUT FLEETCOR",
+            "fr": "À PROPOS DE FLEETCOR",
+            "nl": "OVER FLEETCOR",
+            "hu": "FLEETCOR ISMERTETÉSE",
+            "de": "ÜBER FLEETCOR",
+            "pl": "INFORMACJE O FLEETCOR",
+            "sk": "O SPOLOČNOSTI FLEETCOR",
+            "cs": "O SPOLEČNOSTI FLEETCOR"
+        },
+        "France": {
+            "en": "ABOUT FLEETCOR",
+            "fr": "SUR FLEETCOR"
+        },
+        "Switzerland-FR": {
+            "en": "ABOUT FLEETCOR",
+            "fr": "SUR FLEETCOR"
+        }
+    },
+    "article": {
+        "default_impl": {
+            "en": "Article",
+            "pl": "Artykuł"
+        }
+    },
+    "back": {
+        "default_impl": {
+            "en": "BACK",
+            "fr": "RETOUR",
+            "hu": "VISSZA",
+            "nl": "TERUG",
+            "pl": "Wstecz",
+            "cs": "ZPĚT",
+            "sk": "SPÄŤ",
+            "de": "ZURÜCK"
+        }
+    },
+    "fee_free":{
+        "default_impl": {
+            "en": "FREE",
+            "fr": "GRATUIT",
+            "de": "KOSTENLOS",
+            "pl": "NIEPOBIERANA",
+            "nl": "GRATIS",
+            "cs": "ZDARMA",
+            "hu": "INGYENES",
+            "sk": "ZADARMO"
+        }
+    },
+    "date_of_birth_ds": {
+        "default_impl": {
+            "en": "Date of birth",
+            "sk": "Dátum narodenia",
+            "cs": "Datum narození",
+            "pl": "Data urodzenia"
+        }
+    },
+    "date_of_birth_error_ds": {
+        "default_impl": {
+            "en": "Please enter your date of birth.",
+            "sk": "Prosím zadaj tvoj dátum narodenia.",
+            "cs": "Prosím vyplňte vaše datum narození.",
+            "pl": "Proszę wprowadzić swoje data urodzenia."
+        }
+    },
+    "edit":{
+        "default_impl": {
+            "en": "edit",
+            "nl": "Wijzigen",
+            "hu": "EDIT",
+            "sk": "UPRAVIŤ",
+            "cs": "UPRAVIT",
+            "fr": "MODIFIER",
+            "pl": "EDYTOWAĆ",
+            "de": "ÄNDERN"
+        }
+    },
+    "bread_crumbs_main_page": {
+        "default_impl": {
+            "en": "Main page - Become a customer",
+            "pl": "Strona główna - Zostań klientem",
+            "de": "Startseite - Kunde Werden"
+        }
+    },
+    "page_title": {
+        "default_impl": {
+            "en": "Become a customer",
+            "fr": "DEVENIR CLIENT",
+            "nl": "KLANT WORDEN",
+            "hu": "ÚJ SZERZŐDÉSKÖTÉS",
+            "pl": "Zostań klientem",
+            "de": "KUNDE WERDEN",
+            "sk": "STAŤ SA ZÁKAZNÍKOM"
+        },
+        "Czech Republic": {
+            "en": "5 steps to your Shell card",
+            "cs": "5 kroků k Vaší kartě Shell"
+        },
+        "Czech Republic CCS": {
+            "en": "Become a customer",
+            "cs": "STAŇTE SE KLIENTEM"
+        },
+        "Slovakia CCS": {
+            "en": "Become a customer",
+            "sk": "STAŤ SA ZÁKAZNÍKOM"
+        }
+    },
+    "button_add": {
+        "default_impl": {
+            "pl": "Dodaj",
+            "en": "Add"
+        }
+    },
+    "nextButton_error_cd": {
+        "default_impl": {
+            "en": "Please fill out all required fields.",
+            "cs": "Vyplňte prosím všechna povinná pole.",
+            "sk": "Vyplňte prosím všetky povinné polia.",
+            "hu": "Kérjük, töltse ki az összes kötelező mezőt.",
+            "fr": "Veuillez remplir tous les champs requis.",
+            "nl": "Vul alle noodzakelijke velden in.",
+            "pl": "Proszę wypełnić wszystkie wymagane pola.",
+            "de": "Bitte füllen Sie alle erforderlichen Felder aus."
+        }
+    },
+    "next_button_locator_error": {
+        "default_impl": {
+            "en": "Please fill locator stations or brand."
+        }
+    },
+    "button_remove": {
+        "default_impl": {
+            "pl": "Usunąć",
+            "en": "Remove"
+        }
+    },
+    "cookie_policy": {
+        "default_impl": {
+            "en": "COOKIE POLICY",
+            "fr": "COOKIES",
+            "hu": "SÜTI IRÁNYELV",
+            "nl": "COOKIE-RICHTLIJNEN",
+            "de": "COOKIE-RICHTLINIE",
+            "pl": "ZASADY DOTYCZĄCE PLIKÓW COOKIES",
+            "sk": "PRAVIDLÁ PRE SÚBORY COOKIE",
+            "cs": "PRAVIDLA PRO SOUBORY COOKIE"
+        }
+    },
+    "copyright_and_legal_notice": {
+        "default_impl": {
+            "en": "COPYRIGHT AND LEGAL NOTICE",
+            "fr": "MENTIONS LÉGALES",
+            "hu": "SZERZŐI JOG ÉS FELELŐSSÉGKIZÁRÁS",
+            "nl": "AUTEURSRECHT EN BEPERKING VAN DE AANSPRAKELIJKHEID",
+            "de": "URHEBERRECHT UND HAFTUNGSAUSSCHLUSS",
+            "pl": "PRAWA AUTORSKIE I NOTA PRAWNA",
+            "sk": "AUTORSKÉ PRÁVA A PRÁVNE UPOZORNENIA",
+            "cs": "AUTORSKÉ PRÁVA A PRÁVNÍ UPOZORNĚNÍ"
+        }
+    },
+    "currency_pl": {
+        "default_impl": {
+            "en": "PLN",
+            "pl": "ZŁ"
+        }
+    },
+    "currency_de": {
+        "default_impl": {
+            "en": "EUR",
+            "de": "EUR"
+        }
+    },
+    "currency_at": {
+        "default_impl": {
+            "en": "EUR",
+            "de": "EUR"
+        }
+    },
+    "currency_nl": {
+        "default_impl": {
+            "en": "EUR",
+            "nl": "EUR"
+        }
+    },
+    "currency_benl": {
+        "default_impl": {
+            "en": "EUR",
+            "fr": "EUR",
+            "nl": "EUR"
+        }
+    },
+    "currency_befr": {
+        "default_impl": {
+            "en": "EUR",
+            "fr": "EUR",
+            "nl": "EUR"
+        }
+    },
+    "currency_hu": {
+        "default_impl": {
+            "en": "HUF",
+            "hu": "Ft"
+        }
+    },
+    "currency_sk": {
+        "default_impl": {
+            "en": "EUR",
+            "sk": "EUR"
+        }
+    },
+    "currency_cz": {
+        "default_impl": {
+            "en": "CZK",
+            "cs": "KČ"
+        }
+    },
+    "currency_fr": {
+        "default_impl": {
+            "en": "EUR",
+            "fr": "EUR"
+        }
+    },
+    "currency_lu": {
+        "default_impl": {
+            "en": "EUR",
+            "fr": "EUR"
+        }
+    },
+    "currency_chde": {
+        "default_impl": {
+            "en": "CHF",
+            "fr": "CHF",
+            "de": "CHF"
+        }
+    },
+    "currency_chfr": {
+        "default_impl": {
+            "en": "CHF",
+            "fr": "CHF",
+            "de": "CHF"
+        }
+    },
+    "customer_service": {
+        "default_impl": {
+            "en": "CUSTOMER SERVICE",
+            "fr": "SERVICE CLIENTÈLE",
+            "nl": "KLANTENDIENST",
+            "de": "KUNDENSERVICE",
+            "hu": "ÜGYFÉLSZOLGÁLAT",
+            "pl": "DZIAŁ OBSŁUGI KLIENTA",
+            "sk": "ZÁKAZNÍCKY SERVIS",
+            "cs": "ZÁKAZNICKÝ SERVIS"
+        },
+        "Netherlands": {
+            "en": "CUSTOMER SERVICE",
+            "nl": "KLANTENSERVICE"
+        }
+    },
+    "products_and_services": {
+        "default_impl": {
+            "en": "Products & services",
+            "nl": "PRODUCTEN & SERVICES",
+            "fr": "PRODUITS & SERVICES",
+            "pl": "Produkty i usługi",
+            "hu": "TERMÉKEK ÉS SZOLGÁLTATÁSOK",
+            "de": "PRODUKTE",
+            "sk": "PRODUKTY A SLUŽBY",
+            "cs": "PRODUKTY A SLUŽBY"
+        }
+    },
+    "contacts": {
+        "default_impl": {
+            "en": "Contact details",
+            "fr": "COORDONNÉES",
+            "cs": "KONTAKTNÍ ÚDAJE",
+            "sk": "KONTAKTNÉ ÚDAJE",
+            "nl": "CONTACTGEGEVENS",
+            "hu": "ELÉRHETŐSÉGEK",
+            "pl": "Dane kontaktowe",
+            "de": "KONTAKTDATEN"
+        }
+    },
+    "company_details": {
+        "default_impl": {
+            "en": "Company details",
+            "de": "Angaben zum Unternehmen",
+            "hu": "Cégadatok"
+        }
+    },
+    "additional_services": {
+        "default_impl": {
+            "en": "Additional services",
+            "pl": "Dodatkowe usługi",
+            "de": "Zusätzliche leistungen",
+            "fr": "Services additionnels",
+            "cs": "Další služby",
+            "sk": "Ďalšie služby",
+            "hu": "További szolgáltatások"
+        },
+        "Netherlands":{
+            "en": "Additional services",
+            "nl": "AANVULLENDE SERVICES"
+        },
+        "Belgium-NL":{
+            "en": "Additional services",
+            "nl": "AANVULLENDE SERVICES",
+            "fr": "SERVICES ADDITIONNELS"
+        },
+        "Belgium-FR":{
+            "en": "Additional services",
+            "nl": "AANVULLENDE SERVICES",
+            "fr": "SERVICES ADDITIONNELS"
+        },
+        "France":{
+            "en": "Additional services",
+            "fr": "SERVICES ADDITIONNELS"
+        }
+    },
+    "credit_line": {
+        "default_impl": {
+            "en": "Credit line",
+            "fr": "LIMITE DE CRÉDIT",
+            "hu": "HITELKERET",
+            "nl": "Kredietlimiet",
+            "pl": "Linia kredytowa",
+            "de": "KREDITRAHMEN",
+            "sk": "Kreditní limit",
+            "cs": "Kreditní limit"
+        }
+    },
+    "documents": {
+        "default_impl": {
+            "en": "Documents",
+            "hu": "DOKUMENTUMOK",
+            "cs": "DOKUMENTY",
+            "sk": "DOKUMENTY",
+            "pl": "Dokumenty"
+        }
+    },
+    "language_en": {
+        "default_impl": {
+            "en": "English"
+        }
+    },
+    "language_pl": {
+        "default_impl": {
+            "en": "POLSKI"
+        }
+    },
+    "language_de": {
+        "default_impl": {
+            "en": "DEUTSCH"
+        }
+    },
+    "language_nl": {
+        "default_impl": {
+            "en": "NEDERLANDS"
+        }
+    },
+    "language_fr": {
+        "default_impl": {
+            "en": "FRANÇAIS"
+        }
+    },
+    "language_hu": {
+        "default_impl": {
+            "en": "MAGYAR"
+        }
+    },
+    "language_sk": {
+        "default_impl": {
+            "en": "Slovenské"
+        }
+    },
+    "language_cs": {
+        "default_impl": {
+            "en": "Čeština"
+        }
+    },
+    "country_at": {
+        "default_impl": {
+            "en": "ÖSTERREICH",
+            "sk": "ÖSTERREICH",
+            "cs": "ÖSTERREICH",
+            "hu": "ÖSTERREICH",
+            "fr": "ÖSTERREICH",
+            "nl": "ÖSTERREICH",
+            "pl": "ÖSTERREICH",
+            "de": "ÖSTERREICH"
+        }
+    },
+    "country_benl": {
+        "default_impl": {
+            "en": "BELGIË (NL)",
+            "sk": "BELGIË (NL)",
+            "cs": "BELGIË (NL)",
+            "hu": "BELGIË (NL)",
+            "fr": "BELGIË (NL)",
+            "nl": "BELGIË (NL)",
+            "pl": "BELGIË (NL)",
+            "de": "BELGIË (NL)"
+        }
+    },
+    "country_befr": {
+        "default_impl": {
+            "en": "BELGIQUE (FR)",
+            "sk": "BELGIQUE (FR)",
+            "cs": "BELGIQUE (FR)",
+            "hu": "BELGIQUE (FR)",
+            "fr": "BELGIQUE (FR)",
+            "nl": "BELGIQUE (FR)",
+            "pl": "BELGIQUE (FR)",
+            "de": "BELGIQUE (FR)"
+        }
+    },
+    "country_nl": {
+        "default_impl": {
+            "en": "NEDERLAND",
+            "sk": "NEDERLAND",
+            "cs": "NEDERLAND",
+            "hu": "NEDERLAND",
+            "fr": "NEDERLAND",
+            "nl": "NEDERLAND",
+            "pl": "NEDERLAND",
+            "de": "NEDERLAND"
+        }
+    },
+    "country_de": {
+        "default_impl": {
+            "en": "DEUTSCHLAND",
+            "sk": "DEUTSCHLAND",
+            "cs": "DEUTSCHLAND",
+            "hu": "DEUTSCHLAND",
+            "fr": "DEUTSCHLAND",
+            "nl": "DEUTSCHLAND",
+            "pl": "DEUTSCHLAND",
+            "de": "DEUTSCHLAND"
+        }
+    },
+    "country_pl": {
+        "default_impl": {
+            "en": "Polska",
+            "sk": "Polska",
+            "cs": "Polska",
+            "hu": "Polska",
+            "fr": "Polska",
+            "nl": "Polska",
+            "pl": "Polska",
+            "de": "Polska"
+        }
+    },
+    "country_hu": {
+        "default_impl": {
+            "en": "MAGYARORSZÁG",
+            "sk": "MAGYARORSZÁG",
+            "cs": "MAGYARORSZÁG",
+            "hu": "MAGYARORSZÁG",
+            "fr": "MAGYARORSZÁG",
+            "nl": "MAGYARORSZÁG",
+            "pl": "MAGYARORSZÁG",
+            "de": "MAGYARORSZÁG"
+        }
+    },
+    "country_fr": {
+        "default_impl": {
+            "en": "FRANCE",
+            "sk": "FRANCE",
+            "cs": "FRANCE",
+            "hu": "FRANCE",
+            "fr": "FRANCE",
+            "nl": "FRANCE",
+            "pl": "FRANCE",
+            "de": "FRANCE"
+        }
+    },
+    "country_chde": {
+        "default_impl": {
+            "en": "SCHWEIZ (DE)",
+            "sk": "SCHWEIZ (DE)",
+            "cs": "SCHWEIZ (DE)",
+            "hu": "SCHWEIZ (DE)",
+            "fr": "SCHWEIZ (DE)",
+            "nl": "SCHWEIZ (DE)",
+            "pl": "SCHWEIZ (DE)",
+            "de": "SCHWEIZ (DE)"
+        }
+    },
+    "country_chfr": {
+        "default_impl": {
+            "en": "SUISSE (FR)",
+            "sk": "SUISSE (FR)",
+            "cs": "SUISSE (FR)",
+            "hu": "SUISSE (FR)",
+            "fr": "SUISSE (FR)",
+            "nl": "SUISSE (FR)",
+            "pl": "SUISSE (FR)",
+            "de": "SUISSE (FR)"
+        }
+    },
+    "country_sk": {
+        "default_impl": {
+            "en": "Slovensko",
+            "sk": "Slovensko",
+            "cs": "Slovensko",
+            "hu": "Slovensko",
+            "fr": "Slovensko",
+            "nl": "Slovensko",
+            "pl": "Slovensko",
+            "de": "Slovensko"
+        }
+    },
+    "country_cz": {
+        "default_impl": {
+            "en": "Česká republika",
+            "sk": "Česká republika",
+            "cs": "Česká republika",
+            "hu": "Česká republika",
+            "fr": "Česká republika",
+            "nl": "Česká republika",
+            "pl": "Česká republika",
+            "de": "Česká republika"
+        }
+    },
+    "country_lu": {
+        "default_impl": {
+            "en": "Luxembourg",
+            "sk": "Luxembourg",
+            "cs": "Luxembourg",
+            "hu": "Luxembourg",
+            "fr": "Luxembourg",
+            "nl": "Luxembourg",
+            "pl": "Luxembourg",
+            "de": "Luxembourg"
+        }
+    },
+    "fuel_card": {
+        "default_impl": {
+            "en": "FUEL CARD",
+            "nl": "TANKKAART",
+            "fr": "CARTE CARBURANT",
+            "de": "TANKKARTE",
+            "pl": "KARTA PALIWOWA",
+            "hu": "ÜZEMANYAGKÁRTYA",
+            "sk": "TANKOVACIA KARTA",
+            "cs": "TANKOVACÍ KARTA"
+        },
+        "Poland Lotos": {
+            "en": "Lotos Biznes",
+            "pl": "Lotos Biznes"
+        },
+        "Netherlands": {
+            "en": "Lotos Biznes",
+            "nl": "TANKPAS"
+        }
+    },
+    "partner": {
+        "default_impl": {
+            "en": "Authorised Shell Fuel Cards Reseller",
+            "fr": "Distributeur agréé de Carte Shell",
+            "hu": "Hivatalos Üzemanyagkártya Közvetítő",
+            "nl": "Geautoriseerde distributeur van de Shell Card",
+            "de": "Autorisierter Shell Tankkarten Partner",
+            "pl": "Autoryzowany Dostawca Kart Paliwowych",
+            "sk": "AUTORIZOVANÝ PARTNER TANKOVACÍCH KARIET SHELL",
+            "cs": "Autorizovaný partner tankovacích karet Shell"
+        },
+        "Poland Lotos": {
+            "en": "",
+            "pl": ""
+        }
+    },
+    "google_play": {
+        "default_impl": {
+            "en": "Download on the Google Play",
+            "pl": "Pobierz w Google Play"
+        }
+    },
+    "apple_store": {
+        "default_impl": {
+            "en": "Download on the Apple Store",
+            "pl": "Pobierz Na Apple Store"
+        }
+    },
+    "imprint": {
+        "default_impl": {
+            "en": "Imprint",
+            "pl": "Odcisk"
+        }
+    },
+    "less_details": {
+        "default_impl": {
+            "en": "Less details",
+            "nl": "Minder weergeven",
+            "fr": "Moins de détails",
+            "hu": "Mutass kevesebbet",
+            "de": "Weniger anzeigen",
+            "pl": "Mniej szczegółów",
+            "sk": "Zobraziť menej údajov",
+            "cs": "Zobrazit méně údajů"
+        },
+        "Czech Republic CCS": {
+            "en": "Less details",
+            "cs": "Skrýt podrobnosti"
+        }
+    },
+    "menu": {
+        "default_impl": {
+            "en": "Menu",
+            "pl": "Menu",
+            "de": "Menü"
+        }
+    },
+    "more_detail": {
+        "default_impl": {
+            "en": "More details",
+            "nl": "Meer weergeven",
+            "fr": "Plus de détails",
+            "hu": "További részletek",
+            "pl": "Więcej szczegółów",
+            "de": "Mehr anzeigen",
+            "sk": "Zobraziť viac údajov",
+            "cs": "Zobrazit více údajů"
+        },
+        "Czech Republic CCS": {
+            "en": "More details",
+            "cs": "Zobrazit podrobnosti"
+        }
+    },
+    "network": {
+        "default_impl": {
+            "en": "NETWORK",
+            "fr": "RÉSEAU",
+            "nl": "NETWERK",
+            "de": "NETZWERK",
+            "hu": "HÁLÓZAT",
+            "pl": "SIEĆ",
+            "sk": "SIEŤ ČERPACÍCH STANÍC",
+            "cs": "SÍŤ ČERPACÍCH STANIC"
+        }
+    },
+    "news": {
+        "default_impl": {
+            "en": "NEWS",
+            "fr": "ACTUALITÉS",
+            "nl": "NIEUWS",
+            "hu": "ÚJDONSÁGOK",
+            "de": "NEWS & PRESS",
+            "pl": "AKTUALNOŚCI",
+            "sk": "NOVINKY",
+            "cs": "NOVINKY"
+        }
+    },
+    "new_customer": {
+        "default_impl": {
+            "en": "New customer",
+            "pl": "Nowy klient"
+        }
+    },
+    "next": {
+        "default_impl": {
+            "en": "Next",
+            "pl": "Dalej",
+            "de": "WEITER",
+            "hu": "KÖVETKEZŐ",
+            "cs": "DALŠÍ",
+            "sk": "ĎALŠIA",
+            "fr": "SUIVANT",
+            "nl": "VOLGENDE"
+        },
+        "Czech Republic CCS": {
+            "en": "Next",
+            "cs": "Pokračovat"
+        },
+        "Slovakia CCS": {
+            "en": "Next",
+            "sk": "Pokračovať"
+        }
+    },
+    "one_click_order": {
+        "default_impl": {
+            "en": "One click order",
+            "pl": "Zamówienie w jednym kliknięciem"
+        }
+    },
+    "oops_title": {
+        "default_impl": {
+            "en": "An unexpected error occurred.",
+            "hu": "VÁRATLAN HIBA TÖRTÉNT",
+            "fr": "ERREUR INATTENDUE.",
+            "cs": "VYSKYTLA SE NEOČEKÁVANÁ CHYBA",
+            "sk": "VYSKYTLA SA NEOČAKÁVANÁ CHYBA",
+            "nl": "ER IS EEN ONVERWACHTE FOUT OPGETREDEN.",
+            "pl": "Wystąpił nieoczekiwany błąd.",
+            "de": "EIN UNERWARTETER FEHLER IST AUFGETRETEN."
+        }
+    },
+    "oops_button_title": {
+        "default_impl": {
+            "pl": "Wstecz",
+            "en": "Back",
+            "cs": "ZPĚT",
+            "sk": "SPÄŤ",
+            "hu": "VISSZA",
+            "fr": "RETOUR",
+            "nl": "TERUG",
+            "de": "ZURÜCK"
+        }
+    },
+    "oops_description": {
+        "default_impl": {
+            "pl": "Szanowny kliencie, wystąpił nieoczekiwany błąd podczas ładowania następnego kroku zamówienia. Proszę spróbuj ponownie. Jeśli błąd będzie się powtarzał, skontaktuj się z naszym zespołem, aby zakończyć proces zamawiania karty telefonicznie pod numerem +48 222 441256.",
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +48 222 441256."
+        },
+        "Hungary": {
+            "hu": "Tisztelt Ügyfelünk! Egy váratlan hiba történt a következő oldal betöltése közben. Kérjük, próbáld meg újra. Ha a hiba továbbra is fennáll, lépjen kapcsolatba az értékesítési osztályunkkal telefonon a +36 1 999 3403 számon, hogy befejezhesse a kártya megrendelését.",
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +36 199 93403."
+        },
+        "Slovakia": {
+            "sk": "Vážený zákazník, pri načítaní ďalšieho kroku Vašej objednávky došlo k neočakávanej chybe. Prosím skúste to znova. Ak by chyba pretrvávala, kontaktujte náš tím a dokončite objednávkový proces telefonicky na čísle +421 233 527874.",
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +36 199 93403."
+        },
+        "Czech Republic": {
+            "cs": "Vážený zákazníku, při načítání dalšího kroku Vaší objednávky došlo k neočekávané chybě. Prosím zkuste to znovu. Pokud by chyba přetrvávala, kontaktujte náš tým a dokončete objednávkový proces telefonicky na čísle +420 296 181204.",
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +36 199 93403."
+        },
+        "Poland Lotos": {
+            "pl": "Szanowny kliencie, wystąpił nieoczekiwany błąd podczas ładowania następnego kroku zamówienia. Proszę spróbuj ponownie. Jeśli błąd będzie się powtarzał, skontaktuj się z naszym zespołem, aby zakończyć proces zamawiania karty telefonicznie pod numerem +48 123 349 770.",
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +48 123 349 770."
+        },
+        "Germany": {
+            "de": "Sehr geehrter Kunde, beim Laden des nächsten Schritts Ihrer Bestellung ist ein unerwarteter Fehler aufgetreten. Bitte versuchen Sie es noch einmal. Wenn der Fehler weiterhin besteht, wenden Sie sich bitte telefonisch unter +49 911 14955287 an unser Team, um Ihre Bestellung abzuschließen.",
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +49 911 14955287."
+        },
+        "Netherlands": {
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +31 204 990895.",
+            "nl": "Beste klant, Er is een onverwachte fout opgetreden bij het laden van de volgende stap van uw bestelling. Probeer het a.u.b. opnieuw. Als de fout zich blijft voordoen, neem dan contact op met ons team om het bestelproces van de Shell Card telefonisch af te ronden op +31 204 990895."
+        },
+        "Belgium-NL": {
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +32 236 48965.",
+            "fr": "Cher client, nous avons constaté une erreur dans le chargement de l’étape suivante pour votre commande. Veuillez réessayer. Si l'erreur persiste, veuillez contacter notre service commercial pour finaliser votre commande de cartes par téléphone au +32 236 48965.",
+            "nl": "Beste klant, Er is een onverwachte fout opgetreden bij het laden van de volgende stap van uw bestelling. Probeer het a.u.b. opnieuw. Als de fout zich blijft voordoen, neem dan contact op met ons team om het bestelproces van de Shell Card telefonisch af te ronden op +32 236 48965."
+        },
+        "Belgium-FR": {
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +32 236 48965.",
+            "fr": "Cher client, nous avons constaté une erreur dans le chargement de l’étape suivante pour votre commande. Veuillez réessayer. Si l'erreur persiste, veuillez contacter notre service commercial pour finaliser votre commande de cartes par téléphone au +32 236 48965.",
+            "nl": "Beste klant, Er is een onverwachte fout opgetreden bij het laden van de volgende stap van uw bestelling. Probeer het a.u.b. opnieuw. Als de fout zich blijft voordoen, neem dan contact op met ons team om het bestelproces van de Shell Card telefonisch af te ronden op +32 236 48965."
+        },
+        "France": {
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +33 185 851896.",
+            "fr": "Cher client, nous avons constaté une erreur dans le chargement de l’étape suivante pour votre commande. Veuillez réessayer. Si l'erreur persiste, veuillez contacter notre service commercial pour finaliser votre commande de cartes par téléphone au +33 185 851896."
+        },
+        "Switzerland-DE": {
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +41 445 223796.",
+            "fr": "Cher client, nous avons constaté une erreur dans le chargement de l’étape suivante pour votre commande. Veuillez réessayer. Si l'erreur persiste, veuillez contacter notre service commercial pour finaliser votre commande de cartes par téléphone au +41 445 223796.",
+            "de": "Sehr geehrter Kunde, beim Laden des nächsten Schritts Ihrer Bestellung ist ein unerwarteter Fehler aufgetreten. Bitte versuchen Sie es noch einmal. Wenn der Fehler weiterhin besteht, wenden Sie sich bitte telefonisch unter +41 445 223796 an unser Team, um Ihre Bestellung abzuschließen."
+        },
+        "Switzerland-FR": {
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +41 445 223796.",
+            "fr": "Cher client, nous avons constaté une erreur dans le chargement de l’étape suivante pour votre commande. Veuillez réessayer. Si l'erreur persiste, veuillez contacter notre service commercial pour finaliser votre commande de cartes par téléphone au +41 445 223796.",
+            "de": "Sehr geehrter Kunde, beim Laden des nächsten Schritts Ihrer Bestellung ist ein unerwarteter Fehler aufgetreten. Bitte versuchen Sie es noch einmal. Wenn der Fehler weiterhin besteht, wenden Sie sich bitte telefonisch unter +41 445 223796 an unser Team, um Ihre Bestellung abzuschließen."
+        },
+        "Slovakia CCS": {
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +421 2 582 80 600.",
+            "sk": "Vážený zákazník, pri načítaní ďalšieho kroku Vašej objednávky došlo k neočakávanej chybe. Prosím skúste to znova. Ak by chyba pretrvávala, kontaktujte náš tím a dokončite objednávkový proces telefonicky na čísle +421 2 582 80 600."
+        },
+        "Czech Republic CCS": {
+            "en": "Dear customer, an unexpected error has occurred while loading the next step of your order. Please try again. If the error persists, please contact our team to finish the card ordering process by phone at +420 266 108 108.",
+            "cs": "Vážený zákazníku, při načítání dalšího kroku Vaší objednávky došlo k neočekávané chybě. Prosím zkuste to znovu. Pokud by chyba přetrvávala, kontaktujte náš tým a dokončete objednávkový proces telefonicky na čísle +420 266 108 108."
+        }
+    },
+    "pay_later_pd": {
+        "default_impl": {
+            "en": "Pay later",
+            "de": "Später zahlen",
+            "nl": "Betaal later",
+            "cs": "Zaplatit později",
+            "sk": "Zapúlatiť neskôr",
+            "fr": "Payer plus tard",
+            "pl": "Zapłać później",
+            "hu": "Fizetés később"
+        }
+    },
+    "order_data_title": {
+        "default_impl": {
+            "en": "Order data",
+            "nl": "BESTELGEGEVENS",
+            "fr": "DÉTAILS DE COMMANDE",
+            "hu": "MEGRENDELÉS RÉSZLETEI",
+            "pl": "Dane zamówienia",
+            "de": "Bestelldaten",
+            "sk": "ŠPECIFIKÁCIA OBJEDNÁVKY",
+            "cs": "SPECIFIKACE OBJEDNÁVKY"
+        }
+    },
+    "order_data_empty": {
+        "default_impl": {
+            "en": "Summary of your order",
+            "fr": "Récapitulatif de votre commande",
+            "nl": "Besteloverzicht",
+            "hu": "A megrendelés összegzése",
+            "pl": "Tutaj będą dane Twojego zamówienia",
+            "de": "Zusammenfassung ihrer Bestellung",
+            "sk": "Zhrnutie vašej objednávky",
+            "cs": "Shrnutí vaší objednávky"
+        }
+    },
+    "payment_data": {
+        "default_impl": {
+            "en": "Payment details",
+            "nl": "Betaalgegevens",
+            "fr": "DONNÉES DE PAIEMENT",
+            "de": "Zahlungsdaten",
+            "cs": "DETAILY PLATBY",
+            "sk": "Payment details SK"
+        }
+    },
+    "checkout": {
+        "default_impl": {
+            "en": "PAY DEPOSIT",
+            "pl": "ZAPŁATA",
+            "cs": "ZAPLATIT KAUCI",
+            "sk": "ZAPLATIŤ KAUCIU"
+        }
+    },
+    "pay_deposit": {
+        "default_impl": {
+            "en": "Pay deposit",
+            "hu": "ÓVADÉK BEFIZETÉSE",
+            "cs": "ZAPLATIT KAUCI",
+            "sk": "ZAPLATIŤ KAUCIU",
+            "pl": "Zapłać kaucję",
+            "nl": "Betaal borg",
+            "fr": "PAYER LE DÉPÔT DE GARANTIE",
+            "de": "Kaution hinterlegen"
+        }
+    },
+    "privacy_policy": {
+        "default_impl": {
+            "en": "PRIVACY POLICY",
+            "fr": "POLITIQUE DE CONFIDENTIALITÉ",
+            "nl": "PRIVACYRICHTLIJN",
+            "hu": "ADATVÉDELMI IRÁNYELV",
+            "de": "DATENSCHUTZRICHTLINIE",
+            "pl": "POLITYKA PRYWATNOŚCI",
+            "sk": "ZÁSADY OCHRANY OSOBNÝCH ÚDAJOV",
+            "cs": "ZÁSADY OCHRANY OSOBNÍCH ÚDAJŮ"
+        }
+    },
+    "redirection": {
+        "default_impl": {
+            "pl": "Przekierowanie do usługodawcy...",
+            "de": "Weiterleitung zur Webseite des Dienstanbieters...",
+            "nl": "Doorschakeling naar dienstverlener...",
+            "fr": "Redirection vers le prestataire des services de paiement...",
+            "hu": "Átirányítás a szolgáltató oldalára...",
+            "sk": "Presmerovanie na poskytovateľa služieb...",
+            "cs": "Přesměrování na poskytovatele služeb...",
+            "en": "Redirecting to service provider..."
+        },
+        "Czech Republic CCS": {
+            "en": "Redirecting to service provider...",
+            "cs": "Přesměrování na poskytovatele služeb..."
+        },
+        "Slovakia CCS": {
+            "en": "Redirecting to service provider...",
+            "sk": "Presmerovanie na poskytovateľa služieb..."
+        }
+    },
+    "required_field": {
+        "default_impl": {
+            "pl": "Pole wymagane",
+            "en": "Required field"
+        }
+    },
+    "retailer_login": {
+        "default_impl": {
+            "en": "RETAILER LOGIN",
+            "pl": "RETAILER LOGIN",
+            "hu": "RETAILER-LOGIN",
+            "fr": "IDENTIFIANT-DISTRIBUTEUR",
+            "nl": "RETAILER-LOGIN",
+            "de": "HÄNDLER -LOGIN",
+            "sk": "RETAILER LOGIN",
+            "cs": "RETAILER LOGIN"
+        }
+    },
+    "terms_of_use": {
+        "default_impl": {
+            "pl": "Zasady dopuszczalnego użytkowania",
+            "en": "Terms of use",
+            "cs": "PRAVIDLA SCHVÁLENÉHO POUŽITÍ",
+            "sk": "PRAVIDLÁ SCHVÁLENÉHO POUŽITIA",
+            "hu": "ELFOGADHATÓ HASZNÁLAT IRÁNYELVE"
+        }
+    },
+    "rules_website": {
+        "default_impl": {
+            "en": "RULES OF USING THE WEBSITE",
+            "fr": "CONDITIONS D'UTILISATION DU SITE WEB",
+            "hu": "WEBHELY HASZNÁLATÁNAK FELTÉTELEI",
+            "nl": "GEBRUIKERSVOORWAARDEN WEBSITE",
+            "pl": "ZASADY KORZYSTANIA Z WITRYNY INTERNETOWEJ",
+            "de": "WEBSITE-NUTZUNGSBEDINGUNGEN",
+            "sk": "PRAVIDLÁ POUŽÍVANIA INTERNETOVÝCH STRÁNOK",
+            "cs": "PRAVIDLA POUŽÍVÁNÍ INTERNETOVÝCH STRÁNEK"
+        }
+    },
+    "terms_and_conditions": {
+        "default_impl": {
+            "pl": "Warunkami",
+            "en": "Terms and conditions"
+        }
+    },
+    "sell_card": {
+        "default_impl": {
+            "en": "SHELL CARD",
+            "fr": "CARTE SHELL",
+            "nl": "SHELL CARD",
+            "de": "SHELL CARD",
+            "pl": "KARTA SHELL",
+            "hu": "SHELL CARD",
+            "sk": "SHELL KARTA",
+            "cs": "SHELL CARD"
+        }
+    },
+    "ev_charging_card": {
+        "default_impl": {
+            "en": "CHARGING CARD",
+            "fr": "CARTE DE RECHARGE",
+            "nl": "LAADKAART",
+            "de": "LADEKARTE"
+        },
+        "Netherlands": {
+            "en": "CHARGING CARD",
+            "nl": "LAADPAS"
+        }
+    },
+    "feedback_button_label": {
+        "default_impl": {
+            "en": "Feedback",
+            "hu": "Visszajelzés",
+            "fr": "Feedback",
+            "nl": "Feedback",
+            "de": "Feedback",
+            "pl": "Feedback",
+            "cs": "Zpětná vazba",
+            "sk": "Spätná väzba"
+        }
+    },
+    "feedback_modal_title": {
+        "default_impl": {
+            "en": "Your feedback",
+            "hu": "Az Ön visszajelzése",
+            "fr": "Votre feedback",
+            "nl": "Uw beoordeling",
+            "de": "Ihr Feedback",
+            "pl": "Twój feedback",
+            "cs": "Váše zpětná vazba",
+            "sk": "Vaša spätná väzba"
+        }
+    },
+    "feedback_modal_sub_title": {
+        "default_impl": {
+            "en": "Rate your experience with the form",
+            "hu": "Hogyan értékelné az űrlapot?",
+            "fr": "Que pensez-vous du formulaire en ligne?",
+            "nl": "Hoe beoordeelt u de ervaring van de aanvraagprocedure?",
+            "de": "Wie finden Sie das Online Formular?",
+            "pl": "Oceń nas, Twoja opinia jest dla nas ważna",
+            "cs": "Ohodnoťte prosím tento objednávkový proces.",
+            "sk": "Ohodnoťte prosím tento objednávkový proces."
+        }
+    },
+    "feedback_modal_comment_title": {
+        "default_impl": {
+            "en": "Let us know if you had any issues, or give us a compliment if you liked it. ",
+            "hu": "Mondja el, mi nyerte el a tetszését, illetve mivel nem volt megelégedve.",
+            "fr": "Donnez-nous votre avis",
+            "nl": "Laat ons weten wat u vindt",
+            "de": "Teilen Sie uns Ihre Meinung mit.",
+            "pl": "Zgłoś problem lub podziel się pozytywnym doświadczeniem",
+            "cs": "Dejte nám vědět, zda jste měli nějaké potíže, nebo jste byli spokojeni.",
+            "sk": "Dajte nám vedieť, či ste mali nejaké problémy, alebo ste boli spokojný."
+        }
+    },
+    "feedback_modal_comment_label": {
+        "default_impl": {
+            "en": "Tell us what you liked or disliked",
+            "hu": "Volt valami, ami tetszett? Vagy ami kevésbé?",
+            "fr": "Qu'est-ce qu'il vous a plu ou déplu?",
+            "nl": "Hoe kunnen wij de aanvraagprocedure verbeteren?",
+            "de": "Was hat Ihnen gefallen oder nicht gefallen",
+            "pl": "Powiedz nam, co Ci się podobało, a co moglibyśmy poprawić",
+            "cs": "Co se Vám líbilo a co naopak nelíbilo?",
+            "sk": "Čo sa Vám páčilo a čo naopak nepáčilo?"
+        },
+        "Netherlands": {
+            "en": "Tell us what you liked or disliked",
+            "nl": "Laat ons weten wat u vindt"
+        }
+    },
+    "feedback_modal_submit_label": {
+        "default_impl": {
+            "en": "Submit",
+            "hu": "Küldés",
+            "fr": "Envoyer",
+            "nl": "Verzenden",
+            "de": "Abschicken",
+            "pl": "Wyślij",
+            "cs": "Odeslat",
+            "sk": "Odoslať"
+        }
+    },
+    "feedback_modal_submit_validation_error": {
+        "default_impl": {
+            "en": "Please rate the form and tell us about your experience.",
+            "hu": "Értékelje az űrlapot és ossza meg tapasztalatát",
+            "fr": "Ecrivez-nous pour faire connaître votre avis",
+            "nl": "Beoordeel uw ervaring",
+            "de": "Schreiben Sie uns Ihre Meinung",
+            "pl": "Oceń ankietę i podziel się swoim doświadczeniem",
+            "cs": "Podělte se s námi o svou zkušenost a ohodnoťte prosím tento objednávkový formulář.",
+            "sk": "Podeľte sa s nami o svoju skúsenosť a ohodnoťte prosím tento objednávkový formulár."
+        }
+    },
+    "feedback_modal_submit_send_error": {
+        "default_impl": {
+            "en": "Something went wrong. Please try again.",
+            "hu": "Valami nem sikerült, próbálja meg újra.",
+            "fr": "Un problème est survenu. Recommencez plus tard s'il vous plaît.",
+            "nl": "Er is een fout opgetreden. Probeer het opnieuw.",
+            "de": "Es gab ein Problem. Bitte versuchen Sie es später nochmal.",
+            "pl": "Wystąpił problem. Spróbuj ponownie.",
+            "cs": "Něco se pokazilo. Zkuste to prosím ještě jednou.",
+            "sk": "Niečo sa pokazilo. Skúste to prosím ešte raz."
+        }
+    },
+    "feedback_modal_submit_success": {
+        "default_impl": {
+            "en": "Thank you for your feedback!",
+            "hu": "Köszönjük a visszajelzést!",
+            "fr": "Merci pour votre feedback!",
+            "nl": "Bedankt voor uw feedback!",
+            "de": "Danke für Ihr Feedback!",
+            "pl": "Dziękujemy za twoj feedback!",
+            "cs": "Děkujeme vám za vaši reakci!",
+            "sk": "Ďakujeme vám za vašu reakciu!"
+        }
+    },
+    "copyright_text":{
+        "default_impl": {
+            "en": "© 2021 CCS Czech Credit Card Company s.r.o., All rights reserved. Cookie policy",
+            "sk": "© 2021 CCS Czech Credit Card Company s.r.o., All rights reserved. Cookie policy"
+        },
+        "Czech Republic CCS": {
+            "en": "© 2021 CCS Česká společnost pro platební karty s.r.o., all rights reserved. <a target='_blank' href='https://www.ccs.cz/ochrana-udaju'>Privacy policy</a>",
+            "cs": "© 2021 CCS Česká společnost pro platební karty s.r.o., Všechna práva vyhrazena. <a target='_blank' href='https://www.ccs.cz/ochrana-udaju'>Zásady používání cookies.</a>"
+        },
+        "Slovakia CCS": {
+            "en": "© 2021 CCS Slovenská spoločnosť pre platobné karty s.r.o., all rights reserved. <a target='_blank' href='https://www.ccs.sk/ochrana-udaju'>Privacy policy</a>",
+            "sk": "© 2021 CCS Slovenská spoločnosť pre platobné karty s.r.o., Všetky práva vyhradené. <a target='_blank' href='https://www.ccs.sk/ochrana-udaju'>Zásady používania cookies.</a>"
+        }
+    },
+    "save_form_for_later":{
+        "default_impl": {
+            "en": "Save the form for later",
+            "cs": "Uložit formulář na později",
+            "sk": "Uložiť formulár na neskôr"
+        }
+    },
+    "enterThePortal_pas":{
+        "default_impl": {
+            "en": "Enter the portal",
+            "cs": "Vstoupit do portálu",
+            "sk": "Vstoupit do portálu"
+        }
+    },
+    "yes_common":{
+        "default_impl": {
+            "en": "Yes",
+            "cs": "Ano",
+            "sk": "Áno"
+        }
+    },
+    "no_common":{
+        "default_impl": {
+            "en": "No",
+            "cs": "Ne",
+            "sk": "Nie"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kreditklasse__c</fullName>
+    <externalId>false</externalId>
+    <label>Kreditklasse</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Klasse 1 - 3</fullName>
+                <default>false</default>
+                <label>Klasse 1 - 3</label>
+            </value>
+            <value>
+                <fullName>Klasse 4</fullName>
+                <default>false</default>
+                <label>Klasse 4</label>
+            </value>
+            <value>
+                <fullName>Klasse 5</fullName>
+                <default>false</default>
+                <label>Klasse 5</label>
+            </value>
+            <value>
+                <fullName>Klasse 6</fullName>
+                <default>false</default>
+                <label>Klasse 6</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

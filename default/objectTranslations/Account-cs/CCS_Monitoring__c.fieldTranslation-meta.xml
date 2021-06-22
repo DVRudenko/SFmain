@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Monitoring</label>
+    <name>CCS_Monitoring__c</name>
+    <picklistValues>
+        <masterLabel>ALIn</masterLabel>
+        <translation><!-- ALIn --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Altas</masterLabel>
+        <translation><!-- Altas --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Autoawacs</masterLabel>
+        <translation><!-- Autoawacs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Autopark</masterLabel>
+        <translation><!-- Autopark --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Carnet</masterLabel>
+        <translation><!-- CCS Carnet --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CDS</masterLabel>
+        <translation><!-- CDS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Commander</masterLabel>
+        <translation><!-- Commander --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Comtes</masterLabel>
+        <translation><!-- Comtes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ECS System</masterLabel>
+        <translation><!-- ECS System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Echo Tract</masterLabel>
+        <translation><!-- Echo Tract --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Echoton</masterLabel>
+        <translation><!-- Echoton --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Evotech</masterLabel>
+        <translation><!-- Evotech --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>F&amp;B COMP Olomouc</masterLabel>
+        <translation><!-- F&amp;B COMP Olomouc --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fons</masterLabel>
+        <translation><!-- Fons --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GPS DE</masterLabel>
+        <translation><!-- GPS DE --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>GX Solutions (Axitech)</masterLabel>
+        <translation><!-- GX Solutions (Axitech) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>IZS</masterLabel>
+        <translation><!-- IZS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Infocar</masterLabel>
+        <translation><!-- Infocar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>K-Elektronik</masterLabel>
+        <translation><!-- K-Elektronik --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Kapsch</masterLabel>
+        <translation><!-- Kapsch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Level</masterLabel>
+        <translation><!-- Level --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Milk Computers</masterLabel>
+        <translation><!-- Milk Computers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>My Systems</masterLabel>
+        <translation><!-- My Systems --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>O2 Car Control</masterLabel>
+        <translation><!-- O2 Car Control --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oni system</masterLabel>
+        <translation><!-- Oni system --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ostatní</masterLabel>
+        <translation><!-- Ostatní --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parot</masterLabel>
+        <translation><!-- Parot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Patriot</masterLabel>
+        <translation><!-- Patriot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Princip</masterLabel>
+        <translation><!-- Princip --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Protank</masterLabel>
+        <translation><!-- Protank --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>R-Altra</masterLabel>
+        <translation><!-- R-Altra --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RADOM</masterLabel>
+        <translation><!-- RADOM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>RC System</masterLabel>
+        <translation><!-- RC System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Radium</masterLabel>
+        <translation><!-- Radium --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Secar</masterLabel>
+        <translation><!-- Secar --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sherlog</masterLabel>
+        <translation><!-- Sherlog --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sixt</masterLabel>
+        <translation><!-- Sixt --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>T-Cars</masterLabel>
+        <translation><!-- T-Cars --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TO2</masterLabel>
+        <translation><!-- TO2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TomTom</masterLabel>
+        <translation><!-- TomTom --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Torola</masterLabel>
+        <translation><!-- Torola --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tranis</masterLabel>
+        <translation><!-- Tranis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vodafone</masterLabel>
+        <translation><!-- Vodafone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Volvo</masterLabel>
+        <translation><!-- Volvo --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>WebEye</masterLabel>
+        <translation><!-- WebEye --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>leasing</masterLabel>
+        <translation><!-- leasing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>vlastní</masterLabel>
+        <translation><!-- vlastní --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

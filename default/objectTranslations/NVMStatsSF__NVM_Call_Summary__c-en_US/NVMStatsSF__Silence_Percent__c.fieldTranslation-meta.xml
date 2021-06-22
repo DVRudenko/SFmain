@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Percentage of recording where there was silence --></help>
+    <label><!-- Silence Percent --></label>
+    <name>NVMStatsSF__Silence_Percent__c</name>
+</CustomFieldTranslation>

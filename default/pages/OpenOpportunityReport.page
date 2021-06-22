@@ -1,0 +1,54 @@
+<apex:page controller="OpenOpportunityReport" action="{!init}">
+    <apex:form >
+        <style>
+            .homeTab .div1 .tertiaryPalette {
+                background: #37BC9B;
+            }
+            .homeTab .div2 .tertiaryPalette {
+                background: #BA3C3D;
+            }
+        </style>
+        <apex:pageMessages />     
+        
+        <h1 style="margin: 15px 0; font-size: 17px; display: block;">Open Opportunities Report</h1>
+        
+        <apex:pageBlock title="Report by: {! nameUser} ({! numberOfOpp})" id="block">
+                    <apex:outputPanel id="div1" styleClass="div1">
+                        <apex:pageBlockSection title="Open Opportunities with overdue tasks ({!numberOfOppWithTasks})" collapsible="true" columns="1" id="section1">
+                            <apex:pageBlockTable value="{! finalOppWithTasksForUserList }" var="listOppWithTasks" rows="1000">
+                                <apex:column headerValue="Name">
+                                <apex:outputLink value="/{!listOppWithTasks.id}" target="_blank">{!listOppWithTasks.Name}</apex:outputLink>
+                                </apex:column>
+                                <apex:column value="{!listOppWithTasks.StageName}"/>
+                                <apex:column value="{!listOppWithTasks.Last_Owner_Change_Date__c}"/>
+                                <apex:column value="{!listOppWithTasks.CloseDate}"/>
+                                <apex:column value="{!listOppWithTasks.OwnerId}"/>
+                                <apex:column value="{!listOppWithTasks.Opportunity_Nr__c}"/>
+                                <apex:column value="{!listOppWithTasks.Land_Opp__c}"/>
+                                <apex:column value="{!listOppWithTasks.id}"/>
+                            </apex:pageBlockTable>    
+                        </apex:pageBlockSection>
+                    </apex:outputPanel>
+                    <apex:outputPanel id="div2" styleClass="div2">
+                        <apex:pageBlockSection title="Open Opportunities without tasks ({!numberOfOppWithoutTasks})" collapsible="true" columns="1" id="section2">
+                            <apex:pageBlockTable value="{! finalOppWithoutTasksForUserList }" var="listOppWithoutTasks" rows="1000">
+                                <apex:column headerValue="Name">
+                                <apex:outputLink value="/{!listOppWithoutTasks.id}" target="_blank">{!listOppWithoutTasks.Name}</apex:outputLink>
+                                </apex:column>
+                                <apex:column value="{!listOppWithoutTasks.StageName}"/>
+                                <apex:column value="{!listOppWithoutTasks.Last_Owner_Change_Date__c}"/>
+                                <apex:column value="{!listOppWithoutTasks.CloseDate}"/>
+                                <apex:column value="{!listOppWithoutTasks.OwnerId}"/>
+                                <apex:column value="{!listOppWithoutTasks.Opportunity_Nr__c}"/>
+                                <apex:column value="{!listOppWithoutTasks.Land_Opp__c}"/>
+                                <apex:column value="{!listOppWithoutTasks.id}"/>
+                            </apex:pageBlockTable>     
+                        </apex:pageBlockSection>
+                    </apex:outputPanel>        
+        </apex:pageBlock>
+        <script>
+            twistSection(document.getElementById('{!$Component.block.section1}').getElementsByTagName('img')[0]);
+            twistSection(document.getElementById('{!$Component.block.section2}').getElementsByTagName('img')[0]);
+        </script>
+    </apex:form>
+</apex:page>

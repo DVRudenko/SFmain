@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Payment Type --></label>
+    <name>Payment_Type__c</name>
+    <picklistValues>
+        <masterLabel>Bank Transfer</masterLabel>
+        <translation><!-- Bank Transfer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cash on delivery</masterLabel>
+        <translation><!-- Cash on delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Direct Debit</masterLabel>
+        <translation><!-- Direct Debit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Proforma invoice</masterLabel>
+        <translation><!-- Proforma invoice --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

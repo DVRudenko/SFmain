@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Approved for development</masterLabel>
+        <translation><!-- Approved for development --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>BACKLOG</masterLabel>
+        <translation><!-- BACKLOG --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CANCELLED</masterLabel>
+        <translation><!-- CANCELLED --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Closed</masterLabel>
+        <translation>Geschlossen</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Customer updated</masterLabel>
+        <translation><!-- Customer updated --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Customer waiting</masterLabel>
+        <translation><!-- Customer waiting --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>DONE</masterLabel>
+        <translation><!-- DONE --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Escalated</masterLabel>
+        <translation>Eskaliert</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>IN PROGRESS</masterLabel>
+        <translation><!-- IN PROGRESS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>In development</masterLabel>
+        <translation><!-- In development --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Internally updated</masterLabel>
+        <translation><!-- Internally updated --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Internally waiting</masterLabel>
+        <translation><!-- Internally waiting --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>New</masterLabel>
+        <translation>Neu</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>On Hold</masterLabel>
+        <translation>Pausiert</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Ready on sandbox</masterLabel>
+        <translation><!-- Ready on sandbox --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Resolved</masterLabel>
+        <translation><!-- Resolved --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>TO DO</masterLabel>
+        <translation><!-- TO DO --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>WAITING ON</masterLabel>
+        <translation><!-- WAITING ON --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Waiting for information</masterLabel>
+        <translation><!-- Waiting for information --></translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

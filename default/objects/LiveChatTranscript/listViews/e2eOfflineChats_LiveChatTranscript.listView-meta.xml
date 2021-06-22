@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>e2eOfflineChats_LiveChatTranscript</fullName>
+    <columns>Name</columns>
+    <columns>LiveChatVisitor</columns>
+    <columns>Result__c</columns>
+    <columns>StartTime</columns>
+    <columns>EndTime</columns>
+    <columns>Status</columns>
+    <columns>Opportunity__c</columns>
+    <columns>E2E_Step__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Owner</field>
+        <operation>equals</operation>
+        <value>e2eOfflineChatDE</value>
+    </filters>
+    <filters>
+        <field>Country__c</field>
+        <operation>equals</operation>
+        <value>Germany</value>
+    </filters>
+    <label>e2eOfflineChatDE</label>
+    <language>en_US</language>
+    <sharedTo>
+        <role>Salesteam_Inbound</role>
+    </sharedTo>
+</ListView>

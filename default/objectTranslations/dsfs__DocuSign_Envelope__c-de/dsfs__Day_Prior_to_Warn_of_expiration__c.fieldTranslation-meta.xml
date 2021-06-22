@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Geben Sie an, wie viele Tage vor Ablauf Sie eine E-Mail senden möchten, um Benutzer auf ein bevorstehendes Ablaufdatum zur Fertigstellung hinzuweisen. Diese E-Mail wird nur an Empfänger gesendet, die ihre Transaktion noch nicht abgeschlossen haben.</help>
+    <label><!-- Warn of expiration in N day(s) prior --></label>
+    <name>dsfs__Day_Prior_to_Warn_of_expiration__c</name>
+</CustomFieldTranslation>

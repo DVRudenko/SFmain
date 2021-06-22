@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>Chatter Answers</masterLabel>
+        <translation><!-- Chatter Answers --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Email</masterLabel>
+        <translation>E-Mail</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Phone</masterLabel>
+        <translation>Telefon</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Post</masterLabel>
+        <translation><!-- Post --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Report</masterLabel>
+        <translation><!-- Report --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>Web</masterLabel>
+        <translation>Internet</translation>
+    </valueTranslation>
+</StandardValueSetTranslation>

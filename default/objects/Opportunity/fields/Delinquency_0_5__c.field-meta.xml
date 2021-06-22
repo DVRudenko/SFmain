@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delinquency_0_5__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(OR(ISPICKVAL(CategoryContract__c,"МО"), ISPICKVAL(CategoryContract__c,"У")),
+ISPICKVAL( StageName ,"Check Credit History"),Duration_work_Opp__c &gt;= 7),1,
+IF(AND(ISPICKVAL(CategoryContract__c,"О"),
+ISPICKVAL( StageName ,"Check Credit History"),Duration_work_Opp__c &gt;= 12),1,
+0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Delinquency 0 5</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

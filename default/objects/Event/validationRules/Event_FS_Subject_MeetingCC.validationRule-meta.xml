@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_FS_Subject_MeetingCC</fullName>
+    <active>true</active>
+    <description>only admin_sf and Role FieldTerritory_Call Center can create or change Subject &#39;Встреча КЦ&#39;</description>
+    <errorConditionFormula>AND(
+OR(
+AND( ISNEW() , Subject = &#39;Встреча КЦ&#39;),
+AND(ISCHANGED(Subject) ,PRIORVALUE(Subject) = &quot;Встреча КЦ&quot;)),
+$User.Alias != &#39;tkim&#39;,
+$User.Alias != &#39;nskac&#39;,
+$User.Alias != &#39;agris&#39;,
+$UserRole.DeveloperName != &#39;PPR_FieldTerritory_Call_Center&#39;,
+$Profile.Name != &#39;Russian Call Center&#39; )</errorConditionFormula>
+    <errorDisplayField>Subject</errorDisplayField>
+    <errorMessage>Subject &quot;Встреча КЦ&quot; not available for edit</errorMessage>
+</ValidationRule>

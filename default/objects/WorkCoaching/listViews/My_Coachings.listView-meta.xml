@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Coachings</fullName>
+    <columns>Created_Datetime__c</columns>
+    <columns>CreatedBy</columns>
+    <columns>Name</columns>
+    <columns>Coach</columns>
+    <columns>Coached</columns>
+    <columns>LastModifiedBy</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Coachings</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>CCS_Records</group>
+        <group>Euroshell_Group</group>
+        <group>Teamleiters</group>
+        <group>Teamleiters_2</group>
+    </sharedTo>
+</ListView>

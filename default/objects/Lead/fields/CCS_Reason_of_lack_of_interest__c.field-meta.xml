@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCS_Reason_of_lack_of_interest__c</fullName>
+    <externalId>false</externalId>
+    <label>CCS Reason of lack of interest</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CCS_Interest__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Konkurence</fullName>
+                <default>false</default>
+                <label>Konkurence</label>
+            </value>
+            <value>
+                <fullName>Má asistenci, pojištění a další benefity jinde</fullName>
+                <default>false</default>
+                <label>Má asistenci, pojištění a další benefity jinde</label>
+            </value>
+            <value>
+                <fullName>Nízký limit</fullName>
+                <default>false</default>
+                <label>Nízký limit</label>
+            </value>
+            <value>
+                <fullName>Nelíbí se mu poplatek</fullName>
+                <default>false</default>
+                <label>Nelíbí se mu poplatek</label>
+            </value>
+            <value>
+                <fullName>Nepotřebuje, nevyužije</fullName>
+                <default>false</default>
+                <label>Nepotřebuje, nevyužije</label>
+            </value>
+            <value>
+                <fullName>Nemají vozový park</fullName>
+                <default>false</default>
+                <label>Nemají vozový park</label>
+            </value>
+            <value>
+                <fullName>Je klient CCS</fullName>
+                <default>false</default>
+                <label>Je klient CCS</label>
+            </value>
+            <value>
+                <fullName>Špatná zkušenost s CCS</fullName>
+                <default>false</default>
+                <label>Špatná zkušenost s CCS</label>
+            </value>
+            <value>
+                <fullName>Nechce sdělit důvod</fullName>
+                <default>false</default>
+                <label>Nechce sdělit důvod</label>
+            </value>
+            <value>
+                <fullName>Ukončená činnost</fullName>
+                <default>false</default>
+                <label>Ukončená činnost</label>
+            </value>
+            <value>
+                <fullName>Platba paušálem</fullName>
+                <default>false</default>
+                <label>Platba paušálem</label>
+            </value>
+            <value>
+                <fullName>Jiný důvod (v poznámce)</fullName>
+                <default>false</default>
+                <label>Jiný důvod (v poznámce)</label>
+            </value>
+            <value>
+                <fullName>Odeslán email – ozve se sám</fullName>
+                <default>false</default>
+                <label>Odeslán email – ozve se sám</label>
+            </value>
+            <value>
+                <fullName>Čerpání v zahraničí</fullName>
+                <default>false</default>
+                <label>Čerpání v zahraničí</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Konkurence</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Má asistenci, pojištění a další benefity jinde</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Nízký limit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Nelíbí se mu poplatek</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Nepotřebuje, nevyužije</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Nemají vozový park</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Je klient CCS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Špatná zkušenost s CCS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Nechce sdělit důvod</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Ukončená činnost</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Platba paušálem</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Jiný důvod (v poznámce)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Odeslán email – ozve se sám</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ne</controllingFieldValue>
+            <valueName>Čerpání v zahraničí</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,26 @@
+<apex:page>
+    <head>
+        <apex:includeLightning />
+        <style>
+            .bodyDiv{
+                background: #eeeeee;
+            }
+            #utm-generator:empty::after{
+                content: 'Loading...';
+                display: block;
+                text-align: center;
+                padding: 4rem 0;
+                font-size: 24px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="utm-generator"></div>
+        <script>
+            $Lightning.use('c:UtmUrlGeneratorApp', function () {
+                $Lightning.createComponent('c:utmUrlGenerator', null, "utm-generator");
+            });
+        </script>
+    </body>
+</apex:page>

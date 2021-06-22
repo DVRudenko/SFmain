@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <submitter>Submit_for_Approval</submitter>
+        <type>group</type>
+    </allowedSubmitters>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+        <field>Account</field>
+        <field>Herkunft_Land__c</field>
+        <field>Zahlungsziel__c</field>
+        <field>Kraftstoffverbrauch_Liter_Monat__c</field>
+        <field>Exposure__c</field>
+        <field>Anzahl_der_Karten__c</field>
+        <field>Zahlungsart__c</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>credit@fleetcor.de</name>
+                <type>user</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Schritt 1</label>
+        <name>Schritt_1</name>
+    </approvalStep>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <formula>AND(
+NOT(ISNULL(Anzahl_der_Karten__c)),
+RecordType.Name = &#39;Lotos&#39;,
+Account.BillingCountry = &#39;Poland&#39;,
+NOT(ISPICKVAL(Language_preference__c, &#39;&#39;)),
+NOT(ISPICKVAL(Account.Beschaeftigte__c, &#39;&#39;)),
+OR(NOT(ISNULL(Total_consumption_per_card__c)),
+NOT(ISNULL(Total_cards_consumption_monthly__c))),
+NOT(ISPICKVAL(Derzeitige_Zahlungsmethode__c, &#39;&#39;)),
+IF(
+OR(ISPICKVAL(Derzeitige_Zahlungsmethode__c, &#39;Bankkarte&#39;), ISPICKVAL(Derzeitige_Zahlungsmethode__c, &#39;Kreditkarte&#39;)),
+AND(NOT(ISPICKVAL(Zahlungssystem__c, &#39;&#39;)), NOT(ISPICKVAL(Bank__c, &#39;&#39;))),
+true
+),
+IF(
+ISPICKVAL(Derzeitige_Zahlungsmethode__c, &#39;Tankkarte&#39;),
+NOT(ISPICKVAL(Tankkarte_Emittent__c, &#39;&#39;)),
+true
+),
+NOT(ISPICKVAL(Zahlungsart__c, &#39;&#39;)),
+IF(
+ISPICKVAL(Zahlungsart__c, &#39;Lastschrift&#39;),
+AND(IBAN__c &lt;&gt; &#39;&#39;, SWIFT_BIC__c &lt;&gt; &#39;&#39;),
+true
+)
+)</formula>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Call_Cards_received</name>
+            <type>Task</type>
+        </action>
+        <action>
+            <name>CreditCheck_finished</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Opp_gewonnen_nach_CreditCheck</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Schlusstermin</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Credit_Stage_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>CreditCheck_finished</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>Schlusstermin</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>CreditCheck_PL_Lotos</label>
+    <recordEditability>AdminOrCurrentApprover</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

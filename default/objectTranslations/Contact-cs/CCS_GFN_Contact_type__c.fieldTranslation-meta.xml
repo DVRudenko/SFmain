@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>GFN typ kontaktu</label>
+    <name>CCS_GFN_Contact_type__c</name>
+    <picklistValues>
+        <masterLabel>Additional Contact</masterLabel>
+        <translation><!-- Additional Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Authorization</masterLabel>
+        <translation><!-- Authorization --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CCS Plus</masterLabel>
+        <translation><!-- CCS Plus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Card Delivery</masterLabel>
+        <translation><!-- Card Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Debt Contact</masterLabel>
+        <translation><!-- Debt Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Invoice Recipient</masterLabel>
+        <translation><!-- Invoice Recipient --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jen v SF</masterLabel>
+        <translation><!-- Jen v SF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Office</masterLabel>
+        <translation><!-- Office --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pin Delivery</masterLabel>
+        <translation><!-- Pin Delivery --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Primary</masterLabel>
+        <translation><!-- Primary --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Responsible person 2</masterLabel>
+        <translation><!-- Responsible person 2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iMonitor contact</masterLabel>
+        <translation><!-- iMonitor contact --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

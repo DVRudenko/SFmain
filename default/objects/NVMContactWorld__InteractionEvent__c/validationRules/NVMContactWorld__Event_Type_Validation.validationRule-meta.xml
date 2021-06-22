@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NVMContactWorld__Event_Type_Validation</fullName>
+    <active>true</active>
+    <description>Event Type must be one of 3 valid Types</description>
+    <errorConditionFormula>!ISPICKVAL(NVMContactWorld__Type__c, &#39;Deliver&#39;) &amp;&amp; !ISPICKVAL(NVMContactWorld__Type__c, &#39;Transfer&#39;) &amp;&amp; !ISPICKVAL(NVMContactWorld__Type__c, &#39;Consult&#39;)</errorConditionFormula>
+    <errorMessage>Event type must be either &#39;Deliver&#39;, &#39;Transfer&#39; or &#39;Consult&#39;</errorMessage>
+</ValidationRule>

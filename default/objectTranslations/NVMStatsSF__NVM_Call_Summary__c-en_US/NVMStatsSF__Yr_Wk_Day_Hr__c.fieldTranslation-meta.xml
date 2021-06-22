@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Text-sortable format E.g. YYYY/08/6-Saturday/00 Use this field to group and sort Calls in reports --></help>
+    <label><!-- Yr/Wk/Day/Hr --></label>
+    <name>NVMStatsSF__Yr_Wk_Day_Hr__c</name>
+</CustomFieldTranslation>

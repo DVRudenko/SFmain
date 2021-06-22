@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PPR_in_work_day_inb__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(
+  MOD(   DATEVALUE( CreatedDate ) - DATE( 1900, 1, 8 ), 7 ),
+  0, "Monday",
+  1, "Tuesday",
+  2, "Wednesday",
+  3, "Thursday",
+  4, "Friday",
+  5, "0",
+  "0"
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>PPR in work day inb</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

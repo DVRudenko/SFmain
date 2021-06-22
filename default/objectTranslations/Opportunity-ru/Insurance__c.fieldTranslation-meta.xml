@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Страхование</label>
+    <name>Insurance__c</name>
+    <picklistValues>
+        <masterLabel>A request with data was received</masterLabel>
+        <translation>Прислал запрос с данными</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Agree</masterLabel>
+        <translation>Согласен на расчет</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Agree, but didn&#39;t send the documents</masterLabel>
+        <translation>Согласен, но документы не прислал</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Didn't offer</masterLabel>
+        <translation>Не предлагал</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Refusal</masterLabel>
+        <translation>Отказ (укажите причину отказа)</translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The current policy expires in more than 2 months</masterLabel>
+        <translation>Текущий полис заканчивается больше, чем через 2 месяца</translation>
+    </picklistValues>
+</CustomFieldTranslation>

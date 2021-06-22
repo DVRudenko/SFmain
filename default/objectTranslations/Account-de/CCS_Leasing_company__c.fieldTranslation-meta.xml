@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- CCS Leasing company --></label>
+    <name>CCS_Leasing_company__c</name>
+    <picklistValues>
+        <masterLabel>ALD</masterLabel>
+        <translation><!-- ALD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Arval</masterLabel>
+        <translation><!-- Arval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Businesslease</masterLabel>
+        <translation><!-- Businesslease --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jiný</masterLabel>
+        <translation><!-- Jiný --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leaseplan</masterLabel>
+        <translation><!-- Leaseplan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SpeedLease</masterLabel>
+        <translation><!-- SpeedLease --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>sAutoleasing</masterLabel>
+        <translation><!-- sAutoleasing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ČSOB Leasing</masterLabel>
+        <translation><!-- ČSOB Leasing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ŠkoFin</masterLabel>
+        <translation><!-- ŠkoFin --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

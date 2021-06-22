@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The date and time that the reward for this iteration of the behaviour was started --></help>
+    <label><!-- Started --></label>
+    <name>success__Started_Date_Time__c</name>
+</CustomFieldTranslation>

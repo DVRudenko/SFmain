@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leads_to_process_pl</fullName>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>Quali_Status__c</columns>
+    <columns>LEAD.RECORDTYPE</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>FULL_NAME</columns>
+    <columns>LEAD.LAST_NAME</columns>
+    <columns>LEAD.PHONE</columns>
+    <columns>Monatlicher_Kraftstoffverbrauch_in_Liter__c</columns>
+    <columns>CCS_number_of_cards__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LEAD.COUNTRY_CODE</field>
+        <operation>equals</operation>
+        <value>PL</value>
+    </filters>
+    <filters>
+        <field>LEAD.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Lead.AllStar,Lead.Endkunde</value>
+    </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>LEAD.LEAD_SOURCE</field>
+        <operation>notEqual</operation>
+        <value>Biznode – pilot 5000</value>
+    </filters>
+    <filters>
+        <field>Sec_Channel__c</field>
+        <operation>equals</operation>
+        <value>JITB,Outbound,Inbound,Partner</value>
+    </filters>
+    <label>Leads to process PL</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>Salesteam_Inbound</group>
+        <group>Teamleiters_2</group>
+    </sharedTo>
+</ListView>

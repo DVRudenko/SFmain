@@ -1,0 +1,26 @@
+<apex:page standardController="Lead" extensions="LeadClickToCallSectionController">
+    <apex:form id="formId">
+        <apex:pageMessages />
+        <apex:actionFunction reRender="leadfields" action="{! makeacall }" name="makefirstcall"/>
+        <apex:pageBlock mode="maindetail" id="mainblock">
+            <apex:pageBlockSection collapsible="false" id="leadfields">
+                <apex:repeat value="{! fieldsValuesMap }" var="key">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="{! key }"/>
+                        <apex:outputText escape="false" value="{! fieldsValuesMap[key] }"/>
+                    </apex:pageBlockSectionItem>
+                </apex:repeat>
+                <apex:outputField value="{! lead.First_Call__c }"/>
+                <apex:outputField value="{! lead.Using_Phone__c }"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection collapsible="false" id="dialoga" title="Dialoga" rendered="{! displayDialogaSection }">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Customer's Phone"/>
+                    <apex:commandLink value="{! lead.Phone }" action="{! doDialogaCall }" reRender="formId"/>
+                </apex:pageBlockSectionItem>
+                <apex:outputText value="{! userPhone }" label="Agent's Phone" id="userPhoneId"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

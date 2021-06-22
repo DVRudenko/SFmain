@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PL_LOTOS_retailers</fullName>
+    <columns>OBN__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Accountname_Zusatz__c</columns>
+    <columns>Email_retailer__c</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>Partnertyp__c</columns>
+    <columns>Retailer_Site_Manager__c</columns>
+    <columns>SM_mobile__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Partnertyp__c</field>
+        <operation>equals</operation>
+        <value>Lotos partner</value>
+    </filters>
+    <label>PL - LOTOS retailers</label>
+    <language>en_US</language>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Role_Up</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

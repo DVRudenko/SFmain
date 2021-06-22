@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help>Modifier cet objet d&#39;e-mail par défaut pour qu&#39;il apparaisse dans le champ d&#39;objet de la notification à signer par les destinataires DocuSign.</help>
+    <label><!-- EmailSubject_ja --></label>
+    <name>dsfs__EmailSubject_ja__c</name>
+</CustomFieldTranslation>

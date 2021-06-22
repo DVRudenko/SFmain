@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- The region --></label>
+    <name>The_region__c</name>
+    <picklistValues>
+        <masterLabel>Абхазия</masterLabel>
+        <translation><!-- Абхазия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Агинский Бурятский автономный округ</masterLabel>
+        <translation><!-- Агинский Бурятский автономный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Азербайджан</masterLabel>
+        <translation><!-- Азербайджан --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Алтайский край</masterLabel>
+        <translation><!-- Алтайский край --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Амурская область</masterLabel>
+        <translation><!-- Амурская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Архангельская область</masterLabel>
+        <translation><!-- Архангельская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Астраханская область</masterLabel>
+        <translation><!-- Астраханская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Белгородская область</masterLabel>
+        <translation><!-- Белгородская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Белоруссия</masterLabel>
+        <translation><!-- Белоруссия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Брянская область</masterLabel>
+        <translation><!-- Брянская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Владимирская область</masterLabel>
+        <translation><!-- Владимирская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Волгоградская область</masterLabel>
+        <translation><!-- Волгоградская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Вологодская область</masterLabel>
+        <translation><!-- Вологодская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Воронежская область</masterLabel>
+        <translation><!-- Воронежская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Грузия</masterLabel>
+        <translation><!-- Грузия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Дальневосточный федеральный округ</masterLabel>
+        <translation><!-- Дальневосточный федеральный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Еврейская автономная область</masterLabel>
+        <translation><!-- Еврейская автономная область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Забайкальский край</masterLabel>
+        <translation><!-- Забайкальский край --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ивановская область</masterLabel>
+        <translation><!-- Ивановская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Иркутская область</masterLabel>
+        <translation><!-- Иркутская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Кабардино-Балкарская Республика</masterLabel>
+        <translation><!-- Кабардино-Балкарская Республика --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Казахстан</masterLabel>
+        <translation><!-- Казахстан --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Калининградская область</masterLabel>
+        <translation><!-- Калининградская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Калужская область</masterLabel>
+        <translation><!-- Калужская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Камчатская область</masterLabel>
+        <translation><!-- Камчатская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Камчатский край</masterLabel>
+        <translation><!-- Камчатский край --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Кемеровская область</masterLabel>
+        <translation><!-- Кемеровская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Кировская область</masterLabel>
+        <translation><!-- Кировская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Китай</masterLabel>
+        <translation><!-- Китай --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Коми-Пермяцкий автономный округ</masterLabel>
+        <translation><!-- Коми-Пермяцкий автономный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Корякский автономный округ</masterLabel>
+        <translation><!-- Корякский автономный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Костромская область</masterLabel>
+        <translation><!-- Костромская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Краснодарский край</masterLabel>
+        <translation><!-- Краснодарский край --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Красноярский край</masterLabel>
+        <translation><!-- Красноярский край --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Крымский федеральный округ</masterLabel>
+        <translation><!-- Крымский федеральный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Курганская область</masterLabel>
+        <translation><!-- Курганская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Курская область</masterLabel>
+        <translation><!-- Курская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Латвия</masterLabel>
+        <translation><!-- Латвия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ленинградская область</masterLabel>
+        <translation><!-- Ленинградская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Липецкая область</masterLabel>
+        <translation><!-- Липецкая область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Литва</masterLabel>
+        <translation><!-- Литва --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Магаданская область</masterLabel>
+        <translation><!-- Магаданская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Монголия</masterLabel>
+        <translation><!-- Монголия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Московская область</masterLabel>
+        <translation><!-- Московская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Мурманская область</masterLabel>
+        <translation><!-- Мурманская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ненецкий автономный округ</masterLabel>
+        <translation><!-- Ненецкий автономный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Нижегородская область</masterLabel>
+        <translation><!-- Нижегородская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Новгородская область</masterLabel>
+        <translation><!-- Новгородская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Новосибирская область</masterLabel>
+        <translation><!-- Новосибирская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Норвегия</masterLabel>
+        <translation><!-- Норвегия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Омская область</masterLabel>
+        <translation><!-- Омская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Оренбургская область</masterLabel>
+        <translation><!-- Оренбургская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Орловская область</masterLabel>
+        <translation><!-- Орловская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Пензенская область</masterLabel>
+        <translation><!-- Пензенская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Пермская область</masterLabel>
+        <translation><!-- Пермская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Пермский край</masterLabel>
+        <translation><!-- Пермский край --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Польша</masterLabel>
+        <translation><!-- Польша --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Приволжский федеральный округ</masterLabel>
+        <translation><!-- Приволжский федеральный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Приморский край</masterLabel>
+        <translation><!-- Приморский край --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Псковская область</masterLabel>
+        <translation><!-- Псковская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Адыгея</masterLabel>
+        <translation><!-- Республика Адыгея --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Алтай</masterLabel>
+        <translation><!-- Республика Алтай --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Башкортостан</masterLabel>
+        <translation><!-- Республика Башкортостан --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Бурятия</masterLabel>
+        <translation><!-- Республика Бурятия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Дагестан</masterLabel>
+        <translation><!-- Республика Дагестан --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Ингушетия</masterLabel>
+        <translation><!-- Республика Ингушетия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Калмыкия</masterLabel>
+        <translation><!-- Республика Калмыкия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Карачаево-Черкесия</masterLabel>
+        <translation><!-- Республика Карачаево-Черкесия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Карелия</masterLabel>
+        <translation><!-- Республика Карелия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Коми</masterLabel>
+        <translation><!-- Республика Коми --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Крым</masterLabel>
+        <translation><!-- Республика Крым --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Марий Эл</masterLabel>
+        <translation><!-- Республика Марий Эл --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Мордовия</masterLabel>
+        <translation><!-- Республика Мордовия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Саха (Якутия)</masterLabel>
+        <translation><!-- Республика Саха (Якутия) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Северная Осетия-Алания</masterLabel>
+        <translation><!-- Республика Северная Осетия-Алания --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Татарстан</masterLabel>
+        <translation><!-- Республика Татарстан --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Тыва</masterLabel>
+        <translation><!-- Республика Тыва --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Республика Хакасия</masterLabel>
+        <translation><!-- Республика Хакасия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Россия</masterLabel>
+        <translation><!-- Россия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ростовская область</masterLabel>
+        <translation><!-- Ростовская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Рязанская область</masterLabel>
+        <translation><!-- Рязанская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Самарская область</masterLabel>
+        <translation><!-- Самарская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Саратовская область</masterLabel>
+        <translation><!-- Саратовская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Сахалинская область</masterLabel>
+        <translation><!-- Сахалинская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Свердловская область</masterLabel>
+        <translation><!-- Свердловская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Северо-Западный федеральный округ</masterLabel>
+        <translation><!-- Северо-Западный федеральный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Северо-Кавказский федеральный округ</masterLabel>
+        <translation><!-- Северо-Кавказский федеральный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Сибирский федеральный округ</masterLabel>
+        <translation><!-- Сибирский федеральный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Смоленская область</masterLabel>
+        <translation><!-- Смоленская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ставропольский край</masterLabel>
+        <translation><!-- Ставропольский край --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Таймырский автономный округ</masterLabel>
+        <translation><!-- Таймырский автономный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Тамбовская область</masterLabel>
+        <translation><!-- Тамбовская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Тверская область</masterLabel>
+        <translation><!-- Тверская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Томская область</masterLabel>
+        <translation><!-- Томская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Тульская область</masterLabel>
+        <translation><!-- Тульская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Тюменская область</masterLabel>
+        <translation><!-- Тюменская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Удмуртская Республика</masterLabel>
+        <translation><!-- Удмуртская Республика --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Украина</masterLabel>
+        <translation><!-- Украина --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ульяновская область</masterLabel>
+        <translation><!-- Ульяновская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Уральский федеральный округ</masterLabel>
+        <translation><!-- Уральский федеральный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>УстьОрдынский Бурятский автономный округ</masterLabel>
+        <translation><!-- УстьОрдынский Бурятский автономный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Финляндия</masterLabel>
+        <translation><!-- Финляндия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Хабаровский край</masterLabel>
+        <translation><!-- Хабаровский край --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ханты-Мансийский автономный округ - Югра</masterLabel>
+        <translation><!-- Ханты-Мансийский автономный округ - Югра --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Центральный федеральный округ</masterLabel>
+        <translation><!-- Центральный федеральный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Челябинская область</masterLabel>
+        <translation><!-- Челябинская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Чеченская республика</masterLabel>
+        <translation><!-- Чеченская республика --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Читинская область</masterLabel>
+        <translation><!-- Читинская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Чувашская Республика</masterLabel>
+        <translation><!-- Чувашская Республика --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Чукотский автономный округ</masterLabel>
+        <translation><!-- Чукотский автономный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Эвенкийский автономный округ</masterLabel>
+        <translation><!-- Эвенкийский автономный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Эстония</masterLabel>
+        <translation><!-- Эстония --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Южная Осетия</masterLabel>
+        <translation><!-- Южная Осетия --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Южный федеральный округ</masterLabel>
+        <translation><!-- Южный федеральный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ямало-Ненецкий автономный округ</masterLabel>
+        <translation><!-- Ямало-Ненецкий автономный округ --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ярославская область</masterLabel>
+        <translation><!-- Ярославская область --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>г. Москва</masterLabel>
+        <translation><!-- г. Москва --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>г. Санкт-Петербург</masterLabel>
+        <translation><!-- г. Санкт-Петербург --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>г.Севастополь</masterLabel>
+        <translation><!-- г.Севастополь --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,6 @@
+<apex:page >
+    <apex:iframe src="/apex/SalesDashboardLiters" height="560"/>
+    <apex:iframe src="/apex/SalesDashboard" height="560"/>
+    <apex:iframe src="/apex/SalesDashboardTodaysTasks" height="560"/> 
+    <apex:iframe src="/apex/SalesDashboardOverdueTasks" height="560"/>       
+</apex:page>

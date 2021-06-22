@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_Heard_About_Us__c</fullName>
+    <description>Selection made by applicant on website</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Selection made by applicant on website</inlineHelpText>
+    <label>How Heard About Us?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Associations</fullName>
+                <default>false</default>
+                <label>Associations</label>
+            </value>
+            <value>
+                <fullName>Automotive Fleet</fullName>
+                <default>false</default>
+                <label>Automotive Fleet</label>
+            </value>
+            <value>
+                <fullName>BP/CITGO/CHEVRON Website</fullName>
+                <default>false</default>
+                <label>BP/CITGO/CHEVRON Website</label>
+            </value>
+            <value>
+                <fullName>Business Fleet</fullName>
+                <default>false</default>
+                <label>Business Fleet</label>
+            </value>
+            <value>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+                <label>Direct Mail</label>
+            </value>
+            <value>
+                <fullName>Dun &amp; Bradstreet</fullName>
+                <default>false</default>
+                <label>Dun &amp; Bradstreet</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Equifax</fullName>
+                <default>false</default>
+                <label>Equifax</label>
+            </value>
+            <value>
+                <fullName>Fax</fullName>
+                <default>false</default>
+                <label>Fax</label>
+            </value>
+            <value>
+                <fullName>Fleet Financials</fullName>
+                <default>false</default>
+                <label>Fleet Financials</label>
+            </value>
+            <value>
+                <fullName>Fleet Owner</fullName>
+                <default>false</default>
+                <label>Fleet Owner</label>
+            </value>
+            <value>
+                <fullName>FM Postcard</fullName>
+                <default>false</default>
+                <label>FM Postcard</label>
+            </value>
+            <value>
+                <fullName>From a colleague</fullName>
+                <default>false</default>
+                <label>From a colleague</label>
+            </value>
+            <value>
+                <fullName>From a FleetCards USA rep</fullName>
+                <default>false</default>
+                <label>From a FleetCards USA rep</label>
+            </value>
+            <value>
+                <fullName>From a Fuelman merchant</fullName>
+                <default>false</default>
+                <label>From a Fuelman merchant</label>
+            </value>
+            <value>
+                <fullName>Fueling Station</fullName>
+                <default>false</default>
+                <label>Fueling Station</label>
+            </value>
+            <value>
+                <fullName>Google</fullName>
+                <default>false</default>
+                <label>Google</label>
+            </value>
+            <value>
+                <fullName>Government Fleet</fullName>
+                <default>false</default>
+                <label>Government Fleet</label>
+            </value>
+            <value>
+                <fullName>Hoover's</fullName>
+                <default>false</default>
+                <label>Hoover's</label>
+            </value>
+            <value>
+                <fullName>Marketing Campaign</fullName>
+                <default>false</default>
+                <label>Marketing Campaign</label>
+            </value>
+            <value>
+                <fullName>MSN</fullName>
+                <default>false</default>
+                <label>MSN</label>
+            </value>
+            <value>
+                <fullName>News article or blog</fullName>
+                <default>false</default>
+                <label>News article or blog</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+                <label>Public Relations</label>
+            </value>
+            <value>
+                <fullName>Referral - Employee</fullName>
+                <default>false</default>
+                <label>Referral - Employee</label>
+            </value>
+            <value>
+                <fullName>Referral - Fueling Station</fullName>
+                <default>false</default>
+                <label>Referral - Fueling Station</label>
+            </value>
+            <value>
+                <fullName>Referral - Sales Representative</fullName>
+                <default>false</default>
+                <label>Referral - Sales Representative</label>
+            </value>
+            <value>
+                <fullName>Search Engine - Google/Yahoo/MSN/etc.</fullName>
+                <default>false</default>
+                <label>Search Engine - Google/Yahoo/MSN/etc.</label>
+            </value>
+            <value>
+                <fullName>Third Party Online Advertising</fullName>
+                <default>false</default>
+                <label>Third Party Online Advertising</label>
+            </value>
+            <value>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+                <label>Trade Show</label>
+            </value>
+            <value>
+                <fullName>Trans-Union</fullName>
+                <default>false</default>
+                <label>Trans-Union</label>
+            </value>
+            <value>
+                <fullName>Web (organic)</fullName>
+                <default>false</default>
+                <label>Web (organic)</label>
+            </value>
+            <value>
+                <fullName>Web Application</fullName>
+                <default>false</default>
+                <label>Web Application</label>
+            </value>
+            <value>
+                <fullName>Web banner</fullName>
+                <default>false</default>
+                <label>Web banner</label>
+            </value>
+            <value>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+                <label>Word of mouth</label>
+            </value>
+            <value>
+                <fullName>Work Truck</fullName>
+                <default>false</default>
+                <label>Work Truck</label>
+            </value>
+            <value>
+                <fullName>Yahoo</fullName>
+                <default>false</default>
+                <label>Yahoo</label>
+            </value>
+            <value>
+                <fullName>SMS</fullName>
+                <default>false</default>
+                <label>SMS</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

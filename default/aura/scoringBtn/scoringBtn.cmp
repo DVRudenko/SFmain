@@ -1,0 +1,5 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId, force:lightningQuickAction">
+    <aura:attribute name="opportunityId" type="Id" />
+    <aura:attribute name="recordType" type="Id" />
+    <c:applicationWithOrganizationRequisite opportunityId="{!v.opportunityId}" recordTypeId="{!v.recordType}" />
+</aura:component>

@@ -1,0 +1,6 @@
+.THIS .text-area_nowrap{
+    white-space: nowrap;
+}
+.THIS .text-area_nowrap .slds-rich-text-editor__textarea .slds-rich-text-area__content{
+    white-space: nowrap;
+}

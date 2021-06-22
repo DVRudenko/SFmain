@@ -1,0 +1,66 @@
+<apex:page controller="OpportunityExtension"
+           docType="html-5.0"
+           sideBar="false"
+           showHeader="false"
+           standardStylesheets="false"
+           cache="false">
+
+    <style>
+        body {
+            font-family: Courier, serif;
+            font-size: 12pt;
+        }
+
+        p {
+            margin-bottom: 4px;
+            margin-top: 4px;
+        }
+
+        td {
+            border-width: 1px;
+            padding: 4px;
+            border-style: solid;
+            border-color: #000000;
+            background-color: #FFEECC;
+        }
+
+        th {
+            color: #000000;
+            border-width: 1px;
+            padding: 4px;
+            border-style: solid;
+            border-color: #000000;
+            background-color: #FFFFF0;
+        }
+    </style>
+
+    <p>По E2Е обратился существующий клиент, в CRM сформировано обращение.</p>
+    <p>Все открытые Возможности SF переведены в Отказ с причиной “Существующий клиент”.</p>
+    <p>Если Возможность Принята на Старт менее 6 мес. назад, помогите клиенту начать работу по сущ. договору.</p>
+    <p>Список возможностей:</p>
+    <br/>
+
+    <table>
+        <tr>
+            <th>Инн</th>
+            <th>Имя Opp-ty</th>
+            <th>Имя Ответст.</th>
+            <th>Роль Ответст.</th>
+            <th>Этап</th>
+            <th>Дата перевода</th>
+            <th>Дата закрытия</th>
+        </tr>
+        <apex:repeat value="{!opportunities}" var="opp">
+            <tr>
+                <td>{!opp.INN_Opp__c}</td>
+                <td><apex:outputLink value="{!$CurrentPage.parameters.domain + opp.Id}" target="_blank">{!opp.Name}</apex:outputLink></td>
+                <td><apex:outputLink value="{!$CurrentPage.parameters.domain + opp.Owner.Id}" target="_blank">{!opp.Owner.Name}</apex:outputLink></td>
+                <td>{!IF(opp.Owner.UserRole.Name != null, opp.Owner.UserRole.Name, 'None')}</td>
+                <td>{!opp.StageName}</td>
+                <td>{!opp.Day_transfer__c}</td>
+                <td>{!opp.CloseDate}</td>
+            </tr>
+        </apex:repeat>
+    </table>
+
+</apex:page>

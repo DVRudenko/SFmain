@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Specify when object records will be assessed as part of the Rewarding process --></help>
+    <label><!-- Action --></label>
+    <name>success__Action__c</name>
+</CustomFieldTranslation>

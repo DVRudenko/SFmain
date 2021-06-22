@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The Name of the Account if we know it from the Account, Case, Opportunity or Contact, otherwise the Contact&apos;s name or the Lead&apos;s name if we know either of those, otherwise &quot;-&quot; --></help>
+    <label><!-- Related To --></label>
+    <name>NVMStatsSF__Related_To__c</name>
+</CustomFieldTranslation>

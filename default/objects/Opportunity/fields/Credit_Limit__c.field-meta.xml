@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Limit__c</fullName>
+    <externalId>false</externalId>
+    <formula>ROUND(MAX((IF(CF_Credit_Limit__c != 0, CF_Credit_Limit__c, (Auftragsvolumen__c * ( ( Zahlungsziel_Credit_calculati__c + Rechnungsperiode_3__c ) / 30)* (1+Buffer_2__c))) + Credit_Limit_Anpassung__c), IF(ISPICKVAL(Account.BillingCountryCode, 'HU'), 10000, 100))/IF(ISPICKVAL(Account.BillingCountryCode, 'HU'), 10000, 100), 0)*IF(ISPICKVAL(Account.BillingCountryCode, 'HU'), 10000, 100)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Wird automatisch errechnet!</inlineHelpText>
+    <label>Credit Limit</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>
